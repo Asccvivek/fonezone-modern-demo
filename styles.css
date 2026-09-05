@@ -240,6 +240,37 @@ body.theme-light .ceo-nav-pill:hover * {
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
 }
 
+/* Hero Carousel Navigation Arrow Buttons — Hover-Reveal */
+#heroPrevBtn,
+#heroNextBtn {
+  transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+#heroCarouselContainer:hover #heroPrevBtn,
+#heroCarouselContainer:hover #heroNextBtn {
+  opacity: 1 !important;
+}
+/* Dark mode arrow overrides */
+body:not(.theme-light) #heroPrevBtn,
+body:not(.theme-light) #heroNextBtn {
+  background: rgba(15, 23, 42, 0.85) !important;
+  color: #FFFFFF !important;
+  border-color: rgba(100, 116, 139, 0.5) !important;
+  backdrop-filter: blur(12px);
+}
+body:not(.theme-light) #heroPrevBtn:hover,
+body:not(.theme-light) #heroNextBtn:hover {
+  background: rgba(15, 23, 42, 0.95) !important;
+}
+
+/* Ensure hero slide content never touches arrow zones */
+.hero-slide > div:first-child {
+  padding-left: 2.5rem !important;  /* keeps text away from left arrow */
+}
+@media (min-width: 768px) {
+  .hero-slide > div:first-child {
+    padding-left: 3rem !important;
+  }
+}
 /* Hero Carousel Light Mode */
 body.theme-light #heroCarouselContainer {
   border-color: #BFDBFE !important;
@@ -259,6 +290,15 @@ body.theme-light #heroPlayPauseBtn {
 }
 body.theme-light #heroPlayPauseLabel {
   color: #475569 !important;
+}
+body.theme-light .hero-dot {
+  background-color: #CBD5E1 !important;
+}
+body.theme-light .hero-dot.bg-blue-500 {
+  background-color: #2563EB !important;
+}
+body.theme-light #heroCarouselContainer .bg-slate-700 {
+  background-color: #CBD5E1 !important;
 }
 body.theme-light .hero-slide:nth-child(1) {
   background: radial-gradient(circle at 80% 50%, rgba(59, 130, 246, 0.22) 0%, transparent 60%), linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #EEF2FF 100%) !important;
@@ -1473,6 +1513,35 @@ body.theme-light .hero-slide .text-emerald-300 {
   color: #047857 !important;
   font-weight: 700 !important;
 }
+/* Samsung slide purple badges in light mode */
+body.theme-light .hero-slide .text-purple-400,
+body.theme-light .hero-slide .text-purple-300 {
+  color: #6D28D9 !important;
+  font-weight: 700 !important;
+}
+body.theme-light .hero-slide .bg-purple-500\/25,
+body.theme-light .hero-slide .bg-purple-500\/20 {
+  background-color: #EDE9FE !important;
+  border-color: #C4B5FD !important;
+  color: #6D28D9 !important;
+  font-weight: 800 !important;
+}
+body.theme-light .hero-slide .bg-blue-500\/25,
+body.theme-light .hero-slide .bg-blue-500\/20 {
+  background-color: #DBEAFE !important;
+  border-color: #93C5FD !important;
+  color: #1E40AF !important;
+  font-weight: 800 !important;
+}
+body.theme-light .hero-slide .bg-amber-500\/20 {
+  background-color: #FEF3C7 !important;
+  border-color: #FCD34D !important;
+  color: #92400E !important;
+}
+body.theme-light .hero-slide .text-amber-300 {
+  color: #B45309 !important;
+  font-weight: 700 !important;
+}
 
 /* Offer Rail & Flash Deals Light Mode Contrast */
 body.theme-light #heroOfferRail .text-emerald-400 {
@@ -1487,17 +1556,80 @@ body.theme-light #heroOfferRail .text-emerald-400.font-medium {
   color: #047857 !important;
   font-weight: 700 !important;
 }
-body.theme-light #heroOfferRail button.bg-purple-900\/50,
-body.theme-light #heroOfferRail button.bg-purple-500\/20 {
+
+/* Offer Rail — Purple Coupon Card Light Mode Fix */
+body.theme-light #heroOfferRail button[onclick*="copyHeroCoupon"] {
+  background-color: #1D4ED8 !important;
+  border-color: #1D4ED8 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+body.theme-light #heroOfferRail button[onclick*="copyHeroCoupon"]:hover {
+  background-color: #1E40AF !important;
+  border-color: #1E40AF !important;
+  color: #FFFFFF !important;
+}
+body.theme-light #heroOfferRail button[onclick*="copyHeroCoupon"] svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+/* Purple badge/tag text in light mode */
+body.theme-light #heroOfferRail .text-purple-300 {
+  color: #6D28D9 !important;
+  font-weight: 700 !important;
+}
+body.theme-light #heroOfferRail .bg-purple-500\/20 {
   background-color: #EDE9FE !important;
   border-color: #C4B5FD !important;
   color: #6D28D9 !important;
-  font-weight: 800 !important;
 }
-body.theme-light #heroOfferRail button.bg-purple-900\/50:hover,
-body.theme-light #heroOfferRail button.bg-purple-500\/20:hover {
-  background-color: #DDD6FE !important;
-  color: #5B21B6 !important;
+
+/* Amber badge text in light mode */
+body.theme-light #heroOfferRail .text-amber-300,
+body.theme-light #heroOfferRail .text-amber-400 {
+  color: #B45309 !important;
+  font-weight: 700 !important;
+}
+body.theme-light #heroOfferRail .bg-amber-500\/20 {
+  background-color: #FEF3C7 !important;
+  border-color: #FCD34D !important;
+  color: #92400E !important;
+}
+
+/* Blue badge text in light mode */
+body.theme-light #heroOfferRail .text-blue-300 {
+  color: #1D4ED8 !important;
+  font-weight: 700 !important;
+}
+body.theme-light #heroOfferRail .bg-blue-500\/20 {
+  background-color: #DBEAFE !important;
+  border-color: #93C5FD !important;
+  color: #1E40AF !important;
+}
+
+/* Offer card borders — softer, consistent for light */
+body.theme-light #heroOfferRail > div:nth-child(1) {
+  border-color: #FCD34D !important;
+}
+body.theme-light #heroOfferRail > div:nth-child(2) {
+  border-color: #93C5FD !important;
+}
+body.theme-light #heroOfferRail > div:nth-child(3) {
+  border-color: #C4B5FD !important;
+}
+body.theme-light #heroOfferRail > div:nth-child(4) {
+  border-color: #6EE7B7 !important;
+}
+
+/* Emerald Claim Deal button */
+body.theme-light #heroOfferRail button[onclick*="openInspectModal"] {
+  background-color: #F59E0B !important;
+  color: #0F172A !important;
+  font-weight: 900 !important;
+}
+body.theme-light #heroOfferRail button[onclick*="openInspectModal"]:hover {
+  background-color: #D97706 !important;
 }
 
 /* Favourite Brands Rail Prices */
