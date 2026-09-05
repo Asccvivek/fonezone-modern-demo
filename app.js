@@ -5261,14 +5261,16 @@ function updateBudgetDisplayUI() {
 
 
 /* ======================================================== */
-/* 3. SEARCH WITH LIVE SUGGESTIONS DROPDOWN                 */
+/* 3. SEARCH WITH LIVE SUGGESTIONS DROPDOWN (DESKTOP & MOBILE) */
 /* ======================================================== */
 function handleSearch(q) {
   state.searchQuery = q.trim();
   const dropdown = document.getElementById("searchSuggestionsDropdown");
+  const dropdownMobile = document.getElementById("searchSuggestionsDropdownMobile");
 
   if (!state.searchQuery) {
     if (dropdown) dropdown.classList.add("hidden");
+    if (dropdownMobile) dropdownMobile.classList.add("hidden");
     renderCatalog();
     return;
   }
@@ -5279,25 +5281,26 @@ function handleSearch(q) {
     p.category.toLowerCase().includes(state.searchQuery.toLowerCase())
   );
 
-  if (dropdown) {
-    if (matches.length > 0) {
-      dropdown.classList.remove("hidden");
-      dropdown.innerHTML = matches.slice(0, 4).map(p => `
-        <div onclick="selectSearchProduct('${p.id}')" class="p-2 flex items-center justify-between hover:bg-slate-800 rounded-lg cursor-pointer transition-colors">
-          <div class="flex items-center gap-2.5">
-            <img src="${p.image}" alt="${p.name}" class="w-8 h-8 object-contain">
-            <div>
-              <div class="font-bold text-white text-xs">${p.name}</div>
-              <div class="text-[10px] text-slate-400">${p.grades["A"].label} • ${p.warranty}</div>
-            </div>
-          </div>
-          <span class="text-emerald-400 font-bold font-mono text-xs">${formatMoney(p.grades["A"].price)}</span>
+  const html = matches.length > 0 ? matches.slice(0, 5).map(p => `
+    <div onclick="selectSearchProduct('${p.id}')" class="p-2 flex items-center justify-between hover:bg-slate-800 rounded-lg cursor-pointer transition-colors">
+      <div class="flex items-center gap-2.5">
+        <img src="${p.image}" alt="${p.name}" class="w-8 h-8 object-contain">
+        <div>
+          <div class="font-bold text-white text-xs">${p.name}</div>
+          <div class="text-[10px] text-slate-400">${p.grades["A"].label} • ${p.warranty}</div>
         </div>
-      `).join('');
-    } else {
-      dropdown.classList.remove("hidden");
-      dropdown.innerHTML = `<div class="p-3 text-center text-slate-400 text-xs">No matching certified devices found.</div>`;
-    }
+      </div>
+      <span class="text-emerald-400 font-bold font-mono text-xs">${formatMoney(p.grades["A"].price)}</span>
+    </div>
+  `).join('') : `<div class="p-3 text-center text-slate-400 text-xs">No matching certified devices found.</div>`;
+
+  if (dropdown) {
+    dropdown.classList.remove("hidden");
+    dropdown.innerHTML = html;
+  }
+  if (dropdownMobile) {
+    dropdownMobile.classList.remove("hidden");
+    dropdownMobile.innerHTML = html;
   }
 
   renderCatalog();
@@ -5309,15 +5312,28 @@ function handleSearchFocus() {
   }
 }
 
+function handleSearchFocusMobile() {
+  const mInput = document.getElementById("storeSearchInputMobile");
+  if (mInput && mInput.value) {
+    handleSearch(mInput.value);
+  } else if (state.searchQuery) {
+    handleSearch(state.searchQuery);
+  }
+}
+
 function selectSearchProduct(productId) {
   const dropdown = document.getElementById("searchSuggestionsDropdown");
+  const dropdownMobile = document.getElementById("searchSuggestionsDropdownMobile");
   if (dropdown) dropdown.classList.add("hidden");
+  if (dropdownMobile) dropdownMobile.classList.add("hidden");
   openInspector(productId);
 }
 
 function executeSearch() {
   const dropdown = document.getElementById("searchSuggestionsDropdown");
+  const dropdownMobile = document.getElementById("searchSuggestionsDropdownMobile");
   if (dropdown) dropdown.classList.add("hidden");
+  if (dropdownMobile) dropdownMobile.classList.add("hidden");
   renderCatalog();
   const sec = document.getElementById("productCatalogSection");
   if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -5326,11 +5342,23 @@ function executeSearch() {
 // Close search dropdown on clicking outside
 document.addEventListener("click", (e) => {
   const searchInput = document.getElementById("storeSearchInput");
+  const searchInputMobile = document.getElementById("storeSearchInputMobile");
   const dropdown = document.getElementById("searchSuggestionsDropdown");
+  const dropdownMobile = document.getElementById("searchSuggestionsDropdownMobile");
+
   if (dropdown && !dropdown.contains(e.target) && e.target !== searchInput) {
     dropdown.classList.add("hidden");
   }
+  if (dropdownMobile && !dropdownMobile.contains(e.target) && e.target !== searchInputMobile) {
+    dropdownMobile.classList.add("hidden");
+  }
 });
+
+window.handleSearch = handleSearch;
+window.handleSearchFocus = handleSearchFocus;
+window.handleSearchFocusMobile = handleSearchFocusMobile;
+window.selectSearchProduct = selectSearchProduct;
+window.executeSearch = executeSearch;
 
 /* ======================================================== */
 /* 4. CART & WISHLIST DRAWERS                               */
@@ -6296,6 +6324,7 @@ function initTurntableDragging() {
 
   stage.ontouchmove = (e) => {
     if (!isDragging) return;
+    if (e.cancelable) e.preventDefault();
     const delta = e.touches[0].clientX - startX;
     startX = e.touches[0].clientX;
     state.currentInspectAngle = (state.currentInspectAngle - delta * 0.8 + 360) % 360;
@@ -6778,6 +6807,33 @@ function initHeroCarousel() {
   // Live Countdown Timer for Deal of the Day
   initHeroDealTimer();
 
+  // Touch swipe support for mobile & tablet screens
+  let touchStartX = 0;
+  let touchStartY = 0;
+  container.addEventListener("touchstart", (e) => {
+    if (e.touches && e.touches.length > 0) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  container.addEventListener("touchend", (e) => {
+    if (e.changedTouches && e.changedTouches.length > 0) {
+      const touchEndX = e.changedTouches[0].clientX;
+      const touchEndY = e.changedTouches[0].clientY;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+      // Ensure horizontal swipe intent (not vertical scrolling)
+      if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0) {
+          nextHeroSlide(); // Swiped left -> next
+        } else {
+          prevHeroSlide(); // Swiped right -> prev
+        }
+      }
+    }
+  }, { passive: true });
+
   window.addEventListener("resize", () => {
     updateHeroCarouselUI();
   });
@@ -6846,9 +6902,7 @@ function updatePlayPauseBtnUI(isPlaying) {
 function updateHeroCarouselUI() {
   const track = document.getElementById("heroCarouselTrack");
   const container = document.getElementById("heroCarouselContainer");
-  if (!track || !container) return;
-  const slideWidth = container.offsetWidth;
-  track.style.transform = `translateX(-${heroCurrentSlide * slideWidth}px)`;
+  track.style.transform = `translateX(-${heroCurrentSlide * 100}%)`;
 
   const dots = document.querySelectorAll(".hero-dot");
   dots.forEach((dot, idx) => {

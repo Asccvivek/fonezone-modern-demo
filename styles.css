@@ -94,15 +94,18 @@ body.theme-light header.fz-glass {
 }
 
 /* Search Bar in Light Mode */
-body.theme-light #storeSearchInput {
+body.theme-light #storeSearchInput,
+body.theme-light #storeSearchInputMobile {
   background-color: #F8FAFC !important;
   border-color: #CBD5E1 !important;
   color: #0F172A !important;
 }
-body.theme-light #storeSearchInput::placeholder {
+body.theme-light #storeSearchInput::placeholder,
+body.theme-light #storeSearchInputMobile::placeholder {
   color: #94A3B8 !important;
 }
-body.theme-light #storeSearchInput:focus {
+body.theme-light #storeSearchInput:focus,
+body.theme-light #storeSearchInputMobile:focus {
   background-color: #FFFFFF !important;
   border-color: #2563EB !important;
 }
@@ -264,7 +267,14 @@ body:not(.theme-light) #heroNextBtn:hover {
 
 /* Ensure hero slide content never touches arrow zones */
 .hero-slide > div:first-child {
-  padding-left: 2.5rem !important;  /* keeps text away from left arrow */
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+@media (min-width: 640px) {
+  .hero-slide > div:first-child {
+    padding-left: 2.5rem !important;
+    padding-right: 1.5rem !important;
+  }
 }
 @media (min-width: 768px) {
   .hero-slide > div:first-child {
@@ -2367,3 +2377,97 @@ body.theme-light .specs-value {
   color: #0F172A !important;
   font-weight: 700 !important;
 }
+
+/* ======================================================== */
+/* MOBILE & TABLET RESPONSIVE ARCHITECTURE & VIEWPORT RULES  */
+/* ======================================================== */
+
+/* Touch-optimized scroll rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile & Tablet Header Sticky Positioning */
+@media (max-width: 639px) {
+  #executiveTopBar {
+    position: relative !important;
+    top: auto !important;
+  }
+  header.fz-glass {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 40 !important;
+  }
+  #storeCategoryBar {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
+@media (min-width: 640px) {
+  #executiveTopBar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 50 !important;
+  }
+  header.fz-glass {
+    position: sticky !important;
+    top: 42px !important;
+    z-index: 40 !important;
+  }
+}
+
+/* 360 Turntable & 3D Canvas Touch Action */
+#stagePhotoWrapper,
+#stage3dCanvas {
+  touch-action: none;
+}
+
+/* Light Theme Styling for Sticky Inspector Footer */
+body.theme-light #inspectStickyFooter {
+  background: #FFFFFF !important;
+  border-top-color: #E2E8F0 !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+body.theme-light #inspectStickyFooter .text-white {
+  color: #0F172A !important;
+}
+body.theme-light #inspectStickyFooter .text-slate-400 {
+  color: #64748B !important;
+}
+
+/* Mobile Inspector Sheet Bottom Border Radius */
+@media (max-width: 639px) {
+  #inspectorModal .fz-glass-card {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-bottom-width: 0 !important;
+  }
+}
+
+/* Hero Carousel Responsive Padding */
+@media (max-width: 639px) {
+  .hero-slide {
+    padding: 1rem 0.75rem !important;
+  }
+}
+
+/* Mobile Search Dropdown in Light Mode */
+body.theme-light #searchSuggestionsDropdownMobile {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+}
+body.theme-light #searchSuggestionsDropdownMobile .hover\:bg-slate-800:hover {
+  background-color: #F1F5F9 !important;
+}
+body.theme-light #searchSuggestionsDropdownMobile .text-white {
+  color: #0F172A !important;
+}
+
