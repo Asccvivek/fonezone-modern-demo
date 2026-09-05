@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoneZone Merchant Command Center | Logistics & Anti-RTO Intelligence</title>
+  <link rel="stylesheet" href="styles.css?v=9">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/lucide.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            fzBlue: '#1E56D8',
+            fzDark: '#070A10',
+            fzCard: '#0F172A',
+            fzYellow: '#F3BA2F',
+            fzEmerald: '#00F59B'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#070A10] text-slate-100 antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col">
+
+  <!-- ======================================================== -->
+  <!-- 1. TOP EXECUTIVE APP BAR & CROSS-PORTAL NAVIGATION        -->
+  <!-- ======================================================== -->
+  <header class="sticky top-0 z-50 bg-[#0B1120]/95 backdrop-blur-md border-b border-blue-500/30 px-3 sm:px-6 py-2.5 shadow-xl">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+      
+      <!-- Left: Brand & Portal Badge -->
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="flex items-center gap-2 group" title="Return to Storefront">
+          <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center font-black text-white text-base shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform">
+            FZ
+          </div>
+          <div class="leading-none">
+            <div class="text-sm font-black tracking-tight text-white flex items-center gap-1">
+              <span>FONEZONE</span>
+              <span class="text-blue-400 font-mono text-xs">OPS</span>
+            </div>
+            <div class="text-[9px] text-slate-400 font-medium tracking-wide uppercase">Merchant Command Center</div>
+          </div>
+        </a>
+
+        <div class="h-5 w-[1px] bg-slate-800 hidden md:block"></div>
+
+        <!-- Role Badge -->
+        <div class="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900 border border-slate-800 text-[11px] text-slate-300">
+          <i data-lucide="shield" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span>Role: <b class="text-white">Sahil Pathania</b> (Operations Lead)</span>
+        </div>
+      </div>
+
+      <!-- Center: WhatsApp API Live Telemetry Indicator -->
+      <div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-xs text-emerald-300">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="font-bold">WhatsApp Business Cloud API Connected</span>
+        <span class="text-[10px] text-emerald-400/80 font-mono">(Ping: 38ms)</span>
+      </div>
+
+      <!-- Right: Action Switchers -->
+      <div class="flex items-center gap-2">
+        <!-- Return to Storefront CTA -->
+        <a href="index.html" class="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow-lg shadow-blue-600/30 flex items-center gap-1.5 transition-all active:scale-95 cursor-pointer">
+          <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+          <span>View Customer Storefront</span>
+          <i data-lucide="external-link" class="w-3 h-3 text-blue-200"></i>
+        </a>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 flex items-center justify-center transition-colors cursor-pointer" title="Toggle Light / Dark Mode">
+          <i data-lucide="sun" id="themeIcon" class="w-4 h-4 text-amber-400"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- 2. MAIN DASHBOARD CONTENT AREA                           -->
+  <!-- ======================================================== -->
+  <main class="max-w-7xl mx-auto px-3 sm:px-6 py-6 w-full flex-grow">
+
+    <!-- Executive Header Banner -->
+    <div id="merchantOpsHeaderCard" class="p-4 sm:p-6 rounded-2xl bg-gradient-to-r from-[#0C1A38] via-[#0A162F] to-[#070E1E] border border-blue-500/30 mb-6 shadow-2xl relative overflow-hidden">
+      <!-- Background Ambient Glow -->
+      <div class="absolute -right-20 -top-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="flex flex-wrap items-center justify-between gap-4 relative z-10">
+        <div class="max-w-2xl">
+          <div class="flex items-center gap-2 mb-1">
+            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
+              <i data-lucide="zap" class="w-3 h-3 text-amber-400"></i>
+              <span>Anti-RTO Intelligence Engine</span>
+            </span>
+            <span class="text-xs text-slate-400 hidden sm:inline">• Executive Review for Hemant Verma & Sahil Pathania</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight">
+            Automated WhatsApp Dispatch & COD Order Triage
+          </h1>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1 leading-relaxed">
+            Eliminate courier Return-to-Origin (RTO) losses with real-time customer address OTP verification, 
+            instant ₹300 UPI prepayment conversion, and pre-dispatch fraud filtration.
+          </p>
+        </div>
+
+        <!-- Quick Simulator Actions -->
+        <div class="flex items-center gap-2 shrink-0">
+          <button onclick="simulateIncomingOrder()" class="px-3.5 py-2 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white text-xs font-bold shadow-lg shadow-emerald-900/30 flex items-center gap-1.5 transition-all active:scale-95 cursor-pointer">
+            <i data-lucide="plus-circle" class="w-4 h-4"></i>
+            <span>+ Simulate New COD Order</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Top Metric KPI Grid -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
+      
+      <!-- KPI 1 -->
+      <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-lg relative overflow-hidden">
+        <div class="flex items-center justify-between mb-1">
+          <div class="text-[11px] text-slate-400 font-medium">Active COD Orders Today</div>
+          <i data-lucide="package" class="w-4 h-4 text-blue-400"></i>
+        </div>
+        <div id="kpiTotalOrders" class="text-2xl sm:text-3xl font-black text-white mt-1">148 Orders</div>
+        <div class="text-[11px] text-blue-400 mt-1.5 flex items-center gap-1">
+          <i data-lucide="trending-up" class="w-3 h-3"></i>
+          <span>₹42,80,000 Volume at Risk</span>
+        </div>
+      </div>
+
+      <!-- KPI 2 -->
+      <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-lg relative overflow-hidden">
+        <div class="flex items-center justify-between mb-1">
+          <div class="text-[11px] text-slate-400 font-medium">WhatsApp Verified Rate</div>
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+        </div>
+        <div id="kpiVerifiedRate" class="text-2xl sm:text-3xl font-black text-emerald-400 mt-1">83.8%</div>
+        <div class="text-[11px] text-slate-400 mt-1.5">
+          <b class="text-emerald-300">124</b> addresses verified via OTP
+        </div>
+      </div>
+
+      <!-- KPI 3 -->
+      <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-lg relative overflow-hidden">
+        <div class="flex items-center justify-between mb-1">
+          <div class="text-[11px] text-slate-400 font-medium">Prepaid UPI Conversions</div>
+          <i data-lucide="credit-card" class="w-4 h-4 text-indigo-400"></i>
+        </div>
+        <div id="kpiPrepaidConversions" class="text-2xl sm:text-3xl font-black text-indigo-400 mt-1">52 Orders</div>
+        <div class="text-[11px] text-indigo-300 mt-1.5">
+          35.1% converted to <b>0% RTO Risk</b>
+        </div>
+      </div>
+
+      <!-- KPI 4 -->
+      <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-lg relative overflow-hidden">
+        <div class="flex items-center justify-between mb-1">
+          <div class="text-[11px] text-slate-400 font-medium">Courier Losses Prevented</div>
+          <i data-lucide="banknote" class="w-4 h-4 text-amber-400"></i>
+        </div>
+        <div id="kpiSavings" class="text-2xl sm:text-3xl font-black text-amber-400 mt-1">₹1,84,500</div>
+        <div class="text-[11px] text-amber-300 mt-1.5">
+          Saved on return freight this month
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 4. Main Operational Split: Order Table (Left) + Interactive WhatsApp Phone (Right) -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-8">
+
+      <!-- Left Column: "To Whom We Send" (Live Order Triage Queue) -->
+      <div class="lg:col-span-7 bg-slate-900/70 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-xl flex flex-col justify-between">
+        <div>
+          <!-- Table Header & Filters -->
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <h2 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
+                <i data-lucide="list-filter" class="w-4 h-4 text-blue-400"></i>
+                <span>Live Order Queue (To Whom We Send)</span>
+                <span id="queueCount" class="px-2 py-0.5 bg-blue-900/60 text-blue-300 rounded text-[11px] font-mono">5 orders</span>
+              </h2>
+              <p class="text-[11px] text-slate-400">Click any customer row to preview order intelligence and trigger WhatsApp dispatch.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex items-center gap-1 bg-slate-950 p-1 rounded-xl border border-slate-800 text-[11px]">
+              <button onclick="filterQueue('all')" class="q-filter-btn px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold cursor-pointer" data-q="all">All</button>
+              <button onclick="filterQueue('unverified')" class="q-filter-btn px-2.5 py-1 rounded-lg text-slate-400 hover:text-white cursor-pointer" data-q="unverified">Pending</button>
+              <button onclick="filterQueue('verified')" class="q-filter-btn px-2.5 py-1 rounded-lg text-slate-400 hover:text-white cursor-pointer" data-q="verified">Verified</button>
+              <button onclick="filterQueue('prepaid')" class="q-filter-btn px-2.5 py-1 rounded-lg text-slate-400 hover:text-white cursor-pointer" data-q="prepaid">Prepaid</button>
+            </div>
+          </div>
+
+          <!-- Orders Table Container -->
+          <div class="overflow-x-auto rounded-xl border border-slate-800/80">
+            <table class="w-full text-left text-xs">
+              <thead class="text-[11px] text-slate-400 bg-slate-950/60 border-b border-slate-800 uppercase tracking-wider font-semibold">
+                <tr>
+                  <th class="py-2.5 px-3">Customer & Contact</th>
+                  <th class="py-2.5 px-3">Item & Amount</th>
+                  <th class="py-2.5 px-3">RTO Risk</th>
+                  <th class="py-2.5 px-3">Status</th>
+                  <th class="py-2.5 px-3 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody" class="divide-y divide-slate-800/60 text-slate-200">
+                <!-- Populated dynamically via dashboard.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Telemetry Audit Ticker -->
+        <div class="mt-4 p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] flex items-center justify-between text-slate-400">
+          <div class="flex items-center gap-2">
+            <i data-lucide="radio" class="w-3.5 h-3.5 text-blue-400 animate-pulse"></i>
+            <span>Logistics Airway Bill Sync: <b>BlueDart & Delhivery API Active</b></span>
+          </div>
+          <span class="text-[10px] text-slate-500 font-mono">Last ping: 2s ago</span>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive WhatsApp Dispatcher & Phone Simulator -->
+      <div class="lg:col-span-5 bg-slate-900/70 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-xl flex flex-col items-center">
+        
+        <!-- Header & Selected Customer -->
+        <div class="w-full mb-3 flex items-center justify-between">
+          <div>
+            <h2 class="text-sm sm:text-base font-bold text-white flex items-center gap-1.5">
+              <i data-lucide="smartphone" class="w-4 h-4 text-emerald-400"></i>
+              <span>WhatsApp Pre-Dispatch Simulator</span>
+            </h2>
+            <p class="text-[11px] text-slate-400">Selected Customer: <b id="selectedCustomerName" class="text-white">Rahul Sharma</b></p>
+          </div>
+          <span id="selectedCustomerRiskBadge" class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+            High RTO Risk
+          </span>
+        </div>
+
+        <!-- Customer Order Details Card -->
+        <div class="w-full p-3.5 rounded-xl bg-slate-950/90 border border-slate-800 mb-4 text-xs">
+          <div class="flex justify-between items-center text-[11px] text-slate-400">
+            <span>Phone: <b id="selectedCustomerPhone" class="text-slate-200">+91 98102 43210</b></span>
+            <span>City: <b id="selectedCustomerCity" class="text-slate-200">New Delhi (110019)</b></span>
+          </div>
+          <div class="mt-1.5 text-[11px] text-slate-300">
+            Order: <b id="selectedCustomerItem" class="text-white">iPhone 15 Pro 128GB (Grade A)</b> • Amount: <b id="selectedCustomerAmount" class="text-emerald-400">₹84,999 COD</b>
+          </div>
+
+          <!-- Quick Action Dispatch Buttons -->
+          <div class="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-slate-800/80">
+            <button onclick="dispatchWhatsAppVerification()" class="px-2.5 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] flex items-center justify-center gap-1.5 shadow-md shadow-emerald-900/20 active:scale-95 cursor-pointer">
+              <i data-lucide="send" class="w-3.5 h-3.5"></i>
+              <span>Send Address OTP</span>
+            </button>
+            <button onclick="dispatchPrepaidIncentive()" class="px-2.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-[11px] flex items-center justify-center gap-1.5 shadow-md shadow-indigo-900/20 active:scale-95 cursor-pointer">
+              <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+              <span>Send ₹300 Off UPI</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Smartphone Frame Container -->
+        <div class="phone-mockup-frame bg-[#111B21] border border-slate-700 rounded-3xl w-full max-w-[340px] text-xs shadow-2xl overflow-hidden">
+          
+          <!-- WhatsApp Top Navigation Bar -->
+          <div class="bg-[#202C33] px-3.5 py-2.5 flex items-center justify-between border-b border-slate-700">
+            <div class="flex items-center gap-2.5">
+              <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-black text-white text-xs shadow">
+                FZ
+              </div>
+              <div>
+                <div class="font-bold text-white flex items-center gap-1 text-[11px]">
+                  <span>FoneZone Official</span>
+                  <i data-lucide="check-circle" class="w-3 h-3 text-emerald-400 fill-emerald-400"></i>
+                </div>
+                <div class="text-[9px] text-emerald-400">Verified Business Account • +91 8044630881</div>
+              </div>
+            </div>
+            <div class="text-slate-400 text-sm font-mono">⋮</div>
+          </div>
+
+          <!-- WhatsApp Chat Log -->
+          <div id="waChatHistory" class="p-3 space-y-3 min-h-[300px] max-h-[340px] overflow-y-auto bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px]">
+            <!-- Injected dynamically via dashboard.js -->
+          </div>
+
+          <!-- Customer Simulated Action Buttons -->
+          <div class="bg-[#202C33] p-2.5 border-t border-slate-700">
+            <div class="text-[10px] text-slate-400 font-semibold text-center mb-1.5">
+              Simulate Customer Action (Two-Way Bot Response):
+            </div>
+            <div class="grid grid-cols-2 gap-1.5">
+              <button onclick="simulateCustomerConfirmAddress()" class="px-2 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-[10px] flex items-center justify-center gap-1 active:scale-95 cursor-pointer">
+                <span>✅ Confirm Address</span>
+              </button>
+              <button onclick="simulateCustomerPrepayUPI()" class="px-2 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[10px] flex items-center justify-center gap-1 active:scale-95 cursor-pointer">
+                <span>⚡ Pay UPI (Save ₹300)</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- 5. Sahil's Logistics Return (RTO) Cost Savings Model -->
+    <div class="p-5 sm:p-6 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-xl mb-8">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-2">
+        <div>
+          <h2 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+            <i data-lucide="calculator" class="w-5 h-5 text-emerald-400"></i>
+            <span>Sahil's Logistics Return (RTO) Cost Savings Model</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-xs font-mono">Verified ROI</span>
+          </h2>
+          <p class="text-xs text-slate-400 mt-0.5">Based on FoneZone's average Indian courier return rates (BlueDart / Delhivery / Shiprocket).</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+        
+        <!-- Slider Control -->
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+          <label class="text-[11px] text-slate-400 font-semibold block mb-1">Monthly COD Orders Shipped:</label>
+          <input type="range" id="calcOrdersSlider" min="500" max="5000" step="100" value="1500" oninput="updateLogisticsCalc()" class="w-full accent-blue-500 cursor-pointer">
+          <div class="flex justify-between items-center text-xs mt-2 font-mono">
+            <span class="text-slate-400">Order Volume:</span>
+            <span id="calcOrdersVal" class="text-blue-400 font-bold">1,500 orders / mo</span>
+          </div>
+        </div>
+
+        <!-- Comparative Benchmarks -->
+        <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+          <div class="text-[11px] text-slate-400 font-semibold mb-2">RTO Interception Rate:</div>
+          <div class="text-xs space-y-2">
+            <div class="flex justify-between text-slate-400">
+              <span>Baseline RTO (Shopify default):</span>
+              <span class="text-red-400 font-bold font-mono">28.4% (426 returned)</span>
+            </div>
+            <div class="flex justify-between text-slate-400">
+              <span>With WhatsApp OTP Verification:</span>
+              <span class="text-emerald-400 font-bold font-mono">7.2% (108 returned)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Net Savings Output -->
+        <div class="p-4 rounded-xl bg-gradient-to-br from-emerald-950/40 to-blue-950/30 border border-emerald-500/40 flex flex-col justify-between">
+          <div class="text-[11px] text-emerald-300 font-semibold">Net Annual Freight Savings for FoneZone:</div>
+          <div id="calcAnnualSavings" class="text-2xl sm:text-3xl font-black text-emerald-400 my-1">₹13,35,600 / yr</div>
+          <div class="text-[11px] text-slate-400">Directly recovers Courier Return-to-Origin overhead.</div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ======================================================== -->
+  <!-- 6. FOOTER                                                -->
+  <!-- ======================================================== -->
+  <footer class="bg-[#0B1120] border-t border-slate-800/80 py-4 px-4 text-center text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div>
+        FoneZone Logistics & Anti-RTO Command Center • Powered by <span class="text-white font-bold">NexG Tech</span>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="index.html" class="text-blue-400 hover:text-blue-300 transition-colors font-medium">🛍️ Open Customer Storefront</a>
+        <span>•</span>
+        <a href="https://asccvivek.github.io/fonezone-modern-demo/" target="_blank" class="text-slate-400 hover:text-white transition-colors">Live GitHub Pages</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-slate-900 border border-blue-500/40 shadow-2xl px-4 py-3 rounded-2xl flex items-center gap-2.5 text-xs text-white max-w-sm">
+      <span id="toastMessage">Action completed</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Controller Script -->
+  <script src="dashboard.js"></script>
+</body>
+</html>
