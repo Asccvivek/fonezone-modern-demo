@@ -1,0 +1,3010 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoneZone | Certified Refurbished Tech (360° Inspection & Pan-India COD)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css?v=8">
+  <script type="module" src="assets/model-viewer.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            fzBlue: '#1E56D8',
+            fzDark: '#070A10',
+            fzCard: '#0F172A',
+            fzYellow: '#F3BA2F',
+            fzEmerald: '#00F59B'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#070A10] text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- ======================================================== -->
+  <!-- 0. TOP EXECUTIVE PORTAL SWITCHER & DEMO TOUR BAR         -->
+  <!-- ======================================================== -->
+  <aside id="executiveTopBar" aria-label="Executive Demo Control Bar" class="sticky top-0 z-50 bg-[#0B1120] border-b border-blue-500/30 px-3 py-2 text-xs shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <!-- Left: Portal Switcher -->
+      <div class="flex items-center gap-2">
+        <span class="text-[11px] font-bold text-blue-400 uppercase tracking-wider hidden sm:inline">NexG Demo:</span>
+        <div class="flex items-center bg-slate-900/90 p-1 rounded-xl border border-slate-700/80">
+          <button id="tabStorefrontBtn" onclick="switchPortal('storefront')" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-active flex items-center gap-1.5 cursor-pointer">
+            <span>🛍️</span>
+            <span>Customer Storefront</span>
+          </button>
+          <button id="tabOpsBtn" onclick="switchPortal('ops')" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-inactive flex items-center gap-1.5 cursor-pointer">
+            <span>⚙️</span>
+            <span>Merchant Ops & WhatsApp Hub</span>
+            <span class="px-1.5 py-0.2 text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full font-mono">Sahil</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Right: Quick Guided Tour Shortcuts & Theme Switcher -->
+      <div class="flex items-center gap-2">
+        <span class="text-[11px] text-slate-400 hidden lg:inline">Quick Tour:</span>
+        <button onclick="tourSpeedTest()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-semibold text-slate-200 flex items-center gap-1 cursor-pointer">
+          <span>⚡</span>
+          <span>1. Speed Demo</span>
+        </button>
+        <button onclick="tourOpen360()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-semibold text-slate-200 flex items-center gap-1 cursor-pointer">
+          <span>🔍</span>
+          <span>2. 360° Inspector</span>
+        </button>
+        <button onclick="tourOpenWhatsApp()" class="px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-[11px] font-bold text-white shadow flex items-center gap-1 cursor-pointer">
+          <span>📲</span>
+          <span>3. WhatsApp Anti-RTO</span>
+        </button>
+
+        <div class="h-4 w-[1px] bg-slate-700 mx-1 hidden sm:block"></div>
+
+        <!-- Light / Dark Theme Toggle -->
+        <button id="themeToggleBtnTop" onclick="toggleTheme()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-semibold text-slate-200 flex items-center gap-1.5 transition-colors cursor-pointer" title="Toggle Light / Dark Mode">
+          <span id="themeToggleIcon">☀️</span>
+          <span id="themeToggleLabel">Light Mode</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================== -->
+  <!-- PORTAL 1: PURE CUSTOMER STOREFRONT (FAITHFUL TO FONEZONE)-->
+  <!-- ======================================================== -->
+  <div id="storefrontPortal" class="transition-opacity duration-200">
+
+    <!-- 1. Announcement Bar -->
+    <div id="storeAnnouncementBar" class="bg-[#090E1A] border-b border-slate-800/80 text-[11px] py-1.5 px-4 text-slate-300">
+      <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+        <div class="flex items-center gap-3">
+          <a href="tel:+918044630881" class="flex items-center gap-1.5 hover:text-white transition-colors font-medium cursor-pointer">
+            <svg class="w-3.5 h-3.5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+            <span>Customer Care: <b>+91 8044630881</b> (10am - 7pm)</span>
+          </a>
+          <span class="text-slate-700">|</span>
+          <span class="hidden md:inline text-emerald-400 font-semibold">100% Original Certified • 32-Point Inspection • Up to 6 Months Warranty • 7-Day Easy Returns</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-slate-400 text-[11px] hidden sm:inline">Pan-India Insured Dispatch</span>
+          <div class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5">
+            <button id="regionBtnIN" onclick="setRegion('IN')" class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-600 text-white cursor-pointer">🇮🇳 INR</button>
+            <button id="regionBtnUAE" onclick="setRegion('UAE')" class="px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer">🇦🇪 AED</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Main Storefront Header -->
+    <header class="fz-glass border-b border-slate-800/80 sticky top-[45px] z-40">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+        <!-- Logo -->
+        <a href="#" onclick="setCategory('all'); return false;" class="flex items-center gap-2 cursor-pointer">
+          <img id="mainNavbarLogo" src="assets/fonezone_logo_white.png" alt="FoneZone Logo" class="h-10 w-auto object-contain">
+        </a>
+
+        <!-- Search Bar with Live Suggestions Dropdown -->
+        <div class="flex-1 max-w-xl relative hidden md:block">
+          <div class="relative flex items-center">
+            <input 
+              type="text" 
+              id="storeSearchInput"
+              oninput="handleSearch(this.value)"
+              onfocus="handleSearchFocus()"
+              placeholder="Search certified iPhones, Galaxy S23, MacBooks, iPads..."
+              class="w-full bg-slate-900/90 border border-slate-700/80 rounded-full py-2 pl-4 pr-10 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            >
+            <button onclick="executeSearch()" class="absolute right-1 top-1 bottom-1 px-3 bg-[#F3BA2F] hover:bg-amber-400 text-slate-950 rounded-full flex items-center justify-center font-bold cursor-pointer">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </button>
+          </div>
+
+          <!-- Live Search Suggestions Dropdown -->
+          <div id="searchSuggestionsDropdown" class="hidden absolute top-11 left-0 right-0 search-dropdown p-2 z-50 text-xs divide-y divide-slate-800">
+            <!-- Dynamically populated via app.js -->
+          </div>
+        </div>
+
+        <!-- Right Header Items -->
+        <div class="flex items-center gap-3 text-xs font-medium">
+          <!-- Ask To CEO Button (High-Contrast Executive VIP Badge) -->
+          <button onclick="openCeoModal()" class="ceo-header-btn px-3.5 py-1.5 rounded-xl text-xs font-black flex items-center gap-1.5 shadow-sm transition-all cursor-pointer">
+            <span class="text-sm">👑</span>
+            <span class="font-black tracking-wide">ASK To CEO</span>
+          </button>
+
+          <!-- Track Order -->
+          <div onclick="openTrackOrderModal()" class="hidden lg:flex items-center gap-1.5 text-slate-300 hover:text-white cursor-pointer px-2 py-1 rounded-lg hover:bg-slate-800/60 transition-colors">
+            <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+            <span class="text-xs">Track Order</span>
+          </div>
+
+          <!-- Wishlist -->
+          <div class="relative p-2 text-slate-300 hover:text-white cursor-pointer rounded-lg hover:bg-slate-800/60 transition-colors" onclick="openWishlistDrawer()" title="Wishlist">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+            <span id="wishlistCountBadge" class="absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-red-500 text-[10px] font-bold text-white flex items-center justify-center">0</span>
+          </div>
+
+          <!-- Cart -->
+          <div class="relative p-2 text-slate-300 hover:text-white cursor-pointer rounded-lg hover:bg-slate-800/60 transition-colors" onclick="openCartDrawer()" title="Cart">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+            <span id="cartCountBadge" class="absolute top-0.5 right-0.5 w-4 h-4 rounded-full bg-blue-600 text-[10px] font-bold text-white flex items-center justify-center">0</span>
+          </div>
+
+          <!-- Storefront Header Theme Switcher -->
+          <button onclick="toggleTheme()" class="p-2 text-slate-300 hover:text-white cursor-pointer rounded-lg hover:bg-slate-800/60 transition-colors" title="Toggle Light/Dark Theme">
+            <span class="text-sm">🌗</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3. Authentic FoneZone Royal Blue Navigation Bar & Mega Dropdown -->
+      <nav id="storeCategoryBar" class="bg-[#1E56D8] text-white text-xs px-4 shadow-md sticky top-[108px] z-30 transition-colors">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+          <div class="flex items-center gap-1.5 flex-wrap py-1.5 no-scrollbar">
+            
+            <!-- Shop Categories Dropdown Button -->
+            <div class="relative" id="categoriesDropdownContainer">
+              <button 
+                id="shopCategoriesBtn" 
+                onclick="toggleCategoriesDropdown(event)" 
+                class="bg-[#F3BA2F] hover:bg-amber-400 text-slate-950 px-4 py-2 font-black rounded-lg flex items-center gap-2 cursor-pointer transition-all shadow select-none"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <span>SHOP CATEGORIES</span>
+                <svg id="shopCategoriesChevron" class="w-3.5 h-3.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+
+              <!-- Mega Dropdown Menu -->
+              <div id="categoriesDropdownMenu" class="absolute left-0 top-full pt-1.5 hidden w-72 z-50">
+                <div class="bg-slate-900/95 backdrop-blur-md border border-slate-700 rounded-2xl shadow-2xl p-2 text-xs divide-y divide-slate-800 text-slate-200">
+                  <div class="py-1">
+                    <button onclick="handleCategorySelect('phone', 'apple')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
+                      <span class="font-bold">🍎 Apple iPhones</span>
+                      <span class="text-[10px] text-blue-300 font-mono">15, 14, 13, 12</span>
+                    </button>
+                    <button onclick="handleCategorySelect('phone', 'samsung')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
+                      <span class="font-bold">📱 Samsung Smart Phone</span>
+                      <span class="text-[10px] text-slate-400 font-mono">S23, S22, Note</span>
+                    </button>
+                    <button onclick="handleCategorySelect('phone', 'oneplus')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
+                      <span class="font-bold">🔴 OnePlus Smart Phones</span>
+                      <span class="text-[10px] text-slate-400 font-mono">11, 10 Pro, Nord</span>
+                    </button>
+                  </div>
+                  <div class="py-1">
+                    <button onclick="handleCategorySelect('macbook', 'apple')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
+                      <span class="font-bold">💻 Apple MacBooks</span>
+                      <span class="text-[10px] text-emerald-400 font-mono">Air M1, M2, Pro</span>
+                    </button>
+                    <button onclick="handleCategorySelect('macbook', 'laptop')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
+                      <span class="font-bold">🖥️ Acer & HP Laptops</span>
+                      <span class="text-[10px] text-slate-400 font-mono">Core i5 / i7</span>
+                    </button>
+                    <button onclick="handleCategorySelect('ipad', 'all')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
+                      <span class="font-bold">📑 iPads & Tablets</span>
+                      <span class="text-[10px] text-slate-400 font-mono">iPad 10th / Air</span>
+                    </button>
+                  </div>
+                  <div class="py-1">
+                    <button onclick="handleCategorySelect('watch', 'all')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
+                      <span class="font-bold">⌚ Apple & Galaxy Watch</span>
+                      <span class="text-[10px] text-slate-400 font-mono">Series 8 / Ultra</span>
+                    </button>
+                    <button onclick="handleCategorySelect('accessories', 'all')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
+                      <span class="font-bold">🎧 Certified Audio & Cables</span>
+                      <span class="text-[10px] text-slate-400 font-mono">AirPods, Adapters</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Authentic Navigation Links -->
+            <a href="#/" onclick="navigateTo('#/'); return false;" class="nav-link-item px-3 py-2 rounded-lg font-bold text-white hover:bg-blue-700 transition-colors flex items-center gap-1">
+              <span>HOME</span>
+            </a>
+            <a href="#/collections/all" onclick="navigateTo('#/collections/all'); return false;" class="nav-link-item px-3 py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors">
+              <span>SHOP</span>
+            </a>
+            <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="nav-link-item px-3 py-2 rounded-lg font-bold text-amber-300 hover:text-amber-200 hover:bg-blue-700 transition-colors flex items-center gap-1">
+              <span>SELL YOUR DEVICE</span>
+              <span class="px-1.5 py-0.2 text-[9px] bg-amber-400 text-slate-950 font-black rounded-full uppercase">Instant Cash</span>
+            </a>
+            <a href="#/pages/about-us" onclick="navigateTo('#/pages/about-us'); return false;" class="nav-link-item px-3 py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors">
+              <span>ABOUT US</span>
+            </a>
+            <a href="#/pages/contact-us-get-in-touch-with-our-team" onclick="navigateTo('#/pages/contact-us-get-in-touch-with-our-team'); return false;" class="nav-link-item px-3 py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors">
+              <span>CONTACT US</span>
+            </a>
+            <a href="#/pages/order-info" onclick="navigateTo('#/pages/order-info'); return false;" class="nav-link-item px-3 py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors flex items-center gap-1">
+              <span>TRACK ORDER</span>
+            </a>
+            <a href="#/pages/ask-to-ceo" onclick="navigateTo('#/pages/ask-to-ceo'); return false;" class="nav-link-item ceo-nav-pill px-3 py-1.5 rounded-lg text-xs font-black transition-all flex items-center gap-1.5 shadow-sm">
+              <span>👑</span>
+              <span>ASK TO CEO</span>
+            </a>
+          </div>
+
+          <!-- Trust Badge on Right of Nav (Replaces Redundant Helpline) -->
+          <div class="hidden xl:flex items-center gap-3 py-1 text-xs shrink-0 pl-4 text-blue-100 font-medium">
+            <span class="flex items-center gap-1">
+              <span class="text-amber-300">🛡️</span>
+              <span>6M FoneZone Warranty</span>
+            </span>
+            <span class="text-blue-300/60">•</span>
+            <span class="flex items-center gap-1">
+              <span class="text-emerald-300">⚡</span>
+              <span>32-Point Certified</span>
+            </span>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ======================================================== -->
+    <!-- 1. HOME & CATALOG VIEW                                   -->
+    <!-- ======================================================== -->
+    <div id="view-home" class="page-view">
+    <!-- 4. Hero Promotional Banner & Live Offer Suite -->
+    <section class="max-w-7xl mx-auto px-4 pt-4 pb-3" id="heroMasterSection">
+
+      <!-- A. Interactive Multi-Slide Hero Banner Carousel -->
+      <div class="relative overflow-hidden rounded-3xl shadow-2xl border border-blue-500/20 group" id="heroCarouselContainer">
+        
+        <!-- Animated Slide Progress Bar Indicator (6-Second Auto-Advance Countdown) -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-white/10 z-30 overflow-hidden" title="Auto-advance countdown progress (6s)">
+          <div id="heroProgressBar" class="h-full bg-gradient-to-r from-blue-500 via-cyan-400 to-emerald-400 w-0"></div>
+        </div>
+
+        <!-- Carousel Track -->
+        <div id="heroCarouselTrack" class="flex transition-transform duration-700 ease-out" style="transform: translateX(0%);">
+          
+          <!-- Slide 1: iPhone 14 & 15 Pro Festival Drop -->
+          <div class="hero-slide min-w-full relative overflow-hidden p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+               style="background: radial-gradient(circle at 80% 50%, rgba(30, 86, 216, 0.35) 0%, transparent 50%), linear-gradient(135deg, #070D1D 0%, #0F1B36 50%, #0A1224 100%);">
+            <div class="relative z-10 max-w-xl">
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-blue-500/25 text-blue-300 border border-blue-500/40 text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5">
+                  <span>🔥</span> <span>MEGA REFURBISHED FESTIVAL</span>
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold">
+                  FLAT 60% OFF
+                </span>
+              </div>
+              <h1 class="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                Certified Pre-Owned Flagships.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-300">
+                  iPhone 14 & 15 Pro Max
+                </span>
+              </h1>
+              <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                Starting from <strong class="text-white text-base">₹38,999</strong> (MSRP <span class="line-through text-slate-400">₹69,900</span>). Every device passes our rigorous 32-point engineering inspection with authentic cosmetic condition grading.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 mt-5">
+                <button onclick="setCategory('phone')" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-black shadow-lg shadow-blue-600/30 flex items-center gap-2 cursor-pointer transition-transform hover:scale-105">
+                  <span>⚡ Shop Refurbished iPhones</span>
+                </button>
+                <button onclick="tourOpen360()" class="px-4 py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-2 cursor-pointer">
+                  <span>🔍 Test 360° Inspector</span>
+                </button>
+              </div>
+              <!-- Trust micro-tags -->
+              <div class="flex flex-wrap items-center gap-4 mt-6 text-[11px] text-slate-300">
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 6M FoneZone Warranty</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 85%+ Guaranteed Battery</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 0-Dent Inspection</span>
+              </div>
+            </div>
+            <!-- Right Visual with Device Composite & Floating Badges -->
+            <div class="relative z-10 shrink-0 w-64 sm:w-80 md:w-96 flex items-center justify-center">
+              <div class="relative">
+                <img src="assets/iphone14_blue.png" alt="iPhone 14 Refurbished" class="w-56 sm:w-64 md:w-72 drop-shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
+                <!-- Floating Offer Badge -->
+                <div class="absolute -top-3 -right-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[11px] font-black px-3 py-1.5 rounded-2xl shadow-xl border border-emerald-400/40 animate-pulse">
+                  Save ₹30,901
+                </div>
+                <!-- Floating Grade Badge -->
+                <div class="absolute -bottom-2 -left-2 bg-slate-950/90 backdrop-blur-md border border-slate-700 text-slate-200 text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-lg flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span>Grade A (Pristine) • Tested 100%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Samsung Galaxy S23 Ultra Epic Drop -->
+          <div class="hero-slide min-w-full relative overflow-hidden p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+               style="background: radial-gradient(circle at 80% 50%, rgba(147, 51, 234, 0.35) 0%, transparent 50%), linear-gradient(135deg, #0C081A 0%, #171033 50%, #0F0A24 100%);">
+            <div class="relative z-10 max-w-xl">
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-purple-500/25 text-purple-300 border border-purple-500/40 text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5">
+                  <span>⚡</span> <span>200MP CAMERA MONSTER</span>
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold">
+                  SAVE ₹70,000
+                </span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                Galaxy S23 Ultra 5G.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-amber-300">
+                  Phantom Black 256GB
+                </span>
+              </h2>
+              <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                Starting from <strong class="text-white text-base">₹54,999</strong> (MSRP <span class="line-through text-slate-400">₹1,24,999</span>). Original S-Pen stylus included. 100x Space Zoom & Dynamic AMOLED 2X tested with zero burn-in.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 mt-5">
+                <button onclick="setSubFilter('samsung')" class="px-5 py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-black shadow-lg shadow-purple-600/30 flex items-center gap-2 cursor-pointer transition-transform hover:scale-105">
+                  <span>⚡ Shop Galaxy Deals</span>
+                </button>
+                <button onclick="openInspectModal('fz-s23ultra')" class="px-4 py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-2 cursor-pointer">
+                  <span>🔍 Inspect 360° Condition</span>
+                </button>
+              </div>
+              <!-- Trust micro-tags -->
+              <div class="flex flex-wrap items-center gap-4 mt-6 text-[11px] text-slate-300">
+                <span class="flex items-center gap-1"><span class="text-purple-400">✓</span> Original S-Pen Included</span>
+                <span class="flex items-center gap-1"><span class="text-purple-400">✓</span> 5000mAh Battery Certified</span>
+                <span class="flex items-center gap-1"><span class="text-purple-400">✓</span> Free Pan-India Insured Dispatch</span>
+              </div>
+            </div>
+            <!-- Right Visual -->
+            <div class="relative z-10 shrink-0 w-64 sm:w-80 md:w-96 flex items-center justify-center">
+              <div class="relative">
+                <img src="assets/samsung_s23_ultra.png" alt="Samsung Galaxy S23 Ultra Refurbished" class="w-56 sm:w-64 md:w-72 drop-shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
+                <div class="absolute -top-3 -right-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[11px] font-black px-3 py-1.5 rounded-2xl shadow-xl border border-purple-400/40">
+                  56% OFF MSRP
+                </div>
+                <div class="absolute -bottom-2 -left-2 bg-slate-950/90 backdrop-blur-md border border-slate-700 text-slate-200 text-[11px] font-bold px-3 py-1.5 rounded-xl shadow-lg flex items-center gap-1.5">
+                  <span>🖊️ S-Pen Stylus Included</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Instant Exchange & Doorstep Buyback -->
+          <div class="hero-slide min-w-full relative overflow-hidden p-6 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+               style="background: radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.35) 0%, transparent 50%), linear-gradient(135deg, #051A12 0%, #0B291D 50%, #061912 100%);">
+            <div class="relative z-10 max-w-xl">
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-3 py-1 rounded-full bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5">
+                  <span>🔄</span> <span>INSTANT DEVICE EXCHANGE</span>
+                </span>
+                <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[10px] font-bold">
+                  GET UP TO ₹15,000 EXTRA
+                </span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                Sell Your Old Phone.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300">
+                  Instant Cash at Doorstep.
+                </span>
+              </h2>
+              <p class="text-xs sm:text-sm text-slate-300 mt-3 leading-relaxed">
+                Upgrade to certified Apple or Samsung flagship with zero hassle. Free doorstep evaluation, instant UPI money transfer, and best market trade-in quote.
+              </p>
+              <div class="flex flex-wrap items-center gap-3 mt-5">
+                <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow-lg shadow-emerald-600/30 flex items-center gap-2 cursor-pointer transition-transform hover:scale-105">
+                  <span>💰 Get Instant Valuation Quote</span>
+                </a>
+                <a href="#/pages/wholesale-price" onclick="navigateTo('#/pages/wholesale-price'); return false;" class="px-4 py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-2 cursor-pointer">
+                  <span>📦 B2B Wholesale Deals</span>
+                </a>
+              </div>
+              <!-- Trust micro-tags -->
+              <div class="flex flex-wrap items-center gap-4 mt-6 text-[11px] text-slate-300">
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 60-Sec Online Valuation</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> Free Doorstep Pickup</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> Instant Bank / UPI Payment</span>
+              </div>
+            </div>
+            <!-- Right Visual (MacBook / Tablets / Phones) -->
+            <div class="relative z-10 shrink-0 w-64 sm:w-80 md:w-96 flex items-center justify-center">
+              <div class="relative">
+                <img src="assets/macbookair_midnight.png" alt="MacBook & Gadget Trade-in" class="w-64 sm:w-72 md:w-80 drop-shadow-2xl object-contain">
+                <div class="absolute -top-3 -right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-[11px] font-black px-3 py-1.5 rounded-2xl shadow-xl">
+                  ⚡ Instant UPI Cash
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Carousel Navigation Arrows -->
+        <button onclick="prevHeroSlide()" aria-label="Previous Slide" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white border border-slate-700/80 flex items-center justify-center backdrop-blur-md cursor-pointer transition-all shadow-lg hover:scale-110 z-20">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+        </button>
+        <button onclick="nextHeroSlide()" aria-label="Next Slide" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/70 hover:bg-slate-900 text-white border border-slate-700/80 flex items-center justify-center backdrop-blur-md cursor-pointer transition-all shadow-lg hover:scale-110 z-20">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+        </button>
+
+        <!-- Carousel Dot Indicators & Auto-Run Status -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
+          <div class="flex items-center gap-2 bg-slate-950/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-700/60 shadow-lg">
+            <button onclick="goToHeroSlide(0)" class="hero-dot w-7 h-2 rounded-full bg-blue-500 transition-all cursor-pointer" aria-label="Slide 1"></button>
+            <button onclick="goToHeroSlide(1)" class="hero-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" aria-label="Slide 2"></button>
+            <button onclick="goToHeroSlide(2)" class="hero-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" aria-label="Slide 3"></button>
+            <span class="w-px h-3 bg-slate-700 mx-0.5"></span>
+            <button id="heroPlayPauseBtn" onclick="toggleHeroAutoPlay()" class="text-slate-300 hover:text-white text-[11px] font-mono flex items-center gap-1 cursor-pointer transition-colors px-1 rounded hover:bg-white/10" title="Toggle Auto-Play (6s Delay)">
+              <span id="heroPlayPauseIcon">⏸️</span>
+              <span id="heroPlayPauseLabel" class="text-[10px] text-slate-300 font-bold">6s</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- B. Authentic E-Commerce Offer Rail / Deal Grid ("Offer Raid" / Flash Deals Strip) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4" id="heroOfferRail">
+        
+        <!-- Offer 1: Live Lightning Flash Deal with Countdown -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-900 border border-amber-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
+              <span>⚡</span> FLASH DEAL
+            </span>
+            <span class="text-[10px] font-mono text-amber-400 font-bold" id="heroDealTimer">04:18:32</span>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white flex items-center justify-between">
+              <span>iPhone 13 128GB Starlight</span>
+              <span class="text-emerald-400 font-black font-mono">₹30,999</span>
+            </div>
+            <div class="text-[10px] text-slate-400 mt-0.5 flex items-center justify-between">
+              <span>Grade A • Pristine</span>
+              <span class="line-through text-slate-500">₹59,900</span>
+            </div>
+          </div>
+          <button onclick="openInspectModal('fz-ip13')" class="mt-2.5 w-full py-1.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[11px] shadow transition-colors cursor-pointer flex items-center justify-center gap-1">
+            <span>Claim Deal</span> <span>→</span>
+          </button>
+        </div>
+
+        <!-- Offer 2: Bank Instant Discount Rail -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-blue-950/40 via-slate-900 to-slate-900 border border-blue-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30 flex items-center gap-1">
+              <span>💳</span> BANK OFFER
+            </span>
+            <span class="text-[10px] text-blue-300 font-bold">ALL CARDS</span>
+          </div>
+          <div>
+            <div class="text-xs font-black text-white">Flat ₹2,000 Instant Off</div>
+            <div class="text-[10px] text-slate-300 mt-0.5 leading-snug">
+              HDFC, ICICI, SBI & Axis Bank Credit/Debit Cards on orders above ₹30k.
+            </div>
+          </div>
+          <div class="mt-2.5 pt-1.5 border-t border-slate-800 text-[10px] text-emerald-400 font-bold flex items-center justify-between">
+            <span>+ No Cost EMI from ₹1,666/mo</span>
+            <span class="text-slate-400 font-normal">Auto-applied</span>
+          </div>
+        </div>
+
+        <!-- Offer 3: 1-Click Exclusive Coupon Code -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-purple-950/40 via-slate-900 to-slate-900 border border-purple-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center gap-1">
+              <span>🏷️</span> PROMO CODE
+            </span>
+            <span class="text-[10px] text-purple-300 font-bold">EXTRA SAVINGS</span>
+          </div>
+          <div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-black text-white">Code: <span class="text-purple-300 font-mono tracking-wider">FONEZONE2K</span></span>
+            </div>
+            <div class="text-[10px] text-slate-300 mt-0.5">
+              Get additional ₹2,000 off at cart checkout on any flagship purchase.
+            </div>
+          </div>
+          <button onclick="copyHeroCoupon('FONEZONE2K')" class="mt-2.5 w-full py-1.5 rounded-lg bg-purple-600/30 hover:bg-purple-600 text-purple-200 hover:text-white border border-purple-500/50 font-bold text-[11px] shadow transition-all cursor-pointer flex items-center justify-center gap-1.5">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+            <span id="copyCouponBtnText">Copy Coupon Code</span>
+          </button>
+        </div>
+
+        <!-- Offer 4: Zero-Risk Doorstep COD & Inspection -->
+        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
+              <span>🛡️</span> ZERO RISK
+            </span>
+            <span class="text-[10px] text-emerald-400 font-bold">100% ASSURED</span>
+          </div>
+          <div>
+            <div class="text-xs font-black text-white">Inspect Before Paying</div>
+            <div class="text-[10px] text-slate-300 mt-0.5 leading-snug">
+              Open-box doorstep delivery. Pay cash or UPI only after you verify condition.
+            </div>
+          </div>
+          <div class="mt-2.5 pt-1.5 border-t border-slate-800 text-[10px] text-slate-300 font-medium flex items-center justify-between">
+            <span>7-Day Easy Replacement</span>
+            <span class="text-emerald-400 font-bold">Free Shipping</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- C. Trust Assurance Strip -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3 pt-3 border-t border-slate-800/80 text-[11px]" id="heroTrustStrip">
+        <div class="flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
+          <span class="text-lg">🛡️</span>
+          <div>
+            <div class="font-bold text-white">Up to 6M Warranty</div>
+            <div class="text-slate-400 text-[10px]">100% Genuine Certified Parts</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
+          <span class="text-lg">🔋</span>
+          <div>
+            <div class="font-bold text-white">Certified Battery</div>
+            <div class="text-slate-400 text-[10px]">85%+ Health Guaranteed</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
+          <span class="text-lg">🚚</span>
+          <div>
+            <div class="font-bold text-white">Pan-India COD</div>
+            <div class="text-slate-400 text-[10px]">Insured Doorstep Dispatch</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
+          <span class="text-lg">🔄</span>
+          <div>
+            <div class="font-bold text-white">7 Days Easy Return</div>
+            <div class="text-slate-400 text-[10px]">No Questions Asked Return</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 4.1 CASHIFY-INSPIRED FAVOURITE BRANDS & POPULAR RAIL     -->
+    <!-- ======================================================== -->
+    <section id="favouriteBrandsSection" class="max-w-7xl mx-auto px-4 pt-3 pb-2">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+        <div>
+          <h2 class="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
+            <span>⭐ Favourite Brands & Categories</span>
+            <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-[10px] font-mono uppercase font-bold tracking-wider">Quick Select</span>
+          </h2>
+          <p class="text-xs text-slate-400">Explore certified refurbished devices with verified starting prices & live 32-point inspection proof</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[11px] font-bold flex items-center gap-1.5 font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>All Devices In-Stock (Delhi/Mumbai/Dubai)</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick Select Cards Grid (7 High-Conversion Touchpoints) -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 sm:gap-3">
+        
+        <!-- Apple iPhones -->
+        <button onclick="handleBrandQuickSelect('apple')" class="brand-rail-card p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group">
+          <div class="w-12 h-12 mb-2 rounded-xl bg-slate-800/80 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <img src="assets/iphone14_blue.png" alt="Apple" class="max-h-full max-w-full object-contain drop-shadow">
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
+              <span>🍎 Apple</span>
+            </div>
+            <div class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹15,499</div>
+          </div>
+        </button>
+
+        <!-- Samsung Galaxy -->
+        <button onclick="handleBrandQuickSelect('samsung')" class="brand-rail-card p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group">
+          <div class="w-12 h-12 mb-2 rounded-xl bg-slate-800/80 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <img src="assets/samsung_s23_ultra.png" alt="Samsung" class="max-h-full max-w-full object-contain drop-shadow">
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
+              <span>📱 Samsung</span>
+            </div>
+            <div class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹54,999</div>
+          </div>
+        </button>
+
+        <!-- Flagship Deals -->
+        <button onclick="handleBrandQuickSelect('flagship')" class="brand-rail-card p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group">
+          <div class="w-12 h-12 mb-2 rounded-xl bg-slate-800/80 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <img src="assets/iphone15pro_naturaltitanium.png" alt="Flagship" class="max-h-full max-w-full object-contain drop-shadow">
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
+              <span>👑 Flagship</span>
+            </div>
+            <div class="text-[10px] text-emerald-400 font-bold mt-0.5">Titanium & Ultra</div>
+          </div>
+        </button>
+
+        <!-- MacBooks & Laptops -->
+        <button onclick="handleCategoryQuickSelect('macbook')" class="brand-rail-card p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group">
+          <div class="w-12 h-12 mb-2 rounded-xl bg-slate-800/80 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <img src="assets/macbookair_midnight.png" alt="MacBook" class="max-h-full max-w-full object-contain drop-shadow">
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
+              <span>💻 MacBooks</span>
+            </div>
+            <div class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹64,999</div>
+          </div>
+        </button>
+
+        <!-- iPads & Tablets -->
+        <button onclick="handleCategoryQuickSelect('ipad')" class="brand-rail-card p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group">
+          <div class="w-12 h-12 mb-2 rounded-xl bg-slate-800/80 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <img src="assets/ipad_10th_gen.png" alt="iPads" class="max-h-full max-w-full object-contain drop-shadow">
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
+              <span>📱 iPads</span>
+            </div>
+            <div class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹24,999</div>
+          </div>
+        </button>
+
+        <!-- Apple Watches -->
+        <button onclick="handleCategoryQuickSelect('watch')" class="brand-rail-card p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group">
+          <div class="w-12 h-12 mb-2 rounded-xl bg-slate-800/80 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <img src="assets/applewatch_ultra.png" alt="Watches" class="max-h-full max-w-full object-contain drop-shadow">
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
+              <span>⌚ Watches</span>
+            </div>
+            <div class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹34,999</div>
+          </div>
+        </button>
+
+        <!-- Cashify Special: 32-Pt Video Verified Only Filter Card -->
+        <button onclick="handleVideoVerifiedFilter()" id="quickFilterVideoBtn" class="brand-rail-card p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group border-red-500/40 bg-red-950/20 hover:border-red-500/80">
+          <div class="w-12 h-12 mb-2 rounded-xl bg-red-600/20 border border-red-500/40 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <span class="w-7 h-7 rounded-full bg-red-600 text-white flex items-center justify-center text-xs font-bold shadow-lg shadow-red-600/50">▶</span>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-white group-hover:text-red-400 transition-colors flex items-center justify-center gap-1">
+              <span>📹 Video Proof</span>
+            </div>
+            <div class="text-[10px] text-red-400 font-bold mt-0.5">Cashify Feature</div>
+          </div>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- 5. Product Catalog Section (With Dynamic Breadcrumbs & Sub-Filters) -->
+    <main id="productCatalogSection" class="max-w-7xl mx-auto px-4 py-6 scroll-mt-28">
+      
+      <!-- Breadcrumb Bar -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-2 font-medium" aria-label="Breadcrumb">
+        <a href="#" onclick="setCategory('all'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span id="breadcrumbCategory" class="text-blue-400 font-bold">All Certified Devices</span>
+      </nav>
+
+      <!-- Category Header & Sub-filter Row -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+        <div>
+          <h2 id="categoryTitle" class="text-lg md:text-xl font-bold text-white flex items-center gap-2">
+            <span>Verified In-Stock Electronics</span>
+            <span id="productCountBadge" class="px-2 py-0.5 rounded-full bg-slate-800 border border-slate-700 text-xs text-blue-400 font-mono">7 devices</span>
+          </h2>
+          <p id="categorySubtitle" class="text-xs text-slate-400 mt-0.5">
+            Choose your preferred cosmetic grade and inspect 360° condition before ordering.
+          </p>
+        </div>
+
+        <!-- Speed Indicator Tag -->
+        <div class="px-3 py-1 rounded-lg bg-emerald-950/40 border border-emerald-500/30 text-emerald-400 text-xs flex items-center gap-1.5 font-mono">
+          <span>⚡ Instant Edge Filtering:</span>
+          <span id="latencySpan" class="font-bold">0.08s</span>
+        </div>
+      </div>
+
+      <!-- Interactive "Shop by Budget" Finder Widget -->
+      <section class="mb-5 p-4 rounded-2xl bg-gradient-to-r from-blue-950/40 via-slate-900 to-slate-950 border border-blue-500/25 shadow-xl relative overflow-hidden" id="budgetFinderWidget">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div>
+            <div class="flex items-center gap-2 mb-0.5">
+              <span class="text-base">💰</span>
+              <h3 class="text-sm md:text-base font-extrabold text-white flex items-center gap-2">
+                <span>Find Phones in Your Budget</span>
+                <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-mono font-bold">Smart Filter</span>
+              </h3>
+            </div>
+            <p class="text-xs text-slate-300">
+              Drag slider or pick a price bracket to instantly find certified devices under your budget.
+            </p>
+          </div>
+
+          <!-- Live Budget Stat Badge -->
+          <div class="flex items-center gap-3 self-start md:self-auto bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl">
+            <div>
+              <span class="text-[9px] text-slate-400 block font-mono">MAX BUDGET:</span>
+              <span id="budgetDisplayVal" class="text-sm md:text-base font-black text-amber-400 font-mono">₹1,00,000</span>
+            </div>
+            <div class="h-6 w-px bg-slate-800"></div>
+            <div>
+              <span class="text-[9px] text-slate-400 block font-mono">MATCHING:</span>
+              <span id="budgetMatchCount" class="text-xs md:text-sm font-bold text-emerald-400 font-mono">7 in-stock</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Budget Range Slider -->
+        <div class="mt-3 pt-2.5 border-t border-slate-800/80">
+          <div class="flex items-center gap-3">
+            <span class="text-[10px] font-mono text-slate-400 shrink-0">₹15,000</span>
+            <input 
+              type="range" 
+              id="budgetRangeSlider" 
+              min="15000" 
+              max="100000" 
+              step="2500" 
+              value="100000" 
+              oninput="handleBudgetSlider(this.value)"
+              onchange="handleBudgetSlider(this.value)"
+              class="w-full accent-blue-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
+            >
+            <span class="text-[10px] font-mono text-slate-400 shrink-0">₹1,00,000+</span>
+          </div>
+
+          <!-- Quick Budget Bucket Pills -->
+          <div class="flex flex-wrap items-center gap-1.5 mt-2.5 text-xs">
+            <span class="text-[10px] text-slate-400 font-semibold mr-1">Quick Buckets:</span>
+            <button onclick="setQuickBudget(20000)" class="quick-budget-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-[11px] font-medium transition-all cursor-pointer">
+              Under ₹20k
+            </button>
+            <button onclick="setQuickBudget(35000)" class="quick-budget-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-[11px] font-medium transition-all cursor-pointer">
+              ₹20k - ₹35k
+            </button>
+            <button onclick="setQuickBudget(50000)" class="quick-budget-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-[11px] font-medium transition-all cursor-pointer">
+              ₹35k - ₹50k
+            </button>
+            <button onclick="setQuickBudget(75000)" class="quick-budget-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-[11px] font-medium transition-all cursor-pointer">
+              ₹50k - ₹75k
+            </button>
+            <button onclick="setQuickBudget(100000)" class="quick-budget-btn px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[11px] transition-all cursor-pointer shadow">
+              All Budgets
+            </button>
+            <span id="budgetSavingsCallout" class="hidden sm:inline-flex ml-auto text-[10px] text-amber-300 font-mono font-semibold items-center gap-1">
+              <span>🔥 Save up to ₹55,000 vs Brand New MRP</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dynamic Brand Sub-Filter Chips -->
+      <div id="subFilterRow" class="flex flex-wrap items-center gap-2 mb-5">
+        <!-- Injected via app.js -->
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        <!-- Dynamically injected via app.js -->
+      </div>
+    </main>
+
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 2. ABOUT US VIEW (/pages/about-us)                       -->
+    <!-- ======================================================== -->
+    <div id="view-about-us" class="page-view hidden max-w-7xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">About Us</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Interactive Trust Engine</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> FoneZone's original Shopify Ella theme presented "About Us" as an unformatted 800-word text dump. NexG restructures this into an interactive trust matrix: transparent lab diagnostic equipment specs, executive leadership access, and verifiable refurbished grading metrics.
+            </div>
+          </div>
+        </div>
+        <button onclick="tourOpen360()" class="whitespace-nowrap px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow cursor-pointer">
+          Inspect 360° Lab Diagnostics
+        </button>
+      </div>
+
+      <!-- Hero Story Banner -->
+      <div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#0C1B3A] via-slate-900 to-[#0A1224] border border-blue-500/20 p-8 md:p-12 mb-10 shadow-2xl">
+        <div class="max-w-3xl">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-xs font-bold uppercase tracking-wider mb-4">
+            Founded in 2013 • Acetel Telecommunications
+          </span>
+          <h1 class="text-2xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+            Pioneering India & UAE's Certified Pre-Owned Revolution.
+          </h1>
+          <p class="text-sm text-slate-300 mt-4 leading-relaxed">
+            Headquartered in Bangalore with regional hubs in New Delhi and Dubai, FoneZone was founded by <b>Hemant Verma</b> to dismantle the fear and friction of buying refurbished technology. We believe premium flagship smartphones shouldn't cost an arm and a leg, nor should circular electronics come with quality uncertainties.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-slate-800">
+            <div>
+              <div class="text-2xl font-black text-blue-400 font-mono">3,50,000+</div>
+              <div class="text-xs text-slate-400">Certified Devices Shipped</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-emerald-400 font-mono">32 Points</div>
+              <div class="text-xs text-slate-400">Hardware Lab Audit</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-amber-400 font-mono">19,000+</div>
+              <div class="text-xs text-slate-400">Indian PIN Codes Served</div>
+            </div>
+            <div>
+              <div class="text-2xl font-black text-indigo-400 font-mono">48 Tonnes</div>
+              <div class="text-xs text-slate-400">E-Waste Prevented</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Quality Pillars -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-2xl mb-4">🔬</div>
+          <h3 class="text-base font-bold text-white mb-2">Automated 32-Point Diagnostic Rig</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Every phone undergoes automated sensor profiling: TrueTone spectral analysis, multi-touch digitization delay, Face ID IR dot projector, and baseband modem sensitivity across Indian 5G bands (n28, n78).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center text-2xl mb-4">🔋</div>
+          <h3 class="text-base font-bold text-white mb-2">Certified Battery Health Guarantee</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            We never sell depleted devices. Grade A flagships maintain 90%–98% original factory battery health. If battery degradation ever dips below 80% within warranty, we replace the cell free of charge.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-500/40 transition-colors">
+          <div class="w-12 h-12 rounded-2xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-2xl mb-4">🛡️</div>
+          <h3 class="text-base font-bold text-white mb-2">6 to 12 Months Comprehensive Warranty</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Backed by FoneZone's centralized service center in Bangalore. If hardware logic faults emerge, we offer hassle-free doorstep pickup and free repair or unit replacement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Executive Leadership -->
+      <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 mb-10">
+        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+          <span>👥 Executive Leadership & Operations</span>
+          <span class="text-xs font-normal text-slate-400">• Dedicated to Uncompromising Quality</span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-950/80 border border-slate-800">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-2xl font-black text-slate-950 shadow">
+              HV
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h4 class="font-bold text-white text-base">Hemant Verma</h4>
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold">Founder & CEO</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Visionary behind Acetel Telecommunications and FoneZone India/UAE. Dedicated to zero-compromise grading standards and direct client transparency via the "Ask to CEO" executive escalation portal.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-950/80 border border-slate-800">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-2xl font-black text-white shadow">
+              SP
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h4 class="font-bold text-white text-base">Sahil Pathania</h4>
+                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[10px] font-bold">Head of Operations & Logistics</span>
+              </div>
+              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
+                Leads pan-India courier logistics, BlueDart fulfillment hubs, and the automated WhatsApp Anti-RTO address verification command center saving ₹13.35L in courier return freight.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience Centers & Logistics Hubs -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs">
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+          <div class="text-sm font-bold text-white flex items-center gap-1.5 mb-2">
+            <span>📍 Bangalore QA Lab & Hub</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            100ft Road, Indiranagar, Bengaluru, Karnataka 560038<br>
+            Primary diagnostic facility, robotic screen testers, central parts inventory.
+          </p>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+          <div class="text-sm font-bold text-white flex items-center gap-1.5 mb-2">
+            <span>📍 Delhi Fulfillment Hub</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Kalkaji & Nehru Place, New Delhi 110019<br>
+            North India dispatch sorting, BlueDart Air express cargo facility.
+          </p>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/80 border border-slate-800">
+          <div class="text-sm font-bold text-white flex items-center gap-1.5 mb-2">
+            <span>📍 Dubai Global Gateway</span>
+          </div>
+          <p class="text-slate-400 leading-relaxed">
+            Acetel Telecommunications FZCO, Business Bay & Deira, Dubai, UAE<br>
+            International pre-owned sourcing, wholesale trade-in grading.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 3. FREQUENTLY ASKED QUESTIONS VIEW (/pages/frequently-asked-questions-faq) -->
+    <!-- ======================================================== -->
+    <div id="view-faq" class="page-view hidden max-w-5xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">Frequently Asked Questions</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Predictive AI Search & WhatsApp Resolution</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Standard Shopify Ella FAQ lists are static, non-searchable text walls. NexG adds live search query matching, categorized filters, and 1-tap WhatsApp agent escalation.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          How Can We Help You Today?
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          Find clear, verified answers on cosmetic grades, warranty claims, COD orders, and return procedures.
+        </p>
+
+        <!-- Live FAQ Search Bar -->
+        <div class="relative mt-5">
+          <input 
+            type="text" 
+            id="faqSearchInput" 
+            oninput="filterFaq(this.value)"
+            placeholder="Search keywords: 'battery', 'warranty', 'return', 'COD'..."
+            class="w-full bg-slate-900 border border-slate-700 rounded-2xl py-3 pl-11 pr-4 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 shadow-lg"
+          >
+          <svg class="w-4 h-4 text-slate-400 absolute left-4 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mt-4 text-xs">
+          <button onclick="setFaqCategory('all')" class="faq-cat-btn px-3 py-1 rounded-full bg-blue-600 text-white font-bold cursor-pointer" data-cat="all">All Questions</button>
+          <button onclick="setFaqCategory('grading')" class="faq-cat-btn px-3 py-1 rounded-full bg-slate-800 text-slate-300 hover:text-white cursor-pointer" data-cat="grading">Quality & Grading</button>
+          <button onclick="setFaqCategory('warranty')" class="faq-cat-btn px-3 py-1 rounded-full bg-slate-800 text-slate-300 hover:text-white cursor-pointer" data-cat="warranty">Warranty & Repairs</button>
+          <button onclick="setFaqCategory('shipping')" class="faq-cat-btn px-3 py-1 rounded-full bg-slate-800 text-slate-300 hover:text-white cursor-pointer" data-cat="shipping">Shipping & COD</button>
+          <button onclick="setFaqCategory('returns')" class="faq-cat-btn px-3 py-1 rounded-full bg-slate-800 text-slate-300 hover:text-white cursor-pointer" data-cat="returns">Returns & Refunds</button>
+        </div>
+      </div>
+
+      <!-- FAQ Accordion List -->
+      <div id="faqAccordionContainer" class="space-y-3">
+        <!-- Injected via app.js / Static fallbacks below -->
+      </div>
+
+      <!-- Live Support Card -->
+      <div class="mt-10 p-6 rounded-3xl bg-slate-900 border border-slate-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="text-left">
+          <h4 class="text-base font-bold text-white">Couldn't find what you were looking for?</h4>
+          <p class="text-xs text-slate-400 mt-0.5">Our senior product specialists are available 10:00 AM – 7:00 PM IST on WhatsApp.</p>
+        </div>
+        <a href="https://wa.me/918044630881" target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold flex items-center gap-2 shadow cursor-pointer">
+          <span>💬 Chat on WhatsApp (+91 8044630881)</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 4. SHIPPING POLICY VIEW (/pages/shipping-policy)          -->
+    <!-- ======================================================== -->
+    <div id="view-shipping-policy" class="page-view hidden max-w-6xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">Shipping & Delivery Policy</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Real-Time PIN Code Delivery Predictor</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Generic Shopify stores claim "delivery in 5-7 business days", leaving buyers anxious. NexG integrates real-time BlueDart and Delhivery dispatch SLA calculators with instant PIN lookup.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left: Interactive PIN Code Checker -->
+        <div class="lg:col-span-5 bg-slate-900/90 border border-slate-800 rounded-3xl p-6 shadow-xl">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="text-xl">🚚</span>
+            <h3 class="text-base font-bold text-white">Live PIN Code Delivery Checker</h3>
+          </div>
+          <p class="text-xs text-slate-400 mb-4">
+            Enter your 6-digit PIN code to check instant courier serviceability, COD availability, and delivery date.
+          </p>
+
+          <div class="flex gap-2 mb-3">
+            <input 
+              type="text" 
+              id="shippingPinInput" 
+              maxlength="6"
+              value="110019"
+              placeholder="e.g. 110019 or 560038"
+              class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white font-mono focus:outline-none focus:border-blue-500"
+            >
+            <button onclick="checkPinService()" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs cursor-pointer shadow">
+              Check
+            </button>
+          </div>
+
+          <!-- Quick Test Chips -->
+          <div class="flex flex-wrap items-center gap-1.5 mb-4 text-[10px]">
+            <span class="text-slate-400">Quick Try:</span>
+            <button onclick="fillPin('110019')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-blue-300">Delhi (110019)</button>
+            <button onclick="fillPin('560038')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-blue-300">Bangalore (560038)</button>
+            <button onclick="fillPin('400001')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-blue-300">Mumbai (400001)</button>
+            <button onclick="fillPin('700091')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-blue-300">Kolkata (700091)</button>
+          </div>
+
+          <!-- Result Card -->
+          <div id="shippingResultCard" class="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-xs space-y-2">
+            <div class="flex justify-between items-center border-b border-slate-800/80 pb-2">
+              <span class="text-slate-400">Service Status:</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[10px]">🟢 PRE-TESTED EXPRESS ROUTE</span>
+            </div>
+            <div class="flex justify-between text-slate-300">
+              <span>Location:</span>
+              <b id="pinLocationText" class="text-white">South Delhi / Kalkaji Hub</b>
+            </div>
+            <div class="flex justify-between text-slate-300">
+              <span>Courier Partner:</span>
+              <b id="pinCourierText" class="text-blue-400">BlueDart Air Cargo</b>
+            </div>
+            <div class="flex justify-between text-slate-300">
+              <span>COD Availability:</span>
+              <b class="text-emerald-400">✓ 100% Eligible (With WhatsApp OTP)</b>
+            </div>
+            <div class="flex justify-between text-slate-300 pt-1 border-t border-slate-800/80">
+              <span>Estimated Delivery:</span>
+              <b id="pinDeliveryDate" class="text-amber-400 font-bold">Tomorrow by 4:00 PM</b>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Official Policy Terms -->
+        <div class="lg:col-span-7 space-y-6 text-xs text-slate-300">
+          <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800">
+            <h3 class="text-base font-bold text-white mb-2">1. Same-Day Dispatch SLA</h3>
+            <p class="text-slate-400 leading-relaxed">
+              All orders placed and verified before <b>2:00 PM IST (Monday through Saturday)</b> are packaged in tamper-evident security containers and handed over to BlueDart or Delhivery Air Express sorting centers on the same day.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800">
+            <h3 class="text-base font-bold text-white mb-2">2. Zero-Cost 100% Transit Insurance</h3>
+            <p class="text-slate-400 leading-relaxed">
+              Every shipment leaving FoneZone is insured up to its full replacement invoice value. If a parcel is damaged, lost, or tampered with by courier staff during transit, FoneZone immediately issues a brand-new certified replacement without waiting for lengthy courier insurance claims.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800">
+            <h3 class="text-base font-bold text-white mb-2">3. Cash on Delivery (COD) Doorstep Verification</h3>
+            <p class="text-slate-400 leading-relaxed">
+              To prevent fraudulent orders and protect courier safety, COD orders require a 1-tap WhatsApp address confirmation OTP before dispatch. Customers also have the option to convert to Prepaid UPI via WhatsApp and receive an instant <b>₹300 flat discount</b>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 5. WARRANTY POLICY VIEW (/pages/warranty-policy)         -->
+    <!-- ======================================================== -->
+    <div id="view-warranty-policy" class="page-view hidden max-w-6xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">Comprehensive Warranty Policy</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• 1-Click Digital Warranty Verification & Pickup</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Conventional warranty claims require tedious email chains and waiting 5-10 business days for authorization. NexG provides instant serial number warranty verification with automatic doorstep reverse logistics.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warranty Status & Claim Generator -->
+      <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 mb-10 shadow-xl">
+        <div class="max-w-xl">
+          <h2 class="text-xl font-bold text-white mb-2">Check Device Warranty & Request Doorstep Claim</h2>
+          <p class="text-xs text-slate-400 mb-4">Enter your FoneZone Order ID and device IMEI to verify coverage.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+            <input type="text" id="warrantyOrderId" value="FZ-1049" placeholder="Order ID (e.g. FZ-1049)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+            <input type="text" id="warrantyImei" value="354892091823901" placeholder="IMEI / Serial Number" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+          </div>
+          <button onclick="checkWarrantyStatus()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs cursor-pointer shadow">
+            Verify Active Warranty Coverage
+          </button>
+        </div>
+
+        <!-- Dynamic Verification Card -->
+        <div id="warrantyResultCard" class="mt-6 p-5 rounded-2xl bg-slate-950 border border-slate-800 text-xs space-y-3">
+          <div class="flex justify-between items-center">
+            <span class="text-slate-400">Device: <b class="text-white">iPhone 14 128GB Blue (Grade A)</b></span>
+            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold">
+              ✓ 154 DAYS WARRANTY REMAINING
+            </span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 text-[11px] border-t border-slate-800 text-slate-300">
+            <div>Display Logic: <b class="text-emerald-400">Covered</b></div>
+            <div>Camera Sensor: <b class="text-emerald-400">Covered</b></div>
+            <div>Battery Degradation: <b class="text-emerald-400">Covered (&lt;80%)</b></div>
+            <div>Motherboard: <b class="text-emerald-400">Covered</b></div>
+          </div>
+          <button onclick="showToast('✅ Warranty Claim Ticket #WC-8812 created! BlueDart pickup scheduled within 24 hours.')" class="w-full sm:w-auto px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs cursor-pointer shadow">
+            Request Free Doorstep Warranty Pickup
+          </button>
+        </div>
+      </div>
+
+      <!-- Coverage Breakdown Matrix -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs">
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-emerald-400 flex items-center gap-1.5 mb-3">
+            <span>✓ What is Covered under FoneZone Warranty:</span>
+          </h3>
+          <ul class="space-y-2 text-slate-300">
+            <li class="flex items-start gap-2"><span>•</span> <span>Motherboard failures, power IC issues, unexpected bootloops.</span></li>
+            <li class="flex items-start gap-2"><span>•</span> <span>Touch digitizer dead zones, TrueTone sensor issues, display flickering.</span></li>
+            <li class="flex items-start gap-2"><span>•</span> <span>Face ID / Touch ID hardware component failures.</span></li>
+            <li class="flex items-start gap-2"><span>•</span> <span>Camera optical stabilization (OIS), focus motors, lens sensor logic.</span></li>
+            <li class="flex items-start gap-2"><span>•</span> <span>Battery capacity dropping below 80% original health during warranty.</span></li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-sm font-bold text-red-400 flex items-center gap-1.5 mb-3">
+            <span>✕ What is Not Covered (Exclusions):</span>
+          </h3>
+          <ul class="space-y-2 text-slate-400">
+            <li class="flex items-start gap-2"><span>•</span> <span>Physical crack damage caused by accidental drops post-delivery.</span></li>
+            <li class="flex items-start gap-2"><span>•</span> <span>Water or liquid ingress beyond IP68 specification limits.</span></li>
+            <li class="flex items-start gap-2"><span>•</span> <span>Unauthorized third-party repair tampering or software jailbreaking/rooting.</span></li>
+            <li class="flex items-start gap-2"><span>•</span> <span>Normal cosmetic hairline wear incurred through everyday usage.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 6. RETURN & REFUND POLICY VIEW (/pages/return-and-refund-policy-easy-returns-refunds) -->
+    <!-- ======================================================== -->
+    <div id="view-return-policy" class="page-view hidden max-w-5xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">Return & Refund Policy</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Transparent 4-Step Return Journey</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Customers hesitate to buy refurbished devices because they dread hidden return clauses. NexG gives a visual 4-step money-back progression and guarantees 24-hour refund disbursement.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-Step Visual Journey -->
+      <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 mb-10 shadow-xl">
+        <h2 class="text-xl font-bold text-white mb-2">7-Day Zero-Risk Return Progression</h2>
+        <p class="text-xs text-slate-400 mb-8">From the moment the courier delivers your package, you have 7 full calendar days to inspect and test your device.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 relative">
+            <span class="text-xs font-mono font-bold text-blue-400">STEP 1</span>
+            <h4 class="font-bold text-white text-sm mt-1">Submit Request</h4>
+            <p class="text-[11px] text-slate-400 mt-1">Submit return with 1 tap via WhatsApp or account portal with reason.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 relative">
+            <span class="text-xs font-mono font-bold text-blue-400">STEP 2</span>
+            <h4 class="font-bold text-white text-sm mt-1">Doorstep Pickup</h4>
+            <p class="text-[11px] text-slate-400 mt-1">BlueDart arrives with a barcode security bag. 100% free pickup.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 relative">
+            <span class="text-xs font-mono font-bold text-blue-400">STEP 3</span>
+            <h4 class="font-bold text-white text-sm mt-1">Lab Verification</h4>
+            <p class="text-[11px] text-slate-400 mt-1">Delhi/Bangalore hub confirms IMEI match and original accessories.</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 relative">
+            <span class="text-xs font-mono font-bold text-emerald-400">STEP 4</span>
+            <h4 class="font-bold text-white text-sm mt-1">Instant Refund</h4>
+            <p class="text-[11px] text-slate-400 mt-1">100% money back into your UPI or bank within 24 hours. Zero deductions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 7. PRIVACY POLICY VIEW (/pages/privacy-policy)           -->
+    <!-- ======================================================== -->
+    <div id="view-privacy-policy" class="page-view hidden max-w-5xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">Privacy & Data Security Policy</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Bank-Grade Encryption & Zero Telemarketing Guarantee</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Customers fear entering their phone numbers because spam calls flood their phones. NexG enforces strict RBI/Meta privacy isolation with end-to-end tokenized WhatsApp APIs.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-6 text-xs text-slate-300 leading-relaxed">
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-base font-bold text-white mb-2">1. Data Sanitization & Military-Grade Wipe</h3>
+          <p class="text-slate-400">
+            Every pre-owned smartphone entering or exiting FoneZone facilities undergoes irreversible data eradication conforming to <b>NIST SP 800-88 Rev. 1</b> and <b>DoD 5220.22-M</b> standards. Zero traces of prior user photos, accounts, or tokens can ever survive our lab flashing.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800">
+          <h3 class="text-base font-bold text-white mb-2">2. Zero-Spam / Zero-Reselling Commitment</h3>
+          <p class="text-slate-400">
+            FoneZone does not sell, rent, or trade your personal phone number, delivery address, or purchase history to third-party advertising brokers, loan telemarketers, or marketing aggregators. Your mobile number is used strictly for transactional dispatch OTPs and courier delivery alerts.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 8. CONTACT US VIEW (/pages/contact-us-get-in-touch-with-our-team) -->
+    <!-- ======================================================== -->
+    <div id="view-contact-us" class="page-view hidden max-w-6xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">Contact Our Team</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Direct Routing to Operations Triage Hub</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Inquiries submitted via Shopify Ella forms end up in forgotten email inboxes with 48-hour response delays. NexG routes customer queries straight to Sahil's operations hub with instant priority triage.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Left: Direct Channels & Hubs -->
+        <div class="lg:col-span-5 space-y-4 text-xs">
+          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl">
+            <h3 class="text-base font-bold text-white mb-4">Official Channels</h3>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <span class="text-xl">📞</span>
+                <div>
+                  <div class="text-[11px] text-slate-400">Customer Helpline (10am - 7pm IST):</div>
+                  <a href="tel:+918044630881" class="font-bold text-white hover:text-blue-400">+91 8044630881</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xl">💬</span>
+                <div>
+                  <div class="text-[11px] text-slate-400">WhatsApp Concierge:</div>
+                  <a href="https://wa.me/918044630881" target="_blank" class="font-bold text-emerald-400 hover:text-emerald-300">+91 8044630881</a>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xl">✉️</span>
+                <div>
+                  <div class="text-[11px] text-slate-400">Retail & Warranty Support:</div>
+                  <b class="text-slate-200">support@fonezone.com</b>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xl">💼</span>
+                <div>
+                  <div class="text-[11px] text-slate-400">B2B Wholesale Inquiries:</div>
+                  <b class="text-slate-200">wholesale@fonezone.com</b>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800">
+            <h4 class="font-bold text-white text-sm mb-3">Experience Centers & Warehouses</h4>
+            <div class="space-y-3 text-slate-400">
+              <div>
+                <b class="text-white">Bangalore R&D & QA Lab:</b><br>
+                100ft Road, Indiranagar, Bengaluru, Karnataka 560038
+              </div>
+              <div>
+                <b class="text-white">New Delhi Fulfillment Hub:</b><br>
+                Kalkaji & Nehru Place, New Delhi 110019
+              </div>
+              <div>
+                <b class="text-white">Dubai International Headquarters:</b><br>
+                Acetel Telecommunications FZCO, Business Bay, Dubai, UAE
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Inquiry Form -->
+        <div class="lg:col-span-7 bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+          <h3 class="text-base font-bold text-white mb-2">Send an Instant Message</h3>
+          <p class="text-xs text-slate-400 mb-6">Our senior operations desk typically responds within 15 minutes during operating hours.</p>
+
+          <form onsubmit="submitContactForm(event)" class="space-y-4 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-slate-400 mb-1">Your Full Name:</label>
+                <input type="text" id="contactName" required placeholder="e.g. Ramesh Chandra" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              </div>
+              <div>
+                <label class="block text-slate-400 mb-1">WhatsApp / Phone Number:</label>
+                <input type="tel" id="contactPhone" required placeholder="+91 98765 43210" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-slate-400 mb-1">Inquiry Category:</label>
+              <select id="contactCategory" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+                <option value="pre-purchase">Pre-Purchase Advice (iPhone / Samsung)</option>
+                <option value="order-status">Ongoing Order Status / Tracking</option>
+                <option value="wholesale">B2B Wholesale Price List (Retailer)</option>
+                <option value="warranty">Warranty Claim / Technical Support</option>
+                <option value="corporate">Corporate & Bulk Orders</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-slate-400 mb-1">Message Details:</label>
+              <textarea id="contactMessage" rows="4" required placeholder="Describe your question or requirement..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg cursor-pointer transition-all">
+              Send Message to FoneZone Desk
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 9. SELL YOUR DEVICE VIEW (/pages/sell-your-device)       -->
+    <!-- ======================================================== -->
+    <div id="view-sell-device" class="page-view hidden max-w-6xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-amber-400 font-bold">Sell Your Device (Instant Cash)</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Algorithmic Buyback Valuation Engine</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Original FoneZone site used a basic static lead capture form. NexG integrates a dynamic valuation engine (Cashify benchmark) with instant quote generation and doorstep pickup scheduling.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Interactive Trade-In Calculator -->
+        <div class="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-black text-white flex items-center gap-2">
+              <span>📱 Instant Trade-In Valuation Calculator</span>
+            </h2>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold">
+              Highest Market Quote
+            </span>
+          </div>
+
+          <!-- Step 1: Brand -->
+          <div class="mb-4">
+            <label class="block text-xs text-slate-400 font-semibold mb-2">1. Select Device Brand:</label>
+            <div class="grid grid-cols-4 gap-2 text-xs">
+              <button onclick="setSellBrand('apple')" class="sell-brand-btn p-2 rounded-xl border border-blue-500 bg-blue-600 text-white font-bold cursor-pointer" data-brand="apple">🍎 Apple</button>
+              <button onclick="setSellBrand('samsung')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-brand="samsung">📱 Samsung</button>
+              <button onclick="setSellBrand('oneplus')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-brand="oneplus">🔴 OnePlus</button>
+              <button onclick="setSellBrand('xiaomi')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-brand="xiaomi">🟠 Xiaomi</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Model -->
+          <div class="mb-4">
+            <label class="block text-xs text-slate-400 font-semibold mb-2">2. Select Smartphone Model:</label>
+            <select id="sellModelSelect" onchange="calculateSellPrice()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white">
+              <option value="ip14pro">iPhone 14 Pro (128GB Base)</option>
+              <option value="ip14" selected>iPhone 14 (128GB Base)</option>
+              <option value="ip13">iPhone 13 (128GB Base)</option>
+              <option value="ip12">iPhone 12 (64GB Base)</option>
+              <option value="s23ultra">Samsung Galaxy S23 Ultra</option>
+              <option value="s22">Samsung Galaxy S22 5G</option>
+            </select>
+          </div>
+
+          <!-- Step 3: Storage -->
+          <div class="mb-4">
+            <label class="block text-xs text-slate-400 font-semibold mb-2">3. Select Storage Capacity:</label>
+            <div class="grid grid-cols-4 gap-2 text-xs">
+              <button onclick="setSellStorage('64')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-storage="64">64GB</button>
+              <button onclick="setSellStorage('128')" class="sell-storage-btn p-2 rounded-xl border border-blue-500 bg-blue-600 text-white font-bold cursor-pointer" data-storage="128">128GB</button>
+              <button onclick="setSellStorage('256')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-storage="256">256GB</button>
+              <button onclick="setSellStorage('512')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-storage="512">512GB</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Condition -->
+          <div class="mb-5">
+            <label class="block text-xs text-slate-400 font-semibold mb-2">4. Physical Cosmetic Condition:</label>
+            <div class="grid grid-cols-3 gap-2 text-xs">
+              <button onclick="setSellCondition('flawless')" class="sell-cond-btn p-2.5 rounded-xl border border-emerald-500 bg-emerald-600/20 text-emerald-300 font-bold text-left cursor-pointer" data-cond="flawless">
+                <div>Flawless</div>
+                <div class="text-[10px] opacity-80">Zero scratches</div>
+              </button>
+              <button onclick="setSellCondition('good')" class="sell-cond-btn p-2.5 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white text-left cursor-pointer" data-cond="good">
+                <div>Good</div>
+                <div class="text-[10px] opacity-80">Minor bezel scuffs</div>
+              </button>
+              <button onclick="setSellCondition('fair')" class="sell-cond-btn p-2.5 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white text-left cursor-pointer" data-cond="fair">
+                <div>Average</div>
+                <div class="text-[10px] opacity-80">Visible scratches</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Doorstep Pickup Form -->
+          <div class="pt-4 border-t border-slate-800">
+            <h4 class="text-xs font-bold text-white mb-2">Book Free Doorstep Pickup & Lock Value</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+              <input type="text" id="sellName" placeholder="Your Name" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+              <input type="tel" id="sellPhone" placeholder="Mobile / UPI Number" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+            </div>
+            <button onclick="confirmSellPickup()" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs shadow-lg cursor-pointer transition-all">
+              Schedule Free Pickup & Instant Payment
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Valuation Summary Card -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+          <div class="p-6 rounded-3xl bg-gradient-to-br from-[#0D1E40] to-slate-900 border border-blue-500/40 shadow-xl">
+            <span class="text-xs text-blue-300 uppercase font-bold tracking-wider">Guaranteed Instant Payout:</span>
+            <div id="sellQuoteAmount" class="text-3xl sm:text-4xl font-black text-white mt-2 font-mono">
+              ₹31,500
+            </div>
+            <p class="text-xs text-emerald-400 mt-1 font-medium">
+              ✓ Includes +₹500 Instant UPI Payment Bonus
+            </p>
+
+            <div class="mt-4 pt-4 border-t border-slate-700/60 space-y-2 text-xs text-slate-300">
+              <div class="flex justify-between">
+                <span>Base Market Valuation:</span>
+                <span id="sellBaseVal" class="font-mono">₹29,000</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Storage Premium:</span>
+                <span id="sellStorageVal" class="font-mono text-blue-300">+₹2,000</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Doorstep Inspection Fee:</span>
+                <span class="font-mono text-emerald-400">FREE (₹0)</span>
+              </div>
+              <div class="flex justify-between font-bold text-white pt-2 border-t border-slate-700/60">
+                <span>Net Credited to Bank/UPI:</span>
+                <span id="sellNetVal" class="font-mono text-amber-300 text-sm">₹31,500</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 space-y-3">
+            <div class="font-bold text-white text-sm">Why Sell Your Device to FoneZone?</div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><b>Immediate Payment:</b> Bank transfer or UPI done at your doorstep upon test.</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><b>Certified Data Erasure:</b> Digital certificate of device wipe issued instantly.</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-300">
+              <span class="text-emerald-400 font-bold">✓</span>
+              <span><b>Price Lock:</b> Your quote is guaranteed for 7 days upon scheduling.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 10. WHOLESALE PRICE VIEW (/pages/wholesale-price)        -->
+    <!-- ======================================================== -->
+    <div id="view-wholesale" class="page-view hidden max-w-6xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">B2B Wholesale Price Portal</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• B2B Wholesale Commerce & 18% GST Credit Calculator</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Dealers and mobile shop owners used to call FoneZone reps or wait for offline PDF rate sheets. NexG automates bulk tier discounts, lot margins, and input tax credit (ITC) calculations on the fly.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tiered MOQ Discounts Strip -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 text-xs">
+        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800">
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-blue-300 font-mono font-bold text-[10px]">TIER 1 • MOQ 5 UNITS</span>
+          <h4 class="font-bold text-white text-sm mt-1">Starter Retailer Lot</h4>
+          <p class="text-slate-400 text-[11px] mt-0.5">Base wholesale price. 100% GST invoice with 60-day dealer replacement guarantee.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-900 border border-blue-500/40">
+          <span class="px-2 py-0.5 rounded bg-blue-600 text-white font-mono font-bold text-[10px]">TIER 2 • MOQ 20 UNITS</span>
+          <h4 class="font-bold text-white text-sm mt-1">Volume Stockist Lot</h4>
+          <p class="text-slate-400 text-[11px] mt-0.5">Extra <b>4% flat discount</b> on entire invoice + Free BlueDart Air Insured Cargo.</p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-900 border border-emerald-500/40">
+          <span class="px-2 py-0.5 rounded bg-emerald-600 text-white font-mono font-bold text-[10px]">TIER 3 • MOQ 50+ UNITS</span>
+          <h4 class="font-bold text-white text-sm mt-1">Enterprise Distributor</h4>
+          <p class="text-slate-400 text-[11px] mt-0.5">Extra <b>8% flat discount</b> + 90-day revolving dealer credit line (subject to KYC).</p>
+        </div>
+      </div>
+
+      <!-- Bulk Calculator & Lots -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div class="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+          <h3 class="text-base font-bold text-white mb-4">Select Wholesale Device Lot</h3>
+
+          <div class="space-y-3 mb-5 text-xs">
+            <label class="block text-slate-400 font-semibold">Choose Certified Lot Bundle:</label>
+            <select id="wholesaleLotSelect" onchange="calculateWholesalePrice()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white">
+              <option value="lot-ip13-10" selected>Lot 1: iPhone 13 128GB Grade A (10 Units) - ₹3,45,000</option>
+              <option value="lot-ip14-5">Lot 2: iPhone 14 128GB Grade A (5 Units) - ₹2,15,000</option>
+              <option value="lot-ip15pro-5">Lot 3: iPhone 15 Pro 128GB Grade A (5 Units) - ₹3,85,000</option>
+              <option value="lot-s23u-5">Lot 4: Samsung Galaxy S23 Ultra Grade A (5 Units) - ₹3,05,000</option>
+              <option value="lot-mixed-20">Lot 5: Mixed Refurbished Value Lot (20 Units) - ₹5,80,000</option>
+            </select>
+          </div>
+
+          <div class="mb-5 text-xs">
+            <div class="flex justify-between items-center mb-1.5">
+              <label class="text-slate-400 font-semibold">Number of Lot Bundles:</label>
+              <span id="wholesaleBundleCountLabel" class="text-blue-400 font-mono font-bold">1 Bundle</span>
+            </div>
+            <input type="range" id="wholesaleBundleCount" min="1" max="10" value="1" oninput="calculateWholesalePrice()" class="w-full accent-blue-500">
+          </div>
+
+          <div class="pt-4 border-t border-slate-800 text-xs">
+            <h4 class="font-bold text-white mb-3">Dealer Information for GST Proforma</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
+              <input type="text" id="wsFirmName" placeholder="Shop / Firm Name (e.g. Apex Mobile)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              <input type="text" id="wsGst" placeholder="15-digit GSTIN Number" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white font-mono uppercase">
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+              <input type="text" id="wsContact" placeholder="Contact Person" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              <input type="tel" id="wsPhone" placeholder="Mobile / WhatsApp" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+            </div>
+            <button onclick="submitWholesaleRfq()" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg cursor-pointer transition-all">
+              Generate Official Wholesale Proforma & Price Lock
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Financial Profit & Margin Summary -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl">
+            <span class="text-xs text-slate-400 uppercase font-bold tracking-wider">Wholesale Invoice Summary:</span>
+            <div id="wsTotalAmount" class="text-3xl font-black text-white mt-1 font-mono">
+              ₹3,45,000
+            </div>
+            <div class="text-xs text-blue-400 mt-1">10 Certified Units • Grade A Pristine</div>
+
+            <div class="mt-4 pt-4 border-t border-slate-800 space-y-2 text-xs text-slate-300">
+              <div class="flex justify-between">
+                <span>Wholesale Base Rate:</span>
+                <span id="wsBaseRate" class="font-mono">₹3,45,000</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Volume Tier Discount:</span>
+                <span id="wsDiscountVal" class="font-mono text-emerald-400">₹0 (Starter)</span>
+              </div>
+              <div class="flex justify-between">
+                <span>18% GST Input Credit (ITC):</span>
+                <span id="wsGstVal" class="font-mono text-indigo-400">₹52,627</span>
+              </div>
+              <div class="flex justify-between text-slate-400 text-[11px]">
+                <span>Effective Net Cost Per Device:</span>
+                <b id="wsPerUnitNet" class="text-white font-mono">₹29,237</b>
+              </div>
+              <div class="flex justify-between font-bold text-white pt-2 border-t border-slate-800">
+                <span>Estimated Dealer Profit:</span>
+                <span id="wsDealerProfit" class="font-mono text-emerald-400 text-sm">₹1,07,630 (31.2% Margin)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400">
+            <div class="font-bold text-white mb-1">Wholesale Guarantee:</div>
+            All lots are shipped in sealed master cartons with individual IMEI diagnostic logs. Any defective unit reported within 60 days is exchanged with zero shipping fees.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 11. JOBS & CAREERS VIEW (/pages/jobs)                   -->
+    <!-- ======================================================== -->
+    <div id="view-jobs" class="page-view hidden max-w-5xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">Careers at FoneZone</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Refurbishment Engineering Talent Portal</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> FoneZone's careers page was stagnant. NexG activates an interactive recruitment hub with 1-click applicant resume intake directly notifying hiring managers.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          Shape the Future of Sustainable Tech.
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-400 mt-2">
+          Join our mission to democratize flagship consumer technology across India and reduce electronic waste.
+        </p>
+      </div>
+
+      <!-- Job Openings Grid -->
+      <div class="space-y-4">
+        <!-- Job 1 -->
+        <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-bold text-white text-base">Senior Hardware Testing & Diagnostic Engineer</h3>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">Bangalore Lab</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">Lead the 32-point robotic inspection line. Expertise in Apple logic board diagnostics and OLED calibration.</p>
+            <div class="flex items-center gap-4 text-[11px] text-slate-400 mt-2">
+              <span>Full-Time</span> • <span>Experience: 3-5 Years</span> • <span class="text-emerald-400 font-semibold">CTC: ₹6.5L - ₹9.5L PA</span>
+            </div>
+          </div>
+          <button onclick="openJobModal('Senior Hardware Testing Engineer')" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs whitespace-nowrap cursor-pointer shadow">
+            Apply Now
+          </button>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-bold text-white text-base">E-Commerce Logistics & Courier Operations Lead</h3>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">New Delhi Hub</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">Manage BlueDart / Delhivery SLAs, oversee warehouse packaging, and minimize RTO freight losses with Sahil Pathania.</p>
+            <div class="flex items-center gap-4 text-[11px] text-slate-400 mt-2">
+              <span>Full-Time</span> • <span>Experience: 4-6 Years</span> • <span class="text-emerald-400 font-semibold">CTC: ₹7.0L - ₹11.0L PA</span>
+            </div>
+          </div>
+          <button onclick="openJobModal('E-Commerce Logistics Lead')" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs whitespace-nowrap cursor-pointer shadow">
+            Apply Now
+          </button>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="p-6 rounded-3xl bg-slate-900/80 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="font-bold text-white text-base">Quality Control & Cosmetic Grading Specialist</h3>
+              <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[10px] font-bold">Mumbai Hub</span>
+            </div>
+            <p class="text-xs text-slate-400 mt-1">Assess incoming pre-owned inventory under studio lighting. Assign Grade A/B/C certification standards.</p>
+            <div class="flex items-center gap-4 text-[11px] text-slate-400 mt-2">
+              <span>Full-Time</span> • <span>Experience: 1-3 Years</span> • <span class="text-emerald-400 font-semibold">CTC: ₹4.5L - ₹6.5L PA</span>
+            </div>
+          </div>
+          <button onclick="openJobModal('QC & Cosmetic Grading Specialist')" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs whitespace-nowrap cursor-pointer shadow">
+            Apply Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 12. ASK TO CEO VIEW (/pages/ask-to-ceo)                  -->
+    <!-- ======================================================== -->
+    <div id="view-ask-ceo" class="page-view hidden max-w-4xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-amber-400 font-bold">ASK To CEO (Hemant Verma)</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Direct Executive Escalation Gateway</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Real FoneZone offers an "ASK To CEO" link, but on Shopify it redirected to a standard helpdesk ticket. NexG transforms this into an executive channel notifying Hemant Verma directly with SMS/WhatsApp alerts.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-br from-[#0C1A38] to-[#0A1224] border border-amber-500/40 rounded-3xl p-6 sm:p-10 shadow-2xl">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="p-3 rounded-2xl bg-amber-500/20 text-amber-300 border border-amber-500/40 text-2xl">👑</div>
+          <div>
+            <h1 class="text-xl sm:text-2xl font-black text-white">Direct Channel: ASK To CEO</h1>
+            <p class="text-xs text-amber-300/80">Executive message desk for Hemant Verma (Founder & CEO, FoneZone)</p>
+          </div>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+          "At FoneZone, our leadership takes customer trust personally. Any query sent here bypasses front-line support and is reviewed directly by myself and senior operations management. Whether you have an unresolved customer service grievance, an enterprise wholesale proposal, or strategic feedback, I welcome your message."
+        </p>
+
+        <form onsubmit="submitExecutiveEscalation(event)" class="space-y-4 text-xs">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-slate-400 mb-1">Your Full Name:</label>
+              <input type="text" id="ceoViewName" required placeholder="e.g. Dr. Rajesh Kumar" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+            </div>
+            <div>
+              <label class="block text-slate-400 mb-1">WhatsApp / Phone Number:</label>
+              <input type="tel" id="ceoViewPhone" required placeholder="+91 98765 43210" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-slate-400 mb-1">Escalation Purpose:</label>
+            <select id="ceoViewPurpose" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              <option value="unresolved-order">Unresolved Order / Courier Grievance</option>
+              <option value="wholesale-partnership">Bulk Enterprise / Institutional Wholesale Proposal</option>
+              <option value="investor">Strategic Partnership / Investor Relations</option>
+              <option value="feedback">Product Quality / Diagnostic Rig Feedback</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-slate-400 mb-1">Your Direct Message to Hemant Verma:</label>
+            <textarea id="ceoViewMessage" rows="5" required placeholder="Explain your matter clearly. Please include your FoneZone Order ID if applicable..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-black text-xs shadow-xl cursor-pointer transition-all">
+            👑 Submit Direct Escalation to Hemant Verma
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- 13. TRACK ORDER VIEW (/pages/order-info)                 -->
+    <!-- ======================================================== -->
+    <div id="view-order-info" class="page-view hidden max-w-4xl mx-auto px-4 py-8">
+      <!-- Breadcrumb -->
+      <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <span>/</span>
+        <span class="text-blue-400 font-bold">Track Order & Live Telemetry</span>
+      </nav>
+
+      <!-- NexG Modernization Layer Callout -->
+      <div class="mb-8 p-4 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-blue-500/40 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="flex items-start gap-3">
+          <span class="text-2xl">⚡</span>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="text-xs text-slate-400">• Integrated Carrier API Telemetry</span>
+            </div>
+            <div class="text-xs text-slate-300 mt-1">
+              <b>The Gap Solved:</b> Real FoneZone bounces users out to third-party courier tracking sites. NexG embeds end-to-end telemetry: WhatsApp OTP confirmation, lab serial logging, and real-time BlueDart GPS milestones.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-900 border border-blue-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-xl">🚚</span>
+          <div>
+            <h1 class="text-lg font-black text-white">Live Parcel Tracking & Hardware Telemetry</h1>
+            <p class="text-xs text-slate-400">Enter your FoneZone Order ID or Air Waybill (AWB) number.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-2 mb-6">
+          <input type="text" id="trackOrderViewInput" value="FZ-1049" placeholder="Enter Order ID (e.g. FZ-1049)" class="flex-1 bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-xs text-white font-mono">
+          <button onclick="searchTrackOrderView()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs cursor-pointer shadow">
+            Track Now
+          </button>
+        </div>
+
+        <!-- Tracking Visual Card -->
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 text-xs space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-3">
+            <div>
+              <div class="text-[11px] text-slate-400">Order ID & Carrier:</div>
+              <div class="font-mono font-bold text-white text-sm">#FZ-1049 • BlueDart Air (#FZ-BLUEDART-8821)</div>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold font-mono">
+              🟢 IN TRANSIT (ON TIME)
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-slate-400">
+            <div>Customer: <b class="text-white">Rahul Sharma</b></div>
+            <div>Item: <b class="text-white">iPhone 15 Pro 128GB</b></div>
+            <div>Destination: <b class="text-white">New Delhi (110019)</b></div>
+            <div>ETA: <b class="text-amber-400 font-bold">Tomorrow by 4:00 PM</b></div>
+          </div>
+
+          <!-- 5-Step Timeline -->
+          <div class="pt-4 border-t border-slate-800 space-y-3">
+            <div class="flex items-center gap-3 text-emerald-400">
+              <span class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center font-bold text-xs">✓</span>
+              <div>
+                <b class="text-white">Order Confirmed & WhatsApp Address OTP Verified</b>
+                <div class="text-[10px] text-slate-400">Today at 10:14 AM • Kalkaji Hub</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-emerald-400">
+              <span class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center font-bold text-xs">✓</span>
+              <div>
+                <b class="text-white">32-Point Diagnostic Test Passed & IMEI Logged (#354892091823901)</b>
+                <div class="text-[10px] text-slate-400">Today at 11:30 AM • Bangalore Diagnostics Rig</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-emerald-400">
+              <span class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center font-bold text-xs">✓</span>
+              <div>
+                <b class="text-white">Tamper-Proof Insured Packaging Sealed & Handed to BlueDart</b>
+                <div class="text-[10px] text-slate-400">Today at 02:15 PM • Delhi Sort Facility</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-blue-400">
+              <span class="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center font-bold text-xs">➜</span>
+              <div>
+                <b class="text-white">Air Cargo In-Transit: Departed IGI Airport Sort Center</b>
+                <div class="text-[10px] text-slate-400">Today at 04:45 PM • Manifest Cleared</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3 text-slate-500">
+              <span class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center font-bold text-xs">○</span>
+              <div>
+                <span>Out for Doorstep Delivery & COD Cash Collection</span>
+                <div class="text-[10px]">Expected Tomorrow by 04:00 PM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 6. Real FoneZone Footer (With All 12 Core Pages) -->
+    <footer class="mt-16 bg-[#090D17] border-t border-slate-800/80 text-slate-400 text-xs">
+      <div class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-5 gap-8">
+        
+        <!-- Col 1: About & Helpline -->
+        <div class="md:col-span-2">
+          <img id="footerLogo" src="assets/fonezone_logo_white.png" alt="FoneZone" class="h-9 w-auto mb-3">
+          <p class="text-[11px] leading-relaxed text-slate-400">
+            FoneZone (Acetel Telecommunications) is India and UAE's trusted leader in certified pre-owned and refurbished consumer tech. Every smartphone passes 32 diagnostic tests with 6-12 months replacement warranty assurance.
+          </p>
+          <div class="mt-4 text-[11px] text-slate-300 space-y-1">
+            <div><b>Customer Helpline:</b> <a href="tel:+918044630881" class="text-blue-400 hover:text-white">+91 8044630881</a> (10am - 7pm IST)</div>
+            <div><b>WhatsApp Support:</b> <a href="https://wa.me/918044630881" class="text-emerald-400 hover:text-white">+91 8044630881</a></div>
+            <div><b>Corporate & Wholesale:</b> support@fonezone.com</div>
+          </div>
+        </div>
+
+        <!-- Col 2: Shop Certified -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3">Shop Certified</h4>
+          <ul class="space-y-1.5 text-[11px]">
+            <li><a href="#/collections/all" onclick="navigateTo('#/collections/all'); filterByTaxonomy('phone', 'apple'); return false;" class="hover:text-white">Apple iPhones</a></li>
+            <li><a href="#/collections/all" onclick="navigateTo('#/collections/all'); filterByTaxonomy('phone', 'samsung'); return false;" class="hover:text-white">Samsung Smart Phones</a></li>
+            <li><a href="#/collections/all" onclick="navigateTo('#/collections/all'); filterByTaxonomy('phone', 'oneplus'); return false;" class="hover:text-white">OnePlus Smart Phones</a></li>
+            <li><a href="#/collections/all" onclick="navigateTo('#/collections/all'); filterByTaxonomy('macbook', 'apple'); return false;" class="hover:text-white">Apple MacBooks</a></li>
+            <li><a href="#/collections/all" onclick="navigateTo('#/collections/all'); filterByTaxonomy('ipad', 'all'); return false;" class="hover:text-white">iPads & Tablets</a></li>
+            <li><a href="#/collections/all" onclick="navigateTo('#/collections/all'); filterByTaxonomy('accessories', 'all'); return false;" class="hover:text-white">Accessories & Audio</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Customer Policies -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3">Customer Policies</h4>
+          <ul class="space-y-1.5 text-[11px]">
+            <li><a href="#/pages/warranty-policy" onclick="navigateTo('#/pages/warranty-policy'); return false;" class="hover:text-white">Warranty Policy (6-12M)</a></li>
+            <li><a href="#/pages/shipping-policy" onclick="navigateTo('#/pages/shipping-policy'); return false;" class="hover:text-white">Shipping & Insured Delivery</a></li>
+            <li><a href="#/pages/return-and-refund-policy-easy-returns-refunds" onclick="navigateTo('#/pages/return-and-refund-policy-easy-returns-refunds'); return false;" class="hover:text-white">7-Day Return & Refund</a></li>
+            <li><a href="#/pages/frequently-asked-questions-faq" onclick="navigateTo('#/pages/frequently-asked-questions-faq'); return false;" class="hover:text-white">Frequently Asked Questions</a></li>
+            <li><a href="#/pages/privacy-policy" onclick="navigateTo('#/pages/privacy-policy'); return false;" class="hover:text-white">Privacy & Security Policy</a></li>
+            <li><a href="#/pages/order-info" onclick="navigateTo('#/pages/order-info'); return false;" class="hover:text-white">Track Order Info</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Corporate & B2B -->
+        <div>
+          <h4 class="text-white font-bold text-sm mb-3">Corporate & B2B</h4>
+          <ul class="space-y-1.5 text-[11px]">
+            <li><a href="#/pages/about-us" onclick="navigateTo('#/pages/about-us'); return false;" class="hover:text-white">About FoneZone</a></li>
+            <li><a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="text-amber-300 hover:text-amber-200 font-semibold">Sell Your Device (Trade-in)</a></li>
+            <li><a href="#/pages/wholesale-price" onclick="navigateTo('#/pages/wholesale-price'); return false;" class="hover:text-white">B2B Wholesale Price</a></li>
+            <li><a href="#/pages/contact-us-get-in-touch-with-our-team" onclick="navigateTo('#/pages/contact-us-get-in-touch-with-our-team'); return false;" class="hover:text-white">Contact Us</a></li>
+            <li><a href="#/pages/jobs" onclick="navigateTo('#/pages/jobs'); return false;" class="hover:text-white">Careers / Jobs</a></li>
+            <li><a href="#/pages/ask-to-ceo" onclick="navigateTo('#/pages/ask-to-ceo'); return false;" class="text-amber-400 font-bold hover:text-amber-300">👑 ASK To CEO</a></li>
+          </ul>
+          <div class="mt-4 p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-[10px] text-slate-400">
+            © 2026 FoneZone Inc. / Acetel Telecommunications.
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+<!-- ======================================================== -->
+  <!-- PORTAL 2: MERCHANT & OPERATIONS DASHBOARD (FOR SAHIL)    -->
+  <!-- ======================================================== -->
+  <div id="opsDashboardPortal" class="hidden transition-opacity duration-200">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+
+      <!-- Ops Dashboard Header -->
+      <div id="merchantOpsHeaderCard" class="flex flex-wrap items-center justify-between gap-4 p-5 rounded-2xl bg-gradient-to-r from-[#0C1A38] to-[#0A1224] border border-blue-500/30 mb-6 shadow-xl">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[10px] font-bold uppercase tracking-wider">
+              Logistics & Anti-RTO Command Center
+            </span>
+            <span class="text-xs text-slate-400">• For Hemant Verma & Sahil Pathania</span>
+          </div>
+          <h2 class="text-xl md:text-2xl font-black text-white mt-1">
+            Automated WhatsApp Dispatch & COD Order Triage
+          </h2>
+          <p class="text-xs text-slate-300 mt-0.5">
+            Real-time customer address verification, OTP delivery, and instant ₹300 UPI prepayment conversion to eliminate courier return losses.
+          </p>
+        </div>
+
+        <!-- Live API Status -->
+        <div class="flex items-center gap-3">
+          <div class="px-3 py-1.5 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-xs text-emerald-300 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span class="font-bold">WhatsApp Business API Connected</span>
+          </div>
+          <button onclick="simulateIncomingOrder()" class="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold shadow flex items-center gap-1.5 cursor-pointer">
+            <span>+ Simulate New COD Order</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Top Metric KPI Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-[11px] text-slate-400 font-medium">Active COD Orders Today</div>
+          <div id="kpiTotalOrders" class="text-2xl font-black text-white mt-1">148 Orders</div>
+          <div class="text-[11px] text-blue-400 mt-1">₹42,80,000 Volume at Risk</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-[11px] text-slate-400 font-medium">WhatsApp Verified Rate</div>
+          <div id="kpiVerifiedRate" class="text-2xl font-black text-emerald-400 mt-1">83.8%</div>
+          <div class="text-[11px] text-slate-400 mt-1">124 addresses verified via OTP</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-[11px] text-slate-400 font-medium">Prepaid UPI Conversions (₹300 Off)</div>
+          <div id="kpiPrepaidConversions" class="text-2xl font-black text-indigo-400 mt-1">52 Orders</div>
+          <div class="text-[11px] text-indigo-300 mt-1">35.1% converted to 0% RTO</div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800">
+          <div class="text-[11px] text-slate-400 font-medium">Courier Losses Prevented</div>
+          <div id="kpiSavings" class="text-2xl font-black text-amber-400 mt-1">₹1,84,500</div>
+          <div class="text-[11px] text-amber-300 mt-1">Saved on return freight this month</div>
+        </div>
+      </div>
+
+      <!-- Main Operational Split: Order Table (Left) + Interactive WhatsApp (Right) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+        <!-- Left Column: "To Whom We Need To Send" (Orders Queue) -->
+        <div class="lg:col-span-7 bg-slate-900/70 border border-slate-800 rounded-2xl p-5">
+          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+            <div>
+              <h3 class="text-sm font-bold text-white flex items-center gap-2">
+                <span>📋 Live Order Queue (To Whom We Send)</span>
+                <span class="px-2 py-0.5 bg-blue-900/60 text-blue-300 rounded text-[10px] font-mono" id="queueCount">5 orders</span>
+              </h3>
+              <p class="text-[11px] text-slate-400">Click any customer row to preview and trigger WhatsApp dispatch.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex items-center gap-1 bg-slate-950 p-1 rounded-lg border border-slate-800 text-[11px]">
+              <button onclick="filterQueue('all')" class="q-filter-btn px-2.5 py-1 rounded bg-blue-600 text-white font-bold cursor-pointer" data-q="all">All</button>
+              <button onclick="filterQueue('unverified')" class="q-filter-btn px-2.5 py-1 rounded text-slate-400 hover:text-white cursor-pointer" data-q="unverified">Pending</button>
+              <button onclick="filterQueue('verified')" class="q-filter-btn px-2.5 py-1 rounded text-slate-400 hover:text-white cursor-pointer" data-q="verified">Verified</button>
+              <button onclick="filterQueue('prepaid')" class="q-filter-btn px-2.5 py-1 rounded text-slate-400 hover:text-white cursor-pointer" data-q="prepaid">Prepaid</button>
+            </div>
+          </div>
+
+          <!-- Table of Orders -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-xs">
+              <thead class="text-[11px] text-slate-400 border-b border-slate-800 uppercase tracking-wider font-semibold">
+                <tr>
+                  <th class="py-2.5 px-3">Customer & Contact</th>
+                  <th class="py-2.5 px-3">Item & Amount</th>
+                  <th class="py-2.5 px-3">RTO Risk</th>
+                  <th class="py-2.5 px-3">Status</th>
+                  <th class="py-2.5 px-3 text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody" class="divide-y divide-slate-800/60 text-slate-200">
+                <!-- Injected via app.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive WhatsApp Dispatcher & Phone Simulator -->
+        <div class="lg:col-span-5 bg-slate-900/70 border border-slate-800 rounded-2xl p-5 flex flex-col items-center">
+          <div class="w-full mb-3 flex items-center justify-between">
+            <div>
+              <h3 class="text-sm font-bold text-white flex items-center gap-1.5">
+                <span>📲 WhatsApp Dispatcher & Live Phone</span>
+              </h3>
+              <p class="text-[11px] text-slate-400">Selected Customer: <b id="selectedCustomerName" class="text-white">Rahul Sharma</b></p>
+            </div>
+            <span id="selectedCustomerRiskBadge" class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+              High RTO Risk
+            </span>
+          </div>
+
+          <!-- Customer Meta Card -->
+          <div class="w-full p-3 rounded-xl bg-slate-950/80 border border-slate-800 mb-4 text-xs">
+            <div class="flex justify-between items-center text-[11px] text-slate-400">
+              <span>Phone: <b id="selectedCustomerPhone" class="text-slate-200">+91 98102 43210</b></span>
+              <span>City: <b id="selectedCustomerCity" class="text-slate-200">New Delhi (110019)</b></span>
+            </div>
+            <div class="mt-1 text-[11px] text-slate-300">
+              Order: <b id="selectedCustomerItem" class="text-white">iPhone 15 Pro 128GB (Grade A)</b> • Amount: <b id="selectedCustomerAmount" class="text-emerald-400">₹84,999 COD</b>
+            </div>
+            <!-- Action Dispatch Buttons -->
+            <div class="grid grid-cols-2 gap-2 mt-2.5 pt-2.5 border-t border-slate-800">
+              <button onclick="dispatchWhatsAppVerification()" class="px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] flex items-center justify-center gap-1 shadow cursor-pointer">
+                <span>📲 Send Address OTP</span>
+              </button>
+              <button onclick="dispatchPrepaidIncentive()" class="px-2.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-[11px] flex items-center justify-center gap-1 shadow cursor-pointer">
+                <span>⚡ Send ₹300 Off UPI</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Interactive Smartphone Frame -->
+          <div class="phone-mockup-frame bg-[#111B21] border border-slate-700 w-full max-w-[340px] text-xs">
+            <!-- WhatsApp Phone Top Bar -->
+            <div class="bg-[#202C33] px-3.5 py-2.5 flex items-center justify-between border-b border-slate-700">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-xs">
+                  FZ
+                </div>
+                <div>
+                  <div class="font-bold text-white flex items-center gap-1 text-[11px]">
+                    <span>FoneZone Official</span>
+                    <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                  </div>
+                  <div class="text-[9px] text-emerald-400">Verified Business Account • +91 8044630881</div>
+                </div>
+              </div>
+              <div class="text-slate-400 text-xs">⋮</div>
+            </div>
+
+            <!-- Chat Scroll Area -->
+            <div id="waChatHistory" class="p-3 space-y-3 min-h-[300px] max-h-[360px] overflow-y-auto bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px]">
+              <!-- Dynamically populated via app.js -->
+            </div>
+
+            <!-- Customer Response Simulation Buttons (Simulate Two-Way Reply) -->
+            <div class="bg-[#202C33] p-2.5 border-t border-slate-700">
+              <div class="text-[10px] text-slate-400 font-semibold text-center mb-1.5">
+                Simulate Customer Reply (Two-Way Action):
+              </div>
+              <div class="grid grid-cols-2 gap-1.5">
+                <button onclick="simulateCustomerConfirmAddress()" class="px-2 py-1.5 rounded bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-[10px] cursor-pointer">
+                  ✅ "Yes, Confirm Address"
+                </button>
+                <button onclick="simulateCustomerPrepayUPI()" class="px-2 py-1.5 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold text-[10px] cursor-pointer">
+                  ⚡ "Pay via UPI (Save ₹300)"
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sahil's Logistics ROI Calculator (Dedicated Section in Dashboard) -->
+      <div class="mt-8 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+        <h3 class="text-base font-bold text-white flex items-center gap-2">
+          <span>📊 Sahil's Logistics Return (RTO) Cost Savings Model</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-xs font-mono">Executive Financial Proof</span>
+        </h3>
+        <p class="text-xs text-slate-400 mt-1">Based on FoneZone's average Indian courier return rates (BlueDart / Delhivery / Shiprocket).</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-5">
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+            <label class="text-[11px] text-slate-400 font-semibold block mb-1">Monthly COD Orders Shipped:</label>
+            <input type="range" id="calcOrdersSlider" min="500" max="5000" step="100" value="1500" oninput="updateLogisticsCalc()" class="w-full accent-blue-500">
+            <div class="flex justify-between items-center text-xs mt-2 font-mono">
+              <span class="text-slate-400">Volume:</span>
+              <span id="calcOrdersVal" class="text-blue-400 font-bold">1,500 orders / mo</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-950 border border-slate-800">
+            <div class="text-[11px] text-slate-400 font-semibold mb-2">RTO Interception Rate:</div>
+            <div class="text-xs space-y-1.5">
+              <div class="flex justify-between text-slate-400">
+                <span>Baseline RTO (Shopify):</span>
+                <span class="text-red-400 font-bold">28.4% (426 orders returned)</span>
+              </div>
+              <div class="flex justify-between text-slate-400">
+                <span>With WhatsApp OTP:</span>
+                <span class="text-emerald-400 font-bold">7.2% (108 orders returned)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-gradient-to-br from-emerald-950/40 to-blue-950/30 border border-emerald-500/40">
+            <div class="text-[11px] text-emerald-300 font-semibold">Net Annual Freight Savings for FoneZone:</div>
+            <div id="calcAnnualSavings" class="text-2xl font-black text-emerald-400 mt-1">₹13,35,600 / yr</div>
+            <div class="text-[11px] text-slate-400 mt-1">Directly improves FoneZone's operating margin.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 360° COSMETIC INSPECTOR MODAL (FLIPKART / AMAZON 360° STANDARD) -->
+  <!-- ======================================================== -->
+  <div id="inspectorModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4">
+    <div class="bg-[#0B101D] border border-slate-700/80 rounded-2xl max-w-5xl w-full max-h-[92vh] flex flex-col shadow-2xl overflow-hidden">
+      
+      <!-- Modal Header (Compact 50px) -->
+      <div class="px-4 py-2.5 border-b border-slate-800 flex items-center justify-between shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="p-1.5 rounded-lg bg-blue-600/20 text-blue-400 border border-blue-500/30">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+          </div>
+          <div>
+            <h3 class="text-sm font-extrabold text-white flex items-center gap-2">
+              <span id="inspectModalProductName">iPhone 15 Pro 128GB Natural Titanium</span>
+              <span id="inspectGradePill" class="badge-grade-a px-2 py-0.5 rounded-full text-[9px] font-bold">Grade A Pristine</span>
+            </h3>
+            <p class="text-[11px] text-slate-400">Spherical 360° All-Side Inspection (Left/Right + Top/Bottom) • Battery Health & Flaw Audit</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <!-- Viewer Mode Switcher (3D Orbit vs Studio Photography) -->
+          <div class="flex items-center bg-slate-900 p-0.5 rounded-lg border border-slate-800 text-[10px]">
+            <button id="modeViewer3dBtn" onclick="setViewerMode('3d')" class="px-2 py-1 rounded-md font-bold bg-blue-600 text-white cursor-pointer transition-all">
+              🌟 3D Orbit
+            </button>
+            <button id="modeViewerPhotoBtn" onclick="setViewerMode('photo')" class="px-2 py-1 rounded-md font-medium text-slate-400 hover:text-white cursor-pointer transition-all">
+              📷 Studio Frames
+            </button>
+          </div>
+
+          <button onclick="closeInspector()" class="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-colors cursor-pointer" title="Close">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body (Zero Scroll: Compact 2-column Grid) -->
+      <div class="p-3 sm:p-4 grid grid-cols-1 lg:grid-cols-12 gap-3 flex-1 overflow-hidden">
+        
+        <!-- Left: Interactive Spherical 360 Viewing Stage (6 cols) -->
+        <div class="lg:col-span-6 flex flex-col justify-between bg-slate-950/80 border border-slate-800/90 rounded-xl p-3 relative overflow-hidden">
+          
+          <!-- Top Bar: Current Perspective Indicator + Auto-Spin & Loupe -->
+          <div class="w-full flex items-center justify-between text-xs mb-1 shrink-0">
+            <span id="currentAngleTag" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-blue-400 font-mono text-[10px] font-bold">
+              0° Front Display Glass (OLED)
+            </span>
+            
+            <div class="flex items-center gap-2">
+              <!-- Auto-Spin iOS Toggle -->
+              <div class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-slate-900 border border-slate-800 text-[10px]">
+                <span class="text-slate-300 font-medium">Auto-Spin</span>
+                <label class="ios-switch scale-90" title="Toggle 360 Auto-Spin">
+                  <input type="checkbox" id="autoSpinToggle" onchange="handleAutoSpinSwitch(this.checked)">
+                  <span class="ios-slider"></span>
+                </label>
+              </div>
+
+              <!-- Zoom Loupe Inspect Button -->
+              <button id="zoomLoupeBtn" onclick="toggleZoomLoupe()" class="px-2 py-0.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-[10px] font-semibold flex items-center gap-1 cursor-pointer transition-colors">
+                <span>🔍</span>
+                <span id="zoomLoupeLabel">Zoom</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Turntable Stage: Canvas Height = 250px -->
+          <div class="relative w-full h-[250px] flex items-center justify-center my-auto">
+            
+            <!-- MODE 1: Google <model-viewer> 3D Spherical Turntable -->
+            <div id="stage3DWrapper" class="relative w-full h-full flex items-center justify-center">
+              <model-viewer
+                id="mainModelViewer"
+                src="assets/iphone14_model.glb"
+                alt="FoneZone Certified Pre-Owned 3D Inspection"
+                camera-controls
+                touch-action="none"
+                shadow-intensity="1.5"
+                shadow-softness="0.9"
+                exposure="1.05"
+                auto-rotate-delay="0"
+                rotation-per-second="8deg"
+                camera-orbit="0deg 90deg 105%"
+                min-camera-orbit="auto 10deg auto"
+                max-camera-orbit="auto 170deg auto"
+                interaction-prompt="none"
+                class="w-full h-full focus:outline-none"
+              >
+                <!-- Native 3D Anchored Flaw Hotspots -->
+                <button slot="hotspot-dent" id="modelHotspotDent" class="hotspot-3d-pin hidden" data-position="0.035 -0.065 0.005" data-normal="0 0 1" onclick="showHotspotTip('📍 Bezel Flaw (0.8mm): Minor cosmetic hairline on lower speaker rail. Passes structural integrity.')">
+                  <div class="hotspot-3d-pulse bg-amber-500"></div>
+                  <div class="relative w-5 h-5 rounded-full bg-amber-500 text-slate-950 font-black text-[10px] flex items-center justify-center border-2 border-white shadow-lg">📍</div>
+                </button>
+                <button slot="hotspot-display" id="modelHotspotDisplay" class="hotspot-3d-pin" data-position="0 0.02 0.005" data-normal="0 0 1" onclick="showHotspotTip('✓ Display OLED: 100% Scratch-Free Original Ceramic Shield')">
+                  <div class="hotspot-3d-pulse bg-emerald-500"></div>
+                  <div class="relative w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center border-2 border-white shadow-lg">✓</div>
+                </button>
+              </model-viewer>
+              
+              <!-- 3D Orbit Helper Hint -->
+              <div class="absolute bottom-1 left-1.5 px-2 py-0.5 rounded bg-slate-900/80 border border-slate-800 text-[9px] text-slate-400 font-mono pointer-events-none">
+                🌐 3D Spherical Orbit • Drag left/right/up/down
+              </div>
+            </div>
+
+            <!-- MODE 2: Studio Photography Multi-Angle Turntable -->
+            <div id="stagePhotoWrapper" class="relative w-full h-full hidden items-center justify-center cursor-grab active:cursor-grabbing rotator-device-container">
+              <div class="absolute bottom-2 w-48 h-12 turntable-pedestal pointer-events-none"></div>
+              <div class="absolute bottom-2 w-44 h-10 turntable-degree-ring pointer-events-none"></div>
+
+              <!-- Top Left Radical Transparency Dent Status Badge -->
+              <div class="absolute top-1 left-1 z-20 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900/90 border border-slate-700 text-[10px] text-slate-200 backdrop-blur-sm shadow-md">
+                <span id="dentInspectorStatusDot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span id="dentInspectorStatusText" class="font-bold font-mono">Grade A: 0 Dents · 100% Mint</span>
+              </div>
+
+              <!-- Device Image Wrapper with Clean Studio Asset -->
+              <div id="rotatorImgWrapper" class="rotator-image-wrapper relative max-h-full flex items-center justify-center">
+                <img id="inspectMainImg" src="assets/iphone14_front.png" alt="Device Angle" class="max-h-[220px] w-auto object-contain select-none">
+                
+                <!-- Dynamic Flaw Hotspots -->
+                <div id="dentPinsOverlay" class="absolute inset-0"></div>
+
+                <div id="hotspotBezel" class="hotspot-pin top-1/4 left-1/4" onclick="showHotspotTip('Display: Super Retina OLED • Grade A Flawless • 100% Scratch-Free')">
+                  <div class="absolute w-full h-full rounded-full bg-emerald-500 opacity-75 hotspot-pulse"></div>
+                  <div class="relative w-3.5 h-3.5 rounded-full bg-emerald-400 border-2 border-white shadow"></div>
+                </div>
+                <div id="hotspotFrame" class="hotspot-pin bottom-1/3 right-1/4" onclick="showHotspotTip('Frame: Aerospace aluminum alloy rails tested with zero structural dents.')">
+                  <div class="absolute w-full h-full rounded-full bg-blue-500 opacity-75 hotspot-pulse"></div>
+                  <div class="relative w-3.5 h-3.5 rounded-full bg-blue-400 border-2 border-white shadow"></div>
+                </div>
+                <div id="hotspotCamera" class="hotspot-pin top-1/3 right-1/4" onclick="showHotspotTip('Cameras: Sapphire crystal lens rings • 100% Scratch-Free • 4K Sensor passed')">
+                  <div class="absolute w-full h-full rounded-full bg-indigo-500 opacity-75 hotspot-pulse"></div>
+                  <div class="relative w-3.5 h-3.5 rounded-full bg-indigo-400 border-2 border-white shadow"></div>
+                </div>
+              </div>
+
+              <!-- Flipkart/Amazon Zoom Loupe Overlay -->
+              <div id="zoomLoupe" class="zoom-loupe"></div>
+            </div>
+          </div>
+
+          <!-- 6-Side All-Angle Perspective Presets (Left/Right + Top/Bottom) -->
+          <div class="w-full shrink-0 pt-1.5 border-t border-slate-800/80">
+            <div class="flex items-center justify-between text-[9px] text-slate-400 font-mono mb-1">
+              <span>All-Side 360° Angles (Left, Right, Top, Bottom):</span>
+              <span class="text-blue-400">Click to Snap</span>
+            </div>
+            <div class="grid grid-cols-6 gap-1 w-full">
+              <button onclick="setInspectPerspective('front')" id="btnPerspectiveFront" class="perspective-btn px-1.5 py-1 rounded bg-blue-600 text-white font-bold text-[10px] text-center shadow cursor-pointer">
+                📱 Front
+              </button>
+              <button onclick="setInspectPerspective('back')" id="btnPerspectiveBack" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+                🔄 Back
+              </button>
+              <button onclick="setInspectPerspective('right')" id="btnPerspectiveRight" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+                ➡️ Right
+              </button>
+              <button onclick="setInspectPerspective('left')" id="btnPerspectiveLeft" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+                ⬅️ Left
+              </button>
+              <button onclick="setInspectPerspective('top')" id="btnPerspectiveTop" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+                ⬆️ Top Edge
+              </button>
+              <button onclick="setInspectPerspective('bottom')" id="btnPerspectiveBottom" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+                ⬇️ Port
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Grade Selection, Dent Map, Diagnostics & Buy (6 cols) -->
+        <div class="lg:col-span-6 flex flex-col justify-between space-y-2 overflow-hidden">
+          
+          <!-- Unified Card 1: Condition Grade & "Where is the Dent?" Audit Map -->
+          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow">
+            <div class="flex items-center justify-between mb-2">
+              <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Select Cosmetic Condition:</label>
+              <span id="dentTotalCountBadge" class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-black font-mono">
+                Total Dents: 0 (Flawless)
+              </span>
+            </div>
+
+            <!-- Grade Tabs -->
+            <div class="grid grid-cols-3 gap-1.5 mb-2">
+              <button id="inspectGradeBtnA" onclick="setInspectGrade('A')" class="p-1.5 rounded-lg text-xs font-bold badge-grade-a text-center cursor-pointer ring-1 ring-blue-500/40">
+                <div>Grade A</div>
+                <div class="text-[9px] opacity-80">Pristine (0 Dents)</div>
+              </button>
+              <button id="inspectGradeBtnB" onclick="setInspectGrade('B')" class="p-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-400 hover:text-white border border-slate-800 text-center cursor-pointer">
+                <div>Grade B</div>
+                <div class="text-[9px] opacity-80">Very Good (1 Scuff)</div>
+              </button>
+              <button id="inspectGradeBtnC" onclick="setInspectGrade('C')" class="p-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-400 hover:text-white border border-slate-800 text-center cursor-pointer">
+                <div>Grade C</div>
+                <div class="text-[9px] opacity-80">Value Deal (2 Marks)</div>
+              </button>
+            </div>
+
+            <!-- "Where is the Dent?" Body -->
+            <div id="dentAuditContainer" class="p-2.5 rounded-lg bg-slate-900/60 border border-amber-500/25">
+              <div class="flex items-center justify-between text-[11px] font-bold text-white mb-1">
+                <span class="flex items-center gap-1"><span>📍</span> "Where is the Dent?" Transparency:</span>
+                <span class="text-[9px] text-blue-300 font-mono">100% Disclosed</span>
+              </div>
+              <div id="dentAuditContent" class="space-y-1 text-xs">
+                <!-- Injected via renderDentInspectorUI() -->
+              </div>
+              <div id="dentActionRow" class="mt-2 pt-1.5 border-t border-slate-800 flex items-center justify-between text-[10px]">
+                <span class="text-slate-400">Locate flaw in 360°:</span>
+                <div id="dentAngleButtons" class="flex items-center gap-1"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unified Card 2: Battery Health & 32-Point QA Diagnostic (Side-by-side) -->
+          <div class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800/90 grid grid-cols-2 gap-3 items-center">
+            <div>
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[10px] font-bold text-white flex items-center gap-1">
+                  <span>🔋 Battery Health</span>
+                </span>
+                <span id="inspectBatteryPercent" class="text-xs font-black text-emerald-400 font-mono">96%</span>
+              </div>
+              <div class="w-full h-1.5 rounded-full bg-slate-800 overflow-hidden">
+                <div id="inspectBatteryBar" class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full transition-all duration-300" style="width: 96%;"></div>
+              </div>
+              <div class="text-[9px] text-slate-400 mt-1 font-mono">Cycle Count: <b>84 cycles</b> • OEM Certified</div>
+            </div>
+
+            <div class="border-l border-slate-800 pl-3">
+              <div class="flex items-center justify-between mb-1">
+                <span class="text-[10px] font-bold text-white flex items-center gap-1">
+                  <span>🛡️ 32-Pt QA Lab</span>
+                </span>
+                <span class="text-[9px] text-emerald-400 font-mono font-bold">100% PASSED</span>
+              </div>
+              <div class="grid grid-cols-2 gap-1 text-[9px] text-slate-300">
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> TrueTone OLED</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> Face ID</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> Triple Cam</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 5G Unlocked</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Unified Card 3: Price & Instant COD Checkout Action (Sticky at bottom, always in view) -->
+          <div class="p-2.5 rounded-xl bg-gradient-to-r from-blue-950/40 via-slate-900 to-slate-900 border border-blue-500/30 flex items-center justify-between shrink-0 shadow-lg">
+            <div>
+              <div class="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">FoneZone Certified Deal:</div>
+              <div class="flex items-baseline gap-2">
+                <span id="inspectPrice" class="text-lg font-extrabold text-white">₹78,999</span>
+                <span id="inspectMsrp" class="text-[11px] text-slate-500 line-through">₹1,34,900</span>
+                <span id="inspectSavingsTag" class="text-[9px] text-emerald-400 font-bold bg-emerald-500/10 px-1 py-0.2 rounded border border-emerald-500/20">Save ₹55,901</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="addToCartFromInspector()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-xs cursor-pointer transition-colors">
+                <span>🛒 Add</span>
+              </button>
+              <button onclick="orderFromInspector()" class="px-4 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg shadow-blue-600/30 flex items-center gap-1 cursor-pointer transition-colors">
+                <span>⚡ Buy COD</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 32-POINT QA VERIFICATION VIDEO PLAYER MODAL (CASHIFY-STYLE) -->
+  <!-- ======================================================== -->
+  <div id="verificationVideoModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4">
+    <div class="bg-[#0B101D] border border-slate-700/80 rounded-2xl max-w-4xl w-full max-h-[94vh] flex flex-col shadow-2xl overflow-hidden">
+      
+      <!-- Modal Header -->
+      <div class="px-4 py-3 border-b border-slate-800 flex items-center justify-between shrink-0 bg-slate-900/50">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-red-600/20 text-red-400 border border-red-500/30 flex items-center justify-center font-bold text-sm">
+            ▶
+          </div>
+          <div>
+            <h3 class="text-sm font-extrabold text-white flex items-center gap-2">
+              <span id="qaVideoModalProductName">iPhone 15 Pro 128GB Natural Titanium</span>
+              <span class="px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-[9px] font-mono font-bold uppercase">QA Video Log</span>
+            </h3>
+            <p class="text-[11px] text-slate-400">32-Point Refurbished Diagnostic Inspection Tape • Recorded by Lead QA Engineer</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-bold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+            Serial: <span id="qaVideoSerialTag">FZ-QC-2026-9812</span>
+          </span>
+          <button onclick="closeVerificationVideo()" class="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-colors cursor-pointer" title="Close">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modal Body: 2 Columns (Left: 9:16 Cinematic Video Player HUD, Right: Diagnostic Checklist & Actions) -->
+      <div class="p-3 sm:p-4 grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 overflow-y-auto">
+        
+        <!-- Left: Simulated 9:16 Video Player Container (7 cols) -->
+        <div class="lg:col-span-7 flex flex-col justify-between bg-black rounded-xl border border-slate-800 relative overflow-hidden p-3 min-h-[380px] sm:min-h-[440px]">
+          
+          <!-- Top HUD Overlay -->
+          <div class="flex items-center justify-between z-20 text-[11px] font-mono">
+            <div class="flex items-center gap-2 bg-black/70 px-2.5 py-1 rounded-lg border border-red-500/40 text-red-400">
+              <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
+              <span class="font-bold">REC • 60 FPS 4K</span>
+            </div>
+            <div class="flex items-center gap-2 bg-black/70 px-2.5 py-1 rounded-lg border border-slate-700 text-slate-300">
+              <span>Station: <b>Lab Hub Delhi-04</b></span>
+            </div>
+          </div>
+
+          <!-- Central Video Viewport with Live Diagnostic Scanning Grid -->
+          <div class="relative my-auto flex items-center justify-center w-full h-64 overflow-hidden rounded-lg video-scan-grid bg-slate-950/60">
+            <!-- Animated Scan Laser Line -->
+            <div id="qaScanLaser" class="qa-scan-laser"></div>
+
+            <!-- Target Device Image under test -->
+            <img id="qaVideoDeviceImage" src="assets/iphone15pro_naturaltitanium.png" alt="Device" class="max-h-56 max-w-[85%] object-contain drop-shadow-2xl z-10 transition-all duration-500">
+
+            <!-- Active Test Phase HUD Callout Pill -->
+            <div class="absolute bottom-2 left-2 z-20 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-blue-500/50 shadow-lg">
+              <div class="text-[9px] text-blue-400 font-mono font-bold uppercase tracking-wider flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+                <span id="qaActivePhaseTitle">Phase 1: Physical Housing & 0-Dent Inspection</span>
+              </div>
+              <div id="qaActivePhaseTelemetry" class="text-[11px] text-emerald-400 font-mono font-bold mt-0.5">
+                Laser Surface Micrometry: 0 Dents Detected (Grade A)
+              </div>
+            </div>
+
+            <!-- Audio Waveform Indicator (Simulating speaker test) -->
+            <div id="qaAudioWaveform" class="absolute top-3 right-3 z-20 hidden items-end gap-1 bg-black/70 px-2 py-1.5 rounded-lg border border-slate-700">
+              <span class="text-[9px] font-mono text-slate-400 mr-1">Acoustic:</span>
+              <div class="w-1 bg-blue-500 qa-soundwave-bar"></div>
+              <div class="w-1 bg-indigo-500 qa-soundwave-bar"></div>
+              <div class="w-1 bg-cyan-400 qa-soundwave-bar"></div>
+              <div class="w-1 bg-emerald-400 qa-soundwave-bar"></div>
+              <div class="w-1 bg-blue-400 qa-soundwave-bar"></div>
+            </div>
+          </div>
+
+          <!-- Video Controls & Timeline Bar -->
+          <div class="z-20 mt-2 bg-slate-900/90 rounded-xl p-2.5 border border-slate-800">
+            <!-- Timeline Scrubber -->
+            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 mb-1.5">
+              <span id="qaVideoCurrentTime">00:08</span>
+              <span class="text-blue-400 font-bold">32-POINT DIAGNOSTIC TIMELINE</span>
+              <span>00:32</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden cursor-pointer relative" onclick="seekQATimeline(event)">
+              <div id="qaVideoProgressBar" class="h-full bg-gradient-to-r from-red-500 via-blue-500 to-emerald-400 rounded-full transition-all duration-300" style="width: 25%;"></div>
+            </div>
+
+            <!-- Controls Row -->
+            <div class="flex items-center justify-between mt-2 pt-1">
+              <div class="flex items-center gap-2">
+                <button id="qaVideoPlayBtn" onclick="toggleQAVideoPlay()" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-1.5 cursor-pointer">
+                  <span id="qaPlayIcon">⏸️</span>
+                  <span id="qaPlayText">Pause</span>
+                </button>
+                <button onclick="restartQAVideo()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold cursor-pointer">
+                  🔄 Replay
+                </button>
+              </div>
+
+              <!-- Diagnostic Phase Step Pills -->
+              <div class="flex items-center gap-1">
+                <button onclick="jumpToQAPhase(0)" id="qaPhasePill0" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-600 text-white cursor-pointer">1</button>
+                <button onclick="jumpToQAPhase(1)" id="qaPhasePill1" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">2</button>
+                <button onclick="jumpToQAPhase(2)" id="qaPhasePill2" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">3</button>
+                <button onclick="jumpToQAPhase(3)" id="qaPhasePill3" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">4</button>
+                <button onclick="jumpToQAPhase(4)" id="qaPhasePill4" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">5</button>
+                <button onclick="jumpToQAPhase(5)" id="qaPhasePill5" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">6</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Diagnostic Certification Breakdown (5 cols) -->
+        <div class="lg:col-span-5 flex flex-col justify-between space-y-3">
+          
+          <!-- QA Certificate Header Card -->
+          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow">
+            <div class="flex items-center justify-between mb-2">
+              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Refurbished Certificate:</span>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-black font-mono">
+                100% PASSED (32/32)
+              </span>
+            </div>
+
+            <!-- Technician Info -->
+            <div class="p-2 rounded-lg bg-slate-900/70 border border-slate-800 text-xs flex items-center justify-between">
+              <div>
+                <div class="text-white font-bold">QA Lead: Ajay Sharma</div>
+                <div class="text-[10px] text-slate-400">Delhi Technical Center • Bay 4</div>
+              </div>
+              <div class="text-right">
+                <div class="text-[10px] text-emerald-400 font-mono font-bold">Verified Today</div>
+                <div class="text-[9px] text-slate-500">Digital Hash Locked</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6-Stage Diagnostic Checklist Tabs -->
+          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 space-y-2 flex-1">
+            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">6 Diagnostic Stages:</div>
+
+            <div class="space-y-1.5 text-xs">
+              <div onclick="jumpToQAPhase(0)" id="qaStageCard0" class="p-2 rounded-lg bg-blue-900/30 border border-blue-500/40 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <span class="text-white font-semibold">1. Physical & 0-Dent Inspection</span>
+                </div>
+                <span class="text-[10px] text-emerald-400 font-mono">PASS (0 Dents)</span>
+              </div>
+
+              <div onclick="jumpToQAPhase(1)" id="qaStageCard1" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <span class="text-slate-300 font-semibold">2. OLED & Multi-Touch Digitizer</span>
+                </div>
+                <span class="text-[10px] text-emerald-400 font-mono">PASS (120Hz)</span>
+              </div>
+
+              <div onclick="jumpToQAPhase(2)" id="qaStageCard2" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <span class="text-slate-300 font-semibold">3. Triple Camera & OIS Telemetry</span>
+                </div>
+                <span class="text-[10px] text-emerald-400 font-mono">PASS (48MP)</span>
+              </div>
+
+              <div onclick="jumpToQAPhase(3)" id="qaStageCard3" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <span class="text-slate-300 font-semibold">4. Stereo Speakers & Acoustic Mic</span>
+                </div>
+                <span class="text-[10px] text-emerald-400 font-mono">PASS (88dB)</span>
+              </div>
+
+              <div onclick="jumpToQAPhase(4)" id="qaStageCard4" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <span class="text-slate-300 font-semibold">5. Battery Health & USB-C Draw</span>
+                </div>
+                <span class="text-[10px] text-emerald-400 font-mono">PASS (96%)</span>
+              </div>
+
+              <div onclick="jumpToQAPhase(5)" id="qaStageCard5" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
+                <div class="flex items-center gap-2">
+                  <span class="text-emerald-400 font-bold">✓</span>
+                  <span class="text-slate-300 font-semibold">6. Motherboard & Clean IMEI</span>
+                </div>
+                <span class="text-[10px] text-emerald-400 font-mono">PASS (Clean)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Actions: Download Certificate + Buy COD -->
+          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 space-y-2">
+            <button onclick="downloadQACertificate()" class="w-full py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer">
+              <span>📄</span>
+              <span>Download Lab Certificate (PDF)</span>
+            </button>
+            <button onclick="buyVerifiedDeviceNow()" class="w-full py-2.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 transition-all cursor-pointer">
+              <span>⚡</span>
+              <span>Order This Exact Verified Phone (COD)</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  
+  <!-- SLIDING CART DRAWER                                      -->
+  <!-- ======================================================== -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 drawer-backdrop" onclick="closeCartDrawer()"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-[#0D1527] border-l border-slate-800 p-6 flex flex-col justify-between shadow-2xl drawer-panel">
+      <div>
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <span class="text-lg">🛒</span>
+            <h3 class="font-bold text-white text-base">Your FoneZone Cart (<span id="cartDrawerCount">0</span>)</h3>
+          </div>
+          <button onclick="closeCartDrawer()" class="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white cursor-pointer">✕</button>
+        </div>
+
+        <div id="cartItemsList" class="py-4 space-y-3 overflow-y-auto max-h-[60vh]">
+          <!-- Injected via app.js -->
+        </div>
+      </div>
+
+      <!-- Cart Summary & Checkout -->
+      <div class="pt-4 border-t border-slate-800 space-y-3 text-xs">
+        <div class="flex justify-between text-slate-400">
+          <span>Delivery & Transit Insurance:</span>
+          <span class="text-emerald-400 font-bold">FREE (BlueDart Air)</span>
+        </div>
+        <div class="flex justify-between text-slate-400">
+          <span>Warranty Package:</span>
+          <span class="text-white font-medium">6M Comprehensive Included</span>
+        </div>
+        <div class="flex justify-between text-sm font-bold text-white pt-2 border-t border-slate-800">
+          <span>Total Payable:</span>
+          <span id="cartDrawerTotal" class="text-emerald-400 font-mono text-base">₹0</span>
+        </div>
+        <button onclick="checkoutCartCOD()" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 cursor-pointer">
+          <span>🛒 Proceed with Pan-India COD Checkout</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- TRACK ORDER MODAL                                        -->
+  <!-- ======================================================== -->
+  <div id="trackOrderModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#0D1527] border border-blue-500/40 rounded-3xl max-w-lg w-full p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🚚</span>
+          <div>
+            <h3 class="font-bold text-white text-base">Live Order Tracking</h3>
+            <p class="text-xs text-slate-400">Insured BlueDart / Delhivery Dispatch</p>
+          </div>
+        </div>
+        <button onclick="closeTrackOrderModal()" class="text-slate-400 hover:text-white cursor-pointer">✕</button>
+      </div>
+
+      <div class="flex gap-2 mb-4">
+        <input type="text" id="trackInput" value="FZ-1049" placeholder="Enter Order ID (e.g. FZ-1049)" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+        <button onclick="searchTrackOrder()" class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs cursor-pointer">
+          Track
+        </button>
+      </div>
+
+      <!-- Tracking Timeline -->
+      <div class="p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-xs space-y-3">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+          <div>
+            <div class="text-[11px] text-slate-400">Shipment AWB:</div>
+            <div class="font-mono font-bold text-white">#FZ-BLUEDART-8821</div>
+          </div>
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold">
+            🟢 IN TRANSIT
+          </span>
+        </div>
+
+        <div class="space-y-2 pt-1 text-[11px]">
+          <div class="flex items-center gap-2 text-emerald-400">
+            <span>✓</span>
+            <span>Order Placed & Verified via WhatsApp OTP (Kalkaji, New Delhi)</span>
+          </div>
+          <div class="flex items-center gap-2 text-emerald-400">
+            <span>✓</span>
+            <span>Quality Inspection & Serial Logged at FoneZone Delhi Hub</span>
+          </div>
+          <div class="flex items-center gap-2 text-blue-400 font-bold">
+            <span>➜</span>
+            <span>BlueDart Express Pickup Generated • Out for Doorstep Delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- "ASK TO CEO" DRAWER MODAL                                -->
+  <!-- ======================================================== -->
+  <div id="ceoModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#0D1527] border border-amber-500/40 rounded-3xl max-w-lg w-full p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">👑</span>
+          <div>
+            <h3 class="font-bold text-white text-base">Direct Channel: ASK To CEO</h3>
+            <p class="text-xs text-amber-300/80">Executive escalations for Hemant Verma (Founder, FoneZone)</p>
+          </div>
+        </div>
+        <button onclick="closeCeoModal()" class="text-slate-400 hover:text-white cursor-pointer">✕</button>
+      </div>
+
+      <p class="text-xs text-slate-300 leading-relaxed mb-4">
+        At FoneZone, our leadership takes customer trust personally. Any query sent here bypasses front-line support and is reviewed directly by Hemant Verma and senior operations management.
+      </p>
+
+      <div class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-400 mb-1">Your Name:</label>
+          <input type="text" id="ceoName" placeholder="e.g. Dr. Rajesh Kumar" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1">WhatsApp / Phone Number:</label>
+          <input type="text" id="ceoPhone" placeholder="+91 98765 43210" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1">Message to Hemant Verma:</label>
+          <textarea id="ceoMsg" rows="3" placeholder="Inquire about bulk enterprise stock, custom grading, or priority delivery..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white"></textarea>
+        </div>
+        <button onclick="submitCeoMessage()" class="w-full py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs shadow cursor-pointer">
+          Send Direct Escalation
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ======================================================== -->
+  <!-- JOB APPLICATION MODAL                                     -->
+  <!-- ======================================================== -->
+  <div id="jobModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-[#0D1527] border border-blue-500/40 rounded-3xl max-w-lg w-full p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">💼</span>
+          <div>
+            <h3 class="font-bold text-white text-base" id="jobModalRoleName">Hardware Testing Engineer</h3>
+            <p class="text-xs text-blue-300/80">Careers at FoneZone • Acetel Telecommunications</p>
+          </div>
+        </div>
+        <button onclick="closeJobModal()" class="text-slate-400 hover:text-white cursor-pointer">✕</button>
+      </div>
+
+      <p class="text-xs text-slate-300 leading-relaxed mb-4">
+        Join our circular electronics mission. Your application will be sent directly to Sahil Pathania and the engineering leadership team.
+      </p>
+
+      <form onsubmit="submitJobApplication(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block text-slate-400 mb-1">Your Full Name:</label>
+          <input type="text" id="jobApplicantName" required placeholder="e.g. Anand Iyer" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-slate-400 mb-1">WhatsApp / Phone:</label>
+            <input type="tel" id="jobApplicantPhone" required placeholder="+91 98765 43210" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+          </div>
+          <div>
+            <label class="block text-slate-400 mb-1">Experience Level:</label>
+            <select id="jobApplicantExp" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+              <option value="1-2">1 - 2 Years</option>
+              <option value="3-5" selected>3 - 5 Years</option>
+              <option value="5+">5+ Years (Senior)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1">Resume / LinkedIn Profile URL:</label>
+          <input type="text" id="jobApplicantResume" placeholder="https://linkedin.com/in/... or drive link" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white">
+        </div>
+        <div>
+          <label class="block text-slate-400 mb-1">Brief Note on Testing or Operations Skills:</label>
+          <textarea id="jobApplicantNote" rows="2" placeholder="Hands-on experience with Apple OLED diagnostics, microsoldering, battery replacement..." class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-white"></textarea>
+        </div>
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow cursor-pointer">
+          Submit Application to FoneZone HR
+        </button>
+      </form>
+    </div>
+  </div>
+
+    <!-- Toast Notification Container -->
+  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 hidden px-4 py-3 rounded-xl bg-slate-900 border border-blue-500/50 text-white text-xs shadow-2xl flex items-center gap-2">
+    <span id="toastIcon">✨</span>
+    <span id="toastMessage">Action completed</span>
+  </div>
+
+  <script src="app.js?v=2.6"></script>
+</body>
+</html>
