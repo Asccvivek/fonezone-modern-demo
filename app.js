@@ -4931,8 +4931,8 @@ function renderCatalog() {
               <span class="text-[10px] text-emerald-400 font-bold ml-auto bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Save ${priceInfo.savingsPct}%</span>
             </div>
             <div class="text-[10px] text-blue-400 font-medium mt-0.5 flex items-center justify-between">
-              <span>💳 Flat ₹2,000 Off on UPI/Card</span>
-              <span class="text-slate-400">Free Express Air</span>
+              <span>💳 ${state.activeRegion === 'UAE' ? 'Flat AED 90 Off on Cards/Apple Pay' : 'Flat ₹2,000 Off on UPI/Card'}</span>
+              <span class="text-slate-400">${state.activeRegion === 'UAE' ? 'Dubai Express Air' : 'Free Express Air'}</span>
             </div>
           </div>
         </div>
@@ -4967,12 +4967,16 @@ function renderSubFilters(subFilters) {
 
   row.innerHTML = subFilters.map(f => {
     const isActive = state.activeSubFilter === f.id;
+    let label = f.label;
+    if (f.id === "under50k") {
+      label = state.activeRegion === "UAE" ? "Under AED 2,200" : "Under ₹50,000";
+    }
     return `
       <button 
         onclick="setSubFilter('${f.id}')" 
         class="px-3 py-1 rounded-full text-xs font-semibold cursor-pointer transition-all ${isActive ? 'bg-blue-600 text-white shadow-md' : 'bg-slate-900 text-slate-400 hover:text-white border border-slate-800'}"
       >
-        ${f.label}
+        ${label}
       </button>
     `;
   }).join('');
@@ -5014,15 +5018,116 @@ function setRegion(reg) {
   state.activeRegion = reg;
   const btnIn = document.getElementById("regionBtnIN");
   const btnUae = document.getElementById("regionBtnUAE");
-  if (reg === "IN") {
-    btnIn.className = "px-2 py-0.5 rounded text-[11px] font-bold bg-blue-600 text-white cursor-pointer";
-    btnUae.className = "px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer";
-  } else {
-    btnUae.className = "px-2 py-0.5 rounded text-[11px] font-bold bg-blue-600 text-white cursor-pointer";
-    btnIn.className = "px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer";
+  if (btnIn && btnUae) {
+    if (reg === "IN") {
+      btnIn.className = "px-2 py-0.5 rounded text-[11px] font-bold bg-blue-600 text-white cursor-pointer";
+      btnUae.className = "px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer";
+    } else {
+      btnUae.className = "px-2 py-0.5 rounded text-[11px] font-bold bg-blue-600 text-white cursor-pointer";
+      btnIn.className = "px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer";
+    }
   }
+  updateRegionUI();
   renderCatalog();
   updateCartDrawerUI();
+  if (state.currentInspectProduct && typeof updateInspectGradeUI === "function") {
+    updateInspectGradeUI();
+  }
+  if (typeof calculateSellPrice === "function") calculateSellPrice();
+  if (typeof calculateWholesalePrice === "function") calculateWholesalePrice();
+  showToast(reg === "UAE" ? "🇦🇪 Currency switched to AED (UAE Dirhams) • Dubai Hub & GCC Delivery Active" : "🇮🇳 Currency switched to INR (₹) • Pan-India Free Express Air Active");
+}
+
+function updateRegionUI() {
+  const isUae = state.activeRegion === "UAE";
+
+  // 1. Announcement Bar Care & Shipping
+  const careLink = document.getElementById("careContactLink");
+  const careText = document.getElementById("careContactText");
+  const shipText = document.getElementById("shippingBadgeText");
+  if (careLink && careText && shipText) {
+    if (isUae) {
+      careLink.href = "https://wa.me/97143528899";
+      careText.innerHTML = 'Dubai & UAE Care: <b>+971 4 352 8899</b> / WhatsApp';
+      shipText.textContent = "UAE & GCC Express Insured Delivery";
+    } else {
+      careLink.href = "tel:+918044630881";
+      careText.innerHTML = 'Customer Care: <b>+91 8044630881</b> (10am - 7pm)';
+      shipText.textContent = "Pan-India Insured Dispatch";
+    }
+  }
+
+  // 2. Hero Carousel Slides
+  const h1Price = document.getElementById("heroSlide1Price");
+  const h1Badge = document.getElementById("heroSlide1SaveBadge");
+  if (h1Price) {
+    h1Price.innerHTML = `Starting from <strong class="text-white text-base">${formatMoney(38999)}</strong> (MSRP <span class="line-through text-slate-400">${formatMoney(69900)}</span>). Every device passes our rigorous 32-point engineering inspection with authentic cosmetic condition grading.`;
+  }
+  if (h1Badge) h1Badge.textContent = `Save ${formatMoney(30901)}`;
+
+  const h2Price = document.getElementById("heroSlide2Price");
+  const h2Badge = document.getElementById("heroSlide2SaveBadge");
+  if (h2Price) {
+    h2Price.innerHTML = `Starting from <strong class="text-white text-base">${formatMoney(54999)}</strong> (MSRP <span class="line-through text-slate-400">${formatMoney(124999)}</span>). Original S-Pen stylus included. 100x Space Zoom & Dynamic AMOLED 2X tested with zero burn-in.`;
+  }
+  if (h2Badge) h2Badge.textContent = `SAVE ${formatMoney(70000)}`;
+
+  const h3Badge = document.getElementById("heroSlide3TradeinBadge");
+  if (h3Badge) h3Badge.textContent = `GET UP TO ${formatMoney(15000)} EXTRA`;
+
+  // 3. Promo Offer Cards
+  const o1Deal = document.getElementById("offer1DealPrice");
+  const o1Msrp = document.getElementById("offer1MsrpPrice");
+  if (o1Deal) o1Deal.textContent = formatMoney(30999);
+  if (o1Msrp) o1Msrp.textContent = formatMoney(59900);
+
+  const o2Head = document.getElementById("offer2Heading");
+  const o2Sub = document.getElementById("offer2Subtext");
+  const o2Emi = document.getElementById("offer2EmiText");
+  if (o2Head) o2Head.textContent = isUae ? "Flat AED 90 Instant Off" : "Flat ₹2,000 Instant Off";
+  if (o2Sub) o2Sub.textContent = isUae ? "Emirates NBD, ADCB & Mashreq Cards on orders above AED 1,300." : "HDFC, ICICI, SBI & Axis Bank Credit/Debit Cards on orders above ₹30k.";
+  if (o2Emi) o2Emi.textContent = isUae ? "+ Tabby / Tamara 4-Split from AED 75/mo" : "+ No Cost EMI from ₹1,666/mo";
+
+  const o3Coupon = document.getElementById("offer3CouponCode");
+  const o3Sub = document.getElementById("offer3Subtext");
+  if (o3Coupon) o3Coupon.textContent = isUae ? "FONEZONE90" : "FONEZONE2K";
+  if (o3Sub) o3Sub.textContent = isUae ? "Get additional AED 90 off at cart checkout on any flagship purchase." : "Get additional ₹2,000 off at cart checkout on any flagship purchase.";
+
+  // 4. Quick Select Rail
+  const rpApple = document.getElementById("railPriceApple");
+  const rpSamsung = document.getElementById("railPriceSamsung");
+  const rpOnePlus = document.getElementById("railPriceOnePlus");
+  const rpMacBook = document.getElementById("railPriceMacBook");
+  const rpIpad = document.getElementById("railPriceIpad");
+  const rpWatch = document.getElementById("railPriceWatch");
+  if (rpApple) rpApple.textContent = `From ${formatMoney(10999)}`;
+  if (rpSamsung) rpSamsung.textContent = `From ${formatMoney(22499)}`;
+  if (rpOnePlus) rpOnePlus.textContent = `From ${formatMoney(13999)}`;
+  if (rpMacBook) rpMacBook.textContent = `From ${formatMoney(56999)}`;
+  if (rpIpad) rpIpad.textContent = `From ${formatMoney(15999)}`;
+  if (rpWatch) rpWatch.textContent = `From ${formatMoney(10499)}`;
+
+  // 5. Budget Finder
+  const minLabel = document.getElementById("budgetSliderMinLabel");
+  const maxLabel = document.getElementById("budgetSliderMaxLabel");
+  if (minLabel) minLabel.textContent = formatMoney(15000);
+  if (maxLabel) maxLabel.textContent = isUae ? "AED 4,500+" : "₹1,00,000+";
+
+  const savingsCallout = document.getElementById("budgetSavingsCalloutText");
+  if (savingsCallout) savingsCallout.textContent = `🔥 Save up to ${formatMoney(55000)} vs Brand New MRP`;
+
+  // Update budget quick pills text
+  const pills = document.querySelectorAll(".quick-budget-btn");
+  pills.forEach(p => {
+    const val = Number(p.getAttribute("data-budget"));
+    if (val === 20000) p.textContent = isUae ? "Under AED 900" : "Under ₹20k";
+    else if (val === 35000) p.textContent = isUae ? "AED 900 - 1.5k" : "₹20k - ₹35k";
+    else if (val === 50000) p.textContent = isUae ? "AED 1.5k - 2.2k" : "₹35k - ₹50k";
+    else if (val === 75000) p.textContent = isUae ? "AED 2.2k - 3.3k" : "₹50k - ₹75k";
+    else if (val >= 100000) p.textContent = "All Budgets";
+  });
+
+  updateBudgetDisplayUI();
 }
 
 /* ======================================================== */
@@ -5048,17 +5153,11 @@ function setQuickBudget(maxVal) {
     updateSliderTrackFill(numVal);
   }
 
-  // Highlight matching quick budget pill
+  // Highlight matching quick budget pill by data-budget attribute
   const btns = document.querySelectorAll(".quick-budget-btn");
   btns.forEach(btn => {
-    const text = btn.textContent.trim();
-    let isMatch = false;
-    if (numVal <= 20000 && text.includes("Under ₹20k")) isMatch = true;
-    else if (numVal > 20000 && numVal <= 35000 && text.includes("₹20k - ₹35k")) isMatch = true;
-    else if (numVal > 35000 && numVal <= 50000 && text.includes("₹35k - ₹50k")) isMatch = true;
-    else if (numVal > 50000 && numVal <= 75000 && text.includes("50k - ₹75k")) isMatch = true;
-    else if (numVal >= 100000 && text.includes("All Budgets")) isMatch = true;
-
+    const btnVal = Number(btn.getAttribute("data-budget"));
+    const isMatch = btnVal === numVal;
     if (isMatch) {
       btn.className = "quick-budget-btn active px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[11px] transition-all cursor-pointer shadow";
     } else {
@@ -5079,20 +5178,20 @@ function handleBudgetSlider(val) {
 
   updateSliderTrackFill(numVal);
 
-  // Dynamic range-based pill highlighting
+  // Dynamic range-based pill highlighting by data-budget attribute
   const btns = document.querySelectorAll(".quick-budget-btn");
   btns.forEach(btn => {
     btn.className = "quick-budget-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-[11px] font-medium transition-all cursor-pointer";
-    const text = btn.textContent.trim();
-    if (numVal <= 20000 && text.includes("Under ₹20k")) {
+    const btnVal = Number(btn.getAttribute("data-budget"));
+    if (numVal <= 20000 && btnVal === 20000) {
       btn.className = "quick-budget-btn active px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[11px] transition-all cursor-pointer shadow";
-    } else if (numVal > 20000 && numVal <= 35000 && text.includes("₹20k - ₹35k")) {
+    } else if (numVal > 20000 && numVal <= 35000 && btnVal === 35000) {
       btn.className = "quick-budget-btn active px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[11px] transition-all cursor-pointer shadow";
-    } else if (numVal > 35000 && numVal <= 50000 && text.includes("₹35k - ₹50k")) {
+    } else if (numVal > 35000 && numVal <= 50000 && btnVal === 50000) {
       btn.className = "quick-budget-btn active px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[11px] transition-all cursor-pointer shadow";
-    } else if (numVal > 50000 && numVal <= 75000 && text.includes("50k - ₹75k")) {
+    } else if (numVal > 50000 && numVal <= 75000 && btnVal === 75000) {
       btn.className = "quick-budget-btn active px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[11px] transition-all cursor-pointer shadow";
-    } else if (numVal >= 100000 && text.includes("All Budgets")) {
+    } else if (numVal >= 100000 && btnVal === 100000) {
       btn.className = "quick-budget-btn active px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[11px] transition-all cursor-pointer shadow";
     }
   });
@@ -5109,7 +5208,6 @@ function initBudgetSlider() {
   const slider = document.getElementById("budgetRangeSlider");
   if (!slider) return;
 
-  // Dual direct event listeners
   slider.oninput = (e) => handleBudgetSlider(e.target.value);
   slider.onchange = (e) => handleBudgetSlider(e.target.value);
 
@@ -5121,12 +5219,14 @@ window.handleBudgetSlider = handleBudgetSlider;
 window.handleBudgetSliderInput = handleBudgetSlider;
 window.setQuickBudget = setQuickBudget;
 window.initBudgetSlider = initBudgetSlider;
+window.updateRegionUI = updateRegionUI;
 
 function updateBudgetDisplayUI() {
   const displayVal = document.getElementById("budgetDisplayVal");
+  const isUae = state.activeRegion === "UAE";
   if (displayVal) {
     if (state.budgetMax >= 100000) {
-      displayVal.textContent = "All Budgets (₹1,00,000+)";
+      displayVal.textContent = isUae ? "All Budgets (AED 4,500+)" : "All Budgets (₹1,00,000+)";
     } else {
       displayVal.textContent = `Up to ${formatMoney(state.budgetMax)}`;
     }
@@ -5158,6 +5258,7 @@ function updateBudgetDisplayUI() {
     }
   }
 }
+
 
 /* ======================================================== */
 /* 3. SEARCH WITH LIVE SUGGESTIONS DROPDOWN                 */
@@ -5444,6 +5545,13 @@ function openInspector(productId) {
   // Render Storage Variant Selector & Tech Specs
   renderInspectStorageUI(p);
   renderProductSpecs(p, state.specsFilterTab || "all");
+
+  state.hasCaseAddon = false;
+  const caseBtn = document.getElementById("btnAddCaseBtn");
+  if (caseBtn) {
+    caseBtn.textContent = `+ Add Case (${formatMoney(399)})`;
+    caseBtn.className = "shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all";
+  }
 
   updateInspectGradeUI();
   updateInspectAngleUI();
@@ -6816,6 +6924,7 @@ window.pauseHeroAutoSlide = pauseHeroAutoSlide;
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initBudgetSlider();
+  updateRegionUI();
   initHeroCarousel();
   renderCatalog();
   renderOrdersTable();
@@ -7175,10 +7284,10 @@ function calculateSellPrice() {
   const storageValEl = document.getElementById("sellStorageVal");
   const netValEl = document.getElementById("sellNetVal");
 
-  if (quoteEl) quoteEl.textContent = "₹" + total.toLocaleString("en-IN");
-  if (baseValEl) baseValEl.textContent = "₹" + base.toLocaleString("en-IN");
-  if (storageValEl) storageValEl.textContent = "+₹" + storageMult.toLocaleString("en-IN");
-  if (netValEl) netValEl.textContent = "₹" + total.toLocaleString("en-IN");
+  if (quoteEl) quoteEl.textContent = formatMoney(total);
+  if (baseValEl) baseValEl.textContent = formatMoney(base);
+  if (storageValEl) storageValEl.textContent = "+" + formatMoney(storageMult);
+  if (netValEl) netValEl.textContent = formatMoney(total);
 }
 
 function confirmSellPickup() {
@@ -7186,7 +7295,7 @@ function confirmSellPickup() {
   const phone = document.getElementById("sellPhone")?.value || "+91 98XXX XXXXX";
   const amount = document.getElementById("sellQuoteAmount")?.textContent || "₹31,500";
 
-  showToast(`✅ Doorstep pickup confirmed for ${name}! Our courier will arrive tomorrow. Instant UPI payout of ${amount} locked.`);
+  showToast(`✅ Doorstep pickup confirmed for ${name}! Our courier will arrive tomorrow. Instant payout of ${amount} locked.`);
 }
 
 /* ======================================================== */
@@ -7237,12 +7346,12 @@ function calculateWholesalePrice() {
   const perUnitEl = document.getElementById("wsPerUnitNet");
   const profitEl = document.getElementById("wsDealerProfit");
 
-  if (totalEl) totalEl.textContent = "₹" + netPayable.toLocaleString("en-IN");
-  if (baseEl) baseEl.textContent = "₹" + totalBase.toLocaleString("en-IN");
-  if (discEl) discEl.textContent = discountAmount > 0 ? `-₹${discountAmount.toLocaleString("en-IN")} (${discountTier})` : "₹0 (Starter)";
-  if (gstEl) gstEl.textContent = "₹" + gstCredit.toLocaleString("en-IN");
-  if (perUnitEl) perUnitEl.textContent = "₹" + netCostPerUnit.toLocaleString("en-IN");
-  if (profitEl) profitEl.textContent = `₹${projectedProfit.toLocaleString("en-IN")} (${marginPct}% Margin)`;
+  if (totalEl) totalEl.textContent = formatMoney(netPayable);
+  if (baseEl) baseEl.textContent = formatMoney(totalBase);
+  if (discEl) discEl.textContent = discountAmount > 0 ? `-${formatMoney(discountAmount)} (${discountTier})` : `${formatMoney(0)} (Starter)`;
+  if (gstEl) gstEl.textContent = formatMoney(gstCredit);
+  if (perUnitEl) perUnitEl.textContent = formatMoney(netCostPerUnit);
+  if (profitEl) profitEl.textContent = `${formatMoney(projectedProfit)} (${marginPct}% Margin)`;
 }
 
 function submitWholesaleRfq() {
@@ -7825,14 +7934,14 @@ function toggleAddCaseToOrder() {
 
   if (state.hasCaseAddon) {
     if (btn) {
-      btn.textContent = "✓ Case Added (+₹399)";
+      btn.textContent = `✓ Case Added (+${formatMoney(399)})`;
       btn.className = "shrink-0 px-2 py-1 rounded bg-emerald-500 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all";
     }
     if (priceEl) priceEl.textContent = formatMoney(basePrice + 399);
-    showToast("📱 +₹399 Shockproof Case bundle added to this device!");
+    showToast(`📱 +${formatMoney(399)} Shockproof Case bundle added to this device!`);
   } else {
     if (btn) {
-      btn.textContent = "+ Add Case (₹399)";
+      btn.textContent = `+ Add Case (${formatMoney(399)})`;
       btn.className = "shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all";
     }
     if (priceEl) priceEl.textContent = formatMoney(basePrice);

@@ -599,6 +599,22 @@ body.theme-light .fz-glass-card .bg-slate-950\/70 {
   border: 1px solid #E2E8F0 !important;
 }
 
+/* High-Contrast Light Mode for Top Theme Toggle */
+body.theme-light #themeToggleBtnTop {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+body.theme-light #themeToggleBtnTop:hover {
+  background-color: #F1F5F9 !important;
+  border-color: #94A3B8 !important;
+  color: #0F172A !important;
+}
+body.theme-light #themeToggleBtnTop * {
+  color: #0F172A !important;
+}
+
 /* Crucial: Buttons & Badges with Solid Backgrounds Keep White Text */
 body.theme-light button.bg-blue-600,
 body.theme-light button.bg-blue-600 *,
