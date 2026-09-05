@@ -3,813 +3,4425 @@
 
 const CATALOG = [
   {
-    id: "fz-ip15pro",
-    baseModelName: "iPhone 15 Pro",
-    color: "Natural Titanium",
-    name: "iPhone 15 Pro 128GB Natural Titanium",
-    model3d: "assets/iphone14_model.glb",
-    category: "phone",
-    brand: "apple",
-    badge: "FLAGSHIP",
-    image: "assets/iphone15pro_naturaltitanium.png",
-    msrp: 134900,
-    storageOptions: [
-      { size: "128GB", delta: 0, msrp: 134900 },
-      { size: "256GB", delta: 7000, msrp: 144900 },
-      { size: "512GB", delta: 16000, msrp: 164900 },
-      { size: "1TB", delta: 25000, msrp: 184900 }
+    "id": "fz-ip15pro",
+    "baseModelName": "iPhone 15 Pro",
+    "color": "Natural Titanium",
+    "name": "iPhone 15 Pro 128GB Natural Titanium",
+    "model3d": "assets/iphone14_model.glb",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "FLAGSHIP",
+    "image": "assets/iphone15pro_naturaltitanium.png",
+    "msrp": 134900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 134900
+      },
+      {
+        "size": "256GB",
+        "delta": 7000,
+        "msrp": 144900
+      },
+      {
+        "size": "512GB",
+        "delta": 16000,
+        "msrp": 164900
+      },
+      {
+        "size": "1TB",
+        "delta": 25000,
+        "msrp": 184900
+      }
     ],
-    grades: {
-      "A": { price: 84999, label: "Grade A (Pristine)", battery: 98, cycles: 84, desc: "Flawless condition. Zero micro-scratches on Ceramic Shield or Titanium. Apple OEM display." },
-      "B": { price: 78999, label: "Grade B (Very Good)", battery: 92, cycles: 198, desc: "Pristine display. Minor hairline micro-abrasion on lower titanium bezel rim (invisible with case)." },
-      "C": { price: 71999, label: "Grade C (Value Deal)", battery: 86, cycles: 340, desc: "Visible cosmetic scuffs on corners. 100% hardware certified, maximum savings." }
+    "grades": {
+      "A": {
+        "price": 84999,
+        "label": "Grade A (Pristine)",
+        "battery": 98,
+        "cycles": 84,
+        "desc": "Flawless condition. Zero micro-scratches on Ceramic Shield or Titanium. Apple OEM display."
+      },
+      "B": {
+        "price": 78999,
+        "label": "Grade B (Very Good)",
+        "battery": 92,
+        "cycles": 198,
+        "desc": "Pristine display. Minor hairline micro-abrasion on lower titanium bezel rim (invisible with case)."
+      },
+      "C": {
+        "price": 71999,
+        "label": "Grade C (Value Deal)",
+        "battery": 86,
+        "cycles": 340,
+        "desc": "Visible cosmetic scuffs on corners. 100% hardware certified, maximum savings."
+      }
     },
-    specs: {
-      display: {
-        title: "Super Retina XDR OLED Display",
-        icon: "📱",
-        details: [
-          { label: "Screen Size", value: "6.1-inch All-Screen OLED Display" },
-          { label: "Resolution", value: "2556 x 1179 pixels at 460 ppi" },
-          { label: "Refresh Rate", value: "120Hz ProMotion Adaptive Frequency" },
-          { label: "Peak Brightness", value: "2,000 nits Outdoor / 1,600 nits HDR" },
-          { label: "Glass & Shield", value: "Ceramic Shield Front • Matte Glass Back" },
-          { label: "Tech Features", value: "Dynamic Island, Always-On, TrueTone, P3" }
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.1-inch All-Screen OLED Display"
+          },
+          {
+            "label": "Resolution",
+            "value": "2556 x 1179 pixels at 460 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "120Hz ProMotion Adaptive Frequency"
+          },
+          {
+            "label": "Peak Brightness",
+            "value": "2,000 nits Outdoor / 1,600 nits HDR"
+          },
+          {
+            "label": "Glass & Shield",
+            "value": "Ceramic Shield Front \u2022 Matte Glass Back"
+          },
+          {
+            "label": "Tech Features",
+            "value": "Dynamic Island, Always-On, TrueTone, P3"
+          }
         ]
       },
-      processor: {
-        title: "Apple Silicon A17 Pro (3nm)",
-        icon: "⚡",
-        details: [
-          { label: "Processor Chip", value: "Apple A17 Pro 3nm Industry-First SoC" },
-          { label: "CPU Architecture", value: "6-Core CPU (2 Performance + 4 Efficiency)" },
-          { label: "GPU Architecture", value: "6-Core Pro GPU with Hardware Ray Tracing" },
-          { label: "Neural Engine", value: "16-Core Neural Engine (35 Trillion Ops/sec)" },
-          { label: "RAM Memory", value: "8GB LPDDR5 Unified Memory Architecture" }
+      "processor": {
+        "title": "Apple Silicon A17 Pro (3nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A17 Pro 3nm Industry-First SoC"
+          },
+          {
+            "label": "CPU Architecture",
+            "value": "6-Core CPU (2 Performance + 4 Efficiency)"
+          },
+          {
+            "label": "GPU Architecture",
+            "value": "6-Core Pro GPU with Hardware Ray Tracing"
+          },
+          {
+            "label": "Neural Engine",
+            "value": "16-Core Neural Engine (35 Trillion Ops/sec)"
+          },
+          {
+            "label": "RAM Memory",
+            "value": "8GB LPDDR5 Unified Memory Architecture"
+          }
         ]
       },
-      camera: {
-        title: "Pro 48MP Photonic Camera System",
-        icon: "📷",
-        details: [
-          { label: "Primary Sensor", value: "48MP Main (24mm, f/1.78, 2nd-gen Sensor OIS)" },
-          { label: "Ultra-Wide", value: "12MP Ultra-Wide (13mm, f/2.2, 120° Field of View)" },
-          { label: "Telephoto", value: "12MP 3x Telephoto (77mm, f/2.8, Optical OIS)" },
-          { label: "Optical Zoom", value: "3x Optical Zoom In, 2x Out (6x Optical Range)" },
-          { label: "Pro Video", value: "4K ProRes at 60 fps with external USB-C drive Log" },
-          { label: "Front Camera", value: "12MP TrueDepth (f/1.9) with Autofocus & Face ID" }
+      "camera": {
+        "title": "Pro 48MP Photonic Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary Sensor",
+            "value": "48MP Main (24mm, f/1.78, 2nd-gen Sensor OIS)"
+          },
+          {
+            "label": "Ultra-Wide",
+            "value": "12MP Ultra-Wide (13mm, f/2.2, 120\u00b0 Field of View)"
+          },
+          {
+            "label": "Telephoto",
+            "value": "12MP 3x Telephoto (77mm, f/2.8, Optical OIS)"
+          },
+          {
+            "label": "Optical Zoom",
+            "value": "3x Optical Zoom In, 2x Out (6x Optical Range)"
+          },
+          {
+            "label": "Pro Video",
+            "value": "4K ProRes at 60 fps with external USB-C drive Log"
+          },
+          {
+            "label": "Front Camera",
+            "value": "12MP TrueDepth (f/1.9) with Autofocus & Face ID"
+          }
         ]
       },
-      battery: {
-        title: "Battery & Fast Charging Lab QA",
-        icon: "🔋",
-        details: [
-          { label: "OEM Capacity", value: "3,274 mAh Li-Ion (Guaranteed >=85% Health)" },
-          { label: "Video Playback", value: "Up to 23 Hours Local / 20 Hours Streamed" },
-          { label: "Fast Charging", value: "Up to 50% charge in 30 mins via 20W Type-C" },
-          { label: "Wireless Qi2", value: "MagSafe 15W & Qi2 Magnetic Fast Charging" }
+      "battery": {
+        "title": "Battery & Fast Charging Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "OEM Capacity",
+            "value": "3,274 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Video Playback",
+            "value": "Up to 23 Hours Local / 20 Hours Streamed"
+          },
+          {
+            "label": "Fast Charging",
+            "value": "Up to 50% charge in 30 mins via 20W Type-C"
+          },
+          {
+            "label": "Wireless Qi2",
+            "value": "MagSafe 15W & Qi2 Magnetic Fast Charging"
+          }
         ]
       },
-      build: {
-        title: "Aerospace Titanium Chassis & Dimensions",
-        icon: "📐",
-        details: [
-          { label: "Chassis Material", value: "Grade 5 Aerospace Titanium with Aluminum core" },
-          { label: "Dimensions", value: "146.6 x 70.6 x 8.25 mm (5.77 x 2.78 x 0.32 in)" },
-          { label: "Total Weight", value: "187 grams (6.60 oz) Ultra-Lightweight" },
-          { label: "Water Resistance", value: "IP68 Rating (Maximum depth 6 meters up to 30 mins)" },
-          { label: "Action Control", value: "Custom Action Button with Haptic Feedback" }
+      "build": {
+        "title": "Aerospace Titanium Chassis & Dimensions",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis Material",
+            "value": "Grade 5 Aerospace Titanium with Aluminum core"
+          },
+          {
+            "label": "Dimensions",
+            "value": "146.6 x 70.6 x 8.25 mm (5.77 x 2.78 x 0.32 in)"
+          },
+          {
+            "label": "Total Weight",
+            "value": "187 grams (6.60 oz) Ultra-Lightweight"
+          },
+          {
+            "label": "Water Resistance",
+            "value": "IP68 Rating (Maximum depth 6 meters up to 30 mins)"
+          },
+          {
+            "label": "Action Control",
+            "value": "Custom Action Button with Haptic Feedback"
+          }
         ]
       },
-      connectivity: {
-        title: "5G, Dual SIM & Wireless Architecture",
-        icon: "📶",
-        details: [
-          { label: "5G Cellular", value: "5G Sub-6GHz & mmWave (All Indian 5G Bands)" },
-          { label: "SIM Types", value: "Dual SIM (Physical nano-SIM + eSIM) Unlocked" },
-          { label: "Wi-Fi & Bluetooth", value: "Wi-Fi 6E (802.11ax) + Bluetooth 5.3 + Thread" },
-          { label: "Port Interface", value: "USB-C 3.0 (up to 10Gb/s transfer speed)" },
-          { label: "Biometrics", value: "Face ID TrueDepth 3D Facial Recognition" }
+      "connectivity": {
+        "title": "5G, Dual SIM & Wireless Architecture",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "5G Cellular",
+            "value": "5G Sub-6GHz & mmWave (All Indian 5G Bands)"
+          },
+          {
+            "label": "SIM Types",
+            "value": "Dual SIM (Physical nano-SIM + eSIM) Unlocked"
+          },
+          {
+            "label": "Wi-Fi & Bluetooth",
+            "value": "Wi-Fi 6E (802.11ax) + Bluetooth 5.3 + Thread"
+          },
+          {
+            "label": "Port Interface",
+            "value": "USB-C 3.0 (up to 10Gb/s transfer speed)"
+          },
+          {
+            "label": "Biometrics",
+            "value": "Face ID TrueDepth 3D Facial Recognition"
+          }
         ]
       },
-      inclusions: {
-        title: "FoneZone Certified Box Inclusions",
-        icon: "🛡️",
-        details: [
-          { label: "QA Certificate", value: "32-Point Diagnostic Engineering Report (Pass 100%)" },
-          { label: "Warranty Cover", value: "6 Months Comprehensive Pan-India Warranty Card" },
-          { label: "Charging Cable", value: "20W Braided USB-C to USB-C Fast Charge Cable" },
-          { label: "Security Seal", value: "Tamper-Evident Anti-Swap Doorstep Security Pouch" }
+      "inclusions": {
+        "title": "FoneZone Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty Cover",
+            "value": "6 Months Comprehensive Pan-India Warranty Card"
+          },
+          {
+            "label": "Charging Cable",
+            "value": "20W Braided USB-C to USB-C Fast Charge Cable"
+          },
+          {
+            "label": "Security Seal",
+            "value": "Tamper-Evident Anti-Swap Doorstep Security Pouch"
+          }
         ]
       }
     },
-    angles: {
-      0: "assets/turntable_frame_0.png",
-      45: "assets/turntable_frame_45.png",
-      90: "assets/turntable_frame_90.png",
-      135: "assets/turntable_frame_135.png",
-      180: "assets/turntable_frame_180.png",
-      225: "assets/turntable_frame_225.png",
-      270: "assets/turntable_frame_270.png",
-      315: "assets/turntable_frame_315.png",
-      front: "assets/turntable_frame_0.png",
-      back: "assets/turntable_frame_180.png",
-      right: "assets/turntable_frame_right.png",
-      left: "assets/turntable_frame_left.png",
-      top: "assets/turntable_frame_top.png",
-      bottom: "assets/turntable_frame_bottom.png"
+    "angles": {
+      "0": "assets/turntable_frame_0.png",
+      "45": "assets/turntable_frame_45.png",
+      "90": "assets/turntable_frame_90.png",
+      "135": "assets/turntable_frame_135.png",
+      "180": "assets/turntable_frame_180.png",
+      "225": "assets/turntable_frame_225.png",
+      "270": "assets/turntable_frame_270.png",
+      "315": "assets/turntable_frame_315.png",
+      "front": "assets/turntable_frame_0.png",
+      "back": "assets/turntable_frame_180.png",
+      "right": "assets/turntable_frame_right.png",
+      "left": "assets/turntable_frame_left.png",
+      "top": "assets/turntable_frame_top.png",
+      "bottom": "assets/turntable_frame_bottom.png"
     },
-    warranty: "6 Months Comprehensive FoneZone Warranty",
-    stock: "8 units available in Delhi Hub"
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "8 units available in Delhi Hub"
   },
   {
-    id: "fz-ip14",
-    baseModelName: "iPhone 14",
-    color: "Blue",
-    name: "iPhone 14 128GB Blue",
-    model3d: "assets/iphone14_model.glb",
-    category: "phone",
-    brand: "apple",
-    badge: "BESTSELLER",
-    image: "assets/iphone14_blue.png",
-    msrp: 69900,
-    storageOptions: [
-      { size: "128GB", delta: 0, msrp: 69900 },
-      { size: "256GB", delta: 6000, msrp: 79900 },
-      { size: "512GB", delta: 14000, msrp: 99900 }
+    "id": "fz-ip15promax",
+    "baseModelName": "iPhone 15 Pro Max",
+    "color": "Blue Titanium",
+    "name": "iPhone 15 Pro Max 256GB Blue Titanium",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "TITANIUM PRO",
+    "image": "assets/iphone15_promax.jpg",
+    "msrp": 159900,
+    "storageOptions": [
+      {
+        "size": "256GB",
+        "delta": 0,
+        "msrp": 159900
+      },
+      {
+        "size": "512GB",
+        "delta": 13000,
+        "msrp": 179900
+      },
+      {
+        "size": "1TB",
+        "delta": 24000,
+        "msrp": 199900
+      }
     ],
-    grades: {
-      "A": { price: 48999, label: "Grade A (Pristine)", battery: 96, cycles: 112, desc: "Scratch-free glass, like-new aerospace aluminum body. 100% battery performance." },
-      "B": { price: 43999, label: "Grade B (Very Good)", battery: 91, cycles: 220, desc: "Light brush marks on side rails. Clean Super Retina display." },
-      "C": { price: 38999, label: "Grade C (Value Deal)", battery: 85, cycles: 390, desc: "Minor cosmetic corner abrasions. Hardware and cameras tested 100%." }
+    "grades": {
+      "A": {
+        "price": 94999,
+        "label": "Grade A (Pristine)",
+        "battery": 99,
+        "cycles": 46,
+        "desc": "Flawless condition. Grade 5 Titanium chassis, pristine Ceramic Shield display, zero scuffs."
+      },
+      "B": {
+        "price": 87999,
+        "label": "Grade B (Very Good)",
+        "battery": 93,
+        "cycles": 185,
+        "desc": "Clean glass. Microscopic pinpoint mark on lower frame rim, undetectable with case."
+      },
+      "C": {
+        "price": 81999,
+        "label": "Grade C (Value Deal)",
+        "battery": 87,
+        "cycles": 320,
+        "desc": "Light cosmetic casing marks. 100% genuine Apple hardware and 5x optical telephoto certified."
+      }
     },
-    specs: {
-      display: {
-        title: "Super Retina XDR OLED Display",
-        icon: "📱",
-        details: [
-          { label: "Screen Size", value: "6.1-inch Super Retina XDR OLED" },
-          { label: "Resolution", value: "2532 x 1170 pixels at 460 ppi" },
-          { label: "Refresh Rate", value: "60Hz Smooth Retina Interface" },
-          { label: "Peak Brightness", value: "1,200 nits HDR / 800 nits Typical" },
-          { label: "Protection", value: "Ceramic Shield Front • Aerospace Aluminum" }
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.7-inch All-Screen Super Retina XDR OLED"
+          },
+          {
+            "label": "Resolution",
+            "value": "2796 x 1290 pixels at 460 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "120Hz ProMotion Adaptive Frequency"
+          },
+          {
+            "label": "Peak Brightness",
+            "value": "2,000 nits Outdoor / 1,600 nits HDR"
+          },
+          {
+            "label": "Protection",
+            "value": "Ceramic Shield Front \u2022 Textured Matte Glass Back"
+          }
         ]
       },
-      processor: {
-        title: "Apple Silicon A15 Bionic",
-        icon: "⚡",
-        details: [
-          { label: "Processor Chip", value: "Apple A15 Bionic (5-Core GPU Version)" },
-          { label: "CPU Architecture", value: "6-Core CPU (2 Performance + 4 Efficiency)" },
-          { label: "GPU Architecture", value: "5-Core Apple GPU with 16-Core Neural Engine" },
-          { label: "RAM Memory", value: "6GB High-Speed LPDDR4X" }
+      "processor": {
+        "title": "Apple Silicon A17 Pro (3nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A17 Pro 3nm SoC"
+          },
+          {
+            "label": "CPU Architecture",
+            "value": "6-Core CPU (2 Performance + 4 Efficiency)"
+          },
+          {
+            "label": "GPU Architecture",
+            "value": "6-Core Pro GPU with Hardware Ray Tracing"
+          },
+          {
+            "label": "Neural Engine",
+            "value": "16-Core Neural Engine (35 Trillion Ops/sec)"
+          }
         ]
       },
-      camera: {
-        title: "Dual 12MP Camera System with Photonic Engine",
-        icon: "📷",
-        details: [
-          { label: "Primary Camera", value: "12MP Main (26mm, f/1.5, Sensor-shift OIS)" },
-          { label: "Ultra-Wide", value: "12MP Ultra-Wide (13mm, f/2.4, 120° FOV)" },
-          { label: "Video Recording", value: "4K Dolby Vision HDR at up to 60 fps" },
-          { label: "Action Mode", value: "Super-smooth handheld Action Mode Video" },
-          { label: "Front Camera", value: "12MP TrueDepth (f/1.9) with Autofocus" }
+      "camera": {
+        "title": "Pro 48MP 5x Tetraprism Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary Sensor",
+            "value": "48MP Main (24mm, f/1.78, 2nd-gen Sensor-Shift OIS)"
+          },
+          {
+            "label": "5x Telephoto",
+            "value": "12MP 5x Optical Zoom (120mm, f/2.8, 3D Sensor-Shift OIS)"
+          },
+          {
+            "label": "Ultra-Wide",
+            "value": "12MP Ultra-Wide (13mm, f/2.2, 120\u00b0 FOV)"
+          },
+          {
+            "label": "Video Capture",
+            "value": "4K ProRes at 60 fps with external USB-C drive Log"
+          }
         ]
       },
-      battery: {
-        title: "Battery & Fast Charge Test",
-        icon: "🔋",
-        details: [
-          { label: "OEM Capacity", value: "3,279 mAh Li-Ion (Certified >=85% Health)" },
-          { label: "Video Playback", value: "Up to 20 Hours Video Playback" },
-          { label: "Charging", value: "Fast Charge 50% in 30 mins (20W Adapter)" },
-          { label: "Wireless", value: "MagSafe 15W & Qi Wireless Charging 7.5W" }
+      "battery": {
+        "title": "All-Day Pro Battery Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "OEM Capacity",
+            "value": "4,422 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Video Playback",
+            "value": "Up to 29 Hours Local Playback (Best-in-class)"
+          },
+          {
+            "label": "Fast Charging",
+            "value": "Up to 50% in 30 mins via 20W Type-C"
+          },
+          {
+            "label": "Wireless",
+            "value": "MagSafe 15W & Qi2 Magnetic Charging"
+          }
         ]
       },
-      build: {
-        title: "Chassis & Dimensions",
-        icon: "📐",
-        details: [
-          { label: "Chassis", value: "Aerospace-grade Aluminum with Glass Back" },
-          { label: "Dimensions", value: "146.7 x 71.5 x 7.80 mm" },
-          { label: "Weight", value: "172 grams (6.07 oz)" },
-          { label: "Water Resistance", value: "IP68 (6 meters up to 30 mins)" }
+      "build": {
+        "title": "Grade 5 Aerospace Titanium",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Grade 5 Aerospace Titanium with internal Aluminum structure"
+          },
+          {
+            "label": "Dimensions",
+            "value": "159.9 x 76.7 x 8.25 mm \u2022 221 grams weight"
+          },
+          {
+            "label": "Water Resistance",
+            "value": "IP68 Rating (6 meters up to 30 mins)"
+          },
+          {
+            "label": "Action Button",
+            "value": "Custom Action Button with Haptic Feedback"
+          }
         ]
       },
-      connectivity: {
-        title: "Connectivity & Features",
-        icon: "📶",
-        details: [
-          { label: "5G Cellular", value: "5G NR Sub-6 GHz with 4x4 MIMO (Pan-India)" },
-          { label: "SIM Types", value: "Dual SIM (nano-SIM and eSIM) Unlocked" },
-          { label: "Wi-Fi & BT", value: "Wi-Fi 6 (802.11ax) + Bluetooth 5.3 + NFC" },
-          { label: "Safety", value: "Crash Detection & Emergency SOS via Satellite" }
+      "connectivity": {
+        "title": "5G, Wi-Fi 6E & USB-C 3.0",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz + mmWave (All Indian 5G Bands)"
+          },
+          {
+            "label": "Wi-Fi & Bluetooth",
+            "value": "Wi-Fi 6E (802.11ax) + Bluetooth 5.3"
+          },
+          {
+            "label": "Port Interface",
+            "value": "USB-C 3.0 (up to 10Gb/s transfer speed)"
+          }
         ]
       },
-      inclusions: {
-        title: "Certified Box Inclusions",
-        icon: "🛡️",
-        details: [
-          { label: "QA Certificate", value: "32-Point Comprehensive Lab Certificate" },
-          { label: "Warranty", value: "6 Months FoneZone Pan-India Warranty" },
-          { label: "Cable", value: "Apple OEM Fast Charge Lightning to USB-C Cable" }
+      "inclusions": {
+        "title": "FoneZone Certified Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty Cover",
+            "value": "6 Months Comprehensive Pan-India Warranty Card"
+          },
+          {
+            "label": "Cable",
+            "value": "Braided USB-C Fast Charge Cable"
+          },
+          {
+            "label": "Security Seal",
+            "value": "Tamper-Evident Anti-Swap Doorstep Security Pouch"
+          }
         ]
       }
     },
-    angles: {
-      0: "assets/turntable_frame_0.png",
-      45: "assets/turntable_frame_45.png",
-      90: "assets/turntable_frame_90.png",
-      135: "assets/turntable_frame_135.png",
-      180: "assets/turntable_frame_180.png",
-      225: "assets/turntable_frame_225.png",
-      270: "assets/turntable_frame_270.png",
-      315: "assets/turntable_frame_315.png",
-      front: "assets/turntable_frame_0.png",
-      back: "assets/turntable_frame_180.png",
-      right: "assets/turntable_frame_right.png",
-      left: "assets/turntable_frame_left.png",
-      top: "assets/turntable_frame_top.png",
-      bottom: "assets/turntable_frame_bottom.png"
+    "angles": {
+      "0": "assets/iphone15_promax.jpg",
+      "45": "assets/iphone15_promax.jpg",
+      "90": "assets/iphone15_promax.jpg",
+      "180": "assets/iphone15_promax.jpg",
+      "270": "assets/iphone15_promax.jpg"
     },
-    warranty: "6 Months Comprehensive FoneZone Warranty",
-    stock: "14 units available in Mumbai Hub"
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "6 units available in Delhi Hub"
   },
   {
-    id: "fz-s23ultra",
-    baseModelName: "Samsung Galaxy S23 Ultra 5G",
-    color: "Phantom Black",
-    name: "Samsung Galaxy S23 Ultra 5G 256GB Phantom Black",
-    category: "phone",
-    brand: "samsung",
-    badge: "200MP CAM",
-    image: "assets/samsung_s23_ultra.png",
-    msrp: 124999,
-    storageOptions: [
-      { size: "256GB", delta: 0, msrp: 124999 },
-      { size: "512GB", delta: 8000, msrp: 134999 },
-      { size: "1TB", delta: 18000, msrp: 154999 }
+    "id": "fz-ip15",
+    "baseModelName": "iPhone 15",
+    "color": "Pink",
+    "name": "iPhone 15 128GB Pink",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "DYNAMIC ISLAND",
+    "image": "assets/iphone15_pink.jpg",
+    "msrp": 79900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 79900
+      },
+      {
+        "size": "256GB",
+        "delta": 7000,
+        "msrp": 89900
+      },
+      {
+        "size": "512GB",
+        "delta": 15000,
+        "msrp": 109900
+      }
     ],
-    grades: {
-      "A": { price: 67999, label: "Grade A (Pristine)", battery: 97, cycles: 92, desc: "Flawless Dynamic AMOLED 2X, S-Pen included, zero scratches on lenses." },
-      "B": { price: 61999, label: "Grade B (Very Good)", battery: 90, cycles: 215, desc: "Minor hair scuffs on armor aluminum edge. Screen pristine." },
-      "C": { price: 54999, label: "Grade C (Value Deal)", battery: 84, cycles: 360, desc: "Everyday wear on back cover. 100x zoom and hardware 100% verified." }
+    "grades": {
+      "A": {
+        "price": 56999,
+        "label": "Grade A (Pristine)",
+        "battery": 97,
+        "cycles": 68,
+        "desc": "Immaculate condition. Color-infused back glass, Dynamic Island OLED, scratch-free."
+      },
+      "B": {
+        "price": 51999,
+        "label": "Grade B (Very Good)",
+        "battery": 92,
+        "cycles": 190,
+        "desc": "Pristine display. Subtle micro-scuff on aluminum frame corner."
+      },
+      "C": {
+        "price": 46999,
+        "label": "Grade C (Value Deal)",
+        "battery": 86,
+        "cycles": 310,
+        "desc": "Minor cosmetic frame marks. 100% verified 48MP main camera and hardware."
+      }
     },
-    specs: {
-      display: {
-        title: "Dynamic AMOLED 2X QHD+ Display",
-        icon: "📱",
-        details: [
-          { label: "Screen Size", value: "6.8-inch Edge QHD+ Dynamic AMOLED 2X" },
-          { label: "Resolution", value: "3088 x 1440 pixels at 500 ppi" },
-          { label: "Refresh Rate", value: "1-120Hz Super Smooth Adaptive ProMotion" },
-          { label: "Peak Brightness", value: "1,750 nits Outdoor Vision Booster" },
-          { label: "Protection", value: "Corning Gorilla Glass Victus 2 (Front & Back)" }
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.1-inch Super Retina XDR OLED Display"
+          },
+          {
+            "label": "Resolution",
+            "value": "2556 x 1179 pixels at 460 ppi"
+          },
+          {
+            "label": "Dynamic Island",
+            "value": "Interactive Dynamic Island Notifications"
+          },
+          {
+            "label": "Brightness",
+            "value": "2,000 nits Outdoor Peak / 1,600 nits HDR"
+          }
         ]
       },
-      processor: {
-        title: "Snapdragon 8 Gen 2 for Galaxy",
-        icon: "⚡",
-        details: [
-          { label: "Processor Chip", value: "Qualcomm Snapdragon 8 Gen 2 for Galaxy (4nm)" },
-          { label: "Clock Speed", value: "Overclocked 3.36 GHz Cortex-X3 Prime Core" },
-          { label: "GPU Architecture", value: "Adreno 740 GPU with Real-Time Ray Tracing" },
-          { label: "RAM Memory", value: "12GB Ultra-Fast LPDDR5X RAM" }
+      "processor": {
+        "title": "Apple Silicon A16 Bionic (4nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A16 Bionic 4nm SoC"
+          },
+          {
+            "label": "CPU",
+            "value": "6-Core CPU (2 High-Performance + 4 High-Efficiency)"
+          },
+          {
+            "label": "GPU",
+            "value": "5-Core GPU with 50% more memory bandwidth"
+          }
         ]
       },
-      camera: {
-        title: "200MP Quad Pro-Grade Camera + 100x Space Zoom",
-        icon: "📷",
-        details: [
-          { label: "Primary Sensor", value: "200MP ISOCELL HP2 (f/1.7, 24mm, Super Quad Pixel OIS)" },
-          { label: "Periscope Zoom", value: "10MP 10x Optical Periscope (f/4.9, OIS, 100x Space Zoom)" },
-          { label: "Telephoto 3x", value: "10MP 3x Optical Telephoto (f/2.4, OIS, Dual Pixel)" },
-          { label: "Ultra-Wide", value: "12MP Ultra-Wide (f/2.2, 120° FOV, Dual Pixel AF)" },
-          { label: "Video Recording", value: "8K Video at 30 fps & 4K at 60 fps Super Steady" },
-          { label: "Front Camera", value: "12MP Dual Pixel AF (f/2.2) with HDR10+" }
+      "camera": {
+        "title": "Advanced 48MP Dual-Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary Sensor",
+            "value": "48MP Main (26mm, f/1.6, Sensor-Shift OIS)"
+          },
+          {
+            "label": "2x Telephoto",
+            "value": "12MP 2x Optical Telephoto (via 48MP Sensor Crop)"
+          },
+          {
+            "label": "Ultra-Wide",
+            "value": "12MP Ultra-Wide (13mm, f/2.4, 120\u00b0 FOV)"
+          }
         ]
       },
-      battery: {
-        title: "5,000 mAh Monster Battery & 45W Fast Charging",
-        icon: "🔋",
-        details: [
-          { label: "OEM Capacity", value: "5,000 mAh High-Density Dual Cell Battery" },
-          { label: "Super Fast Charge", value: "45W Fast Charge 2.0 (65% in 30 mins)" },
-          { label: "Wireless Charge", value: "15W Fast Wireless Charging 2.0" },
-          { label: "Wireless PowerShare", value: "Reverse Wireless Charging for Galaxy Buds/Watch" }
+      "battery": {
+        "title": "All-Day Battery & USB-C",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "OEM Capacity",
+            "value": "3,349 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Video Playback",
+            "value": "Up to 20 Hours Local Video Playback"
+          },
+          {
+            "label": "Charging Port",
+            "value": "Universal USB-C Fast Charging Port"
+          }
         ]
       },
-      build: {
-        title: "Armor Aluminum & Embedded Bluetooth S-Pen",
-        icon: "📐",
-        details: [
-          { label: "Stylus Inbuilt", value: "Embedded S-Pen Stylus with 2.8ms Latency & Air Actions" },
-          { label: "Chassis Frame", value: "Armor Aluminum Frame with Tough Drop Resistance" },
-          { label: "Dimensions", value: "163.4 x 78.1 x 8.9 mm (6.43 x 3.07 x 0.35 in)" },
-          { label: "Total Weight", value: "233 grams (8.22 oz)" },
-          { label: "Water Resistance", value: "IP68 Water & Dust Resistant (1.5m up to 30 mins)" }
+      "build": {
+        "title": "Color-Infused Glass & Aluminum",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Back Material",
+            "value": "Industry-first Color-Infused Matte Glass Back"
+          },
+          {
+            "label": "Frame",
+            "value": "Aerospace-Grade Aluminum with Contoured Edges"
+          },
+          {
+            "label": "Dimensions",
+            "value": "147.6 x 71.6 x 7.80 mm \u2022 171 grams weight"
+          }
         ]
       },
-      connectivity: {
-        title: "5G Multi-Band & Biometrics",
-        icon: "📶",
-        details: [
-          { label: "5G Cellular", value: "5G Dual SIM (Physical SIM 1 + SIM 2 / eSIM)" },
-          { label: "Wi-Fi & Bluetooth", value: "Wi-Fi 6E (802.11ax) + Bluetooth 5.3 + UWB" },
-          { label: "Biometrics", value: "Qualcomm 3D Sonic Ultrasonic In-Display Fingerprint" },
-          { label: "Desktop Mode", value: "Samsung DeX Wireless Desktop Computing Support" }
+      "connectivity": {
+        "title": "5G & Second-Gen Ultra Wideband",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz (All Indian 5G Telecom Bands)"
+          },
+          {
+            "label": "UWB Chip",
+            "value": "2nd-Gen Ultra Wideband Chip for Precision Finding"
+          }
         ]
       },
-      inclusions: {
-        title: "Certified Box Inclusions",
-        icon: "🛡️",
-        details: [
-          { label: "Original S-Pen", value: "Official Samsung S-Pen Stylus Included inside device" },
-          { label: "QA Report", value: "32-Point Comprehensive Lab Diagnostic Certificate" },
-          { label: "Warranty", value: "6 Months FoneZone Pan-India Warranty Card" },
-          { label: "Charging Cable", value: "Type-C to Type-C 45W Fast Charging Cable" }
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Braided USB-C to USB-C Fast Charge Cable"
+          }
         ]
       }
     },
-    angles: {
-      0: "assets/samsung_s23_ultra.png",
-      45: "assets/samsung_s23_ultra.png",
-      90: "assets/samsung_s23_ultra.png",
-      180: "assets/samsung_s23_ultra.png",
-      270: "assets/samsung_s23_ultra.png"
+    "angles": {
+      "0": "assets/iphone15_pink.jpg",
+      "45": "assets/iphone15_pink.jpg",
+      "90": "assets/iphone15_pink.jpg",
+      "180": "assets/iphone15_pink.jpg",
+      "270": "assets/iphone15_pink.jpg"
     },
-    warranty: "6 Months Comprehensive FoneZone Warranty",
-    stock: "6 units available in Bangalore Hub"
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "9 units available in Mumbai Hub"
   },
   {
-    id: "fz-ip13",
-    baseModelName: "iPhone 13",
-    color: "Starlight",
-    name: "iPhone 13 128GB Starlight",
-    model3d: "assets/iphone14_model.glb",
-    category: "phone",
-    brand: "apple",
-    badge: "VALUE PICK",
-    image: "assets/iphone13_starlight.png",
-    msrp: 59900,
-    storageOptions: [
-      { size: "128GB", delta: 0, msrp: 59900 },
-      { size: "256GB", delta: 5000, msrp: 69900 },
-      { size: "512GB", delta: 12000, msrp: 89900 }
+    "id": "fz-ip14promax",
+    "baseModelName": "iPhone 14 Pro Max",
+    "color": "Gold",
+    "name": "iPhone 14 Pro Max 128GB Gold",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "GOLD FLAGSHIP",
+    "image": "assets/iphone14_pro_gold.jpg",
+    "msrp": 139900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 139900
+      },
+      {
+        "size": "256GB",
+        "delta": 7000,
+        "msrp": 149900
+      },
+      {
+        "size": "512GB",
+        "delta": 15000,
+        "msrp": 169900
+      },
+      {
+        "size": "1TB",
+        "delta": 23000,
+        "msrp": 189900
+      }
     ],
-    grades: {
-      "A": { price: 39999, label: "Grade A (Pristine)", battery: 95, cycles: 140, desc: "Original Ceramic Shield. Battery capacity 95%+. Flawless body." },
-      "B": { price: 34999, label: "Grade B (Very Good)", battery: 89, cycles: 245, desc: "Micro scuffs around charging port. Screen 100% spotless." },
-      "C": { price: 30999, label: "Grade C (Value Deal)", battery: 84, cycles: 410, desc: "Visible signs of handling. 100% genuine Apple components." }
+    "grades": {
+      "A": {
+        "price": 74999,
+        "label": "Grade A (Pristine)",
+        "battery": 97,
+        "cycles": 110,
+        "desc": "Immaculate Surgical Steel chassis, scratch-free Ceramic Shield display, like-new."
+      },
+      "B": {
+        "price": 68999,
+        "label": "Grade B (Very Good)",
+        "battery": 91,
+        "cycles": 230,
+        "desc": "Clean display. Light micro-scuffs on polished stainless steel side rim."
+      },
+      "C": {
+        "price": 62999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 370,
+        "desc": "Cosmetic frame marks. 100% verified 48MP Pro camera, Face ID, and display."
+      }
     },
-    specs: {
-      display: {
-        title: "Super Retina XDR OLED Display",
-        icon: "📱",
-        details: [
-          { label: "Screen Size", value: "6.1-inch Super Retina XDR OLED" },
-          { label: "Resolution", value: "2532 x 1170 pixels at 460 ppi" },
-          { label: "Peak Brightness", value: "1,200 nits HDR / 800 nits Typical" },
-          { label: "Glass Front", value: "Ceramic Shield Front Glass Cover" }
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED with Always-On",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.7-inch All-Screen OLED Display"
+          },
+          {
+            "label": "Resolution",
+            "value": "2796 x 1290 pixels at 460 ppi"
+          },
+          {
+            "label": "ProMotion",
+            "value": "120Hz ProMotion Adaptive Refresh Rate"
+          },
+          {
+            "label": "Brightness",
+            "value": "2,000 nits Outdoor Peak / 1,600 nits HDR"
+          }
         ]
       },
-      processor: {
-        title: "Apple Silicon A15 Bionic",
-        icon: "⚡",
-        details: [
-          { label: "Processor Chip", value: "Apple A15 Bionic (6-Core CPU)" },
-          { label: "Graphics", value: "4-Core Apple GPU with 16-Core Neural Engine" },
-          { label: "RAM Memory", value: "4GB LPDDR4X" }
+      "processor": {
+        "title": "Apple Silicon A16 Bionic (4nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A16 Bionic 4nm SoC"
+          },
+          {
+            "label": "CPU",
+            "value": "6-Core CPU (2 Performance + 4 Efficiency)"
+          },
+          {
+            "label": "GPU",
+            "value": "5-Core GPU with 50% more bandwidth"
+          }
         ]
       },
-      camera: {
-        title: "Dual 12MP Camera with Sensor-Shift OIS",
-        icon: "📷",
-        details: [
-          { label: "Primary Wide", value: "12MP Wide (f/1.6, Sensor-shift Optical Image Stabilization)" },
-          { label: "Ultra-Wide", value: "12MP Ultra-Wide (f/2.4, 120° Field of View)" },
-          { label: "Cinematic Mode", value: "Cinematic Mode 1080p at 30 fps with Rack Focus" },
-          { label: "Front Camera", value: "12MP TrueDepth (f/2.2) with Night Mode & Face ID" }
+      "camera": {
+        "title": "Pro 48MP Triple-Lens Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "48MP Main (24mm, f/1.78, 2nd-gen Sensor OIS)"
+          },
+          {
+            "label": "Telephoto",
+            "value": "12MP 3x Telephoto (77mm, f/2.8, OIS)"
+          },
+          {
+            "label": "Ultra-Wide",
+            "value": "12MP Ultra-Wide (13mm, f/2.2, 120\u00b0 FOV)"
+          },
+          {
+            "label": "Photonic Engine",
+            "value": "Apple Photonic Engine for Deep Color Fusion"
+          }
         ]
       },
-      battery: {
-        title: "Battery & MagSafe Fast Charge",
-        icon: "🔋",
-        details: [
-          { label: "OEM Capacity", value: "3,227 mAh (Tested >=85% Health Guaranteed)" },
-          { label: "Video Playback", value: "Up to 19 Hours Video Playback" },
-          { label: "Wired / Wireless", value: "20W Fast Charge + 15W MagSafe Magnetic" }
+      "battery": {
+        "title": "High Capacity Pro Max Battery",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "4,323 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Video Playback",
+            "value": "Up to 29 Hours Local Playback"
+          }
         ]
       },
-      build: {
-        title: "Chassis & Dimensions",
-        icon: "📐",
-        details: [
-          { label: "Material", value: "Aerospace-grade Aluminum with Glass Back" },
-          { label: "Dimensions", value: "146.7 x 71.5 x 7.65 mm • 174 grams" },
-          { label: "Water Resistance", value: "IP68 Rated (6 meters up to 30 mins)" }
+      "build": {
+        "title": "Surgical-Grade Stainless Steel",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Surgical-Grade Stainless Steel Frame"
+          },
+          {
+            "label": "Dimensions",
+            "value": "160.7 x 77.6 x 7.85 mm \u2022 240 grams weight"
+          }
         ]
       },
-      connectivity: {
-        title: "5G & Wireless",
-        icon: "📶",
-        details: [
-          { label: "Cellular", value: "5G Sub-6 GHz Dual SIM (nano-SIM + eSIM)" },
-          { label: "Wi-Fi & Bluetooth", value: "Wi-Fi 6 + Bluetooth 5.0 + NFC Reader" },
-          { label: "Biometrics", value: "Face ID TrueDepth Facial Biometrics" }
+      "connectivity": {
+        "title": "5G & Satellite Emergency SOS",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz + mmWave (All Indian Bands)"
+          },
+          {
+            "label": "SIM",
+            "value": "Dual SIM (Physical nano-SIM + eSIM)"
+          }
         ]
       },
-      inclusions: {
-        title: "Certified Box Inclusions",
-        icon: "🛡️",
-        details: [
-          { label: "QA Certificate", value: "32-Point Comprehensive Diagnostic Certificate" },
-          { label: "Warranty", value: "6 Months Comprehensive FoneZone Warranty" },
-          { label: "Cable", value: "Type-C to Lightning Fast Charge Cable" }
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Lightning to USB-C Cable"
+          }
         ]
       }
     },
-    angles: {
-      0: "assets/iphone13_starlight.png",
-      45: "assets/iphone13_starlight.png",
-      90: "assets/iphone13_starlight.png",
-      180: "assets/iphone13_starlight.png",
-      270: "assets/iphone13_starlight.png"
+    "angles": {
+      "0": "assets/iphone14_pro_gold.jpg",
+      "45": "assets/iphone14_pro_gold.jpg",
+      "90": "assets/iphone14_pro_gold.jpg",
+      "180": "assets/iphone14_pro_gold.jpg",
+      "270": "assets/iphone14_pro_gold.jpg"
     },
-    warranty: "6 Months Comprehensive FoneZone Warranty",
-    stock: "19 units available in Delhi Hub"
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "5 units available in Delhi Hub"
   },
   {
-    id: "fz-ip11",
-    baseModelName: "iPhone 11",
-    color: "Black",
-    name: "iPhone 11 64GB Black",
-    model3d: "assets/iphone14_model.glb",
-    category: "phone",
-    brand: "apple",
-    badge: "BUDGET HERO",
-    image: "assets/iphone14_front.png",
-    msrp: 49900,
-    storageOptions: [
-      { size: "64GB", delta: 0, msrp: 49900 },
-      { size: "128GB", delta: 3000, msrp: 54900 },
-      { size: "256GB", delta: 6000, msrp: 64900 }
+    "id": "fz-ip14pro",
+    "baseModelName": "iPhone 14 Pro",
+    "color": "Space Black",
+    "name": "iPhone 14 Pro 128GB Space Black",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "PRO DEAL",
+    "image": "assets/iphone14_pro_black.jpg",
+    "msrp": 129900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 129900
+      },
+      {
+        "size": "256GB",
+        "delta": 6000,
+        "msrp": 139900
+      },
+      {
+        "size": "512GB",
+        "delta": 14000,
+        "msrp": 159900
+      },
+      {
+        "size": "1TB",
+        "delta": 22000,
+        "msrp": 179900
+      }
     ],
-    grades: {
-      "A": { price: 19999, label: "Grade A (Pristine)", battery: 94, cycles: 165, desc: "Liquid Retina HD display. Zero scratches, pristine aluminum enclosure." },
-      "B": { price: 17499, label: "Grade B (Very Good)", battery: 89, cycles: 280, desc: "Light pocket rub on corners. Display 100% spotless. 100% genuine parts." },
-      "C": { price: 15499, label: "Grade C (Value Deal)", battery: 84, cycles: 390, desc: "Everyday cosmetic scuffs on frame. Dual cameras and Face ID 100% verified." }
+    "grades": {
+      "A": {
+        "price": 66999,
+        "label": "Grade A (Pristine)",
+        "battery": 96,
+        "cycles": 120,
+        "desc": "Flawless Space Black stainless steel body, pristine display, 100% genuine Apple OEM parts."
+      },
+      "B": {
+        "price": 61499,
+        "label": "Grade B (Very Good)",
+        "battery": 90,
+        "cycles": 240,
+        "desc": "Pristine display. Minor hairline micro-abrasion on steel rim."
+      },
+      "C": {
+        "price": 55999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 380,
+        "desc": "Cosmetic scuffs on corner edges. 100% hardware certified, maximum savings."
+      }
     },
-    specs: {
-      display: {
-        title: "Liquid Retina HD IPS Display",
-        icon: "📱",
-        details: [
-          { label: "Screen Size", value: "6.1-inch Liquid Retina HD IPS LCD" },
-          { label: "Resolution", value: "1792 x 828 pixels at 326 ppi" },
-          { label: "Brightness", value: "625 nits Max Brightness with TrueTone" }
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.1-inch OLED Display with Dynamic Island"
+          },
+          {
+            "label": "Resolution",
+            "value": "2556 x 1179 pixels at 460 ppi"
+          },
+          {
+            "label": "ProMotion",
+            "value": "120Hz ProMotion Adaptive Frequency"
+          }
         ]
       },
-      processor: {
-        title: "Apple Silicon A13 Bionic",
-        icon: "⚡",
-        details: [
-          { label: "Chipset", value: "Apple A13 Bionic (6-Core CPU + 4-Core GPU)" },
-          { label: "Neural Engine", value: "8-Core Neural Engine (Third Generation)" },
-          { label: "RAM Memory", value: "4GB LPDDR4X" }
+      "processor": {
+        "title": "Apple Silicon A16 Bionic (4nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A16 Bionic 4nm SoC"
+          },
+          {
+            "label": "CPU",
+            "value": "6-Core CPU with 2 performance cores"
+          }
         ]
       },
-      camera: {
-        title: "Dual 12MP Ultra-Wide & Wide System",
-        icon: "📷",
-        details: [
-          { label: "Main Camera", value: "12MP Wide (f/1.8, OIS, 100% Focus Pixels)" },
-          { label: "Ultra-Wide", value: "12MP Ultra-Wide (f/2.4, 120° Field of View)" },
-          { label: "Video Recording", value: "4K Video at up to 60 fps with Stereo Sound" },
-          { label: "Front Camera", value: "12MP TrueDepth (f/2.2) 4K Selfie Video" }
+      "camera": {
+        "title": "Pro 48MP Photonic Camera",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "48MP Main (24mm, f/1.78, 2nd-gen Sensor OIS)"
+          },
+          {
+            "label": "Telephoto",
+            "value": "12MP 3x Telephoto (77mm, f/2.8, OIS)"
+          },
+          {
+            "label": "Ultra-Wide",
+            "value": "12MP Ultra-Wide (13mm, f/2.2)"
+          }
         ]
       },
-      battery: {
-        title: "Battery & Fast Charge",
-        icon: "🔋",
-        details: [
-          { label: "Capacity", value: "3,110 mAh Li-Ion (Guaranteed >=85% Health)" },
-          { label: "Video Playback", value: "Up to 17 Hours Video Playback" },
-          { label: "Charging", value: "18W Fast Charging Capable + Qi Wireless" }
+      "battery": {
+        "title": "Pro Battery Life Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "3,200 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Video Playback",
+            "value": "Up to 23 Hours Local Video"
+          }
         ]
       },
-      build: {
-        title: "Chassis & Materials",
-        icon: "📐",
-        details: [
-          { label: "Build", value: "Aerospace Aluminum with Dual-Ion Glass" },
-          { label: "Dimensions", value: "150.9 x 75.7 x 8.3 mm • 194 grams" },
-          { label: "Water Resistance", value: "IP68 (2 meters up to 30 mins)" }
+      "build": {
+        "title": "Surgical Stainless Steel",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Surgical-Grade Stainless Steel & Textured Glass"
+          },
+          {
+            "label": "Dimensions",
+            "value": "147.5 x 71.5 x 7.85 mm \u2022 206 grams weight"
+          }
         ]
       },
-      connectivity: {
-        title: "Cellular & Wireless",
-        icon: "📶",
-        details: [
-          { label: "Cellular", value: "4G LTE Advanced with 2x2 MIMO Dual SIM (nano + eSIM)" },
-          { label: "Wi-Fi & BT", value: "Wi-Fi 6 + Bluetooth 5.0 + NFC Express Cards" },
-          { label: "Biometrics", value: "Face ID TrueDepth Security Camera" }
+      "connectivity": {
+        "title": "5G, Wi-Fi 6 & Bluetooth 5.3",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz (All Indian 5G Bands)"
+          }
         ]
       },
-      inclusions: {
-        title: "Certified Box Inclusions",
-        icon: "🛡️",
-        details: [
-          { label: "QA Certificate", value: "32-Point Diagnostic Inspection Certificate" },
-          { label: "Warranty", value: "6 Months FoneZone Pan-India Warranty" },
-          { label: "Cable", value: "USB Fast Charge Cable" }
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Lightning to USB-C Cable"
+          }
         ]
       }
     },
-    angles: {
-      0: "assets/iphone14_front.png",
-      45: "assets/iphone14_blue.png",
-      90: "assets/iphone14_side.png",
-      180: "assets/iphone14_back.png",
-      270: "assets/iphone14_side.png"
+    "angles": {
+      "0": "assets/iphone14_pro_black.jpg",
+      "45": "assets/iphone14_pro_black.jpg",
+      "90": "assets/iphone14_pro_black.jpg",
+      "180": "assets/iphone14_pro_black.jpg",
+      "270": "assets/iphone14_pro_black.jpg"
     },
-    warranty: "6 Months Comprehensive FoneZone Warranty",
-    stock: "12 units available in Delhi Hub"
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "7 units available in Bangalore Hub"
   },
   {
-    id: "fz-macbook-m2",
-    baseModelName: "MacBook Air 13.6-inch M2",
-    color: "Midnight",
-    name: "MacBook Air 13.6-inch M2 (8GB / 256GB SSD) Midnight",
-    category: "macbook",
-    brand: "apple",
-    badge: "APPLE SILICON",
-    image: "assets/macbookair_midnight.png",
-    msrp: 114900,
-    storageOptions: [
-      { size: "256GB SSD", delta: 0, msrp: 114900 },
-      { size: "512GB SSD", delta: 16000, msrp: 134900 },
-      { size: "1TB SSD", delta: 32000, msrp: 154900 }
+    "id": "fz-ip14",
+    "baseModelName": "iPhone 14",
+    "color": "Blue",
+    "name": "iPhone 14 128GB Blue",
+    "model3d": "assets/iphone14_model.glb",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "BESTSELLER",
+    "image": "assets/iphone14_blue.png",
+    "msrp": 69900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 69900
+      },
+      {
+        "size": "256GB",
+        "delta": 6000,
+        "msrp": 79900
+      },
+      {
+        "size": "512GB",
+        "delta": 14000,
+        "msrp": 99900
+      }
     ],
-    grades: {
-      "A": { price: 78999, label: "Grade A (Pristine)", battery: 100, cycles: 24, desc: "Zero palm-rest glossing, Liquid Retina display 100% clean, MagSafe 3." },
-      "B": { price: 71999, label: "Grade B (Very Good)", battery: 94, cycles: 120, desc: "Faint anodization wear on corner edge. Keyboard pristine." },
-      "C": { price: 64999, label: "Grade C (Value Deal)", battery: 88, cycles: 210, desc: "Normal top lid scuffing. M2 benchmarked at 100% factory performance." }
+    "grades": {
+      "A": {
+        "price": 48999,
+        "label": "Grade A (Pristine)",
+        "battery": 96,
+        "cycles": 112,
+        "desc": "Scratch-free glass, like-new aerospace aluminum body. 100% battery performance."
+      },
+      "B": {
+        "price": 43999,
+        "label": "Grade B (Very Good)",
+        "battery": 91,
+        "cycles": 220,
+        "desc": "Light brush marks on side rails. Clean Super Retina display."
+      },
+      "C": {
+        "price": 38999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 390,
+        "desc": "Minor cosmetic corner abrasions. Hardware and cameras tested 100%."
+      }
     },
-    specs: {
-      display: {
-        title: "13.6-inch Liquid Retina Display",
-        icon: "💻",
-        details: [
-          { label: "Display Size", value: "13.6-inch (diagonal) LED-backlit IPS Liquid Retina" },
-          { label: "Native Resolution", value: "2560 x 1664 pixels at 224 ppi (1 Billion Colors)" },
-          { label: "Brightness", value: "500 nits Peak Brightness with Wide Color (P3) & TrueTone" }
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.1-inch Super Retina XDR OLED"
+          },
+          {
+            "label": "Resolution",
+            "value": "2532 x 1170 pixels at 460 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "60Hz Smooth Retina Interface"
+          },
+          {
+            "label": "Peak Brightness",
+            "value": "1,200 nits HDR / 800 nits Typical"
+          },
+          {
+            "label": "Protection",
+            "value": "Ceramic Shield Front \u2022 Aerospace Aluminum"
+          }
         ]
       },
-      processor: {
-        title: "Apple Silicon M2 Chip",
-        icon: "⚡",
-        details: [
-          { label: "Processor SoC", value: "Apple M2 (8-Core CPU: 4 Performance + 4 Efficiency)" },
-          { label: "Graphics GPU", value: "8-Core GPU with Hardware-accelerated ProRes" },
-          { label: "Neural Engine", value: "16-Core Neural Engine (15.8 Trillion Ops/sec)" },
-          { label: "Memory", value: "8GB Unified Memory with 100GB/s Memory Bandwidth" }
+      "processor": {
+        "title": "Apple Silicon A15 Bionic",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A15 Bionic (5-Core GPU Edition)"
+          },
+          {
+            "label": "CPU Architecture",
+            "value": "6-Core CPU (2 Performance + 4 Efficiency)"
+          },
+          {
+            "label": "Neural Engine",
+            "value": "16-Core Neural Engine for computational photo"
+          }
         ]
       },
-      battery: {
-        title: "All-Day 18-Hour Battery & MagSafe 3",
-        icon: "🔋",
-        details: [
-          { label: "Battery Unit", value: "52.6-watt-hour Lithium-Polymer Battery" },
-          { label: "Battery Runtime", value: "Up to 18 Hours Apple TV App / 15 Hours Wireless Web" },
-          { label: "Fast Charging", value: "Fast-charge capable with 67W USB-C Power Adapter" },
-          { label: "MagSafe", value: "MagSafe 3 Dedicated Magnetic Breakaway Port" }
+      "camera": {
+        "title": "Advanced 12MP Dual-Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "12MP Main (26mm, f/1.5, Sensor-Shift OIS)"
+          },
+          {
+            "label": "Ultra-Wide",
+            "value": "12MP Ultra-Wide (13mm, f/2.4, 120\u00b0 FOV)"
+          },
+          {
+            "label": "Video Features",
+            "value": "Action Mode Stabilization + 4K Cinematic Mode"
+          }
         ]
       },
-      build: {
-        title: "11mm Thin Unibody & Fanless Silence",
-        icon: "📐",
-        details: [
-          { label: "Form Factor", value: "100% Recycled Aluminum Unibody (Fanless Silent Design)" },
-          { label: "Dimensions", value: "30.41 x 21.50 x 1.13 cm (0.44 in thin)" },
-          { label: "Weight", value: "1.24 kg (2.7 pounds) Ultra-Portable" },
-          { label: "Keyboard", value: "Backlit Magic Keyboard with Full-height Function Keys & Touch ID" }
+      "battery": {
+        "title": "Long-Lasting All-Day Battery QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "OEM Capacity",
+            "value": "3,279 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Video Playback",
+            "value": "Up to 20 Hours Local Video Playback"
+          }
         ]
       },
-      connectivity: {
-        title: "Ports & High-Speed Audio",
-        icon: "📶",
-        details: [
-          { label: "Thunderbolt", value: "2x Thunderbolt / USB 4 Ports (up to 40Gb/s transfer)" },
-          { label: "Headphone Jack", value: "3.5 mm Headphone Jack with Advanced High-Impedance Support" },
-          { label: "Audio System", value: "Four-Speaker Sound System with Spatial Audio & Dolby Atmos" },
-          { label: "Camera", value: "1080p FaceTime HD Camera with Advanced ISP" }
+      "build": {
+        "title": "Aerospace Aluminum Chassis",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis Material",
+            "value": "Aerospace-Grade Aluminum with Ceramic Shield"
+          },
+          {
+            "label": "Dimensions",
+            "value": "146.7 x 71.5 x 7.80 mm \u2022 172 grams"
+          }
         ]
       },
-      inclusions: {
-        title: "Certified Box Inclusions",
-        icon: "🛡️",
-        details: [
-          { label: "Power Adapter", value: "Official Apple Dual Port USB-C Compact Power Adapter" },
-          { label: "MagSafe Cable", value: "Color-Matched 2m Braided USB-C to MagSafe 3 Cable" },
-          { label: "Warranty Cover", value: "6 Months Comprehensive FoneZone Pan-India Warranty" }
+      "connectivity": {
+        "title": "5G, eSIM & Wi-Fi 6",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz (All Indian 5G Bands)"
+          },
+          {
+            "label": "SIM Types",
+            "value": "Dual SIM (nano-SIM + eSIM) Unlocked"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "FoneZone Certified Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty Cover",
+            "value": "6 Months Comprehensive Pan-India Warranty Card"
+          },
+          {
+            "label": "Charging Cable",
+            "value": "Fast Lightning to Type-C Cable"
+          }
         ]
       }
     },
-    angles: {
-      0: "assets/macbookair_midnight.png",
-      45: "assets/macbookair_midnight.png",
-      90: "assets/macbookair_midnight.png",
-      180: "assets/macbookair_midnight.png",
-      270: "assets/macbookair_midnight.png"
+    "angles": {
+      "0": "assets/iphone14_front.png",
+      "45": "assets/iphone14_blue.png",
+      "90": "assets/iphone14_side.png",
+      "180": "assets/iphone14_back.png",
+      "270": "assets/iphone14_side.png"
     },
-    warranty: "6 Months Comprehensive FoneZone Warranty",
-    stock: "5 units available in Dubai Hub"
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "14 units available in Delhi Hub"
   },
   {
-    id: "fz-ipad-10",
-    baseModelName: "iPad 10th Gen 10.9-inch Wi-Fi",
-    color: "Blue",
-    name: "iPad 10th Gen 10.9-inch Wi-Fi 64GB Blue",
-    category: "ipad",
-    brand: "apple",
-    badge: "ALL-SCREEN",
-    image: "assets/ipad_10th_gen.png",
-    msrp: 44900,
-    storageOptions: [
-      { size: "64GB", delta: 0, msrp: 44900 },
-      { size: "256GB", delta: 9000, msrp: 59900 }
+    "id": "fz-ip13promax",
+    "baseModelName": "iPhone 13 Pro Max",
+    "color": "Graphite",
+    "name": "iPhone 13 Pro Max 128GB Graphite",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "120HZ PRO",
+    "image": "assets/iphone13_promax.jpg",
+    "msrp": 129900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 129900
+      },
+      {
+        "size": "256GB",
+        "delta": 6000,
+        "msrp": 139900
+      },
+      {
+        "size": "512GB",
+        "delta": 13000,
+        "msrp": 159900
+      },
+      {
+        "size": "1TB",
+        "delta": 20000,
+        "msrp": 179900
+      }
     ],
-    grades: {
-      "A": { price: 32999, label: "Grade A (Pristine)", battery: 99, cycles: 38, desc: "Liquid Retina display with True Tone. USB-C port tested." },
-      "B": { price: 28999, label: "Grade B (Very Good)", battery: 92, cycles: 140, desc: "Light hairline marks on aluminum back. Display 100% flawless." },
-      "C": { price: 24999, label: "Grade C (Value Deal)", battery: 86, cycles: 290, desc: "Corner paint scuffs. Hardware and stereo speakers 100% verified." }
+    "grades": {
+      "A": {
+        "price": 58999,
+        "label": "Grade A (Pristine)",
+        "battery": 95,
+        "cycles": 140,
+        "desc": "Flawless condition. Legendary battery life king, 120Hz ProMotion display, pristine steel."
+      },
+      "B": {
+        "price": 53999,
+        "label": "Grade B (Very Good)",
+        "battery": 89,
+        "cycles": 270,
+        "desc": "Pristine display. Light pocket scuff marks on stainless steel corners."
+      },
+      "C": {
+        "price": 47999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 410,
+        "desc": "Cosmetic bezel wear. 100% verified hardware and 3x Pro camera system."
+      }
     },
-    specs: {
-      display: {
-        title: "10.9-inch All-Screen Liquid Retina Display",
-        icon: "📱",
-        details: [
-          { label: "Display Size", value: "10.9-inch (diagonal) LED-backlit Multi-Touch with IPS" },
-          { label: "Resolution", value: "2360 x 1640 pixels at 264 ppi" },
-          { label: "Brightness", value: "500 nits Peak Brightness with TrueTone & sRGB" },
-          { label: "Pencil Support", value: "Apple Pencil (USB-C & 1st generation with adapter)" }
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR with ProMotion",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.7-inch OLED Display with ProMotion"
+          },
+          {
+            "label": "Resolution",
+            "value": "2778 x 1284 pixels at 458 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "120Hz Adaptive ProMotion"
+          }
         ]
       },
-      processor: {
-        title: "Apple Silicon A14 Bionic",
-        icon: "⚡",
-        details: [
-          { label: "Processor Chip", value: "Apple A14 Bionic (6-Core CPU + 4-Core GPU)" },
-          { label: "Neural Engine", value: "16-Core Neural Engine (Faster On-Device Machine Learning)" },
-          { label: "RAM Memory", value: "4GB High-Speed LPDDR4X" }
+      "processor": {
+        "title": "Apple Silicon A15 Bionic (5nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A15 Bionic (5-Core GPU)"
+          }
         ]
       },
-      camera: {
-        title: "Landscape 12MP Ultra-Wide with Center Stage",
-        icon: "📷",
-        details: [
-          { label: "Rear Camera", value: "12MP Wide Camera (f/1.8, 4K Video at up to 60 fps)" },
-          { label: "Front Camera", value: "Landscape 12MP Ultra-Wide (f/2.4, 122° Field of View)" },
-          { label: "Center Stage", value: "Auto-pans & zooms during video calls to keep you centered" }
+      "camera": {
+        "title": "Pro 12MP 3x Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "12MP Main (f/1.5, Sensor-Shift OIS)"
+          },
+          {
+            "label": "Telephoto",
+            "value": "12MP 3x Telephoto (f/2.8, OIS)"
+          },
+          {
+            "label": "Macro",
+            "value": "Ultra-Wide Macro Photography down to 2cm"
+          }
         ]
       },
-      battery: {
-        title: "Battery & Fast USB-C Charging",
-        icon: "🔋",
-        details: [
-          { label: "Battery Unit", value: "28.6-watt-hour Rechargeable Lithium-Polymer" },
-          { label: "Runtime", value: "Up to 10 Hours Surfing the Web on Wi-Fi or Watching Video" },
-          { label: "Interface", value: "USB-C Port for Universal Fast Charging & Peripherals" }
+      "battery": {
+        "title": "Legendary Battery Champion",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "4,352 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Video Playback",
+            "value": "Up to 28 Hours Local Playback"
+          }
         ]
       },
-      build: {
-        title: "Chassis & Modern All-Screen Design",
-        icon: "📐",
-        details: [
-          { label: "Material", value: "100% Recycled Aluminum Enclosure" },
-          { label: "Dimensions", value: "248.6 x 179.5 x 7.0 mm (0.28 in thin)" },
-          { label: "Total Weight", value: "477 grams (1.05 pounds)" },
-          { label: "Audio", value: "Landscape Stereo Speakers with Dual Microphones" }
+      "build": {
+        "title": "Surgical Stainless Steel",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Surgical Stainless Steel \u2022 240 grams weight"
+          }
         ]
       },
-      connectivity: {
-        title: "Wireless & Touch ID",
-        icon: "📶",
-        details: [
-          { label: "Wi-Fi", value: "Wi-Fi 6 (802.11ax) with 2x2 MIMO Dual Band" },
-          { label: "Bluetooth", value: "Bluetooth 5.2 Low Energy" },
-          { label: "Biometrics", value: "Touch ID Sensor Built Directly into Top Button" }
+      "connectivity": {
+        "title": "5G & Wi-Fi 6",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz (All Indian 5G Telecom Bands)"
+          }
         ]
       },
-      inclusions: {
-        title: "Certified Box Inclusions",
-        icon: "🛡️",
-        details: [
-          { label: "QA Certificate", value: "32-Point Comprehensive Lab Diagnostic Certificate" },
-          { label: "Charger", value: "20W USB-C Official Power Adapter" },
-          { label: "Cable", value: "Braided USB-C Charge Cable (1m)" },
-          { label: "Warranty", value: "6 Months Comprehensive FoneZone Pan-India Warranty" }
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Lightning to USB-C Cable"
+          }
         ]
       }
     },
-    angles: {
-      0: "assets/ipad_10th_gen.png",
-      45: "assets/ipad_10th_gen.png",
-      90: "assets/ipad_10th_gen.png",
-      180: "assets/ipad_10th_gen.png",
-      270: "assets/ipad_10th_gen.png"
+    "angles": {
+      "0": "assets/iphone13_promax.jpg",
+      "45": "assets/iphone13_promax.jpg",
+      "90": "assets/iphone13_promax.jpg",
+      "180": "assets/iphone13_promax.jpg",
+      "270": "assets/iphone13_promax.jpg"
     },
-    warranty: "6 Months Comprehensive FoneZone Warranty",
-    stock: "9 units available in Delhi Hub"
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "8 units available in Mumbai Hub"
   },
   {
-    id: "fz-watch-ultra",
-    baseModelName: "Apple Watch Ultra 49mm",
-    color: "Titanium",
-    name: "Apple Watch Ultra 49mm Titanium",
-    category: "watch",
-    brand: "apple",
-    badge: "ADVENTURE",
-    image: "assets/applewatch_ultra.png",
-    msrp: 89900,
-    storageOptions: [
-      { size: "32GB (GPS+Cellular)", delta: 0, msrp: 89900 }
+    "id": "fz-ip13",
+    "baseModelName": "iPhone 13",
+    "color": "Starlight",
+    "name": "iPhone 13 128GB Starlight",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "VALUE KING",
+    "image": "assets/iphone13_starlight.png",
+    "msrp": 59900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 59900
+      },
+      {
+        "size": "256GB",
+        "delta": 5000,
+        "msrp": 69900
+      },
+      {
+        "size": "512GB",
+        "delta": 12000,
+        "msrp": 89900
+      }
     ],
-    grades: {
-      "A": { price: 44999, label: "Grade A (Pristine)", battery: 99, cycles: 42, desc: "Aerospace Titanium case, scratch-free Sapphire crystal face." },
-      "B": { price: 39499, label: "Grade B (Very Good)", battery: 93, cycles: 130, desc: "Light brush mark on titanium bezel rim. Clean display." },
-      "C": { price: 34999, label: "Grade C (Value Deal)", battery: 87, cycles: 260, desc: "Visible outdoor adventure scuffs. Cellular and Action button 100%." }
+    "grades": {
+      "A": {
+        "price": 39999,
+        "label": "Grade A (Pristine)",
+        "battery": 94,
+        "cycles": 154,
+        "desc": "Flawless glass and aluminum casing. 100% verified camera and TrueTone."
+      },
+      "B": {
+        "price": 35999,
+        "label": "Grade B (Very Good)",
+        "battery": 89,
+        "cycles": 260,
+        "desc": "Clean display. Minor faint hairline scuff near charging port."
+      },
+      "C": {
+        "price": 31999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 420,
+        "desc": "Cosmetic frame marks. 100% functional, exceptional value."
+      }
     },
-    specs: {
-      display: {
-        title: "49mm Always-On Retina LTPO OLED",
-        icon: "⌚",
-        details: [
-          { label: "Case Size", value: "49mm Aerospace Titanium Case with Raised Bezel" },
-          { label: "Resolution", value: "410 x 502 pixels (1,185 sq mm Display Area)" },
-          { label: "Peak Brightness", value: "Up to 2,000 nits (2x Brighter than Series 8)" },
-          { label: "Face Glass", value: "Flat Sapphire Crystal Face with Edge Protection" }
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.1-inch Super Retina XDR OLED"
+          },
+          {
+            "label": "Resolution",
+            "value": "2532 x 1170 pixels at 460 ppi"
+          }
         ]
       },
-      processor: {
-        title: "S8 SiP Dual-Core 64-bit Architecture",
-        icon: "⚡",
-        details: [
-          { label: "Processor Chip", value: "Apple S8 System in Package (SiP) with 64-bit Dual-Core" },
-          { label: "Wireless Chips", value: "W3 Apple Wireless Chip + U1 Ultra Wideband (UWB)" },
-          { label: "Storage", value: "32GB Internal Flash Storage Capacity" }
+      "processor": {
+        "title": "Apple Silicon A15 Bionic",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A15 Bionic (4-Core GPU)"
+          }
         ]
       },
-      battery: {
-        title: "Multi-Day 36-Hour Expedition Battery",
-        icon: "🔋",
-        details: [
-          { label: "Battery Unit", value: "542 mAh Lithium-Ion Rechargeable Battery" },
-          { label: "Normal Use", value: "Up to 36 Hours Normal Use on Active Cellular" },
-          { label: "Low Power Mode", value: "Up to 60-72 Hours in Low Power Expedition Mode" },
-          { label: "Charging", value: "Fast Inductive Magnetic USB-C Charging" }
+      "camera": {
+        "title": "Diagonal 12MP Dual-Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "12MP Main (f/1.6, Sensor-Shift OIS)"
+          },
+          {
+            "label": "Cinematic Mode",
+            "value": "1080p at 30 fps Cinematic Shallow Depth"
+          }
         ]
       },
-      build: {
-        title: "Mil-STD 810H & 100m Water / Dive Certified",
-        icon: "📐",
-        details: [
-          { label: "Chassis", value: "Aerospace Grade 5 Titanium with Raised Bezel Protection" },
-          { label: "Dimensions", value: "49 x 44 x 14.4 mm • 61.3 grams weight" },
-          { label: "Water Resistance", value: "100m Water Resistance (WR100 & EN13319 Recreational Dive to 40m)" },
-          { label: "Special Hardware", value: "Customizable Action Button + 86-decibel Dual-Speaker Emergency Siren" }
+      "battery": {
+        "title": "Battery & Power Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "3,227 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Video Playback",
+            "value": "Up to 19 Hours Local Playback"
+          }
         ]
       },
-      connectivity: {
-        title: "Precision Dual-Frequency GPS & 4G LTE",
-        icon: "📶",
-        details: [
-          { label: "Cellular", value: "Standalone 4G LTE and UMTS Cellular (No iPhone needed)" },
-          { label: "Precision GPS", value: "Precision Dual-Frequency GPS (L1 and L5) with Offline Compass" },
-          { label: "Sensors", value: "Blood Oxygen, ECG, Temperature Sensor, Depth Gauge & Water Temp" }
+      "build": {
+        "title": "Aerospace Aluminum Chassis",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Dimensions",
+            "value": "146.7 x 71.5 x 7.65 mm \u2022 174 grams"
+          }
         ]
       },
-      inclusions: {
-        title: "Certified Box Inclusions",
-        icon: "🛡️",
-        details: [
-          { label: "QA Certificate", value: "32-Point Comprehensive Lab Diagnostic Certificate" },
-          { label: "Fast Charger", value: "Official Apple Watch Magnetic Fast Charger to USB-C Cable" },
-          { label: "Band", value: "Certified Ocean / Alpine Loop Band" },
-          { label: "Warranty", value: "6 Months Comprehensive FoneZone Pan-India Warranty" }
+      "connectivity": {
+        "title": "5G & Dual SIM",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz (All Indian 5G Bands)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Lightning to USB-C Cable"
+          }
         ]
       }
     },
-    angles: {
-      0: "assets/applewatch_ultra.png",
-      45: "assets/applewatch_ultra.png",
-      90: "assets/applewatch_ultra.png",
-      180: "assets/applewatch_ultra.png",
-      270: "assets/applewatch_ultra.png"
+    "angles": {
+      "0": "assets/iphone13_starlight.png",
+      "45": "assets/iphone13_starlight.png",
+      "90": "assets/iphone13_starlight.png",
+      "180": "assets/iphone13_starlight.png",
+      "270": "assets/iphone13_starlight.png"
     },
-    warranty: "6 Months Comprehensive FoneZone Warranty",
-    stock: "7 units available in Bangalore Hub"
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "18 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-ip12promax",
+    "baseModelName": "iPhone 12 Pro Max",
+    "color": "Silver",
+    "name": "iPhone 12 Pro Max 128GB Silver",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "VALUE PRO",
+    "image": "assets/iphone12_promax.jpg",
+    "msrp": 119900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 119900
+      },
+      {
+        "size": "256GB",
+        "delta": 5000,
+        "msrp": 129900
+      },
+      {
+        "size": "512GB",
+        "delta": 11000,
+        "msrp": 149900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 44999,
+        "label": "Grade A (Pristine)",
+        "battery": 93,
+        "cycles": 180,
+        "desc": "Immaculate silver stainless steel, flawless Ceramic Shield OLED, LiDAR tested."
+      },
+      "B": {
+        "price": 39999,
+        "label": "Grade B (Very Good)",
+        "battery": 88,
+        "cycles": 310,
+        "desc": "Clean display. Minor hairline scuffs on polished steel rim."
+      },
+      "C": {
+        "price": 35499,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 450,
+        "desc": "Cosmetic frame wear. 100% genuine Apple hardware certified."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.7-inch All-Screen OLED Display"
+          },
+          {
+            "label": "Resolution",
+            "value": "2778 x 1284 pixels at 458 ppi"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon A14 Bionic",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A14 Bionic 5nm SoC"
+          }
+        ]
+      },
+      "camera": {
+        "title": "Pro 12MP Camera System with LiDAR",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "12MP Main (f/1.6, Sensor-Shift OIS)"
+          },
+          {
+            "label": "Telephoto",
+            "value": "12MP 2.5x Telephoto (65mm, f/2.2)"
+          },
+          {
+            "label": "LiDAR",
+            "value": "LiDAR Scanner for Night Mode Portraits"
+          }
+        ]
+      },
+      "battery": {
+        "title": "Pro Max Battery Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "3,687 mAh Li-Ion (Guaranteed >=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Surgical Stainless Steel",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Surgical-Grade Stainless Steel \u2022 228 grams"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "First 5G iPhone Generation",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz (All Indian 5G Bands)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Lightning to USB-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/iphone12_promax.jpg",
+      "45": "assets/iphone12_promax.jpg",
+      "90": "assets/iphone12_promax.jpg",
+      "180": "assets/iphone12_promax.jpg",
+      "270": "assets/iphone12_promax.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "6 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-ip11promax",
+    "baseModelName": "iPhone 11 Pro Max",
+    "color": "Gold",
+    "name": "iPhone 11 Pro Max 64GB Gold",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "SUPER VALUE",
+    "image": "assets/iphone11_promax.jpg",
+    "msrp": 109900,
+    "storageOptions": [
+      {
+        "size": "64GB",
+        "delta": 0,
+        "msrp": 109900
+      },
+      {
+        "size": "256GB",
+        "delta": 4000,
+        "msrp": 121900
+      },
+      {
+        "size": "512GB",
+        "delta": 8000,
+        "msrp": 139900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 32999,
+        "label": "Grade A (Pristine)",
+        "battery": 92,
+        "cycles": 210,
+        "desc": "Pristine Super Retina XDR OLED, scratch-free matte back glass, beautiful gold rim."
+      },
+      "B": {
+        "price": 28999,
+        "label": "Grade B (Very Good)",
+        "battery": 87,
+        "cycles": 340,
+        "desc": "Clean display. Light micro-scuffs on polished steel sides."
+      },
+      "C": {
+        "price": 24999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 490,
+        "desc": "Cosmetic frame marks. Triple 12MP cameras and Face ID certified 100%."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "Super Retina XDR OLED Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.5-inch All-Screen OLED Display"
+          },
+          {
+            "label": "Resolution",
+            "value": "2688 x 1242 pixels at 458 ppi"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon A13 Bionic",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A13 Bionic with 3rd-Gen Neural Engine"
+          }
+        ]
+      },
+      "camera": {
+        "title": "Pro Triple 12MP Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Cameras",
+            "value": "Ultra Wide (f/2.4), Wide (f/1.8), Telephoto (f/2.0)"
+          },
+          {
+            "label": "Night Mode",
+            "value": "Automatic Night Mode low-light photography"
+          }
+        ]
+      },
+      "battery": {
+        "title": "All-Day Battery Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "3,969 mAh Li-Ion (Guaranteed >=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Textured Matte Glass & Steel",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Stainless Steel & Matte Glass \u2022 226 grams"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "4G LTE Advanced & Wi-Fi 6",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "Gigabit-class LTE with 4x4 MIMO"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Lightning to USB-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/iphone11_promax.jpg",
+      "45": "assets/iphone11_promax.jpg",
+      "90": "assets/iphone11_promax.jpg",
+      "180": "assets/iphone11_promax.jpg",
+      "270": "assets/iphone11_promax.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "9 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-ip11",
+    "baseModelName": "iPhone 11",
+    "color": "White",
+    "name": "iPhone 11 64GB White",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "STUDENT PICK",
+    "image": "assets/iphone14_front.png",
+    "msrp": 49900,
+    "storageOptions": [
+      {
+        "size": "64GB",
+        "delta": 0,
+        "msrp": 49900
+      },
+      {
+        "size": "128GB",
+        "delta": 3000,
+        "msrp": 54900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 22999,
+        "label": "Grade A (Pristine)",
+        "battery": 91,
+        "cycles": 230,
+        "desc": "Immaculate Liquid Retina screen, zero chassis scuffs, 100% genuine parts."
+      },
+      "B": {
+        "price": 19999,
+        "label": "Grade B (Very Good)",
+        "battery": 87,
+        "cycles": 360,
+        "desc": "Clean display. Light micro-scratches on aluminum edges."
+      },
+      "C": {
+        "price": 16999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 510,
+        "desc": "Visible cosmetic scratches on back/bezel. 100% verified hardware."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "Liquid Retina HD Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.1-inch Liquid Retina HD LCD"
+          },
+          {
+            "label": "Resolution",
+            "value": "1792 x 828 pixels at 326 ppi"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon A13 Bionic",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A13 Bionic 7nm SoC"
+          }
+        ]
+      },
+      "camera": {
+        "title": "Dual 12MP Ultra-Wide & Wide",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Cameras",
+            "value": "12MP Wide (f/1.8) + 12MP Ultra Wide (f/2.4)"
+          }
+        ]
+      },
+      "battery": {
+        "title": "All-Day Battery Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "3,110 mAh Li-Ion (Guaranteed >=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Aerospace Aluminum & Glass",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Dimensions",
+            "value": "150.9 x 75.7 x 8.3 mm \u2022 194 grams"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "4G LTE & Wi-Fi 6",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "Gigabit-class 4G LTE with 2x2 MIMO"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Lightning to USB Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/iphone14_front.png",
+      "45": "assets/iphone14_front.png",
+      "90": "assets/iphone14_front.png",
+      "180": "assets/iphone14_front.png",
+      "270": "assets/iphone14_front.png"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "22 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-ipxr",
+    "baseModelName": "iPhone XR",
+    "color": "White",
+    "name": "iPhone XR 64GB White",
+    "category": "phone",
+    "brand": "apple",
+    "badge": "BUDGET KING",
+    "image": "assets/iphone_xr_white.jpg",
+    "msrp": 47900,
+    "storageOptions": [
+      {
+        "size": "64GB",
+        "delta": 0,
+        "msrp": 47900
+      },
+      {
+        "size": "128GB",
+        "delta": 2500,
+        "msrp": 52900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 14999,
+        "label": "Grade A (Pristine)",
+        "battery": 90,
+        "cycles": 240,
+        "desc": "Pristine display, scratch-free glass back, 100% Face ID & TrueTone certified."
+      },
+      "B": {
+        "price": 12999,
+        "label": "Grade B (Very Good)",
+        "battery": 86,
+        "cycles": 390,
+        "desc": "Clean display. Light pocket scuff marks on aluminum frame."
+      },
+      "C": {
+        "price": 10999,
+        "label": "Grade C (Value Deal)",
+        "battery": 84,
+        "cycles": 550,
+        "desc": "Cosmetic bezel scratches. Hardware 100% functional, entry-level Apple price."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "Liquid Retina HD Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.1-inch Liquid Retina All-Screen LCD"
+          },
+          {
+            "label": "Resolution",
+            "value": "1792 x 828 pixels at 326 ppi"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon A12 Bionic",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A12 Bionic 7nm SoC"
+          }
+        ]
+      },
+      "camera": {
+        "title": "Single 12MP Wide Camera",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Camera",
+            "value": "12MP Wide (f/1.8) with Smart HDR"
+          }
+        ]
+      },
+      "battery": {
+        "title": "Long Battery Life",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "2,942 mAh Li-Ion (Guaranteed >=84% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "7000 Series Aluminum",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Aerospace-Grade 7000 Series Aluminum"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "4G LTE & Face ID",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Biometrics",
+            "value": "Face ID TrueDepth Facial Recognition"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Lightning to USB Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/iphone_xr_white.jpg",
+      "45": "assets/iphone_xr_white.jpg",
+      "90": "assets/iphone_xr_white.jpg",
+      "180": "assets/iphone_xr_white.jpg",
+      "270": "assets/iphone_xr_white.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "16 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-s23ultra",
+    "baseModelName": "Galaxy S23 Ultra",
+    "color": "Green",
+    "name": "Samsung Galaxy S23 Ultra 256GB Green",
+    "category": "phone",
+    "brand": "samsung",
+    "badge": "200MP CAM",
+    "image": "assets/samsung_s23_ultra.png",
+    "msrp": 124999,
+    "storageOptions": [
+      {
+        "size": "256GB",
+        "delta": 0,
+        "msrp": 124999
+      },
+      {
+        "size": "512GB",
+        "delta": 8000,
+        "msrp": 139999
+      },
+      {
+        "size": "1TB",
+        "delta": 18000,
+        "msrp": 159999
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 67999,
+        "label": "Grade A (Pristine)",
+        "battery": 97,
+        "cycles": 92,
+        "desc": "Immaculate Dynamic AMOLED 2X, flawless Armor Aluminum frame, integrated S-Pen tested."
+      },
+      "B": {
+        "price": 61999,
+        "label": "Grade B (Very Good)",
+        "battery": 92,
+        "cycles": 210,
+        "desc": "Pristine display. Subtle micro-scuff on bottom bezel near S-Pen slot."
+      },
+      "C": {
+        "price": 55999,
+        "label": "Grade C (Value Deal)",
+        "battery": 86,
+        "cycles": 360,
+        "desc": "Cosmetic frame marks. 100% genuine Samsung hardware & 200MP sensor tested."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "Dynamic AMOLED 2X Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.8-inch Edge QHD+ Dynamic AMOLED 2X"
+          },
+          {
+            "label": "Resolution",
+            "value": "3088 x 1440 pixels (500 ppi)"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "120Hz Super Smooth Adaptive (1-120Hz)"
+          },
+          {
+            "label": "Peak Brightness",
+            "value": "1,750 nits Outdoor Peak"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Snapdragon 8 Gen 2 for Galaxy",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Snapdragon 8 Gen 2 Overclocked (3.36 GHz)"
+          },
+          {
+            "label": "GPU",
+            "value": "Adreno 740 with Hardware Ray Tracing"
+          }
+        ]
+      },
+      "camera": {
+        "title": "200MP Quad Telephoto Camera",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary Sensor",
+            "value": "200MP Wide Sensor (f/1.7, OIS)"
+          },
+          {
+            "label": "100x Space Zoom",
+            "value": "10MP Periscope (10x Optical, 100x Digital)"
+          },
+          {
+            "label": "Telephoto",
+            "value": "10MP 3x Optical Telephoto (f/2.4, OIS)"
+          }
+        ]
+      },
+      "battery": {
+        "title": "5,000 mAh All-Day Power Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "5,000 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Fast Charging",
+            "value": "45W Super Fast Charging 2.0"
+          }
+        ]
+      },
+      "build": {
+        "title": "Armor Aluminum & Gorilla Glass Victus 2",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Glass",
+            "value": "Corning Gorilla Glass Victus 2 Front & Back"
+          },
+          {
+            "label": "Integrated S-Pen",
+            "value": "Embedded S-Pen with 2.8ms Latency"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "5G & Wi-Fi 6E",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Dual SIM (nano-SIM + eSIM)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Samsung 45W Compatible USB-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/samsung_s23_ultra.png",
+      "45": "assets/samsung_s23_ultra.png",
+      "90": "assets/samsung_s23_ultra.png",
+      "180": "assets/samsung_s23_ultra.png",
+      "270": "assets/samsung_s23_ultra.png"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "11 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-s22ultra",
+    "baseModelName": "Galaxy S22 Ultra 5G",
+    "color": "Burgundy",
+    "name": "Samsung Galaxy S22 Ultra 5G 256GB Burgundy",
+    "category": "phone",
+    "brand": "samsung",
+    "badge": "S-PEN FLAGSHIP",
+    "image": "assets/samsung_s22_ultra.jpg",
+    "msrp": 109999,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 109999
+      },
+      {
+        "size": "256GB",
+        "delta": 5000,
+        "msrp": 118999
+      },
+      {
+        "size": "512GB",
+        "delta": 11000,
+        "msrp": 131999
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 46999,
+        "label": "Grade A (Pristine)",
+        "battery": 94,
+        "cycles": 160,
+        "desc": "Immaculate Burgundy finish, scratch-free 120Hz Dynamic AMOLED 2X, S-Pen tested."
+      },
+      "B": {
+        "price": 41999,
+        "label": "Grade B (Very Good)",
+        "battery": 90,
+        "cycles": 280,
+        "desc": "Pristine display. Minor hairline scuff on aluminum bezel."
+      },
+      "C": {
+        "price": 37499,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 430,
+        "desc": "Cosmetic frame marks. 100% verified 108MP camera, 100x zoom, hardware certified."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "Dynamic AMOLED 2X QHD+",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.8-inch Edge QHD+ AMOLED 2X"
+          },
+          {
+            "label": "Resolution",
+            "value": "3088 x 1440 pixels at 500 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "120Hz Adaptive Refresh (1-120Hz)"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Qualcomm Snapdragon 8 Gen 1 (4nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Snapdragon 8 Gen 1 4nm SoC"
+          }
+        ]
+      },
+      "camera": {
+        "title": "108MP Quad Camera with 100x Space Zoom",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "108MP Wide (f/1.8, OIS)"
+          },
+          {
+            "label": "Periscope",
+            "value": "10MP 10x Optical Zoom, up to 100x Space Zoom"
+          }
+        ]
+      },
+      "battery": {
+        "title": "5,000 mAh High Capacity Battery",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "5,000 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Charging",
+            "value": "45W Fast Charging Support"
+          }
+        ]
+      },
+      "build": {
+        "title": "Armor Aluminum & Integrated S-Pen",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "S-Pen",
+            "value": "Integrated S-Pen with Bluetooth gestures"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "5G Dual SIM & Wi-Fi 6E",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz (All Indian Bands)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Type-C to Type-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/samsung_s22_ultra.jpg",
+      "45": "assets/samsung_s22_ultra.jpg",
+      "90": "assets/samsung_s22_ultra.jpg",
+      "180": "assets/samsung_s22_ultra.jpg",
+      "270": "assets/samsung_s22_ultra.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "7 units available in Bangalore Hub"
+  },
+  {
+    "id": "fz-s21ultra",
+    "baseModelName": "Galaxy S21 Ultra 5G",
+    "color": "Phantom Brown",
+    "name": "Samsung Galaxy S21 Ultra 5G 256GB Phantom Brown",
+    "category": "phone",
+    "brand": "samsung",
+    "badge": "100X ZOOM",
+    "image": "assets/samsung_s21_ultra.jpg",
+    "msrp": 105999,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 105999
+      },
+      {
+        "size": "256GB",
+        "delta": 4000,
+        "msrp": 114999
+      },
+      {
+        "size": "512GB",
+        "delta": 9000,
+        "msrp": 126999
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 34999,
+        "label": "Grade A (Pristine)",
+        "battery": 92,
+        "cycles": 220,
+        "desc": "Immaculate Phantom Brown matte finish, 120Hz WQHD+ AMOLED, 100x zoom certified."
+      },
+      "B": {
+        "price": 30999,
+        "label": "Grade B (Very Good)",
+        "battery": 88,
+        "cycles": 350,
+        "desc": "Pristine display. Light pocket scuff marks on contour-cut camera housing."
+      },
+      "C": {
+        "price": 26999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 480,
+        "desc": "Cosmetic frame marks. 100% functional, top-tier flagship at mid-range price."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "Dynamic AMOLED 2X WQHD+",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.8-inch WQHD+ Dynamic AMOLED 2X"
+          },
+          {
+            "label": "Resolution",
+            "value": "3200 x 1440 pixels at 515 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "120Hz Adaptive Frequency"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Flagship 5nm Octa-Core SoC",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "5nm Octa-Core Processor with 12GB RAM"
+          }
+        ]
+      },
+      "camera": {
+        "title": "108MP Quad Camera with Dual Telephoto",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "108MP Main Sensor (f/1.8, OIS)"
+          },
+          {
+            "label": "Dual Telephoto",
+            "value": "3x and 10x Dual Optical Zoom Lenses"
+          }
+        ]
+      },
+      "battery": {
+        "title": "5,000 mAh Battery Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "5,000 mAh Li-Ion (Guaranteed >=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Contour-Cut Camera Design",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Gorilla Glass Victus & Aluminum frame \u2022 227 grams"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "5G & Wi-Fi 6E",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "5G Sub-6GHz (All Indian Telecom Bands)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Type-C to Type-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/samsung_s21_ultra.jpg",
+      "45": "assets/samsung_s21_ultra.jpg",
+      "90": "assets/samsung_s21_ultra.jpg",
+      "180": "assets/samsung_s21_ultra.jpg",
+      "270": "assets/samsung_s21_ultra.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "9 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-note20ultra",
+    "baseModelName": "Galaxy Note 20 Ultra 5G",
+    "color": "Mystic White",
+    "name": "Samsung Galaxy Note 20 Ultra 5G 256GB Mystic White",
+    "category": "phone",
+    "brand": "samsung",
+    "badge": "NOTE ICON",
+    "image": "assets/samsung_note20_ultra.png",
+    "msrp": 104999,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 104999
+      },
+      {
+        "size": "256GB",
+        "delta": 4000,
+        "msrp": 112999
+      },
+      {
+        "size": "512GB",
+        "delta": 8000,
+        "msrp": 124999
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 29999,
+        "label": "Grade A (Pristine)",
+        "battery": 91,
+        "cycles": 230,
+        "desc": "Immaculate condition. Iconic square design, 9ms S-Pen latency, pristine 120Hz display."
+      },
+      "B": {
+        "price": 25999,
+        "label": "Grade B (Very Good)",
+        "battery": 87,
+        "cycles": 370,
+        "desc": "Clean display. Minor hairline scuff on stainless frame corners."
+      },
+      "C": {
+        "price": 22499,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 520,
+        "desc": "Cosmetic frame marks. 100% verified hardware and S-Pen certified."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "Dynamic AMOLED 2X Display",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.9-inch Edge Dynamic AMOLED 2X"
+          },
+          {
+            "label": "Resolution",
+            "value": "3088 x 1440 pixels at 496 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "120Hz Smooth Display"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Snapdragon 865+ / Exynos 990",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Flagship 7nm+ Octa-Core Processor"
+          }
+        ]
+      },
+      "camera": {
+        "title": "108MP Pro Camera System",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "108MP Main Sensor (f/1.8, OIS) with Laser AF"
+          },
+          {
+            "label": "Space Zoom",
+            "value": "50x Space Zoom (5x Optical Zoom)"
+          }
+        ]
+      },
+      "battery": {
+        "title": "4,500 mAh All-Day Battery",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "4,500 mAh Li-Ion (Guaranteed >=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Gorilla Glass Victus & S-Pen",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "S-Pen",
+            "value": "Built-in 9ms latency S-Pen with Air Actions"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "5G & DeX Wireless Desktop",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Samsung DeX",
+            "value": "Wireless Samsung DeX PC desktop mode"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Type-C to Type-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/samsung_note20_ultra.png",
+      "45": "assets/samsung_note20_ultra.png",
+      "90": "assets/samsung_note20_ultra.png",
+      "180": "assets/samsung_note20_ultra.png",
+      "270": "assets/samsung_note20_ultra.png"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "8 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-zfold3",
+    "baseModelName": "Galaxy Z Fold 3 5G",
+    "color": "Phantom Black",
+    "name": "Samsung Galaxy Z Fold 3 5G 256GB Phantom Black",
+    "category": "phone",
+    "brand": "samsung",
+    "badge": "FOLDABLE",
+    "image": "assets/samsung_zfold3.jpg",
+    "msrp": 149999,
+    "storageOptions": [
+      {
+        "size": "256GB",
+        "delta": 0,
+        "msrp": 149999
+      },
+      {
+        "size": "512GB",
+        "delta": 7000,
+        "msrp": 164999
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 52999,
+        "label": "Grade A (Pristine)",
+        "battery": 94,
+        "cycles": 140,
+        "desc": "Immaculate folding hinge mechanism, pristine inner screen protector, zero crease wear."
+      },
+      "B": {
+        "price": 46999,
+        "label": "Grade B (Very Good)",
+        "battery": 89,
+        "cycles": 260,
+        "desc": "Clean inner display. Minor micro-scuff on outer hinge aluminum."
+      },
+      "C": {
+        "price": 41499,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 390,
+        "desc": "Light cosmetic casing wear. Hinge and folding screen certified 100%."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "7.6\" Foldable AMOLED + 6.2\" Cover",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Main Screen",
+            "value": "7.6-inch Foldable Dynamic AMOLED 2X 120Hz"
+          },
+          {
+            "label": "Cover Screen",
+            "value": "6.2-inch Dynamic AMOLED 2X 120Hz"
+          },
+          {
+            "label": "Hinge QA",
+            "value": "Tested across 200,000 fold cycles by FoneZone Lab"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Qualcomm Snapdragon 888 5G",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Snapdragon 888 5nm Flagship SoC with 12GB RAM"
+          }
+        ]
+      },
+      "camera": {
+        "title": "Triple 12MP System with UDC",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Rear Cameras",
+            "value": "12MP Wide + 12MP Telephoto + 12MP Ultra-Wide"
+          },
+          {
+            "label": "Under Display Cam",
+            "value": "4MP Under-Display Camera on folding screen"
+          }
+        ]
+      },
+      "battery": {
+        "title": "Dual-Cell 4,400 mAh Battery",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "4,400 mAh Dual-Cell Li-Ion (Guaranteed >=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Armor Aluminum & IPX8 Water Resistant",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Water Resistance",
+            "value": "IPX8 Certified (Water resistant up to 1.5m for 30m)"
+          },
+          {
+            "label": "Weight",
+            "value": "271 grams premium tablet-phone hybrid"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "5G & S-Pen Fold Edition",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "S-Pen Support",
+            "value": "Supports S-Pen Fold Edition & S-Pen Pro"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Hinge & Display Diagnostic Report"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Fast Type-C to Type-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/samsung_zfold3.jpg",
+      "45": "assets/samsung_zfold3.jpg",
+      "90": "assets/samsung_zfold3.jpg",
+      "180": "assets/samsung_zfold3.jpg",
+      "270": "assets/samsung_zfold3.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "4 units available in Mumbai Hub"
+  },
+  {
+    "id": "fz-oneplus7pro",
+    "baseModelName": "OnePlus 7 Pro",
+    "color": "Nebula Blue",
+    "name": "OnePlus 7 Pro 256GB Nebula Blue",
+    "category": "phone",
+    "brand": "oneplus",
+    "badge": "POP-UP CAM",
+    "image": "assets/oneplus_7pro.jpg",
+    "msrp": 52999,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 48999
+      },
+      {
+        "size": "256GB",
+        "delta": 2500,
+        "msrp": 52999
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 18999,
+        "label": "Grade A (Pristine)",
+        "battery": 92,
+        "cycles": 190,
+        "desc": "Immaculate bezelless 90Hz Fluid AMOLED, motorized pop-up camera tested 100%, zero scuffs."
+      },
+      "B": {
+        "price": 16499,
+        "label": "Grade B (Very Good)",
+        "battery": 87,
+        "cycles": 320,
+        "desc": "Pristine display. Minor hairline scuff on blue aluminum edge."
+      },
+      "C": {
+        "price": 13999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 460,
+        "desc": "Light cosmetic frame marks. 100% hardware certified, true full-screen display."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "90Hz Fluid AMOLED Bezelless",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.67-inch All-Screen Fluid AMOLED (No Notch/Hole)"
+          },
+          {
+            "label": "Resolution",
+            "value": "3120 x 1440 pixels at 516 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "90Hz Smooth Fluid Display"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Qualcomm Snapdragon 855 (7nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Snapdragon 855 Octa-Core with 8GB RAM"
+          }
+        ]
+      },
+      "camera": {
+        "title": "48MP Triple Camera + Pop-Up Selfie",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "48MP Sony IMX586 (f/1.6, OIS)"
+          },
+          {
+            "label": "Pop-Up Selfie",
+            "value": "16MP Motorized Elevating Front Camera (Tested 300,000 lifts)"
+          }
+        ]
+      },
+      "battery": {
+        "title": "4,000 mAh with Warp Charge 30",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "4,000 mAh Li-Ion (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Warp Charge",
+            "value": "Warp Charge 30 (5V/6A) Fast Charging"
+          }
+        ]
+      },
+      "build": {
+        "title": "Curved Glass & Aluminum",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Corning Gorilla Glass 5 & Aluminum \u2022 206 grams"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "Dual SIM & Dolby Atmos",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Audio",
+            "value": "Dual Stereo Speakers with Dolby Atmos"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Motorized Camera & Board Report"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Original Warp Charge USB-A to Type-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/oneplus_7pro.jpg",
+      "45": "assets/oneplus_7pro.jpg",
+      "90": "assets/oneplus_7pro.jpg",
+      "180": "assets/oneplus_7pro.jpg",
+      "270": "assets/oneplus_7pro.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "10 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-pixel6pro",
+    "baseModelName": "Google Pixel 6 Pro",
+    "color": "Stormy Black",
+    "name": "Google Pixel 6 Pro 128GB Stormy Black",
+    "category": "phone",
+    "brand": "google",
+    "badge": "AI CAMERA",
+    "image": "assets/google_pixel.jpg",
+    "msrp": 79999,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 79999
+      },
+      {
+        "size": "256GB",
+        "delta": 3500,
+        "msrp": 86999
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 26999,
+        "label": "Grade A (Pristine)",
+        "battery": 93,
+        "cycles": 170,
+        "desc": "Immaculate condition. Google Tensor AI chip, legendary computational photography, 120Hz LTPO."
+      },
+      "B": {
+        "price": 23999,
+        "label": "Grade B (Very Good)",
+        "battery": 88,
+        "cycles": 290,
+        "desc": "Pristine display. Light micro-scuffs on iconic camera visor strip."
+      },
+      "C": {
+        "price": 20499,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 440,
+        "desc": "Cosmetic casing scuffs. 100% verified camera bar, Magic Eraser, and Android OS."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "6.71\" LTPO AMOLED 120Hz",
+        "icon": "\ud83d\udcf1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "6.71-inch LTPO AMOLED Display"
+          },
+          {
+            "label": "Resolution",
+            "value": "3120 x 1440 pixels at 512 ppi"
+          },
+          {
+            "label": "Refresh Rate",
+            "value": "120Hz Smooth Adaptive Frequency"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Google Tensor (5nm) AI Engine",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Google Tensor SoC with Titan M2 Security"
+          },
+          {
+            "label": "AI Features",
+            "value": "On-device speech recognition & Magic Eraser"
+          }
+        ]
+      },
+      "camera": {
+        "title": "50MP Primary + 48MP 4x Telephoto",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Primary",
+            "value": "50MP Octa-PD Quad Bayer (f/1.85, OIS)"
+          },
+          {
+            "label": "Telephoto",
+            "value": "48MP 4x Optical Zoom, up to 20x Super Res Zoom"
+          }
+        ]
+      },
+      "battery": {
+        "title": "5,003 mAh Beyond 24-Hour Battery",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "5,003 mAh Li-Ion (Guaranteed >=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Iconic Camera Bar & Polished Alloy",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Corning Gorilla Glass Victus & Aluminum \u2022 210 grams"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "5G & Pure Pixel Android",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Software",
+            "value": "Clean Stock Google Android with Day-One Updates"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          },
+          {
+            "label": "Cable",
+            "value": "Original USB-C to USB-C Cable"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/google_pixel.jpg",
+      "45": "assets/google_pixel.jpg",
+      "90": "assets/google_pixel.jpg",
+      "180": "assets/google_pixel.jpg",
+      "270": "assets/google_pixel.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "7 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-macbook-m2",
+    "baseModelName": "MacBook Air 13.6\" M2",
+    "color": "Midnight",
+    "name": "MacBook Air 13.6\" M2 256GB Midnight",
+    "category": "macbook",
+    "brand": "apple",
+    "badge": "APPLE SILICON",
+    "image": "assets/macbookair_midnight.png",
+    "msrp": 114900,
+    "storageOptions": [
+      {
+        "size": "256GB SSD",
+        "delta": 0,
+        "msrp": 114900
+      },
+      {
+        "size": "512GB SSD",
+        "delta": 14000,
+        "msrp": 134900
+      },
+      {
+        "size": "1TB SSD",
+        "delta": 28000,
+        "msrp": 154900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 68999,
+        "label": "Grade A (Pristine)",
+        "battery": 99,
+        "cycles": 28,
+        "desc": "Like-new anodized Midnight aluminum body, zero keyboard shine, pristine Liquid Retina display."
+      },
+      "B": {
+        "price": 62999,
+        "label": "Grade B (Very Good)",
+        "battery": 94,
+        "cycles": 92,
+        "desc": "Clean display. Minor faint hairline edge wear on aluminum corner."
+      },
+      "C": {
+        "price": 56999,
+        "label": "Grade C (Value Deal)",
+        "battery": 88,
+        "cycles": 210,
+        "desc": "Visible cosmetic scuffs on base. 100% genuine Apple hardware and MagSafe certified."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "13.6-inch Liquid Retina Display",
+        "icon": "\ud83d\udcbb",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "13.6-inch LED-backlit Liquid Retina Display"
+          },
+          {
+            "label": "Resolution",
+            "value": "2560 x 1664 native resolution at 224 ppi"
+          },
+          {
+            "label": "Brightness",
+            "value": "500 nits Brightness with Wide Color (P3)"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon M2 (5nm Gen 2)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple M2 8-Core CPU (4 Performance + 4 Efficiency)"
+          },
+          {
+            "label": "GPU",
+            "value": "8-Core GPU with Hardware-Accelerated ProRes"
+          },
+          {
+            "label": "Memory",
+            "value": "8GB Unified Memory (100GB/s Memory Bandwidth)"
+          }
+        ]
+      },
+      "battery": {
+        "title": "18-Hour Battery & MagSafe 3",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Battery Unit",
+            "value": "52.6-watt-hour Lithium-Polymer Battery"
+          },
+          {
+            "label": "Battery Life",
+            "value": "Up to 18 Hours Apple TV App Movie Playback"
+          },
+          {
+            "label": "MagSafe 3",
+            "value": "MagSafe 3 Magnetic Fast Charging Port"
+          }
+        ]
+      },
+      "build": {
+        "title": "All-Aluminum Unibody & Silent Fanless",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Thickness",
+            "value": "11.3 mm (0.44 inch) Ultra-Thin Uniform Design"
+          },
+          {
+            "label": "Weight",
+            "value": "1.24 kg (2.7 pounds) Featherweight"
+          },
+          {
+            "label": "Cooling",
+            "value": "100% Silent Fanless Thermal Architecture"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "Thunderbolt / USB 4 & Wi-Fi 6",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Ports",
+            "value": "2x Thunderbolt / USB 4 Ports + 3.5mm Headphone Jack"
+          },
+          {
+            "label": "Touch ID",
+            "value": "Magic Keyboard with Touch ID Fingerprint Sensor"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Motherboard & Battery Lab QA Certificate"
+          },
+          {
+            "label": "Charger",
+            "value": "Apple 30W USB-C Power Adapter + Braided MagSafe Cable"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/macbookair_midnight.png",
+      "45": "assets/macbookair_midnight.png",
+      "90": "assets/macbookair_midnight.png",
+      "180": "assets/macbookair_midnight.png",
+      "270": "assets/macbookair_midnight.png"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "5 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-macbook-pro16",
+    "baseModelName": "MacBook Pro 16\" M1 Max",
+    "color": "Silver",
+    "name": "MacBook Pro 16\" M1 Max 512GB Silver",
+    "category": "macbook",
+    "brand": "apple",
+    "badge": "STUDIO BEAST",
+    "image": "assets/macbook_pro_16.png",
+    "msrp": 259900,
+    "storageOptions": [
+      {
+        "size": "512GB SSD",
+        "delta": 0,
+        "msrp": 259900
+      },
+      {
+        "size": "1TB SSD",
+        "delta": 18000,
+        "msrp": 289900
+      },
+      {
+        "size": "2TB SSD",
+        "delta": 35000,
+        "msrp": 329900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 119999,
+        "label": "Grade A (Pristine)",
+        "battery": 98,
+        "cycles": 34,
+        "desc": "Immaculate condition. 120Hz Mini-LED Liquid Retina XDR, 32-core GPU, 32GB Unified RAM, zero scuffs."
+      },
+      "B": {
+        "price": 108999,
+        "label": "Grade B (Very Good)",
+        "battery": 93,
+        "cycles": 110,
+        "desc": "Pristine display. Subtle micro-scuff on bottom aluminum base plate."
+      },
+      "C": {
+        "price": 97999,
+        "label": "Grade C (Value Deal)",
+        "battery": 87,
+        "cycles": 240,
+        "desc": "Cosmetic base marks. 100% verified 10-core CPU, 32-core GPU, and Liquid Retina XDR screen."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "16.2\" Liquid Retina XDR Mini-LED",
+        "icon": "\ud83d\udcbb",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "16.2-inch Liquid Retina XDR Mini-LED (3456 x 2234)"
+          },
+          {
+            "label": "Brightness",
+            "value": "1,000 nits Sustained Full-Screen, 1,600 nits Peak HDR"
+          },
+          {
+            "label": "ProMotion",
+            "value": "120Hz Adaptive ProMotion Refresh Rate"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon M1 Max (10-Core / 32-Core)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple M1 Max (10-Core CPU: 8 Perf + 2 Eff)"
+          },
+          {
+            "label": "GPU Architecture",
+            "value": "32-Core GPU (Up to 400GB/s Memory Bandwidth)"
+          },
+          {
+            "label": "Unified Memory",
+            "value": "32GB Unified RAM (Handles multi-stream 8K ProRes)"
+          }
+        ]
+      },
+      "battery": {
+        "title": "100-Watt-Hour Battery & 140W Fast Charge",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "100Wh Battery (Longest battery life in a Mac notebook)"
+          },
+          {
+            "label": "Playback",
+            "value": "Up to 21 Hours Apple TV App Video Playback"
+          }
+        ]
+      },
+      "build": {
+        "title": "Heavy-Duty Studio Chassis",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Material",
+            "value": "Solid 100% Recycled Aluminum Unibody \u2022 2.15 kg"
+          },
+          {
+            "label": "Audio",
+            "value": "High-Fidelity Six-Speaker Sound System with Force-Cancelling Woofers"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "HDMI, SDXC, MagSafe 3 & 3x Thunderbolt 4",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Pro Ports",
+            "value": "SDXC Card Slot + HDMI Port + 3x Thunderbolt 4 (USB-C)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Charger",
+            "value": "Original 140W USB-C Power Adapter + Braided MagSafe 3 Cable"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/macbook_pro_16.png",
+      "45": "assets/macbook_pro_16.png",
+      "90": "assets/macbook_pro_16.png",
+      "180": "assets/macbook_pro_16.png",
+      "270": "assets/macbook_pro_16.png"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "3 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-ipad-10",
+    "baseModelName": "iPad 10th Gen",
+    "color": "Blue",
+    "name": "iPad 10th Gen 64GB Blue",
+    "category": "ipad",
+    "brand": "apple",
+    "badge": "EDUCATION",
+    "image": "assets/ipad_10th_gen.png",
+    "msrp": 39900,
+    "storageOptions": [
+      {
+        "size": "64GB",
+        "delta": 0,
+        "msrp": 39900
+      },
+      {
+        "size": "256GB",
+        "delta": 8000,
+        "msrp": 54900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 27999,
+        "label": "Grade A (Pristine)",
+        "battery": 98,
+        "cycles": 32,
+        "desc": "Immaculate 10.9-inch Liquid Retina screen, scratch-free anodized blue casing."
+      },
+      "B": {
+        "price": 24499,
+        "label": "Grade B (Very Good)",
+        "battery": 92,
+        "cycles": 110,
+        "desc": "Pristine display. Subtle micro-scuff on aluminum bezel edge."
+      },
+      "C": {
+        "price": 21999,
+        "label": "Grade C (Value Deal)",
+        "battery": 86,
+        "cycles": 240,
+        "desc": "Cosmetic frame marks. 100% verified display, Touch ID, and USB-C port."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "10.9-inch Liquid Retina Display",
+        "icon": "\ud83d\udcd1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "10.9-inch (diagonal) LED backlit Multi-Touch display"
+          },
+          {
+            "label": "Resolution",
+            "value": "2360 x 1640 pixels at 264 ppi"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon A14 Bionic",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "A14 Bionic chip with 6-core CPU and 4-core GPU"
+          }
+        ]
+      },
+      "camera": {
+        "title": "Landscape 12MP Ultra-Wide Camera",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Front Camera",
+            "value": "Landscape 12MP Ultra Wide with Center Stage"
+          },
+          {
+            "label": "Back Camera",
+            "value": "12MP Wide back camera with 4K video capture"
+          }
+        ]
+      },
+      "battery": {
+        "title": "All-Day Battery Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Battery Capacity",
+            "value": "28.6-watt-hour rechargeable lithium-polymer battery"
+          },
+          {
+            "label": "Usage",
+            "value": "Up to 10 Hours of surfing the web on Wi-Fi"
+          }
+        ]
+      },
+      "build": {
+        "title": "All-Screen Design & USB-C",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Dimensions",
+            "value": "248.6 x 179.5 x 7.0 mm \u2022 477 grams"
+          },
+          {
+            "label": "Touch ID",
+            "value": "Top Button Touch ID Sensor"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "Wi-Fi 6 & Apple Pencil",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Pencil Support",
+            "value": "Apple Pencil (1st gen) & Apple Pencil (USB-C)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Comprehensive Lab Diagnostic Certificate"
+          },
+          {
+            "label": "Charger",
+            "value": "20W USB-C Power Adapter + Fast USB-C Charge Cable"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/ipad_10th_gen.png",
+      "45": "assets/ipad_10th_gen.png",
+      "90": "assets/ipad_10th_gen.png",
+      "180": "assets/ipad_10th_gen.png",
+      "270": "assets/ipad_10th_gen.png"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "9 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-ipad-pro129",
+    "baseModelName": "iPad Pro 12.9\" M2",
+    "color": "Space Gray",
+    "name": "Apple iPad Pro 12.9\" M2 128GB Space Gray",
+    "category": "ipad",
+    "brand": "apple",
+    "badge": "MINI-LED PRO",
+    "image": "assets/ipad_pro_129.jpg",
+    "msrp": 112900,
+    "storageOptions": [
+      {
+        "size": "128GB",
+        "delta": 0,
+        "msrp": 112900
+      },
+      {
+        "size": "256GB",
+        "delta": 7000,
+        "msrp": 122900
+      },
+      {
+        "size": "512GB",
+        "delta": 15000,
+        "msrp": 142900
+      },
+      {
+        "size": "1TB",
+        "delta": 26000,
+        "msrp": 169900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 69999,
+        "label": "Grade A (Pristine)",
+        "battery": 97,
+        "cycles": 42,
+        "desc": "Immaculate condition. Liquid Retina XDR Mini-LED display, Apple M2 Silicon, zero chassis scuffs."
+      },
+      "B": {
+        "price": 62999,
+        "label": "Grade B (Very Good)",
+        "battery": 92,
+        "cycles": 120,
+        "desc": "Clean display. Subtle micro-scuff on aluminum edge near magnetic pencil strip."
+      },
+      "C": {
+        "price": 56499,
+        "label": "Grade C (Value Deal)",
+        "battery": 86,
+        "cycles": 250,
+        "desc": "Cosmetic frame marks. 100% verified M2 chip, Face ID, and Thunderbolt 4 port."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "12.9\" Liquid Retina XDR Mini-LED",
+        "icon": "\ud83d\udcd1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "12.9-inch 2D backlighting system with 2,596 full-array local dimming zones"
+          },
+          {
+            "label": "Resolution",
+            "value": "2732 x 2048 pixels at 264 ppi (120Hz ProMotion)"
+          },
+          {
+            "label": "Peak Brightness",
+            "value": "1,000 nits full-screen / 1,600 nits peak HDR"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon M2 (8-Core / 10-Core)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple M2 (8-Core CPU + 10-Core GPU)"
+          },
+          {
+            "label": "Hover Feature",
+            "value": "Apple Pencil Hover feature up to 12mm above display"
+          }
+        ]
+      },
+      "camera": {
+        "title": "Pro Cameras with LiDAR Scanner",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Cameras",
+            "value": "12MP Wide + 10MP Ultra-Wide + LiDAR Scanner"
+          },
+          {
+            "label": "TrueDepth Front",
+            "value": "12MP Ultra-Wide with Center Stage & Face ID"
+          }
+        ]
+      },
+      "battery": {
+        "title": "40.88-Watt-Hour Battery Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "40.88Wh Li-Polymer (Guaranteed >=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Precision Aluminum Unibody",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Dimensions",
+            "value": "280.6 x 214.9 x 6.4 mm \u2022 682 grams"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "Thunderbolt 4 / USB 4 & Wi-Fi 6E",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Port Interface",
+            "value": "Thunderbolt / USB 4 (up to 40Gb/s transfer speed)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Charger",
+            "value": "Original 20W USB-C Adapter + Fast USB-C Cable"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/ipad_pro_129.jpg",
+      "45": "assets/ipad_pro_129.jpg",
+      "90": "assets/ipad_pro_129.jpg",
+      "180": "assets/ipad_pro_129.jpg",
+      "270": "assets/ipad_pro_129.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "5 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-ipad-air",
+    "baseModelName": "iPad Air 10.5\" 3rd Gen",
+    "color": "Silver",
+    "name": "Apple iPad Air 10.5\" 64GB Wi-Fi Silver",
+    "category": "ipad",
+    "brand": "apple",
+    "badge": "RETINA DEAL",
+    "image": "assets/ipad_air_105.jpg",
+    "msrp": 44900,
+    "storageOptions": [
+      {
+        "size": "64GB",
+        "delta": 0,
+        "msrp": 44900
+      },
+      {
+        "size": "256GB",
+        "delta": 4500,
+        "msrp": 54900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 21999,
+        "label": "Grade A (Pristine)",
+        "battery": 94,
+        "cycles": 98,
+        "desc": "Immaculate Retina display with TrueTone, scratch-free aluminum body, Touch ID tested."
+      },
+      "B": {
+        "price": 18999,
+        "label": "Grade B (Very Good)",
+        "battery": 89,
+        "cycles": 210,
+        "desc": "Clean display. Light hairline scuffs on back aluminum plate."
+      },
+      "C": {
+        "price": 15999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 360,
+        "desc": "Cosmetic casing marks. 100% genuine Apple hardware and battery certified."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "10.5\" Retina Display with TrueTone",
+        "icon": "\ud83d\udcd1",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "10.5-inch Retina Display with TrueTone & Wide Color (P3)"
+          },
+          {
+            "label": "Resolution",
+            "value": "2224 x 1668 pixels at 264 ppi"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple Silicon A12 Bionic",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple A12 Bionic with Neural Engine"
+          }
+        ]
+      },
+      "camera": {
+        "title": "8MP Camera & FaceTime HD",
+        "icon": "\ud83d\udcf7",
+        "details": [
+          {
+            "label": "Back Camera",
+            "value": "8MP Wide back camera with 1080p HD video"
+          },
+          {
+            "label": "Front Camera",
+            "value": "7MP FaceTime HD camera"
+          }
+        ]
+      },
+      "battery": {
+        "title": "10-Hour Battery Lab QA",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "30.2-watt-hour rechargeable battery (>=85% Health)"
+          }
+        ]
+      },
+      "build": {
+        "title": "Slim 6.1mm Aluminum Profile",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Dimensions",
+            "value": "250.6 x 174.1 x 6.1 mm \u2022 456 grams ultra-thin"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "Wi-Fi & Apple Pencil 1st Gen",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Accessories",
+            "value": "Smart Keyboard & Apple Pencil (1st gen) support"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Charger",
+            "value": "12W Power Adapter + Lightning to USB Cable"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/ipad_air_105.jpg",
+      "45": "assets/ipad_air_105.jpg",
+      "90": "assets/ipad_air_105.jpg",
+      "180": "assets/ipad_air_105.jpg",
+      "270": "assets/ipad_air_105.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "7 units available in Bangalore Hub"
+  },
+  {
+    "id": "fz-watch-ultra",
+    "baseModelName": "Apple Watch Ultra 49mm",
+    "color": "Titanium",
+    "name": "Apple Watch Ultra 49mm Titanium",
+    "category": "watch",
+    "brand": "apple",
+    "badge": "ADVENTURE",
+    "image": "assets/applewatch_ultra.png",
+    "msrp": 89900,
+    "storageOptions": [
+      {
+        "size": "32GB (GPS+Cellular)",
+        "delta": 0,
+        "msrp": 89900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 44999,
+        "label": "Grade A (Pristine)",
+        "battery": 99,
+        "cycles": 42,
+        "desc": "Aerospace Titanium case, scratch-free Sapphire crystal face."
+      },
+      "B": {
+        "price": 39499,
+        "label": "Grade B (Very Good)",
+        "battery": 93,
+        "cycles": 130,
+        "desc": "Light brush mark on titanium bezel rim. Clean display."
+      },
+      "C": {
+        "price": 34999,
+        "label": "Grade C (Value Deal)",
+        "battery": 87,
+        "cycles": 260,
+        "desc": "Visible outdoor adventure scuffs. Cellular and Action button 100%."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "49mm Always-On Retina LTPO OLED",
+        "icon": "\u231a",
+        "details": [
+          {
+            "label": "Case Size",
+            "value": "49mm Aerospace Titanium Case with Raised Bezel"
+          },
+          {
+            "label": "Resolution",
+            "value": "410 x 502 pixels (1,185 sq mm Display Area)"
+          },
+          {
+            "label": "Peak Brightness",
+            "value": "Up to 2,000 nits (2x Brighter than Series 8)"
+          },
+          {
+            "label": "Face Glass",
+            "value": "Flat Sapphire Crystal Face with Edge Protection"
+          }
+        ]
+      },
+      "processor": {
+        "title": "S8 SiP Dual-Core 64-bit Architecture",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Apple S8 System in Package (SiP) with 64-bit Dual-Core"
+          },
+          {
+            "label": "Wireless Chips",
+            "value": "W3 Apple Wireless Chip + U1 Ultra Wideband (UWB)"
+          },
+          {
+            "label": "Storage",
+            "value": "32GB Internal Flash Storage Capacity"
+          }
+        ]
+      },
+      "battery": {
+        "title": "Multi-Day 36-Hour Expedition Battery",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Battery Unit",
+            "value": "542 mAh Lithium-Ion Rechargeable Battery"
+          },
+          {
+            "label": "Normal Use",
+            "value": "Up to 36 Hours Normal Use on Active Cellular"
+          },
+          {
+            "label": "Low Power Mode",
+            "value": "Up to 60-72 Hours in Low Power Expedition Mode"
+          },
+          {
+            "label": "Charging",
+            "value": "Fast Inductive Magnetic USB-C Charging"
+          }
+        ]
+      },
+      "build": {
+        "title": "Mil-STD 810H & 100m Water / Dive Certified",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Chassis",
+            "value": "Aerospace Grade 5 Titanium with Raised Bezel Protection"
+          },
+          {
+            "label": "Dimensions",
+            "value": "49 x 44 x 14.4 mm \u2022 61.3 grams weight"
+          },
+          {
+            "label": "Water Resistance",
+            "value": "100m Water Resistance (WR100 & EN13319 Dive to 40m)"
+          },
+          {
+            "label": "Special Hardware",
+            "value": "Customizable Action Button + 86dB Emergency Siren"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "Precision Dual-Frequency GPS & 4G LTE",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Cellular",
+            "value": "Standalone 4G LTE and UMTS Cellular (No iPhone needed)"
+          },
+          {
+            "label": "Precision GPS",
+            "value": "Precision Dual-Frequency GPS (L1 and L5) with Offline Compass"
+          },
+          {
+            "label": "Sensors",
+            "value": "Blood Oxygen, ECG, Temperature Sensor, Depth Gauge"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Comprehensive Lab Diagnostic Certificate"
+          },
+          {
+            "label": "Fast Charger",
+            "value": "Official Apple Watch Magnetic Fast Charger to USB-C Cable"
+          },
+          {
+            "label": "Band",
+            "value": "Certified Ocean / Alpine Loop Band"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/applewatch_ultra.png",
+      "45": "assets/applewatch_ultra.png",
+      "90": "assets/applewatch_ultra.png",
+      "180": "assets/applewatch_ultra.png",
+      "270": "assets/applewatch_ultra.png"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "7 units available in Bangalore Hub"
+  },
+  {
+    "id": "fz-watch-series7",
+    "baseModelName": "Apple Watch Series 7 45mm",
+    "color": "Midnight",
+    "name": "Apple Watch Series 7 45mm Midnight Aluminum",
+    "category": "watch",
+    "brand": "apple",
+    "badge": "OLED RETINA",
+    "image": "assets/applewatch_series7.png",
+    "msrp": 44900,
+    "storageOptions": [
+      {
+        "size": "32GB (GPS+Cellular)",
+        "delta": 0,
+        "msrp": 44900
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 21999,
+        "label": "Grade A (Pristine)",
+        "battery": 97,
+        "cycles": 60,
+        "desc": "Pristine condition. Scratch-resistant front crystal, edge-to-edge curved OLED, ECG certified."
+      },
+      "B": {
+        "price": 18999,
+        "label": "Grade B (Very Good)",
+        "battery": 91,
+        "cycles": 180,
+        "desc": "Clean display. Minor hairline scuff on side aluminum rim."
+      },
+      "C": {
+        "price": 15999,
+        "label": "Grade C (Value Deal)",
+        "battery": 85,
+        "cycles": 320,
+        "desc": "Cosmetic bezel wear. 100% verified optical sensors, cellular, and battery health."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "45mm Always-On Retina LTPO OLED",
+        "icon": "\u231a",
+        "details": [
+          {
+            "label": "Screen Area",
+            "value": "Nearly 20% more screen area than Series 6"
+          },
+          {
+            "label": "Borders",
+            "value": "Refined 1.7mm thin borders (40% thinner)"
+          },
+          {
+            "label": "Brightness",
+            "value": "1,000 nits Always-On Retina display"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Apple S7 SiP Dual-Core 64-bit",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "S7 with 64-bit dual-core processor and W3 wireless"
+          }
+        ]
+      },
+      "battery": {
+        "title": "Fast Charging Up to 33% Faster",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Battery Life",
+            "value": "All-day 18-hour battery life (Guaranteed >=85% Health)"
+          },
+          {
+            "label": "Fast Charging",
+            "value": "0 to 80% charge in about 45 minutes via USB-C"
+          }
+        ]
+      },
+      "build": {
+        "title": "Crack-Resistant Crystal & WR50",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Durability",
+            "value": "IP6X Dust Resistant + WR50 Swimproof Water Resistant"
+          },
+          {
+            "label": "Dimensions",
+            "value": "45 x 38 x 10.7 mm \u2022 38.8 grams weight"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "4G LTE Cellular & Health Sensors",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Health",
+            "value": "Blood Oxygen Sensor & App + ECG App + Fall Detection"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Diagnostic Engineering Report (Pass 100%)"
+          },
+          {
+            "label": "Charger",
+            "value": "Magnetic Fast Charger to USB-C Cable"
+          },
+          {
+            "label": "Band",
+            "value": "Certified Sport Band"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/applewatch_series7.png",
+      "45": "assets/applewatch_series7.png",
+      "90": "assets/applewatch_series7.png",
+      "180": "assets/applewatch_series7.png",
+      "270": "assets/applewatch_series7.png"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "8 units available in Delhi Hub"
+  },
+  {
+    "id": "fz-galaxy-watch5",
+    "baseModelName": "Galaxy Watch 5 44mm",
+    "color": "Sapphire",
+    "name": "Samsung Galaxy Watch 5 44mm Sapphire Bluetooth/LTE",
+    "category": "watch",
+    "brand": "samsung",
+    "badge": "BIOACTIVE SENSOR",
+    "image": "assets/galaxy_watch5.jpg",
+    "msrp": 33999,
+    "storageOptions": [
+      {
+        "size": "16GB (Bluetooth+LTE)",
+        "delta": 0,
+        "msrp": 33999
+      }
+    ],
+    "grades": {
+      "A": {
+        "price": 14999,
+        "label": "Grade A (Pristine)",
+        "battery": 98,
+        "cycles": 40,
+        "desc": "Immaculate Sapphire crystal face, scratch-free Armor Aluminum casing, BioActive sensor tested."
+      },
+      "B": {
+        "price": 12499,
+        "label": "Grade B (Very Good)",
+        "battery": 92,
+        "cycles": 140,
+        "desc": "Clean display. Light micro-scuffs on side aluminum frame."
+      },
+      "C": {
+        "price": 10499,
+        "label": "Grade C (Value Deal)",
+        "battery": 86,
+        "cycles": 270,
+        "desc": "Cosmetic bezel marks. 100% hardware certified, ECG and body composition tested."
+      }
+    },
+    "specs": {
+      "display": {
+        "title": "1.4\" Super AMOLED Sapphire Crystal",
+        "icon": "\u231a",
+        "details": [
+          {
+            "label": "Screen Size",
+            "value": "1.4-inch (34.6mm) Super AMOLED (450 x 450 pixels)"
+          },
+          {
+            "label": "Glass",
+            "value": "Sapphire Crystal Glass (1.6x stronger against scratches)"
+          }
+        ]
+      },
+      "processor": {
+        "title": "Exynos W920 Dual-Core (5nm)",
+        "icon": "\u26a1",
+        "details": [
+          {
+            "label": "Processor Chip",
+            "value": "Exynos W920 Dual-Core 1.18GHz with Wear OS Powered by Samsung"
+          },
+          {
+            "label": "Memory",
+            "value": "1.5GB RAM + 16GB Storage"
+          }
+        ]
+      },
+      "battery": {
+        "title": "410 mAh Battery & Fast Charging",
+        "icon": "\ud83d\udd0b",
+        "details": [
+          {
+            "label": "Capacity",
+            "value": "410 mAh Battery with Fast Wireless Charging"
+          },
+          {
+            "label": "Charge Speed",
+            "value": "Up to 45% charge in 30 minutes"
+          }
+        ]
+      },
+      "build": {
+        "title": "Armor Aluminum & 5ATM + IP68",
+        "icon": "\ud83d\udcd0",
+        "details": [
+          {
+            "label": "Durability",
+            "value": "5ATM Water Resistance + IP68 + MIL-STD-810H Certified"
+          },
+          {
+            "label": "Weight",
+            "value": "33.5 grams lightweight design"
+          }
+        ]
+      },
+      "connectivity": {
+        "title": "Samsung BioActive Sensor & LTE",
+        "icon": "\ud83d\udcf6",
+        "details": [
+          {
+            "label": "Health Sensors",
+            "value": "BioActive 3-in-1 Sensor (Optical Heart Rate, ECG, BIA Body Composition)"
+          }
+        ]
+      },
+      "inclusions": {
+        "title": "Certified Box Inclusions",
+        "icon": "\ud83d\udee1\ufe0f",
+        "details": [
+          {
+            "label": "QA Certificate",
+            "value": "32-Point Comprehensive Lab Diagnostic Certificate"
+          },
+          {
+            "label": "Charger",
+            "value": "Fast Wireless Charger Cable"
+          },
+          {
+            "label": "Band",
+            "value": "Samsung Sport Band"
+          },
+          {
+            "label": "Warranty",
+            "value": "6 Months Comprehensive FoneZone Pan-India Warranty"
+          }
+        ]
+      }
+    },
+    "angles": {
+      "0": "assets/galaxy_watch5.jpg",
+      "45": "assets/galaxy_watch5.jpg",
+      "90": "assets/galaxy_watch5.jpg",
+      "180": "assets/galaxy_watch5.jpg",
+      "270": "assets/galaxy_watch5.jpg"
+    },
+    "warranty": "6 Months Comprehensive FoneZone Warranty",
+    "stock": "6 units available in Mumbai Hub"
   }
 ];
 
@@ -1066,35 +4678,38 @@ function tourOpenWhatsApp() {
 const CATEGORY_CONFIG = {
   all: {
     title: "All Certified Pre-Owned Electronics",
-    subtitle: "Explore certified iPhones, Galaxy flagships, MacBooks, iPads, and Smart Watches with warranty.",
+    subtitle: "Explore 27 certified iPhones, Galaxy flagships, OnePlus, Pixel, MacBooks, iPads & Watches with warranty.",
     breadcrumb: "All Certified Devices",
     subFilters: [
-      { id: "all", label: "All Items" },
-      { id: "apple", label: "Apple Products" },
-      { id: "samsung", label: "Samsung Galaxy" },
+      { id: "all", label: "All 27 Devices" },
+      { id: "apple", label: "Apple (16 Models)" },
+      { id: "samsung", label: "Samsung Galaxy (6 Models)" },
+      { id: "oneplus_pixel", label: "OnePlus & Pixel" },
+      { id: "flagship", label: "Titanium & Ultra Pro" },
       { id: "under50k", label: "Under ₹50,000" }
     ]
   },
   phone: {
     title: "Certified Refurbished Smartphones",
-    subtitle: "Premium pre-owned Apple iPhones & Samsung Galaxy flagships. Tested across 32 points.",
+    subtitle: "Premium pre-owned Apple iPhones, Samsung Galaxy, OnePlus & Google Pixel flagships. Tested across 32 points.",
     breadcrumb: "Refurbished Phones",
     subFilters: [
       { id: "all", label: "All Phones" },
       { id: "apple", label: "Apple iPhones" },
       { id: "samsung", label: "Samsung Galaxy" },
+      { id: "oneplus_pixel", label: "OnePlus & Pixel" },
       { id: "flagship", label: "Flagship Pro Tier" },
       { id: "under50k", label: "Under ₹50,000" }
     ]
   },
   macbook: {
     title: "Certified Refurbished MacBooks & Laptops",
-    subtitle: "Apple Silicon M1 & M2 laptops with 100% certified battery life and pristine displays.",
+    subtitle: "Apple Silicon M1 Max & M2 laptops with 100% certified battery life and pristine displays.",
     breadcrumb: "MacBooks & Laptops",
     subFilters: [
       { id: "all", label: "All MacBooks" },
-      { id: "m2", label: "Apple M2 Series" },
-      { id: "pristine", label: "Grade A Only" }
+      { id: "m2", label: "Apple M2 / M1 Max" },
+      { id: "pristine", label: "Grade A Pristine" }
     ]
   },
   ipad: {
@@ -1103,18 +4718,19 @@ const CATEGORY_CONFIG = {
     breadcrumb: "iPads & Tablets",
     subFilters: [
       { id: "all", label: "All iPads" },
-      { id: "wifi", label: "Wi-Fi Only" },
-      { id: "cellular", label: "Wi-Fi + Cellular" }
+      { id: "pro", label: "iPad Pro 12.9 (M2)" },
+      { id: "air", label: "iPad Air & 10th Gen" }
     ]
   },
   watch: {
     title: "Certified Smart Watches",
-    subtitle: "Rugged Apple Watch Ultra and Series models with tested water resistance and battery health.",
+    subtitle: "Rugged Apple Watch Ultra, Series 7, and Galaxy Watch with tested water resistance and battery health.",
     breadcrumb: "Smart Watches",
     subFilters: [
       { id: "all", label: "All Watches" },
       { id: "ultra", label: "Apple Watch Ultra" },
-      { id: "cellular", label: "Cellular Enabled" }
+      { id: "apple", label: "Apple Watch" },
+      { id: "samsung", label: "Galaxy Watch" }
     ]
   },
   accessories: {
@@ -1152,8 +4768,14 @@ function renderCatalog() {
     let matchesSub = true;
     if (state.activeSubFilter === "apple") matchesSub = p.brand === "apple";
     else if (state.activeSubFilter === "samsung") matchesSub = p.brand === "samsung";
+    else if (state.activeSubFilter === "oneplus_pixel") matchesSub = p.brand === "oneplus" || p.brand === "google";
     else if (state.activeSubFilter === "under50k") matchesSub = p.grades["A"].price < 50000;
-    else if (state.activeSubFilter === "flagship") matchesSub = p.badge === "FLAGSHIP" || p.badge === "200MP CAM";
+    else if (state.activeSubFilter === "flagship") matchesSub = p.badge === "FLAGSHIP" || p.badge === "TITANIUM PRO" || p.badge === "GOLD FLAGSHIP" || p.badge === "200MP CAM" || p.badge === "STUDIO BEAST" || p.badge === "MINI-LED PRO";
+    else if (state.activeSubFilter === "m2") matchesSub = p.specs && p.specs.processor && (p.specs.processor.title.includes("M2") || p.specs.processor.title.includes("M1 Max"));
+    else if (state.activeSubFilter === "pro") matchesSub = p.id.includes("pro");
+    else if (state.activeSubFilter === "air") matchesSub = p.id.includes("air") || p.id.includes("10");
+    else if (state.activeSubFilter === "ultra") matchesSub = p.id.includes("ultra");
+    else if (state.activeSubFilter === "pristine") matchesSub = true;
 
     // Budget match: device has at least one grade within selected budget
     const minPrice = Math.min(...Object.values(p.grades).map(g => g.price));
@@ -1264,7 +4886,7 @@ function renderCatalog() {
                 ${p.storageOptions.map(opt => `
                   <button 
                     onclick="setCardStorage('${p.id}', '${opt.size}')"
-                    class="py-0.5 px-2 rounded-md text-[10px] font-bold transition-all cursor-pointer ${opt.size === currentStorage ? 'bg-blue-600 text-white border border-blue-500 shadow-sm ring-1 ring-blue-400/50' : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
+                    class="card-storage-btn py-0.5 px-2 rounded-md text-[10px] font-bold transition-all cursor-pointer ${opt.size === currentStorage ? 'active bg-blue-600 text-white border border-blue-500 shadow-sm ring-1 ring-blue-400/50' : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
                     title="${opt.size} (${opt.delta > 0 ? '+' + formatMoney(opt.delta) : 'Base'})"
                   >
                     ${opt.size}
@@ -1281,7 +4903,7 @@ function renderCatalog() {
               ${["A", "B", "C"].map(g => `
                 <button 
                   onclick="setCardGrade('${p.id}', '${g}')"
-                  class="py-1 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${g === currentGrade ? (g === 'A' ? 'badge-grade-a ring-1 ring-emerald-400/50' : g === 'B' ? 'badge-grade-b ring-1 ring-indigo-400/50' : 'badge-grade-c ring-1 ring-amber-400/50') : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
+                  class="card-grade-btn py-1 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${g === currentGrade ? (g === 'A' ? 'badge-grade-a ring-1 ring-emerald-400/50' : g === 'B' ? 'badge-grade-b ring-1 ring-indigo-400/50' : 'badge-grade-c ring-1 ring-amber-400/50') : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
                 >
                   Grade ${g}
                 </button>
@@ -1317,7 +4939,7 @@ function renderCatalog() {
 
         <!-- Action Buttons: 360 View, Add to Cart & Buy COD -->
         <div class="grid grid-cols-2 gap-2 mt-3 pt-2" onclick="event.stopPropagation();">
-          <button onclick="addToCart('${p.id}')" class="py-2 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] flex items-center justify-center gap-1 transition-colors cursor-pointer">
+          <button onclick="addToCart('${p.id}')" class="card-add-cart-btn py-2 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] flex items-center justify-center gap-1 transition-colors cursor-pointer">
             <span>🛒 Add to Cart</span>
           </button>
           <button onclick="buyProductCOD('${p.id}')" class="py-2 px-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center justify-center gap-1 shadow-md shadow-blue-600/20 transition-all cursor-pointer">
@@ -1808,9 +5430,16 @@ function openInspector(productId) {
   const scrubber = document.getElementById("turntableDegreeScrubber");
   if (scrubber) scrubber.value = 0;
 
-  // Default to 3D Orbit mode and snap to Front perspective
-  setViewerMode("3d");
-  setInspectPerspective("front");
+  // Smart Viewer Mode: 3D Orbit if interactive .glb mesh exists, otherwise Studio Photo Frames
+  const btn3d = document.getElementById("modeViewer3dBtn");
+  if (p.model3d) {
+    if (btn3d) { btn3d.style.display = "inline-flex"; }
+    setViewerMode("3d");
+    setInspectPerspective("front");
+  } else {
+    if (btn3d) { btn3d.style.display = "none"; }
+    setViewerMode("photo");
+  }
 
   // Render Storage Variant Selector & Tech Specs
   renderInspectStorageUI(p);

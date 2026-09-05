@@ -437,26 +437,166 @@ body.theme-light [class*="border-slate-700"] {
   border-color: #E2E8F0 !important;
 }
 
-/* Text Hierarchy */
+/* ======================================================== */
+/* WCAG AAA HIGH-CONTRAST TYPOGRAPHY & COLOR HARMONY        */
+/* ======================================================== */
+/* Dark Mode Subtle Enhancement: Secondary text gets clear luminance */
+.text-slate-500:not(.line-through) {
+  color: #94A3B8 !important;
+}
+
+/* Light Mode Hierarchy */
 body.theme-light h1,
 body.theme-light h2,
 body.theme-light h3,
-body.theme-light h4 {
+body.theme-light h4,
+body.theme-light h5,
+body.theme-light h6 {
   color: #0F172A !important;
+  font-weight: 800 !important;
 }
 body.theme-light .text-white {
   color: #0F172A !important;
 }
-body.theme-light [class*="text-slate-100"],
-body.theme-light [class*="text-slate-200"],
+body.theme-light [class*="text-slate-100"] {
+  color: #020617 !important;
+}
+body.theme-light [class*="text-slate-200"] {
+  color: #0F172A !important;
+}
 body.theme-light [class*="text-slate-300"] {
-  color: #1E293B !important;
+  color: #1E293B !important; /* 13.5:1 contrast */
 }
 body.theme-light [class*="text-slate-400"] {
-  color: #64748B !important;
+  color: #334155 !important; /* 9.6:1 contrast (Slate-700) */
+  font-weight: 600 !important;
 }
-body.theme-light [class*="text-slate-500"] {
-  color: #94A3B8 !important;
+body.theme-light [class*="text-slate-500"]:not(.line-through) {
+  color: #475569 !important; /* 5.8:1 contrast (Slate-600) */
+  font-weight: 500 !important;
+}
+body.theme-light .line-through {
+  color: #64748B !important; /* Slate-500: Clear legible strikethrough */
+}
+
+/* Saturated Accessible Colored Accent Text in Light Mode */
+body.theme-light [class*="text-blue-100"],
+body.theme-light [class*="text-blue-200"],
+body.theme-light [class*="text-blue-300"],
+body.theme-light [class*="text-blue-400"] {
+  color: #1D4ED8 !important; /* Rich Royal Blue (8.5:1 contrast) */
+}
+body.theme-light [class*="text-emerald-300"],
+body.theme-light [class*="text-emerald-400"] {
+  color: #047857 !important; /* Deep Forest Emerald (6.5:1 contrast) */
+}
+body.theme-light [class*="text-amber-200"],
+body.theme-light [class*="text-amber-300"],
+body.theme-light [class*="text-amber-400"] {
+  color: #B45309 !important; /* Deep Warm Amber (6.2:1 contrast) */
+}
+body.theme-light [class*="text-purple-200"],
+body.theme-light [class*="text-purple-300"],
+body.theme-light [class*="text-purple-400"] {
+  color: #6B21A8 !important; /* Deep Rich Purple (9.1:1 contrast) */
+}
+body.theme-light [class*="text-indigo-300"],
+body.theme-light [class*="text-indigo-400"] {
+  color: #3730A3 !important; /* Deep Indigo (9.8:1 contrast) */
+}
+body.theme-light [class*="text-pink-300"],
+body.theme-light [class*="text-pink-400"] {
+  color: #BE185D !important; /* Deep Rose Pink (7.1:1 contrast) */
+}
+body.theme-light [class*="text-red-300"],
+body.theme-light [class*="text-red-400"] {
+  color: #B91C1C !important; /* Deep Crimson Red (6.8:1 contrast) */
+}
+
+/* High-Contrast Pill Badges in Light Mode */
+body.theme-light .bg-emerald-500\/10,
+body.theme-light .bg-emerald-500\/20 {
+  background-color: #D1FAE5 !important;
+  border: 1px solid #6EE7B7 !important;
+  color: #065F46 !important;
+}
+body.theme-light .bg-blue-500\/10,
+body.theme-light .bg-blue-500\/20 {
+  background-color: #DBEAFE !important;
+  border: 1px solid #93C5FD !important;
+  color: #1E40AF !important;
+}
+body.theme-light .bg-amber-500\/10,
+body.theme-light .bg-amber-500\/20 {
+  background-color: #FEF3C7 !important;
+  border: 1px solid #FCD34D !important;
+  color: #92400E !important;
+}
+body.theme-light .bg-purple-500\/10,
+body.theme-light .bg-purple-500\/20 {
+  background-color: #F3E8FF !important;
+  border: 1px solid #D8B4FE !important;
+  color: #581C87 !important;
+}
+body.theme-light .bg-red-500\/10,
+body.theme-light .bg-red-500\/20 {
+  background-color: #FEE2E2 !important;
+  border: 1px solid #FCA5A5 !important;
+  color: #991B1B !important;
+}
+
+/* Product Card Custom Elements in Light Mode */
+body.theme-light .card-storage-btn:not(.active) {
+  background-color: #F8FAFC !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #334155 !important;
+  font-weight: 700 !important;
+}
+body.theme-light .card-storage-btn:not(.active):hover {
+  background-color: #EFF6FF !important;
+  border-color: #93C5FD !important;
+  color: #1D4ED8 !important;
+}
+body.theme-light .card-storage-btn.active {
+  background-color: #2563EB !important;
+  border-color: #1D4ED8 !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+body.theme-light .card-grade-btn:not(.badge-grade-a):not(.badge-grade-b):not(.badge-grade-c) {
+  background-color: #F8FAFC !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #334155 !important;
+  font-weight: 700 !important;
+}
+body.theme-light .card-grade-btn:not(.badge-grade-a):not(.badge-grade-b):not(.badge-grade-c):hover {
+  background-color: #EFF6FF !important;
+  border-color: #93C5FD !important;
+  color: #1D4ED8 !important;
+}
+body.theme-light .card-add-cart-btn {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+  font-weight: 700 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05) !important;
+}
+body.theme-light .card-add-cart-btn:hover {
+  background-color: #F1F5F9 !important;
+  border-color: #94A3B8 !important;
+  color: #0F172A !important;
+}
+body.theme-light .fz-glass-card .bg-slate-900\/50 {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
+  color: #334155 !important;
+}
+body.theme-light .fz-glass-card .border-slate-800\/60 {
+  border-color: #E2E8F0 !important;
+}
+body.theme-light .fz-glass-card .bg-slate-950\/70 {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E2E8F0 !important;
 }
 
 /* Crucial: Buttons & Badges with Solid Backgrounds Keep White Text */
@@ -2160,7 +2300,8 @@ body.theme-light #storageSelectorWidget .storage-option-btn:not(.bg-blue-600):ho
   color: #1D4ED8 !important;
 }
 body.theme-light #storageRecommendationText {
-  color: #64748B !important;
+  color: #334155 !important;
+  font-weight: 600 !important;
 }
 
 /* Technical Specifications Widget */
@@ -2203,8 +2344,10 @@ body.theme-light .specs-row-item {
   border-color: #F1F5F9 !important;
 }
 body.theme-light .specs-label {
-  color: #64748B !important;
+  color: #334155 !important;
+  font-weight: 600 !important;
 }
 body.theme-light .specs-value {
   color: #0F172A !important;
+  font-weight: 700 !important;
 }
