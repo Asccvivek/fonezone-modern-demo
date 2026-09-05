@@ -5027,6 +5027,33 @@ function setRegion(reg) {
       btnIn.className = "px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer";
     }
   }
+
+  // Mobile Header Switcher
+  const btnInMobile = document.getElementById("regionBtnINMobile");
+  const btnUaeMobile = document.getElementById("regionBtnUAEMobile");
+  if (btnInMobile && btnUaeMobile) {
+    if (reg === "IN") {
+      btnInMobile.className = "px-1.5 py-0.5 rounded font-bold bg-blue-600 text-white cursor-pointer";
+      btnUaeMobile.className = "px-1.5 py-0.5 rounded font-semibold text-slate-400 hover:text-white cursor-pointer";
+    } else {
+      btnUaeMobile.className = "px-1.5 py-0.5 rounded font-bold bg-blue-600 text-white cursor-pointer";
+      btnInMobile.className = "px-1.5 py-0.5 rounded font-semibold text-slate-400 hover:text-white cursor-pointer";
+    }
+  }
+
+  // Mobile Drawer Switcher
+  const drawerIn = document.getElementById("drawerRegionIN");
+  const drawerUae = document.getElementById("drawerRegionUAE");
+  if (drawerIn && drawerUae) {
+    if (reg === "IN") {
+      drawerIn.className = "px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-600 text-white cursor-pointer transition-all";
+      drawerUae.className = "px-2.5 py-1 text-xs font-semibold text-slate-400 hover:text-white cursor-pointer transition-all";
+    } else {
+      drawerUae.className = "px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-600 text-white cursor-pointer transition-all";
+      drawerIn.className = "px-2.5 py-1 text-xs font-semibold text-slate-400 hover:text-white cursor-pointer transition-all";
+    }
+  }
+
   updateRegionUI();
   renderCatalog();
   updateCartDrawerUI();
@@ -5432,6 +5459,15 @@ function updateCartDrawerUI() {
   if (badge) badge.textContent = totalItems;
   const drawerCount = document.getElementById("cartDrawerCount");
   if (drawerCount) drawerCount.textContent = totalItems;
+  const bottomCartBadge = document.getElementById("bottomCartBadge");
+  if (bottomCartBadge) {
+    bottomCartBadge.textContent = totalItems;
+    if (totalItems > 0) {
+      bottomCartBadge.classList.remove("hidden");
+    } else {
+      bottomCartBadge.classList.add("hidden");
+    }
+  }
 
   const listEl = document.getElementById("cartItemsList");
   const totalEl = document.getElementById("cartDrawerTotal");
@@ -7049,6 +7085,17 @@ function handleRoute() {
     calculateWholesalePrice();
   }
 
+  // Bottom Navigation Active State
+  if (typeof updateMobileBottomNavActive === "function") {
+    if (hash === "#/pages/sell-your-device") {
+      updateMobileBottomNavActive("sell");
+    } else if (hash === "#/" || hash === "#/collections/all" || hash === "") {
+      updateMobileBottomNavActive("home");
+    } else {
+      updateMobileBottomNavActive("");
+    }
+  }
+
   // Hero carousel auto-slide lifecycle per view
   if (targetViewId === "view-home") {
     if (heroIsAutoPlaying && !heroCarouselTimer) {
@@ -7143,6 +7190,74 @@ function filterByTaxonomy(cat, brand) {
     filterProducts();
   }
   showToast(`🔍 Showing certified: ${brand !== 'all' ? brand.toUpperCase() : ''} ${cat.toUpperCase()}`);
+}
+
+/* ======================================================== */
+/* MOBILE APP NAVIGATION & BOTTOM BAR CONTROLLER            */
+/* ======================================================== */
+function toggleMobileNav(isOpen) {
+  const drawer = document.getElementById("mobileNavDrawer");
+  const content = document.getElementById("mobileNavContent");
+  if (!drawer || !content) return;
+
+  if (isOpen) {
+    drawer.classList.remove("pointer-events-none", "opacity-0");
+    drawer.classList.add("pointer-events-auto", "opacity-100");
+    content.classList.remove("-translate-x-full");
+    content.classList.add("translate-x-0");
+    document.body.classList.add("overflow-hidden");
+    updateMobileBottomNavActive("categories");
+  } else {
+    drawer.classList.remove("pointer-events-auto", "opacity-100");
+    drawer.classList.add("pointer-events-none", "opacity-0");
+    content.classList.remove("translate-x-0");
+    content.classList.add("-translate-x-full");
+    document.body.classList.remove("overflow-hidden");
+    
+    // Restore active bottom tab based on current hash
+    const hash = window.location.hash || "#/";
+    if (hash === "#/pages/sell-your-device") {
+      updateMobileBottomNavActive("sell");
+    } else if (hash === "#/" || hash === "#/collections/all") {
+      updateMobileBottomNavActive("home");
+    } else {
+      updateMobileBottomNavActive("");
+    }
+  }
+}
+
+function handleBottomNavClick(tab) {
+  if (tab === "home") {
+    navigateTo("#/");
+    setCategory("all");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    updateMobileBottomNavActive("home");
+  } else if (tab === "categories") {
+    toggleMobileNav(true);
+  } else if (tab === "sell") {
+    navigateTo("#/pages/sell-your-device");
+    updateMobileBottomNavActive("sell");
+  } else if (tab === "wishlist") {
+    openWishlistDrawer();
+  } else if (tab === "cart") {
+    openCartDrawer();
+  }
+}
+
+function updateMobileBottomNavActive(activeTab) {
+  const tabs = ["home", "categories", "sell", "wishlist", "cart"];
+  tabs.forEach(t => {
+    const el = document.getElementById(`bottomNav${t.charAt(0).toUpperCase() + t.slice(1)}`);
+    if (!el) return;
+    if (t === "sell") return; // Elevated center button keeps distinct styling
+    if (t === activeTab) {
+      el.classList.add("text-blue-500", "font-bold");
+      el.classList.remove("text-slate-400");
+    } else {
+      el.classList.remove("text-blue-500", "font-bold");
+      el.classList.add("text-slate-400");
+    }
+  });
 }
 
 /* ======================================================== */

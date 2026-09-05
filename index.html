@@ -29,8 +29,10 @@
   <!-- ======================================================== -->
   <!-- 0. TOP EXECUTIVE PORTAL SWITCHER & DEMO TOUR BAR         -->
   <!-- ======================================================== -->
-  <aside id="executiveTopBar" aria-label="Executive Demo Control Bar" class="relative z-50 sm:sticky sm:top-0 bg-[#0B1120] border-b border-blue-500/30 px-3 py-1.5 sm:py-2 text-xs shadow-xl">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 sm:gap-3">
+  <!-- 0. TOP EXECUTIVE PORTAL SWITCHER & DEMO TOUR BAR (Desktop/Tablet Only) -->
+  <!-- ======================================================== -->
+  <aside id="executiveTopBar" aria-label="Executive Demo Control Bar" class="hidden sm:flex z-50 sm:sticky sm:top-0 bg-[#0B1120] border-b border-blue-500/30 px-3 py-1.5 sm:py-2 text-xs shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 sm:gap-3 w-full">
       <!-- Left: Portal Switcher -->
       <div class="flex items-center gap-2">
         <span class="text-[11px] font-bold text-blue-400 uppercase tracking-wider hidden sm:inline">NexG Demo:</span>
@@ -77,10 +79,10 @@
   <!-- ======================================================== -->
   <!-- PORTAL 1: PURE CUSTOMER STOREFRONT (FAITHFUL TO FONEZONE)-->
   <!-- ======================================================== -->
-  <div id="storefrontPortal" class="transition-opacity duration-200">
+  <div id="storefrontPortal" class="transition-opacity duration-200 pb-16 sm:pb-0">
 
-    <!-- 1. Announcement Bar -->
-    <div id="storeAnnouncementBar" class="bg-[#090E1A] border-b border-slate-800/80 text-[11px] py-1.5 px-4 text-slate-300">
+    <!-- 1. Announcement Bar (Desktop/Tablet Only) -->
+    <div id="storeAnnouncementBar" class="hidden sm:block bg-[#090E1A] border-b border-slate-800/80 text-[11px] py-1.5 px-4 text-slate-300">
       <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
         <div class="flex items-center gap-3">
           <a id="careContactLink" href="tel:+918044630881" class="flex items-center gap-1.5 hover:text-white transition-colors font-medium cursor-pointer">
@@ -101,15 +103,30 @@
       </div>
     </div>
 
-    <!-- 2. Main Storefront Header -->
-    <header class="fz-glass border-b border-slate-800/80 sticky top-0 sm:top-[42px] z-40">
-      <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2 sm:gap-4">
-        <!-- Logo -->
-        <a href="#" onclick="setCategory('all'); return false;" class="flex items-center gap-2 cursor-pointer shrink-0">
-          <img id="mainNavbarLogo" src="assets/fonezone_logo_white.png" alt="FoneZone Logo" class="h-8 sm:h-10 w-auto object-contain">
-        </a>
+    <!-- 2. Main Storefront Header (Ultra-Sleek Mobile App Bar & Modern Desktop Header) -->
+    <header class="fz-glass border-b border-slate-800/80 sticky top-0 sm:top-[42px] z-40 transition-colors">
+      <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4">
+        
+        <!-- Left: Mobile Hamburger & Logo -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <!-- Mobile Hamburger Drawer Button -->
+          <button 
+            id="mobileNavToggleBtn" 
+            onclick="toggleMobileNav(true)" 
+            aria-label="Open Navigation Menu"
+            class="sm:hidden p-1.5 rounded-xl text-slate-200 hover:text-white hover:bg-slate-800/70 active:scale-95 transition-all cursor-pointer"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
 
-        <!-- Desktop Search Bar with Live Suggestions Dropdown -->
+          <!-- Brand Logo -->
+          <a href="#" onclick="setCategory('all'); return false;" class="flex items-center gap-2 cursor-pointer shrink-0">
+            <img id="mainNavbarLogo" src="assets/fonezone_logo_white.png" alt="FoneZone Logo" class="h-7 sm:h-10 w-auto object-contain">
+            <span class="hidden xs:inline-block sm:hidden text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-blue-500/15 text-blue-400 border border-blue-500/30 font-mono">Refurbished</span>
+          </a>
+        </div>
+
+        <!-- Desktop Search Bar with Live Suggestions Dropdown (md:block) -->
         <div class="flex-1 max-w-xl relative hidden md:block">
           <div class="relative flex items-center">
             <input 
@@ -133,14 +150,24 @@
 
         <!-- Right Header Items -->
         <div class="flex items-center gap-1.5 sm:gap-3 text-xs font-medium shrink-0">
-          <!-- Ask To CEO Button (High-Contrast Executive VIP Badge) -->
-          <button onclick="openCeoModal()" class="ceo-header-btn px-2.5 sm:px-3.5 py-1.5 rounded-xl text-xs font-black flex items-center gap-1 sm:gap-1.5 shadow-sm transition-all cursor-pointer">
-            <span class="text-sm">👑</span>
-            <span class="font-black tracking-wide hidden sm:inline">ASK To CEO</span>
-            <span class="font-black tracking-wide sm:hidden">CEO</span>
+          <!-- Mobile Currency Switcher Pill (< sm) -->
+          <div class="flex sm:hidden items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 text-[10px]">
+            <button id="regionBtnINMobile" onclick="setRegion('IN')" class="px-1.5 py-0.5 rounded font-bold bg-blue-600 text-white cursor-pointer">₹</button>
+            <button id="regionBtnUAEMobile" onclick="setRegion('UAE')" class="px-1.5 py-0.5 rounded font-semibold text-slate-400 hover:text-white cursor-pointer">AED</button>
+          </div>
+
+          <!-- Mobile Quick Theme Toggle (< sm) -->
+          <button onclick="toggleTheme()" class="sm:hidden p-1.5 text-slate-300 hover:text-white rounded-lg hover:bg-slate-800/60 transition-colors" title="Toggle Theme">
+            <span class="text-sm">🌓</span>
           </button>
 
-          <!-- Track Order (Hidden on mobile) -->
+          <!-- Ask To CEO Button (High-Contrast Executive VIP Badge - Desktop/Tablet) -->
+          <button onclick="openCeoModal()" class="ceo-header-btn hidden sm:flex px-2.5 sm:px-3.5 py-1.5 rounded-xl text-xs font-black items-center gap-1 sm:gap-1.5 shadow-sm transition-all cursor-pointer">
+            <span class="text-sm">👑</span>
+            <span class="font-black tracking-wide">ASK To CEO</span>
+          </button>
+
+          <!-- Track Order (Desktop) -->
           <div onclick="openTrackOrderModal()" class="hidden lg:flex items-center gap-1.5 text-slate-300 hover:text-white cursor-pointer px-2 py-1 rounded-lg hover:bg-slate-800/60 transition-colors">
             <svg class="w-4 h-4 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
             <span class="text-xs">Track Order</span>
@@ -160,27 +187,28 @@
         </div>
       </div>
 
-      <!-- Mobile Search Bar (< md) -->
+      <!-- Refined Apple-Style Mobile Search Bar (< md) -->
       <div class="block md:hidden px-3 pb-2 pt-0.5 relative">
         <div class="relative flex items-center">
+          <svg class="w-4 h-4 text-slate-400 absolute left-3.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
           <input 
             type="text" 
             id="storeSearchInputMobile"
             oninput="handleSearch(this.value)"
             onfocus="handleSearchFocusMobile()"
             placeholder="Search iPhones, Galaxy, MacBooks, iPads..."
-            class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl py-1.5 pl-3.5 pr-10 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
+            class="w-full bg-slate-900/90 border border-slate-700/80 rounded-full py-2 pl-9 pr-14 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
           >
-          <button onclick="executeSearch()" class="absolute right-1 top-1 bottom-1 px-2.5 bg-[#F3BA2F] hover:bg-amber-400 text-slate-950 rounded-lg flex items-center justify-center font-bold cursor-pointer">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <button onclick="executeSearch()" class="absolute right-1 top-1 bottom-1 px-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-[10px] cursor-pointer shadow">
+            Search
           </button>
         </div>
         <!-- Live Mobile Search Suggestions Dropdown -->
-        <div id="searchSuggestionsDropdownMobile" class="hidden absolute left-3 right-3 top-full mt-1 search-dropdown p-2 z-50 text-xs divide-y divide-slate-800 rounded-xl shadow-2xl"></div>
+        <div id="searchSuggestionsDropdownMobile" class="hidden absolute left-3 right-3 top-full mt-1 search-dropdown p-2 z-50 text-xs divide-y divide-slate-800 rounded-2xl shadow-2xl"></div>
       </div>
 
-      <!-- 3. Authentic FoneZone Royal Blue Navigation Bar & Mega Dropdown -->
-      <nav id="storeCategoryBar" class="bg-[#1E56D8] text-white text-xs px-3 sm:px-4 shadow-md relative z-30 transition-colors">
+      <!-- 3. Desktop/Tablet FoneZone Royal Blue Navigation Bar (Hidden on Mobile) -->
+      <nav id="storeCategoryBar" class="hidden sm:block bg-[#1E56D8] text-white text-xs px-3 sm:px-4 shadow-md relative z-30 transition-colors">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
           <div class="flex items-center gap-1.5 py-1.5 overflow-x-auto whitespace-nowrap no-scrollbar scroll-smooth w-full">
             
@@ -269,7 +297,7 @@
             </a>
           </div>
 
-          <!-- Trust Badge on Right of Nav (Replaces Redundant Helpline) -->
+          <!-- Trust Badge on Right of Nav -->
           <div class="hidden xl:flex items-center gap-3 py-1 text-xs shrink-0 pl-4 text-blue-100 font-medium">
             <span class="flex items-center gap-1">
               <span class="text-amber-300">🛡️</span>
@@ -283,6 +311,77 @@
           </div>
         </div>
       </nav>
+
+      <!-- 4. Ultra-Modern Mobile Squircle Category Story Rail (< sm) -->
+      <div id="mobileCategoryStoryRail" class="block sm:hidden py-2 px-3 border-t border-slate-800/50 bg-slate-950/40 backdrop-blur-md">
+        <div class="flex items-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth py-0.5">
+          
+          <!-- All Devices -->
+          <button onclick="setCategory('all')" class="mobile-story-item flex flex-col items-center gap-1 shrink-0 cursor-pointer group">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-black text-sm shadow-md group-hover:scale-105 transition-transform">
+              ⚡
+            </div>
+            <span class="text-[10px] font-bold text-slate-200 group-hover:text-blue-400 transition-colors">All (27)</span>
+          </button>
+
+          <!-- iPhones -->
+          <button onclick="setCategory('phone', 'apple')" class="mobile-story-item flex flex-col items-center gap-1 shrink-0 cursor-pointer group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
+              <img src="assets/iphone14_blue.png" alt="iPhones" class="max-h-full max-w-full object-contain">
+            </div>
+            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">iPhones</span>
+          </button>
+
+          <!-- Samsung Galaxy -->
+          <button onclick="setCategory('phone', 'samsung')" class="mobile-story-item flex flex-col items-center gap-1 shrink-0 cursor-pointer group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
+              <img src="assets/samsung_s23_ultra.png" alt="Samsung" class="max-h-full max-w-full object-contain">
+            </div>
+            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">Galaxy</span>
+          </button>
+
+          <!-- OnePlus & Pixel -->
+          <button onclick="setCategory('phone', 'oneplus')" class="mobile-story-item flex flex-col items-center gap-1 shrink-0 cursor-pointer group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
+              <img src="assets/oneplus_7pro.jpg" alt="OnePlus" class="max-h-full max-w-full object-contain rounded-lg">
+            </div>
+            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">OnePlus</span>
+          </button>
+
+          <!-- MacBooks -->
+          <button onclick="setCategory('macbook', 'apple')" class="mobile-story-item flex flex-col items-center gap-1 shrink-0 cursor-pointer group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
+              <img src="assets/macbookair_midnight.png" alt="MacBooks" class="max-h-full max-w-full object-contain">
+            </div>
+            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">MacBooks</span>
+          </button>
+
+          <!-- iPads -->
+          <button onclick="setCategory('ipad', 'all')" class="mobile-story-item flex flex-col items-center gap-1 shrink-0 cursor-pointer group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
+              <img src="assets/ipad_10th_gen.png" alt="iPads" class="max-h-full max-w-full object-contain rounded-lg">
+            </div>
+            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">iPads</span>
+          </button>
+
+          <!-- Smartwatches -->
+          <button onclick="setCategory('watch', 'all')" class="mobile-story-item flex flex-col items-center gap-1 shrink-0 cursor-pointer group">
+            <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
+              <img src="assets/applewatch_series7.png" alt="Watches" class="max-h-full max-w-full object-contain rounded-lg">
+            </div>
+            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">Watches</span>
+          </button>
+
+          <!-- Sell Phone -->
+          <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="mobile-story-item flex flex-col items-center gap-1 shrink-0 cursor-pointer group">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-base shadow-md group-hover:scale-105 transition-transform">
+              💰
+            </div>
+            <span class="text-[10px] font-bold text-emerald-400">Sell Phone</span>
+          </a>
+
+        </div>
+      </div>
     </header>
 
     <!-- ======================================================== -->
@@ -304,150 +403,142 @@
         <div id="heroCarouselTrack" class="flex transition-transform duration-700 ease-out" style="transform: translateX(0%);">
           
           <!-- Slide 1: iPhone 14 & 15 Pro Festival Drop -->
-          <div class="hero-slide min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6"
+          <div class="hero-slide min-w-full relative overflow-hidden p-3.5 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6"
                style="background: radial-gradient(circle at 80% 50%, rgba(30, 86, 216, 0.35) 0%, transparent 50%), linear-gradient(135deg, #070D1D 0%, #0F1B36 50%, #0A1224 100%);">
-            <div class="relative z-10 max-w-xl">
-              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-blue-500/25 text-blue-300 border border-blue-500/40 text-[10px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5">
-                  <span>🔥</span> <span>MEGA REFURBISHED FESTIVAL</span>
+            <div class="relative z-10 flex-1 max-w-xl">
+              <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
+                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-blue-500/25 text-blue-300 border border-blue-500/40 text-[9px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
+                  <span>🔥</span> <span>MEGA FESTIVAL</span>
                 </span>
-                <span class="px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[9px] sm:text-[10px] font-bold">
+                <span class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[8px] sm:text-[10px] font-bold">
                   FLAT 60% OFF
                 </span>
               </div>
-              <h1 class="text-xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
-                Certified Pre-Owned Flagships.<br>
+              <h1 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                Certified Pre-Owned Flagships.<br class="hidden sm:block">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-300">
-                  iPhone 14 & 15 Pro Max
+                  iPhone 14 & 15 Pro
                 </span>
               </h1>
-              <p class="text-xs sm:text-sm text-slate-300 mt-2 sm:mt-3 leading-relaxed" id="heroSlide1Price">
-                Starting from <strong class="text-white text-base">₹38,999</strong> (MSRP <span class="line-through text-slate-400">₹69,900</span>). Every device passes our rigorous 32-point engineering inspection with authentic cosmetic condition grading.
+              <p class="text-[11px] sm:text-sm text-slate-300 mt-1 sm:mt-3 leading-snug sm:leading-relaxed" id="heroSlide1Price">
+                Starting from <strong class="text-white text-xs sm:text-base">₹38,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹69,900</span>). Every device passes our 32-point inspection.</span>
               </p>
-              <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 mt-3 sm:mt-5">
-                <button onclick="setCategory('phone')" class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-black shadow-lg shadow-blue-600/30 flex items-center gap-1.5 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
-                  <span>⚡ Shop Refurbished iPhones</span>
+              <div class="flex items-center gap-2 sm:gap-3 mt-2 sm:mt-5">
+                <button onclick="setCategory('phone')" class="px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-blue-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+                  <span>⚡ Shop iPhones</span>
                 </button>
-                <button onclick="tourOpen360()" class="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-1.5 sm:gap-2 cursor-pointer">
-                  <span>🔍 Test 360° Inspector</span>
+                <button onclick="tourOpen360()" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 sm:gap-2 cursor-pointer">
+                  <span>🔍 360° Inspector</span>
                 </button>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-3 sm:mt-6 text-[10px] sm:text-[11px] text-slate-300">
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 6M Warranty</span>
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 85%+ Battery</span>
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 0-Dent Checked</span>
+              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[9px] sm:text-[11px] text-slate-300">
+                <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 6M Warranty</span>
+                <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 85%+ Battery</span>
+                <span class="hidden sm:flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 0-Dent Checked</span>
               </div>
             </div>
             <!-- Right Visual with Device Composite & Floating Badges -->
-            <div class="relative z-10 shrink-0 w-44 sm:w-80 md:w-96 flex items-center justify-center my-2 sm:my-0">
+            <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
               <div class="relative">
-                <img src="assets/iphone14_blue.png" alt="iPhone 14 Refurbished" class="w-36 sm:w-64 md:w-72 drop-shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
+                <img src="assets/iphone14_blue.png" alt="iPhone 14 Refurbished" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
                 <!-- Floating Offer Badge -->
-                <div id="heroSlide1SaveBadge" class="absolute -top-2 -right-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[10px] sm:text-[11px] font-black px-2 sm:px-3 py-1 sm:py-1.5 rounded-2xl shadow-xl border border-emerald-400/40 animate-pulse">
-                  Save ₹30,901
-                </div>
-                <!-- Floating Grade Badge -->
-                <div class="absolute -bottom-2 -left-2 bg-slate-950/90 backdrop-blur-md border border-slate-700 text-slate-200 text-[9px] sm:text-[11px] font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-lg flex items-center gap-1.5">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                  <span>Grade A (Pristine)</span>
+                <div id="heroSlide1SaveBadge" class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[8px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl border border-emerald-400/40">
+                  Save ₹30k
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Slide 2: Samsung Galaxy S23 Ultra Epic Drop -->
-          <div class="hero-slide min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6"
+          <div class="hero-slide min-w-full relative overflow-hidden p-3.5 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6"
                style="background: radial-gradient(circle at 80% 50%, rgba(147, 51, 234, 0.35) 0%, transparent 50%), linear-gradient(135deg, #0C081A 0%, #171033 50%, #0F0A24 100%);">
-            <div class="relative z-10 max-w-xl">
-              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-purple-500/25 text-purple-300 border border-purple-500/40 text-[10px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5">
-                  <span>⚡</span> <span>200MP CAMERA MONSTER</span>
+            <div class="relative z-10 flex-1 max-w-xl">
+              <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
+                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-purple-500/25 text-purple-300 border border-purple-500/40 text-[9px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
+                  <span>⚡</span> <span>200MP MONSTER</span>
                 </span>
-                <span id="heroSlide2SaveBadge" class="px-2 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[9px] sm:text-[10px] font-bold">
+                <span id="heroSlide2SaveBadge" class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[8px] sm:text-[10px] font-bold">
                   SAVE ₹70,000
                 </span>
               </div>
-              <h2 class="text-xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
-                Galaxy S23 Ultra 5G.<br>
+              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                Galaxy S23 Ultra 5G.<br class="hidden sm:block">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-amber-300">
-                  Phantom Black 256GB
+                  Phantom Black
                 </span>
               </h2>
-              <p class="text-xs sm:text-sm text-slate-300 mt-2 sm:mt-3 leading-relaxed" id="heroSlide2Price">
-                Starting from <strong class="text-white text-base">₹54,999</strong> (MSRP <span class="line-through text-slate-400">₹1,24,999</span>). Original S-Pen stylus included. 100x Space Zoom & Dynamic AMOLED 2X tested with zero burn-in.
+              <p class="text-[11px] sm:text-sm text-slate-300 mt-1 sm:mt-3 leading-snug sm:leading-relaxed" id="heroSlide2Price">
+                Starting from <strong class="text-white text-xs sm:text-base">₹54,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,24,999</span>). Original S-Pen stylus included.</span>
               </p>
-              <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 mt-3 sm:mt-5">
-                <button onclick="setSubFilter('samsung')" class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-xs font-black shadow-lg shadow-purple-600/30 flex items-center gap-1.5 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
-                  <span>⚡ Shop Galaxy Deals</span>
+              <div class="flex items-center gap-2 sm:gap-3 mt-2 sm:mt-5">
+                <button onclick="setSubFilter('samsung')" class="px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-purple-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+                  <span>⚡ Shop Galaxy</span>
                 </button>
-                <button onclick="openInspectModal('fz-s23ultra')" class="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-1.5 sm:gap-2 cursor-pointer">
-                  <span>🔍 Inspect 360° Condition</span>
+                <button onclick="openInspectModal('fz-s23ultra')" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 sm:gap-2 cursor-pointer">
+                  <span>🔍 Inspect 360°</span>
                 </button>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-3 sm:mt-6 text-[10px] sm:text-[11px] text-slate-300">
-                <span class="flex items-center gap-1"><span class="text-purple-400">✓</span> S-Pen Included</span>
-                <span class="flex items-center gap-1"><span class="text-purple-400">✓</span> 5000mAh Battery</span>
-                <span class="flex items-center gap-1"><span class="text-purple-400">✓</span> Free Insured Dispatch</span>
+              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[9px] sm:text-[11px] text-slate-300">
+                <span class="flex items-center gap-0.5"><span class="text-purple-400">✓</span> S-Pen Included</span>
+                <span class="flex items-center gap-0.5"><span class="text-purple-400">✓</span> 5000mAh</span>
+                <span class="hidden sm:flex items-center gap-0.5"><span class="text-purple-400">✓</span> Free Insured Air</span>
               </div>
             </div>
             <!-- Right Visual -->
-            <div class="relative z-10 shrink-0 w-44 sm:w-80 md:w-96 flex items-center justify-center my-2 sm:my-0">
+            <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
               <div class="relative">
-                <img src="assets/samsung_s23_ultra.png" alt="Samsung Galaxy S23 Ultra Refurbished" class="w-36 sm:w-64 md:w-72 drop-shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
-                <div class="absolute -top-2 -right-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[10px] sm:text-[11px] font-black px-2 sm:px-3 py-1 sm:py-1.5 rounded-2xl shadow-xl border border-purple-400/40">
-                  56% OFF MSRP
-                </div>
-                <div class="absolute -bottom-2 -left-2 bg-slate-950/90 backdrop-blur-md border border-slate-700 text-slate-200 text-[9px] sm:text-[11px] font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl shadow-lg flex items-center gap-1.5">
-                  <span>🖊️ S-Pen Included</span>
+                <img src="assets/samsung_s23_ultra.png" alt="Samsung Galaxy S23 Ultra Refurbished" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
+                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[8px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl border border-purple-400/40">
+                  56% OFF
                 </div>
               </div>
             </div>
           </div>
 
           <!-- Slide 3: Instant Exchange & Doorstep Buyback -->
-          <div class="hero-slide min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6"
+          <div class="hero-slide min-w-full relative overflow-hidden p-3.5 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6"
                style="background: radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.35) 0%, transparent 50%), linear-gradient(135deg, #051A12 0%, #0B291D 50%, #061912 100%);">
-            <div class="relative z-10 max-w-xl">
-              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
-                <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 text-[10px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1.5">
-                  <span>🔄</span> <span>INSTANT DEVICE EXCHANGE</span>
+            <div class="relative z-10 flex-1 max-w-xl">
+              <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
+                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 text-[9px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
+                  <span>🔄</span> <span>INSTANT EXCHANGE</span>
                 </span>
-                <span id="heroSlide3TradeinBadge" class="px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[9px] sm:text-[10px] font-bold">
-                  GET UP TO ₹15,000 EXTRA
+                <span id="heroSlide3TradeinBadge" class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[8px] sm:text-[10px] font-bold">
+                  GET ₹15,000 EXTRA
                 </span>
               </div>
-              <h2 class="text-xl sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
-                Sell Your Old Phone.<br>
+              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                Sell Your Old Phone.<br class="hidden sm:block">
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300">
-                  Instant Cash at Doorstep.
+                  Instant UPI Cash.
                 </span>
               </h2>
-              <p class="text-xs sm:text-sm text-slate-300 mt-2 sm:mt-3 leading-relaxed">
-                Upgrade to certified Apple or Samsung flagship with zero hassle. Free doorstep evaluation, instant UPI money transfer, and best market trade-in quote.
+              <p class="text-[11px] sm:text-sm text-slate-300 mt-1 sm:mt-3 leading-snug sm:leading-relaxed">
+                Free doorstep pickup, instant valuation, and same-day UPI transfer.
               </p>
-              <div class="flex flex-wrap items-center gap-2.5 sm:gap-3 mt-3 sm:mt-5">
-                <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow-lg shadow-emerald-600/30 flex items-center gap-1.5 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
-                  <span>💰 Get Instant Valuation Quote</span>
+              <div class="flex items-center gap-2 sm:gap-3 mt-2 sm:mt-5">
+                <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-emerald-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+                  <span>💰 Instant Quote</span>
                 </a>
-                <a href="#/pages/wholesale-price" onclick="navigateTo('#/pages/wholesale-price'); return false;" class="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold flex items-center gap-1.5 sm:gap-2 cursor-pointer">
-                  <span>📦 B2B Wholesale Deals</span>
+                <a href="#/pages/wholesale-price" onclick="navigateTo('#/pages/wholesale-price'); return false;" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 sm:gap-2 cursor-pointer">
+                  <span>📦 Wholesale</span>
                 </a>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex flex-wrap items-center gap-3 sm:gap-4 mt-3 sm:mt-6 text-[10px] sm:text-[11px] text-slate-300">
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 60-Sec Valuation</span>
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> Free Doorstep Pickup</span>
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> Instant Payment</span>
+              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[9px] sm:text-[11px] text-slate-300">
+                <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 60s Quote</span>
+                <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> Free Pickup</span>
+                <span class="hidden sm:flex items-center gap-0.5"><span class="text-emerald-400">✓</span> Instant UPI</span>
               </div>
             </div>
             <!-- Right Visual (MacBook / Tablets / Phones) -->
-            <div class="relative z-10 shrink-0 w-44 sm:w-80 md:w-96 flex items-center justify-center my-2 sm:my-0">
+            <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
               <div class="relative">
-                <img src="assets/macbookair_midnight.png" alt="MacBook & Gadget Trade-in" class="w-40 sm:w-72 md:w-80 drop-shadow-2xl object-contain">
-                <div class="absolute -top-2 -right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-[10px] sm:text-[11px] font-black px-2 sm:px-3 py-1 sm:py-1.5 rounded-2xl shadow-xl">
-                  ⚡ Instant UPI Cash
+                <img src="assets/macbookair_midnight.png" alt="MacBook & Gadget Trade-in" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl object-contain">
+                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-[8px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl">
+                  ⚡ UPI Cash
                 </div>
               </div>
             </div>
@@ -479,11 +570,11 @@
 
       </div>
 
-      <!-- B. Authentic E-Commerce Offer Rail / Deal Grid ("Offer Raid" / Flash Deals Strip) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mt-4" id="heroOfferRail">
+      <!-- B. Authentic E-Commerce Offer Rail / Deal Grid (Horizontal Swipe on Mobile, 4-Col Grid on Desktop) -->
+      <div class="flex overflow-x-auto snap-x gap-3 mt-3 pb-1 no-scrollbar sm:grid sm:grid-cols-2 lg:grid-cols-4" id="heroOfferRail">
         
         <!-- Offer 1: Live Lightning Flash Deal with Countdown -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-900 border border-amber-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
+        <div class="w-[270px] sm:w-auto shrink-0 sm:shrink snap-start p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-900 border border-amber-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
           <div class="flex items-center justify-between mb-1.5">
             <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
               <span>⚡</span> FLASH DEAL
@@ -506,7 +597,7 @@
         </div>
 
         <!-- Offer 2: Bank Instant Discount Rail -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-blue-950/40 via-slate-900 to-slate-900 border border-blue-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
+        <div class="w-[270px] sm:w-auto shrink-0 sm:shrink snap-start p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-blue-950/40 via-slate-900 to-slate-900 border border-blue-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
           <div class="flex items-center justify-between mb-1.5">
             <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30 flex items-center gap-1">
               <span>💳</span> BANK OFFER
@@ -526,7 +617,7 @@
         </div>
 
         <!-- Offer 3: 1-Click Exclusive Coupon Code -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-purple-950/40 via-slate-900 to-slate-900 border border-purple-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
+        <div class="w-[270px] sm:w-auto shrink-0 sm:shrink snap-start p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-purple-950/40 via-slate-900 to-slate-900 border border-purple-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
           <div class="flex items-center justify-between mb-1.5">
             <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center gap-1">
               <span>🏷️</span> PROMO CODE
@@ -548,7 +639,7 @@
         </div>
 
         <!-- Offer 4: Zero-Risk Doorstep COD & Inspection -->
-        <div class="p-3.5 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
+        <div class="w-[270px] sm:w-auto shrink-0 sm:shrink snap-start p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between">
           <div class="flex items-center justify-between mb-1.5">
             <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
               <span>🛡️</span> ZERO RISK
@@ -569,30 +660,30 @@
 
       </div>
 
-      <!-- C. Trust Assurance Strip -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-3 pt-3 border-t border-slate-800/80 text-[11px]" id="heroTrustStrip">
-        <div class="flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
+      <!-- C. Trust Assurance Strip (Horizontal Swipe on Mobile, 4-Col Grid on Desktop) -->
+      <div class="flex overflow-x-auto snap-x gap-2.5 sm:grid sm:grid-cols-4 sm:gap-3 mt-2.5 pt-2.5 border-t border-slate-800/80 text-[11px] no-scrollbar" id="heroTrustStrip">
+        <div class="shrink-0 min-w-[170px] sm:min-w-0 snap-start flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
           <span class="text-lg">🛡️</span>
           <div>
             <div class="font-bold text-white">Up to 6M Warranty</div>
             <div class="text-slate-400 text-[10px]">100% Genuine Certified Parts</div>
           </div>
         </div>
-        <div class="flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
+        <div class="shrink-0 min-w-[170px] sm:min-w-0 snap-start flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
           <span class="text-lg">🔋</span>
           <div>
             <div class="font-bold text-white">Certified Battery</div>
             <div class="text-slate-400 text-[10px]">85%+ Health Guaranteed</div>
           </div>
         </div>
-        <div class="flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
+        <div class="shrink-0 min-w-[170px] sm:min-w-0 snap-start flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
           <span class="text-lg">🚚</span>
           <div>
             <div class="font-bold text-white">Pan-India COD</div>
             <div class="text-slate-400 text-[10px]">Insured Doorstep Dispatch</div>
           </div>
         </div>
-        <div class="flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
+        <div class="shrink-0 min-w-[170px] sm:min-w-0 snap-start flex items-center gap-2 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
           <span class="text-lg">🔄</span>
           <div>
             <div class="font-bold text-white">7 Days Easy Return</div>
@@ -3525,6 +3616,122 @@
     </div>
   </div>
   
+  <!-- ======================================================== -->
+  <!-- SLIDE-OVER MOBILE NAVIGATION & DEMO DRAWER (< sm)        -->
+  <!-- ======================================================== -->
+  <div id="mobileNavDrawer" class="fixed inset-0 z-[60] pointer-events-none transition-opacity duration-300 opacity-0">
+    <!-- Backdrop -->
+    <div id="mobileNavBackdrop" onclick="toggleMobileNav(false)" class="absolute inset-0 bg-slate-950/80 backdrop-blur-sm transition-opacity cursor-pointer"></div>
+
+    <!-- Drawer Body -->
+    <div id="mobileNavContent" class="absolute top-0 bottom-0 left-0 w-[85%] max-w-sm bg-[#0B1120] border-r border-slate-800 shadow-2xl p-5 flex flex-col justify-between overflow-y-auto transform -translate-x-full transition-transform duration-300 ease-out pointer-events-auto">
+      
+      <div>
+        <!-- Drawer Top: Logo & Close Button -->
+        <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <img src="assets/fonezone_logo_white.png" alt="FoneZone" class="h-8 w-auto object-contain">
+            <span class="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-blue-500/15 text-blue-400 border border-blue-500/30 font-mono">Certified</span>
+          </div>
+          <button onclick="toggleMobileNav(false)" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Drawer Quick Switchers: Currency & Theme -->
+        <div class="grid grid-cols-2 gap-2 mt-4 p-2 bg-slate-900/90 rounded-2xl border border-slate-800">
+          <div class="flex items-center bg-slate-950 rounded-xl p-1 justify-around">
+            <button id="drawerRegionIN" onclick="setRegion('IN')" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-600 text-white cursor-pointer transition-all">🇮🇳 INR</button>
+            <button id="drawerRegionUAE" onclick="setRegion('UAE')" class="px-2.5 py-1 text-xs font-semibold text-slate-400 hover:text-white cursor-pointer transition-all">🇦🇪 AED</button>
+          </div>
+          <button onclick="toggleTheme()" class="flex items-center justify-center gap-1.5 py-1.5 px-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-xs font-bold text-slate-200 border border-slate-800 transition-colors cursor-pointer">
+            <span>☀️/🌙</span>
+            <span id="drawerThemeLabel">Theme</span>
+          </button>
+        </div>
+
+        <!-- Categories Section -->
+        <div class="mt-5">
+          <div class="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-2 px-1">Shop Certified Tech</div>
+          <div class="space-y-1 text-xs font-semibold text-slate-200">
+            <button onclick="setCategory('all'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5"><span>⚡</span> <span>All 27 Certified Devices</span></span>
+              <span class="text-[10px] text-blue-400 font-mono font-bold">From ₹10,999</span>
+            </button>
+            <button onclick="setCategory('phone', 'apple'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5"><span>🍎</span> <span>Apple iPhones</span></span>
+              <span class="text-[10px] text-slate-400 font-mono">15, 14, 13, 12</span>
+            </button>
+            <button onclick="setCategory('phone', 'samsung'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5"><span>📱</span> <span>Samsung Galaxy</span></span>
+              <span class="text-[10px] text-slate-400 font-mono">S23 Ultra, S22</span>
+            </button>
+            <button onclick="setCategory('phone', 'oneplus'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5"><span>🔴</span> <span>OnePlus & Pixel</span></span>
+              <span class="text-[10px] text-slate-400 font-mono">11, 10 Pro, 7A</span>
+            </button>
+            <button onclick="setCategory('macbook', 'apple'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5"><span>💻</span> <span>Apple MacBooks</span></span>
+              <span class="text-[10px] text-emerald-400 font-mono">M1, M2 Pro</span>
+            </button>
+            <button onclick="setCategory('ipad', 'all'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5"><span>📑</span> <span>iPads & Tablets</span></span>
+              <span class="text-[10px] text-slate-400 font-mono">Air, 10th Gen</span>
+            </button>
+            <button onclick="setCategory('watch', 'all'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
+              <span class="flex items-center gap-2.5"><span>⌚</span> <span>Apple & Galaxy Watch</span></span>
+              <span class="text-[10px] text-slate-400 font-mono">Series 8, Ultra</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Customer Services -->
+        <div class="mt-5 pt-4 border-t border-slate-800">
+          <div class="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-2 px-1">Services & VIP Help</div>
+          <div class="space-y-1 text-xs font-semibold text-slate-200">
+            <button onclick="openCeoModal(); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl bg-gradient-to-r from-amber-500/15 to-orange-500/15 border border-amber-500/30 text-amber-300 flex items-center justify-between cursor-pointer">
+              <span class="flex items-center gap-2 font-bold"><span>👑</span> <span>ASK TO CEO (Direct)</span></span>
+              <span class="text-[9px] bg-amber-400 text-slate-950 px-1.5 py-0.5 rounded font-black uppercase">VIP</span>
+            </button>
+            <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); toggleMobileNav(false); return false;" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800 flex items-center justify-between cursor-pointer">
+              <span class="flex items-center gap-2"><span>💰</span> <span>Sell Your Device</span></span>
+              <span class="text-[9px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-1.5 py-0.5 rounded font-bold">Instant UPI</span>
+            </a>
+            <button onclick="openTrackOrderModal(); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800 flex items-center gap-2 cursor-pointer">
+              <span>📦</span> <span>Track Your Order</span>
+            </button>
+            <a href="tel:+918044630881" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800 flex items-center gap-2 text-blue-400 cursor-pointer">
+              <span>📞</span> <span>Call Support (+91 8044630881)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drawer Footer: NexG Executive Demo Switcher -->
+      <div class="mt-6 pt-4 border-t border-slate-800">
+        <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
+          <span>NexG Demo Controls</span>
+          <span class="text-blue-400 font-bold">v2.4</span>
+        </div>
+        <div class="grid grid-cols-2 gap-2">
+          <button onclick="switchPortal('storefront'); toggleMobileNav(false);" class="p-2 rounded-xl text-xs font-bold bg-blue-600 text-white flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>🛍️</span> <span>Storefront</span>
+          </button>
+          <button onclick="switchPortal('ops'); toggleMobileNav(false);" class="p-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>⚙️</span> <span>Merchant Ops</span>
+          </button>
+        </div>
+        <div class="grid grid-cols-3 gap-1.5 mt-2">
+          <button onclick="tourSpeedTest(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[10px] text-slate-300 text-center cursor-pointer">⚡ Speed</button>
+          <button onclick="tourOpen360(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[10px] text-slate-300 text-center cursor-pointer">🔍 360°</button>
+          <button onclick="tourOpenWhatsApp(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/50 border border-emerald-500/40 text-[10px] text-emerald-300 text-center cursor-pointer">📲 WhatsApp</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
   <!-- SLIDING CART DRAWER                                      -->
   <!-- ======================================================== -->
   <div id="cartDrawer" class="fixed inset-0 z-50 hidden">
@@ -3713,8 +3920,63 @@
     </div>
   </div>
 
-    <!-- Toast Notification Container -->
-  <div id="toastNotification" class="fixed bottom-6 right-6 z-50 hidden px-4 py-3 rounded-xl bg-slate-900 border border-blue-500/50 text-white text-xs shadow-2xl flex items-center gap-2">
+  <!-- ======================================================== -->
+  <!-- CASHIFY-STYLE MOBILE BOTTOM APP NAVIGATION BAR (< sm)    -->
+  <!-- ======================================================== -->
+  <nav id="mobileBottomNavBar" class="sm:hidden fixed bottom-0 left-0 right-0 z-40 bg-slate-950/95 backdrop-blur-xl border-t border-slate-800/90 shadow-2xl transition-all" style="padding-bottom: env(safe-area-inset-bottom, 0px);">
+    <div class="grid grid-cols-5 h-14 max-w-md mx-auto items-center px-1">
+      
+      <!-- 1. Home -->
+      <button id="bottomNavHome" onclick="handleBottomNavClick('home')" class="bottom-nav-tab flex flex-col items-center justify-center gap-0.5 text-blue-500 font-bold cursor-pointer py-1 transition-colors">
+        <svg class="w-5 h-5 transition-transform active:scale-90" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        <span class="text-[10px] tracking-tight">Home</span>
+      </button>
+
+      <!-- 2. Categories -->
+      <button id="bottomNavCategories" onclick="handleBottomNavClick('categories')" class="bottom-nav-tab flex flex-col items-center justify-center gap-0.5 text-slate-400 hover:text-white cursor-pointer py-1 transition-colors">
+        <svg class="w-5 h-5 transition-transform active:scale-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+        </svg>
+        <span class="text-[10px] tracking-tight">Categories</span>
+      </button>
+
+      <!-- 3. Sell Phone (Elevated Center Action Button) -->
+      <button id="bottomNavSell" onclick="handleBottomNavClick('sell')" class="bottom-nav-tab relative -top-3 flex flex-col items-center justify-center cursor-pointer group">
+        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 text-slate-950 flex items-center justify-center shadow-lg shadow-emerald-500/30 border-2 border-slate-950 group-active:scale-90 transition-transform">
+          <span class="text-xl font-black">💰</span>
+        </div>
+        <span class="text-[10px] font-black text-emerald-400 tracking-tight mt-0.5">Sell Phone</span>
+      </button>
+
+      <!-- 4. Wishlist / Saved -->
+      <button id="bottomNavWishlist" onclick="handleBottomNavClick('wishlist')" class="bottom-nav-tab relative flex flex-col items-center justify-center gap-0.5 text-slate-400 hover:text-white cursor-pointer py-1 transition-colors">
+        <div class="relative">
+          <svg class="w-5 h-5 transition-transform active:scale-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+          <span id="bottomWishlistBadge" class="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-red-500 text-[9px] font-bold text-white flex items-center justify-center hidden">0</span>
+        </div>
+        <span class="text-[10px] tracking-tight">Saved</span>
+      </button>
+
+      <!-- 5. Cart -->
+      <button id="bottomNavCart" onclick="handleBottomNavClick('cart')" class="bottom-nav-tab relative flex flex-col items-center justify-center gap-0.5 text-slate-400 hover:text-white cursor-pointer py-1 transition-colors">
+        <div class="relative">
+          <svg class="w-5 h-5 transition-transform active:scale-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+          <span id="bottomCartBadge" class="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-blue-600 text-[9px] font-bold text-white flex items-center justify-center hidden">0</span>
+        </div>
+        <span class="text-[10px] tracking-tight">Cart</span>
+      </button>
+
+    </div>
+  </nav>
+
+  <!-- Toast Notification Container -->
+  <div id="toastNotification" class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 hidden px-4 py-3 rounded-xl bg-slate-900 border border-blue-500/50 text-white text-xs shadow-2xl flex items-center gap-2">
     <span id="toastIcon">✨</span>
     <span id="toastMessage">Action completed</span>
   </div>
