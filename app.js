@@ -4504,7 +4504,7 @@ const state = {
   
   // Cart & Wishlist
   cart: [],
-  wishlist: [],
+  wishlist: ["fz-ip15p"],
 
   // Theme State
   theme: "dark",
@@ -4615,6 +4615,9 @@ function applyTheme(theme) {
     if (footerLogo) footerLogo.src = "assets/fonezone_logo_white.png";
     localStorage.setItem("fz_theme", "dark");
     showToast("🌙 Switched to Dark Mode (High-Tech Midnight Aesthetic)");
+  }
+  if (window.lucide) {
+    window.lucide.createIcons();
   }
 }
 
@@ -4939,16 +4942,18 @@ function renderCatalog() {
 
         <!-- Action Buttons: 360 View, Add to Cart & Buy COD -->
         <div class="grid grid-cols-2 gap-2 mt-3 pt-2" onclick="event.stopPropagation();">
-          <button onclick="addToCart('${p.id}')" class="card-add-cart-btn py-2 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] flex items-center justify-center gap-1 transition-colors cursor-pointer">
+          <button onclick="addToCart('${p.id}')" class="card-add-cart-btn py-2 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] flex items-center justify-center gap-1 transition-colors cursor-pointer tap-scale">
             <span>🛒 Add to Cart</span>
           </button>
-          <button onclick="buyProductCOD('${p.id}')" class="py-2 px-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center justify-center gap-1 shadow-md shadow-blue-600/20 transition-all cursor-pointer">
+          <button onclick="buyProductCOD('${p.id}')" class="py-2 px-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center justify-center gap-1 shadow-md shadow-blue-600/20 transition-all cursor-pointer tap-scale">
             <span>⚡ Buy COD</span>
           </button>
         </div>
       </div>
     `;
   }).join('');
+
+  if (window.lucide) window.lucide.createIcons();
 }
 
 function setCardStorage(productId, size) {
@@ -5479,11 +5484,12 @@ function updateCartDrawerUI() {
   if (state.cart.length === 0) {
     listEl.innerHTML = `
       <div class="py-12 text-center text-slate-400">
-        <span class="text-3xl">🛒</span>
-        <p class="font-bold text-white text-xs mt-2">Your cart is empty</p>
+        <i data-lucide="shopping-bag" class="w-10 h-10 text-slate-600 mx-auto"></i>
+        <p class="font-bold text-white text-xs mt-3">Your cart is empty</p>
         <p class="text-[11px] text-slate-500 mt-1">Explore certified refurbished devices with 6M warranty.</p>
       </div>
     `;
+    if (window.lucide) window.lucide.createIcons();
     return;
   }
 
@@ -5500,6 +5506,8 @@ function updateCartDrawerUI() {
       </button>
     </div>
   `).join('');
+
+  if (window.lucide) window.lucide.createIcons();
 }
 
 function removeFromCart(idx) {
@@ -5535,7 +5543,128 @@ function searchTrackOrder() {
 }
 
 function openWishlistDrawer() {
-  showToast("❤️ Saved to your FoneZone Wishlist! (1 Item)");
+  const drawer = document.getElementById("wishlistDrawer");
+  if (drawer) drawer.classList.remove("hidden");
+  updateWishlistUI();
+}
+
+function closeWishlistDrawer() {
+  const drawer = document.getElementById("wishlistDrawer");
+  if (drawer) drawer.classList.add("hidden");
+}
+
+function toggleWishlist(productId) {
+  const idx = state.wishlist.indexOf(productId);
+  if (idx > -1) {
+    state.wishlist.splice(idx, 1);
+    showToast("Removed from Saved Devices");
+  } else {
+    state.wishlist.push(productId);
+    showToast("❤️ Saved to your FoneZone Wishlist!");
+  }
+  updateWishlistUI();
+}
+
+function updateWishlistUI() {
+  const count = state.wishlist.length;
+  
+  // Desktop Header Badge
+  const badge = document.getElementById("wishlistCountBadge");
+  if (badge) badge.textContent = count;
+  
+  // Mobile Bottom Nav Badge
+  const bottomBadge = document.getElementById("bottomWishlistBadge");
+  if (bottomBadge) {
+    bottomBadge.textContent = count;
+    if (count > 0) {
+      bottomBadge.classList.remove("hidden");
+    } else {
+      bottomBadge.classList.add("hidden");
+    }
+  }
+
+  // Drawer Count
+  const drawerCount = document.getElementById("wishlistDrawerCount");
+  if (drawerCount) drawerCount.textContent = count;
+
+  // Drawer List
+  const listEl = document.getElementById("wishlistItemsList");
+  if (!listEl) return;
+
+  if (count === 0) {
+    listEl.innerHTML = `
+      <div class="py-12 text-center text-slate-400">
+        <i data-lucide="heart" class="w-10 h-10 text-slate-600 mx-auto"></i>
+        <p class="font-bold text-white text-xs mt-3">No saved devices yet</p>
+        <p class="text-[11px] text-slate-500 mt-1">Tap the heart icon on any device to save it for later.</p>
+      </div>
+    `;
+    if (window.lucide) window.lucide.createIcons();
+    return;
+  }
+
+  const items = state.wishlist.map(id => CATALOG.find(p => p.id === id)).filter(Boolean);
+  listEl.innerHTML = items.map(p => `
+    <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-3 text-xs">
+      <img src="${p.image}" alt="${p.name}" class="w-12 h-12 object-contain bg-slate-950/60 p-1 rounded-lg">
+      <div class="flex-1 min-w-0">
+        <div class="font-bold text-white truncate">${p.name}</div>
+        <div class="text-[10px] text-emerald-400 font-bold">Grade A Pristine • 6M Warranty</div>
+        <div class="text-slate-300 font-mono mt-0.5">${formatMoney(p.priceGradeA)}</div>
+      </div>
+      <div class="flex items-center gap-1.5 shrink-0">
+        <button onclick="addWishlistItemToCart('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[10px] cursor-pointer tap-scale" title="Add to Cart">
+          + Cart
+        </button>
+        <button onclick="toggleWishlist('${p.id}')" class="p-1.5 rounded-lg text-slate-500 hover:text-red-400 cursor-pointer" title="Remove">
+          ✕
+        </button>
+      </div>
+    </div>
+  `).join('');
+
+  if (window.lucide) window.lucide.createIcons();
+}
+
+function addWishlistItemToCart(productId) {
+  const p = CATALOG.find(item => item.id === productId);
+  if (!p) return;
+  state.cart.push({
+    id: p.id + "-" + Date.now(),
+    name: p.name,
+    image: p.image,
+    grade: "A",
+    price: p.priceGradeA,
+    qty: 1
+  });
+  updateCartDrawerUI();
+  showToast(`🛒 Added ${p.name} to Cart!`);
+}
+
+function addAllWishlistToCart() {
+  if (state.wishlist.length === 0) {
+    showToast("No saved devices to move!");
+    return;
+  }
+  state.wishlist.forEach(id => {
+    const p = CATALOG.find(item => item.id === id);
+    if (p) {
+      state.cart.push({
+        id: p.id + "-" + Date.now(),
+        name: p.name,
+        image: p.image,
+        grade: "A",
+        price: p.priceGradeA,
+        qty: 1
+      });
+    }
+  });
+  state.wishlist = [];
+  updateWishlistUI();
+  updateCartDrawerUI();
+  closeWishlistDrawer();
+  openCartDrawer();
+  showToast("Moved all saved items to Cart!");
 }
 
 /* ======================================================== */
@@ -7020,7 +7149,11 @@ document.addEventListener("DOMContentLoaded", () => {
   renderOrdersTable();
   updateLogisticsCalc();
   updateCartDrawerUI();
+  updateWishlistUI();
   handleRoute();
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
 });
 
 /* ======================================================== */
@@ -7207,6 +7340,7 @@ function toggleMobileNav(isOpen) {
     content.classList.add("translate-x-0");
     document.body.classList.add("overflow-hidden");
     updateMobileBottomNavActive("categories");
+    if (window.lucide) window.lucide.createIcons();
   } else {
     drawer.classList.remove("pointer-events-auto", "opacity-100");
     drawer.classList.add("pointer-events-none", "opacity-0");
