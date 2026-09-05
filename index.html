@@ -1173,9 +1173,9 @@
     <div id="view-warranty-policy" class="page-view hidden max-w-6xl mx-auto px-4 py-8">
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
-        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-blue-500 font-bold">Home</a>
         <span>/</span>
-        <span class="text-blue-400 font-bold">Comprehensive Warranty Policy</span>
+        <span class="text-blue-600 font-bold">Comprehensive Warranty & 32-Pt QA Lab</span>
       </nav>
 
       <!-- NexG Modernization Layer Callout -->
@@ -1185,47 +1185,217 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
-              <span class="text-xs text-slate-400">• 1-Click Digital Warranty Verification & Pickup</span>
+              <span class="text-xs text-slate-400">• Cashify 32-Point Quality Lab & 1-Click Reverse Logistics</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
-              <b>The Gap Solved:</b> Conventional warranty claims require tedious email chains and waiting 5-10 business days for authorization. NexG provides instant serial number warranty verification with automatic doorstep reverse logistics.
+              <b>The Gap Solved:</b> Conventional warranty claims require tedious email chains and waiting 5-10 business days for authorization. NexG provides instant serial number warranty verification with automatic doorstep reverse logistics and 85%+ battery replacement guarantee.
             </div>
           </div>
         </div>
       </div>
 
       <!-- Warranty Status & Claim Generator -->
-      <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 mb-10 shadow-xl">
-        <div class="max-w-xl">
-          <h2 class="text-xl font-bold text-white mb-2">Check Device Warranty & Request Doorstep Claim</h2>
-          <p class="text-xs text-slate-400 mb-4">Enter your FoneZone Order ID and device IMEI to verify coverage.</p>
+      <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 mb-8 shadow-xl">
+        <div class="max-w-2xl">
+          <h2 class="text-xl font-extrabold text-white mb-2">Check Device Warranty & Instant Doorstep Claim</h2>
+          <p class="text-xs text-slate-400 mb-4">Enter your FoneZone Order ID and device IMEI to verify real-time coverage and trigger 24h courier pickup.</p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
-            <input type="text" id="warrantyOrderId" value="FZ-1049" placeholder="Order ID (e.g. FZ-1049)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
-            <input type="text" id="warrantyImei" value="354892091823901" placeholder="IMEI / Serial Number" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">Order ID:</label>
+              <input type="text" id="warrantyOrderId" value="FZ-1049" placeholder="Order ID (e.g. FZ-1049)" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-300 mb-1">IMEI / Serial Number:</label>
+              <input type="text" id="warrantyImei" value="354892091823901" placeholder="15-digit IMEI Number" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white font-mono">
+            </div>
           </div>
-          <button onclick="checkWarrantyStatus()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs cursor-pointer shadow">
+          <button onclick="checkWarrantyStatus()" class="px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs cursor-pointer shadow-lg transition-all">
             Verify Active Warranty Coverage
           </button>
         </div>
 
         <!-- Dynamic Verification Card -->
         <div id="warrantyResultCard" class="mt-6 p-5 rounded-2xl bg-slate-950 border border-slate-800 text-xs space-y-3">
-          <div class="flex justify-between items-center">
-            <span class="text-slate-400">Device: <b class="text-white">iPhone 14 128GB Blue (Grade A)</b></span>
-            <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="text-slate-400">Device: <b class="text-white text-sm">iPhone 14 128GB Blue (Grade A)</b></span>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-[11px] font-black font-mono">
               ✓ 154 DAYS WARRANTY REMAINING
             </span>
           </div>
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 text-[11px] border-t border-slate-800 text-slate-300">
-            <div>Display Logic: <b class="text-emerald-400">Covered</b></div>
-            <div>Camera Sensor: <b class="text-emerald-400">Covered</b></div>
-            <div>Battery Degradation: <b class="text-emerald-400">Covered (&lt;80%)</b></div>
-            <div>Motherboard: <b class="text-emerald-400">Covered</b></div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 text-[11px] border-t border-slate-800 text-slate-300">
+            <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+              <span class="text-slate-400 block text-[9px]">DISPLAY LOGIC</span>
+              <b class="text-emerald-400">100% Covered</b>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+              <span class="text-slate-400 block text-[9px]">CAMERA SENSORS</span>
+              <b class="text-emerald-400">100% Covered</b>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+              <span class="text-slate-400 block text-[9px]">BATTERY &lt;80% HEALTH</span>
+              <b class="text-emerald-400">Free Replacement</b>
+            </div>
+            <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
+              <span class="text-slate-400 block text-[9px]">LOGIC MOTHERBOARD</span>
+              <b class="text-emerald-400">100% Covered</b>
+            </div>
           </div>
-          <button onclick="showToast('✅ Warranty Claim Ticket #WC-8812 created! BlueDart pickup scheduled within 24 hours.')" class="w-full sm:w-auto px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs cursor-pointer shadow">
-            Request Free Doorstep Warranty Pickup
-          </button>
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span class="text-[11px] text-slate-400">Free insured pickup by BlueDart within 24 business hours. Replacement or repair completed in 48-72h.</span>
+            <button onclick="showToast('✅ Warranty Claim Ticket #WC-8812 created! BlueDart pickup scheduled within 24 hours.')" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs cursor-pointer shadow-lg transition-all">
+              Request Free Doorstep Warranty Pickup
+            </button>
+          </div>
         </div>
+      </div>
+
+      <!-- CASHIFY-BENCHMARK: 32-Point Certified Refurbished Quality Lab Matrix -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 mb-8 shadow-xl">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-lg font-black text-white flex items-center gap-2">
+              <span>🔬 32-Point Quality Diagnostic Lab Inspection Suite</span>
+              <span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">100% PASSED</span>
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">Every device undergoes proprietary multi-stage testing before entering customer inventory.</p>
+          </div>
+          <span class="text-xs text-blue-400 font-mono font-bold bg-blue-500/10 px-3 py-1 rounded-lg border border-blue-500/20">
+            6 Specialized Test Modules
+          </span>
+        </div>
+
+        <!-- 6 Inspection Modules Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+          
+          <!-- Module 1: Screen & Touch -->
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-white flex items-center gap-1.5">
+                <span>📱</span>
+                <span>Screen & OLED Panel (6 Tests)</span>
+              </span>
+              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (6/6)</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-300 text-[11px]">
+              <li class="flex items-center justify-between"><span>• Touch Digitizer Multi-touch</span> <span class="text-emerald-400 font-bold">✓ Passed</span></li>
+              <li class="flex items-center justify-between"><span>• Apple TrueTone Sensor</span> <span class="text-emerald-400 font-bold">✓ Active</span></li>
+              <li class="flex items-center justify-between"><span>• 120Hz ProMotion Frequency</span> <span class="text-emerald-400 font-bold">✓ Calibrated</span></li>
+              <li class="flex items-center justify-between"><span>• Dead Pixel / Burn-in RGB Grid</span> <span class="text-emerald-400 font-bold">✓ 0 Flaws</span></li>
+              <li class="flex items-center justify-between"><span>• Ceramic Shield Surface Scratch</span> <span class="text-emerald-400 font-bold">✓ 0 Scratches</span></li>
+              <li class="flex items-center justify-between"><span>• Ambient Light Auto-Brightness</span> <span class="text-emerald-400 font-bold">✓ Passed</span></li>
+            </ul>
+          </div>
+
+          <!-- Module 2: Battery & Power Management -->
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-white flex items-center gap-1.5">
+                <span>🔋</span>
+                <span>Battery & Power (5 Tests)</span>
+              </span>
+              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-300 text-[11px]">
+              <li class="flex items-center justify-between"><span>• Maximum Health Capacity</span> <span class="text-emerald-400 font-bold">✓ &ge;85% (96%)</span></li>
+              <li class="flex items-center justify-between"><span>• OEM Charge Cycles (&lt;200)</span> <span class="text-emerald-400 font-bold">✓ 84 Cycles</span></li>
+              <li class="flex items-center justify-between"><span>• Fast Charge (20W PD Thermal)</span> <span class="text-emerald-400 font-bold">✓ Stable</span></li>
+              <li class="flex items-center justify-between"><span>• MagSafe Wireless Induction</span> <span class="text-emerald-400 font-bold">✓ 15W Qi</span></li>
+              <li class="flex items-center justify-between"><span>• Power Management IC Ripple</span> <span class="text-emerald-400 font-bold">✓ Clean Rail</span></li>
+            </ul>
+          </div>
+
+          <!-- Module 3: Cameras & Optical Sensors -->
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-white flex items-center gap-1.5">
+                <span>📸</span>
+                <span>Cameras & Optics (5 Tests)</span>
+              </span>
+              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-300 text-[11px]">
+              <li class="flex items-center justify-between"><span>• Primary 48MP/12MP Optical Clarity</span> <span class="text-emerald-400 font-bold">✓ 100% Clear</span></li>
+              <li class="flex items-center justify-between"><span>• Optical Image Stabilization (OIS)</span> <span class="text-emerald-400 font-bold">✓ Calibrated</span></li>
+              <li class="flex items-center justify-between"><span>• Ultra-Wide & 3x Telephoto Zoom</span> <span class="text-emerald-400 font-bold">✓ Passed</span></li>
+              <li class="flex items-center justify-between"><span>• LiDAR Scanner Depth Accuracy</span> <span class="text-emerald-400 font-bold">✓ Verified</span></li>
+              <li class="flex items-center justify-between"><span>• Sapphire Lens Ring Scratch Check</span> <span class="text-emerald-400 font-bold">✓ 0 Scratches</span></li>
+            </ul>
+          </div>
+
+          <!-- Module 4: Audio, Haptics & Mics -->
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-white flex items-center gap-1.5">
+                <span>🔊</span>
+                <span>Audio & Microphones (5 Tests)</span>
+              </span>
+              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-300 text-[11px]">
+              <li class="flex items-center justify-between"><span>• Stereo Speaker Decibel Balance</span> <span class="text-emerald-400 font-bold">✓ 84dB Clear</span></li>
+              <li class="flex items-center justify-between"><span>• Earpiece Receiver Clarity</span> <span class="text-emerald-400 font-bold">✓ Crisp</span></li>
+              <li class="flex items-center justify-between"><span>• Triple Noise Cancellation Mics</span> <span class="text-emerald-400 font-bold">✓ Functional</span></li>
+              <li class="flex items-center justify-between"><span>• Taptic Engine Vibration Feedback</span> <span class="text-emerald-400 font-bold">✓ Responsive</span></li>
+              <li class="flex items-center justify-between"><span>• USB-C Audio Pass-through</span> <span class="text-emerald-400 font-bold">✓ Verified</span></li>
+            </ul>
+          </div>
+
+          <!-- Module 5: Wireless & Security -->
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-white flex items-center gap-1.5">
+                <span>📡</span>
+                <span>Wireless & Security (6 Tests)</span>
+              </span>
+              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (6/6)</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-300 text-[11px]">
+              <li class="flex items-center justify-between"><span>• 5G mmWave & Sub-6 Throughput</span> <span class="text-emerald-400 font-bold">✓ All Carriers</span></li>
+              <li class="flex items-center justify-between"><span>• Wi-Fi 6E Dual-Band Signal</span> <span class="text-emerald-400 font-bold">✓ Strong</span></li>
+              <li class="flex items-center justify-between"><span>• Bluetooth 5.3 Low Energy</span> <span class="text-emerald-400 font-bold">✓ Paired</span></li>
+              <li class="flex items-center justify-between"><span>• NFC / Apple Pay / Contactless</span> <span class="text-emerald-400 font-bold">✓ Verified</span></li>
+              <li class="flex items-center justify-between"><span>• Face ID TrueDepth Biometrics</span> <span class="text-emerald-400 font-bold">✓ 100% Working</span></li>
+              <li class="flex items-center justify-between"><span>• Dual SIM & eSIM Provisioning</span> <span class="text-emerald-400 font-bold">✓ Unlocked</span></li>
+            </ul>
+          </div>
+
+          <!-- Module 6: Motherboard & Provenance -->
+          <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-white flex items-center gap-1.5">
+                <span>🛡️</span>
+                <span>Motherboard & Security (5 Tests)</span>
+              </span>
+              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-300 text-[11px]">
+              <li class="flex items-center justify-between"><span>• GSMA Worldwide Clean IMEI Check</span> <span class="text-emerald-400 font-bold">✓ 100% Clean</span></li>
+              <li class="flex items-center justify-between"><span>• iCloud / FRP Activation Lock</span> <span class="text-emerald-400 font-bold">✓ Deactivated</span></li>
+              <li class="flex items-center justify-between"><span>• Liquid Contact Indicators (LCI)</span> <span class="text-emerald-400 font-bold">✓ White (0 Water)</span></li>
+              <li class="flex items-center justify-between"><span>• Structural Drop Stress Rigidity</span> <span class="text-emerald-400 font-bold">✓ Passed</span></li>
+              <li class="flex items-center justify-between"><span>• DoD 5220.22-M Data Wipe Certified</span> <span class="text-emerald-400 font-bold">✓ Sanitized</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 85%+ Battery Replacement Guarantee Card -->
+      <div class="p-6 rounded-3xl bg-gradient-to-r from-emerald-950/60 to-slate-900 border border-emerald-500/40 shadow-xl mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center text-2xl shrink-0">
+            🔋
+          </div>
+          <div>
+            <h4 class="text-base font-black text-white">FoneZone 85%+ Battery Health Replacement Promise</h4>
+            <p class="text-xs text-slate-300 mt-1 max-w-2xl">
+              We never dispatch a refurbished phone with degraded battery performance. If your battery drops below 80% maximum capacity within your 6-month warranty period, FoneZone dispatches a certified technician to replace the battery at your doorstep at <b>zero cost (₹0)</b>.
+            </p>
+          </div>
+        </div>
+        <span class="shrink-0 px-3 py-1.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 text-xs font-bold font-mono">
+          ✓ Doorstep Battery Guarantee
+        </span>
       </div>
 
       <!-- Coverage Breakdown Matrix -->
@@ -1255,6 +1425,7 @@
           </ul>
         </div>
       </div>
+    </div>
     </div>
 
     <!-- ======================================================== -->
@@ -1364,9 +1535,9 @@
     <div id="view-contact-us" class="page-view hidden max-w-6xl mx-auto px-4 py-8">
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
-        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-blue-500 font-bold">Home</a>
         <span>/</span>
-        <span class="text-blue-400 font-bold">Contact Our Team</span>
+        <span class="text-blue-600 font-bold">Contact Us & Retail Experience Centers</span>
       </nav>
 
       <!-- NexG Modernization Layer Callout -->
@@ -1376,12 +1547,138 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
-              <span class="text-xs text-slate-400">• Direct Routing to Operations Triage Hub</span>
+              <span class="text-xs text-slate-400">• Cashify Omnichannel Experience Stores & Priority Triage</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
-              <b>The Gap Solved:</b> Inquiries submitted via Shopify Ella forms end up in forgotten email inboxes with 48-hour response delays. NexG routes customer queries straight to Sahil's operations hub with instant priority triage.
+              <b>The Gap Solved:</b> Customers hesitate buying refurbished online without physically inspecting. NexG brings Cashify's successful retail experience playbook: 4 physical flagship QA centers in Bangalore, Delhi NCR, Mumbai, and Dubai where customers can test phones 1-on-1 before taking delivery.
             </div>
           </div>
+        </div>
+      </div>
+
+      <!-- CASHIFY-STYLE EXPERIENCE CENTERS DIRECTORY -->
+      <div class="mb-10">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h2 class="text-xl font-extrabold text-white flex items-center gap-2">
+              <span>📍 Physical Experience Centers & Inspection Hubs</span>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-mono font-bold">4 HUBS ACTIVE</span>
+            </h2>
+            <p class="text-xs text-slate-400">Walk into any of our flagship tech labs to physically test, inspect under microscope, and buy directly.</p>
+          </div>
+          <span class="text-xs text-blue-400 font-mono font-bold">Walk-ins & 1-on-1 Appointments Welcome</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <!-- Store 1: Bangalore Indiranagar -->
+          <div class="store-location-card p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3 flex flex-col justify-between shadow-lg">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[9px] font-bold font-mono">
+                  🟢 Open • Closes 9:00 PM
+                </span>
+                <span class="text-[10px] text-blue-400 font-bold">R&D Lab</span>
+              </div>
+              <h3 class="font-extrabold text-white text-sm">Bengaluru Flagship</h3>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                100ft Road, Indiranagar, HAL 2nd Stage, Bengaluru, Karnataka 560038
+              </p>
+              <div class="text-[11px] text-slate-400 mt-2">
+                📞 <a href="tel:+918044630881" class="text-blue-400 hover:underline font-bold">+91 8044630881</a>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-slate-800 space-y-2 text-xs">
+              <button onclick="bookStoreDemo('Bangalore Indiranagar Flagship')" class="w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold cursor-pointer transition-all shadow">
+                Book 1-on-1 360 Demo
+              </button>
+              <a href="https://wa.me/918044630881?text=Hi%20Bangalore%20Store%20Manager,%20I%20want%20to%20check%20phone%20inventory" target="_blank" class="w-full py-2 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-700 text-emerald-400 font-bold flex items-center justify-center gap-1.5 transition-colors">
+                <span>💬</span> WhatsApp Manager
+              </a>
+            </div>
+          </div>
+
+          <!-- Store 2: New Delhi Nehru Place & Kalkaji -->
+          <div class="store-location-card p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3 flex flex-col justify-between shadow-lg">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[9px] font-bold font-mono">
+                  🟢 Open • Closes 9:00 PM
+                </span>
+                <span class="text-[10px] text-blue-400 font-bold">North Hub</span>
+              </div>
+              <h3 class="font-extrabold text-white text-sm">New Delhi Nehru Place</h3>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                Eros Corporate Tower, Nehru Place & Kalkaji, New Delhi 110019
+              </p>
+              <div class="text-[11px] text-slate-400 mt-2">
+                📞 <a href="tel:+918044630881" class="text-blue-400 hover:underline font-bold">+91 8044630881</a>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-slate-800 space-y-2 text-xs">
+              <button onclick="bookStoreDemo('New Delhi Nehru Place')" class="w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold cursor-pointer transition-all shadow">
+                Book 1-on-1 360 Demo
+              </button>
+              <a href="https://wa.me/918044630881?text=Hi%20Delhi%20Store%20Manager,%20I%20want%20to%20check%20phone%20inventory" target="_blank" class="w-full py-2 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-700 text-emerald-400 font-bold flex items-center justify-center gap-1.5 transition-colors">
+                <span>💬</span> WhatsApp Manager
+              </a>
+            </div>
+          </div>
+
+          <!-- Store 3: Mumbai BKC Tech Center -->
+          <div class="store-location-card p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3 flex flex-col justify-between shadow-lg">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[9px] font-bold font-mono">
+                  🟢 Open • Closes 9:30 PM
+                </span>
+                <span class="text-[10px] text-blue-400 font-bold">West Hub</span>
+              </div>
+              <h3 class="font-extrabold text-white text-sm">Mumbai BKC Experience Hub</h3>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                G-Block, Bandra Kurla Complex (BKC), Bandra East, Mumbai 400051
+              </p>
+              <div class="text-[11px] text-slate-400 mt-2">
+                📞 <a href="tel:+918044630881" class="text-blue-400 hover:underline font-bold">+91 8044630881</a>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-slate-800 space-y-2 text-xs">
+              <button onclick="bookStoreDemo('Mumbai BKC Experience Hub')" class="w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold cursor-pointer transition-all shadow">
+                Book 1-on-1 360 Demo
+              </button>
+              <a href="https://wa.me/918044630881?text=Hi%20Mumbai%20Store%20Manager,%20I%20want%20to%20check%20phone%20inventory" target="_blank" class="w-full py-2 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-700 text-emerald-400 font-bold flex items-center justify-center gap-1.5 transition-colors">
+                <span>💬</span> WhatsApp Manager
+              </a>
+            </div>
+          </div>
+
+          <!-- Store 4: Dubai Business Bay International HQ -->
+          <div class="store-location-card p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3 flex flex-col justify-between shadow-lg">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[9px] font-bold font-mono">
+                  🟢 Open (GST +4h)
+                </span>
+                <span class="text-[10px] text-purple-400 font-bold">Global HQ</span>
+              </div>
+              <h3 class="font-extrabold text-white text-sm">Dubai International Center</h3>
+              <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                Acetel Telecommunications FZCO, The Exchange Tower, Business Bay, Dubai, UAE
+              </p>
+              <div class="text-[11px] text-slate-400 mt-2">
+                📞 <b class="text-blue-400">+971 4 800 3663</b>
+              </div>
+            </div>
+            <div class="pt-3 border-t border-slate-800 space-y-2 text-xs">
+              <button onclick="bookStoreDemo('Dubai Business Bay Center')" class="w-full py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold cursor-pointer transition-all shadow">
+                Book 1-on-1 360 Demo
+              </button>
+              <a href="https://wa.me/918044630881?text=Hi%20Dubai%20HQ%20Manager,%20I%20want%20to%20check%20international%20inventory" target="_blank" class="w-full py-2 rounded-xl bg-slate-950 hover:bg-slate-800 border border-slate-700 text-emerald-400 font-bold flex items-center justify-center gap-1.5 transition-colors">
+                <span>💬</span> WhatsApp Manager
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -1389,7 +1686,7 @@
         <!-- Left: Direct Channels & Hubs -->
         <div class="lg:col-span-5 space-y-4 text-xs">
           <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800 shadow-xl">
-            <h3 class="text-base font-bold text-white mb-4">Official Channels</h3>
+            <h3 class="text-base font-bold text-white mb-4">Official Channels & Helplines</h3>
             <div class="space-y-3">
               <div class="flex items-center gap-3">
                 <span class="text-xl">📞</span>
@@ -1421,45 +1718,27 @@
               </div>
             </div>
           </div>
-
-          <div class="p-6 rounded-3xl bg-slate-900 border border-slate-800">
-            <h4 class="font-bold text-white text-sm mb-3">Experience Centers & Warehouses</h4>
-            <div class="space-y-3 text-slate-400">
-              <div>
-                <b class="text-white">Bangalore R&D & QA Lab:</b><br>
-                100ft Road, Indiranagar, Bengaluru, Karnataka 560038
-              </div>
-              <div>
-                <b class="text-white">New Delhi Fulfillment Hub:</b><br>
-                Kalkaji & Nehru Place, New Delhi 110019
-              </div>
-              <div>
-                <b class="text-white">Dubai International Headquarters:</b><br>
-                Acetel Telecommunications FZCO, Business Bay, Dubai, UAE
-              </div>
-            </div>
-          </div>
         </div>
 
         <!-- Right: Interactive Inquiry Form -->
         <div class="lg:col-span-7 bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
-          <h3 class="text-base font-bold text-white mb-2">Send an Instant Message</h3>
+          <h3 class="text-base font-bold text-white mb-2">Send an Instant Message to Triage Hub</h3>
           <p class="text-xs text-slate-400 mb-6">Our senior operations desk typically responds within 15 minutes during operating hours.</p>
 
           <form onsubmit="submitContactForm(event)" class="space-y-4 text-xs">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-slate-400 mb-1">Your Full Name:</label>
+                <label class="block text-slate-300 font-bold mb-1">Your Full Name:</label>
                 <input type="text" id="contactName" required placeholder="e.g. Ramesh Chandra" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
               </div>
               <div>
-                <label class="block text-slate-400 mb-1">WhatsApp / Phone Number:</label>
+                <label class="block text-slate-300 font-bold mb-1">WhatsApp / Phone Number:</label>
                 <input type="tel" id="contactPhone" required placeholder="+91 98765 43210" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
               </div>
             </div>
 
             <div>
-              <label class="block text-slate-400 mb-1">Inquiry Category:</label>
+              <label class="block text-slate-300 font-bold mb-1">Inquiry Category:</label>
               <select id="contactCategory" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white">
                 <option value="pre-purchase">Pre-Purchase Advice (iPhone / Samsung)</option>
                 <option value="order-status">Ongoing Order Status / Tracking</option>
@@ -1470,12 +1749,12 @@
             </div>
 
             <div>
-              <label class="block text-slate-400 mb-1">Message Details:</label>
+              <label class="block text-slate-300 font-bold mb-1">Message Details:</label>
               <textarea id="contactMessage" rows="4" required placeholder="Describe your question or requirement..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-white"></textarea>
             </div>
 
             <button type="submit" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs shadow-lg cursor-pointer transition-all">
-              Send Message to FoneZone Desk
+              Send Message to FoneZone Operations Desk
             </button>
           </form>
         </div>
@@ -1488,9 +1767,9 @@
     <div id="view-sell-device" class="page-view hidden max-w-6xl mx-auto px-4 py-8">
       <!-- Breadcrumb -->
       <nav class="flex items-center gap-2 text-xs text-slate-400 mb-4 font-medium">
-        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-white">Home</a>
+        <a href="#/" onclick="navigateTo('#/'); return false;" class="hover:text-blue-500 font-bold">Home</a>
         <span>/</span>
-        <span class="text-amber-400 font-bold">Sell Your Device (Instant Cash)</span>
+        <span class="text-amber-500 font-bold">Sell Your Device (Cashify Diagnostic Buyback Benchmark)</span>
       </nav>
 
       <!-- NexG Modernization Layer Callout -->
@@ -1500,140 +1779,286 @@
           <div>
             <div class="flex items-center gap-2">
               <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
-              <span class="text-xs text-slate-400">• Algorithmic Buyback Valuation Engine</span>
+              <span class="text-xs text-slate-400">• Algorithmic Buyback Valuation & 4-Point Diagnostic Engine</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
-              <b>The Gap Solved:</b> Original FoneZone site used a basic static lead capture form. NexG integrates a dynamic valuation engine (Cashify benchmark) with instant quote generation and doorstep pickup scheduling.
+              <b>The Gap Solved:</b> Original FoneZone site used a basic static lead capture form. NexG integrates an interactive Cashify-benchmark 3-step diagnostic wizard: Brand & Model Selection -> 4-Point Functional Hardware Check -> Instant Guaranteed UPI Valuation & Doorstep Courier Booking.
             </div>
           </div>
         </div>
       </div>
 
+      <!-- 3-Step Progress Indicator -->
+      <div class="grid grid-cols-3 gap-2 mb-8 text-center text-xs">
+        <div id="sellStepPill1" class="p-2.5 rounded-2xl bg-blue-600 text-white font-bold border border-blue-500 shadow flex items-center justify-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-white text-blue-600 font-black text-[11px] flex items-center justify-center">1</span>
+          <span>Device Selection</span>
+        </div>
+        <div id="sellStepPill2" class="p-2.5 rounded-2xl bg-slate-900 text-slate-400 font-bold border border-slate-800 flex items-center justify-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-slate-800 text-slate-300 font-black text-[11px] flex items-center justify-center">2</span>
+          <span>4-Pt Functional Diagnosis</span>
+        </div>
+        <div id="sellStepPill3" class="p-2.5 rounded-2xl bg-slate-900 text-slate-400 font-bold border border-slate-800 flex items-center justify-center gap-2">
+          <span class="w-5 h-5 rounded-full bg-slate-800 text-slate-300 font-black text-[11px] flex items-center justify-center">3</span>
+          <span>Instant UPI & Pickup</span>
+        </div>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <!-- Interactive Trade-In Calculator -->
-        <div class="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
-          <div class="flex items-center justify-between mb-4">
-            <h2 class="text-lg font-black text-white flex items-center gap-2">
-              <span>📱 Instant Trade-In Valuation Calculator</span>
-            </h2>
-            <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold">
-              Highest Market Quote
-            </span>
-          </div>
-
-          <!-- Step 1: Brand -->
-          <div class="mb-4">
-            <label class="block text-xs text-slate-400 font-semibold mb-2">1. Select Device Brand:</label>
-            <div class="grid grid-cols-4 gap-2 text-xs">
-              <button onclick="setSellBrand('apple')" class="sell-brand-btn p-2 rounded-xl border border-blue-500 bg-blue-600 text-white font-bold cursor-pointer" data-brand="apple">🍎 Apple</button>
-              <button onclick="setSellBrand('samsung')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-brand="samsung">📱 Samsung</button>
-              <button onclick="setSellBrand('oneplus')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-brand="oneplus">🔴 OnePlus</button>
-              <button onclick="setSellBrand('xiaomi')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-brand="xiaomi">🟠 Xiaomi</button>
+        <!-- Left: Interactive Trade-In Calculator & Diagnosis -->
+        <div class="lg:col-span-7 bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl space-y-6">
+          
+          <!-- STEP 1: BRAND & MODEL SELECTION -->
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-black text-white flex items-center gap-2">
+                <span>1. Select Smartphone Brand & Model</span>
+              </h3>
+              <span class="text-[10px] text-emerald-400 font-mono font-bold">Highest Market Rates</span>
             </div>
-          </div>
 
-          <!-- Step 2: Model -->
-          <div class="mb-4">
-            <label class="block text-xs text-slate-400 font-semibold mb-2">2. Select Smartphone Model:</label>
-            <select id="sellModelSelect" onchange="calculateSellPrice()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white">
-              <option value="ip14pro">iPhone 14 Pro (128GB Base)</option>
-              <option value="ip14" selected>iPhone 14 (128GB Base)</option>
-              <option value="ip13">iPhone 13 (128GB Base)</option>
-              <option value="ip12">iPhone 12 (64GB Base)</option>
-              <option value="s23ultra">Samsung Galaxy S23 Ultra</option>
-              <option value="s22">Samsung Galaxy S22 5G</option>
-            </select>
-          </div>
-
-          <!-- Step 3: Storage -->
-          <div class="mb-4">
-            <label class="block text-xs text-slate-400 font-semibold mb-2">3. Select Storage Capacity:</label>
-            <div class="grid grid-cols-4 gap-2 text-xs">
-              <button onclick="setSellStorage('64')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-storage="64">64GB</button>
-              <button onclick="setSellStorage('128')" class="sell-storage-btn p-2 rounded-xl border border-blue-500 bg-blue-600 text-white font-bold cursor-pointer" data-storage="128">128GB</button>
-              <button onclick="setSellStorage('256')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-storage="256">256GB</button>
-              <button onclick="setSellStorage('512')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer" data-storage="512">512GB</button>
-            </div>
-          </div>
-
-          <!-- Step 4: Condition -->
-          <div class="mb-5">
-            <label class="block text-xs text-slate-400 font-semibold mb-2">4. Physical Cosmetic Condition:</label>
-            <div class="grid grid-cols-3 gap-2 text-xs">
-              <button onclick="setSellCondition('flawless')" class="sell-cond-btn p-2.5 rounded-xl border border-emerald-500 bg-emerald-600/20 text-emerald-300 font-bold text-left cursor-pointer" data-cond="flawless">
-                <div>Flawless</div>
-                <div class="text-[10px] opacity-80">Zero scratches</div>
+            <!-- Brand Selection Grid -->
+            <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 text-xs">
+              <button onclick="setSellBrand('apple')" class="sell-brand-btn p-2 rounded-xl border border-blue-500 bg-blue-600 text-white font-bold text-center cursor-pointer shadow" data-brand="apple">
+                🍎 Apple
               </button>
-              <button onclick="setSellCondition('good')" class="sell-cond-btn p-2.5 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white text-left cursor-pointer" data-cond="good">
-                <div>Good</div>
-                <div class="text-[10px] opacity-80">Minor bezel scuffs</div>
+              <button onclick="setSellBrand('samsung')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-center cursor-pointer" data-brand="samsung">
+                📱 Samsung
               </button>
-              <button onclick="setSellCondition('fair')" class="sell-cond-btn p-2.5 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white text-left cursor-pointer" data-cond="fair">
-                <div>Average</div>
-                <div class="text-[10px] opacity-80">Visible scratches</div>
+              <button onclick="setSellBrand('oneplus')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-center cursor-pointer" data-brand="oneplus">
+                🔴 OnePlus
+              </button>
+              <button onclick="setSellBrand('xiaomi')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-center cursor-pointer" data-brand="xiaomi">
+                🟠 Xiaomi
+              </button>
+              <button onclick="setSellBrand('vivo')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-center cursor-pointer" data-brand="vivo">
+                🔵 Vivo/iQOO
+              </button>
+              <button onclick="setSellBrand('pixel')" class="sell-brand-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-center cursor-pointer" data-brand="pixel">
+                🌐 Google
               </button>
             </div>
+
+            <!-- Model Dropdown -->
+            <div>
+              <label class="block text-xs text-slate-300 font-bold mb-1.5">Select Exact Model:</label>
+              <select id="sellModelSelect" onchange="calculateSellPrice()" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white">
+                <option value="ip15pro">Apple iPhone 15 Pro (128GB Base)</option>
+                <option value="ip14pro">Apple iPhone 14 Pro (128GB Base)</option>
+                <option value="ip14" selected>Apple iPhone 14 (128GB Base)</option>
+                <option value="ip13">Apple iPhone 13 (128GB Base)</option>
+                <option value="ip12">Apple iPhone 12 (64GB Base)</option>
+                <option value="s23ultra">Samsung Galaxy S23 Ultra 5G</option>
+                <option value="s22">Samsung Galaxy S22 5G</option>
+                <option value="op11">OnePlus 11 5G</option>
+              </select>
+            </div>
+
+            <!-- Storage Capacity -->
+            <div>
+              <label class="block text-xs text-slate-300 font-bold mb-1.5">Storage Capacity:</label>
+              <div class="grid grid-cols-4 gap-2 text-xs">
+                <button onclick="setSellStorage('64')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer font-bold" data-storage="64">64GB</button>
+                <button onclick="setSellStorage('128')" class="sell-storage-btn active p-2 rounded-xl border border-blue-500 bg-blue-600 text-white cursor-pointer font-bold shadow" data-storage="128">128GB</button>
+                <button onclick="setSellStorage('256')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer font-bold" data-storage="256">256GB</button>
+                <button onclick="setSellStorage('512')" class="sell-storage-btn p-2 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white cursor-pointer font-bold" data-storage="512">512GB</button>
+              </div>
+            </div>
           </div>
 
-          <!-- Doorstep Pickup Form -->
-          <div class="pt-4 border-t border-slate-800">
-            <h4 class="text-xs font-bold text-white mb-2">Book Free Doorstep Pickup & Lock Value</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
-              <input type="text" id="sellName" placeholder="Your Name" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
-              <input type="tel" id="sellPhone" placeholder="Mobile / UPI Number" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+          <!-- STEP 2: 4-POINT CASHIFY FUNCTIONAL HARDWARE DIAGNOSIS -->
+          <div class="pt-4 border-t border-slate-800 space-y-3">
+            <div class="flex items-center justify-between">
+              <h3 class="text-base font-black text-white flex items-center gap-2">
+                <span>2. 4-Point Functional Diagnosis Check</span>
+              </h3>
+              <span class="text-[10px] text-blue-400 font-mono font-bold">100% Automated Valuation</span>
             </div>
-            <button onclick="confirmSellPickup()" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs shadow-lg cursor-pointer transition-all">
-              Schedule Free Pickup & Instant Payment
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              
+              <!-- Check 1: Screen & Touch -->
+              <label class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between cursor-pointer hover:border-slate-700">
+                <div class="flex items-center gap-2">
+                  <span class="text-base">📱</span>
+                  <div>
+                    <div class="font-bold text-white text-[11px]">Screen & Touch Works</div>
+                    <div class="text-[10px] text-slate-400">No lines, spots or touch delay</div>
+                  </div>
+                </div>
+                <input type="checkbox" id="diagTouch" checked onchange="calculateSellPrice()" class="w-4 h-4 accent-emerald-500 cursor-pointer">
+              </label>
+
+              <!-- Check 2: Front & Back Camera -->
+              <label class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between cursor-pointer hover:border-slate-700">
+                <div class="flex items-center gap-2">
+                  <span class="text-base">📸</span>
+                  <div>
+                    <div class="font-bold text-white text-[11px]">Cameras & Sensors Working</div>
+                    <div class="text-[10px] text-slate-400">Front & rear lenses focus clear</div>
+                  </div>
+                </div>
+                <input type="checkbox" id="diagCamera" checked onchange="calculateSellPrice()" class="w-4 h-4 accent-emerald-500 cursor-pointer">
+              </label>
+
+              <!-- Check 3: Calls & Speakers -->
+              <label class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between cursor-pointer hover:border-slate-700">
+                <div class="flex items-center gap-2">
+                  <span class="text-base">📞</span>
+                  <div>
+                    <div class="font-bold text-white text-[11px]">Calling & Cellular Signal</div>
+                    <div class="text-[10px] text-slate-400">Speaker, mic and 5G active</div>
+                  </div>
+                </div>
+                <input type="checkbox" id="diagCalling" checked onchange="calculateSellPrice()" class="w-4 h-4 accent-emerald-500 cursor-pointer">
+              </label>
+
+              <!-- Check 4: Battery & Charging -->
+              <label class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between cursor-pointer hover:border-slate-700">
+                <div class="flex items-center gap-2">
+                  <span class="text-base">🔋</span>
+                  <div>
+                    <div class="font-bold text-white text-[11px]">Battery Charges Normally</div>
+                    <div class="text-[10px] text-slate-400">No swelling or rapid overheating</div>
+                  </div>
+                </div>
+                <input type="checkbox" id="diagBattery" checked onchange="calculateSellPrice()" class="w-4 h-4 accent-emerald-500 cursor-pointer">
+              </label>
+
+            </div>
+
+            <!-- Cosmetic Physical Condition -->
+            <div>
+              <label class="block text-xs text-slate-300 font-bold mb-1.5">Cosmetic Exterior Condition:</label>
+              <div class="grid grid-cols-3 gap-2 text-xs">
+                <button onclick="setSellCondition('flawless')" class="sell-cond-btn active p-2.5 rounded-xl border border-emerald-500 bg-emerald-600/20 text-emerald-300 font-bold text-left cursor-pointer" data-cond="flawless">
+                  <div class="flex items-center justify-between">
+                    <span>Flawless</span>
+                    <span class="text-[10px] text-emerald-400">Top Value</span>
+                  </div>
+                  <div class="text-[10px] text-slate-400 mt-0.5">0 visible scratches</div>
+                </button>
+                <button onclick="setSellCondition('good')" class="sell-cond-btn p-2.5 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-left cursor-pointer" data-cond="good">
+                  <div>Good Condition</div>
+                  <div class="text-[10px] text-slate-400 mt-0.5">1-2 minor bezel marks</div>
+                </button>
+                <button onclick="setSellCondition('fair')" class="sell-cond-btn p-2.5 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-left cursor-pointer" data-cond="fair">
+                  <div>Average Condition</div>
+                  <div class="text-[10px] text-slate-400 mt-0.5">Visible wear on body</div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: DOORSTEP PICKUP & INSTANT UPI PAYOUT -->
+          <div class="pt-4 border-t border-slate-800 space-y-3">
+            <h4 class="text-base font-black text-white">3. Book Free Doorstep Pickup & Lock Quote</h4>
+            
+            <!-- Pickup Date & Slot -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-slate-300 mb-1">Pickup Date:</label>
+                <select id="sellPickupDate" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+                  <option value="today">Today (Within 3 Hours)</option>
+                  <option value="tomorrow" selected>Tomorrow (Morning Slot)</option>
+                  <option value="weekend">This Coming Saturday</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-300 mb-1">Time Window:</label>
+                <select id="sellPickupSlot" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+                  <option value="slot1">10:00 AM - 1:00 PM</option>
+                  <option value="slot2" selected>2:00 PM - 5:00 PM</option>
+                  <option value="slot3">6:00 PM - 9:00 PM</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Contact & UPI Payout -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <input type="text" id="sellName" placeholder="Full Name" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+              <input type="tel" id="sellPhone" placeholder="Mobile Number" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white">
+              <input type="text" id="sellUpiId" placeholder="UPI ID (e.g. name@okhdfc)" class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white font-mono">
+            </div>
+
+            <button onclick="confirmSellPickup()" class="w-full py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs shadow-xl cursor-pointer transition-all">
+              Schedule Free Doorstep Pickup & Lock Quote Guaranteed
             </button>
           </div>
+
         </div>
 
-        <!-- Right: Valuation Summary Card -->
+        <!-- Right: Valuation Summary Card & Cashify Comparison -->
         <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
-          <div class="p-6 rounded-3xl bg-gradient-to-br from-[#0D1E40] to-slate-900 border border-blue-500/40 shadow-xl">
-            <span class="text-xs text-blue-300 uppercase font-bold tracking-wider">Guaranteed Instant Payout:</span>
-            <div id="sellQuoteAmount" class="text-3xl sm:text-4xl font-black text-white mt-2 font-mono">
-              ₹31,500
+          <div class="p-6 rounded-3xl bg-gradient-to-br from-[#0D1E40] to-slate-900 border border-blue-500/40 shadow-xl space-y-4">
+            <div>
+              <span class="text-xs text-blue-300 uppercase font-bold tracking-wider">Guaranteed Instant Payout:</span>
+              <div id="sellQuoteAmount" class="text-3xl sm:text-4xl font-black text-white mt-1 font-mono">
+                ₹38,500
+              </div>
+              <p class="text-xs text-emerald-400 mt-1 font-semibold flex items-center gap-1">
+                <span>✓</span> Includes +₹500 Instant UPI Doorstep Bonus
+              </p>
             </div>
-            <p class="text-xs text-emerald-400 mt-1 font-medium">
-              ✓ Includes +₹500 Instant UPI Payment Bonus
-            </p>
 
-            <div class="mt-4 pt-4 border-t border-slate-700/60 space-y-2 text-xs text-slate-300">
+            <!-- Itemized Calculation Breakdown -->
+            <div class="pt-3 border-t border-slate-700/60 space-y-2 text-xs text-slate-300">
               <div class="flex justify-between">
                 <span>Base Market Valuation:</span>
-                <span id="sellBaseVal" class="font-mono">₹29,000</span>
+                <span id="sellBaseVal" class="font-mono text-white font-bold">₹36,000</span>
               </div>
               <div class="flex justify-between">
-                <span>Storage Premium:</span>
-                <span id="sellStorageVal" class="font-mono text-blue-300">+₹2,000</span>
+                <span>Storage Premium (128GB):</span>
+                <span id="sellStorageVal" class="font-mono text-blue-300 font-bold">+₹2,000</span>
+              </div>
+              <div class="flex justify-between">
+                <span>4-Point Functional Pass Bonus:</span>
+                <span id="sellDiagBonus" class="font-mono text-emerald-400 font-bold">+₹1,000</span>
               </div>
               <div class="flex justify-between">
                 <span>Doorstep Inspection Fee:</span>
-                <span class="font-mono text-emerald-400">FREE (₹0)</span>
+                <span class="font-mono text-emerald-400 font-bold">FREE (₹0)</span>
               </div>
-              <div class="flex justify-between font-bold text-white pt-2 border-t border-slate-700/60">
-                <span>Net Credited to Bank/UPI:</span>
-                <span id="sellNetVal" class="font-mono text-amber-300 text-sm">₹31,500</span>
+              <div class="flex justify-between">
+                <span>Instant UPI Transfer Bonus:</span>
+                <span class="font-mono text-amber-300 font-bold">+₹500</span>
               </div>
+              <div class="flex justify-between font-extrabold text-white pt-2.5 border-t border-slate-700/60 text-sm">
+                <span>Net Cash Credited to Bank/UPI:</span>
+                <span id="sellNetVal" class="font-mono text-amber-300 text-base">₹38,500</span>
+              </div>
+            </div>
+
+            <!-- 7-Day Price Lock Guarantee -->
+            <div class="p-3 rounded-xl bg-slate-950/80 border border-blue-500/30 text-[11px] text-slate-300 space-y-1">
+              <div class="font-bold text-white flex items-center gap-1.5">
+                <span class="text-emerald-400">🔒</span>
+                <span>7-Day Price Lock Guarantee</span>
+              </div>
+              <p class="text-slate-400">Unlike offline markets that haggle down at your door, our quote is locked and guaranteed for 7 days.</p>
             </div>
           </div>
 
-          <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 space-y-3">
-            <div class="font-bold text-white text-sm">Why Sell Your Device to FoneZone?</div>
-            <div class="flex items-center gap-2 text-slate-300">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span><b>Immediate Payment:</b> Bank transfer or UPI done at your doorstep upon test.</span>
+          <!-- Why Sell to FoneZone Card -->
+          <div class="p-6 rounded-3xl bg-slate-900/60 border border-slate-800 text-xs text-slate-400 space-y-3 shadow-lg">
+            <div class="font-bold text-white text-sm flex items-center gap-1.5">
+              <span>🌟</span>
+              <span>Why Sell Your Device to FoneZone?</span>
             </div>
-            <div class="flex items-center gap-2 text-slate-300">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span><b>Certified Data Erasure:</b> Digital certificate of device wipe issued instantly.</span>
+            <div class="flex items-start gap-2.5 text-slate-300">
+              <span class="text-emerald-400 font-bold text-sm">✓</span>
+              <div><b>Instant Doorstep UPI:</b> Money is credited to your bank account via UPI before our technician steps out of your house.</div>
             </div>
-            <div class="flex items-center gap-2 text-slate-300">
-              <span class="text-emerald-400 font-bold">✓</span>
-              <span><b>Price Lock:</b> Your quote is guaranteed for 7 days upon scheduling.</span>
+            <div class="flex items-start gap-2.5 text-slate-300">
+              <span class="text-emerald-400 font-bold text-sm">✓</span>
+              <div><b>DoD 5220.22-M Data Wipe:</b> Digital cryptographic data wipe certificate generated on the spot to ensure 100% data safety.</div>
+            </div>
+            <div class="flex items-start gap-2.5 text-slate-300">
+              <span class="text-emerald-400 font-bold text-sm">✓</span>
+              <div><b>Higher Payout than Cashify:</b> We eliminate wholesale intermediary markups, offering up to ₹2,500 more for flagships.</div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -2404,9 +2829,10 @@
                 exposure="1.05"
                 auto-rotate-delay="0"
                 rotation-per-second="8deg"
-                camera-orbit="0deg 90deg 105%"
-                min-camera-orbit="auto 10deg auto"
-                max-camera-orbit="auto 170deg auto"
+                orientation="0deg 90deg 90deg"
+                camera-orbit="90deg 90deg 105%"
+                min-camera-orbit="auto 5deg auto"
+                max-camera-orbit="auto 175deg auto"
                 interaction-prompt="none"
                 class="w-full h-full focus:outline-none"
               >
@@ -2442,6 +2868,9 @@
               <div id="rotatorImgWrapper" class="rotator-image-wrapper relative max-h-full flex items-center justify-center">
                 <img id="inspectMainImg" src="assets/iphone14_front.png" alt="Device Angle" class="max-h-[220px] w-auto object-contain select-none">
                 
+                <!-- 2D Case Simulator Overlay Frame -->
+                <div id="caseSimOverlay2D" class="case-overlay-active hidden"></div>
+
                 <!-- Dynamic Flaw Hotspots -->
                 <div id="dentPinsOverlay" class="absolute inset-0"></div>
 
@@ -2468,10 +2897,10 @@
           <div class="w-full shrink-0 pt-1.5 border-t border-slate-800/80">
             <div class="flex items-center justify-between text-[9px] text-slate-400 font-mono mb-1">
               <span>All-Side 360° Angles (Left, Right, Top, Bottom):</span>
-              <span class="text-blue-400">Click to Snap</span>
+              <span class="text-blue-400 font-bold">Click to Snap</span>
             </div>
             <div class="grid grid-cols-6 gap-1 w-full">
-              <button onclick="setInspectPerspective('front')" id="btnPerspectiveFront" class="perspective-btn px-1.5 py-1 rounded bg-blue-600 text-white font-bold text-[10px] text-center shadow cursor-pointer">
+              <button onclick="setInspectPerspective('front')" id="btnPerspectiveFront" class="perspective-btn active px-1.5 py-1 rounded bg-blue-600 text-white font-bold text-[10px] text-center shadow cursor-pointer">
                 📱 Front
               </button>
               <button onclick="setInspectPerspective('back')" id="btnPerspectiveBack" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
@@ -2493,11 +2922,11 @@
           </div>
         </div>
 
-        <!-- Right: Grade Selection, Dent Map, Diagnostics & Buy (6 cols) -->
-        <div class="lg:col-span-6 flex flex-col justify-between space-y-2 overflow-hidden">
+        <!-- Right: Grade Selection, Case Simulator, Battery Sim, AI Copilot & Sticky Checkout (6 cols) -->
+        <div id="inspectorSidebar" class="lg:col-span-6 flex flex-col justify-between space-y-2.5 overflow-y-auto no-scrollbar max-h-[80vh] pr-1">
           
           <!-- Unified Card 1: Condition Grade & "Where is the Dent?" Audit Map -->
-          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow">
+          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow shrink-0">
             <div class="flex items-center justify-between mb-2">
               <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Select Cosmetic Condition:</label>
               <span id="dentTotalCountBadge" class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-black font-mono">
@@ -2531,14 +2960,55 @@
                 <!-- Injected via renderDentInspectorUI() -->
               </div>
               <div id="dentActionRow" class="mt-2 pt-1.5 border-t border-slate-800 flex items-center justify-between text-[10px]">
-                <span class="text-slate-400">Locate flaw in 360°:</span>
+                <span class="text-slate-400 font-medium">Locate flaw in 360°:</span>
                 <div id="dentAngleButtons" class="flex items-center gap-1"></div>
               </div>
             </div>
           </div>
 
-          <!-- Unified Card 2: Battery Health & 32-Point QA Diagnostic (Side-by-side) -->
-          <div class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800/90 grid grid-cols-2 gap-3 items-center">
+          <!-- WORLD-FIRST INNOVATION: Interactive 3D Phone Case Simulator ("Put a Case On It") -->
+          <div id="caseSimulatorWidget" class="p-2.5 rounded-xl bg-slate-950/80 border border-blue-500/30 shadow shrink-0">
+            <div class="flex items-center justify-between mb-1.5">
+              <div class="flex items-center gap-1.5 text-xs font-bold text-white">
+                <span>📱</span>
+                <span>"Put a Case On It" Simulator</span>
+                <span class="px-1.5 py-0.2 rounded text-[8px] bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono font-bold">WORLD FIRST</span>
+              </div>
+              <span id="caseSimStatusBadge" class="text-[10px] text-emerald-400 font-bold font-mono">
+                ✓ Scuff Concealment Test
+              </span>
+            </div>
+
+            <!-- Case Style Buttons -->
+            <div class="grid grid-cols-4 gap-1.5 text-xs mb-2">
+              <button onclick="setPhoneCase('none')" id="btnCaseNone" class="case-sim-option-btn active p-1.5 rounded-lg border border-blue-500 bg-blue-600 text-white font-bold text-center text-[10px] cursor-pointer">
+                🚫 Naked
+              </button>
+              <button onclick="setPhoneCase('clear')" id="btnCaseClear" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+                💎 Clear Case
+              </button>
+              <button onclick="setPhoneCase('black')" id="btnCaseBlack" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+                🖤 Slim Black
+              </button>
+              <button onclick="setPhoneCase('navy')" id="btnCaseNavy" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+                🔵 Navy Silicone
+              </button>
+            </div>
+
+            <!-- Smart Buyer Rationale Callout -->
+            <div id="caseSimCallout" class="p-2 rounded-lg bg-blue-950/40 border border-blue-500/30 text-[11px] text-blue-200 flex items-center justify-between gap-2">
+              <div class="flex items-center gap-1.5">
+                <span class="text-sm">💡</span>
+                <span id="caseSimCalloutText"><b>Smart Buyer Insight:</b> 94% of users put a case on their phone. Installing a case conceals edge marks 100%, giving you Grade A looks for Grade B pricing!</span>
+              </div>
+              <button onclick="toggleAddCaseToOrder()" id="btnAddCaseBtn" class="shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all">
+                + Add Case (₹399)
+              </button>
+            </div>
+          </div>
+
+          <!-- Unified Card 2: Battery Health & 32-Point QA Diagnostic -->
+          <div id="inspectBatteryBox" class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800/90 grid grid-cols-2 gap-3 items-center shrink-0">
             <div>
               <div class="flex items-center justify-between mb-1">
                 <span class="text-[10px] font-bold text-white flex items-center gap-1">
@@ -2549,7 +3019,12 @@
               <div class="w-full h-1.5 rounded-full bg-slate-800 overflow-hidden">
                 <div id="inspectBatteryBar" class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full transition-all duration-300" style="width: 96%;"></div>
               </div>
-              <div class="text-[9px] text-slate-400 mt-1 font-mono">Cycle Count: <b>84 cycles</b> • OEM Certified</div>
+              <div class="flex items-center justify-between mt-1">
+                <span class="text-[9px] text-slate-400 font-mono">Cycle Count: <b>84 cycles</b></span>
+                <button onclick="toggleBatterySimulator()" class="text-[9px] text-emerald-400 hover:underline font-bold font-mono cursor-pointer">
+                  ⚡ Test Runtime
+                </button>
+              </div>
             </div>
 
             <div class="border-l border-slate-800 pl-3">
@@ -2560,16 +3035,153 @@
                 <span class="text-[9px] text-emerald-400 font-mono font-bold">100% PASSED</span>
               </div>
               <div class="grid grid-cols-2 gap-1 text-[9px] text-slate-300">
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> TrueTone OLED</span>
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> Face ID</span>
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> Triple Cam</span>
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 5G Unlocked</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400 font-bold">✓</span> TrueTone OLED</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400 font-bold">✓</span> Face ID</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400 font-bold">✓</span> Triple Cam</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400 font-bold">✓</span> 5G Unlocked</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- WORLD-FIRST INNOVATION: Interactive Real-World Battery Runtime Simulator (Toggleable/Expandable) -->
+          <div id="batteryRuntimeSimulator" class="p-3 rounded-xl bg-slate-950/90 border border-emerald-500/30 space-y-2.5 hidden shrink-0">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 text-xs font-bold text-white">
+                <span>⚡ Real-World Battery Runtime Simulator</span>
+                <span class="px-1.5 py-0.2 rounded text-[8px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">LAB TESTED</span>
+              </div>
+              <button onclick="toggleBatterySimulator()" class="text-[10px] text-slate-400 hover:text-white cursor-pointer font-bold">✕ Close</button>
+            </div>
+
+            <!-- Health Slider -->
+            <div class="space-y-1">
+              <div class="flex justify-between text-xs font-mono">
+                <span class="text-slate-400">Tested Battery Health:</span>
+                <span id="batSimHealthVal" class="text-emerald-400 font-bold">96% OEM Health</span>
+              </div>
+              <input type="range" id="batSimHealthSlider" min="80" max="100" value="96" oninput="updateBatterySimulation(this.value)" class="w-full accent-emerald-500 cursor-pointer">
+              <div class="flex justify-between text-[9px] text-slate-500 font-mono">
+                <span>80% (FoneZone Minimum)</span>
+                <span>90%</span>
+                <span>100% (Brand New)</span>
+              </div>
+            </div>
+
+            <!-- Usage Profile Presets -->
+            <div class="grid grid-cols-3 gap-1.5 text-xs">
+              <button onclick="setBatteryUsageProfile('daily')" id="btnProfileDaily" class="battery-preset-btn active p-1.5 rounded-lg bg-blue-600 text-white font-bold text-center text-[10px] cursor-pointer">
+                💼 Work & Calling
+              </button>
+              <button onclick="setBatteryUsageProfile('media')" id="btnProfileMedia" class="battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+                🎬 Reels & YouTube
+              </button>
+              <button onclick="setBatteryUsageProfile('heavy')" id="btnProfileHeavy" class="battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+                🎮 5G Hotspot & GPS
+              </button>
+            </div>
+
+            <!-- Real-World Metrics Grid -->
+            <div class="grid grid-cols-3 sm:grid-cols-6 gap-1.5 text-center text-xs">
+              <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="block text-[9px] text-slate-400">SCREEN-ON</span>
+                <b id="simScreenOn" class="text-emerald-400 font-mono text-xs">8h 15m</b>
+              </div>
+              <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="block text-[9px] text-slate-400">YOUTUBE</span>
+                <b id="simYoutube" class="text-blue-400 font-mono text-xs">13h 40m</b>
+              </div>
+              <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="block text-[9px] text-slate-400">REELS</span>
+                <b id="simReels" class="text-pink-400 font-mono text-xs">7h 20m</b>
+              </div>
+              <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="block text-[9px] text-slate-400">5G CALL</span>
+                <b id="simCalling" class="text-amber-400 font-mono text-xs">19h 30m</b>
+              </div>
+              <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="block text-[9px] text-slate-400">GPS MAPS</span>
+                <b id="simGps" class="text-purple-400 font-mono text-xs">6h 50m</b>
+              </div>
+              <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
+                <span class="block text-[9px] text-slate-400">STANDBY</span>
+                <b id="simStandby" class="text-slate-300 font-mono text-xs">44h</b>
+              </div>
+            </div>
+
+            <!-- Comparison Text -->
+            <div class="p-2 rounded-lg bg-slate-900/60 border border-slate-800/80 text-[10px] text-slate-300 flex items-center justify-between">
+              <span id="simComparisonText">At 96% health, delta vs brand new is only <b>22 minutes</b> screen time.</span>
+              <span class="text-emerald-400 font-bold font-mono">85%+ Guaranteed</span>
+            </div>
+          </div>
+
+          <!-- PRACTICAL AI REFURBISHED QUALITY COPILOT ("Ask NexG AI Specialist") -->
+          <div id="aiCopilotWidget" class="rounded-xl bg-slate-950/90 border border-purple-500/30 overflow-hidden shadow shrink-0">
+            <!-- Header -->
+            <div onclick="toggleAICopilot()" class="px-3 py-2 bg-gradient-to-r from-purple-950/50 to-blue-950/50 flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-2">
+                <div class="w-5 h-5 rounded-full bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-xs">
+                  🤖
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white flex items-center gap-1.5">
+                    <span>Ask NexG AI Tech Specialist</span>
+                    <span class="px-1.5 py-0.2 rounded text-[8px] bg-purple-500/20 text-purple-300 border border-purple-500/30 font-mono font-bold">24/7 COPILOT</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] text-purple-300 font-medium">Battery, Scratches & Parts QA</span>
+                <span id="aiCopilotChevron" class="text-xs text-purple-400 font-bold transition-transform">▼</span>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <div id="aiCopilotBody" class="p-2.5 space-y-2">
+              <!-- Smart Prompt Chips -->
+              <div class="flex items-center gap-1 flex-wrap text-[10px]">
+                <button onclick="askAICopilot('battery')" class="ai-chip-prompt px-2 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer">
+                  🔋 Battery Reality
+                </button>
+                <button onclick="askAICopilot('grade_b')" class="ai-chip-prompt px-2 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer">
+                  🔍 Grade B Scratches Outdoors
+                </button>
+                <button onclick="askAICopilot('genuine')" class="ai-chip-prompt px-2 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer">
+                  🛡️ TrueTone & Face ID Check
+                </button>
+                <button onclick="askAICopilot('vs_cashify')" class="ai-chip-prompt px-2 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer">
+                  ⚖️ FoneZone vs Cashify
+                </button>
+              </div>
+
+              <!-- AI Answer Box -->
+              <div id="aiCopilotDialogue" class="p-2.5 rounded-lg bg-slate-900/80 border border-purple-500/20 space-y-1 text-xs">
+                <div class="flex items-start gap-2">
+                  <span class="text-sm">🤖</span>
+                  <div class="space-y-1 flex-1">
+                    <div class="flex items-center justify-between">
+                      <span class="font-bold text-purple-300 text-[11px]">NexG AI Diagnostic Telemetry:</span>
+                      <span class="text-[9px] text-emerald-400 font-mono">✓ 32-Pt QA Certified</span>
+                    </div>
+                    <div id="aiCopilotAnswer" class="text-slate-200 text-[11px] leading-relaxed">
+                      Select any question chip above or type below. I analyze this unit's hardware logs, Apple GSMA registration, battery cycle curves, and physical 360 flaw coordinates.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Custom Question Input -->
+              <div class="flex items-center gap-1.5">
+                <input type="text" id="aiCopilotCustomInput" onkeydown="if(event.key==='Enter') handleCustomAIQuestion()" placeholder="Ask about display scratches, battery drain, iCloud unlock..." class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-2.5 py-1.5 text-xs text-white placeholder:text-slate-500 focus:border-purple-500">
+                <button onclick="handleCustomAIQuestion()" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow cursor-pointer transition-colors">
+                  Ask AI
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Unified Card 3: Price & Instant COD Checkout Action (Sticky at bottom, always in view) -->
-          <div class="p-2.5 rounded-xl bg-gradient-to-r from-blue-950/40 via-slate-900 to-slate-900 border border-blue-500/30 flex items-center justify-between shrink-0 shadow-lg">
+          <div id="inspectStickyFooter" class="sticky bottom-0 z-20 p-2.5 rounded-xl bg-gradient-to-r from-blue-950/90 via-slate-900/95 to-slate-900/95 backdrop-blur border border-blue-500/30 flex items-center justify-between shrink-0 shadow-xl">
             <div>
               <div class="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">FoneZone Certified Deal:</div>
               <div class="flex items-baseline gap-2">

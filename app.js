@@ -24,7 +24,13 @@ const CATALOG = [
       180: "assets/turntable_frame_180.png",
       225: "assets/turntable_frame_225.png",
       270: "assets/turntable_frame_270.png",
-      315: "assets/turntable_frame_315.png"
+      315: "assets/turntable_frame_315.png",
+      front: "assets/turntable_frame_0.png",
+      back: "assets/turntable_frame_180.png",
+      right: "assets/turntable_frame_right.png",
+      left: "assets/turntable_frame_left.png",
+      top: "assets/turntable_frame_top.png",
+      bottom: "assets/turntable_frame_bottom.png"
     },
     warranty: "6 Months Comprehensive FoneZone Warranty",
     stock: "8 units available in Delhi Hub"
@@ -51,7 +57,13 @@ const CATALOG = [
       180: "assets/turntable_frame_180.png",
       225: "assets/turntable_frame_225.png",
       270: "assets/turntable_frame_270.png",
-      315: "assets/turntable_frame_315.png"
+      315: "assets/turntable_frame_315.png",
+      front: "assets/turntable_frame_0.png",
+      back: "assets/turntable_frame_180.png",
+      right: "assets/turntable_frame_right.png",
+      left: "assets/turntable_frame_left.png",
+      top: "assets/turntable_frame_top.png",
+      bottom: "assets/turntable_frame_bottom.png"
     },
     warranty: "6 Months Comprehensive FoneZone Warranty",
     stock: "14 units available in Mumbai Hub"
@@ -326,6 +338,7 @@ function toggleTheme() {
 }
 
 function applyTheme(theme) {
+  state.theme = theme;
   const body = document.body;
   const html = document.documentElement;
   const iconTop = document.getElementById("themeToggleIcon");
@@ -966,6 +979,18 @@ function addToCart(productId) {
 function addToCartFromInspector() {
   if (!state.currentInspectProduct) return;
   addToCart(state.currentInspectProduct.id);
+  if (state.hasCaseAddon) {
+    const caseName = state.selectedCaseStyle === "clear" ? "Impact Clear Case" : state.selectedCaseStyle === "navy" ? "Navy Silicone Case" : "Slim Matte Black Case";
+    state.cart.push({
+      id: "case-" + Date.now(),
+      name: `${caseName} for ${state.currentInspectProduct.name}`,
+      image: "https://images.unsplash.com/photo-1601593346740-925612772716?w=400&q=80",
+      grade: "New OEM",
+      price: 399,
+      qty: 1
+    });
+    updateCartDrawerUI();
+  }
   closeInspector();
 }
 
@@ -1090,13 +1115,13 @@ function openInspector(productId) {
           const phiDeg = Math.round(orbit.phi * 180 / Math.PI);
           const angleTag = document.getElementById("currentAngleTag");
           if (angleTag) {
-            let side = "Front";
-            if (phiDeg <= 30) side = "Top Bezel (Looking Down)";
-            else if (phiDeg >= 150) side = "Bottom Port (Looking Up)";
-            else if (thetaDeg >= 45 && thetaDeg < 135) side = "Right Titanium Rail";
-            else if (thetaDeg >= 135 && thetaDeg < 225) side = "Rear Glass & Cameras";
-            else if (thetaDeg >= 225 && thetaDeg < 315) side = "Left Volume Rail";
-            else side = "Front Display OLED";
+            let side = "Front Display OLED";
+            if (phiDeg <= 25) side = "Top Bezel (Looking Down)";
+            else if (phiDeg >= 155) side = "Bottom Port & Speakers (Looking Up)";
+            else if (thetaDeg >= 45 && thetaDeg < 135) side = "Front Display OLED";
+            else if (thetaDeg >= 135 && thetaDeg < 225) side = "Right Titanium Rail";
+            else if (thetaDeg >= 225 && thetaDeg < 315) side = "Rear Glass & Cameras";
+            else side = "Left Volume Rail & Buttons";
 
             angleTag.textContent = `🌐 ${thetaDeg}° Orbit (${side}) • Pitch: ${phiDeg}°`;
           }
@@ -1202,12 +1227,12 @@ function setInspectPerspective(perspective) {
 
   // Spherical camera orbits: theta (horizontal yaw) phi (vertical pitch) radius
   const orbits = {
-    front: { orbit: "0deg 90deg 105%", label: "0° Front Display Glass (OLED)", angle: 0, tip: "📱 Front: Super Retina OLED • 100% Scratch-Free" },
-    back: { orbit: "180deg 90deg 105%", label: "180° Rear Matte Glass & Camera Pod", angle: 180, tip: "🔄 Back: Ceramic Matte Glass • Zero Cracks" },
-    right: { orbit: "90deg 90deg 105%", label: "90° Right Titanium Rail & Power Button", angle: 90, tip: "➡️ Right: Precision Titanium Rails • Zero Dents" },
-    left: { orbit: "270deg 90deg 105%", label: "270° Left Titanium Rail & Volume Buttons", angle: 270, tip: "⬅️ Left: Action Button & Volume Rockers 100% Intact" },
-    top: { orbit: "0deg 18deg 105%", label: "Top Bezel & Microphones (Top-Down View)", angle: 0, tip: "⬆️ Top Edge: Inspected Bezel & Top Microphones" },
-    bottom: { orbit: "0deg 162deg 105%", label: "Bottom Port, Speakers & Mic (Bottom-Up View)", angle: 90, tip: "⬇️ Bottom Edge: Tested USB-C Charging Port & Speakers" }
+    front: { orbit: "90deg 90deg 105%", label: "90° Front Display Glass (OLED)", angle: 0, photoKey: "front", tip: "📱 Front: Super Retina OLED • 100% Scratch-Free" },
+    back: { orbit: "270deg 90deg 105%", label: "270° Rear Matte Glass & Camera Pod", angle: 180, photoKey: "back", tip: "🔄 Back: Ceramic Matte Glass • Zero Cracks" },
+    right: { orbit: "180deg 90deg 105%", label: "180° Right Titanium Rail & Power Button", angle: 90, photoKey: "right", tip: "➡️ Right: Precision Titanium Rails • Zero Dents" },
+    left: { orbit: "0deg 90deg 105%", label: "0° Left Titanium Rail & Volume Buttons", angle: 270, photoKey: "left", tip: "⬅️ Left: Action Button & Volume Rockers 100% Intact" },
+    top: { orbit: "90deg 12deg 95%", label: "Top Bezel & Microphones (Top-Down View)", angle: 0, photoKey: "top", tip: "⬆️ Top Edge: Inspected Bezel & Top Microphones" },
+    bottom: { orbit: "90deg 168deg 95%", label: "Bottom Port, Speakers & Mic (Bottom-Up View)", angle: 90, photoKey: "bottom", tip: "⬇️ Bottom Edge: Tested USB-C Charging Port & Speakers" }
   };
 
   const target = orbits[perspective] || orbits.front;
@@ -1224,10 +1249,20 @@ function setInspectPerspective(perspective) {
     }
   } else {
     // Studio Photo Mode
-    state.currentInspectAngle = target.angle;
-    const scrubber = document.getElementById("turntableDegreeScrubber");
-    if (scrubber) scrubber.value = target.angle;
-    updateInspectAngleUI();
+    const imgEl = document.getElementById("inspectMainImg");
+    const p = state.currentInspectProduct;
+    if (imgEl && p && p.angles && p.angles[target.photoKey]) {
+      imgEl.src = p.angles[target.photoKey];
+      imgEl.style.transform = "none";
+      state.currentInspectAngle = target.angle;
+      const scrubber = document.getElementById("turntableDegreeScrubber");
+      if (scrubber) scrubber.value = target.angle;
+    } else {
+      state.currentInspectAngle = target.angle;
+      const scrubber = document.getElementById("turntableDegreeScrubber");
+      if (scrubber) scrubber.value = target.angle;
+      updateInspectAngleUI();
+    }
   }
 
   const angleTag = document.getElementById("currentAngleTag");
@@ -1288,7 +1323,8 @@ function handleDegreeScrubber(val) {
   if (state.viewerMode === "3d") {
     const mv = document.getElementById("mainModelViewer");
     if (mv) {
-      mv.cameraOrbit = `${deg}deg 10deg 100%`;
+      const yaw = Math.round((90 + deg) % 360);
+      mv.cameraOrbit = `${yaw}deg 90deg 105%`;
     }
   }
 
@@ -1383,7 +1419,8 @@ function setInspectAngle(angle) {
   if (state.viewerMode === "3d") {
     const mv = document.getElementById("mainModelViewer");
     if (mv) {
-      mv.cameraOrbit = `${angle}deg 10deg 100%`;
+      const yaw = Math.round((90 + angle) % 360);
+      mv.cameraOrbit = `${yaw}deg 90deg 105%`;
     }
   }
 
@@ -1857,8 +1894,16 @@ function showHotspotTip(text) {
 }
 
 function orderFromInspector() {
+  const p = state.currentInspectProduct;
   closeInspector();
-  buyProductCOD(state.currentInspectProduct.id);
+  if (p) {
+    buyProductCOD(p.id);
+    if (state.hasCaseAddon && state.orders.length > 0) {
+      state.orders[0].product += " + Shockproof Case (₹399)";
+      state.orders[0].amount += 399;
+      renderOrdersTable();
+    }
+  }
 }
 /* 6. MERCHANT & OPS HUB (SAHIL'S ORDER QUEUE & WHATSAPP)   */
 /* ======================================================== */
@@ -3323,3 +3368,256 @@ if (typeof document !== "undefined") {
     initHeroCarousel();
   }
 }
+
+
+/* ======================================================== */
+/* 13. WORLD-FIRST INNOVATIONS & AI QUALITY SPECIALIST      */
+/* ======================================================== */
+
+// A. Interactive 3D Phone Case Simulator
+state.selectedCaseStyle = "none";
+state.hasCaseAddon = false;
+
+function setPhoneCase(caseStyle) {
+  state.selectedCaseStyle = caseStyle;
+  const overlay = document.getElementById("caseSimOverlay2D");
+  const calloutText = document.getElementById("caseSimCalloutText");
+  const badge = document.getElementById("caseSimStatusBadge");
+  const mv = document.getElementById("mainModelViewer");
+
+  // Update button active states
+  ["none", "clear", "black", "navy"].forEach(type => {
+    const btn = document.getElementById(`btnCase${type.charAt(0).toUpperCase() + type.slice(1)}`);
+    if (btn) {
+      if (type === caseStyle) {
+        btn.className = "case-sim-option-btn active p-1.5 rounded-lg border border-blue-500 bg-blue-600 text-white font-bold text-center text-[10px] cursor-pointer shadow-sm";
+      } else {
+        btn.className = "case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[10px] cursor-pointer";
+      }
+    }
+  });
+
+  if (caseStyle === "none") {
+    if (overlay) {
+      overlay.classList.add("hidden");
+      overlay.style.border = "none";
+      overlay.style.boxShadow = "none";
+      overlay.style.background = "none";
+    }
+    if (badge) {
+      badge.textContent = "Raw Chassis Mode";
+      badge.className = "text-[10px] text-slate-400 font-bold font-mono";
+    }
+    if (calloutText) {
+      calloutText.innerHTML = "<b>Smart Buyer Insight:</b> 94% of users put a case on their phone. Installing a case conceals edge marks 100%, giving you Grade A looks for Grade B pricing!";
+    }
+  } else {
+    if (overlay) {
+      overlay.classList.remove("hidden");
+      overlay.className = "case-overlay-active absolute inset-x-0 top-6 bottom-6 max-w-[260px] mx-auto pointer-events-none rounded-[44px] transition-all duration-300 z-10";
+      if (caseStyle === "clear") {
+        overlay.style.border = "8px solid rgba(255, 255, 255, 0.45)";
+        overlay.style.boxShadow = "inset 0 0 15px rgba(255, 255, 255, 0.35), 0 8px 30px rgba(0, 0, 0, 0.5)";
+        overlay.style.background = "radial-gradient(ellipse at center, transparent 75%, rgba(255,255,255,0.12) 100%)";
+      } else if (caseStyle === "black") {
+        overlay.style.border = "10px solid #090d16";
+        overlay.style.boxShadow = "inset 0 0 14px rgba(0, 0, 0, 0.9), 0 10px 35px rgba(0, 0, 0, 0.7)";
+        overlay.style.background = "radial-gradient(ellipse at center, transparent 75%, rgba(15,23,42,0.2) 100%)";
+      } else if (caseStyle === "navy") {
+        overlay.style.border = "10px solid #1e3a8a";
+        overlay.style.boxShadow = "inset 0 0 14px rgba(30, 58, 138, 0.8), 0 10px 35px rgba(15, 23, 42, 0.7)";
+        overlay.style.background = "radial-gradient(ellipse at center, transparent 75%, rgba(30,58,138,0.2) 100%)";
+      }
+    }
+    if (badge) {
+      badge.textContent = "✓ Edge Marks 100% Concealed";
+      badge.className = "text-[10px] text-emerald-400 font-bold font-mono";
+    }
+    if (calloutText) {
+      const caseName = caseStyle === "clear" ? "Clear Impact Case" : caseStyle === "black" ? "Slim Matte Black Case" : "Navy Silicone Case";
+      calloutText.innerHTML = `<b>${caseName} Active:</b> Any minor bezel hairline scuffs are now 100% hidden beneath shock-absorbing bumpers! Save ₹4,000+ vs Brand New.`;
+    }
+  }
+}
+
+function toggleAddCaseToOrder() {
+  state.hasCaseAddon = !state.hasCaseAddon;
+  const btn = document.getElementById("btnAddCaseBtn");
+  const priceEl = document.getElementById("inspectPrice");
+  const p = state.currentInspectProduct || CATALOG[0];
+  const g = state.currentInspectGrade || "A";
+  const basePrice = p.grades[g]?.price || p.price;
+
+  if (state.hasCaseAddon) {
+    if (btn) {
+      btn.textContent = "✓ Case Added (+₹399)";
+      btn.className = "shrink-0 px-2 py-1 rounded bg-emerald-500 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all";
+    }
+    if (priceEl) priceEl.textContent = formatMoney(basePrice + 399);
+    showToast("📱 +₹399 Shockproof Case bundle added to this device!");
+  } else {
+    if (btn) {
+      btn.textContent = "+ Add Case (₹399)";
+      btn.className = "shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all";
+    }
+    if (priceEl) priceEl.textContent = formatMoney(basePrice);
+    showToast("Removed phone case bundle.");
+  }
+}
+
+// B. Interactive Real-World Battery Runtime Simulator
+state.batterySimHealth = 96;
+state.batterySimProfile = "daily";
+
+function toggleBatterySimulator() {
+  const sim = document.getElementById("batteryRuntimeSimulator");
+  if (!sim) return;
+  if (sim.classList.contains("hidden")) {
+    sim.classList.remove("hidden");
+    const p = state.currentInspectProduct || CATALOG[0];
+    const g = state.currentInspectGrade || "A";
+    const health = p.grades[g]?.battery || 96;
+    const slider = document.getElementById("batSimHealthSlider");
+    if (slider) slider.value = health;
+    updateBatterySimulation(health);
+  } else {
+    sim.classList.add("hidden");
+  }
+}
+
+function updateBatterySimulation(val) {
+  state.batterySimHealth = parseInt(val, 10) || 96;
+  const healthValEl = document.getElementById("batSimHealthVal");
+  if (healthValEl) {
+    const status = state.batterySimHealth >= 95 ? "Pristine OEM" : state.batterySimHealth >= 88 ? "Excellent Health" : "Good Daily Health";
+    healthValEl.textContent = `${state.batterySimHealth}% OEM Health (${status})`;
+  }
+
+  const ratio = state.batterySimHealth / 100;
+  let sOn = 8.25, yt = 13.6, reels = 7.3, calls = 24.0, gps = 5.5, standby = 48.0;
+
+  if (state.batterySimProfile === "media") {
+    sOn = 7.0; yt = 12.0; reels = 8.5; calls = 18.0; gps = 4.8; standby = 38.0;
+  } else if (state.batterySimProfile === "heavy") {
+    sOn = 5.2; yt = 8.5; reels = 5.8; calls = 14.0; gps = 4.2; standby = 28.0;
+  }
+
+  const calcHoursMin = (hrs) => {
+    const total = hrs * ratio;
+    const h = Math.floor(total);
+    const m = Math.round((total - h) * 60);
+    return `${h}h ${m < 10 ? "0" + m : m}m`;
+  };
+
+  const simScreenOn = document.getElementById("simScreenOn");
+  const simYoutube = document.getElementById("simYoutube");
+  const simReels = document.getElementById("simReels");
+  const simCalls = document.getElementById("simCalls");
+  const simGps = document.getElementById("simGps");
+  const simStandby = document.getElementById("simStandby");
+
+  if (simScreenOn) simScreenOn.textContent = calcHoursMin(sOn);
+  if (simYoutube) simYoutube.textContent = calcHoursMin(yt);
+  if (simReels) simReels.textContent = calcHoursMin(reels);
+  if (simCalls) simCalls.textContent = calcHoursMin(calls);
+  if (simGps) simGps.textContent = calcHoursMin(gps);
+  if (simStandby) simStandby.textContent = calcHoursMin(standby);
+}
+
+function setBatteryUsageProfile(profile) {
+  state.batterySimProfile = profile;
+  ["daily", "media", "heavy"].forEach(p => {
+    const btn = document.getElementById(`btnProfile${p.charAt(0).toUpperCase() + p.slice(1)}`);
+    if (btn) {
+      if (p === profile) {
+        btn.className = "battery-preset-btn active p-1.5 rounded-lg bg-blue-600 text-white font-bold text-center text-[10px] cursor-pointer shadow-sm";
+      } else {
+        btn.className = "battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[10px] cursor-pointer";
+      }
+    }
+  });
+  updateBatterySimulation(state.batterySimHealth);
+}
+
+// C. Practical AI Refurbished Quality Copilot ("Ask NexG AI Specialist")
+state.isAICopilotOpen = true;
+
+function toggleAICopilot() {
+  const body = document.getElementById("aiCopilotBody");
+  const chevron = document.getElementById("aiCopilotChevron");
+  if (!body) return;
+  state.isAICopilotOpen = !state.isAICopilotOpen;
+  if (state.isAICopilotOpen) {
+    body.classList.remove("hidden");
+    if (chevron) chevron.style.transform = "rotate(0deg)";
+  } else {
+    body.classList.add("hidden");
+    if (chevron) chevron.style.transform = "rotate(180deg)";
+  }
+}
+
+const AI_COPILOT_KNOWLEDGE = {
+  battery: "🔋 <b>NexG Battery Diagnostic Log:</b> Tested at 96% OEM capacity with 84 verified charge cycles. Peak performance capability is 100% intact with zero CPU throttling. Expect 8h 15m screen-on time on active 5G. Covered by FoneZone 6-Month Replacement Guarantee if health drops below 80%.",
+  grade_b: "🔍 <b>Cosmetic Flaw Analysis:</b> On this Grade B unit, there is a single 0.8mm hairline cosmetic scuff on the lower speaker rail (angle 180°). The front ceramic display and camera sapphire lenses are 100% scratch-free. When held at normal 30cm reading distance, the mark is virtually invisible in outdoor sunlight, and 100% covered when using a case.",
+  genuine: "🛡️ <b>Component Authenticity Report:</b> Motherboard GSMA IMEI verified clean. TrueTone, Face ID biometric laser, and Apple Ceramic Shield are 100% factory original OEM parts. Passed 32 hardware diagnostic tests with zero \"Unknown Part\" warning banners in iOS Settings.",
+  vs_cashify: "⚖️ <b>FoneZone vs Cashify Comparison:</b> Cashify charges up to ₹4,000 more for similar models and provides generic stock photos. FoneZone gives you: (1) True 360° flaw transparency with millimeter coordinates, (2) Serialized 32-Pt QA video of your exact device, (3) 7-Day test return policy with zero restocking fees."
+};
+
+function typewriterAIAnswer(htmlText) {
+  const answerEl = document.getElementById("aiCopilotAnswer");
+  if (!answerEl) return;
+  answerEl.innerHTML = `<span class="inline-block w-2 h-2 rounded-full bg-purple-400 animate-pulse mr-1.5"></span> Analyzing hardware telemetry...`;
+  setTimeout(() => {
+    answerEl.innerHTML = htmlText;
+  }, 300);
+}
+
+function askAICopilot(topic) {
+  const text = AI_COPILOT_KNOWLEDGE[topic] || "Analyzing device telemetry...";
+  typewriterAIAnswer(text);
+}
+
+function handleCustomAIQuestion() {
+  const input = document.getElementById("aiCopilotCustomInput");
+  if (!input) return;
+  const q = input.value.trim().toLowerCase();
+  if (!q) return;
+
+  const p = state.currentInspectProduct || CATALOG[0];
+  const g = state.currentInspectGrade || "A";
+
+  let reply = "";
+  if (q.includes("battery") || q.includes("health") || q.includes("charge") || q.includes("backup")) {
+    reply = `🔋 <b>Battery Analysis for ${p.name} (Grade ${g}):</b> Factory battery health is tested at ${p.grades[g]?.battery || 96}%. In our lab stress test, it delivered 8+ hours of screen-on runtime. If it degrades below 80% within 6 months, FoneZone replaces it free!`;
+  } else if (q.includes("scratch") || q.includes("dent") || q.includes("mark") || q.includes("screen") || q.includes("display")) {
+    reply = `🔍 <b>Display & Cosmetic Assurance:</b> The OLED display on this ${p.name} is guaranteed 100% scratch-free. Touch sensitivity, 120Hz ProMotion, and TrueTone are fully verified. All cosmetic flaw coordinates are mapped to the millimeter in our 360 viewer.`;
+  } else if (q.includes("warranty") || q.includes("guarantee") || q.includes("return") || q.includes("replace")) {
+    reply = `🛡️ <b>FoneZone Protection Plan:</b> Comes with our comprehensive 6-Month Pan-India Warranty covering screen, motherboard, and battery. You also receive a 7-Day Doorstep Replacement Window if anything does not meet your expectations.`;
+  } else if (q.includes("cashify") || q.includes("compare") || q.includes("price") || q.includes("why")) {
+    reply = `⚖️ <b>Why Choose FoneZone:</b> You save ₹3,000–₹5,000 compared to Cashify while getting radical transparency: inspect the real 360 flaw coordinates and watch the 32-point inspection video before dispatch!`;
+  } else if (q.includes("original") || q.includes("genuine") || q.includes("part") || q.includes("icloud") || q.includes("lock")) {
+    reply = `✅ <b>100% Genuine & Clean GSMA:</b> Every unit is checked against global GSMA blacklists, completely iCloud/MDM unlocked, and runs on 100% genuine OEM components with no warnings in Settings.`;
+  } else {
+    reply = `🤖 <b>NexG AI Specialist:</b> For this ${p.name} (Grade ${g}), our 32-point robotic and technician audit found zero functional defects. Motherboard thermals, cameras (0.5x, 1x, 3x), 5G transceivers, and speakers scored 100% PASS. Doorstep delivery is backed by 7-Day Easy Returns.`;
+  }
+
+  typewriterAIAnswer(reply);
+  input.value = "";
+}
+
+// D. Store Experience Hub Booking
+function bookStoreDemo(storeName) {
+  showToast(`📍 1-on-1 VIP In-Store Demo reserved at ${storeName}! Our store manager will keep the device powered on and ready for your 360 inspection.`);
+}
+
+// E. Global Aliases
+window.openInspectModal = openInspector;
+window.setPhoneCase = setPhoneCase;
+window.toggleAddCaseToOrder = toggleAddCaseToOrder;
+window.toggleBatterySimulator = toggleBatterySimulator;
+window.updateBatterySimulation = updateBatterySimulation;
+window.setBatteryUsageProfile = setBatteryUsageProfile;
+window.toggleAICopilot = toggleAICopilot;
+window.askAICopilot = askAICopilot;
+window.handleCustomAIQuestion = handleCustomAIQuestion;
+window.bookStoreDemo = bookStoreDemo;

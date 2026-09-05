@@ -1398,3 +1398,604 @@ body.theme-light #verificationVideoModal .text-slate-400 {
   color: #64748B !important;
 }
 
+/* ======================================================== */
+/* WCAG AAA COMPREHENSIVE LIGHT THEME TYPOGRAPHY & CONTRAST */
+/* ======================================================== */
+body.theme-light {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+/* Form Inputs, Selects & Textareas in Light Mode */
+body.theme-light input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+body.theme-light select,
+body.theme-light textarea {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+body.theme-light input::placeholder,
+body.theme-light textarea::placeholder {
+  color: #64748B !important;
+}
+body.theme-light input:focus,
+body.theme-light select:focus,
+body.theme-light textarea:focus {
+  border-color: #2563EB !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+  outline: none !important;
+}
+
+/* Form Labels & Explanatory Subtext */
+body.theme-light label {
+  color: #1E293B !important;
+  font-weight: 700 !important;
+}
+body.theme-light .text-slate-400 {
+  color: #475569 !important;
+}
+body.theme-light .text-slate-500 {
+  color: #64748B !important;
+}
+
+/* Hero Section High-Contrast Typography */
+body.theme-light .hero-slide h1 {
+  color: #0F172A !important;
+}
+body.theme-light .hero-slide span.bg-gradient-to-r.from-emerald-400,
+body.theme-light .hero-slide span.bg-gradient-to-r.from-cyan-400 {
+  background: linear-gradient(135deg, #047857 0%, #0D9488 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #047857 !important;
+}
+body.theme-light .hero-slide span.bg-gradient-to-r.from-blue-400 {
+  background: linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #1D4ED8 !important;
+}
+body.theme-light .hero-slide span.bg-gradient-to-r.from-purple-400 {
+  background: linear-gradient(135deg, #6D28D9 0%, #7C3AED 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: #6D28D9 !important;
+}
+
+body.theme-light .hero-slide .bg-emerald-500\/20 {
+  background-color: #D1FAE5 !important;
+  border-color: #6EE7B7 !important;
+  color: #065F46 !important;
+  font-weight: 800 !important;
+}
+body.theme-light .hero-slide .text-emerald-400,
+body.theme-light .hero-slide .text-emerald-300 {
+  color: #047857 !important;
+  font-weight: 700 !important;
+}
+
+/* Offer Rail & Flash Deals Light Mode Contrast */
+body.theme-light #heroOfferRail .text-emerald-400 {
+  color: #047857 !important;
+  font-weight: 800 !important;
+}
+body.theme-light #heroOfferRail .line-through {
+  color: #64748B !important;
+  font-weight: 600 !important;
+}
+body.theme-light #heroOfferRail .text-emerald-400.font-medium {
+  color: #047857 !important;
+  font-weight: 700 !important;
+}
+body.theme-light #heroOfferRail button.bg-purple-900\/50,
+body.theme-light #heroOfferRail button.bg-purple-500\/20 {
+  background-color: #EDE9FE !important;
+  border-color: #C4B5FD !important;
+  color: #6D28D9 !important;
+  font-weight: 800 !important;
+}
+body.theme-light #heroOfferRail button.bg-purple-900\/50:hover,
+body.theme-light #heroOfferRail button.bg-purple-500\/20:hover {
+  background-color: #DDD6FE !important;
+  color: #5B21B6 !important;
+}
+
+/* Favourite Brands Rail Prices */
+body.theme-light .brand-rail-card .text-emerald-400 {
+  color: #047857 !important;
+  font-weight: 800 !important;
+}
+body.theme-light .brand-rail-card .text-slate-300 {
+  color: #0F172A !important;
+}
+body.theme-light .brand-rail-card .text-red-400 {
+  color: #DC2626 !important;
+  font-weight: 700 !important;
+}
+
+/* Product Catalog Card Light Mode Typography */
+body.theme-light .fz-glass-card h3 {
+  color: #0F172A !important;
+  font-weight: 800 !important;
+  font-size: 0.925rem !important;
+}
+body.theme-light .fz-glass-card .font-mono.text-white {
+  color: #0F172A !important;
+  font-weight: 900 !important;
+}
+body.theme-light .fz-glass-card .line-through {
+  color: #64748B !important;
+  font-weight: 600 !important;
+}
+body.theme-light .fz-glass-card .text-emerald-400 {
+  color: #047857 !important;
+  font-weight: 800 !important;
+}
+body.theme-light .fz-glass-card .text-blue-400 {
+  color: #1D4ED8 !important;
+  font-weight: 700 !important;
+}
+body.theme-light .fz-glass-card .text-amber-400 {
+  color: #92400E !important;
+  font-weight: 800 !important;
+}
+body.theme-light .fz-glass-card .bg-amber-400\/10,
+body.theme-light .fz-glass-card .bg-amber-500\/10 {
+  background-color: #FEF3C7 !important;
+  border-color: #FDE68A !important;
+  color: #92400E !important;
+}
+body.theme-light .fz-glass-card .bg-blue-500\/10 {
+  background-color: #EFF6FF !important;
+  border-color: #BFDBFE !important;
+  color: #1D4ED8 !important;
+}
+body.theme-light .fz-glass-card .bg-red-500\/10 {
+  background-color: #FEE2E2 !important;
+  border-color: #FECACA !important;
+  color: #DC2626 !important;
+}
+body.theme-light .fz-glass-card .bg-emerald-500\/10 {
+  background-color: #D1FAE5 !important;
+  border-color: #A7F3D0 !important;
+  color: #065F46 !important;
+  font-weight: 800 !important;
+}
+
+/* Feature strip (0-Dent & WhatsApp) on Product Cards */
+body.theme-light .fz-glass-card .bg-slate-900\/50,
+body.theme-light .fz-glass-card .bg-slate-950\/50 {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #1E293B !important;
+}
+body.theme-light .fz-glass-card .bg-slate-900\/50 span,
+body.theme-light .fz-glass-card .bg-slate-950\/50 span {
+  color: #1E293B !important;
+  font-weight: 700 !important;
+}
+
+/* Grade Selector on Card */
+body.theme-light .card-grade-btn {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+  color: #334155 !important;
+}
+body.theme-light .card-grade-btn:hover {
+  background-color: #EFF6FF !important;
+  color: #1D4ED8 !important;
+}
+body.theme-light .card-grade-btn.active.border-emerald-500 {
+  background-color: #ECFDF5 !important;
+  border-color: #059669 !important;
+  color: #065F46 !important;
+  font-weight: 800 !important;
+}
+body.theme-light .card-grade-btn.active.border-indigo-500 {
+  background-color: #EEF2FF !important;
+  border-color: #4F46E5 !important;
+  color: #3730A3 !important;
+  font-weight: 800 !important;
+}
+body.theme-light .card-grade-btn.active.border-amber-500 {
+  background-color: #FFFBEB !important;
+  border-color: #D97706 !important;
+  color: #92400E !important;
+  font-weight: 800 !important;
+}
+
+/* Product Card Action Buttons */
+body.theme-light .btn-add-to-cart {
+  background-color: #F1F5F9 !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+  font-weight: 700 !important;
+}
+body.theme-light .btn-add-to-cart:hover {
+  background-color: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+body.theme-light .btn-buy-cod {
+  background-color: #2563EB !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+body.theme-light .btn-buy-cod:hover {
+  background-color: #1D4ED8 !important;
+}
+
+/* 360 Inspect & Lab Video Pill Buttons on Image */
+body.theme-light .btn-inspect-pill {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  font-weight: 700 !important;
+}
+body.theme-light .btn-inspect-pill:hover {
+  background-color: #2563EB !important;
+  border-color: #2563EB !important;
+  color: #FFFFFF !important;
+}
+
+/* ======================================================== */
+/* INSPECTOR MODAL LIGHT THEME CONTRAST OVERHAUL            */
+/* ======================================================== */
+body.theme-light #inspectorModal {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+}
+body.theme-light #inspectorModal > div {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.25) !important;
+}
+body.theme-light #inspectModalProductName {
+  color: #0F172A !important;
+}
+body.theme-light #inspectorModal p.text-slate-400 {
+  color: #475569 !important;
+}
+
+/* Turntable Stage Container in Light Mode */
+body.theme-light #inspectorModal .lg\:col-span-6:first-child {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+body.theme-light #currentAngleTag {
+  background-color: #EFF6FF !important;
+  border-color: #BFDBFE !important;
+  color: #1D4ED8 !important;
+  font-weight: 800 !important;
+}
+body.theme-light #inspectorModal .ios-switch-container,
+body.theme-light #inspectorModal .bg-slate-900 {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #1E293B !important;
+}
+body.theme-light #zoomLoupeBtn {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #1E293B !important;
+}
+body.theme-light #zoomLoupeBtn:hover {
+  background-color: #EFF6FF !important;
+  color: #1D4ED8 !important;
+}
+
+/* Angle Snap Buttons at Bottom of 360 View */
+body.theme-light .perspective-btn {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #1E293B !important;
+  font-weight: 700 !important;
+}
+body.theme-light .perspective-btn:hover {
+  background-color: #EFF6FF !important;
+  color: #1D4ED8 !important;
+  border-color: #93C5FD !important;
+}
+body.theme-light .perspective-btn.active {
+  background-color: #2563EB !important;
+  border-color: #1D4ED8 !important;
+  color: #FFFFFF !important;
+  font-weight: 900 !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Right Column: Grade Selection & Where is the Dent? */
+body.theme-light #dentTotalCountBadge {
+  background-color: #D1FAE5 !important;
+  border-color: #A7F3D0 !important;
+  color: #065F46 !important;
+  font-weight: 900 !important;
+}
+body.theme-light #inspectGradeBtnA {
+  background-color: #ECFDF5 !important;
+  border-color: #059669 !important;
+  color: #065F46 !important;
+}
+body.theme-light #inspectGradeBtnB {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+  color: #334155 !important;
+}
+body.theme-light #inspectGradeBtnB:hover {
+  background-color: #EEF2FF !important;
+  color: #3730A3 !important;
+}
+body.theme-light #inspectGradeBtnC {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+  color: #334155 !important;
+}
+body.theme-light #inspectGradeBtnC:hover {
+  background-color: #FFFBEB !important;
+  color: #92400E !important;
+}
+
+/* "Where is the Dent?" Box in Light Mode */
+body.theme-light #dentAuditContainer {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+}
+body.theme-light #dentAuditContainer .bg-emerald-950\/30 {
+  background-color: #ECFDF5 !important;
+  border-color: #A7F3D0 !important;
+}
+body.theme-light #dentAuditContainer .text-emerald-400\/90,
+body.theme-light #dentAuditContainer .text-emerald-300 {
+  color: #065F46 !important;
+  font-weight: 600 !important;
+}
+body.theme-light #dentAuditContainer .font-bold.text-white {
+  color: #0F172A !important;
+}
+body.theme-light #dentAuditContainer .bg-slate-900\/70,
+body.theme-light #dentAuditContainer .bg-slate-900\/80,
+body.theme-light #dentAuditContainer .bg-slate-900\/60 {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+}
+body.theme-light #dentAuditContainer .text-slate-400 {
+  color: #475569 !important;
+}
+body.theme-light #dentAuditContainer .text-slate-300 {
+  color: #334155 !important;
+}
+body.theme-light #dentAuditContainer .text-amber-400 {
+  color: #B45309 !important;
+}
+
+/* Battery Health & 32-Pt QA Box */
+body.theme-light #inspectBatteryPercent {
+  color: #047857 !important;
+  font-weight: 900 !important;
+}
+body.theme-light #inspectBatteryBar {
+  background: linear-gradient(to right, #059669, #10B981) !important;
+}
+body.theme-light #inspectorModal .text-emerald-400 {
+  color: #047857 !important;
+  font-weight: 800 !important;
+}
+body.theme-light #inspectorModal .text-slate-300 {
+  color: #1E293B !important;
+}
+
+/* Sticky Action Bar in Inspector */
+body.theme-light #inspectorModal .lg\:col-span-6:last-child > div:last-child {
+  background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%) !important;
+  border-color: #CBD5E1 !important;
+}
+body.theme-light #inspectPrice {
+  color: #0F172A !important;
+  font-weight: 900 !important;
+}
+body.theme-light #inspectMsrp {
+  color: #64748B !important;
+  font-weight: 600 !important;
+}
+body.theme-light #inspectSavingsTag {
+  background-color: #D1FAE5 !important;
+  border-color: #A7F3D0 !important;
+  color: #065F46 !important;
+  font-weight: 900 !important;
+}
+
+/* ======================================================== */
+/* WORLD-FIRST FEATURE: 3D PHONE CASE SIMULATOR STYLES      */
+/* ======================================================== */
+.case-sim-option-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.case-sim-option-btn:hover {
+  transform: translateY(-1px);
+}
+.case-sim-option-btn.active {
+  ring-width: 2px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* SVG Case Overlay Frame on 2D Image */
+.case-overlay-active {
+  position: absolute;
+  inset: -6px;
+  border-radius: 36px;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 15;
+}
+.case-overlay-clear {
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.4), 0 0 16px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.08);
+}
+.case-overlay-matte-black {
+  border: 5px solid #1E293B;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+  background: rgba(15, 23, 42, 0.15);
+}
+.case-overlay-navy-silicone {
+  border: 5px solid #1E3A8A;
+  box-shadow: inset 0 0 8px rgba(30, 58, 138, 0.6), 0 0 20px rgba(30, 58, 138, 0.4);
+  background: rgba(30, 58, 138, 0.12);
+}
+
+/* ======================================================== */
+/* WORLD-FIRST FEATURE: REAL-WORLD BATTERY RUNTIME SIMULATOR*/
+/* ======================================================== */
+.battery-sim-card {
+  transition: all 0.25s ease;
+}
+.battery-sim-card:hover {
+  transform: translateY(-2px);
+}
+.battery-preset-btn {
+  transition: all 0.2s ease;
+}
+.battery-preset-btn.active {
+  background-color: #2563EB !important;
+  color: #FFFFFF !important;
+  border-color: #1D4ED8 !important;
+}
+
+/* ======================================================== */
+/* PRACTICAL AI REFURBISHED COPILOT STYLES                  */
+/* ======================================================== */
+.ai-copilot-container {
+  max-height: 480px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ai-chip-prompt {
+  transition: all 0.2s ease;
+}
+.ai-chip-prompt:hover {
+  background-color: rgba(37, 99, 235, 0.15) !important;
+  border-color: #3B82F6 !important;
+  transform: translateY(-1px);
+}
+body.theme-light .ai-chip-prompt {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+  color: #1E293B !important;
+}
+body.theme-light .ai-chip-prompt:hover {
+  background-color: #EFF6FF !important;
+  border-color: #2563EB !important;
+  color: #1D4ED8 !important;
+}
+
+/* AI Message Typing Animation */
+@keyframes aiTypingPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+.ai-typing-dot {
+  animation: aiTypingPulse 1.2s infinite ease-in-out;
+}
+.ai-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.ai-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* Store Locator Card in Light Mode */
+body.theme-light .store-location-card {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
+}
+body.theme-light .store-location-card:hover {
+  border-color: #2563EB !important;
+  box-shadow: 0 10px 24px -4px rgba(37, 99, 235, 0.12) !important;
+}
+
+
+
+
+/* Light Mode Styling for New Refurbished Innovations */
+body.theme-light #caseSimulatorWidget {
+  background-color: #FFFFFF !important;
+  border-color: #93C5FD !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08) !important;
+}
+body.theme-light #caseSimulatorWidget .text-white {
+  color: #0F172A !important;
+}
+body.theme-light .case-sim-option-btn:not(.active) {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #334155 !important;
+}
+body.theme-light .case-sim-option-btn:not(.active):hover {
+  background-color: #EFF6FF !important;
+  color: #1D4ED8 !important;
+}
+body.theme-light #caseSimCallout {
+  background-color: #EFF6FF !important;
+  border-color: #BFDBFE !important;
+  color: #1E3A8A !important;
+}
+body.theme-light #caseSimCalloutText {
+  color: #1E3A8A !important;
+}
+body.theme-light #caseSimCalloutText b {
+  color: #1D4ED8 !important;
+}
+
+body.theme-light #batteryRuntimeSimulator {
+  background-color: #FFFFFF !important;
+  border-color: #A7F3D0 !important;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.08) !important;
+}
+body.theme-light #batteryRuntimeSimulator .text-white {
+  color: #0F172A !important;
+}
+body.theme-light .battery-preset-btn:not(.active) {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #334155 !important;
+}
+body.theme-light .battery-preset-btn:not(.active):hover {
+  background-color: #EFF6FF !important;
+  color: #1D4ED8 !important;
+}
+body.theme-light .battery-sim-card {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+body.theme-light .battery-sim-card span {
+  color: #64748B !important;
+}
+body.theme-light #batSimHealthVal {
+  color: #047857 !important;
+}
+
+body.theme-light #aiCopilotWidget {
+  background-color: #FFFFFF !important;
+  border-color: #D8B4FE !important;
+  box-shadow: 0 4px 14px rgba(147, 51, 234, 0.08) !important;
+}
+body.theme-light #aiCopilotWidget > div:first-child {
+  background: linear-gradient(to right, #FAF5FF, #EFF6FF) !important;
+  border-bottom: 1px solid #F3E8FF !important;
+}
+body.theme-light #aiCopilotWidget .text-white {
+  color: #3B0764 !important;
+}
+body.theme-light #aiCopilotDialogue {
+  background-color: #FAF5FF !important;
+  border-color: #E9D5FF !important;
+}
+body.theme-light #aiCopilotAnswer {
+  color: #1E1B4B !important;
+}
+body.theme-light #aiCopilotAnswer b {
+  color: #581C87 !important;
+}
+body.theme-light #aiCopilotCustomInput {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+body.theme-light #aiCopilotCustomInput::placeholder {
+  color: #94A3B8 !important;
+}
