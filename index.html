@@ -2836,20 +2836,21 @@
                 interaction-prompt="none"
                 class="w-full h-full focus:outline-none"
               >
-                <!-- Native 3D Anchored Flaw Hotspots -->
+                <!-- Native 3D Anchored Flaw Hotspots (Only shown when Grade B/C has a flaw and markers are toggled ON) -->
                 <button slot="hotspot-dent" id="modelHotspotDent" class="hotspot-3d-pin hidden" data-position="0.035 -0.065 0.005" data-normal="0 0 1" onclick="showHotspotTip('📍 Bezel Flaw (0.8mm): Minor cosmetic hairline on lower speaker rail. Passes structural integrity.')">
                   <div class="hotspot-3d-pulse bg-amber-500"></div>
                   <div class="relative w-5 h-5 rounded-full bg-amber-500 text-slate-950 font-black text-[10px] flex items-center justify-center border-2 border-white shadow-lg">📍</div>
                 </button>
-                <button slot="hotspot-display" id="modelHotspotDisplay" class="hotspot-3d-pin" data-position="0 0.02 0.005" data-normal="0 0 1" onclick="showHotspotTip('✓ Display OLED: 100% Scratch-Free Original Ceramic Shield')">
-                  <div class="hotspot-3d-pulse bg-emerald-500"></div>
-                  <div class="relative w-5 h-5 rounded-full bg-emerald-500 text-white font-bold text-[10px] flex items-center justify-center border-2 border-white shadow-lg">✓</div>
-                </button>
               </model-viewer>
               
-              <!-- 3D Orbit Helper Hint -->
-              <div class="absolute bottom-1 left-1.5 px-2 py-0.5 rounded bg-slate-900/80 border border-slate-800 text-[9px] text-slate-400 font-mono pointer-events-none">
-                🌐 3D Spherical Orbit • Drag left/right/up/down
+              <!-- 3D Orbit Helper Hint & Flaw Markers Toggle -->
+              <div class="absolute bottom-1 left-1.5 right-1.5 flex items-center justify-between pointer-events-none z-10">
+                <div class="px-2 py-0.5 rounded bg-slate-900/85 border border-slate-800 text-[9px] text-slate-400 font-mono">
+                  🌐 3D Spherical Orbit • Drag 360°
+                </div>
+                <button id="btnToggleFlawPins" onclick="toggleFlawPins()" class="pointer-events-auto px-2 py-0.5 rounded bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700 text-[9px] font-mono font-bold flex items-center gap-1 cursor-pointer transition-colors shadow">
+                  <span>👁️</span><span id="flawToggleLabel">Flaw Markers: ON</span>
+                </button>
               </div>
             </div>
 
@@ -2925,6 +2926,24 @@
         <!-- Right: Grade Selection, Case Simulator, Battery Sim, AI Copilot & Sticky Checkout (6 cols) -->
         <div id="inspectorSidebar" class="lg:col-span-6 flex flex-col justify-between space-y-2.5 overflow-y-auto no-scrollbar max-h-[80vh] pr-1">
           
+          <!-- Storage Variant Selection Widget -->
+          <div id="storageSelectorWidget" class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow shrink-0">
+            <div class="flex items-center justify-between mb-1.5">
+              <div class="flex items-center gap-1.5 text-xs font-bold text-white">
+                <span>💾</span>
+                <span>Select Internal Storage:</span>
+              </div>
+              <span id="storageSelectedBadge" class="text-[10px] text-blue-400 font-mono font-bold">128GB Selected</span>
+            </div>
+            <div id="inspectStorageOptionsGrid" class="grid grid-cols-4 gap-1.5">
+              <!-- Populated dynamically via renderInspectStorageUI() -->
+            </div>
+            <div class="mt-1.5 flex items-center justify-between text-[9px] text-slate-400 font-mono">
+              <span id="storageRecommendationText">⚡ Standard Capacity for Everyday Apps & Media</span>
+              <span class="text-emerald-400 font-bold">100% Genuine Flash</span>
+            </div>
+          </div>
+
           <!-- Unified Card 1: Condition Grade & "Where is the Dent?" Audit Map -->
           <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow shrink-0">
             <div class="flex items-center justify-between mb-2">
@@ -3176,6 +3195,61 @@
                 <button onclick="handleCustomAIQuestion()" class="px-3 py-1.5 rounded-lg bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs shadow cursor-pointer transition-colors">
                   Ask AI
                 </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Technical Specifications & Hardware Architecture Accordion Card -->
+          <div id="techSpecsWidget" class="rounded-xl bg-slate-950/90 border border-slate-800/90 overflow-hidden shadow shrink-0">
+            <!-- Header -->
+            <div onclick="toggleSpecsSection()" class="px-3 py-2 bg-gradient-to-r from-slate-900 to-slate-900/80 flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-2">
+                <div class="w-5 h-5 rounded-full bg-blue-600/30 border border-blue-400/40 flex items-center justify-center text-xs">
+                  📋
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-white flex items-center gap-1.5">
+                    <span>Technical Specifications & Hardware Architecture</span>
+                    <span class="px-1.5 py-0.2 rounded text-[8px] bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono font-bold">VERIFIED</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-[10px] text-slate-400 font-medium">Display, Chip, Cameras, Battery</span>
+                <span id="techSpecsChevron" class="text-xs text-blue-400 font-bold transition-transform">▼</span>
+              </div>
+            </div>
+
+            <!-- Body -->
+            <div id="techSpecsBody" class="p-2.5 space-y-2">
+              <!-- Category Filter Tabs -->
+              <div class="flex items-center gap-1 flex-wrap text-[10px]" id="specsFilterTabs">
+                <button onclick="setSpecsTab('all')" id="specsTab_all" class="specs-tab-btn active px-2 py-0.5 rounded-md bg-blue-600 text-white font-bold cursor-pointer transition-colors">
+                  All Specs
+                </button>
+                <button onclick="setSpecsTab('display')" id="specsTab_display" class="specs-tab-btn px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer transition-colors">
+                  📱 Display
+                </button>
+                <button onclick="setSpecsTab('processor')" id="specsTab_processor" class="specs-tab-btn px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer transition-colors">
+                  ⚡ Chipset
+                </button>
+                <button onclick="setSpecsTab('camera')" id="specsTab_camera" class="specs-tab-btn px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer transition-colors">
+                  📷 Cameras
+                </button>
+                <button onclick="setSpecsTab('battery')" id="specsTab_battery" class="specs-tab-btn px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer transition-colors">
+                  🔋 Battery
+                </button>
+                <button onclick="setSpecsTab('build')" id="specsTab_build" class="specs-tab-btn px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer transition-colors">
+                  📐 Build
+                </button>
+                <button onclick="setSpecsTab('connectivity')" id="specsTab_connectivity" class="specs-tab-btn px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer transition-colors">
+                  📶 Connectivity
+                </button>
+              </div>
+
+              <!-- Specs Table/Grid Container -->
+              <div id="techSpecsContent" class="space-y-2 max-h-[260px] overflow-y-auto no-scrollbar text-xs">
+                <!-- Dynamically generated via renderProductSpecs() -->
               </div>
             </div>
           </div>

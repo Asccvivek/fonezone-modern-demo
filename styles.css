@@ -2131,3 +2131,80 @@ body.theme-light #aiCopilotCustomInput {
 body.theme-light #aiCopilotCustomInput::placeholder {
   color: #94A3B8 !important;
 }
+
+/* ======================================================== */
+/* STORAGE SELECTOR & TECH SPECS WIDGET STYLES              */
+/* ======================================================== */
+.storage-option-btn {
+  transition: all 0.2s ease;
+}
+.storage-option-btn:hover:not(.active) {
+  transform: translateY(-1px);
+}
+body.theme-light #storageSelectorWidget {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
+}
+body.theme-light #storageSelectorWidget .text-white {
+  color: #0F172A !important;
+}
+body.theme-light #storageSelectorWidget .storage-option-btn:not(.bg-blue-600) {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #334155 !important;
+}
+body.theme-light #storageSelectorWidget .storage-option-btn:not(.bg-blue-600):hover {
+  background-color: #EFF6FF !important;
+  border-color: #BFDBFE !important;
+  color: #1D4ED8 !important;
+}
+body.theme-light #storageRecommendationText {
+  color: #64748B !important;
+}
+
+/* Technical Specifications Widget */
+#techSpecsWidget {
+  transition: all 0.3s ease;
+}
+.specs-tab-btn {
+  transition: all 0.15s ease;
+}
+body.theme-light #techSpecsWidget {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05) !important;
+}
+body.theme-light #techSpecsWidget > div:first-child {
+  background: linear-gradient(to right, #F8FAFC, #EFF6FF) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+}
+body.theme-light #techSpecsWidget .text-white {
+  color: #0F172A !important;
+}
+body.theme-light .specs-tab-btn:not(.active) {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+  color: #475569 !important;
+}
+body.theme-light .specs-tab-btn:not(.active):hover {
+  background-color: #EFF6FF !important;
+  color: #1D4ED8 !important;
+  border-color: #BFDBFE !important;
+}
+body.theme-light .specs-category-card {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+body.theme-light .specs-category-title {
+  color: #1E40AF !important;
+}
+body.theme-light .specs-row-item {
+  border-color: #F1F5F9 !important;
+}
+body.theme-light .specs-label {
+  color: #64748B !important;
+}
+body.theme-light .specs-value {
+  color: #0F172A !important;
+}

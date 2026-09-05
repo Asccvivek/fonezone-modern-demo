@@ -4,6 +4,8 @@
 const CATALOG = [
   {
     id: "fz-ip15pro",
+    baseModelName: "iPhone 15 Pro",
+    color: "Natural Titanium",
     name: "iPhone 15 Pro 128GB Natural Titanium",
     model3d: "assets/iphone14_model.glb",
     category: "phone",
@@ -11,10 +13,95 @@ const CATALOG = [
     badge: "FLAGSHIP",
     image: "assets/iphone15pro_naturaltitanium.png",
     msrp: 134900,
+    storageOptions: [
+      { size: "128GB", delta: 0, msrp: 134900 },
+      { size: "256GB", delta: 7000, msrp: 144900 },
+      { size: "512GB", delta: 16000, msrp: 164900 },
+      { size: "1TB", delta: 25000, msrp: 184900 }
+    ],
     grades: {
       "A": { price: 84999, label: "Grade A (Pristine)", battery: 98, cycles: 84, desc: "Flawless condition. Zero micro-scratches on Ceramic Shield or Titanium. Apple OEM display." },
       "B": { price: 78999, label: "Grade B (Very Good)", battery: 92, cycles: 198, desc: "Pristine display. Minor hairline micro-abrasion on lower titanium bezel rim (invisible with case)." },
       "C": { price: 71999, label: "Grade C (Value Deal)", battery: 86, cycles: 340, desc: "Visible cosmetic scuffs on corners. 100% hardware certified, maximum savings." }
+    },
+    specs: {
+      display: {
+        title: "Super Retina XDR OLED Display",
+        icon: "📱",
+        details: [
+          { label: "Screen Size", value: "6.1-inch All-Screen OLED Display" },
+          { label: "Resolution", value: "2556 x 1179 pixels at 460 ppi" },
+          { label: "Refresh Rate", value: "120Hz ProMotion Adaptive Frequency" },
+          { label: "Peak Brightness", value: "2,000 nits Outdoor / 1,600 nits HDR" },
+          { label: "Glass & Shield", value: "Ceramic Shield Front • Matte Glass Back" },
+          { label: "Tech Features", value: "Dynamic Island, Always-On, TrueTone, P3" }
+        ]
+      },
+      processor: {
+        title: "Apple Silicon A17 Pro (3nm)",
+        icon: "⚡",
+        details: [
+          { label: "Processor Chip", value: "Apple A17 Pro 3nm Industry-First SoC" },
+          { label: "CPU Architecture", value: "6-Core CPU (2 Performance + 4 Efficiency)" },
+          { label: "GPU Architecture", value: "6-Core Pro GPU with Hardware Ray Tracing" },
+          { label: "Neural Engine", value: "16-Core Neural Engine (35 Trillion Ops/sec)" },
+          { label: "RAM Memory", value: "8GB LPDDR5 Unified Memory Architecture" }
+        ]
+      },
+      camera: {
+        title: "Pro 48MP Photonic Camera System",
+        icon: "📷",
+        details: [
+          { label: "Primary Sensor", value: "48MP Main (24mm, f/1.78, 2nd-gen Sensor OIS)" },
+          { label: "Ultra-Wide", value: "12MP Ultra-Wide (13mm, f/2.2, 120° Field of View)" },
+          { label: "Telephoto", value: "12MP 3x Telephoto (77mm, f/2.8, Optical OIS)" },
+          { label: "Optical Zoom", value: "3x Optical Zoom In, 2x Out (6x Optical Range)" },
+          { label: "Pro Video", value: "4K ProRes at 60 fps with external USB-C drive Log" },
+          { label: "Front Camera", value: "12MP TrueDepth (f/1.9) with Autofocus & Face ID" }
+        ]
+      },
+      battery: {
+        title: "Battery & Fast Charging Lab QA",
+        icon: "🔋",
+        details: [
+          { label: "OEM Capacity", value: "3,274 mAh Li-Ion (Guaranteed >=85% Health)" },
+          { label: "Video Playback", value: "Up to 23 Hours Local / 20 Hours Streamed" },
+          { label: "Fast Charging", value: "Up to 50% charge in 30 mins via 20W Type-C" },
+          { label: "Wireless Qi2", value: "MagSafe 15W & Qi2 Magnetic Fast Charging" }
+        ]
+      },
+      build: {
+        title: "Aerospace Titanium Chassis & Dimensions",
+        icon: "📐",
+        details: [
+          { label: "Chassis Material", value: "Grade 5 Aerospace Titanium with Aluminum core" },
+          { label: "Dimensions", value: "146.6 x 70.6 x 8.25 mm (5.77 x 2.78 x 0.32 in)" },
+          { label: "Total Weight", value: "187 grams (6.60 oz) Ultra-Lightweight" },
+          { label: "Water Resistance", value: "IP68 Rating (Maximum depth 6 meters up to 30 mins)" },
+          { label: "Action Control", value: "Custom Action Button with Haptic Feedback" }
+        ]
+      },
+      connectivity: {
+        title: "5G, Dual SIM & Wireless Architecture",
+        icon: "📶",
+        details: [
+          { label: "5G Cellular", value: "5G Sub-6GHz & mmWave (All Indian 5G Bands)" },
+          { label: "SIM Types", value: "Dual SIM (Physical nano-SIM + eSIM) Unlocked" },
+          { label: "Wi-Fi & Bluetooth", value: "Wi-Fi 6E (802.11ax) + Bluetooth 5.3 + Thread" },
+          { label: "Port Interface", value: "USB-C 3.0 (up to 10Gb/s transfer speed)" },
+          { label: "Biometrics", value: "Face ID TrueDepth 3D Facial Recognition" }
+        ]
+      },
+      inclusions: {
+        title: "FoneZone Certified Box Inclusions",
+        icon: "🛡️",
+        details: [
+          { label: "QA Certificate", value: "32-Point Diagnostic Engineering Report (Pass 100%)" },
+          { label: "Warranty Cover", value: "6 Months Comprehensive Pan-India Warranty Card" },
+          { label: "Charging Cable", value: "20W Braided USB-C to USB-C Fast Charge Cable" },
+          { label: "Security Seal", value: "Tamper-Evident Anti-Swap Doorstep Security Pouch" }
+        ]
+      }
     },
     angles: {
       0: "assets/turntable_frame_0.png",
@@ -37,6 +124,8 @@ const CATALOG = [
   },
   {
     id: "fz-ip14",
+    baseModelName: "iPhone 14",
+    color: "Blue",
     name: "iPhone 14 128GB Blue",
     model3d: "assets/iphone14_model.glb",
     category: "phone",
@@ -44,10 +133,88 @@ const CATALOG = [
     badge: "BESTSELLER",
     image: "assets/iphone14_blue.png",
     msrp: 69900,
+    storageOptions: [
+      { size: "128GB", delta: 0, msrp: 69900 },
+      { size: "256GB", delta: 6000, msrp: 79900 },
+      { size: "512GB", delta: 14000, msrp: 99900 }
+    ],
     grades: {
       "A": { price: 48999, label: "Grade A (Pristine)", battery: 96, cycles: 112, desc: "Scratch-free glass, like-new aerospace aluminum body. 100% battery performance." },
       "B": { price: 43999, label: "Grade B (Very Good)", battery: 91, cycles: 220, desc: "Light brush marks on side rails. Clean Super Retina display." },
       "C": { price: 38999, label: "Grade C (Value Deal)", battery: 85, cycles: 390, desc: "Minor cosmetic corner abrasions. Hardware and cameras tested 100%." }
+    },
+    specs: {
+      display: {
+        title: "Super Retina XDR OLED Display",
+        icon: "📱",
+        details: [
+          { label: "Screen Size", value: "6.1-inch Super Retina XDR OLED" },
+          { label: "Resolution", value: "2532 x 1170 pixels at 460 ppi" },
+          { label: "Refresh Rate", value: "60Hz Smooth Retina Interface" },
+          { label: "Peak Brightness", value: "1,200 nits HDR / 800 nits Typical" },
+          { label: "Protection", value: "Ceramic Shield Front • Aerospace Aluminum" }
+        ]
+      },
+      processor: {
+        title: "Apple Silicon A15 Bionic",
+        icon: "⚡",
+        details: [
+          { label: "Processor Chip", value: "Apple A15 Bionic (5-Core GPU Version)" },
+          { label: "CPU Architecture", value: "6-Core CPU (2 Performance + 4 Efficiency)" },
+          { label: "GPU Architecture", value: "5-Core Apple GPU with 16-Core Neural Engine" },
+          { label: "RAM Memory", value: "6GB High-Speed LPDDR4X" }
+        ]
+      },
+      camera: {
+        title: "Dual 12MP Camera System with Photonic Engine",
+        icon: "📷",
+        details: [
+          { label: "Primary Camera", value: "12MP Main (26mm, f/1.5, Sensor-shift OIS)" },
+          { label: "Ultra-Wide", value: "12MP Ultra-Wide (13mm, f/2.4, 120° FOV)" },
+          { label: "Video Recording", value: "4K Dolby Vision HDR at up to 60 fps" },
+          { label: "Action Mode", value: "Super-smooth handheld Action Mode Video" },
+          { label: "Front Camera", value: "12MP TrueDepth (f/1.9) with Autofocus" }
+        ]
+      },
+      battery: {
+        title: "Battery & Fast Charge Test",
+        icon: "🔋",
+        details: [
+          { label: "OEM Capacity", value: "3,279 mAh Li-Ion (Certified >=85% Health)" },
+          { label: "Video Playback", value: "Up to 20 Hours Video Playback" },
+          { label: "Charging", value: "Fast Charge 50% in 30 mins (20W Adapter)" },
+          { label: "Wireless", value: "MagSafe 15W & Qi Wireless Charging 7.5W" }
+        ]
+      },
+      build: {
+        title: "Chassis & Dimensions",
+        icon: "📐",
+        details: [
+          { label: "Chassis", value: "Aerospace-grade Aluminum with Glass Back" },
+          { label: "Dimensions", value: "146.7 x 71.5 x 7.80 mm" },
+          { label: "Weight", value: "172 grams (6.07 oz)" },
+          { label: "Water Resistance", value: "IP68 (6 meters up to 30 mins)" }
+        ]
+      },
+      connectivity: {
+        title: "Connectivity & Features",
+        icon: "📶",
+        details: [
+          { label: "5G Cellular", value: "5G NR Sub-6 GHz with 4x4 MIMO (Pan-India)" },
+          { label: "SIM Types", value: "Dual SIM (nano-SIM and eSIM) Unlocked" },
+          { label: "Wi-Fi & BT", value: "Wi-Fi 6 (802.11ax) + Bluetooth 5.3 + NFC" },
+          { label: "Safety", value: "Crash Detection & Emergency SOS via Satellite" }
+        ]
+      },
+      inclusions: {
+        title: "Certified Box Inclusions",
+        icon: "🛡️",
+        details: [
+          { label: "QA Certificate", value: "32-Point Comprehensive Lab Certificate" },
+          { label: "Warranty", value: "6 Months FoneZone Pan-India Warranty" },
+          { label: "Cable", value: "Apple OEM Fast Charge Lightning to USB-C Cable" }
+        ]
+      }
     },
     angles: {
       0: "assets/turntable_frame_0.png",
@@ -70,16 +237,99 @@ const CATALOG = [
   },
   {
     id: "fz-s23ultra",
+    baseModelName: "Samsung Galaxy S23 Ultra 5G",
+    color: "Phantom Black",
     name: "Samsung Galaxy S23 Ultra 5G 256GB Phantom Black",
     category: "phone",
     brand: "samsung",
     badge: "200MP CAM",
     image: "assets/samsung_s23_ultra.png",
     msrp: 124999,
+    storageOptions: [
+      { size: "256GB", delta: 0, msrp: 124999 },
+      { size: "512GB", delta: 8000, msrp: 134999 },
+      { size: "1TB", delta: 18000, msrp: 154999 }
+    ],
     grades: {
       "A": { price: 67999, label: "Grade A (Pristine)", battery: 97, cycles: 92, desc: "Flawless Dynamic AMOLED 2X, S-Pen included, zero scratches on lenses." },
       "B": { price: 61999, label: "Grade B (Very Good)", battery: 90, cycles: 215, desc: "Minor hair scuffs on armor aluminum edge. Screen pristine." },
       "C": { price: 54999, label: "Grade C (Value Deal)", battery: 84, cycles: 360, desc: "Everyday wear on back cover. 100x zoom and hardware 100% verified." }
+    },
+    specs: {
+      display: {
+        title: "Dynamic AMOLED 2X QHD+ Display",
+        icon: "📱",
+        details: [
+          { label: "Screen Size", value: "6.8-inch Edge QHD+ Dynamic AMOLED 2X" },
+          { label: "Resolution", value: "3088 x 1440 pixels at 500 ppi" },
+          { label: "Refresh Rate", value: "1-120Hz Super Smooth Adaptive ProMotion" },
+          { label: "Peak Brightness", value: "1,750 nits Outdoor Vision Booster" },
+          { label: "Protection", value: "Corning Gorilla Glass Victus 2 (Front & Back)" }
+        ]
+      },
+      processor: {
+        title: "Snapdragon 8 Gen 2 for Galaxy",
+        icon: "⚡",
+        details: [
+          { label: "Processor Chip", value: "Qualcomm Snapdragon 8 Gen 2 for Galaxy (4nm)" },
+          { label: "Clock Speed", value: "Overclocked 3.36 GHz Cortex-X3 Prime Core" },
+          { label: "GPU Architecture", value: "Adreno 740 GPU with Real-Time Ray Tracing" },
+          { label: "RAM Memory", value: "12GB Ultra-Fast LPDDR5X RAM" }
+        ]
+      },
+      camera: {
+        title: "200MP Quad Pro-Grade Camera + 100x Space Zoom",
+        icon: "📷",
+        details: [
+          { label: "Primary Sensor", value: "200MP ISOCELL HP2 (f/1.7, 24mm, Super Quad Pixel OIS)" },
+          { label: "Periscope Zoom", value: "10MP 10x Optical Periscope (f/4.9, OIS, 100x Space Zoom)" },
+          { label: "Telephoto 3x", value: "10MP 3x Optical Telephoto (f/2.4, OIS, Dual Pixel)" },
+          { label: "Ultra-Wide", value: "12MP Ultra-Wide (f/2.2, 120° FOV, Dual Pixel AF)" },
+          { label: "Video Recording", value: "8K Video at 30 fps & 4K at 60 fps Super Steady" },
+          { label: "Front Camera", value: "12MP Dual Pixel AF (f/2.2) with HDR10+" }
+        ]
+      },
+      battery: {
+        title: "5,000 mAh Monster Battery & 45W Fast Charging",
+        icon: "🔋",
+        details: [
+          { label: "OEM Capacity", value: "5,000 mAh High-Density Dual Cell Battery" },
+          { label: "Super Fast Charge", value: "45W Fast Charge 2.0 (65% in 30 mins)" },
+          { label: "Wireless Charge", value: "15W Fast Wireless Charging 2.0" },
+          { label: "Wireless PowerShare", value: "Reverse Wireless Charging for Galaxy Buds/Watch" }
+        ]
+      },
+      build: {
+        title: "Armor Aluminum & Embedded Bluetooth S-Pen",
+        icon: "📐",
+        details: [
+          { label: "Stylus Inbuilt", value: "Embedded S-Pen Stylus with 2.8ms Latency & Air Actions" },
+          { label: "Chassis Frame", value: "Armor Aluminum Frame with Tough Drop Resistance" },
+          { label: "Dimensions", value: "163.4 x 78.1 x 8.9 mm (6.43 x 3.07 x 0.35 in)" },
+          { label: "Total Weight", value: "233 grams (8.22 oz)" },
+          { label: "Water Resistance", value: "IP68 Water & Dust Resistant (1.5m up to 30 mins)" }
+        ]
+      },
+      connectivity: {
+        title: "5G Multi-Band & Biometrics",
+        icon: "📶",
+        details: [
+          { label: "5G Cellular", value: "5G Dual SIM (Physical SIM 1 + SIM 2 / eSIM)" },
+          { label: "Wi-Fi & Bluetooth", value: "Wi-Fi 6E (802.11ax) + Bluetooth 5.3 + UWB" },
+          { label: "Biometrics", value: "Qualcomm 3D Sonic Ultrasonic In-Display Fingerprint" },
+          { label: "Desktop Mode", value: "Samsung DeX Wireless Desktop Computing Support" }
+        ]
+      },
+      inclusions: {
+        title: "Certified Box Inclusions",
+        icon: "🛡️",
+        details: [
+          { label: "Original S-Pen", value: "Official Samsung S-Pen Stylus Included inside device" },
+          { label: "QA Report", value: "32-Point Comprehensive Lab Diagnostic Certificate" },
+          { label: "Warranty", value: "6 Months FoneZone Pan-India Warranty Card" },
+          { label: "Charging Cable", value: "Type-C to Type-C 45W Fast Charging Cable" }
+        ]
+      }
     },
     angles: {
       0: "assets/samsung_s23_ultra.png",
@@ -93,6 +343,8 @@ const CATALOG = [
   },
   {
     id: "fz-ip13",
+    baseModelName: "iPhone 13",
+    color: "Starlight",
     name: "iPhone 13 128GB Starlight",
     model3d: "assets/iphone14_model.glb",
     category: "phone",
@@ -100,10 +352,82 @@ const CATALOG = [
     badge: "VALUE PICK",
     image: "assets/iphone13_starlight.png",
     msrp: 59900,
+    storageOptions: [
+      { size: "128GB", delta: 0, msrp: 59900 },
+      { size: "256GB", delta: 5000, msrp: 69900 },
+      { size: "512GB", delta: 12000, msrp: 89900 }
+    ],
     grades: {
       "A": { price: 39999, label: "Grade A (Pristine)", battery: 95, cycles: 140, desc: "Original Ceramic Shield. Battery capacity 95%+. Flawless body." },
       "B": { price: 34999, label: "Grade B (Very Good)", battery: 89, cycles: 245, desc: "Micro scuffs around charging port. Screen 100% spotless." },
       "C": { price: 30999, label: "Grade C (Value Deal)", battery: 84, cycles: 410, desc: "Visible signs of handling. 100% genuine Apple components." }
+    },
+    specs: {
+      display: {
+        title: "Super Retina XDR OLED Display",
+        icon: "📱",
+        details: [
+          { label: "Screen Size", value: "6.1-inch Super Retina XDR OLED" },
+          { label: "Resolution", value: "2532 x 1170 pixels at 460 ppi" },
+          { label: "Peak Brightness", value: "1,200 nits HDR / 800 nits Typical" },
+          { label: "Glass Front", value: "Ceramic Shield Front Glass Cover" }
+        ]
+      },
+      processor: {
+        title: "Apple Silicon A15 Bionic",
+        icon: "⚡",
+        details: [
+          { label: "Processor Chip", value: "Apple A15 Bionic (6-Core CPU)" },
+          { label: "Graphics", value: "4-Core Apple GPU with 16-Core Neural Engine" },
+          { label: "RAM Memory", value: "4GB LPDDR4X" }
+        ]
+      },
+      camera: {
+        title: "Dual 12MP Camera with Sensor-Shift OIS",
+        icon: "📷",
+        details: [
+          { label: "Primary Wide", value: "12MP Wide (f/1.6, Sensor-shift Optical Image Stabilization)" },
+          { label: "Ultra-Wide", value: "12MP Ultra-Wide (f/2.4, 120° Field of View)" },
+          { label: "Cinematic Mode", value: "Cinematic Mode 1080p at 30 fps with Rack Focus" },
+          { label: "Front Camera", value: "12MP TrueDepth (f/2.2) with Night Mode & Face ID" }
+        ]
+      },
+      battery: {
+        title: "Battery & MagSafe Fast Charge",
+        icon: "🔋",
+        details: [
+          { label: "OEM Capacity", value: "3,227 mAh (Tested >=85% Health Guaranteed)" },
+          { label: "Video Playback", value: "Up to 19 Hours Video Playback" },
+          { label: "Wired / Wireless", value: "20W Fast Charge + 15W MagSafe Magnetic" }
+        ]
+      },
+      build: {
+        title: "Chassis & Dimensions",
+        icon: "📐",
+        details: [
+          { label: "Material", value: "Aerospace-grade Aluminum with Glass Back" },
+          { label: "Dimensions", value: "146.7 x 71.5 x 7.65 mm • 174 grams" },
+          { label: "Water Resistance", value: "IP68 Rated (6 meters up to 30 mins)" }
+        ]
+      },
+      connectivity: {
+        title: "5G & Wireless",
+        icon: "📶",
+        details: [
+          { label: "Cellular", value: "5G Sub-6 GHz Dual SIM (nano-SIM + eSIM)" },
+          { label: "Wi-Fi & Bluetooth", value: "Wi-Fi 6 + Bluetooth 5.0 + NFC Reader" },
+          { label: "Biometrics", value: "Face ID TrueDepth Facial Biometrics" }
+        ]
+      },
+      inclusions: {
+        title: "Certified Box Inclusions",
+        icon: "🛡️",
+        details: [
+          { label: "QA Certificate", value: "32-Point Comprehensive Diagnostic Certificate" },
+          { label: "Warranty", value: "6 Months Comprehensive FoneZone Warranty" },
+          { label: "Cable", value: "Type-C to Lightning Fast Charge Cable" }
+        ]
+      }
     },
     angles: {
       0: "assets/iphone13_starlight.png",
@@ -117,6 +441,8 @@ const CATALOG = [
   },
   {
     id: "fz-ip11",
+    baseModelName: "iPhone 11",
+    color: "Black",
     name: "iPhone 11 64GB Black",
     model3d: "assets/iphone14_model.glb",
     category: "phone",
@@ -124,10 +450,81 @@ const CATALOG = [
     badge: "BUDGET HERO",
     image: "assets/iphone14_front.png",
     msrp: 49900,
+    storageOptions: [
+      { size: "64GB", delta: 0, msrp: 49900 },
+      { size: "128GB", delta: 3000, msrp: 54900 },
+      { size: "256GB", delta: 6000, msrp: 64900 }
+    ],
     grades: {
       "A": { price: 19999, label: "Grade A (Pristine)", battery: 94, cycles: 165, desc: "Liquid Retina HD display. Zero scratches, pristine aluminum enclosure." },
       "B": { price: 17499, label: "Grade B (Very Good)", battery: 89, cycles: 280, desc: "Light pocket rub on corners. Display 100% spotless. 100% genuine parts." },
       "C": { price: 15499, label: "Grade C (Value Deal)", battery: 84, cycles: 390, desc: "Everyday cosmetic scuffs on frame. Dual cameras and Face ID 100% verified." }
+    },
+    specs: {
+      display: {
+        title: "Liquid Retina HD IPS Display",
+        icon: "📱",
+        details: [
+          { label: "Screen Size", value: "6.1-inch Liquid Retina HD IPS LCD" },
+          { label: "Resolution", value: "1792 x 828 pixels at 326 ppi" },
+          { label: "Brightness", value: "625 nits Max Brightness with TrueTone" }
+        ]
+      },
+      processor: {
+        title: "Apple Silicon A13 Bionic",
+        icon: "⚡",
+        details: [
+          { label: "Chipset", value: "Apple A13 Bionic (6-Core CPU + 4-Core GPU)" },
+          { label: "Neural Engine", value: "8-Core Neural Engine (Third Generation)" },
+          { label: "RAM Memory", value: "4GB LPDDR4X" }
+        ]
+      },
+      camera: {
+        title: "Dual 12MP Ultra-Wide & Wide System",
+        icon: "📷",
+        details: [
+          { label: "Main Camera", value: "12MP Wide (f/1.8, OIS, 100% Focus Pixels)" },
+          { label: "Ultra-Wide", value: "12MP Ultra-Wide (f/2.4, 120° Field of View)" },
+          { label: "Video Recording", value: "4K Video at up to 60 fps with Stereo Sound" },
+          { label: "Front Camera", value: "12MP TrueDepth (f/2.2) 4K Selfie Video" }
+        ]
+      },
+      battery: {
+        title: "Battery & Fast Charge",
+        icon: "🔋",
+        details: [
+          { label: "Capacity", value: "3,110 mAh Li-Ion (Guaranteed >=85% Health)" },
+          { label: "Video Playback", value: "Up to 17 Hours Video Playback" },
+          { label: "Charging", value: "18W Fast Charging Capable + Qi Wireless" }
+        ]
+      },
+      build: {
+        title: "Chassis & Materials",
+        icon: "📐",
+        details: [
+          { label: "Build", value: "Aerospace Aluminum with Dual-Ion Glass" },
+          { label: "Dimensions", value: "150.9 x 75.7 x 8.3 mm • 194 grams" },
+          { label: "Water Resistance", value: "IP68 (2 meters up to 30 mins)" }
+        ]
+      },
+      connectivity: {
+        title: "Cellular & Wireless",
+        icon: "📶",
+        details: [
+          { label: "Cellular", value: "4G LTE Advanced with 2x2 MIMO Dual SIM (nano + eSIM)" },
+          { label: "Wi-Fi & BT", value: "Wi-Fi 6 + Bluetooth 5.0 + NFC Express Cards" },
+          { label: "Biometrics", value: "Face ID TrueDepth Security Camera" }
+        ]
+      },
+      inclusions: {
+        title: "Certified Box Inclusions",
+        icon: "🛡️",
+        details: [
+          { label: "QA Certificate", value: "32-Point Diagnostic Inspection Certificate" },
+          { label: "Warranty", value: "6 Months FoneZone Pan-India Warranty" },
+          { label: "Cable", value: "USB Fast Charge Cable" }
+        ]
+      }
     },
     angles: {
       0: "assets/iphone14_front.png",
@@ -141,16 +538,83 @@ const CATALOG = [
   },
   {
     id: "fz-macbook-m2",
+    baseModelName: "MacBook Air 13.6-inch M2",
+    color: "Midnight",
     name: "MacBook Air 13.6-inch M2 (8GB / 256GB SSD) Midnight",
     category: "macbook",
     brand: "apple",
     badge: "APPLE SILICON",
     image: "assets/macbookair_midnight.png",
     msrp: 114900,
+    storageOptions: [
+      { size: "256GB SSD", delta: 0, msrp: 114900 },
+      { size: "512GB SSD", delta: 16000, msrp: 134900 },
+      { size: "1TB SSD", delta: 32000, msrp: 154900 }
+    ],
     grades: {
       "A": { price: 78999, label: "Grade A (Pristine)", battery: 100, cycles: 24, desc: "Zero palm-rest glossing, Liquid Retina display 100% clean, MagSafe 3." },
       "B": { price: 71999, label: "Grade B (Very Good)", battery: 94, cycles: 120, desc: "Faint anodization wear on corner edge. Keyboard pristine." },
       "C": { price: 64999, label: "Grade C (Value Deal)", battery: 88, cycles: 210, desc: "Normal top lid scuffing. M2 benchmarked at 100% factory performance." }
+    },
+    specs: {
+      display: {
+        title: "13.6-inch Liquid Retina Display",
+        icon: "💻",
+        details: [
+          { label: "Display Size", value: "13.6-inch (diagonal) LED-backlit IPS Liquid Retina" },
+          { label: "Native Resolution", value: "2560 x 1664 pixels at 224 ppi (1 Billion Colors)" },
+          { label: "Brightness", value: "500 nits Peak Brightness with Wide Color (P3) & TrueTone" }
+        ]
+      },
+      processor: {
+        title: "Apple Silicon M2 Chip",
+        icon: "⚡",
+        details: [
+          { label: "Processor SoC", value: "Apple M2 (8-Core CPU: 4 Performance + 4 Efficiency)" },
+          { label: "Graphics GPU", value: "8-Core GPU with Hardware-accelerated ProRes" },
+          { label: "Neural Engine", value: "16-Core Neural Engine (15.8 Trillion Ops/sec)" },
+          { label: "Memory", value: "8GB Unified Memory with 100GB/s Memory Bandwidth" }
+        ]
+      },
+      battery: {
+        title: "All-Day 18-Hour Battery & MagSafe 3",
+        icon: "🔋",
+        details: [
+          { label: "Battery Unit", value: "52.6-watt-hour Lithium-Polymer Battery" },
+          { label: "Battery Runtime", value: "Up to 18 Hours Apple TV App / 15 Hours Wireless Web" },
+          { label: "Fast Charging", value: "Fast-charge capable with 67W USB-C Power Adapter" },
+          { label: "MagSafe", value: "MagSafe 3 Dedicated Magnetic Breakaway Port" }
+        ]
+      },
+      build: {
+        title: "11mm Thin Unibody & Fanless Silence",
+        icon: "📐",
+        details: [
+          { label: "Form Factor", value: "100% Recycled Aluminum Unibody (Fanless Silent Design)" },
+          { label: "Dimensions", value: "30.41 x 21.50 x 1.13 cm (0.44 in thin)" },
+          { label: "Weight", value: "1.24 kg (2.7 pounds) Ultra-Portable" },
+          { label: "Keyboard", value: "Backlit Magic Keyboard with Full-height Function Keys & Touch ID" }
+        ]
+      },
+      connectivity: {
+        title: "Ports & High-Speed Audio",
+        icon: "📶",
+        details: [
+          { label: "Thunderbolt", value: "2x Thunderbolt / USB 4 Ports (up to 40Gb/s transfer)" },
+          { label: "Headphone Jack", value: "3.5 mm Headphone Jack with Advanced High-Impedance Support" },
+          { label: "Audio System", value: "Four-Speaker Sound System with Spatial Audio & Dolby Atmos" },
+          { label: "Camera", value: "1080p FaceTime HD Camera with Advanced ISP" }
+        ]
+      },
+      inclusions: {
+        title: "Certified Box Inclusions",
+        icon: "🛡️",
+        details: [
+          { label: "Power Adapter", value: "Official Apple Dual Port USB-C Compact Power Adapter" },
+          { label: "MagSafe Cable", value: "Color-Matched 2m Braided USB-C to MagSafe 3 Cable" },
+          { label: "Warranty Cover", value: "6 Months Comprehensive FoneZone Pan-India Warranty" }
+        ]
+      }
     },
     angles: {
       0: "assets/macbookair_midnight.png",
@@ -164,16 +628,90 @@ const CATALOG = [
   },
   {
     id: "fz-ipad-10",
+    baseModelName: "iPad 10th Gen 10.9-inch Wi-Fi",
+    color: "Blue",
     name: "iPad 10th Gen 10.9-inch Wi-Fi 64GB Blue",
     category: "ipad",
     brand: "apple",
     badge: "ALL-SCREEN",
     image: "assets/ipad_10th_gen.png",
     msrp: 44900,
+    storageOptions: [
+      { size: "64GB", delta: 0, msrp: 44900 },
+      { size: "256GB", delta: 9000, msrp: 59900 }
+    ],
     grades: {
       "A": { price: 32999, label: "Grade A (Pristine)", battery: 99, cycles: 38, desc: "Liquid Retina display with True Tone. USB-C port tested." },
       "B": { price: 28999, label: "Grade B (Very Good)", battery: 92, cycles: 140, desc: "Light hairline marks on aluminum back. Display 100% flawless." },
       "C": { price: 24999, label: "Grade C (Value Deal)", battery: 86, cycles: 290, desc: "Corner paint scuffs. Hardware and stereo speakers 100% verified." }
+    },
+    specs: {
+      display: {
+        title: "10.9-inch All-Screen Liquid Retina Display",
+        icon: "📱",
+        details: [
+          { label: "Display Size", value: "10.9-inch (diagonal) LED-backlit Multi-Touch with IPS" },
+          { label: "Resolution", value: "2360 x 1640 pixels at 264 ppi" },
+          { label: "Brightness", value: "500 nits Peak Brightness with TrueTone & sRGB" },
+          { label: "Pencil Support", value: "Apple Pencil (USB-C & 1st generation with adapter)" }
+        ]
+      },
+      processor: {
+        title: "Apple Silicon A14 Bionic",
+        icon: "⚡",
+        details: [
+          { label: "Processor Chip", value: "Apple A14 Bionic (6-Core CPU + 4-Core GPU)" },
+          { label: "Neural Engine", value: "16-Core Neural Engine (Faster On-Device Machine Learning)" },
+          { label: "RAM Memory", value: "4GB High-Speed LPDDR4X" }
+        ]
+      },
+      camera: {
+        title: "Landscape 12MP Ultra-Wide with Center Stage",
+        icon: "📷",
+        details: [
+          { label: "Rear Camera", value: "12MP Wide Camera (f/1.8, 4K Video at up to 60 fps)" },
+          { label: "Front Camera", value: "Landscape 12MP Ultra-Wide (f/2.4, 122° Field of View)" },
+          { label: "Center Stage", value: "Auto-pans & zooms during video calls to keep you centered" }
+        ]
+      },
+      battery: {
+        title: "Battery & Fast USB-C Charging",
+        icon: "🔋",
+        details: [
+          { label: "Battery Unit", value: "28.6-watt-hour Rechargeable Lithium-Polymer" },
+          { label: "Runtime", value: "Up to 10 Hours Surfing the Web on Wi-Fi or Watching Video" },
+          { label: "Interface", value: "USB-C Port for Universal Fast Charging & Peripherals" }
+        ]
+      },
+      build: {
+        title: "Chassis & Modern All-Screen Design",
+        icon: "📐",
+        details: [
+          { label: "Material", value: "100% Recycled Aluminum Enclosure" },
+          { label: "Dimensions", value: "248.6 x 179.5 x 7.0 mm (0.28 in thin)" },
+          { label: "Total Weight", value: "477 grams (1.05 pounds)" },
+          { label: "Audio", value: "Landscape Stereo Speakers with Dual Microphones" }
+        ]
+      },
+      connectivity: {
+        title: "Wireless & Touch ID",
+        icon: "📶",
+        details: [
+          { label: "Wi-Fi", value: "Wi-Fi 6 (802.11ax) with 2x2 MIMO Dual Band" },
+          { label: "Bluetooth", value: "Bluetooth 5.2 Low Energy" },
+          { label: "Biometrics", value: "Touch ID Sensor Built Directly into Top Button" }
+        ]
+      },
+      inclusions: {
+        title: "Certified Box Inclusions",
+        icon: "🛡️",
+        details: [
+          { label: "QA Certificate", value: "32-Point Comprehensive Lab Diagnostic Certificate" },
+          { label: "Charger", value: "20W USB-C Official Power Adapter" },
+          { label: "Cable", value: "Braided USB-C Charge Cable (1m)" },
+          { label: "Warranty", value: "6 Months Comprehensive FoneZone Pan-India Warranty" }
+        ]
+      }
     },
     angles: {
       0: "assets/ipad_10th_gen.png",
@@ -187,16 +725,81 @@ const CATALOG = [
   },
   {
     id: "fz-watch-ultra",
+    baseModelName: "Apple Watch Ultra 49mm",
+    color: "Titanium",
     name: "Apple Watch Ultra 49mm Titanium",
     category: "watch",
     brand: "apple",
     badge: "ADVENTURE",
     image: "assets/applewatch_ultra.png",
     msrp: 89900,
+    storageOptions: [
+      { size: "32GB (GPS+Cellular)", delta: 0, msrp: 89900 }
+    ],
     grades: {
       "A": { price: 44999, label: "Grade A (Pristine)", battery: 99, cycles: 42, desc: "Aerospace Titanium case, scratch-free Sapphire crystal face." },
       "B": { price: 39499, label: "Grade B (Very Good)", battery: 93, cycles: 130, desc: "Light brush mark on titanium bezel rim. Clean display." },
       "C": { price: 34999, label: "Grade C (Value Deal)", battery: 87, cycles: 260, desc: "Visible outdoor adventure scuffs. Cellular and Action button 100%." }
+    },
+    specs: {
+      display: {
+        title: "49mm Always-On Retina LTPO OLED",
+        icon: "⌚",
+        details: [
+          { label: "Case Size", value: "49mm Aerospace Titanium Case with Raised Bezel" },
+          { label: "Resolution", value: "410 x 502 pixels (1,185 sq mm Display Area)" },
+          { label: "Peak Brightness", value: "Up to 2,000 nits (2x Brighter than Series 8)" },
+          { label: "Face Glass", value: "Flat Sapphire Crystal Face with Edge Protection" }
+        ]
+      },
+      processor: {
+        title: "S8 SiP Dual-Core 64-bit Architecture",
+        icon: "⚡",
+        details: [
+          { label: "Processor Chip", value: "Apple S8 System in Package (SiP) with 64-bit Dual-Core" },
+          { label: "Wireless Chips", value: "W3 Apple Wireless Chip + U1 Ultra Wideband (UWB)" },
+          { label: "Storage", value: "32GB Internal Flash Storage Capacity" }
+        ]
+      },
+      battery: {
+        title: "Multi-Day 36-Hour Expedition Battery",
+        icon: "🔋",
+        details: [
+          { label: "Battery Unit", value: "542 mAh Lithium-Ion Rechargeable Battery" },
+          { label: "Normal Use", value: "Up to 36 Hours Normal Use on Active Cellular" },
+          { label: "Low Power Mode", value: "Up to 60-72 Hours in Low Power Expedition Mode" },
+          { label: "Charging", value: "Fast Inductive Magnetic USB-C Charging" }
+        ]
+      },
+      build: {
+        title: "Mil-STD 810H & 100m Water / Dive Certified",
+        icon: "📐",
+        details: [
+          { label: "Chassis", value: "Aerospace Grade 5 Titanium with Raised Bezel Protection" },
+          { label: "Dimensions", value: "49 x 44 x 14.4 mm • 61.3 grams weight" },
+          { label: "Water Resistance", value: "100m Water Resistance (WR100 & EN13319 Recreational Dive to 40m)" },
+          { label: "Special Hardware", value: "Customizable Action Button + 86-decibel Dual-Speaker Emergency Siren" }
+        ]
+      },
+      connectivity: {
+        title: "Precision Dual-Frequency GPS & 4G LTE",
+        icon: "📶",
+        details: [
+          { label: "Cellular", value: "Standalone 4G LTE and UMTS Cellular (No iPhone needed)" },
+          { label: "Precision GPS", value: "Precision Dual-Frequency GPS (L1 and L5) with Offline Compass" },
+          { label: "Sensors", value: "Blood Oxygen, ECG, Temperature Sensor, Depth Gauge & Water Temp" }
+        ]
+      },
+      inclusions: {
+        title: "Certified Box Inclusions",
+        icon: "🛡️",
+        details: [
+          { label: "QA Certificate", value: "32-Point Comprehensive Lab Diagnostic Certificate" },
+          { label: "Fast Charger", value: "Official Apple Watch Magnetic Fast Charger to USB-C Cable" },
+          { label: "Band", value: "Certified Ocean / Alpine Loop Band" },
+          { label: "Warranty", value: "6 Months Comprehensive FoneZone Pan-India Warranty" }
+        ]
+      }
     },
     angles: {
       0: "assets/applewatch_ultra.png",
@@ -313,13 +916,45 @@ const state = {
   orders: [...INITIAL_ORDERS],
   selectedOrderId: "FZ-1049",
   queueFilter: "all",
-  chatHistory: {}
+  chatHistory: {},
+
+  // Storage Selection & Technical Specs State
+  selectedProductStorage: {},
+  currentInspectStorage: null,
+  showFlawMarkers: true,
+  specsFilterTab: "all",
+  isSpecsOpen: true
 };
 
-// Initialize grades
+// Initialize grades and default storage
 CATALOG.forEach(p => {
   state.selectedProductGrades[p.id] = "A";
+  if (p.storageOptions && p.storageOptions.length > 0) {
+    state.selectedProductStorage[p.id] = p.storageOptions[0].size;
+  }
 });
+
+// Dynamic Price & Storage Calculator
+function getProductPrice(product, grade, storageSize) {
+  if (!product) return { price: 0, msrp: 0, savings: 0, savingsPct: 0, delta: 0, storageSize: "" };
+  const currentGrade = grade || "A";
+  const gradeInfo = product.grades[currentGrade] || product.grades["A"];
+  const basePrice = gradeInfo ? gradeInfo.price : 0;
+  const storageOpt = (product.storageOptions || []).find(s => s.size === storageSize) || (product.storageOptions ? product.storageOptions[0] : null);
+  const delta = storageOpt ? storageOpt.delta : 0;
+  const msrp = storageOpt && storageOpt.msrp ? storageOpt.msrp : product.msrp;
+  const finalPrice = basePrice + delta;
+  const savings = Math.max(0, msrp - finalPrice);
+  const savingsPct = Math.round((savings / msrp) * 100);
+  return {
+    price: finalPrice,
+    msrp: msrp,
+    savings: savings,
+    savingsPct: savingsPct,
+    delta: delta,
+    storageSize: storageOpt ? storageOpt.size : ""
+  };
+}
 
 
 // ========================================================
@@ -553,11 +1188,12 @@ function renderCatalog() {
 
   grid.innerHTML = filtered.map(p => {
     const currentGrade = state.selectedProductGrades[p.id] || "A";
+    const currentStorage = state.selectedProductStorage[p.id] || (p.storageOptions ? p.storageOptions[0].size : "");
+    const priceInfo = getProductPrice(p, currentGrade, currentStorage);
     const gradeInfo = p.grades[currentGrade];
-    const savings = p.msrp - gradeInfo.price;
-    const savingsPct = Math.round((savings / p.msrp) * 100);
     const rating = p.brand === "apple" ? "4.9" : "4.8";
     const reviews = p.id === "fz-ip15pro" ? 218 : p.id === "fz-ip14" ? 342 : p.id === "fz-s23ultra" ? 186 : 124;
+    const displayName = p.baseModelName ? `${p.baseModelName} ${currentStorage} ${p.color}` : p.name;
 
     return `
       <div class="fz-glass-card rounded-2xl overflow-hidden p-4 flex flex-col justify-between group cursor-pointer" onclick="openInspector('${p.id}')">
@@ -590,7 +1226,7 @@ function renderCatalog() {
             </button>
 
             <!-- Main Product Image -->
-            <img src="${p.image}" alt="${p.name}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-xl">
+            <img src="${p.image}" alt="${displayName}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-xl">
             
             <!-- Dual Hover Actions Bar: 360 Inspect & Video QA -->
             <div class="absolute bottom-1.5 inset-x-2 flex items-center justify-center gap-1.5 opacity-90 group-hover:opacity-100 transition-all">
@@ -603,9 +1239,9 @@ function renderCatalog() {
             </div>
           </div>
 
-          <!-- Product Title -->
-          <h3 class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors line-clamp-1" title="${p.name}">
-            ${p.name}
+          <!-- Product Title with Selected Storage -->
+          <h3 class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors line-clamp-1" title="${displayName}">
+            ${displayName}
           </h3>
 
           <!-- Pointer 2: Certified Battery Health Chip -->
@@ -617,8 +1253,29 @@ function renderCatalog() {
             <span class="text-emerald-400 font-mono font-bold">${gradeInfo.battery}% (Certified)</span>
           </div>
 
+          <!-- Selectable Storage Options Pills -->
+          ${p.storageOptions && p.storageOptions.length > 1 ? `
+            <div class="mt-2" onclick="event.stopPropagation();">
+              <div class="flex items-center justify-between text-[10px] text-slate-400 font-semibold mb-1">
+                <span>Storage Variant:</span>
+                <span class="text-blue-400 font-mono font-bold">${currentStorage}</span>
+              </div>
+              <div class="flex items-center gap-1 flex-wrap">
+                ${p.storageOptions.map(opt => `
+                  <button 
+                    onclick="setCardStorage('${p.id}', '${opt.size}')"
+                    class="py-0.5 px-2 rounded-md text-[10px] font-bold transition-all cursor-pointer ${opt.size === currentStorage ? 'bg-blue-600 text-white border border-blue-500 shadow-sm ring-1 ring-blue-400/50' : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
+                    title="${opt.size} (${opt.delta > 0 ? '+' + formatMoney(opt.delta) : 'Base'})"
+                  >
+                    ${opt.size}
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+          ` : ''}
+
           <!-- Grade Selector Pills -->
-          <div class="mt-2.5" onclick="event.stopPropagation();">
+          <div class="mt-2" onclick="event.stopPropagation();">
             <div class="text-[10px] text-slate-400 font-semibold mb-1">Select Condition Grade:</div>
             <div class="grid grid-cols-3 gap-1.5">
               ${["A", "B", "C"].map(g => `
@@ -647,9 +1304,9 @@ function renderCatalog() {
           <!-- Price Display with Effective Savings -->
           <div class="mt-2.5 pt-2 border-t border-slate-800/60">
             <div class="flex items-baseline gap-2">
-              <span class="text-base font-extrabold text-white">${formatMoney(gradeInfo.price)}</span>
-              <span class="text-xs text-slate-500 line-through">${formatMoney(p.msrp)}</span>
-              <span class="text-[10px] text-emerald-400 font-bold ml-auto bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Save ${savingsPct}%</span>
+              <span class="text-base font-extrabold text-white">${formatMoney(priceInfo.price)}</span>
+              <span class="text-xs text-slate-500 line-through">${formatMoney(priceInfo.msrp)}</span>
+              <span class="text-[10px] text-emerald-400 font-bold ml-auto bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Save ${priceInfo.savingsPct}%</span>
             </div>
             <div class="text-[10px] text-blue-400 font-medium mt-0.5 flex items-center justify-between">
               <span>💳 Flat ₹2,000 Off on UPI/Card</span>
@@ -670,6 +1327,11 @@ function renderCatalog() {
       </div>
     `;
   }).join('');
+}
+
+function setCardStorage(productId, size) {
+  state.selectedProductStorage[productId] = size;
+  renderCatalog();
 }
 
 function renderSubFilters(subFilters) {
@@ -955,25 +1617,30 @@ function addToCart(productId) {
   if (!p) return;
 
   const currentGrade = state.selectedProductGrades[productId] || "A";
-  const gradeInfo = p.grades[currentGrade];
+  const currentStorage = state.selectedProductStorage[productId] || (p.storageOptions ? p.storageOptions[0].size : "");
+  const priceInfo = getProductPrice(p, currentGrade, currentStorage);
+  const fullName = p.baseModelName ? `${p.baseModelName} ${currentStorage} ${p.color}` : p.name;
+  const cartKey = `${productId}-${currentGrade}-${currentStorage}`;
 
-  const existing = state.cart.find(item => item.id === productId && item.grade === currentGrade);
+  const existing = state.cart.find(item => item.cartKey === cartKey);
   if (existing) {
     existing.qty += 1;
   } else {
     state.cart.push({
       id: productId,
-      name: p.name,
+      cartKey: cartKey,
+      name: fullName,
       image: p.image,
       grade: currentGrade,
-      price: gradeInfo.price,
+      storage: currentStorage,
+      price: priceInfo.price,
       qty: 1
     });
   }
 
   updateCartDrawerUI();
   openCartDrawer();
-  showToast(`🛒 Added ${p.name} (Grade ${currentGrade}) to Cart!`);
+  showToast(`🛒 Added ${fullName} (Grade ${currentGrade}) to Cart!`);
 }
 
 function addToCartFromInspector() {
@@ -1091,6 +1758,7 @@ function openInspector(productId) {
   const p = CATALOG.find(item => item.id === productId) || CATALOG[0];
   state.currentInspectProduct = p;
   state.currentInspectGrade = state.selectedProductGrades[p.id] || "A";
+  state.currentInspectStorage = state.selectedProductStorage[p.id] || (p.storageOptions ? p.storageOptions[0].size : "128GB");
   state.currentInspectAngle = 0;
   state.isZoomed = false;
   state.isZoomLoupeActive = false;
@@ -1099,7 +1767,8 @@ function openInspector(productId) {
   modal.classList.remove("hidden");
   modal.classList.add("flex");
 
-  document.getElementById("inspectModalProductName").textContent = p.name;
+  const displayName = p.baseModelName ? `${p.baseModelName} ${state.currentInspectStorage} ${p.color}` : p.name;
+  document.getElementById("inspectModalProductName").textContent = displayName;
   const mv = document.getElementById("mainModelViewer");
   if (mv && p.model3d) mv.src = p.model3d;
 
@@ -1143,10 +1812,70 @@ function openInspector(productId) {
   setViewerMode("3d");
   setInspectPerspective("front");
 
+  // Render Storage Variant Selector & Tech Specs
+  renderInspectStorageUI(p);
+  renderProductSpecs(p, state.specsFilterTab || "all");
+
   updateInspectGradeUI();
   updateInspectAngleUI();
   initTurntableDragging();
   initZoomLoupeEvents();
+}
+
+function renderInspectStorageUI(p) {
+  const container = document.getElementById("inspectStorageOptionsGrid");
+  if (!container || !p || !p.storageOptions) return;
+
+  const currentStorage = state.currentInspectStorage || p.storageOptions[0].size;
+  const cols = Math.min(p.storageOptions.length, 4);
+  container.className = `grid grid-cols-${cols} gap-1.5`;
+
+  container.innerHTML = p.storageOptions.map(opt => {
+    const isSelected = opt.size === currentStorage;
+    const deltaText = opt.delta > 0 ? `+${formatMoney(opt.delta)}` : "Base";
+    return `
+      <button 
+        onclick="setInspectStorage('${opt.size}')"
+        class="storage-option-btn p-1.5 rounded-lg text-center cursor-pointer transition-all ${
+          isSelected 
+            ? 'bg-blue-600 text-white font-bold border border-blue-500 shadow-md ring-1 ring-blue-400/50' 
+            : 'bg-slate-900 text-slate-300 hover:text-white border border-slate-800 font-medium hover:border-slate-700'
+        }"
+      >
+        <div class="text-[11px] font-black">${opt.size}</div>
+        <div class="text-[8px] opacity-80 font-mono">${deltaText}</div>
+      </button>
+    `;
+  }).join('');
+
+  const badge = document.getElementById("storageSelectedBadge");
+  if (badge) badge.textContent = `${currentStorage} Selected`;
+
+  const recText = document.getElementById("storageRecommendationText");
+  if (recText) {
+    if (currentStorage.includes("128")) recText.textContent = "⚡ Standard: Ideal for daily apps, WhatsApp & iCloud/Google Photos";
+    else if (currentStorage.includes("256")) recText.textContent = "🔥 Most Popular: Recommended for 4K video recording & high-res camera";
+    else if (currentStorage.includes("512")) recText.textContent = "🚀 Power User: Massive offline 4K video library & lossless audio";
+    else if (currentStorage.includes("1TB")) recText.textContent = "👑 Creator Flagship: 1TB ProRes Log video, RAW photos & studio work";
+    else recText.textContent = "⚡ Certified OEM internal high-speed flash storage";
+  }
+}
+
+function setInspectStorage(storageSize) {
+  state.currentInspectStorage = storageSize;
+  const p = state.currentInspectProduct;
+  if (!p) return;
+
+  state.selectedProductStorage[p.id] = storageSize;
+
+  // Update dynamic modal title
+  const displayName = p.baseModelName ? `${p.baseModelName} ${storageSize} ${p.color}` : p.name;
+  const titleEl = document.getElementById("inspectModalProductName");
+  if (titleEl) titleEl.textContent = displayName;
+
+  renderInspectStorageUI(p);
+  updateInspectGradeUI();
+  renderCatalog();
 }
 
 function closeInspector() {
@@ -1342,6 +2071,8 @@ function updateInspectGradeUI() {
   const p = state.currentInspectProduct;
   const g = state.currentInspectGrade;
   const gradeInfo = p.grades[g];
+  const currentStorage = state.currentInspectStorage || (p.storageOptions ? p.storageOptions[0].size : "");
+  const priceInfo = getProductPrice(p, g, currentStorage);
 
   // Update pills and labels
   const pill = document.getElementById("inspectGradePill");
@@ -1370,30 +2101,29 @@ function updateInspectGradeUI() {
   const batBarEl = document.getElementById("inspectBatteryBar");
   if (batBarEl) batBarEl.style.width = `${gradeInfo.battery}%`;
 
-  // Update Price
+  // Update Dynamic Price with Storage Delta
   const priceEl = document.getElementById("inspectPrice");
-  if (priceEl) priceEl.textContent = formatMoney(gradeInfo.price);
+  if (priceEl) priceEl.textContent = formatMoney(priceInfo.price);
   const msrpEl = document.getElementById("inspectMsrp");
-  if (msrpEl) msrpEl.textContent = formatMoney(p.msrp);
-  const savings = p.msrp - gradeInfo.price;
+  if (msrpEl) msrpEl.textContent = formatMoney(priceInfo.msrp);
   const savingsEl = document.getElementById("inspectSavingsTag");
   if (savingsEl) {
-    savingsEl.textContent = `Save ${formatMoney(savings)}`;
+    savingsEl.textContent = `Save ${formatMoney(priceInfo.savings)} (${priceInfo.savingsPct}%)`;
   }
 
-  // Update Hotspots
+  // Update 2D Hotspots (Unobstructed view when Grade A or when Flaw Markers are toggled OFF)
   const bezelHotspot = document.getElementById("hotspotBezel");
   const frameHotspot = document.getElementById("hotspotFrame");
   const camHotspot = document.getElementById("hotspotCamera");
 
-  if (bezelHotspot) bezelHotspot.style.display = "flex";
-  if (frameHotspot) frameHotspot.style.display = g === "C" ? "flex" : (g === "B" ? "flex" : "none");
-  if (camHotspot) camHotspot.style.display = "flex";
+  if (bezelHotspot) bezelHotspot.style.display = state.showFlawMarkers && g !== "A" ? "flex" : "none";
+  if (frameHotspot) frameHotspot.style.display = state.showFlawMarkers && (g === "C" || g === "B") ? "flex" : "none";
+  if (camHotspot) camHotspot.style.display = state.showFlawMarkers && g !== "A" ? "flex" : "none";
 
   // Update 3D Model Surface Anchored Hotspots
   const modelDentHotspot = document.getElementById("modelHotspotDent");
   if (modelDentHotspot) {
-    if (g === "B" || g === "C") {
+    if (state.showFlawMarkers && (g === "B" || g === "C")) {
       modelDentHotspot.classList.remove("hidden");
     } else {
       modelDentHotspot.classList.add("hidden");
@@ -1699,13 +2429,9 @@ function renderDynamicFlawPins(flaws, currentAngle) {
   const container = document.getElementById("dentPinsOverlay");
   if (!container) return;
 
-  if (!flaws || !flaws.pins || flaws.pins.length === 0) {
-    container.innerHTML = `
-      <div class="flaw-hotspot-pin top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" onclick="showHotspotTip('✨ Grade A Verification: Display & Chassis have 0 dents and 0 scratches.')" title="0 Dents Verified">
-        <div class="flaw-pulse-emerald flaw-pulse-ring bg-emerald-500/40"></div>
-        <div class="relative w-6 h-6 rounded-full bg-emerald-500 text-white flex items-center justify-center text-[11px] font-black shadow-lg border-2 border-white">✓</div>
-      </div>
-    `;
+  // Unobstructed view: If user toggled flaw markers OFF, or device has 0 flaws (Grade A), leave phone 100% clean!
+  if (!state.showFlawMarkers || !flaws || !flaws.pins || flaws.pins.length === 0) {
+    container.innerHTML = "";
     return;
   }
 
@@ -1734,6 +2460,24 @@ function renderDynamicFlawPins(flaws, currentAngle) {
   });
 
   container.innerHTML = html;
+}
+
+function toggleFlawPins() {
+  state.showFlawMarkers = !state.showFlawMarkers;
+  const label = document.getElementById("flawToggleLabel");
+  if (label) {
+    label.textContent = state.showFlawMarkers ? "Flaw Markers: ON" : "Flaw Markers: OFF";
+  }
+  const dentHotspot = document.getElementById("modelHotspotDent");
+  if (dentHotspot) {
+    if (state.showFlawMarkers && (state.currentInspectGrade === "B" || state.currentInspectGrade === "C")) {
+      dentHotspot.classList.remove("hidden");
+    } else {
+      dentHotspot.classList.add("hidden");
+    }
+  }
+  updateInspectGradeUI();
+  showToast(state.showFlawMarkers ? "👁️ Flaw markers visible" : "✨ Flaw markers hidden — Unobstructed device view");
 }
 
 function jumpToFlaw(angle, location) {
@@ -1912,7 +2656,9 @@ function buyProductCOD(productId) {
   if (!p) return;
 
   const currentGrade = state.selectedProductGrades[productId] || "A";
-  const gradeInfo = p.grades[currentGrade];
+  const currentStorage = state.selectedProductStorage[productId] || (p.storageOptions ? p.storageOptions[0].size : "");
+  const priceInfo = getProductPrice(p, currentGrade, currentStorage);
+  const fullName = p.baseModelName ? `${p.baseModelName} ${currentStorage} ${p.color}` : p.name;
 
   // Generate new order in the queue
   const newOrderId = "FZ-" + Math.floor(1050 + Math.random() * 50);
@@ -1923,10 +2669,10 @@ function buyProductCOD(productId) {
     address: "Flat 4A, Green Park Extn",
     city: "New Delhi",
     pincode: "110016",
-    product: `${p.name} (Grade ${currentGrade})`,
-    amount: gradeInfo.price,
+    product: `${fullName} (Grade ${currentGrade})`,
+    amount: priceInfo.price,
     status: "unverified",
-    risk: "High RTO Risk (Unconfirmed Doorstep)",
+    risk: "Medium Risk (Pre-Dispatch Verification)",
     timestamp: "Just now"
   };
 
@@ -3610,6 +4356,79 @@ function bookStoreDemo(storeName) {
   showToast(`📍 1-on-1 VIP In-Store Demo reserved at ${storeName}! Our store manager will keep the device powered on and ready for your 360 inspection.`);
 }
 
+// D2. Technical Specifications & Architecture Engine
+function toggleSpecsSection() {
+  state.isSpecsOpen = !state.isSpecsOpen;
+  const body = document.getElementById("techSpecsBody");
+  const chevron = document.getElementById("techSpecsChevron");
+  if (!body) return;
+  if (state.isSpecsOpen) {
+    body.classList.remove("hidden");
+    if (chevron) chevron.style.transform = "rotate(0deg)";
+  } else {
+    body.classList.add("hidden");
+    if (chevron) chevron.style.transform = "rotate(180deg)";
+  }
+}
+
+function setSpecsTab(category) {
+  state.specsFilterTab = category;
+  
+  const tabs = ["all", "display", "processor", "camera", "battery", "build", "connectivity"];
+  tabs.forEach(t => {
+    const btn = document.getElementById(`specsTab_${t}`);
+    if (btn) {
+      if (t === category) {
+        btn.className = "specs-tab-btn active px-2 py-0.5 rounded-md bg-blue-600 text-white font-bold cursor-pointer transition-colors shadow-sm";
+      } else {
+        btn.className = "specs-tab-btn px-2 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer transition-colors";
+      }
+    }
+  });
+
+  if (state.currentInspectProduct) {
+    renderProductSpecs(state.currentInspectProduct, category);
+  }
+}
+
+function renderProductSpecs(p, category = "all") {
+  const container = document.getElementById("techSpecsContent");
+  if (!container || !p || !p.specs) return;
+
+  const cats = category === "all" 
+    ? Object.keys(p.specs) 
+    : (p.specs[category] ? [category] : []);
+
+  if (cats.length === 0) {
+    container.innerHTML = `<div class="p-3 text-center text-slate-400 text-xs">No specifications listed for this category.</div>`;
+    return;
+  }
+
+  let html = "";
+  cats.forEach(catKey => {
+    const cat = p.specs[catKey];
+    if (!cat) return;
+    html += `
+      <div class="specs-category-card p-2 rounded-lg bg-slate-900/70 border border-slate-800">
+        <div class="specs-category-title flex items-center gap-1.5 text-[11px] font-bold text-blue-400 mb-1.5 pb-1 border-b border-slate-800">
+          <span>${cat.icon || '📌'}</span>
+          <span>${cat.title}</span>
+        </div>
+        <div class="space-y-1">
+          ${cat.details.map(item => `
+            <div class="specs-row-item flex items-baseline justify-between gap-2 py-0.5 text-[10px] border-b border-slate-800/40 last:border-0">
+              <span class="specs-label text-slate-400 font-medium shrink-0">${item.label}:</span>
+              <span class="specs-value text-slate-200 font-semibold text-right">${item.value}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  });
+
+  container.innerHTML = html;
+}
+
 // E. Global Aliases
 window.openInspectModal = openInspector;
 window.setPhoneCase = setPhoneCase;
@@ -3621,3 +4440,9 @@ window.toggleAICopilot = toggleAICopilot;
 window.askAICopilot = askAICopilot;
 window.handleCustomAIQuestion = handleCustomAIQuestion;
 window.bookStoreDemo = bookStoreDemo;
+window.toggleFlawPins = toggleFlawPins;
+window.setInspectStorage = setInspectStorage;
+window.setCardStorage = setCardStorage;
+window.toggleSpecsSection = toggleSpecsSection;
+window.setSpecsTab = setSpecsTab;
+
