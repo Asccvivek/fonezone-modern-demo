@@ -4494,6 +4494,14 @@ const INITIAL_ORDERS = [
   }
 ];
 
+function getInitialWishlist() {
+  try {
+    const saved = localStorage.getItem("fonezone_wishlist");
+    if (saved) return JSON.parse(saved);
+  } catch (e) {}
+  return [];
+}
+
 const state = {
   activePortal: "storefront",
   activeCategory: "all",
@@ -4504,7 +4512,7 @@ const state = {
   
   // Cart & Wishlist
   cart: [],
-  wishlist: ["fz-ip15p"],
+  wishlist: getInitialWishlist(),
 
   // Theme State
   theme: "dark",
@@ -4818,19 +4826,32 @@ function renderCatalog() {
     const gradeInfo = p.grades[currentGrade];
     const rating = p.brand === "apple" ? "4.9" : "4.8";
     const reviews = p.id === "fz-ip15pro" ? 218 : p.id === "fz-ip14" ? 342 : p.id === "fz-s23ultra" ? 186 : 124;
-    const displayName = p.baseModelName ? `${p.baseModelName} ${currentStorage} ${p.color}` : p.name;
+    const isWishlisted = state.wishlist.includes(p.id);
+    const displayName = p.baseModelName ? `${p.baseModelName} ${currentStorage} ${p.color || ''}`.trim() : p.name;
 
     return `
       <div class="fz-glass-card rounded-2xl overflow-hidden p-4 flex flex-col justify-between group cursor-pointer" onclick="openInspector('${p.id}')">
         <div>
-          <!-- Top Badges -->
+          <!-- Top Badges & Wishlist Toggle -->
           <div class="flex items-center justify-between gap-2 mb-3">
-            <span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono uppercase">
-              ${p.badge}
-            </span>
-            <span class="px-2 py-0.5 rounded-full text-[11px] font-bold ${currentGrade === 'A' ? 'badge-grade-a' : currentGrade === 'B' ? 'badge-grade-b' : 'badge-grade-c'}">
-              ${gradeInfo.label}
-            </span>
+            <div class="flex items-center gap-1.5 min-w-0">
+              <span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono uppercase truncate">
+                ${p.badge}
+              </span>
+              <span class="px-2 py-0.5 rounded-full text-[11px] font-bold shrink-0 ${currentGrade === 'A' ? 'badge-grade-a' : currentGrade === 'B' ? 'badge-grade-b' : 'badge-grade-c'}">
+                ${gradeInfo.label}
+              </span>
+            </div>
+            <button 
+              type="button"
+              onclick="event.stopPropagation(); toggleWishlist('${p.id}');" 
+              data-product-id="${p.id}"
+              class="card-wishlist-btn p-1.5 rounded-lg transition-all cursor-pointer ${isWishlisted ? 'is-wishlisted text-red-500 bg-red-500/15 border border-red-500/30 shadow-sm' : 'text-slate-400 hover:text-red-400 hover:bg-slate-800/80 border border-transparent'}" 
+              title="${isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}"
+              aria-label="Wishlist"
+            >
+              <span class="text-sm leading-none">${isWishlisted ? '❤️' : '🤍'}</span>
+            </button>
           </div>
 
           <!-- Product Image Container with Cashify Video Proof Badge & Star Rating -->
@@ -5562,7 +5583,48 @@ function toggleWishlist(productId) {
     state.wishlist.push(productId);
     showToast("❤️ Saved to your FoneZone Wishlist!");
   }
+  try {
+    localStorage.setItem("fonezone_wishlist", JSON.stringify(state.wishlist));
+  } catch(e) {}
   updateWishlistUI();
+}
+
+function toggleWishlistFromInspector() {
+  if (!state.currentInspectProduct) return;
+  toggleWishlist(state.currentInspectProduct.id);
+  updateInspectWishlistButton();
+}
+
+function updateInspectWishlistButton() {
+  const p = state.currentInspectProduct;
+  if (!p) return;
+  const isWishlisted = state.wishlist.includes(p.id);
+
+  const topBtn = document.getElementById("inspectWishlistBtn");
+  if (topBtn) {
+    if (isWishlisted) {
+      topBtn.classList.add("is-wishlisted");
+      topBtn.innerHTML = `<span>❤️</span> <span class="hidden sm:inline">Saved</span>`;
+      topBtn.title = "Remove from Wishlist";
+    } else {
+      topBtn.classList.remove("is-wishlisted");
+      topBtn.innerHTML = `<span>🤍</span> <span class="hidden sm:inline">Wishlist</span>`;
+      topBtn.title = "Save to Wishlist";
+    }
+  }
+
+  const footerBtn = document.getElementById("inspectFooterWishlistBtn");
+  if (footerBtn) {
+    if (isWishlisted) {
+      footerBtn.classList.add("is-wishlisted");
+      footerBtn.innerHTML = `<span>❤️</span> <span>Saved</span>`;
+      footerBtn.title = "Remove from Wishlist";
+    } else {
+      footerBtn.classList.remove("is-wishlisted");
+      footerBtn.innerHTML = `<span>🤍</span> <span>Wishlist</span>`;
+      footerBtn.title = "Save to Wishlist";
+    }
+  }
 }
 
 function updateWishlistUI() {
@@ -5587,6 +5649,26 @@ function updateWishlistUI() {
   const drawerCount = document.getElementById("wishlistDrawerCount");
   if (drawerCount) drawerCount.textContent = count;
 
+  // Sync Storefront Product Card Wishlist Hearts
+  document.querySelectorAll(".card-wishlist-btn").forEach(btn => {
+    const pid = btn.getAttribute("data-product-id");
+    if (pid) {
+      const isSaved = state.wishlist.includes(pid);
+      if (isSaved) {
+        btn.classList.add("is-wishlisted");
+        btn.innerHTML = "❤️";
+        btn.title = "Remove from Wishlist";
+      } else {
+        btn.classList.remove("is-wishlisted");
+        btn.innerHTML = "🤍";
+        btn.title = "Add to Wishlist";
+      }
+    }
+  });
+
+  // Sync Inspector Wishlist Buttons
+  updateInspectWishlistButton();
+
   // Drawer List
   const listEl = document.getElementById("wishlistItemsList");
   if (!listEl) return;
@@ -5594,25 +5676,29 @@ function updateWishlistUI() {
   if (count === 0) {
     listEl.innerHTML = `
       <div class="py-12 text-center text-slate-400">
-        <i data-lucide="heart" class="w-10 h-10 text-slate-600 mx-auto"></i>
+        <div class="text-3xl mb-2">🤍</div>
         <p class="font-bold text-white text-xs mt-3">No saved devices yet</p>
         <p class="text-[11px] text-slate-500 mt-1">Tap the heart icon on any device to save it for later.</p>
       </div>
     `;
-    if (window.lucide) window.lucide.createIcons();
     return;
   }
 
   const items = state.wishlist.map(id => CATALOG.find(p => p.id === id)).filter(Boolean);
-  listEl.innerHTML = items.map(p => `
+  listEl.innerHTML = items.map(p => {
+    const itemPrice = (p.grades && p.grades["A"]) ? p.grades["A"].price : (p.price || 49999);
+    return `
     <div class="p-3 rounded-xl bg-slate-900/90 border border-slate-800 flex items-center justify-between gap-3 text-xs">
       <img src="${p.image}" alt="${p.name}" class="w-12 h-12 object-contain bg-slate-950/60 p-1 rounded-lg">
       <div class="flex-1 min-w-0">
         <div class="font-bold text-white truncate">${p.name}</div>
         <div class="text-[11px] text-emerald-400 font-bold">Grade A Pristine • 6M Warranty</div>
-        <div class="text-slate-300 font-mono mt-0.5">${formatMoney(p.priceGradeA)}</div>
+        <div class="text-slate-300 font-mono mt-0.5">${formatMoney(itemPrice)}</div>
       </div>
       <div class="flex items-center gap-1.5 shrink-0">
+        <button onclick="openInspector('${p.id}'); closeWishlistDrawer();" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-[11px] cursor-pointer tap-scale" title="Inspect 360°">
+          🔍 360°
+        </button>
         <button onclick="addWishlistItemToCart('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] cursor-pointer tap-scale" title="Add to Cart">
           + Cart
         </button>
@@ -5621,20 +5707,19 @@ function updateWishlistUI() {
         </button>
       </div>
     </div>
-  `).join('');
-
-  if (window.lucide) window.lucide.createIcons();
+  `}).join('');
 }
 
 function addWishlistItemToCart(productId) {
   const p = CATALOG.find(item => item.id === productId);
   if (!p) return;
+  const gradeAPrice = (p.grades && p.grades["A"]) ? p.grades["A"].price : (p.price || 49999);
   state.cart.push({
     id: p.id + "-" + Date.now(),
     name: p.name,
     image: p.image,
     grade: "A",
-    price: p.priceGradeA,
+    price: gradeAPrice,
     qty: 1
   });
   updateCartDrawerUI();
@@ -5649,17 +5734,21 @@ function addAllWishlistToCart() {
   state.wishlist.forEach(id => {
     const p = CATALOG.find(item => item.id === id);
     if (p) {
+      const gradeAPrice = (p.grades && p.grades["A"]) ? p.grades["A"].price : (p.price || 49999);
       state.cart.push({
         id: p.id + "-" + Date.now(),
         name: p.name,
         image: p.image,
         grade: "A",
-        price: p.priceGradeA,
+        price: gradeAPrice,
         qty: 1
       });
     }
   });
   state.wishlist = [];
+  try {
+    localStorage.setItem("fonezone_wishlist", JSON.stringify(state.wishlist));
+  } catch(e) {}
   updateWishlistUI();
   updateCartDrawerUI();
   closeWishlistDrawer();
@@ -5750,6 +5839,7 @@ function openInspector(productId) {
   updateInspectAngleUI();
   initTurntableDragging();
   initZoomLoupeEvents();
+  updateInspectWishlistButton();
 }
 
 function renderInspectStorageUI(p) {
@@ -8486,4 +8576,10 @@ window.setInspectStorage = setInspectStorage;
 window.setCardStorage = setCardStorage;
 window.toggleSpecsSection = toggleSpecsSection;
 window.setSpecsTab = setSpecsTab;
+window.toggleWishlist = toggleWishlist;
+window.toggleWishlistFromInspector = toggleWishlistFromInspector;
+window.openWishlistDrawer = openWishlistDrawer;
+window.closeWishlistDrawer = closeWishlistDrawer;
+window.addWishlistItemToCart = addWishlistItemToCart;
+window.addAllWishlistToCart = addAllWishlistToCart;
 

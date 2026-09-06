@@ -1993,6 +1993,45 @@ body.theme-light #zoomLoupeBtn.active #zoomLoupeLabel {
   color: #FFFFFF !important;
 }
 
+/* Inspector Header & Footer Wishlist Buttons (Light Mode) */
+body.theme-light #inspectWishlistBtn,
+body.theme-light #inspectFooterWishlistBtn {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #1E293B !important;
+}
+body.theme-light #inspectWishlistBtn:hover,
+body.theme-light #inspectFooterWishlistBtn:hover {
+  background-color: #FFF1F2 !important;
+  border-color: #FECDD3 !important;
+  color: #E11D48 !important;
+}
+body.theme-light #inspectWishlistBtn.active,
+body.theme-light #inspectFooterWishlistBtn.active {
+  background-color: #FEE2E2 !important;
+  border-color: #FCA5A5 !important;
+  color: #DC2626 !important;
+}
+body.theme-light #inspectWishlistBtn.active span,
+body.theme-light #inspectFooterWishlistBtn.active span {
+  color: #DC2626 !important;
+}
+
+/* Product Card Wishlist Buttons (Light Mode) */
+body.theme-light .card-wishlist-btn {
+  color: #64748B !important;
+}
+body.theme-light .card-wishlist-btn:hover {
+  background-color: #FFF1F2 !important;
+  color: #E11D48 !important;
+}
+body.theme-light .card-wishlist-btn.is-wishlisted {
+  background-color: #FEE2E2 !important;
+  border-color: #FCA5A5 !important;
+  color: #DC2626 !important;
+}
+
+
 
 /* Angle Snap Buttons at Bottom of 360 View */
 body.theme-light .perspective-btn {
@@ -2671,15 +2710,44 @@ body.theme-light #mobileCategoryStoryRail .text-slate-300 {
   }
 }
 
-/* Cart drawer flex layout for seamless edge-to-edge content & checkout bar */
-#cartDrawer .drawer-panel {
+/* Cart & Wishlist drawer flex layout for seamless edge-to-edge content */
+#cartDrawer .drawer-panel,
+#wishlistDrawer .drawer-panel {
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
   max-height: 100vh !important;
 }
-#cartDrawer #cartItemsList {
+#cartDrawer #cartItemsList,
+#wishlistDrawer #wishlistItemsList {
   flex: 1 1 auto !important;
   overflow-y: auto !important;
 }
+
+body.theme-light #wishlistDrawer .drawer-panel {
+  background-color: #FFFFFF !important;
+  border-color: #E2E8F0 !important;
+  color: #0F172A !important;
+}
+body.theme-light #wishlistDrawer h3 {
+  color: #0F172A !important;
+}
+body.theme-light #wishlistDrawer .border-b,
+body.theme-light #wishlistDrawer .border-t {
+  border-color: #E2E8F0 !important;
+}
+body.theme-light #wishlistItemsList > div {
+  background-color: #F8FAFC !important;
+  border-color: #E2E8F0 !important;
+}
+body.theme-light #wishlistItemsList .text-white {
+  color: #0F172A !important;
+}
+body.theme-light #wishlistItemsList .text-slate-300 {
+  color: #334155 !important;
+}
+body.theme-light #wishlistItemsList img {
+  background-color: #F1F5F9 !important;
+}
+
 
