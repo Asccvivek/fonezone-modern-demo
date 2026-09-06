@@ -1980,6 +1980,19 @@ body.theme-light #zoomLoupeBtn:hover {
   background-color: #EFF6FF !important;
   color: #1D4ED8 !important;
 }
+body.theme-light #zoomLoupeBtn.bg-blue-600,
+body.theme-light #zoomLoupeBtn.active {
+  background-color: #2563EB !important;
+  border-color: #1D4ED8 !important;
+  color: #FFFFFF !important;
+}
+body.theme-light #zoomLoupeBtn.bg-blue-600 span,
+body.theme-light #zoomLoupeBtn.active span,
+body.theme-light #zoomLoupeBtn.bg-blue-600 #zoomLoupeLabel,
+body.theme-light #zoomLoupeBtn.active #zoomLoupeLabel {
+  color: #FFFFFF !important;
+}
+
 
 /* Angle Snap Buttons at Bottom of 360 View */
 body.theme-light .perspective-btn {

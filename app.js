@@ -243,7 +243,7 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/turntable_frame_0.png",
+      "0": "assets/iphone14_front.png",
       "45": "assets/turntable_frame_45.png",
       "90": "assets/turntable_frame_90.png",
       "135": "assets/turntable_frame_135.png",
@@ -251,7 +251,7 @@ const CATALOG = [
       "225": "assets/turntable_frame_225.png",
       "270": "assets/turntable_frame_270.png",
       "315": "assets/turntable_frame_315.png",
-      "front": "assets/turntable_frame_0.png",
+      "front": "assets/iphone14_front.png",
       "back": "assets/turntable_frame_180.png",
       "right": "assets/turntable_frame_right.png",
       "left": "assets/turntable_frame_left.png",
@@ -6512,13 +6512,13 @@ function toggleZoomLoupe() {
 
   if (state.isZoomLoupeActive) {
     if (label) label.textContent = "Zoom Loupe: ON";
-    if (btn) btn.className = "px-2.5 py-1 rounded-xl bg-blue-600 text-white text-[11px] font-bold flex items-center gap-1 shadow cursor-pointer";
+    if (btn) btn.className = "px-2.5 py-1 rounded-xl bg-blue-600 text-white text-[11px] font-bold flex items-center gap-1 shadow cursor-pointer active";
     showToast("🔍 2.5x Inspection Loupe active. Hover over device to inspect cosmetic finish.");
     // switch to photo mode for loupe inspection
     if (state.viewerMode !== "photo") setViewerMode("photo");
   } else {
-    if (label) label.textContent = "Zoom Loupe: OFF";
-    if (btn) btn.className = "px-2.5 py-1 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-[11px] font-semibold flex items-center gap-1 cursor-pointer";
+    if (label) label.textContent = "Zoom";
+    if (btn) btn.className = "px-2 py-0.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-[11px] font-semibold flex items-center gap-1 cursor-pointer";
     if (loupe) loupe.style.display = "none";
   }
 }
