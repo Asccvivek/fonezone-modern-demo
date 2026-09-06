@@ -7261,6 +7261,7 @@ const PAGE_ROUTES = {
   "#/pages/contact-us-get-in-touch-with-our-team": "view-contact-us",
   "#/pages/sell-your-device": "view-sell-device",
   "#/pages/wholesale-price": "view-wholesale",
+  "#/pages/b2b-wholesale": "view-wholesale",
   "#/pages/jobs": "view-jobs",
   "#/pages/ask-to-ceo": "view-ask-ceo",
   "#/pages/order-info": "view-order-info"
