@@ -2594,4 +2594,79 @@ body.theme-light #mobileCategoryStoryRail .text-slate-300 {
   animation: fz-border-shimmer 3s infinite ease-in-out;
 }
 
+/* ======================================================== */
+/* MOBILE RESPONSIVENESS FIXES (< 640px)                    */
+/* ======================================================== */
+@media (max-width: 639px) {
+  /* Ultra-compact mobile header (~78px-85px) */
+  header.fz-glass {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+
+  /* Sleek mobile category story rail */
+  #mobileCategoryStoryRail {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  #mobileCategoryStoryRail .mobile-story-item > div {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+  }
+  #mobileCategoryStoryRail span {
+    font-size: 11px !important;
+  }
+
+  /* Compact mobile search bar */
+  #storeSearchInputMobile {
+    height: 2.25rem !important;
+    font-size: 0.8125rem !important;
+  }
+
+  /* Minimum readable text floor of 11px on mobile (prevents tiny unreadable labels) */
+  body {
+    font-size: 14px !important;
+  }
+
+  .text-xs {
+    font-size: 0.75rem !important; /* 12px */
+    line-height: 1.125rem !important;
+  }
+
+  .text-\[11px\] {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+  }
+
+
+  /* Full-width snap-scroll promo cards on mobile (eliminates clipped text) */
+  #heroOfferRail {
+    display: flex !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    padding-left: 0.25rem !important;
+    padding-right: 0.25rem !important;
+    padding-bottom: 0.5rem !important;
+    gap: 0.75rem !important;
+  }
+  #heroOfferRail > div {
+    min-width: 82vw !important;
+    max-width: 82vw !important;
+    scroll-snap-align: center !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* Cart drawer flex layout for seamless edge-to-edge content & checkout bar */
+#cartDrawer .drawer-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  max-height: 100vh !important;
+}
+#cartDrawer #cartItemsList {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+}
 

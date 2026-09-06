@@ -4825,10 +4825,10 @@ function renderCatalog() {
         <div>
           <!-- Top Badges -->
           <div class="flex items-center justify-between gap-2 mb-3">
-            <span class="px-2 py-0.5 rounded text-[10px] font-extrabold bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono uppercase">
+            <span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono uppercase">
               ${p.badge}
             </span>
-            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${currentGrade === 'A' ? 'badge-grade-a' : currentGrade === 'B' ? 'badge-grade-b' : 'badge-grade-c'}">
+            <span class="px-2 py-0.5 rounded-full text-[11px] font-bold ${currentGrade === 'A' ? 'badge-grade-a' : currentGrade === 'B' ? 'badge-grade-b' : 'badge-grade-c'}">
               ${gradeInfo.label}
             </span>
           </div>
@@ -4837,16 +4837,16 @@ function renderCatalog() {
           <div class="relative h-44 flex items-center justify-center p-2 mb-3 overflow-hidden rounded-xl bg-slate-950/40 border border-slate-800/60 group/img">
             
             <!-- Star Rating Overlay (Top-Left) -->
-            <div class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-slate-950/80 backdrop-blur-md border border-slate-700/80 text-amber-400 text-[10px] font-bold flex items-center gap-1 z-10">
+            <div class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-slate-950/80 backdrop-blur-md border border-slate-700/80 text-amber-400 text-[11px] font-bold flex items-center gap-1 z-10">
               <span>★ ${rating}</span>
-              <span class="text-slate-400 text-[9px] font-normal">(${reviews})</span>
+              <span class="text-slate-400 text-[11px] font-normal">(${reviews})</span>
             </div>
 
             <!-- Cashify-Style "▶ Watch Video Proof" Badge Overlay (Top-Right) -->
             <button onclick="openVerificationVideo('${p.id}'); event.stopPropagation();" 
-                    class="video-proof-badge absolute top-2 right-2 px-2.5 py-1 rounded-full bg-red-600 hover:bg-red-500 text-white text-[10px] font-black flex items-center gap-1.5 shadow-lg shadow-red-600/40 transition-all hover:scale-105 cursor-pointer z-10"
+                    class="video-proof-badge absolute top-2 right-2 px-2.5 py-1 rounded-full bg-red-600 hover:bg-red-500 text-white text-[11px] font-black flex items-center gap-1.5 shadow-lg shadow-red-600/40 transition-all hover:scale-105 cursor-pointer z-10"
                     title="Watch 32-point lab verification video for this device">
-              <span class="w-3.5 h-3.5 rounded-full bg-white text-red-600 flex items-center justify-center text-[8px] font-black">▶</span>
+              <span class="w-3.5 h-3.5 rounded-full bg-white text-red-600 flex items-center justify-center text-[11px] font-black">▶</span>
               <span>Video Proof</span>
             </button>
 
@@ -4855,10 +4855,10 @@ function renderCatalog() {
             
             <!-- Dual Hover Actions Bar: 360 Inspect & Video QA -->
             <div class="absolute bottom-1.5 inset-x-2 flex items-center justify-center gap-1.5 opacity-90 group-hover:opacity-100 transition-all">
-              <button onclick="openInspector('${p.id}'); event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-slate-900/90 hover:bg-blue-600 text-white border border-slate-700 text-[10px] font-bold flex items-center gap-1 shadow-lg cursor-pointer transition-all">
+              <button onclick="openInspector('${p.id}'); event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-slate-900/90 hover:bg-blue-600 text-white border border-slate-700 text-[11px] font-bold flex items-center gap-1 shadow-lg cursor-pointer transition-all">
                 <span>🔍 360° Inspect</span>
               </button>
-              <button onclick="openVerificationVideo('${p.id}'); event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-slate-900/90 hover:bg-red-600 text-white border border-slate-700 text-[10px] font-bold flex items-center gap-1 shadow-lg cursor-pointer transition-all">
+              <button onclick="openVerificationVideo('${p.id}'); event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-slate-900/90 hover:bg-red-600 text-white border border-slate-700 text-[11px] font-bold flex items-center gap-1 shadow-lg cursor-pointer transition-all">
                 <span>📹 Lab Video</span>
               </button>
             </div>
@@ -4881,7 +4881,7 @@ function renderCatalog() {
           <!-- Selectable Storage Options Pills -->
           ${p.storageOptions && p.storageOptions.length > 1 ? `
             <div class="mt-2" onclick="event.stopPropagation();">
-              <div class="flex items-center justify-between text-[10px] text-slate-400 font-semibold mb-1">
+              <div class="flex items-center justify-between text-[11px] text-slate-400 font-semibold mb-1">
                 <span>Storage Variant:</span>
                 <span class="text-blue-400 font-mono font-bold">${currentStorage}</span>
               </div>
@@ -4889,7 +4889,7 @@ function renderCatalog() {
                 ${p.storageOptions.map(opt => `
                   <button 
                     onclick="setCardStorage('${p.id}', '${opt.size}')"
-                    class="card-storage-btn py-0.5 px-2 rounded-md text-[10px] font-bold transition-all cursor-pointer ${opt.size === currentStorage ? 'active bg-blue-600 text-white border border-blue-500 shadow-sm ring-1 ring-blue-400/50' : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
+                    class="card-storage-btn py-0.5 px-2 rounded-md text-[11px] font-bold transition-all cursor-pointer ${opt.size === currentStorage ? 'active bg-blue-600 text-white border border-blue-500 shadow-sm ring-1 ring-blue-400/50' : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
                     title="${opt.size} (${opt.delta > 0 ? '+' + formatMoney(opt.delta) : 'Base'})"
                   >
                     ${opt.size}
@@ -4901,12 +4901,12 @@ function renderCatalog() {
 
           <!-- Grade Selector Pills -->
           <div class="mt-2" onclick="event.stopPropagation();">
-            <div class="text-[10px] text-slate-400 font-semibold mb-1">Select Condition Grade:</div>
+            <div class="text-[11px] text-slate-400 font-semibold mb-1">Select Condition Grade:</div>
             <div class="grid grid-cols-3 gap-1.5">
               ${["A", "B", "C"].map(g => `
                 <button 
                   onclick="setCardGrade('${p.id}', '${g}')"
-                  class="card-grade-btn py-1 rounded-lg text-[10px] font-bold transition-all cursor-pointer ${g === currentGrade ? (g === 'A' ? 'badge-grade-a ring-1 ring-emerald-400/50' : g === 'B' ? 'badge-grade-b ring-1 ring-indigo-400/50' : 'badge-grade-c ring-1 ring-amber-400/50') : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
+                  class="card-grade-btn py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${g === currentGrade ? (g === 'A' ? 'badge-grade-a ring-1 ring-emerald-400/50' : g === 'B' ? 'badge-grade-b ring-1 ring-indigo-400/50' : 'badge-grade-c ring-1 ring-amber-400/50') : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
                 >
                   Grade ${g}
                 </button>
@@ -4915,7 +4915,7 @@ function renderCatalog() {
           </div>
 
           <!-- Hemant Verma Modernization Guarantees -->
-          <div class="mt-2.5 pt-2 border-t border-slate-800/60 grid grid-cols-2 gap-1 text-[9px] text-slate-300">
+          <div class="mt-2.5 pt-2 border-t border-slate-800/60 grid grid-cols-2 gap-1 text-[11px] text-slate-300">
             <div class="flex items-center gap-1 p-1 rounded bg-slate-900/50 border border-slate-800" title="0 Hidden Dents Guarantee">
               <span class="text-emerald-400">📍</span>
               <span class="truncate">0-Dent Guarantee</span>
@@ -4931,9 +4931,9 @@ function renderCatalog() {
             <div class="flex items-baseline gap-2">
               <span class="text-base font-extrabold text-white">${formatMoney(priceInfo.price)}</span>
               <span class="text-xs text-slate-500 line-through">${formatMoney(priceInfo.msrp)}</span>
-              <span class="text-[10px] text-emerald-400 font-bold ml-auto bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Save ${priceInfo.savingsPct}%</span>
+              <span class="text-[11px] text-emerald-400 font-bold ml-auto bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Save ${priceInfo.savingsPct}%</span>
             </div>
-            <div class="text-[10px] text-blue-400 font-medium mt-0.5 flex items-center justify-between">
+            <div class="text-[11px] text-blue-400 font-medium mt-0.5 flex items-center justify-between">
               <span>💳 ${state.activeRegion === 'UAE' ? 'Flat AED 90 Off on Cards/Apple Pay' : 'Flat ₹2,000 Off on UPI/Card'}</span>
               <span class="text-slate-400">${state.activeRegion === 'UAE' ? 'Dubai Express Air' : 'Free Express Air'}</span>
             </div>
@@ -5319,7 +5319,7 @@ function handleSearch(q) {
         <img src="${p.image}" alt="${p.name}" class="w-8 h-8 object-contain">
         <div>
           <div class="font-bold text-white text-xs">${p.name}</div>
-          <div class="text-[10px] text-slate-400">${p.grades["A"].label} • ${p.warranty}</div>
+          <div class="text-[11px] text-slate-400">${p.grades["A"].label} • ${p.warranty}</div>
         </div>
       </div>
       <span class="text-emerald-400 font-bold font-mono text-xs">${formatMoney(p.grades["A"].price)}</span>
@@ -5498,7 +5498,7 @@ function updateCartDrawerUI() {
       <img src="${item.image}" alt="${item.name}" class="w-12 h-12 object-contain bg-slate-950/60 p-1 rounded-lg">
       <div class="flex-1">
         <div class="font-bold text-white line-clamp-1">${item.name}</div>
-        <div class="text-[10px] text-emerald-400 font-bold">Grade ${item.grade} Pristine • 6M Warranty</div>
+        <div class="text-[11px] text-emerald-400 font-bold">Grade ${item.grade} Pristine • 6M Warranty</div>
         <div class="text-slate-300 font-mono mt-0.5">${formatMoney(item.price)} × ${item.qty}</div>
       </div>
       <button onclick="removeFromCart(${idx})" class="p-1 rounded-lg text-slate-500 hover:text-red-400 cursor-pointer" title="Remove">
@@ -5609,11 +5609,11 @@ function updateWishlistUI() {
       <img src="${p.image}" alt="${p.name}" class="w-12 h-12 object-contain bg-slate-950/60 p-1 rounded-lg">
       <div class="flex-1 min-w-0">
         <div class="font-bold text-white truncate">${p.name}</div>
-        <div class="text-[10px] text-emerald-400 font-bold">Grade A Pristine • 6M Warranty</div>
+        <div class="text-[11px] text-emerald-400 font-bold">Grade A Pristine • 6M Warranty</div>
         <div class="text-slate-300 font-mono mt-0.5">${formatMoney(p.priceGradeA)}</div>
       </div>
       <div class="flex items-center gap-1.5 shrink-0">
-        <button onclick="addWishlistItemToCart('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[10px] cursor-pointer tap-scale" title="Add to Cart">
+        <button onclick="addWishlistItemToCart('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] cursor-pointer tap-scale" title="Add to Cart">
           + Cart
         </button>
         <button onclick="toggleWishlist('${p.id}')" class="p-1.5 rounded-lg text-slate-500 hover:text-red-400 cursor-pointer" title="Remove">
@@ -5743,7 +5743,7 @@ function openInspector(productId) {
   const caseBtn = document.getElementById("btnAddCaseBtn");
   if (caseBtn) {
     caseBtn.textContent = `+ Add Case (${formatMoney(399)})`;
-    caseBtn.className = "shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all";
+    caseBtn.className = "shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[11px] shadow cursor-pointer transition-all";
   }
 
   updateInspectGradeUI();
@@ -5773,7 +5773,7 @@ function renderInspectStorageUI(p) {
         }"
       >
         <div class="text-[11px] font-black">${opt.size}</div>
-        <div class="text-[8px] opacity-80 font-mono">${deltaText}</div>
+        <div class="text-[11px] opacity-80 font-mono">${deltaText}</div>
       </button>
     `;
   }).join('');
@@ -5876,9 +5876,9 @@ function setInspectPerspective(perspective) {
   Object.entries(perspectiveBtns).forEach(([k, btn]) => {
     if (!btn) return;
     if (k === perspective) {
-      btn.className = "perspective-btn active px-1.5 py-1 rounded bg-blue-600 text-white font-bold text-[10px] text-center shadow cursor-pointer";
+      btn.className = "perspective-btn active px-1.5 py-1 rounded bg-blue-600 text-white font-bold text-[11px] text-center shadow cursor-pointer";
     } else {
-      btn.className = "perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer";
+      btn.className = "perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[11px] text-center border border-slate-800 cursor-pointer";
     }
   });
 
@@ -6007,7 +6007,7 @@ function updateInspectGradeUI() {
   // Update pills and labels
   const pill = document.getElementById("inspectGradePill");
   pill.textContent = gradeInfo.label;
-  pill.className = `px-2 py-0.5 rounded-full text-[10px] font-bold ${g === 'A' ? 'badge-grade-a' : g === 'B' ? 'badge-grade-b' : 'badge-grade-c'}`;
+  pill.className = `px-2 py-0.5 rounded-full text-[11px] font-bold ${g === 'A' ? 'badge-grade-a' : g === 'B' ? 'badge-grade-b' : 'badge-grade-c'}`;
 
   // Update buttons
   ["A", "B", "C"].forEach(gradeKey => {
@@ -6289,11 +6289,11 @@ function renderDentInspectorUI() {
         </div>
         <div class="grid grid-cols-2 gap-2 text-[11px]">
           <div class="p-2 rounded-lg bg-slate-900/70 border border-slate-800">
-            <span class="text-slate-400 block text-[10px]">DISPLAY SCREEN:</span>
+            <span class="text-slate-400 block text-[11px]">DISPLAY SCREEN:</span>
             <span class="font-bold text-white flex items-center gap-1"><span class="text-emerald-400">✓</span> 100% Scratch-Free OLED</span>
           </div>
           <div class="p-2 rounded-lg bg-slate-900/70 border border-slate-800">
-            <span class="text-slate-400 block text-[10px]">CHASSIS & RAILS:</span>
+            <span class="text-slate-400 block text-[11px]">CHASSIS & RAILS:</span>
             <span class="font-bold text-white flex items-center gap-1"><span class="text-emerald-400">✓</span> 0 Dents · Like New</span>
           </div>
         </div>
@@ -6310,7 +6310,7 @@ function renderDentInspectorUI() {
                 <div class="text-[11px] text-slate-300 mt-0.5">${pin.desc}</div>
               </div>
             </div>
-            <button onclick="jumpToFlaw(${pin.angle}, '${pin.location}')" class="shrink-0 px-2 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold text-[10px] flex items-center gap-1 shadow cursor-pointer transition-colors">
+            <button onclick="jumpToFlaw(${pin.angle}, '${pin.location}')" class="shrink-0 px-2 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center gap-1 shadow cursor-pointer transition-colors">
               <span>🔍 ${pin.angle}° View</span>
             </button>
           </div>
@@ -6336,7 +6336,7 @@ function renderDentInspectorUI() {
       let btns = "";
       flaws.pins.forEach((pin, i) => {
         btns += `
-          <button onclick="jumpToFlaw(${pin.angle}, '${pin.location}')" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 font-bold border border-amber-500/40 text-[10px] transition-all flex items-center gap-1 cursor-pointer">
+          <button onclick="jumpToFlaw(${pin.angle}, '${pin.location}')" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 font-bold border border-amber-500/40 text-[11px] transition-all flex items-center gap-1 cursor-pointer">
             <span>🎯 View #${i+1} at ${pin.angle}°</span>
           </button>
         `;
@@ -6381,7 +6381,7 @@ function renderDynamicFlawPins(flaws, currentAngle) {
           <div class="relative w-7 h-7 rounded-full bg-amber-500 text-slate-950 flex items-center justify-center text-xs font-black shadow-2xl border-2 border-white cursor-pointer hover:scale-110 transition-transform">
             📍
           </div>
-          <div class="absolute left-8 top-0 whitespace-nowrap bg-slate-900/95 text-white border border-amber-500/60 px-2 py-0.5 rounded text-[10px] font-mono shadow-lg pointer-events-none">
+          <div class="absolute left-8 top-0 whitespace-nowrap bg-slate-900/95 text-white border border-amber-500/60 px-2 py-0.5 rounded text-[11px] font-mono shadow-lg pointer-events-none">
             ${pin.severity}
           </div>
         </div>
@@ -6634,13 +6634,13 @@ function renderOrdersTable() {
     const isSelected = order.id === state.selectedOrderId;
     let statusBadge = '';
     if (order.status === 'unverified') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">🟡 Pending OTP</span>';
+      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">🟡 Pending OTP</span>';
     } else if (order.status === 'whatsapp_sent') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">🔵 WhatsApp Sent</span>';
+      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">🔵 WhatsApp Sent</span>';
     } else if (order.status === 'verified') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">🟢 Verified COD</span>';
+      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">🟢 Verified COD</span>';
     } else if (order.status === 'prepaid') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">💎 Prepaid (₹300 Off)</span>';
+      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">💎 Prepaid (₹300 Off)</span>';
     }
 
     return `
@@ -6648,7 +6648,7 @@ function renderOrdersTable() {
         <td class="py-3 px-3">
           <div class="font-bold text-white flex items-center gap-1.5">
             <span>${order.name}</span>
-            <span class="text-[10px] text-slate-500 font-mono">#${order.id}</span>
+            <span class="text-[11px] text-slate-500 font-mono">#${order.id}</span>
           </div>
           <div class="text-[11px] text-slate-400 font-mono">${order.phone} • ${order.city}</div>
         </td>
@@ -6663,7 +6663,7 @@ function renderOrdersTable() {
           ${statusBadge}
         </td>
         <td class="py-3 px-3 text-right">
-          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="px-2.5 py-1 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[10px] cursor-pointer">
+          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="px-2.5 py-1 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[11px] cursor-pointer">
             📲 Dispatch
           </button>
         </td>
@@ -6727,16 +6727,16 @@ function renderWhatsAppChat() {
     if (msg.sender === "system") {
       return `
         <div class="chat-bubble-in bg-[#202C33] text-slate-200 p-3 rounded-2xl rounded-tl-none shadow-md max-w-[90%] text-[11px] leading-relaxed border border-slate-700/60">
-          <div class="text-[9px] text-emerald-400 font-bold mb-1">FoneZone Automated Dispatch ✓✓</div>
+          <div class="text-[11px] text-emerald-400 font-bold mb-1">FoneZone Automated Dispatch ✓✓</div>
           <div>${msg.text.replace(/\n/g, '<br>')}</div>
-          <div class="text-[9px] text-slate-500 text-right mt-1">${msg.time}</div>
+          <div class="text-[11px] text-slate-500 text-right mt-1">${msg.time}</div>
         </div>
       `;
     } else {
       return `
         <div class="chat-bubble-in ml-auto bg-[#005C4B] text-white p-3 rounded-2xl rounded-tr-none shadow-md max-w-[85%] text-[11px] leading-relaxed">
           <div>${msg.text.replace(/\n/g, '<br>')}</div>
-          <div class="text-[9px] text-emerald-200 text-right mt-1">${msg.time} ✓✓</div>
+          <div class="text-[11px] text-emerald-200 text-right mt-1">${msg.time} ✓✓</div>
         </div>
       `;
     }
@@ -8089,11 +8089,11 @@ function updateQAPhaseUI(phaseIndex) {
     const pill = document.getElementById(`qaPhasePill${i}`);
     if (pill) {
       if (i === phaseIndex) {
-        pill.className = "px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-600 text-white cursor-pointer shadow-md";
+        pill.className = "px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-blue-600 text-white cursor-pointer shadow-md";
       } else if (i < phaseIndex) {
-        pill.className = "px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-700/80 text-white cursor-pointer";
+        pill.className = "px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-emerald-700/80 text-white cursor-pointer";
       } else {
-        pill.className = "px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer";
+        pill.className = "px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer";
       }
     }
 
@@ -8177,9 +8177,9 @@ function setPhoneCase(caseStyle) {
     const btn = document.getElementById(`btnCase${type.charAt(0).toUpperCase() + type.slice(1)}`);
     if (btn) {
       if (type === caseStyle) {
-        btn.className = "case-sim-option-btn active p-1.5 rounded-lg border border-blue-500 bg-blue-600 text-white font-bold text-center text-[10px] cursor-pointer shadow-sm";
+        btn.className = "case-sim-option-btn active p-1.5 rounded-lg border border-blue-500 bg-blue-600 text-white font-bold text-center text-[11px] cursor-pointer shadow-sm";
       } else {
-        btn.className = "case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[10px] cursor-pointer";
+        btn.className = "case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[11px] cursor-pointer";
       }
     }
   });
@@ -8193,7 +8193,7 @@ function setPhoneCase(caseStyle) {
     }
     if (badge) {
       badge.textContent = "Raw Chassis Mode";
-      badge.className = "text-[10px] text-slate-400 font-bold font-mono";
+      badge.className = "text-[11px] text-slate-400 font-bold font-mono";
     }
     if (calloutText) {
       calloutText.innerHTML = "<b>Smart Buyer Insight:</b> 94% of users put a case on their phone. Installing a case conceals edge marks 100%, giving you Grade A looks for Grade B pricing!";
@@ -8218,7 +8218,7 @@ function setPhoneCase(caseStyle) {
     }
     if (badge) {
       badge.textContent = "✓ Edge Marks 100% Concealed";
-      badge.className = "text-[10px] text-emerald-400 font-bold font-mono";
+      badge.className = "text-[11px] text-emerald-400 font-bold font-mono";
     }
     if (calloutText) {
       const caseName = caseStyle === "clear" ? "Clear Impact Case" : caseStyle === "black" ? "Slim Matte Black Case" : "Navy Silicone Case";
@@ -8238,14 +8238,14 @@ function toggleAddCaseToOrder() {
   if (state.hasCaseAddon) {
     if (btn) {
       btn.textContent = `✓ Case Added (+${formatMoney(399)})`;
-      btn.className = "shrink-0 px-2 py-1 rounded bg-emerald-500 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all";
+      btn.className = "shrink-0 px-2 py-1 rounded bg-emerald-500 text-slate-950 font-black text-[11px] shadow cursor-pointer transition-all";
     }
     if (priceEl) priceEl.textContent = formatMoney(basePrice + 399);
     showToast(`📱 +${formatMoney(399)} Shockproof Case bundle added to this device!`);
   } else {
     if (btn) {
       btn.textContent = `+ Add Case (${formatMoney(399)})`;
-      btn.className = "shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all";
+      btn.className = "shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[11px] shadow cursor-pointer transition-all";
     }
     if (priceEl) priceEl.textContent = formatMoney(basePrice);
     showToast("Removed phone case bundle.");
@@ -8317,9 +8317,9 @@ function setBatteryUsageProfile(profile) {
     const btn = document.getElementById(`btnProfile${p.charAt(0).toUpperCase() + p.slice(1)}`);
     if (btn) {
       if (p === profile) {
-        btn.className = "battery-preset-btn active p-1.5 rounded-lg bg-blue-600 text-white font-bold text-center text-[10px] cursor-pointer shadow-sm";
+        btn.className = "battery-preset-btn active p-1.5 rounded-lg bg-blue-600 text-white font-bold text-center text-[11px] cursor-pointer shadow-sm";
       } else {
-        btn.className = "battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[10px] cursor-pointer";
+        btn.className = "battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[11px] cursor-pointer";
       }
     }
   });
@@ -8457,7 +8457,7 @@ function renderProductSpecs(p, category = "all") {
         </div>
         <div class="space-y-1">
           ${cat.details.map(item => `
-            <div class="specs-row-item flex items-baseline justify-between gap-2 py-0.5 text-[10px] border-b border-slate-800/40 last:border-0">
+            <div class="specs-row-item flex items-baseline justify-between gap-2 py-0.5 text-[11px] border-b border-slate-800/40 last:border-0">
               <span class="specs-label text-slate-400 font-medium shrink-0">${item.label}:</span>
               <span class="specs-value text-slate-200 font-semibold text-right">${item.value}</span>
             </div>

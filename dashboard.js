@@ -139,13 +139,13 @@ function renderOrdersTable() {
     const isSelected = order.id === dashboardState.selectedOrderId;
     let statusBadge = '';
     if (order.status === 'unverified') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">🟡 Pending OTP</span>';
+      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">🟡 Pending OTP</span>';
     } else if (order.status === 'whatsapp_sent') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">🔵 WhatsApp Sent</span>';
+      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">🔵 WhatsApp Sent</span>';
     } else if (order.status === 'verified') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">🟢 Verified COD</span>';
+      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">🟢 Verified COD</span>';
     } else if (order.status === 'prepaid') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">💎 Prepaid (₹300 Off)</span>';
+      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">💎 Prepaid (₹300 Off)</span>';
     }
 
     let riskClass = 'text-amber-300';
@@ -157,7 +157,7 @@ function renderOrdersTable() {
         <td class="py-3 px-3">
           <div class="font-bold text-white flex items-center gap-1.5">
             <span>${order.name}</span>
-            <span class="text-[10px] text-slate-500 font-mono">#${order.id}</span>
+            <span class="text-[11px] text-slate-500 font-mono">#${order.id}</span>
           </div>
           <div class="text-[11px] text-slate-400 font-mono">${order.phone} • ${order.city}</div>
         </td>
@@ -172,7 +172,7 @@ function renderOrdersTable() {
           ${statusBadge}
         </td>
         <td class="py-3 px-3 text-right">
-          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="px-2.5 py-1 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[10px] shadow active:scale-95 cursor-pointer">
+          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="px-2.5 py-1 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[11px] shadow active:scale-95 cursor-pointer">
             📲 Dispatch
           </button>
         </td>
@@ -223,11 +223,11 @@ function updateSelectedCustomerCard() {
   if (riskBadge) {
     riskBadge.textContent = order.risk;
     if (order.risk.includes('High')) {
-      riskBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40';
+      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40';
     } else if (order.risk.includes('Low')) {
-      riskBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
+      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
     } else {
-      riskBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40';
+      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40';
     }
   }
 }
@@ -254,19 +254,19 @@ function renderWhatsAppChat() {
     if (msg.sender === 'system') {
       return `
         <div class="chat-bubble-in bg-[#202C33] text-slate-200 p-3 rounded-2xl rounded-tl-none shadow-md max-w-[92%] text-[11px] leading-relaxed border border-slate-700/60">
-          <div class="text-[9px] text-emerald-400 font-bold mb-1 flex items-center gap-1">
+          <div class="text-[11px] text-emerald-400 font-bold mb-1 flex items-center gap-1">
             <span>FoneZone Automated Dispatch</span>
             <span class="text-emerald-400 font-mono">✓✓</span>
           </div>
           <div>${msg.text.replace(/\n/g, '<br>')}</div>
-          <div class="text-[9px] text-slate-500 text-right mt-1">${msg.time}</div>
+          <div class="text-[11px] text-slate-500 text-right mt-1">${msg.time}</div>
         </div>
       `;
     } else {
       return `
         <div class="chat-bubble-in ml-auto bg-[#005C4B] text-white p-3 rounded-2xl rounded-tr-none shadow-md max-w-[85%] text-[11px] leading-relaxed">
           <div>${msg.text.replace(/\n/g, '<br>')}</div>
-          <div class="text-[9px] text-emerald-200 text-right mt-1">${msg.time} ✓✓</div>
+          <div class="text-[11px] text-emerald-200 text-right mt-1">${msg.time} ✓✓</div>
         </div>
       `;
     }

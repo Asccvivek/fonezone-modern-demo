@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoneZone | Certified Refurbished Tech (360° Inspection & Pan-India COD)</title>
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="assets/model-viewer.min.js"></script>
   <script src="assets/lucide.min.js"></script>
@@ -45,7 +45,7 @@
           <button id="tabOpsBtn" onclick="switchPortal('ops')" class="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-inactive flex items-center gap-1 sm:gap-1.5 cursor-pointer">
             <span>⚙️</span>
             <span>Merchant Ops</span>
-            <span class="px-1.5 py-0.2 text-[9px] sm:text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full font-mono">Sahil</span>
+            <span class="px-1.5 py-0.2 text-[11px] sm:text-[11px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full font-mono">Sahil</span>
           </button>
           <a href="dashboard.html" class="px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg text-xs font-bold bg-blue-600/25 hover:bg-blue-600/40 border border-blue-500/40 text-blue-300 hover:text-white transition-all flex items-center gap-1 cursor-pointer" title="Open Dedicated Standalone Dashboard in New Window">
             <span>↗</span>
@@ -127,7 +127,7 @@
           <!-- Brand Logo -->
           <a href="#" onclick="setCategory('all'); return false;" class="flex items-center gap-2 cursor-pointer shrink-0">
             <img id="mainNavbarLogo" src="assets/fonezone_logo_white.png" alt="FoneZone Logo" class="h-7 sm:h-10 w-auto object-contain">
-            <span class="hidden xs:inline-block sm:hidden text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-blue-500/15 text-blue-400 border border-blue-500/30 font-mono">Refurbished</span>
+            <span class="hidden xs:inline-block sm:hidden text-[11px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-blue-500/15 text-blue-400 border border-blue-500/30 font-mono">Refurbished</span>
           </a>
         </div>
 
@@ -156,7 +156,7 @@
         <!-- Right Header Items -->
         <div class="flex items-center gap-1.5 sm:gap-3 text-xs font-medium shrink-0">
           <!-- Mobile Currency Switcher Pill (< sm) -->
-          <div class="flex sm:hidden items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 text-[10px]">
+          <div class="flex sm:hidden items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 text-[11px]">
             <button id="regionBtnINMobile" onclick="setRegion('IN')" class="px-1.5 py-0.5 rounded font-bold bg-blue-600 text-white cursor-pointer">₹</button>
             <button id="regionBtnUAEMobile" onclick="setRegion('UAE')" class="px-1.5 py-0.5 rounded font-semibold text-slate-400 hover:text-white cursor-pointer">AED</button>
           </div>
@@ -167,7 +167,7 @@
           </button>
 
           <!-- Mobile Ops Dashboard Link (< sm) -->
-          <a href="dashboard.html" class="sm:hidden px-2 py-1 rounded-lg bg-blue-950/80 border border-blue-500/40 text-[10px] font-bold text-blue-300 hover:text-white flex items-center gap-1 active:scale-95 transition-all" title="Open Merchant Ops Command Center">
+          <a href="dashboard.html" class="sm:hidden px-2 py-1 rounded-lg bg-blue-950/80 border border-blue-500/40 text-[11px] font-bold text-blue-300 hover:text-white flex items-center gap-1 active:scale-95 transition-all" title="Open Merchant Ops Command Center">
             <span>⚙️</span>
             <span>Ops</span>
           </a>
@@ -187,13 +187,13 @@
           <!-- Wishlist (Desktop/Tablet Only — Mobile uses Bottom App Bar) -->
           <div class="hidden sm:block relative p-1.5 sm:p-2 text-slate-300 hover:text-white cursor-pointer rounded-lg hover:bg-slate-800/60 transition-colors" onclick="openWishlistDrawer()" title="Wishlist">
             <i data-lucide="heart" class="w-5 h-5"></i>
-            <span id="wishlistCountBadge" class="absolute top-0 right-0 sm:top-0.5 sm:right-0.5 w-4 h-4 rounded-full bg-red-500 text-[10px] font-bold text-white flex items-center justify-center">0</span>
+            <span id="wishlistCountBadge" class="absolute top-0 right-0 sm:top-0.5 sm:right-0.5 w-4 h-4 rounded-full bg-red-500 text-[11px] font-bold text-white flex items-center justify-center">0</span>
           </div>
 
           <!-- Cart (Desktop/Tablet Only — Mobile uses Bottom App Bar) -->
           <div class="hidden sm:block relative p-1.5 sm:p-2 text-slate-300 hover:text-white cursor-pointer rounded-lg hover:bg-slate-800/60 transition-colors" onclick="openCartDrawer()" title="Cart">
             <i data-lucide="shopping-bag" class="w-5 h-5"></i>
-            <span id="cartCountBadge" class="absolute top-0 right-0 sm:top-0.5 sm:right-0.5 w-4 h-4 rounded-full bg-blue-600 text-[10px] font-bold text-white flex items-center justify-center">0</span>
+            <span id="cartCountBadge" class="absolute top-0 right-0 sm:top-0.5 sm:right-0.5 w-4 h-4 rounded-full bg-blue-600 text-[11px] font-bold text-white flex items-center justify-center">0</span>
           </div>
         </div>
       </div>
@@ -210,7 +210,7 @@
             placeholder="Search iPhones, Galaxy, MacBooks, iPads..."
             class="w-full bg-slate-900/90 border border-slate-700/80 rounded-full py-2 pl-9 pr-14 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
           >
-          <button onclick="executeSearch()" class="absolute right-1 top-1 bottom-1 px-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-[10px] cursor-pointer shadow">
+          <button onclick="executeSearch()" class="absolute right-1 top-1 bottom-1 px-3 bg-blue-600 hover:bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-[11px] cursor-pointer shadow">
             Search
           </button>
         </div>
@@ -243,39 +243,39 @@
                   <div class="py-1">
                     <button onclick="handleCategorySelect('phone', 'apple')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
                       <span class="font-bold">🍎 Apple iPhones</span>
-                      <span class="text-[10px] text-blue-300 font-mono">15, 14, 13, 12</span>
+                      <span class="text-[11px] text-blue-300 font-mono">15, 14, 13, 12</span>
                     </button>
                     <button onclick="handleCategorySelect('phone', 'samsung')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
                       <span class="font-bold">📱 Samsung Smart Phone</span>
-                      <span class="text-[10px] text-slate-400 font-mono">S23, S22, Note</span>
+                      <span class="text-[11px] text-slate-400 font-mono">S23, S22, Note</span>
                     </button>
                     <button onclick="handleCategorySelect('phone', 'oneplus')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
                       <span class="font-bold">🔴 OnePlus Smart Phones</span>
-                      <span class="text-[10px] text-slate-400 font-mono">11, 10 Pro, Nord</span>
+                      <span class="text-[11px] text-slate-400 font-mono">11, 10 Pro, Nord</span>
                     </button>
                   </div>
                   <div class="py-1">
                     <button onclick="handleCategorySelect('macbook', 'apple')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
                       <span class="font-bold">💻 Apple MacBooks</span>
-                      <span class="text-[10px] text-emerald-400 font-mono">Air M1, M2, Pro</span>
+                      <span class="text-[11px] text-emerald-400 font-mono">Air M1, M2, Pro</span>
                     </button>
                     <button onclick="handleCategorySelect('macbook', 'laptop')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
                       <span class="font-bold">🖥️ Acer & HP Laptops</span>
-                      <span class="text-[10px] text-slate-400 font-mono">Core i5 / i7</span>
+                      <span class="text-[11px] text-slate-400 font-mono">Core i5 / i7</span>
                     </button>
                     <button onclick="handleCategorySelect('ipad', 'all')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
                       <span class="font-bold">📑 iPads & Tablets</span>
-                      <span class="text-[10px] text-slate-400 font-mono">iPad 10th / Air</span>
+                      <span class="text-[11px] text-slate-400 font-mono">iPad 10th / Air</span>
                     </button>
                   </div>
                   <div class="py-1">
                     <button onclick="handleCategorySelect('watch', 'all')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
                       <span class="font-bold">⌚ Apple & Galaxy Watch</span>
-                      <span class="text-[10px] text-slate-400 font-mono">Series 8 / Ultra</span>
+                      <span class="text-[11px] text-slate-400 font-mono">Series 8 / Ultra</span>
                     </button>
                     <button onclick="handleCategorySelect('accessories', 'all')" class="w-full text-left px-3 py-2 rounded-xl hover:bg-blue-600 hover:text-white flex items-center justify-between transition-colors cursor-pointer">
                       <span class="font-bold">🎧 Certified Audio & Cables</span>
-                      <span class="text-[10px] text-slate-400 font-mono">AirPods, Adapters</span>
+                      <span class="text-[11px] text-slate-400 font-mono">AirPods, Adapters</span>
                     </button>
                   </div>
                 </div>
@@ -291,7 +291,7 @@
             </a>
             <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-bold text-amber-300 hover:text-amber-200 hover:bg-blue-700 transition-colors flex items-center gap-1">
               <span>SELL YOUR DEVICE</span>
-              <span class="px-1.5 py-0.2 text-[9px] bg-amber-400 text-slate-950 font-black rounded-full uppercase">Instant Cash</span>
+              <span class="px-1.5 py-0.2 text-[11px] bg-amber-400 text-slate-950 font-black rounded-full uppercase">Instant Cash</span>
             </a>
             <a href="#/pages/about-us" onclick="navigateTo('#/pages/about-us'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors">
               <span>ABOUT US</span>
@@ -322,9 +322,10 @@
           </div>
         </div>
       </nav>
+    </header>
 
-      <!-- 4. Ultra-Modern Mobile Squircle Category Story Rail (< sm) -->
-      <div id="mobileCategoryStoryRail" class="block sm:hidden py-2 px-3 border-t border-slate-800/50 bg-slate-950/40 backdrop-blur-md">
+    <!-- 4. Ultra-Modern Mobile Squircle Category Story Rail (< sm) -->
+    <div id="mobileCategoryStoryRail" class="block sm:hidden py-2.5 px-3 border-b border-slate-800/60 bg-[#070A10]/95 backdrop-blur-md">
         <div class="flex items-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth py-0.5">
           
           <!-- All Devices -->
@@ -332,7 +333,7 @@
             <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white font-black text-sm shadow-md group-hover:scale-105 transition-transform">
               ⚡
             </div>
-            <span class="text-[10px] font-bold text-slate-200 group-hover:text-blue-400 transition-colors">All (27)</span>
+            <span class="text-[11px] font-bold text-slate-200 group-hover:text-blue-400 transition-colors">All (27)</span>
           </button>
 
           <!-- iPhones -->
@@ -340,7 +341,7 @@
             <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
               <img src="assets/iphone14_blue.png" alt="iPhones" class="max-h-full max-w-full object-contain">
             </div>
-            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">iPhones</span>
+            <span class="text-[11px] font-bold text-slate-300 group-hover:text-white transition-colors">iPhones</span>
           </button>
 
           <!-- Samsung Galaxy -->
@@ -348,7 +349,7 @@
             <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
               <img src="assets/samsung_s23_ultra.png" alt="Samsung" class="max-h-full max-w-full object-contain">
             </div>
-            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">Galaxy</span>
+            <span class="text-[11px] font-bold text-slate-300 group-hover:text-white transition-colors">Galaxy</span>
           </button>
 
           <!-- OnePlus & Pixel -->
@@ -356,7 +357,7 @@
             <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
               <img src="assets/oneplus_7pro.jpg" alt="OnePlus" class="max-h-full max-w-full object-contain rounded-lg">
             </div>
-            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">OnePlus</span>
+            <span class="text-[11px] font-bold text-slate-300 group-hover:text-white transition-colors">OnePlus</span>
           </button>
 
           <!-- MacBooks -->
@@ -364,7 +365,7 @@
             <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
               <img src="assets/macbookair_midnight.png" alt="MacBooks" class="max-h-full max-w-full object-contain">
             </div>
-            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">MacBooks</span>
+            <span class="text-[11px] font-bold text-slate-300 group-hover:text-white transition-colors">MacBooks</span>
           </button>
 
           <!-- iPads -->
@@ -372,7 +373,7 @@
             <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
               <img src="assets/ipad_10th_gen.png" alt="iPads" class="max-h-full max-w-full object-contain rounded-lg">
             </div>
-            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">iPads</span>
+            <span class="text-[11px] font-bold text-slate-300 group-hover:text-white transition-colors">iPads</span>
           </button>
 
           <!-- Smartwatches -->
@@ -380,7 +381,7 @@
             <div class="w-12 h-12 rounded-2xl bg-slate-900 border border-slate-800 flex items-center justify-center p-1.5 shadow-md group-hover:scale-105 transition-transform">
               <img src="assets/applewatch_series7.png" alt="Watches" class="max-h-full max-w-full object-contain rounded-lg">
             </div>
-            <span class="text-[10px] font-bold text-slate-300 group-hover:text-white transition-colors">Watches</span>
+            <span class="text-[11px] font-bold text-slate-300 group-hover:text-white transition-colors">Watches</span>
           </button>
 
           <!-- Sell Phone -->
@@ -388,12 +389,11 @@
             <div class="w-12 h-12 rounded-2xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-base shadow-md group-hover:scale-105 transition-transform">
               💰
             </div>
-            <span class="text-[10px] font-bold text-emerald-400">Sell Phone</span>
+            <span class="text-[11px] font-bold text-emerald-400">Sell Phone</span>
           </a>
 
         </div>
       </div>
-    </header>
 
     <!-- ======================================================== -->
     <!-- 1. HOME & CATALOG VIEW                                   -->
@@ -418,10 +418,10 @@
                style="background: radial-gradient(circle at 80% 50%, rgba(30, 86, 216, 0.35) 0%, transparent 50%), linear-gradient(135deg, #070D1D 0%, #0F1B36 50%, #0A1224 100%);">
             <div class="relative z-10 flex-1 max-w-xl">
               <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
-                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-blue-500/25 text-blue-300 border border-blue-500/40 text-[9px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
+                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-blue-500/25 text-blue-300 border border-blue-500/40 text-[11px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
                   <span>🔥</span> <span>MEGA FESTIVAL</span>
                 </span>
-                <span class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[8px] sm:text-[10px] font-bold">
+                <span class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] sm:text-[11px] font-bold">
                   FLAT 60% OFF
                 </span>
               </div>
@@ -443,7 +443,7 @@
                 </button>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[9px] sm:text-[11px] text-slate-300">
+              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[11px] sm:text-[11px] text-slate-300">
                 <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 6M Warranty</span>
                 <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 85%+ Battery</span>
                 <span class="hidden sm:flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 0-Dent Checked</span>
@@ -454,7 +454,7 @@
               <div class="relative">
                 <img src="assets/iphone14_blue.png" alt="iPhone 14 Refurbished" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
                 <!-- Floating Offer Badge -->
-                <div id="heroSlide1SaveBadge" class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[8px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl border border-emerald-400/40">
+                <div id="heroSlide1SaveBadge" class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[11px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl border border-emerald-400/40">
                   Save ₹30k
                 </div>
               </div>
@@ -466,10 +466,10 @@
                style="background: radial-gradient(circle at 80% 50%, rgba(147, 51, 234, 0.35) 0%, transparent 50%), linear-gradient(135deg, #0C081A 0%, #171033 50%, #0F0A24 100%);">
             <div class="relative z-10 flex-1 max-w-xl">
               <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
-                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-purple-500/25 text-purple-300 border border-purple-500/40 text-[9px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
+                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-purple-500/25 text-purple-300 border border-purple-500/40 text-[11px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
                   <span>⚡</span> <span>200MP MONSTER</span>
                 </span>
-                <span id="heroSlide2SaveBadge" class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[8px] sm:text-[10px] font-bold">
+                <span id="heroSlide2SaveBadge" class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] sm:text-[11px] font-bold">
                   SAVE ₹70,000
                 </span>
               </div>
@@ -491,7 +491,7 @@
                 </button>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[9px] sm:text-[11px] text-slate-300">
+              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[11px] sm:text-[11px] text-slate-300">
                 <span class="flex items-center gap-0.5"><span class="text-purple-400">✓</span> S-Pen Included</span>
                 <span class="flex items-center gap-0.5"><span class="text-purple-400">✓</span> 5000mAh</span>
                 <span class="hidden sm:flex items-center gap-0.5"><span class="text-purple-400">✓</span> Free Insured Air</span>
@@ -501,7 +501,7 @@
             <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
               <div class="relative">
                 <img src="assets/samsung_s23_ultra.png" alt="Samsung Galaxy S23 Ultra Refurbished" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
-                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[8px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl border border-purple-400/40">
+                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[11px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl border border-purple-400/40">
                   56% OFF
                 </div>
               </div>
@@ -513,10 +513,10 @@
                style="background: radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.35) 0%, transparent 50%), linear-gradient(135deg, #051A12 0%, #0B291D 50%, #061912 100%);">
             <div class="relative z-10 flex-1 max-w-xl">
               <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
-                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 text-[9px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
+                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 text-[11px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
                   <span>🔄</span> <span>INSTANT EXCHANGE</span>
                 </span>
-                <span id="heroSlide3TradeinBadge" class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[8px] sm:text-[10px] font-bold">
+                <span id="heroSlide3TradeinBadge" class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] sm:text-[11px] font-bold">
                   GET ₹15,000 EXTRA
                 </span>
               </div>
@@ -538,7 +538,7 @@
                 </a>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[9px] sm:text-[11px] text-slate-300">
+              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[11px] sm:text-[11px] text-slate-300">
                 <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 60s Quote</span>
                 <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> Free Pickup</span>
                 <span class="hidden sm:flex items-center gap-0.5"><span class="text-emerald-400">✓</span> Instant UPI</span>
@@ -548,7 +548,7 @@
             <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
               <div class="relative">
                 <img src="assets/macbookair_midnight.png" alt="MacBook & Gadget Trade-in" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl object-contain">
-                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-[8px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl">
+                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-[11px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl">
                   ⚡ UPI Cash
                 </div>
               </div>
@@ -574,7 +574,7 @@
             <span class="w-px h-3 bg-slate-700 mx-0.5"></span>
             <button id="heroPlayPauseBtn" onclick="toggleHeroAutoPlay()" class="text-slate-300 hover:text-white text-[11px] font-mono flex items-center gap-1 cursor-pointer transition-colors px-1 rounded hover:bg-white/10" title="Toggle Auto-Play (6s Delay)">
               <span id="heroPlayPauseIcon">⏸️</span>
-              <span id="heroPlayPauseLabel" class="text-[10px] text-slate-300 font-bold">6s</span>
+              <span id="heroPlayPauseLabel" class="text-[11px] text-slate-300 font-bold">6s</span>
             </button>
           </div>
         </div>
@@ -587,18 +587,18 @@
         <!-- Offer 1: Live Lightning Flash Deal with Countdown -->
         <div class="w-[270px] sm:w-auto shrink-0 sm:shrink snap-start p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-amber-950/40 via-slate-900 to-slate-900 border border-amber-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between fz-card-interactive">
           <div class="flex items-center justify-between mb-1.5">
-            <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
+            <span class="text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1">
               <i data-lucide="zap" class="w-3.5 h-3.5 text-amber-400"></i>
               <span>FLASH DEAL</span>
             </span>
-            <span class="text-[10px] font-mono text-amber-400 font-bold" id="heroDealTimer">04:18:32</span>
+            <span class="text-[11px] font-mono text-amber-400 font-bold" id="heroDealTimer">04:18:32</span>
           </div>
           <div>
             <div class="text-xs font-bold text-white flex items-center justify-between">
               <span>iPhone 13 128GB Starlight</span>
               <span id="offer1DealPrice" class="text-emerald-400 font-black font-mono">₹30,999</span>
             </div>
-            <div class="text-[10px] text-slate-400 mt-0.5 flex items-center justify-between">
+            <div class="text-[11px] text-slate-400 mt-0.5 flex items-center justify-between">
               <span>Grade A • Pristine</span>
               <span id="offer1MsrpPrice" class="line-through text-slate-500">₹59,900</span>
             </div>
@@ -611,19 +611,19 @@
         <!-- Offer 2: Bank Instant Discount Rail -->
         <div class="w-[270px] sm:w-auto shrink-0 sm:shrink snap-start p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-blue-950/40 via-slate-900 to-slate-900 border border-blue-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between fz-card-interactive">
           <div class="flex items-center justify-between mb-1.5">
-            <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30 flex items-center gap-1">
+            <span class="text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300 border border-blue-500/30 flex items-center gap-1">
               <i data-lucide="credit-card" class="w-3.5 h-3.5 text-blue-300"></i>
               <span>BANK OFFER</span>
             </span>
-            <span class="text-[10px] text-blue-300 font-bold">ALL CARDS</span>
+            <span class="text-[11px] text-blue-300 font-bold">ALL CARDS</span>
           </div>
           <div>
             <div id="offer2Heading" class="text-xs font-black text-white">Flat ₹2,000 Instant Off</div>
-            <div id="offer2Subtext" class="text-[10px] text-slate-300 mt-0.5 leading-snug">
+            <div id="offer2Subtext" class="text-[11px] text-slate-300 mt-0.5 leading-snug">
               HDFC, ICICI, SBI & Axis Bank Credit/Debit Cards on orders above ₹30k.
             </div>
           </div>
-          <div class="mt-2.5 pt-1.5 border-t border-slate-800 text-[10px] text-emerald-400 font-bold flex items-center justify-between">
+          <div class="mt-2.5 pt-1.5 border-t border-slate-800 text-[11px] text-emerald-400 font-bold flex items-center justify-between">
             <span id="offer2EmiText">+ No Cost EMI from ₹1,666/mo</span>
             <span class="text-slate-400 font-normal">Auto-applied</span>
           </div>
@@ -632,17 +632,17 @@
         <!-- Offer 3: 1-Click Exclusive Coupon Code -->
         <div class="w-[270px] sm:w-auto shrink-0 sm:shrink snap-start p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-purple-950/40 via-slate-900 to-slate-900 border border-purple-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between fz-card-interactive">
           <div class="flex items-center justify-between mb-1.5">
-            <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center gap-1">
+            <span class="text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-purple-500/20 text-purple-300 border border-purple-500/30 flex items-center gap-1">
               <i data-lucide="tag" class="w-3.5 h-3.5 text-purple-300"></i>
               <span>PROMO CODE</span>
             </span>
-            <span class="text-[10px] text-purple-300 font-bold">EXTRA SAVINGS</span>
+            <span class="text-[11px] text-purple-300 font-bold">EXTRA SAVINGS</span>
           </div>
           <div>
             <div class="flex items-center justify-between">
               <span class="text-xs font-black text-white">Code: <span id="offer3CouponCode" class="text-purple-300 font-mono tracking-wider">FONEZONE2K</span></span>
             </div>
-            <div id="offer3Subtext" class="text-[10px] text-slate-300 mt-0.5">
+            <div id="offer3Subtext" class="text-[11px] text-slate-300 mt-0.5">
               Get additional ₹2,000 off at cart checkout on any flagship purchase.
             </div>
           </div>
@@ -655,19 +655,19 @@
         <!-- Offer 4: Zero-Risk Doorstep COD & Inspection -->
         <div class="w-[270px] sm:w-auto shrink-0 sm:shrink snap-start p-3 sm:p-3.5 rounded-2xl bg-gradient-to-br from-emerald-950/40 via-slate-900 to-slate-900 border border-emerald-500/30 shadow-lg relative overflow-hidden flex flex-col justify-between fz-card-interactive">
           <div class="flex items-center justify-between mb-1.5">
-            <span class="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
+            <span class="text-[11px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1">
               <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-300"></i>
               <span>ZERO RISK</span>
             </span>
-            <span class="text-[10px] text-emerald-400 font-bold">100% ASSURED</span>
+            <span class="text-[11px] text-emerald-400 font-bold">100% ASSURED</span>
           </div>
           <div>
             <div class="text-xs font-black text-white">Inspect Before Paying</div>
-            <div class="text-[10px] text-slate-300 mt-0.5 leading-snug">
+            <div class="text-[11px] text-slate-300 mt-0.5 leading-snug">
               Open-box doorstep delivery. Pay cash or UPI only after you verify condition.
             </div>
           </div>
-          <div class="mt-2.5 pt-1.5 border-t border-slate-800 text-[10px] text-slate-300 font-medium flex items-center justify-between">
+          <div class="mt-2.5 pt-1.5 border-t border-slate-800 text-[11px] text-slate-300 font-medium flex items-center justify-between">
             <span>7-Day Easy Replacement</span>
             <span class="text-emerald-400 font-bold">Free Shipping</span>
           </div>
@@ -683,7 +683,7 @@
           </div>
           <div>
             <div class="font-bold text-white">Up to 6M Warranty</div>
-            <div class="text-slate-400 text-[10px]">100% Genuine Certified Parts</div>
+            <div class="text-slate-400 text-[11px]">100% Genuine Certified Parts</div>
           </div>
         </div>
         <div class="shrink-0 min-w-[170px] sm:min-w-0 snap-start flex items-center gap-2.5 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
@@ -692,7 +692,7 @@
           </div>
           <div>
             <div class="font-bold text-white">Certified Battery</div>
-            <div class="text-slate-400 text-[10px]">85%+ Health Guaranteed</div>
+            <div class="text-slate-400 text-[11px]">85%+ Health Guaranteed</div>
           </div>
         </div>
         <div class="shrink-0 min-w-[170px] sm:min-w-0 snap-start flex items-center gap-2.5 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
@@ -701,7 +701,7 @@
           </div>
           <div>
             <div class="font-bold text-white">Pan-India COD</div>
-            <div class="text-slate-400 text-[10px]">Insured Doorstep Dispatch</div>
+            <div class="text-slate-400 text-[11px]">Insured Doorstep Dispatch</div>
           </div>
         </div>
         <div class="shrink-0 min-w-[170px] sm:min-w-0 snap-start flex items-center gap-2.5 p-2 rounded-xl bg-slate-900/40 border border-slate-800/60">
@@ -710,7 +710,7 @@
           </div>
           <div>
             <div class="font-bold text-white">7 Days Easy Return</div>
-            <div class="text-slate-400 text-[10px]">No Questions Asked Return</div>
+            <div class="text-slate-400 text-[11px]">No Questions Asked Return</div>
           </div>
         </div>
       </div>
@@ -726,7 +726,7 @@
         <div>
           <h2 class="text-base sm:text-lg font-extrabold text-white flex items-center gap-2">
             <span>⭐ Favourite Brands & Categories</span>
-            <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-[10px] font-mono uppercase font-bold tracking-wider">Quick Select</span>
+            <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 text-[11px] font-mono uppercase font-bold tracking-wider">Quick Select</span>
           </h2>
           <p class="text-xs text-slate-400">Explore certified refurbished devices with verified starting prices & live 32-point inspection proof</p>
         </div>
@@ -750,7 +750,7 @@
             <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
               <span>🍎 Apple</span>
             </div>
-            <div id="railPriceApple" class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹10,999</div>
+            <div id="railPriceApple" class="text-[11px] text-emerald-400 font-bold mt-0.5">From ₹10,999</div>
           </div>
         </button>
 
@@ -763,7 +763,7 @@
             <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
               <span>📱 Samsung</span>
             </div>
-            <div id="railPriceSamsung" class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹22,499</div>
+            <div id="railPriceSamsung" class="text-[11px] text-emerald-400 font-bold mt-0.5">From ₹22,499</div>
           </div>
         </button>
 
@@ -776,7 +776,7 @@
             <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
               <span>🔴 OnePlus & Pixel</span>
             </div>
-            <div id="railPriceOnePlus" class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹13,999</div>
+            <div id="railPriceOnePlus" class="text-[11px] text-emerald-400 font-bold mt-0.5">From ₹13,999</div>
           </div>
         </button>
 
@@ -789,7 +789,7 @@
             <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
               <span>👑 Flagship</span>
             </div>
-            <div class="text-[10px] text-emerald-400 font-bold mt-0.5">Titanium & Ultra</div>
+            <div class="text-[11px] text-emerald-400 font-bold mt-0.5">Titanium & Ultra</div>
           </div>
         </button>
 
@@ -802,7 +802,7 @@
             <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
               <span>💻 MacBooks</span>
             </div>
-            <div id="railPriceMacBook" class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹56,999</div>
+            <div id="railPriceMacBook" class="text-[11px] text-emerald-400 font-bold mt-0.5">From ₹56,999</div>
           </div>
         </button>
 
@@ -815,7 +815,7 @@
             <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
               <span>📱 iPads</span>
             </div>
-            <div id="railPriceIpad" class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹15,999</div>
+            <div id="railPriceIpad" class="text-[11px] text-emerald-400 font-bold mt-0.5">From ₹15,999</div>
           </div>
         </button>
 
@@ -828,7 +828,7 @@
             <div class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors flex items-center justify-center gap-1">
               <span>⌚ Watches</span>
             </div>
-            <div id="railPriceWatch" class="text-[10px] text-emerald-400 font-bold mt-0.5">From ₹10,499</div>
+            <div id="railPriceWatch" class="text-[11px] text-emerald-400 font-bold mt-0.5">From ₹10,499</div>
           </div>
         </button>
 
@@ -841,7 +841,7 @@
             <div class="text-xs font-bold text-white group-hover:text-red-400 transition-colors flex items-center justify-center gap-1">
               <span>📹 Video Proof</span>
             </div>
-            <div class="text-[10px] text-red-400 font-bold mt-0.5">Cashify Feature</div>
+            <div class="text-[11px] text-red-400 font-bold mt-0.5">Cashify Feature</div>
           </div>
         </button>
 
@@ -885,7 +885,7 @@
               <span class="text-base">💰</span>
               <h3 class="text-sm md:text-base font-extrabold text-white flex items-center gap-2">
                 <span>Find Phones in Your Budget</span>
-                <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-mono font-bold">Smart Filter</span>
+                <span class="px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-mono font-bold">Smart Filter</span>
               </h3>
             </div>
             <p class="text-xs text-slate-300">
@@ -896,12 +896,12 @@
           <!-- Live Budget Stat Badge -->
           <div class="flex items-center gap-3 self-start md:self-auto bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-xl">
             <div>
-              <span class="text-[9px] text-slate-400 block font-mono">MAX BUDGET:</span>
+              <span class="text-[11px] text-slate-400 block font-mono">MAX BUDGET:</span>
               <span id="budgetDisplayVal" class="text-sm md:text-base font-black text-amber-400 font-mono">₹1,00,000</span>
             </div>
             <div class="h-6 w-px bg-slate-800"></div>
             <div>
-              <span class="text-[9px] text-slate-400 block font-mono">MATCHING:</span>
+              <span class="text-[11px] text-slate-400 block font-mono">MATCHING:</span>
               <span id="budgetMatchCount" class="text-xs md:text-sm font-bold text-emerald-400 font-mono">7 in-stock</span>
             </div>
           </div>
@@ -910,7 +910,7 @@
         <!-- Budget Range Slider -->
         <div class="mt-3 pt-2.5 border-t border-slate-800/80">
           <div class="flex items-center gap-3">
-            <span id="budgetSliderMinLabel" class="text-[10px] font-mono text-slate-400 shrink-0">₹15,000</span>
+            <span id="budgetSliderMinLabel" class="text-[11px] font-mono text-slate-400 shrink-0">₹15,000</span>
             <input 
               type="range" 
               id="budgetRangeSlider" 
@@ -922,12 +922,12 @@
               onchange="handleBudgetSlider(this.value)"
               class="w-full accent-blue-500 h-2 bg-slate-800 rounded-lg cursor-pointer"
             >
-            <span id="budgetSliderMaxLabel" class="text-[10px] font-mono text-slate-400 shrink-0">₹1,00,000+</span>
+            <span id="budgetSliderMaxLabel" class="text-[11px] font-mono text-slate-400 shrink-0">₹1,00,000+</span>
           </div>
 
           <!-- Quick Budget Bucket Pills -->
           <div class="flex flex-wrap items-center gap-1.5 mt-2.5 text-xs">
-            <span class="text-[10px] text-slate-400 font-semibold mr-1">Quick Buckets:</span>
+            <span class="text-[11px] text-slate-400 font-semibold mr-1">Quick Buckets:</span>
             <button data-budget="20000" onclick="setQuickBudget(20000)" class="quick-budget-btn px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-800 text-[11px] font-medium transition-all cursor-pointer">
               Under ₹20k
             </button>
@@ -943,7 +943,7 @@
             <button data-budget="100000" onclick="setQuickBudget(100000)" class="quick-budget-btn px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold text-[11px] transition-all cursor-pointer shadow">
               All Budgets
             </button>
-            <span id="budgetSavingsCallout" class="hidden sm:inline-flex ml-auto text-[10px] text-amber-300 font-mono font-semibold items-center gap-1">
+            <span id="budgetSavingsCallout" class="hidden sm:inline-flex ml-auto text-[11px] text-amber-300 font-mono font-semibold items-center gap-1">
               <span id="budgetSavingsCalloutText">🔥 Save up to ₹55,000 vs Brand New MRP</span>
             </span>
           </div>
@@ -980,7 +980,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Interactive Trust Engine</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -1067,7 +1067,7 @@
             <div>
               <div class="flex items-center gap-2">
                 <h4 class="font-bold text-white text-base">Hemant Verma</h4>
-                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold">Founder & CEO</span>
+                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[11px] font-bold">Founder & CEO</span>
               </div>
               <p class="text-xs text-slate-400 mt-1 leading-relaxed">
                 Visionary behind Acetel Telecommunications and FoneZone India/UAE. Dedicated to zero-compromise grading standards and direct client transparency via the "Ask to CEO" executive escalation portal.
@@ -1082,7 +1082,7 @@
             <div>
               <div class="flex items-center gap-2">
                 <h4 class="font-bold text-white text-base">Sahil Pathania</h4>
-                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[10px] font-bold">Head of Operations & Logistics</span>
+                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[11px] font-bold">Head of Operations & Logistics</span>
               </div>
               <p class="text-xs text-slate-400 mt-1 leading-relaxed">
                 Leads pan-India courier logistics, BlueDart fulfillment hubs, and the automated WhatsApp Anti-RTO address verification command center saving ₹13.35L in courier return freight.
@@ -1141,7 +1141,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Predictive AI Search & WhatsApp Resolution</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -1215,7 +1215,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Real-Time PIN Code Delivery Predictor</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -1251,7 +1251,7 @@
           </div>
 
           <!-- Quick Test Chips -->
-          <div class="flex flex-wrap items-center gap-1.5 mb-4 text-[10px]">
+          <div class="flex flex-wrap items-center gap-1.5 mb-4 text-[11px]">
             <span class="text-slate-400">Quick Try:</span>
             <button onclick="fillPin('110019')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-blue-300">Delhi (110019)</button>
             <button onclick="fillPin('560038')" class="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-blue-300">Bangalore (560038)</button>
@@ -1263,7 +1263,7 @@
           <div id="shippingResultCard" class="p-4 rounded-2xl bg-slate-950 border border-slate-800 text-xs space-y-2">
             <div class="flex justify-between items-center border-b border-slate-800/80 pb-2">
               <span class="text-slate-400">Service Status:</span>
-              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[10px]">🟢 PRE-TESTED EXPRESS ROUTE</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[11px]">🟢 PRE-TESTED EXPRESS ROUTE</span>
             </div>
             <div class="flex justify-between text-slate-300">
               <span>Location:</span>
@@ -1327,7 +1327,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Cashify 32-Point Quality Lab & 1-Click Reverse Logistics</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -1367,19 +1367,19 @@
           </div>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 text-[11px] border-t border-slate-800 text-slate-300">
             <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
-              <span class="text-slate-400 block text-[9px]">DISPLAY LOGIC</span>
+              <span class="text-slate-400 block text-[11px]">DISPLAY LOGIC</span>
               <b class="text-emerald-400">100% Covered</b>
             </div>
             <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
-              <span class="text-slate-400 block text-[9px]">CAMERA SENSORS</span>
+              <span class="text-slate-400 block text-[11px]">CAMERA SENSORS</span>
               <b class="text-emerald-400">100% Covered</b>
             </div>
             <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
-              <span class="text-slate-400 block text-[9px]">BATTERY &lt;80% HEALTH</span>
+              <span class="text-slate-400 block text-[11px]">BATTERY &lt;80% HEALTH</span>
               <b class="text-emerald-400">Free Replacement</b>
             </div>
             <div class="p-2 rounded-lg bg-slate-900 border border-slate-800">
-              <span class="text-slate-400 block text-[9px]">LOGIC MOTHERBOARD</span>
+              <span class="text-slate-400 block text-[11px]">LOGIC MOTHERBOARD</span>
               <b class="text-emerald-400">100% Covered</b>
             </div>
           </div>
@@ -1398,7 +1398,7 @@
           <div>
             <h3 class="text-lg font-black text-white flex items-center gap-2">
               <span>🔬 32-Point Quality Diagnostic Lab Inspection Suite</span>
-              <span class="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">100% PASSED</span>
+              <span class="px-2 py-0.5 rounded text-[11px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">100% PASSED</span>
             </h3>
             <p class="text-xs text-slate-400 mt-0.5">Every device undergoes proprietary multi-stage testing before entering customer inventory.</p>
           </div>
@@ -1417,7 +1417,7 @@
                 <span>📱</span>
                 <span>Screen & OLED Panel (6 Tests)</span>
               </span>
-              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (6/6)</span>
+              <span class="text-[11px] font-bold text-emerald-400 font-mono">PASS (6/6)</span>
             </div>
             <ul class="space-y-1.5 text-slate-300 text-[11px]">
               <li class="flex items-center justify-between"><span>• Touch Digitizer Multi-touch</span> <span class="text-emerald-400 font-bold">✓ Passed</span></li>
@@ -1436,7 +1436,7 @@
                 <span>🔋</span>
                 <span>Battery & Power (5 Tests)</span>
               </span>
-              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
+              <span class="text-[11px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
             </div>
             <ul class="space-y-1.5 text-slate-300 text-[11px]">
               <li class="flex items-center justify-between"><span>• Maximum Health Capacity</span> <span class="text-emerald-400 font-bold">✓ &ge;85% (96%)</span></li>
@@ -1454,7 +1454,7 @@
                 <span>📸</span>
                 <span>Cameras & Optics (5 Tests)</span>
               </span>
-              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
+              <span class="text-[11px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
             </div>
             <ul class="space-y-1.5 text-slate-300 text-[11px]">
               <li class="flex items-center justify-between"><span>• Primary 48MP/12MP Optical Clarity</span> <span class="text-emerald-400 font-bold">✓ 100% Clear</span></li>
@@ -1472,7 +1472,7 @@
                 <span>🔊</span>
                 <span>Audio & Microphones (5 Tests)</span>
               </span>
-              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
+              <span class="text-[11px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
             </div>
             <ul class="space-y-1.5 text-slate-300 text-[11px]">
               <li class="flex items-center justify-between"><span>• Stereo Speaker Decibel Balance</span> <span class="text-emerald-400 font-bold">✓ 84dB Clear</span></li>
@@ -1490,7 +1490,7 @@
                 <span>📡</span>
                 <span>Wireless & Security (6 Tests)</span>
               </span>
-              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (6/6)</span>
+              <span class="text-[11px] font-bold text-emerald-400 font-mono">PASS (6/6)</span>
             </div>
             <ul class="space-y-1.5 text-slate-300 text-[11px]">
               <li class="flex items-center justify-between"><span>• 5G mmWave & Sub-6 Throughput</span> <span class="text-emerald-400 font-bold">✓ All Carriers</span></li>
@@ -1509,7 +1509,7 @@
                 <span>🛡️</span>
                 <span>Motherboard & Security (5 Tests)</span>
               </span>
-              <span class="text-[10px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
+              <span class="text-[11px] font-bold text-emerald-400 font-mono">PASS (5/5)</span>
             </div>
             <ul class="space-y-1.5 text-slate-300 text-[11px]">
               <li class="flex items-center justify-between"><span>• GSMA Worldwide Clean IMEI Check</span> <span class="text-emerald-400 font-bold">✓ 100% Clean</span></li>
@@ -1588,7 +1588,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Transparent 4-Step Return Journey</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -1645,7 +1645,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Bank-Grade Encryption & Zero Telemarketing Guarantee</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -1689,7 +1689,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Cashify Omnichannel Experience Stores & Priority Triage</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -1705,7 +1705,7 @@
           <div>
             <h2 class="text-xl font-extrabold text-white flex items-center gap-2">
               <span>📍 Physical Experience Centers & Inspection Hubs</span>
-              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-mono font-bold">4 HUBS ACTIVE</span>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-mono font-bold">4 HUBS ACTIVE</span>
             </h2>
             <p class="text-xs text-slate-400">Walk into any of our flagship tech labs to physically test, inspect under microscope, and buy directly.</p>
           </div>
@@ -1718,10 +1718,10 @@
           <div class="store-location-card p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3 flex flex-col justify-between shadow-lg">
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[9px] font-bold font-mono">
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold font-mono">
                   🟢 Open • Closes 9:00 PM
                 </span>
-                <span class="text-[10px] text-blue-400 font-bold">R&D Lab</span>
+                <span class="text-[11px] text-blue-400 font-bold">R&D Lab</span>
               </div>
               <h3 class="font-extrabold text-white text-sm">Bengaluru Flagship</h3>
               <p class="text-xs text-slate-300 mt-1 leading-relaxed">
@@ -1745,10 +1745,10 @@
           <div class="store-location-card p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3 flex flex-col justify-between shadow-lg">
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[9px] font-bold font-mono">
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold font-mono">
                   🟢 Open • Closes 9:00 PM
                 </span>
-                <span class="text-[10px] text-blue-400 font-bold">North Hub</span>
+                <span class="text-[11px] text-blue-400 font-bold">North Hub</span>
               </div>
               <h3 class="font-extrabold text-white text-sm">New Delhi Nehru Place</h3>
               <p class="text-xs text-slate-300 mt-1 leading-relaxed">
@@ -1772,10 +1772,10 @@
           <div class="store-location-card p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3 flex flex-col justify-between shadow-lg">
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[9px] font-bold font-mono">
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold font-mono">
                   🟢 Open • Closes 9:30 PM
                 </span>
-                <span class="text-[10px] text-blue-400 font-bold">West Hub</span>
+                <span class="text-[11px] text-blue-400 font-bold">West Hub</span>
               </div>
               <h3 class="font-extrabold text-white text-sm">Mumbai BKC Experience Hub</h3>
               <p class="text-xs text-slate-300 mt-1 leading-relaxed">
@@ -1799,10 +1799,10 @@
           <div class="store-location-card p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3 flex flex-col justify-between shadow-lg">
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[9px] font-bold font-mono">
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-bold font-mono">
                   🟢 Open (GST +4h)
                 </span>
-                <span class="text-[10px] text-purple-400 font-bold">Global HQ</span>
+                <span class="text-[11px] text-purple-400 font-bold">Global HQ</span>
               </div>
               <h3 class="font-extrabold text-white text-sm">Dubai International Center</h3>
               <p class="text-xs text-slate-300 mt-1 leading-relaxed">
@@ -1921,7 +1921,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Algorithmic Buyback Valuation & 4-Point Diagnostic Engine</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -1957,7 +1957,7 @@
               <h3 class="text-base font-black text-white flex items-center gap-2">
                 <span>1. Select Smartphone Brand & Model</span>
               </h3>
-              <span class="text-[10px] text-emerald-400 font-mono font-bold">Highest Market Rates</span>
+              <span class="text-[11px] text-emerald-400 font-mono font-bold">Highest Market Rates</span>
             </div>
 
             <!-- Brand Selection Grid -->
@@ -2015,7 +2015,7 @@
               <h3 class="text-base font-black text-white flex items-center gap-2">
                 <span>2. 4-Point Functional Diagnosis Check</span>
               </h3>
-              <span class="text-[10px] text-blue-400 font-mono font-bold">100% Automated Valuation</span>
+              <span class="text-[11px] text-blue-400 font-mono font-bold">100% Automated Valuation</span>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
@@ -2026,7 +2026,7 @@
                   <span class="text-base">📱</span>
                   <div>
                     <div class="font-bold text-white text-[11px]">Screen & Touch Works</div>
-                    <div class="text-[10px] text-slate-400">No lines, spots or touch delay</div>
+                    <div class="text-[11px] text-slate-400">No lines, spots or touch delay</div>
                   </div>
                 </div>
                 <input type="checkbox" id="diagTouch" checked onchange="calculateSellPrice()" class="w-4 h-4 accent-emerald-500 cursor-pointer">
@@ -2038,7 +2038,7 @@
                   <span class="text-base">📸</span>
                   <div>
                     <div class="font-bold text-white text-[11px]">Cameras & Sensors Working</div>
-                    <div class="text-[10px] text-slate-400">Front & rear lenses focus clear</div>
+                    <div class="text-[11px] text-slate-400">Front & rear lenses focus clear</div>
                   </div>
                 </div>
                 <input type="checkbox" id="diagCamera" checked onchange="calculateSellPrice()" class="w-4 h-4 accent-emerald-500 cursor-pointer">
@@ -2050,7 +2050,7 @@
                   <span class="text-base">📞</span>
                   <div>
                     <div class="font-bold text-white text-[11px]">Calling & Cellular Signal</div>
-                    <div class="text-[10px] text-slate-400">Speaker, mic and 5G active</div>
+                    <div class="text-[11px] text-slate-400">Speaker, mic and 5G active</div>
                   </div>
                 </div>
                 <input type="checkbox" id="diagCalling" checked onchange="calculateSellPrice()" class="w-4 h-4 accent-emerald-500 cursor-pointer">
@@ -2062,7 +2062,7 @@
                   <span class="text-base">🔋</span>
                   <div>
                     <div class="font-bold text-white text-[11px]">Battery Charges Normally</div>
-                    <div class="text-[10px] text-slate-400">No swelling or rapid overheating</div>
+                    <div class="text-[11px] text-slate-400">No swelling or rapid overheating</div>
                   </div>
                 </div>
                 <input type="checkbox" id="diagBattery" checked onchange="calculateSellPrice()" class="w-4 h-4 accent-emerald-500 cursor-pointer">
@@ -2077,17 +2077,17 @@
                 <button onclick="setSellCondition('flawless')" class="sell-cond-btn active p-2.5 rounded-xl border border-emerald-500 bg-emerald-600/20 text-emerald-300 font-bold text-left cursor-pointer" data-cond="flawless">
                   <div class="flex items-center justify-between">
                     <span>Flawless</span>
-                    <span class="text-[10px] text-emerald-400">Top Value</span>
+                    <span class="text-[11px] text-emerald-400">Top Value</span>
                   </div>
-                  <div class="text-[10px] text-slate-400 mt-0.5">0 visible scratches</div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">0 visible scratches</div>
                 </button>
                 <button onclick="setSellCondition('good')" class="sell-cond-btn p-2.5 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-left cursor-pointer" data-cond="good">
                   <div>Good Condition</div>
-                  <div class="text-[10px] text-slate-400 mt-0.5">1-2 minor bezel marks</div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">1-2 minor bezel marks</div>
                 </button>
                 <button onclick="setSellCondition('fair')" class="sell-cond-btn p-2.5 rounded-xl border border-slate-700 bg-slate-950 text-slate-300 hover:text-white font-medium text-left cursor-pointer" data-cond="fair">
                   <div>Average Condition</div>
-                  <div class="text-[10px] text-slate-400 mt-0.5">Visible wear on body</div>
+                  <div class="text-[11px] text-slate-400 mt-0.5">Visible wear on body</div>
                 </button>
               </div>
             </div>
@@ -2223,7 +2223,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• B2B Wholesale Commerce & 18% GST Credit Calculator</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -2236,19 +2236,19 @@
       <!-- Tiered MOQ Discounts Strip -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 text-xs">
         <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800">
-          <span class="px-2 py-0.5 rounded bg-slate-800 text-blue-300 font-mono font-bold text-[10px]">TIER 1 • MOQ 5 UNITS</span>
+          <span class="px-2 py-0.5 rounded bg-slate-800 text-blue-300 font-mono font-bold text-[11px]">TIER 1 • MOQ 5 UNITS</span>
           <h4 class="font-bold text-white text-sm mt-1">Starter Retailer Lot</h4>
           <p class="text-slate-400 text-[11px] mt-0.5">Base wholesale price. 100% GST invoice with 60-day dealer replacement guarantee.</p>
         </div>
 
         <div class="p-4 rounded-2xl bg-slate-900 border border-blue-500/40">
-          <span class="px-2 py-0.5 rounded bg-blue-600 text-white font-mono font-bold text-[10px]">TIER 2 • MOQ 20 UNITS</span>
+          <span class="px-2 py-0.5 rounded bg-blue-600 text-white font-mono font-bold text-[11px]">TIER 2 • MOQ 20 UNITS</span>
           <h4 class="font-bold text-white text-sm mt-1">Volume Stockist Lot</h4>
           <p class="text-slate-400 text-[11px] mt-0.5">Extra <b>4% flat discount</b> on entire invoice + Free BlueDart Air Insured Cargo.</p>
         </div>
 
         <div class="p-4 rounded-2xl bg-slate-900 border border-emerald-500/40">
-          <span class="px-2 py-0.5 rounded bg-emerald-600 text-white font-mono font-bold text-[10px]">TIER 3 • MOQ 50+ UNITS</span>
+          <span class="px-2 py-0.5 rounded bg-emerald-600 text-white font-mono font-bold text-[11px]">TIER 3 • MOQ 50+ UNITS</span>
           <h4 class="font-bold text-white text-sm mt-1">Enterprise Distributor</h4>
           <p class="text-slate-400 text-[11px] mt-0.5">Extra <b>8% flat discount</b> + 90-day revolving dealer credit line (subject to KYC).</p>
         </div>
@@ -2352,7 +2352,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Refurbishment Engineering Talent Portal</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -2378,7 +2378,7 @@
           <div>
             <div class="flex items-center gap-2">
               <h3 class="font-bold text-white text-base">Senior Hardware Testing & Diagnostic Engineer</h3>
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[10px] font-bold">Bangalore Lab</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 text-[11px] font-bold">Bangalore Lab</span>
             </div>
             <p class="text-xs text-slate-400 mt-1">Lead the 32-point robotic inspection line. Expertise in Apple logic board diagnostics and OLED calibration.</p>
             <div class="flex items-center gap-4 text-[11px] text-slate-400 mt-2">
@@ -2395,7 +2395,7 @@
           <div>
             <div class="flex items-center gap-2">
               <h3 class="font-bold text-white text-base">E-Commerce Logistics & Courier Operations Lead</h3>
-              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[10px] font-bold">New Delhi Hub</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 text-[11px] font-bold">New Delhi Hub</span>
             </div>
             <p class="text-xs text-slate-400 mt-1">Manage BlueDart / Delhivery SLAs, oversee warehouse packaging, and minimize RTO freight losses with Sahil Pathania.</p>
             <div class="flex items-center gap-4 text-[11px] text-slate-400 mt-2">
@@ -2412,7 +2412,7 @@
           <div>
             <div class="flex items-center gap-2">
               <h3 class="font-bold text-white text-base">Quality Control & Cosmetic Grading Specialist</h3>
-              <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[10px] font-bold">Mumbai Hub</span>
+              <span class="px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-300 text-[11px] font-bold">Mumbai Hub</span>
             </div>
             <p class="text-xs text-slate-400 mt-1">Assess incoming pre-owned inventory under studio lighting. Assign Grade A/B/C certification standards.</p>
             <div class="flex items-center gap-4 text-[11px] text-slate-400 mt-2">
@@ -2443,7 +2443,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Direct Executive Escalation Gateway</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -2517,7 +2517,7 @@
           <span class="text-2xl">⚡</span>
           <div>
             <div class="flex items-center gap-2">
-              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[10px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/30 text-[11px] font-bold uppercase tracking-wider">NexG Modernization Layer</span>
               <span class="text-xs text-slate-400">• Integrated Carrier API Telemetry</span>
             </div>
             <div class="text-xs text-slate-300 mt-1">
@@ -2568,35 +2568,35 @@
               <span class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center font-bold text-xs">✓</span>
               <div>
                 <b class="text-white">Order Confirmed & WhatsApp Address OTP Verified</b>
-                <div class="text-[10px] text-slate-400">Today at 10:14 AM • Kalkaji Hub</div>
+                <div class="text-[11px] text-slate-400">Today at 10:14 AM • Kalkaji Hub</div>
               </div>
             </div>
             <div class="flex items-center gap-3 text-emerald-400">
               <span class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center font-bold text-xs">✓</span>
               <div>
                 <b class="text-white">32-Point Diagnostic Test Passed & IMEI Logged (#354892091823901)</b>
-                <div class="text-[10px] text-slate-400">Today at 11:30 AM • Bangalore Diagnostics Rig</div>
+                <div class="text-[11px] text-slate-400">Today at 11:30 AM • Bangalore Diagnostics Rig</div>
               </div>
             </div>
             <div class="flex items-center gap-3 text-emerald-400">
               <span class="w-5 h-5 rounded-full bg-emerald-500/20 flex items-center justify-center font-bold text-xs">✓</span>
               <div>
                 <b class="text-white">Tamper-Proof Insured Packaging Sealed & Handed to BlueDart</b>
-                <div class="text-[10px] text-slate-400">Today at 02:15 PM • Delhi Sort Facility</div>
+                <div class="text-[11px] text-slate-400">Today at 02:15 PM • Delhi Sort Facility</div>
               </div>
             </div>
             <div class="flex items-center gap-3 text-blue-400">
               <span class="w-5 h-5 rounded-full bg-blue-500/20 flex items-center justify-center font-bold text-xs">➜</span>
               <div>
                 <b class="text-white">Air Cargo In-Transit: Departed IGI Airport Sort Center</b>
-                <div class="text-[10px] text-slate-400">Today at 04:45 PM • Manifest Cleared</div>
+                <div class="text-[11px] text-slate-400">Today at 04:45 PM • Manifest Cleared</div>
               </div>
             </div>
             <div class="flex items-center gap-3 text-slate-500">
               <span class="w-5 h-5 rounded-full bg-slate-800 flex items-center justify-center font-bold text-xs">○</span>
               <div>
                 <span>Out for Doorstep Delivery & COD Cash Collection</span>
-                <div class="text-[10px]">Expected Tomorrow by 04:00 PM</div>
+                <div class="text-[11px]">Expected Tomorrow by 04:00 PM</div>
               </div>
             </div>
           </div>
@@ -2657,7 +2657,7 @@
             <li><a href="#/pages/jobs" onclick="navigateTo('#/pages/jobs'); return false;" class="hover:text-white">Careers / Jobs</a></li>
             <li><a href="#/pages/ask-to-ceo" onclick="navigateTo('#/pages/ask-to-ceo'); return false;" class="text-amber-400 font-bold hover:text-amber-300">👑 ASK To CEO</a></li>
           </ul>
-          <div class="mt-4 p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-[10px] text-slate-400">
+          <div class="mt-4 p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-[11px] text-slate-400">
             © 2026 FoneZone Inc. / Acetel Telecommunications.
           </div>
         </div>
@@ -2676,7 +2676,7 @@
       <div id="merchantOpsHeaderCard" class="flex flex-wrap items-center justify-between gap-4 p-5 rounded-2xl bg-gradient-to-r from-[#0C1A38] to-[#0A1224] border border-blue-500/30 mb-6 shadow-xl">
         <div>
           <div class="flex items-center gap-2">
-            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[10px] font-bold uppercase tracking-wider">
+            <span class="px-2.5 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[11px] font-bold uppercase tracking-wider">
               Logistics & Anti-RTO Command Center
             </span>
             <span class="text-xs text-slate-400">• For Hemant Verma & Sahil Pathania</span>
@@ -2737,7 +2737,7 @@
             <div>
               <h3 class="text-sm font-bold text-white flex items-center gap-2">
                 <span>📋 Live Order Queue (To Whom We Send)</span>
-                <span class="px-2 py-0.5 bg-blue-900/60 text-blue-300 rounded text-[10px] font-mono" id="queueCount">5 orders</span>
+                <span class="px-2 py-0.5 bg-blue-900/60 text-blue-300 rounded text-[11px] font-mono" id="queueCount">5 orders</span>
               </h3>
               <p class="text-[11px] text-slate-400">Click any customer row to preview and trigger WhatsApp dispatch.</p>
             </div>
@@ -2779,7 +2779,7 @@
               </h3>
               <p class="text-[11px] text-slate-400">Selected Customer: <b id="selectedCustomerName" class="text-white">Rahul Sharma</b></p>
             </div>
-            <span id="selectedCustomerRiskBadge" class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
+            <span id="selectedCustomerRiskBadge" class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40">
               High RTO Risk
             </span>
           </div>
@@ -2817,7 +2817,7 @@
                     <span>FoneZone Official</span>
                     <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                   </div>
-                  <div class="text-[9px] text-emerald-400">Verified Business Account • +91 8044630881</div>
+                  <div class="text-[11px] text-emerald-400">Verified Business Account • +91 8044630881</div>
                 </div>
               </div>
               <div class="text-slate-400 text-xs">⋮</div>
@@ -2830,14 +2830,14 @@
 
             <!-- Customer Response Simulation Buttons (Simulate Two-Way Reply) -->
             <div class="bg-[#202C33] p-2.5 border-t border-slate-700">
-              <div class="text-[10px] text-slate-400 font-semibold text-center mb-1.5">
+              <div class="text-[11px] text-slate-400 font-semibold text-center mb-1.5">
                 Simulate Customer Reply (Two-Way Action):
               </div>
               <div class="grid grid-cols-2 gap-1.5">
-                <button onclick="simulateCustomerConfirmAddress()" class="px-2 py-1.5 rounded bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-[10px] cursor-pointer">
+                <button onclick="simulateCustomerConfirmAddress()" class="px-2 py-1.5 rounded bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-[11px] cursor-pointer">
                   ✅ "Yes, Confirm Address"
                 </button>
-                <button onclick="simulateCustomerPrepayUPI()" class="px-2 py-1.5 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold text-[10px] cursor-pointer">
+                <button onclick="simulateCustomerPrepayUPI()" class="px-2 py-1.5 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] cursor-pointer">
                   ⚡ "Pay via UPI (Save ₹300)"
                 </button>
               </div>
@@ -2903,15 +2903,15 @@
           <div class="min-w-0">
             <h3 class="text-xs sm:text-sm font-extrabold text-white flex items-center gap-1.5 sm:gap-2 flex-wrap">
               <span id="inspectModalProductName" class="truncate">iPhone 15 Pro 128GB Natural Titanium</span>
-              <span id="inspectGradePill" class="badge-grade-a px-2 py-0.5 rounded-full text-[9px] font-bold shrink-0">Grade A Pristine</span>
+              <span id="inspectGradePill" class="badge-grade-a px-2 py-0.5 rounded-full text-[11px] font-bold shrink-0">Grade A Pristine</span>
             </h3>
-            <p class="text-[10px] sm:text-[11px] text-slate-400 truncate hidden sm:block">Spherical 360° All-Side Inspection (Left/Right + Top/Bottom) • Battery Health & Flaw Audit</p>
+            <p class="text-[11px] sm:text-[11px] text-slate-400 truncate hidden sm:block">Spherical 360° All-Side Inspection (Left/Right + Top/Bottom) • Battery Health & Flaw Audit</p>
           </div>
         </div>
 
         <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
           <!-- Viewer Mode Switcher (3D Orbit vs Studio Photography) -->
-          <div class="flex items-center bg-slate-900 p-0.5 rounded-lg border border-slate-800 text-[10px]">
+          <div class="flex items-center bg-slate-900 p-0.5 rounded-lg border border-slate-800 text-[11px]">
             <button id="modeViewer3dBtn" onclick="setViewerMode('3d')" class="px-2 py-1 rounded-md font-bold bg-blue-600 text-white cursor-pointer transition-all">
               🌟 3D Orbit
             </button>
@@ -2934,13 +2934,13 @@
           
           <!-- Top Bar: Current Perspective Indicator + Auto-Spin & Loupe -->
           <div class="w-full flex items-center justify-between text-xs mb-1 shrink-0">
-            <span id="currentAngleTag" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-blue-400 font-mono text-[10px] font-bold">
+            <span id="currentAngleTag" class="px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-blue-400 font-mono text-[11px] font-bold">
               0° Front Display Glass (OLED)
             </span>
             
             <div class="flex items-center gap-2">
               <!-- Auto-Spin iOS Toggle -->
-              <div class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-slate-900 border border-slate-800 text-[10px]">
+              <div class="flex items-center gap-1.5 px-2 py-0.5 rounded-lg bg-slate-900 border border-slate-800 text-[11px]">
                 <span class="text-slate-300 font-medium">Auto-Spin</span>
                 <label class="ios-switch scale-90" title="Toggle 360 Auto-Spin">
                   <input type="checkbox" id="autoSpinToggle" onchange="handleAutoSpinSwitch(this.checked)">
@@ -2949,7 +2949,7 @@
               </div>
 
               <!-- Zoom Loupe Inspect Button -->
-              <button id="zoomLoupeBtn" onclick="toggleZoomLoupe()" class="px-2 py-0.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-[10px] font-semibold flex items-center gap-1 cursor-pointer transition-colors">
+              <button id="zoomLoupeBtn" onclick="toggleZoomLoupe()" class="px-2 py-0.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white text-[11px] font-semibold flex items-center gap-1 cursor-pointer transition-colors">
                 <span>🔍</span>
                 <span id="zoomLoupeLabel">Zoom</span>
               </button>
@@ -2982,16 +2982,16 @@
                 <!-- Native 3D Anchored Flaw Hotspots (Only shown when Grade B/C has a flaw and markers are toggled ON) -->
                 <button slot="hotspot-dent" id="modelHotspotDent" class="hotspot-3d-pin hidden" data-position="0.035 -0.065 0.005" data-normal="0 0 1" onclick="showHotspotTip('📍 Bezel Flaw (0.8mm): Minor cosmetic hairline on lower speaker rail. Passes structural integrity.')">
                   <div class="hotspot-3d-pulse bg-amber-500"></div>
-                  <div class="relative w-5 h-5 rounded-full bg-amber-500 text-slate-950 font-black text-[10px] flex items-center justify-center border-2 border-white shadow-lg">📍</div>
+                  <div class="relative w-5 h-5 rounded-full bg-amber-500 text-slate-950 font-black text-[11px] flex items-center justify-center border-2 border-white shadow-lg">📍</div>
                 </button>
               </model-viewer>
               
               <!-- 3D Orbit Helper Hint & Flaw Markers Toggle -->
               <div class="absolute bottom-1 left-1.5 right-1.5 flex items-center justify-between pointer-events-none z-10">
-                <div class="px-2 py-0.5 rounded bg-slate-900/85 border border-slate-800 text-[9px] text-slate-400 font-mono">
+                <div class="px-2 py-0.5 rounded bg-slate-900/85 border border-slate-800 text-[11px] text-slate-400 font-mono">
                   🌐 3D Spherical Orbit • Drag 360°
                 </div>
-                <button id="btnToggleFlawPins" onclick="toggleFlawPins()" class="pointer-events-auto px-2 py-0.5 rounded bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700 text-[9px] font-mono font-bold flex items-center gap-1 cursor-pointer transition-colors shadow">
+                <button id="btnToggleFlawPins" onclick="toggleFlawPins()" class="pointer-events-auto px-2 py-0.5 rounded bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700 text-[11px] font-mono font-bold flex items-center gap-1 cursor-pointer transition-colors shadow">
                   <span>👁️</span><span id="flawToggleLabel">Flaw Markers: ON</span>
                 </button>
               </div>
@@ -3003,7 +3003,7 @@
               <div class="absolute bottom-2 w-44 h-10 turntable-degree-ring pointer-events-none"></div>
 
               <!-- Top Left Radical Transparency Dent Status Badge -->
-              <div class="absolute top-1 left-1 z-20 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900/90 border border-slate-700 text-[10px] text-slate-200 backdrop-blur-sm shadow-md">
+              <div class="absolute top-1 left-1 z-20 flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-slate-900/90 border border-slate-700 text-[11px] text-slate-200 backdrop-blur-sm shadow-md">
                 <span id="dentInspectorStatusDot" class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                 <span id="dentInspectorStatusText" class="font-bold font-mono">Grade A: 0 Dents · 100% Mint</span>
               </div>
@@ -3039,27 +3039,27 @@
 
           <!-- 6-Side All-Angle Perspective Presets (Left/Right + Top/Bottom) -->
           <div class="w-full shrink-0 pt-1.5 border-t border-slate-800/80">
-            <div class="flex items-center justify-between text-[9px] text-slate-400 font-mono mb-1">
+            <div class="flex items-center justify-between text-[11px] text-slate-400 font-mono mb-1">
               <span>All-Side 360° Angles (Left, Right, Top, Bottom):</span>
               <span class="text-blue-400 font-bold">Click to Snap</span>
             </div>
             <div class="grid grid-cols-6 gap-1 w-full">
-              <button onclick="setInspectPerspective('front')" id="btnPerspectiveFront" class="perspective-btn active px-1.5 py-1 rounded bg-blue-600 text-white font-bold text-[10px] text-center shadow cursor-pointer">
+              <button onclick="setInspectPerspective('front')" id="btnPerspectiveFront" class="perspective-btn active px-1.5 py-1 rounded bg-blue-600 text-white font-bold text-[11px] text-center shadow cursor-pointer">
                 📱 Front
               </button>
-              <button onclick="setInspectPerspective('back')" id="btnPerspectiveBack" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+              <button onclick="setInspectPerspective('back')" id="btnPerspectiveBack" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[11px] text-center border border-slate-800 cursor-pointer">
                 🔄 Back
               </button>
-              <button onclick="setInspectPerspective('right')" id="btnPerspectiveRight" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+              <button onclick="setInspectPerspective('right')" id="btnPerspectiveRight" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[11px] text-center border border-slate-800 cursor-pointer">
                 ➡️ Right
               </button>
-              <button onclick="setInspectPerspective('left')" id="btnPerspectiveLeft" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+              <button onclick="setInspectPerspective('left')" id="btnPerspectiveLeft" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[11px] text-center border border-slate-800 cursor-pointer">
                 ⬅️ Left
               </button>
-              <button onclick="setInspectPerspective('top')" id="btnPerspectiveTop" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+              <button onclick="setInspectPerspective('top')" id="btnPerspectiveTop" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[11px] text-center border border-slate-800 cursor-pointer">
                 ⬆️ Top Edge
               </button>
-              <button onclick="setInspectPerspective('bottom')" id="btnPerspectiveBottom" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[10px] text-center border border-slate-800 cursor-pointer">
+              <button onclick="setInspectPerspective('bottom')" id="btnPerspectiveBottom" class="perspective-btn px-1.5 py-1 rounded bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[11px] text-center border border-slate-800 cursor-pointer">
                 ⬇️ Port
               </button>
             </div>
@@ -3076,12 +3076,12 @@
                 <span>💾</span>
                 <span>Select Internal Storage:</span>
               </div>
-              <span id="storageSelectedBadge" class="text-[10px] text-blue-400 font-mono font-bold">128GB Selected</span>
+              <span id="storageSelectedBadge" class="text-[11px] text-blue-400 font-mono font-bold">128GB Selected</span>
             </div>
             <div id="inspectStorageOptionsGrid" class="grid grid-cols-4 gap-1.5">
               <!-- Populated dynamically via renderInspectStorageUI() -->
             </div>
-            <div class="mt-1.5 flex items-center justify-between text-[9px] text-slate-400 font-mono">
+            <div class="mt-1.5 flex items-center justify-between text-[11px] text-slate-400 font-mono">
               <span id="storageRecommendationText">⚡ Standard Capacity for Everyday Apps & Media</span>
               <span class="text-emerald-400 font-bold">100% Genuine Flash</span>
             </div>
@@ -3090,8 +3090,8 @@
           <!-- Unified Card 1: Condition Grade & "Where is the Dent?" Audit Map -->
           <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow shrink-0">
             <div class="flex items-center justify-between mb-2">
-              <label class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Select Cosmetic Condition:</label>
-              <span id="dentTotalCountBadge" class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-black font-mono">
+              <label class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Select Cosmetic Condition:</label>
+              <span id="dentTotalCountBadge" class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-black font-mono">
                 Total Dents: 0 (Flawless)
               </span>
             </div>
@@ -3100,15 +3100,15 @@
             <div class="grid grid-cols-3 gap-1.5 mb-2">
               <button id="inspectGradeBtnA" onclick="setInspectGrade('A')" class="p-1.5 rounded-lg text-xs font-bold badge-grade-a text-center cursor-pointer ring-1 ring-blue-500/40">
                 <div>Grade A</div>
-                <div class="text-[9px] opacity-80">Pristine (0 Dents)</div>
+                <div class="text-[11px] opacity-80">Pristine (0 Dents)</div>
               </button>
               <button id="inspectGradeBtnB" onclick="setInspectGrade('B')" class="p-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-400 hover:text-white border border-slate-800 text-center cursor-pointer">
                 <div>Grade B</div>
-                <div class="text-[9px] opacity-80">Very Good (1 Scuff)</div>
+                <div class="text-[11px] opacity-80">Very Good (1 Scuff)</div>
               </button>
               <button id="inspectGradeBtnC" onclick="setInspectGrade('C')" class="p-1.5 rounded-lg text-xs font-medium bg-slate-900 text-slate-400 hover:text-white border border-slate-800 text-center cursor-pointer">
                 <div>Grade C</div>
-                <div class="text-[9px] opacity-80">Value Deal (2 Marks)</div>
+                <div class="text-[11px] opacity-80">Value Deal (2 Marks)</div>
               </button>
             </div>
 
@@ -3116,12 +3116,12 @@
             <div id="dentAuditContainer" class="p-2.5 rounded-lg bg-slate-900/60 border border-amber-500/25">
               <div class="flex items-center justify-between text-[11px] font-bold text-white mb-1">
                 <span class="flex items-center gap-1"><span>📍</span> "Where is the Dent?" Transparency:</span>
-                <span class="text-[9px] text-blue-300 font-mono">100% Disclosed</span>
+                <span class="text-[11px] text-blue-300 font-mono">100% Disclosed</span>
               </div>
               <div id="dentAuditContent" class="space-y-1 text-xs">
                 <!-- Injected via renderDentInspectorUI() -->
               </div>
-              <div id="dentActionRow" class="mt-2 pt-1.5 border-t border-slate-800 flex items-center justify-between text-[10px]">
+              <div id="dentActionRow" class="mt-2 pt-1.5 border-t border-slate-800 flex items-center justify-between text-[11px]">
                 <span class="text-slate-400 font-medium">Locate flaw in 360°:</span>
                 <div id="dentAngleButtons" class="flex items-center gap-1"></div>
               </div>
@@ -3134,25 +3134,25 @@
               <div class="flex items-center gap-1.5 text-xs font-bold text-white">
                 <span>📱</span>
                 <span>"Put a Case On It" Simulator</span>
-                <span class="px-1.5 py-0.2 rounded text-[8px] bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono font-bold">WORLD FIRST</span>
+                <span class="px-1.5 py-0.2 rounded text-[11px] bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono font-bold">WORLD FIRST</span>
               </div>
-              <span id="caseSimStatusBadge" class="text-[10px] text-emerald-400 font-bold font-mono">
+              <span id="caseSimStatusBadge" class="text-[11px] text-emerald-400 font-bold font-mono">
                 ✓ Scuff Concealment Test
               </span>
             </div>
 
             <!-- Case Style Buttons -->
             <div class="grid grid-cols-4 gap-1.5 text-xs mb-2">
-              <button onclick="setPhoneCase('none')" id="btnCaseNone" class="case-sim-option-btn active p-1.5 rounded-lg border border-blue-500 bg-blue-600 text-white font-bold text-center text-[10px] cursor-pointer">
+              <button onclick="setPhoneCase('none')" id="btnCaseNone" class="case-sim-option-btn active p-1.5 rounded-lg border border-blue-500 bg-blue-600 text-white font-bold text-center text-[11px] cursor-pointer">
                 🚫 Naked
               </button>
-              <button onclick="setPhoneCase('clear')" id="btnCaseClear" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+              <button onclick="setPhoneCase('clear')" id="btnCaseClear" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[11px] cursor-pointer">
                 💎 Clear Case
               </button>
-              <button onclick="setPhoneCase('black')" id="btnCaseBlack" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+              <button onclick="setPhoneCase('black')" id="btnCaseBlack" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[11px] cursor-pointer">
                 🖤 Slim Black
               </button>
-              <button onclick="setPhoneCase('navy')" id="btnCaseNavy" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+              <button onclick="setPhoneCase('navy')" id="btnCaseNavy" class="case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[11px] cursor-pointer">
                 🔵 Navy Silicone
               </button>
             </div>
@@ -3163,7 +3163,7 @@
                 <span class="text-sm">💡</span>
                 <span id="caseSimCalloutText"><b>Smart Buyer Insight:</b> 94% of users put a case on their phone. Installing a case conceals edge marks 100%, giving you Grade A looks for Grade B pricing!</span>
               </div>
-              <button onclick="toggleAddCaseToOrder()" id="btnAddCaseBtn" class="shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[10px] shadow cursor-pointer transition-all">
+              <button onclick="toggleAddCaseToOrder()" id="btnAddCaseBtn" class="shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[11px] shadow cursor-pointer transition-all">
                 + Add Case (₹399)
               </button>
             </div>
@@ -3173,7 +3173,7 @@
           <div id="inspectBatteryBox" class="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800/90 grid grid-cols-2 gap-3 items-center shrink-0">
             <div>
               <div class="flex items-center justify-between mb-1">
-                <span class="text-[10px] font-bold text-white flex items-center gap-1">
+                <span class="text-[11px] font-bold text-white flex items-center gap-1">
                   <span>🔋 Battery Health</span>
                 </span>
                 <span id="inspectBatteryPercent" class="text-xs font-black text-emerald-400 font-mono">96%</span>
@@ -3182,8 +3182,8 @@
                 <div id="inspectBatteryBar" class="h-full bg-gradient-to-r from-emerald-500 to-emerald-400 rounded-full transition-all duration-300" style="width: 96%;"></div>
               </div>
               <div class="flex items-center justify-between mt-1">
-                <span class="text-[9px] text-slate-400 font-mono">Cycle Count: <b>84 cycles</b></span>
-                <button onclick="toggleBatterySimulator()" class="text-[9px] text-emerald-400 hover:underline font-bold font-mono cursor-pointer">
+                <span class="text-[11px] text-slate-400 font-mono">Cycle Count: <b>84 cycles</b></span>
+                <button onclick="toggleBatterySimulator()" class="text-[11px] text-emerald-400 hover:underline font-bold font-mono cursor-pointer">
                   ⚡ Test Runtime
                 </button>
               </div>
@@ -3191,12 +3191,12 @@
 
             <div class="border-l border-slate-800 pl-3">
               <div class="flex items-center justify-between mb-1">
-                <span class="text-[10px] font-bold text-white flex items-center gap-1">
+                <span class="text-[11px] font-bold text-white flex items-center gap-1">
                   <span>🛡️ 32-Pt QA Lab</span>
                 </span>
-                <span class="text-[9px] text-emerald-400 font-mono font-bold">100% PASSED</span>
+                <span class="text-[11px] text-emerald-400 font-mono font-bold">100% PASSED</span>
               </div>
-              <div class="grid grid-cols-2 gap-1 text-[9px] text-slate-300">
+              <div class="grid grid-cols-2 gap-1 text-[11px] text-slate-300">
                 <span class="flex items-center gap-1"><span class="text-emerald-400 font-bold">✓</span> TrueTone OLED</span>
                 <span class="flex items-center gap-1"><span class="text-emerald-400 font-bold">✓</span> Face ID</span>
                 <span class="flex items-center gap-1"><span class="text-emerald-400 font-bold">✓</span> Triple Cam</span>
@@ -3210,9 +3210,9 @@
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-1.5 text-xs font-bold text-white">
                 <span>⚡ Real-World Battery Runtime Simulator</span>
-                <span class="px-1.5 py-0.2 rounded text-[8px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">LAB TESTED</span>
+                <span class="px-1.5 py-0.2 rounded text-[11px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-mono">LAB TESTED</span>
               </div>
-              <button onclick="toggleBatterySimulator()" class="text-[10px] text-slate-400 hover:text-white cursor-pointer font-bold">✕ Close</button>
+              <button onclick="toggleBatterySimulator()" class="text-[11px] text-slate-400 hover:text-white cursor-pointer font-bold">✕ Close</button>
             </div>
 
             <!-- Health Slider -->
@@ -3222,7 +3222,7 @@
                 <span id="batSimHealthVal" class="text-emerald-400 font-bold">96% OEM Health</span>
               </div>
               <input type="range" id="batSimHealthSlider" min="80" max="100" value="96" oninput="updateBatterySimulation(this.value)" class="w-full accent-emerald-500 cursor-pointer">
-              <div class="flex justify-between text-[9px] text-slate-500 font-mono">
+              <div class="flex justify-between text-[11px] text-slate-500 font-mono">
                 <span>80% (FoneZone Minimum)</span>
                 <span>90%</span>
                 <span>100% (Brand New)</span>
@@ -3231,13 +3231,13 @@
 
             <!-- Usage Profile Presets -->
             <div class="grid grid-cols-3 gap-1.5 text-xs">
-              <button onclick="setBatteryUsageProfile('daily')" id="btnProfileDaily" class="battery-preset-btn active p-1.5 rounded-lg bg-blue-600 text-white font-bold text-center text-[10px] cursor-pointer">
+              <button onclick="setBatteryUsageProfile('daily')" id="btnProfileDaily" class="battery-preset-btn active p-1.5 rounded-lg bg-blue-600 text-white font-bold text-center text-[11px] cursor-pointer">
                 💼 Work & Calling
               </button>
-              <button onclick="setBatteryUsageProfile('media')" id="btnProfileMedia" class="battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+              <button onclick="setBatteryUsageProfile('media')" id="btnProfileMedia" class="battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[11px] cursor-pointer">
                 🎬 Reels & YouTube
               </button>
-              <button onclick="setBatteryUsageProfile('heavy')" id="btnProfileHeavy" class="battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[10px] cursor-pointer">
+              <button onclick="setBatteryUsageProfile('heavy')" id="btnProfileHeavy" class="battery-preset-btn p-1.5 rounded-lg bg-slate-900 text-slate-300 border border-slate-700 hover:text-white font-medium text-center text-[11px] cursor-pointer">
                 🎮 5G Hotspot & GPS
               </button>
             </div>
@@ -3245,33 +3245,33 @@
             <!-- Real-World Metrics Grid -->
             <div class="grid grid-cols-3 sm:grid-cols-6 gap-1.5 text-center text-xs">
               <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
-                <span class="block text-[9px] text-slate-400">SCREEN-ON</span>
+                <span class="block text-[11px] text-slate-400">SCREEN-ON</span>
                 <b id="simScreenOn" class="text-emerald-400 font-mono text-xs">8h 15m</b>
               </div>
               <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
-                <span class="block text-[9px] text-slate-400">YOUTUBE</span>
+                <span class="block text-[11px] text-slate-400">YOUTUBE</span>
                 <b id="simYoutube" class="text-blue-400 font-mono text-xs">13h 40m</b>
               </div>
               <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
-                <span class="block text-[9px] text-slate-400">REELS</span>
+                <span class="block text-[11px] text-slate-400">REELS</span>
                 <b id="simReels" class="text-pink-400 font-mono text-xs">7h 20m</b>
               </div>
               <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
-                <span class="block text-[9px] text-slate-400">5G CALL</span>
+                <span class="block text-[11px] text-slate-400">5G CALL</span>
                 <b id="simCalling" class="text-amber-400 font-mono text-xs">19h 30m</b>
               </div>
               <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
-                <span class="block text-[9px] text-slate-400">GPS MAPS</span>
+                <span class="block text-[11px] text-slate-400">GPS MAPS</span>
                 <b id="simGps" class="text-purple-400 font-mono text-xs">6h 50m</b>
               </div>
               <div class="battery-sim-card p-1.5 rounded-lg bg-slate-900 border border-slate-800">
-                <span class="block text-[9px] text-slate-400">STANDBY</span>
+                <span class="block text-[11px] text-slate-400">STANDBY</span>
                 <b id="simStandby" class="text-slate-300 font-mono text-xs">44h</b>
               </div>
             </div>
 
             <!-- Comparison Text -->
-            <div class="p-2 rounded-lg bg-slate-900/60 border border-slate-800/80 text-[10px] text-slate-300 flex items-center justify-between">
+            <div class="p-2 rounded-lg bg-slate-900/60 border border-slate-800/80 text-[11px] text-slate-300 flex items-center justify-between">
               <span id="simComparisonText">At 96% health, delta vs brand new is only <b>22 minutes</b> screen time.</span>
               <span class="text-emerald-400 font-bold font-mono">85%+ Guaranteed</span>
             </div>
@@ -3288,12 +3288,12 @@
                 <div>
                   <div class="text-xs font-bold text-white flex items-center gap-1.5">
                     <span>Ask NexG AI Tech Specialist</span>
-                    <span class="px-1.5 py-0.2 rounded text-[8px] bg-purple-500/20 text-purple-300 border border-purple-500/30 font-mono font-bold">24/7 COPILOT</span>
+                    <span class="px-1.5 py-0.2 rounded text-[11px] bg-purple-500/20 text-purple-300 border border-purple-500/30 font-mono font-bold">24/7 COPILOT</span>
                   </div>
                 </div>
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-[10px] text-purple-300 font-medium">Battery, Scratches & Parts QA</span>
+                <span class="text-[11px] text-purple-300 font-medium">Battery, Scratches & Parts QA</span>
                 <span id="aiCopilotChevron" class="text-xs text-purple-400 font-bold transition-transform">▼</span>
               </div>
             </div>
@@ -3301,7 +3301,7 @@
             <!-- Body -->
             <div id="aiCopilotBody" class="p-2.5 space-y-2">
               <!-- Smart Prompt Chips -->
-              <div class="flex items-center gap-1 flex-wrap text-[10px]">
+              <div class="flex items-center gap-1 flex-wrap text-[11px]">
                 <button onclick="askAICopilot('battery')" class="ai-chip-prompt px-2 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300 hover:text-white cursor-pointer">
                   🔋 Battery Reality
                 </button>
@@ -3323,7 +3323,7 @@
                   <div class="space-y-1 flex-1">
                     <div class="flex items-center justify-between">
                       <span class="font-bold text-purple-300 text-[11px]">NexG AI Diagnostic Telemetry:</span>
-                      <span class="text-[9px] text-emerald-400 font-mono">✓ 32-Pt QA Certified</span>
+                      <span class="text-[11px] text-emerald-400 font-mono">✓ 32-Pt QA Certified</span>
                     </div>
                     <div id="aiCopilotAnswer" class="text-slate-200 text-[11px] leading-relaxed">
                       Select any question chip above or type below. I analyze this unit's hardware logs, Apple GSMA registration, battery cycle curves, and physical 360 flaw coordinates.
@@ -3353,12 +3353,12 @@
                 <div>
                   <div class="text-xs font-bold text-white flex items-center gap-1.5">
                     <span>Technical Specifications & Hardware Architecture</span>
-                    <span class="px-1.5 py-0.2 rounded text-[8px] bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono font-bold">VERIFIED</span>
+                    <span class="px-1.5 py-0.2 rounded text-[11px] bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono font-bold">VERIFIED</span>
                   </div>
                 </div>
               </div>
               <div class="flex items-center gap-2">
-                <span class="text-[10px] text-slate-400 font-medium">Display, Chip, Cameras, Battery</span>
+                <span class="text-[11px] text-slate-400 font-medium">Display, Chip, Cameras, Battery</span>
                 <span id="techSpecsChevron" class="text-xs text-blue-400 font-bold transition-transform">▼</span>
               </div>
             </div>
@@ -3366,7 +3366,7 @@
             <!-- Body -->
             <div id="techSpecsBody" class="p-2.5 space-y-2">
               <!-- Category Filter Tabs -->
-              <div class="flex items-center gap-1 flex-wrap text-[10px]" id="specsFilterTabs">
+              <div class="flex items-center gap-1 flex-wrap text-[11px]" id="specsFilterTabs">
                 <button onclick="setSpecsTab('all')" id="specsTab_all" class="specs-tab-btn active px-2 py-0.5 rounded-md bg-blue-600 text-white font-bold cursor-pointer transition-colors">
                   All Specs
                 </button>
@@ -3404,11 +3404,11 @@
       <!-- Unified Card 3: Price & Instant COD Checkout Action (Sticky at bottom of modal, always in view) -->
       <div id="inspectStickyFooter" class="p-2.5 sm:p-3 border-t border-slate-800/90 bg-gradient-to-r from-blue-950/95 via-slate-900/95 to-slate-900/95 backdrop-blur-md flex items-center justify-between shrink-0 shadow-2xl z-30">
         <div>
-          <div class="text-[9px] text-slate-400 uppercase tracking-wider font-semibold">FoneZone Certified Deal:</div>
+          <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">FoneZone Certified Deal:</div>
           <div class="flex items-baseline gap-2">
             <span id="inspectPrice" class="text-base sm:text-lg font-black text-white">₹78,999</span>
-            <span id="inspectMsrp" class="text-[10px] sm:text-xs text-slate-500 line-through">₹1,34,900</span>
-            <span id="inspectSavingsTag" class="text-[9px] text-emerald-400 font-bold bg-emerald-500/10 px-1 py-0.2 rounded border border-emerald-500/20">Save ₹55,901</span>
+            <span id="inspectMsrp" class="text-[11px] sm:text-xs text-slate-500 line-through">₹1,34,900</span>
+            <span id="inspectSavingsTag" class="text-[11px] text-emerald-400 font-bold bg-emerald-500/10 px-1 py-0.2 rounded border border-emerald-500/20">Save ₹55,901</span>
           </div>
         </div>
         <div class="flex items-center gap-2">
@@ -3439,14 +3439,14 @@
           <div>
             <h3 class="text-sm font-extrabold text-white flex items-center gap-2">
               <span id="qaVideoModalProductName">iPhone 15 Pro 128GB Natural Titanium</span>
-              <span class="px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-[9px] font-mono font-bold uppercase">QA Video Log</span>
+              <span class="px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-[11px] font-mono font-bold uppercase">QA Video Log</span>
             </h3>
             <p class="text-[11px] text-slate-400">32-Point Refurbished Diagnostic Inspection Tape • Recorded by Lead QA Engineer</p>
           </div>
         </div>
 
         <div class="flex items-center gap-3">
-          <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[10px] font-mono font-bold">
+          <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[11px] font-mono font-bold">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
             Serial: <span id="qaVideoSerialTag">FZ-QC-2026-9812</span>
           </span>
@@ -3483,7 +3483,7 @@
 
             <!-- Active Test Phase HUD Callout Pill -->
             <div class="absolute bottom-2 left-2 z-20 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-blue-500/50 shadow-lg">
-              <div class="text-[9px] text-blue-400 font-mono font-bold uppercase tracking-wider flex items-center gap-1">
+              <div class="text-[11px] text-blue-400 font-mono font-bold uppercase tracking-wider flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
                 <span id="qaActivePhaseTitle">Phase 1: Physical Housing & 0-Dent Inspection</span>
               </div>
@@ -3494,7 +3494,7 @@
 
             <!-- Audio Waveform Indicator (Simulating speaker test) -->
             <div id="qaAudioWaveform" class="absolute top-3 right-3 z-20 hidden items-end gap-1 bg-black/70 px-2 py-1.5 rounded-lg border border-slate-700">
-              <span class="text-[9px] font-mono text-slate-400 mr-1">Acoustic:</span>
+              <span class="text-[11px] font-mono text-slate-400 mr-1">Acoustic:</span>
               <div class="w-1 bg-blue-500 qa-soundwave-bar"></div>
               <div class="w-1 bg-indigo-500 qa-soundwave-bar"></div>
               <div class="w-1 bg-cyan-400 qa-soundwave-bar"></div>
@@ -3506,7 +3506,7 @@
           <!-- Video Controls & Timeline Bar -->
           <div class="z-20 mt-2 bg-slate-900/90 rounded-xl p-2.5 border border-slate-800">
             <!-- Timeline Scrubber -->
-            <div class="flex items-center justify-between text-[10px] font-mono text-slate-400 mb-1.5">
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1.5">
               <span id="qaVideoCurrentTime">00:08</span>
               <span class="text-blue-400 font-bold">32-POINT DIAGNOSTIC TIMELINE</span>
               <span>00:32</span>
@@ -3529,12 +3529,12 @@
 
               <!-- Diagnostic Phase Step Pills -->
               <div class="flex items-center gap-1">
-                <button onclick="jumpToQAPhase(0)" id="qaPhasePill0" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-600 text-white cursor-pointer">1</button>
-                <button onclick="jumpToQAPhase(1)" id="qaPhasePill1" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">2</button>
-                <button onclick="jumpToQAPhase(2)" id="qaPhasePill2" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">3</button>
-                <button onclick="jumpToQAPhase(3)" id="qaPhasePill3" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">4</button>
-                <button onclick="jumpToQAPhase(4)" id="qaPhasePill4" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">5</button>
-                <button onclick="jumpToQAPhase(5)" id="qaPhasePill5" class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">6</button>
+                <button onclick="jumpToQAPhase(0)" id="qaPhasePill0" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-blue-600 text-white cursor-pointer">1</button>
+                <button onclick="jumpToQAPhase(1)" id="qaPhasePill1" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">2</button>
+                <button onclick="jumpToQAPhase(2)" id="qaPhasePill2" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">3</button>
+                <button onclick="jumpToQAPhase(3)" id="qaPhasePill3" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">4</button>
+                <button onclick="jumpToQAPhase(4)" id="qaPhasePill4" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">5</button>
+                <button onclick="jumpToQAPhase(5)" id="qaPhasePill5" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">6</button>
               </div>
             </div>
           </div>
@@ -3547,8 +3547,8 @@
           <!-- QA Certificate Header Card -->
           <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow">
             <div class="flex items-center justify-between mb-2">
-              <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Refurbished Certificate:</span>
-              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-black font-mono">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Refurbished Certificate:</span>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-black font-mono">
                 100% PASSED (32/32)
               </span>
             </div>
@@ -3557,18 +3557,18 @@
             <div class="p-2 rounded-lg bg-slate-900/70 border border-slate-800 text-xs flex items-center justify-between">
               <div>
                 <div class="text-white font-bold">QA Lead: Ajay Sharma</div>
-                <div class="text-[10px] text-slate-400">Delhi Technical Center • Bay 4</div>
+                <div class="text-[11px] text-slate-400">Delhi Technical Center • Bay 4</div>
               </div>
               <div class="text-right">
-                <div class="text-[10px] text-emerald-400 font-mono font-bold">Verified Today</div>
-                <div class="text-[9px] text-slate-500">Digital Hash Locked</div>
+                <div class="text-[11px] text-emerald-400 font-mono font-bold">Verified Today</div>
+                <div class="text-[11px] text-slate-500">Digital Hash Locked</div>
               </div>
             </div>
           </div>
 
           <!-- 6-Stage Diagnostic Checklist Tabs -->
           <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 space-y-2 flex-1">
-            <div class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">6 Diagnostic Stages:</div>
+            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">6 Diagnostic Stages:</div>
 
             <div class="space-y-1.5 text-xs">
               <div onclick="jumpToQAPhase(0)" id="qaStageCard0" class="p-2 rounded-lg bg-blue-900/30 border border-blue-500/40 flex items-center justify-between cursor-pointer transition-all">
@@ -3576,7 +3576,7 @@
                   <span class="text-emerald-400 font-bold">✓</span>
                   <span class="text-white font-semibold">1. Physical & 0-Dent Inspection</span>
                 </div>
-                <span class="text-[10px] text-emerald-400 font-mono">PASS (0 Dents)</span>
+                <span class="text-[11px] text-emerald-400 font-mono">PASS (0 Dents)</span>
               </div>
 
               <div onclick="jumpToQAPhase(1)" id="qaStageCard1" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
@@ -3584,7 +3584,7 @@
                   <span class="text-emerald-400 font-bold">✓</span>
                   <span class="text-slate-300 font-semibold">2. OLED & Multi-Touch Digitizer</span>
                 </div>
-                <span class="text-[10px] text-emerald-400 font-mono">PASS (120Hz)</span>
+                <span class="text-[11px] text-emerald-400 font-mono">PASS (120Hz)</span>
               </div>
 
               <div onclick="jumpToQAPhase(2)" id="qaStageCard2" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
@@ -3592,7 +3592,7 @@
                   <span class="text-emerald-400 font-bold">✓</span>
                   <span class="text-slate-300 font-semibold">3. Triple Camera & OIS Telemetry</span>
                 </div>
-                <span class="text-[10px] text-emerald-400 font-mono">PASS (48MP)</span>
+                <span class="text-[11px] text-emerald-400 font-mono">PASS (48MP)</span>
               </div>
 
               <div onclick="jumpToQAPhase(3)" id="qaStageCard3" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
@@ -3600,7 +3600,7 @@
                   <span class="text-emerald-400 font-bold">✓</span>
                   <span class="text-slate-300 font-semibold">4. Stereo Speakers & Acoustic Mic</span>
                 </div>
-                <span class="text-[10px] text-emerald-400 font-mono">PASS (88dB)</span>
+                <span class="text-[11px] text-emerald-400 font-mono">PASS (88dB)</span>
               </div>
 
               <div onclick="jumpToQAPhase(4)" id="qaStageCard4" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
@@ -3608,7 +3608,7 @@
                   <span class="text-emerald-400 font-bold">✓</span>
                   <span class="text-slate-300 font-semibold">5. Battery Health & USB-C Draw</span>
                 </div>
-                <span class="text-[10px] text-emerald-400 font-mono">PASS (96%)</span>
+                <span class="text-[11px] text-emerald-400 font-mono">PASS (96%)</span>
               </div>
 
               <div onclick="jumpToQAPhase(5)" id="qaStageCard5" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
@@ -3616,7 +3616,7 @@
                   <span class="text-emerald-400 font-bold">✓</span>
                   <span class="text-slate-300 font-semibold">6. Motherboard & Clean IMEI</span>
                 </div>
-                <span class="text-[10px] text-emerald-400 font-mono">PASS (Clean)</span>
+                <span class="text-[11px] text-emerald-400 font-mono">PASS (Clean)</span>
               </div>
             </div>
           </div>
@@ -3655,7 +3655,7 @@
         <div class="flex items-center justify-between pb-4 border-b border-slate-800">
           <div class="flex items-center gap-2">
             <img src="assets/fonezone_logo_white.png" alt="FoneZone" class="h-8 w-auto object-contain">
-            <span class="text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-blue-500/15 text-blue-400 border border-blue-500/30 font-mono">Certified</span>
+            <span class="text-[11px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-md bg-blue-500/15 text-blue-400 border border-blue-500/30 font-mono">Certified</span>
           </div>
           <button onclick="toggleMobileNav(false)" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 cursor-pointer" aria-label="Close Navigation">
             <i data-lucide="x" class="w-5 h-5"></i>
@@ -3676,50 +3676,50 @@
 
         <!-- Categories Section -->
         <div class="mt-5">
-          <div class="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-2 px-1">Shop Certified Tech</div>
+          <div class="text-[11px] font-black uppercase tracking-wider text-slate-400 mb-2 px-1">Shop Certified Tech</div>
           <div class="space-y-1 text-xs font-semibold text-slate-200">
             <button onclick="setCategory('all'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5"><i data-lucide="sparkles" class="w-4 h-4 text-blue-400"></i> <span>All 27 Certified Devices</span></span>
-              <span class="text-[10px] text-blue-400 font-mono font-bold">From ₹10,999</span>
+              <span class="text-[11px] text-blue-400 font-mono font-bold">From ₹10,999</span>
             </button>
             <button onclick="setCategory('phone', 'apple'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5"><i data-lucide="smartphone" class="w-4 h-4 text-slate-300"></i> <span>Apple iPhones</span></span>
-              <span class="text-[10px] text-slate-400 font-mono">15, 14, 13, 12</span>
+              <span class="text-[11px] text-slate-400 font-mono">15, 14, 13, 12</span>
             </button>
             <button onclick="setCategory('phone', 'samsung'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5"><i data-lucide="smartphone" class="w-4 h-4 text-indigo-400"></i> <span>Samsung Galaxy</span></span>
-              <span class="text-[10px] text-slate-400 font-mono">S23 Ultra, S22</span>
+              <span class="text-[11px] text-slate-400 font-mono">S23 Ultra, S22</span>
             </button>
             <button onclick="setCategory('phone', 'oneplus'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5"><i data-lucide="smartphone" class="w-4 h-4 text-red-400"></i> <span>OnePlus & Pixel</span></span>
-              <span class="text-[10px] text-slate-400 font-mono">11, 10 Pro, 7A</span>
+              <span class="text-[11px] text-slate-400 font-mono">11, 10 Pro, 7A</span>
             </button>
             <button onclick="setCategory('macbook', 'apple'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5"><i data-lucide="laptop" class="w-4 h-4 text-emerald-400"></i> <span>Apple MacBooks</span></span>
-              <span class="text-[10px] text-emerald-400 font-mono">M1, M2 Pro</span>
+              <span class="text-[11px] text-emerald-400 font-mono">M1, M2 Pro</span>
             </button>
             <button onclick="setCategory('ipad', 'all'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5"><i data-lucide="tablet" class="w-4 h-4 text-cyan-400"></i> <span>iPads & Tablets</span></span>
-              <span class="text-[10px] text-slate-400 font-mono">Air, 10th Gen</span>
+              <span class="text-[11px] text-slate-400 font-mono">Air, 10th Gen</span>
             </button>
             <button onclick="setCategory('watch', 'all'); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800/80 flex items-center justify-between transition-colors cursor-pointer">
               <span class="flex items-center gap-2.5"><i data-lucide="watch" class="w-4 h-4 text-amber-400"></i> <span>Apple & Galaxy Watch</span></span>
-              <span class="text-[10px] text-slate-400 font-mono">Series 8, Ultra</span>
+              <span class="text-[11px] text-slate-400 font-mono">Series 8, Ultra</span>
             </button>
           </div>
         </div>
 
         <!-- Customer Services -->
         <div class="mt-5 pt-4 border-t border-slate-800">
-          <div class="text-[10px] font-black uppercase tracking-wider text-slate-400 mb-2 px-1">Services & VIP Help</div>
+          <div class="text-[11px] font-black uppercase tracking-wider text-slate-400 mb-2 px-1">Services & VIP Help</div>
           <div class="space-y-1 text-xs font-semibold text-slate-200">
             <button onclick="openCeoModal(); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl bg-gradient-to-r from-amber-500/15 to-orange-500/15 border border-amber-500/30 text-amber-300 flex items-center justify-between cursor-pointer">
               <span class="flex items-center gap-2 font-bold"><i data-lucide="crown" class="w-4 h-4 text-amber-400"></i> <span>ASK TO CEO (Direct)</span></span>
-              <span class="text-[9px] bg-amber-400 text-slate-950 px-1.5 py-0.5 rounded font-black uppercase">VIP</span>
+              <span class="text-[11px] bg-amber-400 text-slate-950 px-1.5 py-0.5 rounded font-black uppercase">VIP</span>
             </button>
             <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); toggleMobileNav(false); return false;" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800 flex items-center justify-between cursor-pointer">
               <span class="flex items-center gap-2"><i data-lucide="banknote" class="w-4 h-4 text-emerald-400"></i> <span>Sell Your Device</span></span>
-              <span class="text-[9px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-1.5 py-0.5 rounded font-bold">Instant UPI</span>
+              <span class="text-[11px] bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 px-1.5 py-0.5 rounded font-bold">Instant UPI</span>
             </a>
             <button onclick="openTrackOrderModal(); toggleMobileNav(false);" class="w-full text-left px-3 py-2.5 rounded-xl hover:bg-slate-800 flex items-center gap-2 cursor-pointer">
               <i data-lucide="package" class="w-4 h-4 text-blue-400"></i> <span>Track Your Order</span>
@@ -3733,7 +3733,7 @@
 
       <!-- Drawer Footer: Dedicated Merchant Ops & Executive Portals -->
       <div class="mt-6 pt-4 border-t border-slate-800">
-        <div class="text-[10px] font-mono text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
+        <div class="text-[11px] font-mono text-slate-400 uppercase tracking-wider mb-2 flex items-center justify-between">
           <span>Executive Portal</span>
           <span class="text-emerald-400 font-bold">Sahil's Portal</span>
         </div>
@@ -3742,7 +3742,7 @@
             <i data-lucide="layout-dashboard" class="w-4 h-4 text-blue-200"></i>
             <span>Merchant Ops Command Center</span>
           </span>
-          <span class="text-[10px] bg-white/20 px-2 py-0.5 rounded-full flex items-center gap-1 font-mono">
+          <span class="text-[11px] bg-white/20 px-2 py-0.5 rounded-full flex items-center gap-1 font-mono">
             <span>Open</span>
             <i data-lucide="external-link" class="w-3 h-3"></i>
           </span>
@@ -3756,9 +3756,9 @@
           </button>
         </div>
         <div class="grid grid-cols-3 gap-1.5 mt-2">
-          <button onclick="tourSpeedTest(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[10px] text-slate-300 text-center cursor-pointer">⚡ Speed</button>
-          <button onclick="tourOpen360(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[10px] text-slate-300 text-center cursor-pointer">🔍 360°</button>
-          <button onclick="tourOpenWhatsApp(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/50 border border-emerald-500/40 text-[10px] text-emerald-300 text-center cursor-pointer">📲 WhatsApp</button>
+          <button onclick="tourSpeedTest(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[11px] text-slate-300 text-center cursor-pointer">⚡ Speed</button>
+          <button onclick="tourOpen360(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 text-[11px] text-slate-300 text-center cursor-pointer">🔍 360°</button>
+          <button onclick="tourOpenWhatsApp(); toggleMobileNav(false);" class="p-1.5 rounded-lg bg-emerald-600/30 hover:bg-emerald-600/50 border border-emerald-500/40 text-[11px] text-emerald-300 text-center cursor-pointer">📲 WhatsApp</button>
         </div>
       </div>
 
@@ -3773,7 +3773,7 @@
   <div id="cartDrawer" class="fixed inset-0 z-50 hidden">
     <div class="absolute inset-0 drawer-backdrop" onclick="closeCartDrawer()"></div>
     <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-[#0D1527] border-l border-slate-800 p-6 flex flex-col justify-between shadow-2xl drawer-panel">
-      <div>
+      <div class="flex flex-col flex-1 min-h-0">
         <div class="flex items-center justify-between pb-4 border-b border-slate-800">
           <div class="flex items-center gap-2">
             <i data-lucide="shopping-bag" class="w-5 h-5 text-blue-400"></i>
@@ -3784,7 +3784,7 @@
           </button>
         </div>
 
-        <div id="cartItemsList" class="py-4 space-y-3 overflow-y-auto max-h-[60vh]">
+        <div id="cartItemsList" class="py-4 space-y-3 overflow-y-auto flex-1">
           <!-- Injected via app.js -->
         </div>
       </div>
@@ -3873,7 +3873,7 @@
             <div class="text-[11px] text-slate-400">Shipment AWB:</div>
             <div class="font-mono font-bold text-white">#FZ-BLUEDART-8821</div>
           </div>
-          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold">
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[11px] font-bold">
             🟢 IN TRANSIT
           </span>
         </div>
@@ -4000,13 +4000,13 @@
       <!-- 1. Home -->
       <button id="bottomNavHome" onclick="handleBottomNavClick('home')" class="bottom-nav-tab flex flex-col items-center justify-center gap-0.5 text-blue-500 font-bold cursor-pointer py-1 transition-colors tap-scale">
         <i data-lucide="home" class="w-5 h-5 transition-transform active:scale-90"></i>
-        <span class="text-[10px] tracking-tight">Home</span>
+        <span class="text-[11px] tracking-tight">Home</span>
       </button>
 
       <!-- 2. Categories -->
       <button id="bottomNavCategories" onclick="handleBottomNavClick('categories')" class="bottom-nav-tab flex flex-col items-center justify-center gap-0.5 text-slate-400 hover:text-white cursor-pointer py-1 transition-colors tap-scale">
         <i data-lucide="layout-grid" class="w-5 h-5 transition-transform active:scale-90"></i>
-        <span class="text-[10px] tracking-tight">Categories</span>
+        <span class="text-[11px] tracking-tight">Categories</span>
       </button>
 
       <!-- 3. Sell Phone (Elevated Center Action Button) -->
@@ -4014,25 +4014,25 @@
         <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 text-slate-950 flex items-center justify-center shadow-lg shadow-emerald-500/30 border-2 border-slate-950 group-active:scale-90 transition-transform">
           <i data-lucide="banknote" class="w-6 h-6 text-slate-950"></i>
         </div>
-        <span class="text-[10px] font-black text-emerald-400 tracking-tight mt-0.5">Sell Phone</span>
+        <span class="text-[11px] font-black text-emerald-400 tracking-tight mt-0.5">Sell Phone</span>
       </button>
 
       <!-- 4. Wishlist / Saved -->
       <button id="bottomNavWishlist" onclick="handleBottomNavClick('wishlist')" class="bottom-nav-tab relative flex flex-col items-center justify-center gap-0.5 text-slate-400 hover:text-white cursor-pointer py-1 transition-colors tap-scale">
         <div class="relative">
           <i data-lucide="heart" class="w-5 h-5 transition-transform active:scale-90"></i>
-          <span id="bottomWishlistBadge" class="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-red-500 text-[9px] font-bold text-white flex items-center justify-center hidden">0</span>
+          <span id="bottomWishlistBadge" class="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-red-500 text-[11px] font-bold text-white flex items-center justify-center hidden">0</span>
         </div>
-        <span class="text-[10px] tracking-tight">Saved</span>
+        <span class="text-[11px] tracking-tight">Saved</span>
       </button>
 
       <!-- 5. Cart -->
       <button id="bottomNavCart" onclick="handleBottomNavClick('cart')" class="bottom-nav-tab relative flex flex-col items-center justify-center gap-0.5 text-slate-400 hover:text-white cursor-pointer py-1 transition-colors tap-scale">
         <div class="relative">
           <i data-lucide="shopping-bag" class="w-5 h-5 transition-transform active:scale-90"></i>
-          <span id="bottomCartBadge" class="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-blue-600 text-[9px] font-bold text-white flex items-center justify-center hidden">0</span>
+          <span id="bottomCartBadge" class="absolute -top-1 -right-2 w-3.5 h-3.5 rounded-full bg-blue-600 text-[11px] font-bold text-white flex items-center justify-center hidden">0</span>
         </div>
-        <span class="text-[10px] tracking-tight">Cart</span>
+        <span class="text-[11px] tracking-tight">Cart</span>
       </button>
 
     </div>
@@ -4044,6 +4044,16 @@
     <span id="toastMessage">Action completed</span>
   </div>
 
-  <script src="app.js?v=2.6"></script>
+
+  <!-- Mobile Font Size Overrides (must load after Tailwind CDN) -->
+  <style>
+    @media (max-width: 639px) {
+      .text-xs { font-size: 12px !important; line-height: 1.125rem !important; }
+      .text-\[11px\] { font-size: 11px !important; line-height: 1.25 !important; }
+      #mobileBottomNav span { font-size: 11px !important; }
+    }
+  </style>
+
+  <script src="app.js?v=2.7"></script>
 </body>
 </html>
