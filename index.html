@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoneZone | Certified Refurbished Tech (360° Inspection & Pan-India COD)</title>
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="assets/currency-switcher.css?v=2">
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="assets/model-viewer.min.js"></script>
   <script src="assets/lucide.min.js"></script>
@@ -25,68 +26,45 @@
     }
   </script>
 </head>
-<body class="bg-[#070A10] text-slate-100 antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-900 theme-light antialiased selection:bg-blue-600 selection:text-white transition-colors duration-200">
 
   <!-- ======================================================== -->
-  <!-- 0. TOP EXECUTIVE PORTAL SWITCHER & DEMO TOUR BAR         -->
+  <!-- 0. FLOATING EXECUTIVE OPS DOCK (Bottom-Right Non-Intrusive)-->
   <!-- ======================================================== -->
-  <!-- 0. TOP EXECUTIVE PORTAL SWITCHER & DEMO TOUR BAR (Desktop/Tablet Only) -->
-  <!-- ======================================================== -->
-  <aside id="executiveTopBar" aria-label="Executive Demo Control Bar" class="hidden sm:flex z-50 sm:sticky sm:top-0 bg-[#0B1120] border-b border-blue-500/30 px-3 py-1.5 sm:py-2 text-xs shadow-xl">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 sm:gap-3 w-full">
-      <!-- Left: Portal Switcher -->
-      <div class="flex items-center gap-2">
-        <span class="text-[11px] font-bold text-blue-400 uppercase tracking-wider hidden sm:inline">NexG Demo:</span>
-        <div class="flex items-center bg-slate-900/90 p-0.5 sm:p-1 rounded-xl border border-slate-700/80 gap-1">
-          <button id="tabStorefrontBtn" onclick="switchPortal('storefront')" class="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-active flex items-center gap-1 sm:gap-1.5 cursor-pointer">
-            <span>🛍️</span>
-            <span>Storefront</span>
-          </button>
-          <button id="tabOpsBtn" onclick="switchPortal('ops')" class="px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-inactive flex items-center gap-1 sm:gap-1.5 cursor-pointer">
-            <span>⚙️</span>
-            <span>Merchant Ops</span>
-            <span class="px-1.5 py-0.2 text-[11px] sm:text-[11px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full font-mono">Sahil</span>
-          </button>
-          <a href="dashboard.html" class="px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg text-xs font-bold bg-blue-600/25 hover:bg-blue-600/40 border border-blue-500/40 text-blue-300 hover:text-white transition-all flex items-center gap-1 cursor-pointer" title="Open Dedicated Standalone Dashboard in New Window">
-            <span>↗</span>
-            <span>Standalone Ops</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right: Quick Guided Tour Shortcuts & Theme Switcher -->
-      <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-0.5 max-w-full">
-        <span class="text-[11px] text-slate-400 hidden lg:inline shrink-0">Quick Tour:</span>
-        <button onclick="tourSpeedTest()" class="px-2 sm:px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-semibold text-slate-200 flex items-center gap-1 cursor-pointer shrink-0">
-          <span>⚡</span>
-          <span>1. Speed Demo</span>
-        </button>
-        <button onclick="tourOpen360()" class="px-2 sm:px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-semibold text-slate-200 flex items-center gap-1 cursor-pointer shrink-0">
-          <span>🔍</span>
-          <span>2. 360° Inspector</span>
-        </button>
-        <button onclick="tourOpenWhatsApp()" class="px-2 sm:px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-[11px] font-bold text-white shadow flex items-center gap-1 cursor-pointer shrink-0">
-          <span>📲</span>
-          <span>3. WhatsApp Anti-RTO</span>
-        </button>
-
-        <div class="h-4 w-[1px] bg-slate-700 mx-1 hidden sm:block shrink-0"></div>
-
-        <!-- Light / Dark Theme Toggle -->
-        <button id="themeToggleBtnTop" onclick="toggleTheme()" class="px-2 sm:px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-semibold text-slate-200 flex items-center gap-1.5 transition-colors cursor-pointer shrink-0" title="Toggle Light / Dark Mode">
-          <span id="themeToggleIcon">☀️</span>
-          <span id="themeToggleLabel">Light Mode</span>
-        </button>
-      </div>
+  <aside id="executiveFloatingDock" aria-label="Executive Demo Control Dock" class="hidden sm:flex fixed bottom-5 right-5 z-[99999] items-center gap-2 bg-slate-950/95 backdrop-blur-xl border border-blue-500/40 p-1.5 rounded-2xl shadow-2xl text-xs text-white">
+    <div class="flex items-center gap-1.5 pl-2 pr-1">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="text-[10px] font-black text-blue-400 uppercase tracking-wider font-mono">NexG Ops:</span>
     </div>
+    <div class="flex items-center bg-slate-900 p-0.5 rounded-xl border border-slate-800 gap-1">
+      <button id="tabStorefrontBtn" onclick="switchPortal('storefront')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all portal-tab-active flex items-center gap-1 cursor-pointer">
+        <span>🛍️</span>
+        <span>Store</span>
+      </button>
+      <button id="tabOpsBtn" onclick="switchPortal('ops')" class="px-2.5 py-1 rounded-lg text-xs font-bold transition-all portal-tab-inactive flex items-center gap-1 cursor-pointer">
+        <span>⚙️</span>
+        <span>Ops</span>
+        <span class="px-1.5 py-0.2 text-[9px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-full font-mono">Sahil</span>
+      </button>
+      <a href="dashboard.html" target="_blank" class="px-2 py-1 rounded-lg text-xs font-bold bg-blue-600/30 hover:bg-blue-600/50 border border-blue-500/40 text-blue-300 hover:text-white transition-all flex items-center gap-1 cursor-pointer" title="Open Standalone Dashboard">
+        <span>↗</span>
+      </a>
+    </div>
+    <div class="h-4 w-[1px] bg-slate-800 mx-0.5"></div>
+    <button onclick="tourSpeedTest()" class="px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-semibold text-slate-300 flex items-center gap-1 cursor-pointer" title="Run Speed Demo">
+      <span>⚡ Speed</span>
+    </button>
+    <button onclick="tourOpen360()" class="px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-[11px] font-semibold text-slate-300 flex items-center gap-1 cursor-pointer" title="Open 360 Inspector">
+      <span>🔍 360°</span>
+    </button>
   </aside>
 
   <!-- ======================================================== -->
-  <!-- PORTAL 1: PURE CUSTOMER STOREFRONT (FAITHFUL TO FONEZONE)-->
+  <!-- PORTAL 1: PURE CUSTOMER STOREFRONT (LUXURY FONEZONE)     -->
   <!-- ======================================================== -->
   <div id="storefrontPortal" class="transition-opacity duration-200 pb-16 sm:pb-0">
 
-    <!-- 1. Announcement Bar (Desktop/Tablet Only) -->
+    <!-- 1. Sleek Luxury Announcement Bar (Desktop/Tablet Only) -->
     <div id="storeAnnouncementBar" class="hidden sm:block bg-[#090E1A] border-b border-slate-800/80 text-[11px] py-1.5 px-4 text-slate-300">
       <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
         <div class="flex items-center gap-3">
@@ -99,17 +77,29 @@
         </div>
 
         <div class="flex items-center gap-3">
-          <span id="shippingBadgeText" class="text-slate-400 text-[11px] hidden sm:inline">Pan-India Insured Dispatch</span>
-          <div class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5">
-            <button id="regionBtnIN" onclick="setRegion('IN')" class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-600 text-white cursor-pointer">🇮🇳 INR</button>
-            <button id="regionBtnUAE" onclick="setRegion('UAE')" class="px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer">🇦🇪 AED</button>
-          </div>
+          <span id="shippingBadgeText" class="text-slate-400 text-[11px] hidden lg:inline">Pan-India Insured Dispatch</span>
+          <button 
+            id="topBarCurrencyBtn" 
+            onclick="toggleCurrencyDropdown(event)" 
+            class="flex items-center gap-1.5 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 rounded-lg px-2.5 py-1 text-[11px] font-bold text-white shadow-sm transition-all cursor-pointer select-none"
+            title="Select Country & Currency (164 countries supported)"
+          >
+            <span class="flags flags-India" id="topBarCurrencyFlag"></span>
+            <span id="topBarCurrencyText">India (INR ₹)</span>
+            <span class="text-[9px] text-slate-400">▼</span>
+          </button>
+
+          <!-- Light / Dark Theme Toggle -->
+          <button id="themeToggleBtnTop" onclick="toggleTheme()" class="px-2 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-[11px] font-semibold text-slate-200 flex items-center gap-1 transition-colors cursor-pointer shrink-0" title="Toggle Light / Dark Mode">
+            <span id="themeToggleIcon">☀️</span>
+            <span id="themeToggleLabel">Light Mode</span>
+          </button>
         </div>
       </div>
     </div>
 
     <!-- 2. Main Storefront Header (Ultra-Sleek Mobile App Bar & Modern Desktop Header) -->
-    <header class="fz-glass border-b border-slate-800/80 sticky top-0 sm:top-[42px] z-40 transition-colors">
+    <header class="fz-glass border-b border-slate-800/80 sticky top-0 z-40 transition-colors">
       <div class="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-between gap-2 sm:gap-4">
         
         <!-- Left: Mobile Hamburger & Logo -->
@@ -154,12 +144,18 @@
         </div>
 
         <!-- Right Header Items -->
-        <div class="flex items-center gap-1.5 sm:gap-3 text-xs font-medium shrink-0">
-          <!-- Mobile Currency Switcher Pill (< sm) -->
-          <div class="flex sm:hidden items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 text-[11px]">
-            <button id="regionBtnINMobile" onclick="setRegion('IN')" class="px-1.5 py-0.5 rounded font-bold bg-blue-600 text-white cursor-pointer">₹</button>
-            <button id="regionBtnUAEMobile" onclick="setRegion('UAE')" class="px-1.5 py-0.5 rounded font-semibold text-slate-400 hover:text-white cursor-pointer">AED</button>
-          </div>
+        <div class="flex items-center gap-1.5 sm:gap-3 text-xs font-medium shrink-0 relative">
+          <!-- Mobile Currency Switcher Button (< sm) -->
+          <button 
+            id="mobileCurrencyToggleBtn" 
+            onclick="toggleCurrencyDropdown(event)" 
+            class="flex sm:hidden items-center gap-1.5 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 rounded-xl px-2.5 h-8 text-xs font-bold text-white shadow-sm active:scale-95 transition-all cursor-pointer select-none" 
+            title="Change Country & Currency"
+          >
+            <span class="flags flags-India" id="mobileCurrencyFlag"></span>
+            <span id="mobileCurrencyText">INR</span>
+            <span class="text-[9px] text-slate-400">▼</span>
+          </button>
 
           <!-- Mobile Quick Theme Toggle (< sm) -->
           <button onclick="toggleTheme()" class="sm:hidden p-1.5 text-slate-300 hover:text-white rounded-lg hover:bg-slate-800/60 transition-colors" title="Toggle Theme">
@@ -173,9 +169,9 @@
           </a>
 
           <!-- Ask To CEO Button (High-Contrast Executive VIP Badge - Desktop/Tablet) -->
-          <button onclick="openCeoModal()" class="ceo-header-btn hidden sm:flex px-2.5 sm:px-3.5 py-1.5 rounded-xl text-xs font-black items-center gap-1 sm:gap-1.5 shadow-sm transition-all cursor-pointer">
-            <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-300"></i>
-            <span class="font-black tracking-wide">ASK To CEO</span>
+          <button onclick="openCeoModal()" class="ceo-header-btn hidden sm:flex px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-bold items-center gap-1.5 shadow-sm transition-all cursor-pointer">
+            <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-500"></i>
+            <span class="font-bold tracking-wide">Ask CEO</span>
           </button>
 
           <!-- Track Order (Desktop) -->
@@ -195,6 +191,7 @@
             <i data-lucide="shopping-bag" class="w-5 h-5"></i>
             <span id="cartCountBadge" class="absolute top-0 right-0 sm:top-0.5 sm:right-0.5 w-4 h-4 rounded-full bg-blue-600 text-[11px] font-bold text-white flex items-center justify-center">0</span>
           </div>
+
         </div>
       </div>
 
@@ -218,8 +215,8 @@
         <div id="searchSuggestionsDropdownMobile" class="hidden absolute left-3 right-3 top-full mt-1 search-dropdown p-2 z-50 text-xs divide-y divide-slate-800 rounded-2xl shadow-2xl"></div>
       </div>
 
-      <!-- 3. Desktop/Tablet FoneZone Royal Blue Navigation Bar (Hidden on Mobile) -->
-      <nav id="storeCategoryBar" class="hidden sm:block bg-[#1E56D8] text-white text-xs px-3 sm:px-4 shadow-md relative z-30 transition-colors">
+      <!-- 3. Desktop/Tablet FoneZone Sleek Luxury Navigation Bar (Hidden on Mobile) -->
+      <nav id="storeCategoryBar" class="hidden sm:block bg-[#090E1A]/95 backdrop-blur-md border-b border-slate-800 text-white text-xs px-3 sm:px-4 shadow-xl relative z-30 transition-all">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
           <div class="flex items-center gap-1.5 py-1.5 overflow-x-auto whitespace-nowrap no-scrollbar scroll-smooth w-full">
             
@@ -228,13 +225,13 @@
               <button 
                 id="shopCategoriesBtn" 
                 onclick="toggleCategoriesDropdown(event)" 
-                class="bg-[#F3BA2F] hover:bg-amber-400 text-slate-950 px-3 sm:px-4 py-1.5 sm:py-2 font-black rounded-lg flex items-center gap-1.5 sm:gap-2 cursor-pointer transition-all shadow select-none text-xs"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-xl flex items-center gap-1.5 sm:gap-2 cursor-pointer transition-all shadow-sm active:scale-95 select-none text-xs"
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                <i data-lucide="layout-grid" class="w-4 h-4 text-white"></i>
                 <span>SHOP CATEGORIES</span>
-                <i data-lucide="chevron-down" id="shopCategoriesChevron" class="w-3.5 h-3.5 transition-transform duration-200"></i>
+                <i data-lucide="chevron-down" id="shopCategoriesChevron" class="w-3.5 h-3.5 text-white transition-transform duration-200"></i>
               </button>
 
               <!-- Mega Dropdown Menu -->
@@ -283,41 +280,37 @@
             </div>
 
             <!-- Authentic Navigation Links -->
-            <a href="#/" onclick="navigateTo('#/'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-bold text-white hover:bg-blue-700 transition-colors flex items-center gap-1">
+            <a href="#/" onclick="navigateTo('#/'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-bold text-slate-800 dark:text-slate-100 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1">
               <span>HOME</span>
             </a>
-            <a href="#/collections/all" onclick="navigateTo('#/collections/all'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors">
+            <a href="#/collections/all" onclick="navigateTo('#/collections/all'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               <span>SHOP</span>
             </a>
-            <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-bold text-amber-300 hover:text-amber-200 hover:bg-blue-700 transition-colors flex items-center gap-1">
+            <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors flex items-center gap-1.5">
               <span>SELL YOUR DEVICE</span>
-              <span class="px-1.5 py-0.2 text-[11px] bg-amber-400 text-slate-950 font-black rounded-full uppercase">Instant Cash</span>
+              <span class="px-1.5 py-0.5 text-[10px] bg-emerald-100 dark:bg-emerald-900/40 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 font-black rounded-full uppercase">Instant Cash</span>
             </a>
-            <a href="#/pages/about-us" onclick="navigateTo('#/pages/about-us'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors">
+            <a href="#/pages/about-us" onclick="navigateTo('#/pages/about-us'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               <span>ABOUT US</span>
             </a>
-            <a href="#/pages/contact-us-get-in-touch-with-our-team" onclick="navigateTo('#/pages/contact-us-get-in-touch-with-our-team'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors">
+            <a href="#/pages/contact-us-get-in-touch-with-our-team" onclick="navigateTo('#/pages/contact-us-get-in-touch-with-our-team'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               <span>CONTACT US</span>
             </a>
-            <a href="#/pages/order-info" onclick="navigateTo('#/pages/order-info'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-blue-100 hover:text-white hover:bg-blue-700 transition-colors flex items-center gap-1">
+            <a href="#/pages/order-info" onclick="navigateTo('#/pages/order-info'); return false;" class="nav-link-item shrink-0 px-3 py-1.5 sm:py-2 rounded-lg font-semibold text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1">
               <span>TRACK ORDER</span>
-            </a>
-            <a href="#/pages/ask-to-ceo" onclick="navigateTo('#/pages/ask-to-ceo'); return false;" class="nav-link-item shrink-0 ceo-nav-pill px-3 py-1.5 rounded-lg text-xs font-black transition-all flex items-center gap-1.5 shadow-sm">
-              <span>👑</span>
-              <span>ASK TO CEO</span>
             </a>
           </div>
 
           <!-- Trust Badge on Right of Nav -->
-          <div class="hidden xl:flex items-center gap-3 py-1 text-xs shrink-0 pl-4 text-blue-100 font-medium">
-            <span class="flex items-center gap-1">
-              <span class="text-amber-300">🛡️</span>
-              <span>6M FoneZone Warranty</span>
+          <div class="hidden xl:flex items-center gap-3 py-1 text-xs shrink-0 pl-4 font-semibold text-slate-700 dark:text-slate-200">
+            <span class="flex items-center gap-1.5">
+              <span class="text-amber-500">🛡️</span>
+              <span class="text-slate-700 dark:text-slate-200 font-bold">6M FoneZone Warranty</span>
             </span>
-            <span class="text-blue-300/60">•</span>
-            <span class="flex items-center gap-1">
-              <span class="text-emerald-300">⚡</span>
-              <span>32-Point Certified</span>
+            <span class="text-slate-300 dark:text-slate-600">•</span>
+            <span class="flex items-center gap-1.5">
+              <span class="text-emerald-600 dark:text-emerald-400">⚡</span>
+              <span class="text-slate-700 dark:text-slate-200 font-bold">32-Point Certified</span>
             </span>
           </div>
         </div>
@@ -411,7 +404,7 @@
         </div>
 
         <!-- Carousel Track -->
-        <div id="heroCarouselTrack" class="flex transition-transform duration-700 ease-out" style="transform: translateX(0%);">
+        <div id="heroCarouselTrack" class="flex flex-nowrap transition-transform duration-700 ease-out" style="transform: translateX(0%);">
           
           <!-- Slide 1: iPhone 14 & 15 Pro Festival Drop -->
           <div class="hero-slide min-w-full relative overflow-hidden p-3.5 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6"
@@ -544,12 +537,106 @@
                 <span class="hidden sm:flex items-center gap-0.5"><span class="text-emerald-400">✓</span> Instant UPI</span>
               </div>
             </div>
-            <!-- Right Visual (MacBook / Tablets / Phones) -->
+            <!-- Right Visual (Phone Trade-in — matches "Sell Your Old Phone" copy) -->
             <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
               <div class="relative">
-                <img src="assets/macbookair_midnight.png" alt="MacBook & Gadget Trade-in" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl object-contain">
-                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-[11px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl">
+                <img src="assets/iphone14_front.png" alt="Sell Your Old Phone — Instant UPI Cash" class="w-20 sm:w-52 md:w-60 drop-shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
+                <div class="absolute -top-1.5 -right-1 sm:-top-3 sm:-right-3 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-[11px] sm:text-[12px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl shadow-amber-500/40">
                   ⚡ UPI Cash
+                </div>
+                <div class="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 bg-emerald-500 text-white text-[10px] sm:text-[11px] font-black px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-xl shadow-lg shadow-emerald-500/40">
+                  60s Quote
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+          <!-- Slide 4: Apple Silicon MacBook Pro M2 & M3 -->
+          <div class="hero-slide min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-4 sm:gap-6"
+               style="background: linear-gradient(135deg, #091326 0%, #0F2042 50%, #0A1630 100%);">
+            <div class="relative z-10 flex-1 max-w-xl">
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-blue-500/25 text-blue-300 border border-blue-500/40 text-[11px] font-black uppercase tracking-wider flex items-center gap-1">
+                  <span>💻</span> <span>PRO CREATOR SERIES</span>
+                </span>
+                <span id="heroSlide4SaveBadge" class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold">
+                  SAVE ₹65,000
+                </span>
+              </div>
+              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                MacBook Pro M2 Max.<br class="hidden sm:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-300">
+                  Space Gray 16-Inch
+                </span>
+              </h2>
+              <p class="text-[11px] sm:text-sm text-slate-300 mt-2 sm:mt-3 leading-snug" id="heroSlide4Price">
+                Starting from <strong class="text-white text-xs sm:text-base">₹94,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,79,900</span>). 100% Genuine Apple Battery, 0 Cycle Degradation.</span>
+              </p>
+              <div class="flex items-center gap-2 sm:gap-3 mt-3 sm:mt-5">
+                <button onclick="setCategory('macbook')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-blue-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+                  <span>⚡ Shop MacBooks</span>
+                </button>
+                <button onclick="openInspectModal('fz-mbp14-m2')" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer">
+                  <span>🔍 Inspect 360°</span>
+                </button>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4 mt-3 sm:mt-6 text-[11px] text-slate-300 font-medium">
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> MagSafe 3</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 100% Battery</span>
+                <span class="hidden sm:flex items-center gap-1"><span class="text-emerald-400">✓</span> Liquid Retina XDR</span>
+              </div>
+            </div>
+            <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
+              <div class="relative">
+                <img src="assets/macbookair_midnight.png" alt="MacBook Pro" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500 object-contain">
+                <div id="heroSlide4SaveBadgeFloating" class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-blue-600 text-white text-[11px] font-black px-2 py-0.5 rounded-xl shadow-lg border border-blue-400/40">
+                  Save ₹65k
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Google Pixel 8 Pro Pure AI -->
+          <div class="hero-slide min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-4 sm:gap-6"
+               style="background: linear-gradient(135deg, #071D1A 0%, #0E2E2A 50%, #08211E 100%);">
+            <div class="relative z-10 flex-1 max-w-xl">
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-teal-500/25 text-teal-300 border border-teal-500/40 text-[11px] font-black uppercase tracking-wider flex items-center gap-1">
+                  <span>✨</span> <span>GOOGLE TENSOR G3</span>
+                </span>
+                <span id="heroSlide5Badge" class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] font-bold">
+                  BEST AI CAMERA
+                </span>
+              </div>
+              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+                Google Pixel 8 Pro.<br class="hidden sm:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-300">
+                  Bay Blue 128GB
+                </span>
+              </h2>
+              <p class="text-[11px] sm:text-sm text-slate-300 mt-2 sm:mt-3 leading-snug" id="heroSlide5Price">
+                Starting from <strong class="text-white text-xs sm:text-base">₹46,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,06,999</span>). 7 Years of Android OS Updates.</span>
+              </p>
+              <div class="flex items-center gap-2 sm:gap-3 mt-3 sm:mt-5">
+                <button onclick="setSubFilter('pixel')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-teal-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+                  <span>⚡ Shop Pixel</span>
+                </button>
+                <button onclick="openInspectModal('fz-pixel8pro')" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer">
+                  <span>🔍 Inspect 360°</span>
+                </button>
+              </div>
+              <div class="flex items-center gap-3 sm:gap-4 mt-3 sm:mt-6 text-[11px] text-slate-300 font-medium">
+                <span class="flex items-center gap-1"><span class="text-teal-400">✓</span> 50MP Pro Camera</span>
+                <span class="flex items-center gap-1"><span class="text-teal-400">✓</span> Best Take AI</span>
+                <span class="hidden sm:flex items-center gap-1"><span class="text-teal-400">✓</span> 7-Year Updates</span>
+              </div>
+            </div>
+            <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
+              <div class="relative">
+                <img src="assets/google_pixel_nobg.png" alt="Google Pixel 8 Pro" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500 object-contain">
+                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-teal-600 text-white text-[11px] font-black px-2 py-0.5 rounded-xl shadow-lg border border-teal-400/40">
+                  56% OFF
                 </div>
               </div>
             </div>
@@ -557,29 +644,24 @@
 
         </div>
 
-        <!-- Carousel Navigation Arrows -->
-        <button onclick="prevHeroSlide()" aria-label="Previous Slide" id="heroPrevBtn" class="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 border border-slate-200 flex items-center justify-center backdrop-blur-md cursor-pointer transition-all shadow-xl hover:shadow-2xl hover:scale-110 z-30 opacity-0 group-hover:opacity-100">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
+        <!-- Sleek Floating Hero Navigation Arrows (Desktop/Tablet Only — Mobile uses native touch swipe) -->
+        <button onclick="prevHeroSlide()" aria-label="Previous Slide" id="heroPrevBtn" class="hero-nav-arrow hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2 z-30" title="Previous Slide">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
         </button>
-        <button onclick="nextHeroSlide()" aria-label="Next Slide" id="heroNextBtn" class="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-800 border border-slate-200 flex items-center justify-center backdrop-blur-md cursor-pointer transition-all shadow-xl hover:shadow-2xl hover:scale-110 z-30 opacity-0 group-hover:opacity-100">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
+        <button onclick="nextHeroSlide()" aria-label="Next Slide" id="heroNextBtn" class="hero-nav-arrow hidden sm:flex absolute right-3 top-1/2 -translate-y-1/2 z-30" title="Next Slide">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
         </button>
 
-        <!-- Carousel Dot Indicators & Auto-Run Status -->
-        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
-          <div class="flex items-center gap-2 bg-slate-950/70 backdrop-blur-md px-3 py-1.5 rounded-full border border-slate-700/60 shadow-lg">
-            <button onclick="goToHeroSlide(0)" class="hero-dot w-7 h-2 rounded-full bg-blue-500 transition-all cursor-pointer" aria-label="Slide 1"></button>
-            <button onclick="goToHeroSlide(1)" class="hero-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" aria-label="Slide 2"></button>
-            <button onclick="goToHeroSlide(2)" class="hero-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer" aria-label="Slide 3"></button>
-            <span class="w-px h-3 bg-slate-700 mx-0.5"></span>
-            <button id="heroPlayPauseBtn" onclick="toggleHeroAutoPlay()" class="text-slate-300 hover:text-white text-[11px] font-mono flex items-center gap-1 cursor-pointer transition-colors px-1 rounded hover:bg-white/10" title="Toggle Auto-Play (6s Delay)">
-              <span id="heroPlayPauseIcon">⏸️</span>
-              <span id="heroPlayPauseLabel" class="text-[11px] text-slate-300 font-bold">6s</span>
-            </button>
+        <!-- Clean 5-Dot Indicator (No 6s Text Pill) -->
+        <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
+          <div class="flex items-center gap-2 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 shadow-lg">
+            <button onclick="goToHeroSlide(0)" class="hero-dot w-6 h-1.5 rounded-full bg-blue-500 transition-all cursor-pointer" aria-label="Slide 1"></button>
+            <button onclick="goToHeroSlide(1)" class="hero-dot w-2 h-1.5 rounded-full bg-white/40 hover:bg-white/80 transition-all cursor-pointer" aria-label="Slide 2"></button>
+            <button onclick="goToHeroSlide(2)" class="hero-dot w-2 h-1.5 rounded-full bg-white/40 hover:bg-white/80 transition-all cursor-pointer" aria-label="Slide 3"></button>
+            <button onclick="goToHeroSlide(3)" class="hero-dot w-2 h-1.5 rounded-full bg-white/40 hover:bg-white/80 transition-all cursor-pointer" aria-label="Slide 4"></button>
+            <button onclick="goToHeroSlide(4)" class="hero-dot w-2 h-1.5 rounded-full bg-white/40 hover:bg-white/80 transition-all cursor-pointer" aria-label="Slide 5"></button>
           </div>
-        </div>
-
-      </div>
+        </div></div>
 
       <!-- B. Authentic E-Commerce Offer Rail / Deal Grid (Horizontal Swipe on Mobile, 4-Col Grid on Desktop) -->
       <div class="flex overflow-x-auto snap-x gap-3 mt-3 pb-1 no-scrollbar sm:grid sm:grid-cols-2 lg:grid-cols-4" id="heroOfferRail">
@@ -832,16 +914,16 @@
           </div>
         </button>
 
-        <!-- Cashify Special: 32-Pt Video Verified Only Filter Card -->
-        <button onclick="handleVideoVerifiedFilter()" id="quickFilterVideoBtn" class="brand-rail-card shrink-0 min-w-[105px] sm:min-w-0 p-2.5 sm:p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group border-red-500/40 bg-red-950/20 hover:border-red-500/80">
-          <div class="w-11 h-11 sm:w-12 sm:h-12 mb-1.5 sm:mb-2 rounded-xl bg-red-600/20 border border-red-500/40 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <span class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-red-600 text-white flex items-center justify-center text-xs font-bold shadow-lg shadow-red-600/50">▶</span>
+        <!-- Google Pixel Brand Card -->
+        <button onclick="setSubFilter('pixel')" class="brand-rail-card shrink-0 min-w-[105px] sm:min-w-0 p-2.5 sm:p-3 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer group">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 mb-1.5 sm:mb-2 rounded-xl bg-slate-800/80 p-1 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <img src="assets/google_pixel_nobg.png" alt="Google Pixel" class="max-h-full max-w-full object-contain drop-shadow">
           </div>
           <div>
-            <div class="text-xs font-bold text-white group-hover:text-red-400 transition-colors flex items-center justify-center gap-1">
-              <span>📹 Video Proof</span>
+            <div class="text-xs font-bold text-white group-hover:text-teal-400 transition-colors flex items-center justify-center gap-1">
+              <span>📷 Google Pixel</span>
             </div>
-            <div class="text-[11px] text-red-400 font-bold mt-0.5">Cashify Feature</div>
+            <div id="railPricePixel" class="text-[11px] text-emerald-400 font-bold mt-0.5">From ₹24,999</div>
           </div>
         </button>
 
@@ -1054,39 +1136,95 @@
       </div>
 
       <!-- Executive Leadership -->
-      <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 mb-10">
-        <h2 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
-          <span>👥 Executive Leadership & Operations</span>
-          <span class="text-xs font-normal text-slate-400">• Dedicated to Uncompromising Quality</span>
-        </h2>
+      <div class="p-6 sm:p-8 rounded-3xl bg-slate-900/60 border border-slate-800 mb-10 shadow-xl">
+        <div class="flex items-center justify-between flex-wrap gap-2 mb-6">
+          <h2 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="text-amber-400">👥</span>
+            <span>Executive Leadership & Operations</span>
+          </h2>
+          <span class="text-xs font-semibold px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            Dedicated to Uncompromising Refurbished Governance
+          </span>
+        </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-950/80 border border-slate-800">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-700 flex items-center justify-center text-2xl font-black text-slate-950 shadow">
-              HV
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="font-bold text-white text-base">Hemant Verma</h4>
-                <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40 text-[11px] font-bold">Founder & CEO</span>
+          <!-- Hemant Verma Card -->
+          <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950/90 border border-slate-800 hover:border-amber-500/40 p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-amber-500/10">
+            <div class="flex items-start gap-4">
+              <div class="relative shrink-0">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-amber-500 via-amber-600 to-orange-600 p-0.5 shadow-lg shadow-amber-500/20">
+                  <div class="w-full h-full rounded-[14px] bg-slate-950 flex flex-col items-center justify-center relative overflow-hidden">
+                    <span class="text-2xl">👔</span>
+                    <span class="text-[9px] font-black tracking-widest text-amber-400 uppercase mt-0.5">CEO</span>
+                  </div>
+                </div>
+                <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-emerald-500 border-2 border-slate-950 flex items-center justify-center text-[10px] text-white" title="Verified Founder">
+                  ✓
+                </div>
               </div>
-              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
-                Visionary behind Acetel Telecommunications and FoneZone India/UAE. Dedicated to zero-compromise grading standards and direct client transparency via the "Ask to CEO" executive escalation portal.
-              </p>
+
+              <div class="flex-1">
+                <div class="flex items-center justify-between flex-wrap gap-1">
+                  <div>
+                    <h4 class="font-bold text-white text-base group-hover:text-amber-300 transition-colors">Hemant Verma</h4>
+                    <p class="text-[11px] text-amber-400 font-semibold tracking-wide">Founder & Chief Executive Officer</p>
+                  </div>
+                  <span class="px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-300 border border-amber-500/30 text-[11px] font-bold">
+                    Acetel Telecommunications
+                  </span>
+                </div>
+                <p class="text-xs text-slate-300 mt-2.5 leading-relaxed">
+                  Visionary founder behind Acetel Telecommunications and FoneZone India & UAE. Champion of zero-compromise grading standards and direct client transparency via the "Ask to CEO" executive escalation gateway.
+                </p>
+                <div class="flex items-center gap-2 mt-4 pt-3 border-t border-slate-800/80 text-[11px]">
+                  <button onclick="navigateTo('#/pages/ask-to-ceo')" class="px-3 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/30 font-bold transition-all flex items-center gap-1.5 cursor-pointer">
+                    <span>👑</span>
+                    <span>Executive Desk</span>
+                  </button>
+                  <span class="text-slate-500">•</span>
+                  <span class="text-slate-400">Bangalore HQ & Dubai FZCO</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="flex items-start gap-4 p-5 rounded-2xl bg-slate-950/80 border border-slate-800">
-            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-2xl font-black text-white shadow">
-              SP
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <h4 class="font-bold text-white text-base">Sahil Pathania</h4>
-                <span class="px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[11px] font-bold">Head of Operations & Logistics</span>
+          <!-- Sahil Pathania Card -->
+          <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950/90 border border-slate-800 hover:border-blue-500/40 p-6 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10">
+            <div class="flex items-start gap-4">
+              <div class="relative shrink-0">
+                <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 via-indigo-600 to-blue-700 p-0.5 shadow-lg shadow-blue-500/20">
+                  <div class="w-full h-full rounded-[14px] bg-slate-950 flex flex-col items-center justify-center relative overflow-hidden">
+                    <span class="text-2xl">📦</span>
+                    <span class="text-[9px] font-black tracking-widest text-blue-400 uppercase mt-0.5">OPS</span>
+                  </div>
+                </div>
+                <div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-blue-500 border-2 border-slate-950 flex items-center justify-center text-[10px] text-white" title="Verified Operations Head">
+                  ⚡
+                </div>
               </div>
-              <p class="text-xs text-slate-400 mt-1 leading-relaxed">
-                Leads pan-India courier logistics, BlueDart fulfillment hubs, and the automated WhatsApp Anti-RTO address verification command center saving ₹13.35L in courier return freight.
-              </p>
+
+              <div class="flex-1">
+                <div class="flex items-center justify-between flex-wrap gap-1">
+                  <div>
+                    <h4 class="font-bold text-white text-base group-hover:text-blue-300 transition-colors">Sahil Pathania</h4>
+                    <p class="text-[11px] text-blue-400 font-semibold tracking-wide">Head of Operations & Logistics</p>
+                  </div>
+                  <span class="px-2.5 py-0.5 rounded-full bg-blue-500/15 text-blue-300 border border-blue-500/30 text-[11px] font-bold">
+                    Pan-India Fulfillment
+                  </span>
+                </div>
+                <p class="text-xs text-slate-300 mt-2.5 leading-relaxed">
+                  Leads pan-India courier logistics, BlueDart fulfillment hubs, and the automated WhatsApp Anti-RTO address verification command center saving ₹13.35L in courier return freight.
+                </p>
+                <div class="flex items-center gap-2 mt-4 pt-3 border-t border-slate-800/80 text-[11px]">
+                  <a href="dashboard.html" class="px-3 py-1 rounded-lg bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 border border-blue-500/30 font-bold transition-all flex items-center gap-1.5 cursor-pointer">
+                    <span>⚙️</span>
+                    <span>Ops Portal</span>
+                  </a>
+                  <span class="text-slate-500">•</span>
+                  <span class="text-slate-400">Delhi & Bangalore Sorting Hubs</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -2962,8 +3100,8 @@
             </div>
           </div>
 
-          <!-- Turntable Stage: Canvas Height = 220px on mobile, 250px on sm+ -->
-          <div class="relative w-full h-[220px] sm:h-[250px] flex items-center justify-center my-auto">
+          <!-- Turntable Stage: Canvas Height = 320px on mobile, 380px on sm, 420px on lg -->
+          <div class="relative w-full h-[320px] sm:h-[380px] lg:h-[420px] flex items-center justify-center my-auto">
             
             <!-- MODE 1: Google <model-viewer> 3D Spherical Turntable -->
             <div id="stage3DWrapper" class="relative w-full h-full flex items-center justify-center">
@@ -2978,8 +3116,10 @@
                 exposure="1.05"
                 auto-rotate-delay="0"
                 rotation-per-second="8deg"
-                orientation="0deg 90deg 90deg"
-                camera-orbit="90deg 90deg 105%"
+                orientation="90deg 90deg 90deg"
+                camera-orbit="0deg 90deg 105%"
+                loading="eager"
+                reveal="auto"
                 min-camera-orbit="auto 5deg auto"
                 max-camera-orbit="auto 175deg auto"
                 interaction-prompt="none"
@@ -3014,7 +3154,7 @@
 
               <!-- Device Image Wrapper with Clean Studio Asset -->
               <div id="rotatorImgWrapper" class="rotator-image-wrapper relative max-h-full flex items-center justify-center">
-                <img id="inspectMainImg" src="assets/iphone14_front.png" alt="Device Angle" class="max-h-[220px] w-auto object-contain select-none">
+                <img id="inspectMainImg" src="assets/turntable_frame_0.png" alt="Device Angle" class="max-h-[290px] sm:max-h-[340px] lg:max-h-[380px] w-auto object-contain select-none drop-shadow-2xl">
                 
                 <!-- 2D Case Simulator Overlay Frame -->
                 <div id="caseSimOverlay2D" class="case-overlay-active hidden"></div>
@@ -3284,20 +3424,20 @@
           <!-- PRACTICAL AI REFURBISHED QUALITY COPILOT ("Ask NexG AI Specialist") -->
           <div id="aiCopilotWidget" class="rounded-xl bg-slate-950/90 border border-purple-500/30 overflow-hidden shadow shrink-0">
             <!-- Header -->
-            <div onclick="toggleAICopilot()" class="px-3 py-2 bg-gradient-to-r from-purple-950/50 to-blue-950/50 flex items-center justify-between cursor-pointer select-none">
-              <div class="flex items-center gap-2">
-                <div class="w-5 h-5 rounded-full bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-xs">
+            <div onclick="toggleAICopilot()" class="px-3.5 py-2.5 bg-gradient-to-r from-purple-950/50 via-slate-900/40 to-blue-950/50 flex items-center justify-between gap-3 cursor-pointer select-none">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-7 h-7 rounded-lg bg-purple-500/20 border border-purple-400/30 flex items-center justify-center text-sm shrink-0 shadow-xs">
                   🤖
                 </div>
-                <div>
-                  <div class="text-xs font-bold text-white flex items-center gap-1.5">
-                    <span>Ask NexG AI Tech Specialist</span>
-                    <span class="px-1.5 py-0.2 rounded text-[11px] bg-purple-500/20 text-purple-300 border border-purple-500/30 font-mono font-bold">24/7 COPILOT</span>
+                <div class="min-w-0 flex flex-col justify-center">
+                  <div class="flex items-center gap-2 flex-nowrap">
+                    <span class="text-xs font-black text-white leading-none whitespace-nowrap">Ask NexG AI Specialist</span>
+                    <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[9px] font-black uppercase tracking-wider bg-purple-500/20 text-purple-300 border border-purple-500/30 shrink-0 font-mono whitespace-nowrap">24/7 Copilot</span>
                   </div>
+                  <p class="text-[11px] text-purple-300/90 font-medium truncate leading-tight mt-1">Battery, Scratches & Parts QA Telemetry</p>
                 </div>
               </div>
-              <div class="flex items-center gap-2">
-                <span class="text-[11px] text-purple-300 font-medium">Battery, Scratches & Parts QA</span>
+              <div class="flex items-center gap-1.5 shrink-0 pl-1">
                 <span id="aiCopilotChevron" class="text-xs text-purple-400 font-bold transition-transform">▼</span>
               </div>
             </div>
@@ -3435,219 +3575,152 @@
   <!-- ======================================================== -->
   <!-- 32-POINT QA VERIFICATION VIDEO PLAYER MODAL (CASHIFY-STYLE) -->
   <!-- ======================================================== -->
-  <div id="verificationVideoModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden items-center justify-center p-2 sm:p-4">
-    <div class="bg-[#0B101D] border border-slate-700/80 rounded-2xl max-w-4xl w-full max-h-[94vh] flex flex-col shadow-2xl overflow-hidden">
+  <div id="verificationVideoModal" class="qa-cert-modal fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white dark:bg-[#0C1222] border border-slate-200 dark:border-slate-800 rounded-3xl max-w-3xl w-full my-auto shadow-2xl overflow-hidden flex flex-col transition-all">
       
-      <!-- Modal Header -->
-      <div class="px-4 py-3 border-b border-slate-800 flex items-center justify-between shrink-0 bg-slate-900/50">
-        <div class="flex items-center gap-2.5">
-          <div class="w-8 h-8 rounded-xl bg-red-600/20 text-red-400 border border-red-500/30 flex items-center justify-center font-bold text-sm">
-            ▶
+      <!-- Certificate Header -->
+      <div class="px-4 sm:px-6 py-4 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50/80 dark:bg-slate-900/60 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 flex items-center justify-center font-black text-lg shrink-0">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
           </div>
           <div>
-            <h3 class="text-sm font-extrabold text-white flex items-center gap-2">
-              <span id="qaVideoModalProductName">iPhone 15 Pro 128GB Natural Titanium</span>
-              <span class="px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-[11px] font-mono font-bold uppercase">QA Video Log</span>
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 border border-emerald-500/30 text-[10px] font-mono font-black uppercase tracking-wider">
+                100% Passed • 32-Point Certified
+              </span>
+              <span class="text-[11px] text-slate-400 font-mono hidden sm:inline">Hash: <span id="qaVideoSerialTag">FZ-QC-2026-9812</span></span>
+            </div>
+            <h3 class="text-sm sm:text-base font-extrabold text-slate-900 dark:text-white mt-0.5" id="qaVideoModalProductName">
+              iPhone 15 Pro 128GB Natural Titanium
             </h3>
-            <p class="text-[11px] text-slate-400">32-Point Refurbished Diagnostic Inspection Tape • Recorded by Lead QA Engineer</p>
           </div>
         </div>
 
-        <div class="flex items-center gap-3">
-          <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[11px] font-mono font-bold">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-            Serial: <span id="qaVideoSerialTag">FZ-QC-2026-9812</span>
-          </span>
-          <button onclick="closeVerificationVideo()" class="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white transition-colors cursor-pointer" title="Close">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        <button onclick="closeVerificationVideo()" class="p-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors cursor-pointer" title="Close Certificate">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+      </div>
+
+      <!-- Certificate Body -->
+      <div class="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+        
+        <!-- Left: Full Pristine Device View & Official Lab Seal -->
+        <div class="md:col-span-5 flex flex-col items-center justify-center p-4 rounded-2xl bg-slate-100/70 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800/80 relative">
+          <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-blue-500/15 text-blue-700 dark:text-blue-300 text-[10px] font-mono font-bold">
+            Grade A (Pristine)
+          </div>
+          <div class="absolute top-2 right-2 flex items-center gap-1 text-[10px] font-mono text-emerald-600 dark:text-emerald-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            Verified Lab Unit
+          </div>
+
+          <div class="my-3 flex items-center justify-center h-52 w-full">
+            <img id="qaVideoDeviceImage" src="assets/iphone15pro_naturaltitanium.png" alt="Inspected Phone" class="max-h-48 w-auto object-contain drop-shadow-xl select-none transition-transform hover:scale-105">
+          </div>
+
+          <div class="w-full pt-3 border-t border-slate-200 dark:border-slate-800/80 flex items-center justify-between text-[11px]">
+            <div>
+              <div class="text-slate-500 dark:text-slate-400 text-[10px]">Lead QA Inspector</div>
+              <div class="font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1">
+                <span>Ajay Sharma</span>
+                <svg class="w-3.5 h-3.5 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-slate-500 dark:text-slate-400 text-[10px]">Testing Center</div>
+              <div class="font-bold text-slate-800 dark:text-slate-200">Delhi Hub • Bay #4</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Diagnostic Telemetry Points -->
+        <div class="md:col-span-7 flex flex-col justify-between space-y-2.5">
+          <div class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center justify-between">
+            <span>Hardware Diagnostic Telemetry</span>
+            <span class="text-emerald-500 font-mono font-bold">32/32 PASSED</span>
+          </div>
+
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</div>
+              <div>
+                <div class="text-xs font-bold text-slate-800 dark:text-white">OLED Display & Bezel Micrometry</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">0.002mm laser scan • 0 dead pixels • 120Hz smooth touch</div>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">100% PASS</span>
+          </div>
+
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</div>
+              <div>
+                <div class="text-xs font-bold text-slate-800 dark:text-white">Battery Cell Health & PD Fast Charge</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">96% original capacity • 27W fast charge verified • 29.4°C thermal</div>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">96% HEALTH</span>
+          </div>
+
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</div>
+              <div>
+                <div class="text-xs font-bold text-slate-800 dark:text-white">Triple Optical Lens & OIS Sensor Shift</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">48MP sharpness check • 5x telephoto pass • 0 lens micro-scuffs</div>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">PASSED</span>
+          </div>
+
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</div>
+              <div>
+                <div class="text-xs font-bold text-slate-800 dark:text-white">Stereo Speakers & 3-Mic Noise Cancelling</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">20Hz - 20,000Hz frequency sweep • Zero harmonic distortion</div>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">PASSED</span>
+          </div>
+
+          <div class="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 h-7 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center font-bold text-xs">✓</div>
+              <div>
+                <div class="text-xs font-bold text-slate-800 dark:text-white">GSMA Clean IMEI & Hardware Unlocked</div>
+                <div class="text-[10px] text-slate-500 dark:text-slate-400">Global blacklist clean • iCloud/Knox unlocked • Indian 5G bands active</div>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500/15 text-emerald-600 dark:text-emerald-400">GSMA CLEAN</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Footer -->
+      <div class="px-4 sm:px-6 py-3.5 border-t border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-950/80 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div class="flex items-center gap-2 text-xs text-slate-500 dark:text-slate-400">
+          <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+          <span>Includes 6-Month FoneZone Hardware Warranty + 7-Day Easy Replacement</span>
+        </div>
+
+        <div class="flex items-center gap-2.5 w-full sm:w-auto">
+          <button onclick="downloadQACertificate()" class="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 text-xs font-bold transition-all cursor-pointer flex items-center justify-center gap-1.5">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            <span>Download PDF</span>
+          </button>
+          <button id="certOrderCodBtn" onclick="orderFromVideoModal()" class="flex-1 sm:flex-initial px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-black shadow-lg shadow-blue-600/30 transition-all cursor-pointer flex items-center justify-center gap-1.5 hover:scale-105 active:scale-95">
+            <span>⚡</span>
+            <span>Order This Inspected Unit (COD)</span>
           </button>
         </div>
       </div>
 
-      <!-- Modal Body: 2 Columns (Left: 9:16 Cinematic Video Player HUD, Right: Diagnostic Checklist & Actions) -->
-      <div class="p-3 sm:p-4 grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 overflow-y-auto">
-        
-        <!-- Left: Simulated 9:16 Video Player Container (7 cols) -->
-        <div class="lg:col-span-7 flex flex-col justify-between bg-black rounded-xl border border-slate-800 relative overflow-hidden p-3 min-h-[380px] sm:min-h-[440px]">
-          
-          <!-- Top HUD Overlay -->
-          <div class="flex items-center justify-between z-20 text-[11px] font-mono">
-            <div class="flex items-center gap-2 bg-black/70 px-2.5 py-1 rounded-lg border border-red-500/40 text-red-400">
-              <span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-              <span class="font-bold">REC • 60 FPS 4K</span>
-            </div>
-            <div class="flex items-center gap-2 bg-black/70 px-2.5 py-1 rounded-lg border border-slate-700 text-slate-300">
-              <span>Station: <b>Lab Hub Delhi-04</b></span>
-            </div>
-          </div>
-
-          <!-- Central Video Viewport with Live Diagnostic Scanning Grid -->
-          <div class="relative my-auto flex items-center justify-center w-full h-64 overflow-hidden rounded-lg video-scan-grid bg-slate-950/60">
-            <!-- Animated Scan Laser Line -->
-            <div id="qaScanLaser" class="qa-scan-laser"></div>
-
-            <!-- Target Device Image under test -->
-            <img id="qaVideoDeviceImage" src="assets/iphone15pro_naturaltitanium.png" alt="Device" class="max-h-56 max-w-[85%] object-contain drop-shadow-2xl z-10 transition-all duration-500">
-
-            <!-- Active Test Phase HUD Callout Pill -->
-            <div class="absolute bottom-2 left-2 z-20 bg-slate-900/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-blue-500/50 shadow-lg">
-              <div class="text-[11px] text-blue-400 font-mono font-bold uppercase tracking-wider flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
-                <span id="qaActivePhaseTitle">Phase 1: Physical Housing & 0-Dent Inspection</span>
-              </div>
-              <div id="qaActivePhaseTelemetry" class="text-[11px] text-emerald-400 font-mono font-bold mt-0.5">
-                Laser Surface Micrometry: 0 Dents Detected (Grade A)
-              </div>
-            </div>
-
-            <!-- Audio Waveform Indicator (Simulating speaker test) -->
-            <div id="qaAudioWaveform" class="absolute top-3 right-3 z-20 hidden items-end gap-1 bg-black/70 px-2 py-1.5 rounded-lg border border-slate-700">
-              <span class="text-[11px] font-mono text-slate-400 mr-1">Acoustic:</span>
-              <div class="w-1 bg-blue-500 qa-soundwave-bar"></div>
-              <div class="w-1 bg-indigo-500 qa-soundwave-bar"></div>
-              <div class="w-1 bg-cyan-400 qa-soundwave-bar"></div>
-              <div class="w-1 bg-emerald-400 qa-soundwave-bar"></div>
-              <div class="w-1 bg-blue-400 qa-soundwave-bar"></div>
-            </div>
-          </div>
-
-          <!-- Video Controls & Timeline Bar -->
-          <div class="z-20 mt-2 bg-slate-900/90 rounded-xl p-2.5 border border-slate-800">
-            <!-- Timeline Scrubber -->
-            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-1.5">
-              <span id="qaVideoCurrentTime">00:08</span>
-              <span class="text-blue-400 font-bold">32-POINT DIAGNOSTIC TIMELINE</span>
-              <span>00:32</span>
-            </div>
-            <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden cursor-pointer relative" onclick="seekQATimeline(event)">
-              <div id="qaVideoProgressBar" class="h-full bg-gradient-to-r from-red-500 via-blue-500 to-emerald-400 rounded-full transition-all duration-300" style="width: 25%;"></div>
-            </div>
-
-            <!-- Controls Row -->
-            <div class="flex items-center justify-between mt-2 pt-1">
-              <div class="flex items-center gap-2">
-                <button id="qaVideoPlayBtn" onclick="toggleQAVideoPlay()" class="px-3 py-1 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center gap-1.5 cursor-pointer">
-                  <span id="qaPlayIcon">⏸️</span>
-                  <span id="qaPlayText">Pause</span>
-                </button>
-                <button onclick="restartQAVideo()" class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-semibold cursor-pointer">
-                  🔄 Replay
-                </button>
-              </div>
-
-              <!-- Diagnostic Phase Step Pills -->
-              <div class="flex items-center gap-1">
-                <button onclick="jumpToQAPhase(0)" id="qaPhasePill0" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-blue-600 text-white cursor-pointer">1</button>
-                <button onclick="jumpToQAPhase(1)" id="qaPhasePill1" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">2</button>
-                <button onclick="jumpToQAPhase(2)" id="qaPhasePill2" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">3</button>
-                <button onclick="jumpToQAPhase(3)" id="qaPhasePill3" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">4</button>
-                <button onclick="jumpToQAPhase(4)" id="qaPhasePill4" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">5</button>
-                <button onclick="jumpToQAPhase(5)" id="qaPhasePill5" class="px-2 py-0.5 rounded text-[11px] font-mono font-bold bg-slate-800 text-slate-400 hover:text-white cursor-pointer">6</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right: Diagnostic Certification Breakdown (5 cols) -->
-        <div class="lg:col-span-5 flex flex-col justify-between space-y-3">
-          
-          <!-- QA Certificate Header Card -->
-          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 shadow">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Refurbished Certificate:</span>
-              <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-black font-mono">
-                100% PASSED (32/32)
-              </span>
-            </div>
-
-            <!-- Technician Info -->
-            <div class="p-2 rounded-lg bg-slate-900/70 border border-slate-800 text-xs flex items-center justify-between">
-              <div>
-                <div class="text-white font-bold">QA Lead: Ajay Sharma</div>
-                <div class="text-[11px] text-slate-400">Delhi Technical Center • Bay 4</div>
-              </div>
-              <div class="text-right">
-                <div class="text-[11px] text-emerald-400 font-mono font-bold">Verified Today</div>
-                <div class="text-[11px] text-slate-500">Digital Hash Locked</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6-Stage Diagnostic Checklist Tabs -->
-          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 space-y-2 flex-1">
-            <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">6 Diagnostic Stages:</div>
-
-            <div class="space-y-1.5 text-xs">
-              <div onclick="jumpToQAPhase(0)" id="qaStageCard0" class="p-2 rounded-lg bg-blue-900/30 border border-blue-500/40 flex items-center justify-between cursor-pointer transition-all">
-                <div class="flex items-center gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span class="text-white font-semibold">1. Physical & 0-Dent Inspection</span>
-                </div>
-                <span class="text-[11px] text-emerald-400 font-mono">PASS (0 Dents)</span>
-              </div>
-
-              <div onclick="jumpToQAPhase(1)" id="qaStageCard1" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
-                <div class="flex items-center gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span class="text-slate-300 font-semibold">2. OLED & Multi-Touch Digitizer</span>
-                </div>
-                <span class="text-[11px] text-emerald-400 font-mono">PASS (120Hz)</span>
-              </div>
-
-              <div onclick="jumpToQAPhase(2)" id="qaStageCard2" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
-                <div class="flex items-center gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span class="text-slate-300 font-semibold">3. Triple Camera & OIS Telemetry</span>
-                </div>
-                <span class="text-[11px] text-emerald-400 font-mono">PASS (48MP)</span>
-              </div>
-
-              <div onclick="jumpToQAPhase(3)" id="qaStageCard3" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
-                <div class="flex items-center gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span class="text-slate-300 font-semibold">4. Stereo Speakers & Acoustic Mic</span>
-                </div>
-                <span class="text-[11px] text-emerald-400 font-mono">PASS (88dB)</span>
-              </div>
-
-              <div onclick="jumpToQAPhase(4)" id="qaStageCard4" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
-                <div class="flex items-center gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span class="text-slate-300 font-semibold">5. Battery Health & USB-C Draw</span>
-                </div>
-                <span class="text-[11px] text-emerald-400 font-mono">PASS (96%)</span>
-              </div>
-
-              <div onclick="jumpToQAPhase(5)" id="qaStageCard5" class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 flex items-center justify-between cursor-pointer transition-all">
-                <div class="flex items-center gap-2">
-                  <span class="text-emerald-400 font-bold">✓</span>
-                  <span class="text-slate-300 font-semibold">6. Motherboard & Clean IMEI</span>
-                </div>
-                <span class="text-[11px] text-emerald-400 font-mono">PASS (Clean)</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom Actions: Download Certificate + Buy COD -->
-          <div class="p-3 rounded-xl bg-slate-950/80 border border-slate-800/90 space-y-2">
-            <button onclick="downloadQACertificate()" class="w-full py-2 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 font-bold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer">
-              <span>📄</span>
-              <span>Download Lab Certificate (PDF)</span>
-            </button>
-            <button onclick="buyVerifiedDeviceNow()" class="w-full py-2.5 px-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-blue-600/30 transition-all cursor-pointer">
-              <span>⚡</span>
-              <span>Order This Exact Verified Phone (COD)</span>
-            </button>
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
   </div>
-  
+
   <!-- ======================================================== -->
   <!-- SLIDE-OVER MOBILE NAVIGATION & DEMO DRAWER (< sm)        -->
   <!-- ======================================================== -->
@@ -4046,6 +4119,72 @@
     </div>
   </nav>
 
+  <!-- Executive Global Country & Currency Dropdown Modal -->
+  <div 
+    id="globalCurrencyDropdownMenu" 
+    class="hidden fixed w-[calc(100vw-24px)] sm:w-88 max-w-sm bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl z-[100000] overflow-hidden text-slate-800 dark:text-slate-100"
+    onclick="event.stopPropagation()"
+  >
+    <!-- Modal Header -->
+    <div class="px-3.5 py-2.5 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50/90 dark:bg-slate-800/60">
+      <div class="flex items-center gap-2">
+        <span class="text-base">🌐</span>
+        <div>
+          <h4 class="font-extrabold text-xs text-slate-900 dark:text-white leading-none">Country & Currency</h4>
+          <p class="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">164 countries • Live exchange rates</p>
+        </div>
+      </div>
+      <button onclick="toggleCurrencyDropdown(event)" class="w-6 h-6 rounded-full bg-slate-200/60 dark:bg-slate-800 text-slate-500 hover:text-slate-900 dark:hover:text-white flex items-center justify-center text-xs font-bold transition-colors cursor-pointer" aria-label="Close currency selector">✕</button>
+    </div>
+
+    <!-- Sticky Fast Search Input -->
+    <div class="p-2.5 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 sticky top-0 z-20 shadow-xs">
+      <div class="relative flex items-center">
+        <span class="absolute left-2.5 text-slate-400 text-xs pointer-events-none">🔍</span>
+        <input 
+          type="text" 
+          id="currencySearchInput" 
+          oninput="filterCurrencies(event)" 
+          placeholder="Search 164 countries or currencies..." 
+          class="w-full pl-8 pr-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white font-medium"
+        >
+      </div>
+    </div>
+
+    <!-- Quick Popular Region Chips -->
+    <div class="px-2.5 py-2 border-b border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-800/30 flex flex-wrap gap-1" id="popularCurrencyChips">
+      <button onclick="selectGlobalCurrency('INR', event)" class="px-2 py-1 rounded-md text-[10px] font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 text-slate-700 dark:text-slate-200 flex items-center gap-1 shadow-2xs cursor-pointer active:scale-95 transition-all">
+        <span class="flags flags-India"></span> ₹ INR
+      </button>
+      <button onclick="selectGlobalCurrency('AED', event)" class="px-2 py-1 rounded-md text-[10px] font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 text-slate-700 dark:text-slate-200 flex items-center gap-1 shadow-2xs cursor-pointer active:scale-95 transition-all">
+        <span class="flags flags-United-Arab-Emirates"></span> AED
+      </button>
+      <button onclick="selectGlobalCurrency('USD', event)" class="px-2 py-1 rounded-md text-[10px] font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 text-slate-700 dark:text-slate-200 flex items-center gap-1 shadow-2xs cursor-pointer active:scale-95 transition-all">
+        <span class="flags flags-United-States"></span> $ USD
+      </button>
+      <button onclick="selectGlobalCurrency('GBP', event)" class="px-2 py-1 rounded-md text-[10px] font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 text-slate-700 dark:text-slate-200 flex items-center gap-1 shadow-2xs cursor-pointer active:scale-95 transition-all">
+        <span class="flags flags-United-Kingdom"></span> £ GBP
+      </button>
+      <button onclick="selectGlobalCurrency('EUR', event)" class="px-2 py-1 rounded-md text-[10px] font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 text-slate-700 dark:text-slate-200 flex items-center gap-1 shadow-2xs cursor-pointer active:scale-95 transition-all">
+        <span class="flags flags-European-Union"></span> € EUR
+      </button>
+      <button onclick="selectGlobalCurrency('SAR', event)" class="px-2 py-1 rounded-md text-[10px] font-bold bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-blue-500 text-slate-700 dark:text-slate-200 flex items-center gap-1 shadow-2xs cursor-pointer active:scale-95 transition-all">
+        <span class="flags flags-Saudi-Arabia"></span> SAR
+      </button>
+    </div>
+
+    <!-- Scrollable 164 Countries List -->
+    <ul class="currency-dropdown-list max-h-60 overflow-y-auto divide-y divide-slate-100 dark:divide-slate-800/60 p-0 m-0" id="doublyCurrencyList">
+      <!-- Dynamically rendered via app.js -->
+    </ul>
+
+    <!-- Empty Search State -->
+    <div id="currencySearchEmpty" class="hidden py-8 px-4 text-center text-xs text-slate-400">
+      <div class="text-base mb-1">🔍</div>
+      No countries or currencies match your search.
+    </div>
+  </div>
+
   <!-- Toast Notification Container -->
   <div id="toastNotification" class="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-50 hidden px-4 py-3 rounded-xl bg-slate-900 border border-blue-500/50 text-white text-xs shadow-2xl flex items-center gap-2">
     <span id="toastIcon">✨</span>
@@ -4062,6 +4201,7 @@
     }
   </style>
 
-  <script src="app.js?v=2.7"></script>
+  <script src="assets/fz_currencies_data.js"></script>
+  <script src="app.js?v=15"></script>
 </body>
 </html>

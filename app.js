@@ -11,7 +11,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "FLAGSHIP",
-    "image": "assets/iphone15pro_naturaltitanium.png",
+    "image": "assets/real_fz/iphone15pro_real.jpg",
     "msrp": 134900,
     "storageOptions": [
       {
@@ -244,19 +244,19 @@ const CATALOG = [
     },
     "angles": {
       "0": "assets/iphone14_front.png",
-      "45": "assets/turntable_frame_45.png",
-      "90": "assets/turntable_frame_90.png",
-      "135": "assets/turntable_frame_135.png",
-      "180": "assets/turntable_frame_180.png",
-      "225": "assets/turntable_frame_225.png",
-      "270": "assets/turntable_frame_270.png",
-      "315": "assets/turntable_frame_315.png",
+      "45": "assets/turntable_frame_45.png?v=2",
+      "90": "assets/turntable_frame_90.png?v=2",
+      "135": "assets/turntable_frame_135.png?v=2",
+      "180": "assets/turntable_frame_180.png?v=2",
+      "225": "assets/turntable_frame_225.png?v=2",
+      "270": "assets/turntable_frame_270.png?v=2",
+      "315": "assets/turntable_frame_315.png?v=2",
       "front": "assets/iphone14_front.png",
-      "back": "assets/turntable_frame_180.png",
-      "right": "assets/turntable_frame_right.png",
-      "left": "assets/turntable_frame_left.png",
-      "top": "assets/turntable_frame_top.png",
-      "bottom": "assets/turntable_frame_bottom.png"
+      "back": "assets/turntable_frame_180.png?v=2",
+      "right": "assets/turntable_frame_right.png?v=2",
+      "left": "assets/turntable_frame_left.png?v=2",
+      "top": "assets/turntable_frame_top.png?v=2",
+      "bottom": "assets/turntable_frame_bottom.png?v=2"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "8 units available in Delhi Hub"
@@ -269,7 +269,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "TITANIUM PRO",
-    "image": "assets/iphone15_promax.jpg",
+    "image": "assets/real_fz/iphone15promax_real.jpg",
     "msrp": 159900,
     "storageOptions": [
       {
@@ -485,7 +485,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "DYNAMIC ISLAND",
-    "image": "assets/iphone15_pink.jpg",
+    "image": "assets/real_fz/iphone15_real.jpg",
     "msrp": 79900,
     "storageOptions": [
       {
@@ -673,7 +673,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "GOLD FLAGSHIP",
-    "image": "assets/iphone14_pro_gold.jpg",
+    "image": "assets/real_fz/iphone16promax_real.jpg",
     "msrp": 139900,
     "storageOptions": [
       {
@@ -862,7 +862,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "PRO DEAL",
-    "image": "assets/iphone14_pro_black.jpg",
+    "image": "assets/real_fz/iphone16pro_real.jpg",
     "msrp": 129900,
     "storageOptions": [
       {
@@ -1036,7 +1036,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "BESTSELLER",
-    "image": "assets/iphone14_blue.png",
+    "image": "assets/real_fz/iphone16plus_real.jpg",
     "msrp": 69900,
     "storageOptions": [
       {
@@ -1220,7 +1220,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "120HZ PRO",
-    "image": "assets/iphone13_promax.jpg",
+    "image": "assets/real_fz/iphone17promax_real.jpg",
     "msrp": 129900,
     "storageOptions": [
       {
@@ -1385,7 +1385,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "VALUE KING",
-    "image": "assets/iphone13_starlight.png",
+    "image": "assets/real_fz/iphone_air_real.jpg",
     "msrp": 59900,
     "storageOptions": [
       {
@@ -2115,7 +2115,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "samsung",
     "badge": "200MP CAM",
-    "image": "assets/samsung_s23_ultra.png",
+    "image": "assets/real_fz/samsung_s23ultra_real.jpg",
     "msrp": 124999,
     "storageOptions": [
       {
@@ -3049,7 +3049,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "google",
     "badge": "AI CAMERA",
-    "image": "assets/google_pixel.jpg",
+    "image": "assets/real_fz/pixel6_real.jpg",
     "msrp": 79999,
     "storageOptions": [
       {
@@ -4151,7 +4151,7 @@ const CATALOG = [
     "category": "watch",
     "brand": "apple",
     "badge": "OLED RETINA",
-    "image": "assets/applewatch_series7.png",
+    "image": "assets/applewatch_series7_nobg.png",
     "msrp": 44900,
     "storageOptions": [
       {
@@ -4274,11 +4274,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/applewatch_series7.png",
-      "45": "assets/applewatch_series7.png",
-      "90": "assets/applewatch_series7.png",
-      "180": "assets/applewatch_series7.png",
-      "270": "assets/applewatch_series7.png"
+      "0": "assets/applewatch_series7_nobg.png",
+      "45": "assets/applewatch_series7_nobg.png",
+      "90": "assets/applewatch_series7_nobg.png",
+      "180": "assets/applewatch_series7_nobg.png",
+      "270": "assets/applewatch_series7_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "8 units available in Delhi Hub"
@@ -4291,7 +4291,7 @@ const CATALOG = [
     "category": "watch",
     "brand": "samsung",
     "badge": "BIOACTIVE SENSOR",
-    "image": "assets/galaxy_watch5.jpg",
+    "image": "assets/galaxy_watch5_nobg.png",
     "msrp": 33999,
     "storageOptions": [
       {
@@ -4414,11 +4414,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/galaxy_watch5.jpg",
-      "45": "assets/galaxy_watch5.jpg",
-      "90": "assets/galaxy_watch5.jpg",
-      "180": "assets/galaxy_watch5.jpg",
-      "270": "assets/galaxy_watch5.jpg"
+      "0": "assets/galaxy_watch5_nobg.png",
+      "45": "assets/galaxy_watch5_nobg.png",
+      "90": "assets/galaxy_watch5_nobg.png",
+      "180": "assets/galaxy_watch5_nobg.png",
+      "270": "assets/galaxy_watch5_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "6 units available in Mumbai Hub"
@@ -4437,7 +4437,10 @@ const INITIAL_ORDERS = [
     product: "iPhone 15 Pro 128GB (Grade A)",
     amount: 84999,
     status: "unverified",
+    stage: "pending",
     risk: "High RTO Risk (First-time COD)",
+    khataScore: "New COD • Low Trust",
+    khataBadgeClass: "bg-red-500/20 text-red-300 border border-red-500/40",
     timestamp: "10 mins ago"
   },
   {
@@ -4450,7 +4453,10 @@ const INITIAL_ORDERS = [
     product: "Samsung Galaxy S23 Ultra (Grade A)",
     amount: 67999,
     status: "whatsapp_sent",
+    stage: "confirmed",
     risk: "Medium Risk (Awaiting OTP)",
+    khataScore: "1 Delivery • Verified",
+    khataBadgeClass: "bg-blue-500/20 text-blue-300 border border-blue-500/40",
     timestamp: "24 mins ago"
   },
   {
@@ -4463,7 +4469,10 @@ const INITIAL_ORDERS = [
     product: "iPhone 14 128GB (Grade B)",
     amount: 43999,
     status: "verified",
+    stage: "packed",
     risk: "Low Risk (Address OTP Confirmed)",
+    khataScore: "3 Deliveries • 0% RTO",
+    khataBadgeClass: "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40",
     timestamp: "45 mins ago"
   },
   {
@@ -4476,7 +4485,10 @@ const INITIAL_ORDERS = [
     product: "MacBook Air M2 Midnight (Grade A)",
     amount: 78699,
     status: "prepaid",
+    stage: "transit",
     risk: "Zero Risk (Prepaid UPI via ₹300 Off)",
+    khataScore: "Repeat VIP • 100% Khata",
+    khataBadgeClass: "bg-purple-500/20 text-purple-300 border border-purple-500/40",
     timestamp: "1 hour ago"
   },
   {
@@ -4489,7 +4501,10 @@ const INITIAL_ORDERS = [
     product: "iPad 10th Gen Blue (Grade A)",
     amount: 32999,
     status: "unverified",
+    stage: "pending",
     risk: "High RTO Risk (Unconfirmed Doorstep)",
+    khataScore: "New COD • Address Unconfirmed",
+    khataBadgeClass: "bg-amber-500/20 text-amber-300 border border-amber-500/40",
     timestamp: "2 hours ago"
   }
 ];
@@ -4507,6 +4522,14 @@ const state = {
   activeCategory: "all",
   activeSubFilter: "all",
   activeRegion: "IN",
+  activeCurrency: {
+    val: "INR",
+    country: "India",
+    text: "Indian Rupee",
+    symbol: "₹",
+    display: "INR",
+    rateFromINR: 1.0
+  },
   selectedProductGrades: {},
   searchQuery: "",
   
@@ -4515,7 +4538,7 @@ const state = {
   wishlist: getInitialWishlist(),
 
   // Theme State
-  theme: "dark",
+  theme: "light",
 
   // Shop by Budget Finder State
   budgetMax: 100000,
@@ -4526,7 +4549,7 @@ const state = {
   currentInspectGrade: "A",
   currentInspectAngle: 0,
   activePerspective: "front",
-  viewerMode: "3d", // "3d" or "photo"
+  viewerMode: "3d", // "3d", "photo", or "exploded"
   isAutoSpinning: false,
   autoSpinAnimFrame: null,
   isZoomLoupeActive: false,
@@ -4536,6 +4559,7 @@ const state = {
   orders: [...INITIAL_ORDERS],
   selectedOrderId: "FZ-1049",
   queueFilter: "all",
+  opsViewMode: "table", // "table" or "kanban"
   chatHistory: {},
 
   // Storage Selection & Technical Specs State
@@ -4581,7 +4605,7 @@ function getProductPrice(product, grade, storageSize) {
 // THEME ENGINE (LIGHT MODE & DARK MODE WITH DUAL SUPPORT)
 // ========================================================
 function initTheme() {
-  const saved = localStorage.getItem("fz_theme") || "dark";
+  const saved = localStorage.getItem("fz_theme") || "light";
   state.theme = saved;
   applyTheme(saved);
 }
@@ -4597,6 +4621,7 @@ function applyTheme(theme) {
   const body = document.body;
   const html = document.documentElement;
   const iconTop = document.getElementById("themeToggleIcon");
+  const iconMobile = document.getElementById("themeToggleIconMobile");
   const labelTop = document.getElementById("themeToggleLabel");
   const mainLogo = document.getElementById("mainNavbarLogo");
   const footerLogo = document.getElementById("footerLogo");
@@ -4606,36 +4631,74 @@ function applyTheme(theme) {
     body.classList.remove("bg-[#070A10]", "text-slate-100");
     body.classList.add("bg-[#F8FAFC]", "text-slate-900");
     html.classList.remove("dark");
-    if (iconTop) iconTop.textContent = "🌙";
+    html.classList.add("light");
+    if (iconTop) {
+      iconTop.setAttribute("data-lucide", "moon");
+      iconTop.className = "w-3.5 h-3.5 text-slate-700";
+    }
+    if (iconMobile) {
+      iconMobile.setAttribute("data-lucide", "moon");
+      iconMobile.className = "w-4 h-4 text-slate-700";
+    }
     if (labelTop) labelTop.textContent = "Dark Mode";
     if (mainLogo) mainLogo.src = "assets/fonezone_logo.png";
     if (footerLogo) footerLogo.src = "assets/fonezone_logo.png";
     localStorage.setItem("fz_theme", "light");
-    showToast("☀️ Switched to Light Mode (Apple & BackMarket Clean E-Commerce)");
+    showToast("Switched to Light Mode (Apple & BackMarket Clean E-Commerce)");
   } else {
     body.classList.remove("theme-light");
     body.classList.remove("bg-[#F8FAFC]", "text-slate-900");
     body.classList.add("bg-[#070A10]", "text-slate-100");
+    html.classList.remove("light");
     html.classList.add("dark");
-    if (iconTop) iconTop.textContent = "☀️";
+    if (iconTop) {
+      iconTop.setAttribute("data-lucide", "sun");
+      iconTop.className = "w-3.5 h-3.5 text-amber-400";
+    }
+    if (iconMobile) {
+      iconMobile.setAttribute("data-lucide", "sun");
+      iconMobile.className = "w-4 h-4 text-amber-400";
+    }
     if (labelTop) labelTop.textContent = "Light Mode";
     if (mainLogo) mainLogo.src = "assets/fonezone_logo_white.png";
     if (footerLogo) footerLogo.src = "assets/fonezone_logo_white.png";
     localStorage.setItem("fz_theme", "dark");
-    showToast("🌙 Switched to Dark Mode (High-Tech Midnight Aesthetic)");
+    showToast("Switched to Dark Mode (High-Tech Midnight Aesthetic)");
   }
   if (window.lucide) {
     window.lucide.createIcons();
   }
 }
 
-// Format currency
+// Format currency across 164 global currencies
 function formatMoney(amountINR) {
-  if (state.activeRegion === "UAE") {
-    const aed = Math.round(amountINR / 22.8);
-    return "AED " + aed.toLocaleString();
+  if (!state.activeCurrency || state.activeCurrency.val === "INR") {
+    return "₹" + Math.round(amountINR).toLocaleString("en-IN");
   }
-  return "₹" + amountINR.toLocaleString("en-IN");
+  const curr = state.activeCurrency;
+  const rate = curr.rateFromINR || (curr.val === "AED" ? (1 / 22.8) : 1.0);
+  const converted = Math.round(amountINR * rate);
+  
+  if (curr.val === "USD") {
+    return "$" + converted.toLocaleString("en-US");
+  } else if (curr.val === "EUR") {
+    return "€" + converted.toLocaleString("de-DE");
+  } else if (curr.val === "GBP") {
+    return "£" + converted.toLocaleString("en-GB");
+  } else if (curr.val === "AED") {
+    return "AED " + converted.toLocaleString("en-US");
+  } else if (curr.val === "SAR") {
+    return "SAR " + converted.toLocaleString("en-US");
+  } else if (curr.val === "CAD") {
+    return "CAD $" + converted.toLocaleString("en-US");
+  } else if (curr.val === "AUD") {
+    return "AUD $" + converted.toLocaleString("en-US");
+  } else if (curr.val === "JPY") {
+    return "¥" + converted.toLocaleString("ja-JP");
+  } else if (curr.symbol && curr.symbol.length <= 3 && !/[a-zA-Z]/.test(curr.symbol)) {
+    return curr.symbol + " " + converted.toLocaleString();
+  }
+  return curr.display + " " + converted.toLocaleString();
 }
 
 /* ======================================================== */
@@ -4653,9 +4716,12 @@ function switchPortal(portal) {
     opsEl.classList.add("hidden");
     tabStorefrontBtn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-active flex items-center gap-1.5 cursor-pointer";
     tabOpsBtn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-inactive flex items-center gap-1.5 cursor-pointer";
+    handleRoute();
     window.scrollTo({ top: 0, behavior: "smooth" });
   } else {
     storefrontEl.classList.add("hidden");
+    // Ensure all sub-views in storefront are hidden while in ops
+    document.querySelectorAll(".page-view").forEach(v => v.classList.add("hidden"));
     opsEl.classList.remove("hidden");
     tabStorefrontBtn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-inactive flex items-center gap-1.5 cursor-pointer";
     tabOpsBtn.className = "px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all portal-tab-active flex items-center gap-1.5 cursor-pointer";
@@ -4830,147 +4896,94 @@ function renderCatalog() {
     const displayName = p.baseModelName ? `${p.baseModelName} ${currentStorage} ${p.color || ''}`.trim() : p.name;
 
     return `
-      <div class="fz-glass-card rounded-2xl overflow-hidden p-4 flex flex-col justify-between group cursor-pointer" onclick="openInspector('${p.id}')">
-        <div>
-          <!-- Top Badges & Wishlist Toggle -->
-          <div class="flex items-center justify-between gap-2 mb-3">
-            <div class="flex items-center gap-1.5 min-w-0">
-              <span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-blue-500/20 text-blue-300 border border-blue-500/30 font-mono uppercase truncate">
-                ${p.badge}
-              </span>
-              <span class="px-2 py-0.5 rounded-full text-[11px] font-bold shrink-0 ${currentGrade === 'A' ? 'badge-grade-a' : currentGrade === 'B' ? 'badge-grade-b' : 'badge-grade-c'}">
+      <article class="fz-card group cursor-pointer" onclick="openInspector('${p.id}')">
+        <!-- Top Image Area with Badges & Wishlist -->
+        <div class="fz-card__image-wrap relative w-full pt-[100%] bg-[#FBFBFC] dark:bg-slate-900/60 overflow-hidden flex items-center justify-center">
+          <!-- Discount / Savings Badge (Top-Left) -->
+          <span class="fz-card__badge absolute top-3 left-3 text-[11px] font-bold px-2 py-0.5 rounded bg-black/80 dark:bg-black/90 text-white z-10">
+            -${priceInfo.savingsPct}% vs new
+          </span>
+
+          <!-- Wishlist Heart (Top-Right) -->
+          <button 
+            type="button"
+            onclick="event.stopPropagation(); toggleWishlist('${p.id}');" 
+            data-product-id="${p.id}"
+            class="card-wishlist-btn absolute top-2.5 right-2.5 z-10 w-8 h-8 rounded-full bg-white/90 dark:bg-slate-800/90 shadow-sm flex items-center justify-center transition-all cursor-pointer ${isWishlisted ? 'text-red-500' : 'text-slate-400 hover:text-red-500'}" 
+            title="${isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}"
+            aria-label="Wishlist"
+          >
+            <svg class="w-4 h-4 ${isWishlisted ? 'fill-red-500 text-red-500' : 'text-slate-400 fill-none'}" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+            </svg>
+          </button>
+
+          <!-- Main Device Image -->
+          <img src="${p.image}" alt="${displayName}" class="absolute inset-0 w-full h-full object-contain p-5 group-hover:scale-105 transition-transform duration-300 select-none">
+
+          <!-- 360° Inspector Quick Trigger Overlay (Luxury High-Contrast Badge) -->
+          <button onclick="openInspector('${p.id}'); event.stopPropagation();" class="card-360-badge absolute bottom-2.5 right-2.5 z-10 px-2.5 py-1 rounded-full text-[11px] flex items-center gap-1.5 cursor-pointer select-none" title="Inspect 360° Condition & Diagnostics">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span class="badge-360-num font-mono">360°</span>
+            <span class="badge-360-lbl hidden sm:inline">Inspect</span>
+          </button>
+        </div>
+
+        <!-- Body Area -->
+        <div class="fz-card__body p-3.5 flex flex-col flex-1 justify-between gap-2.5">
+          <div>
+            <!-- Title -->
+            <h3 class="fz-card__title text-[14px] font-extrabold text-[#111111] dark:text-white leading-snug line-clamp-1 group-hover:text-blue-600 transition-colors" title="${displayName}">
+              ${displayName}
+            </h3>
+
+            <!-- Color Swatches & Grade -->
+            <div class="flex items-center justify-between mt-1.5">
+              <div class="fz-card__swatches flex items-center gap-1">
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-800 border border-slate-300 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400 inline-block"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-100 border border-amber-300 inline-block"></span>
+              </div>
+              <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
                 ${gradeInfo.label}
               </span>
             </div>
-            <button 
-              type="button"
-              onclick="event.stopPropagation(); toggleWishlist('${p.id}');" 
-              data-product-id="${p.id}"
-              class="card-wishlist-btn p-1.5 rounded-lg transition-all cursor-pointer ${isWishlisted ? 'is-wishlisted text-red-500 bg-red-500/15 border border-red-500/30 shadow-sm' : 'text-slate-400 hover:text-red-400 hover:bg-slate-800/80 border border-transparent'}" 
-              title="${isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}"
-              aria-label="Wishlist"
-            >
-              <span class="text-sm leading-none">${isWishlisted ? '❤️' : '🤍'}</span>
+
+            <!-- Price -->
+            <div class="fz-card__price flex items-baseline gap-2 mt-2">
+              <span class="text-[15px] font-black text-[#111111] dark:text-white">${formatMoney(priceInfo.price)}</span>
+              <span class="text-[12px] text-slate-400 line-through">${formatMoney(priceInfo.msrp)}</span>
+            </div>
+
+            <!-- Authentic FoneZone Yellow Warranty Pill -->
+            <div class="fz-card__warranty mt-2 w-full py-1.5 px-2 rounded-md bg-[#FFD60A] text-black font-black text-[11px] text-center tracking-wide shadow-sm flex items-center justify-center gap-1">
+              <span>🛡️</span>
+              <span>12 Months Warranty</span>
+            </div>
+
+            <!-- Quick Trust Metadata -->
+            <div class="mt-2 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 px-0.5">
+              <span class="flex items-center gap-1 font-medium text-emerald-600 dark:text-emerald-400">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> 32-Pt QA
+              </span>
+              <span class="font-mono font-bold text-slate-700 dark:text-slate-300">
+                ${gradeInfo.battery}% Battery
+              </span>
+            </div>
+          </div>
+
+          <!-- Bottom CTA Action Buttons (Full-Width Pill CTA Matching Real FoneZone) -->
+          <div class="flex items-center gap-2 mt-1 pt-2 border-t border-slate-100 dark:border-slate-800/80" onclick="event.stopPropagation();">
+            <button onclick="addToCart('${p.id}')" class="p-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all cursor-pointer" title="Add to Cart">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            </button>
+            <button onclick="buyProductCOD('${p.id}')" class="fz-card__btn flex-1 h-[38px] rounded-full bg-[#111111] dark:bg-white text-white dark:text-[#111111] font-extrabold text-[13px] flex items-center justify-center gap-1.5 hover:bg-slate-800 dark:hover:bg-slate-100 transition-all shadow cursor-pointer active:scale-95">
+              <span>Shop Now</span>
+              <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </button>
           </div>
-
-          <!-- Product Image Container with Cashify Video Proof Badge & Star Rating -->
-          <div class="relative h-44 flex items-center justify-center p-2 mb-3 overflow-hidden rounded-xl bg-slate-950/40 border border-slate-800/60 group/img">
-            
-            <!-- Star Rating Overlay (Top-Left) -->
-            <div class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-slate-950/80 backdrop-blur-md border border-slate-700/80 text-amber-400 text-[11px] font-bold flex items-center gap-1 z-10">
-              <span>★ ${rating}</span>
-              <span class="text-slate-400 text-[11px] font-normal">(${reviews})</span>
-            </div>
-
-            <!-- Cashify-Style "▶ Watch Video Proof" Badge Overlay (Top-Right) -->
-            <button onclick="openVerificationVideo('${p.id}'); event.stopPropagation();" 
-                    class="video-proof-badge absolute top-2 right-2 px-2.5 py-1 rounded-full bg-red-600 hover:bg-red-500 text-white text-[11px] font-black flex items-center gap-1.5 shadow-lg shadow-red-600/40 transition-all hover:scale-105 cursor-pointer z-10"
-                    title="Watch 32-point lab verification video for this device">
-              <span class="w-3.5 h-3.5 rounded-full bg-white text-red-600 flex items-center justify-center text-[11px] font-black">▶</span>
-              <span>Video Proof</span>
-            </button>
-
-            <!-- Main Product Image -->
-            <img src="${p.image}" alt="${displayName}" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-300 drop-shadow-xl">
-            
-            <!-- Dual Hover Actions Bar: 360 Inspect & Video QA -->
-            <div class="absolute bottom-1.5 inset-x-2 flex items-center justify-center gap-1.5 opacity-90 group-hover:opacity-100 transition-all">
-              <button onclick="openInspector('${p.id}'); event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-slate-900/90 hover:bg-blue-600 text-white border border-slate-700 text-[11px] font-bold flex items-center gap-1 shadow-lg cursor-pointer transition-all">
-                <span>🔍 360° Inspect</span>
-              </button>
-              <button onclick="openVerificationVideo('${p.id}'); event.stopPropagation();" class="px-2.5 py-1 rounded-full bg-slate-900/90 hover:bg-red-600 text-white border border-slate-700 text-[11px] font-bold flex items-center gap-1 shadow-lg cursor-pointer transition-all">
-                <span>📹 Lab Video</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- Product Title with Selected Storage -->
-          <h3 class="text-xs font-bold text-white group-hover:text-blue-400 transition-colors line-clamp-1" title="${displayName}">
-            ${displayName}
-          </h3>
-
-          <!-- Pointer 2: Certified Battery Health Chip -->
-          <div class="mt-2 flex items-center justify-between p-2 rounded-xl bg-slate-950/70 border border-slate-800/80 text-[11px]">
-            <div class="flex items-center gap-1.5">
-              <span class="text-xs">🔋</span>
-              <span class="text-slate-300 font-medium">Battery Health:</span>
-            </div>
-            <span class="text-emerald-400 font-mono font-bold">${gradeInfo.battery}% (Certified)</span>
-          </div>
-
-          <!-- Selectable Storage Options Pills -->
-          ${p.storageOptions && p.storageOptions.length > 1 ? `
-            <div class="mt-2" onclick="event.stopPropagation();">
-              <div class="flex items-center justify-between text-[11px] text-slate-400 font-semibold mb-1">
-                <span>Storage Variant:</span>
-                <span class="text-blue-400 font-mono font-bold">${currentStorage}</span>
-              </div>
-              <div class="flex items-center gap-1 flex-wrap">
-                ${p.storageOptions.map(opt => `
-                  <button 
-                    onclick="setCardStorage('${p.id}', '${opt.size}')"
-                    class="card-storage-btn py-0.5 px-2 rounded-md text-[11px] font-bold transition-all cursor-pointer ${opt.size === currentStorage ? 'active bg-blue-600 text-white border border-blue-500 shadow-sm ring-1 ring-blue-400/50' : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
-                    title="${opt.size} (${opt.delta > 0 ? '+' + formatMoney(opt.delta) : 'Base'})"
-                  >
-                    ${opt.size}
-                  </button>
-                `).join('')}
-              </div>
-            </div>
-          ` : ''}
-
-          <!-- Grade Selector Pills -->
-          <div class="mt-2" onclick="event.stopPropagation();">
-            <div class="text-[11px] text-slate-400 font-semibold mb-1">Select Condition Grade:</div>
-            <div class="grid grid-cols-3 gap-1.5">
-              ${["A", "B", "C"].map(g => `
-                <button 
-                  onclick="setCardGrade('${p.id}', '${g}')"
-                  class="card-grade-btn py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${g === currentGrade ? (g === 'A' ? 'badge-grade-a ring-1 ring-emerald-400/50' : g === 'B' ? 'badge-grade-b ring-1 ring-indigo-400/50' : 'badge-grade-c ring-1 ring-amber-400/50') : 'bg-slate-900/90 text-slate-400 hover:text-white border border-slate-800'}"
-                >
-                  Grade ${g}
-                </button>
-              `).join('')}
-            </div>
-          </div>
-
-          <!-- Hemant Verma Modernization Guarantees -->
-          <div class="mt-2.5 pt-2 border-t border-slate-800/60 grid grid-cols-2 gap-1 text-[11px] text-slate-300">
-            <div class="flex items-center gap-1 p-1 rounded bg-slate-900/50 border border-slate-800" title="0 Hidden Dents Guarantee">
-              <span class="text-emerald-400">📍</span>
-              <span class="truncate">0-Dent Guarantee</span>
-            </div>
-            <div class="flex items-center gap-1 p-1 rounded bg-slate-900/50 border border-slate-800" title="WhatsApp OTP dispatch verification">
-              <span class="text-green-400">💬</span>
-              <span class="truncate">WhatsApp Anti-RTO</span>
-            </div>
-          </div>
-
-          <!-- Price Display with Effective Savings -->
-          <div class="mt-2.5 pt-2 border-t border-slate-800/60">
-            <div class="flex items-baseline gap-2">
-              <span class="text-base font-extrabold text-white">${formatMoney(priceInfo.price)}</span>
-              <span class="text-xs text-slate-500 line-through">${formatMoney(priceInfo.msrp)}</span>
-              <span class="text-[11px] text-emerald-400 font-bold ml-auto bg-emerald-500/10 px-1.5 py-0.5 rounded border border-emerald-500/20">Save ${priceInfo.savingsPct}%</span>
-            </div>
-            <div class="text-[11px] text-blue-400 font-medium mt-0.5 flex items-center justify-between">
-              <span>💳 ${state.activeRegion === 'UAE' ? 'Flat AED 90 Off on Cards/Apple Pay' : 'Flat ₹2,000 Off on UPI/Card'}</span>
-              <span class="text-slate-400">${state.activeRegion === 'UAE' ? 'Dubai Express Air' : 'Free Express Air'}</span>
-            </div>
-          </div>
         </div>
-
-        <!-- Action Buttons: 360 View, Add to Cart & Buy COD -->
-        <div class="grid grid-cols-2 gap-2 mt-3 pt-2" onclick="event.stopPropagation();">
-          <button onclick="addToCart('${p.id}')" class="card-add-cart-btn py-2 px-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-bold text-[11px] flex items-center justify-center gap-1 transition-colors cursor-pointer tap-scale">
-            <span>🛒 Add to Cart</span>
-          </button>
-          <button onclick="buyProductCOD('${p.id}')" class="py-2 px-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center justify-center gap-1 shadow-md shadow-blue-600/20 transition-all cursor-pointer tap-scale">
-            <span>⚡ Buy COD</span>
-          </button>
-        </div>
-      </div>
+      </article>
     `;
   }).join('');
 
@@ -4995,7 +5008,7 @@ function renderSubFilters(subFilters) {
     const isActive = state.activeSubFilter === f.id;
     let label = f.label;
     if (f.id === "under50k") {
-      label = state.activeRegion === "UAE" ? "Under AED 2,200" : "Under ₹50,000";
+      label = `Under ${formatMoney(50000)}`;
     }
     return `
       <button 
@@ -5040,46 +5053,180 @@ function setCardGrade(productId, grade) {
   renderCatalog();
 }
 
-function setRegion(reg) {
-  state.activeRegion = reg;
-  const btnIn = document.getElementById("regionBtnIN");
-  const btnUae = document.getElementById("regionBtnUAE");
-  if (btnIn && btnUae) {
-    if (reg === "IN") {
-      btnIn.className = "px-2 py-0.5 rounded text-[11px] font-bold bg-blue-600 text-white cursor-pointer";
-      btnUae.className = "px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer";
+/* ======================================================== */
+/* 1.1 GLOBAL 164-COUNTRY / CURRENCY SELECTOR ENGINE        */
+/* ======================================================== */
+function initCurrencySwitcher() {
+  const listEl = document.getElementById("doublyCurrencyList");
+  if (!listEl) return;
+
+  const currencies = window.FZ_ALL_CURRENCIES || [];
+  if (currencies.length === 0) return;
+
+  listEl.innerHTML = "";
+
+  // Restore saved currency
+  const savedCode = localStorage.getItem("fz_currency") || (state.activeRegion === "UAE" ? "AED" : "INR");
+  const matched = currencies.find(c => c.val === savedCode) || currencies.find(c => c.val === "INR") || currencies[0];
+  state.activeCurrency = matched;
+  if (matched.val === "INR") state.activeRegion = "IN";
+  else if (matched.val === "AED") state.activeRegion = "UAE";
+
+  // Render 164 options
+  currencies.forEach(c => {
+    const li = document.createElement("li");
+    li.className = "option notranslate px-3 py-2 flex items-center justify-between text-xs cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" + (c.val === state.activeCurrency.val ? " selected bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 font-bold" : " text-slate-700 dark:text-slate-200");
+    li.setAttribute("data-value", c.val);
+    li.setAttribute("data-country", c.country);
+    li.setAttribute("data-display", c.display);
+    li.setAttribute("data-symbol", c.symbol || "");
+    li.setAttribute("data-text", c.text || "");
+    li.onclick = (e) => selectGlobalCurrency(c.val, e);
+    li.innerHTML = `
+      <div class="flex items-center gap-2.5 min-w-0">
+        <span class="flags flags-${c.country} shrink-0"></span>
+        <span class="truncate font-medium text-slate-800 dark:text-slate-100">${c.text}</span>
+      </div>
+      <div class="flex items-center gap-1.5 shrink-0 font-mono text-[11px] text-slate-500 dark:text-slate-400">
+        <span>${c.symbol || ""}</span>
+        <span class="font-bold text-slate-700 dark:text-slate-300">${c.display}</span>
+      </div>
+    `;
+    listEl.appendChild(li);
+  });
+
+  updateHeaderCurrencyBadge();
+}
+
+function updateHeaderCurrencyBadge() {
+  const curr = state.activeCurrency;
+  if (!curr) return;
+
+  // Desktop Top Bar
+  const topFlag = document.getElementById("topBarCurrencyFlag");
+  const topText = document.getElementById("topBarCurrencyText");
+  if (topFlag) topFlag.className = `flags flags-${curr.country}`;
+  if (topText) topText.textContent = `${curr.country.replace(/-/g, " ")} (${curr.display} ${curr.symbol || ""})`.trim();
+
+  // Desktop Header
+  const deskFlag = document.getElementById("desktopHeaderCurrencyFlag");
+  const deskText = document.getElementById("desktopHeaderCurrencyText");
+  if (deskFlag) deskFlag.className = `flags flags-${curr.country}`;
+  if (deskText) deskText.textContent = `${curr.display} (${curr.symbol || ""})`.trim();
+
+  // Mobile Header
+  const mobFlag = document.getElementById("mobileCurrencyFlag");
+  const mobText = document.getElementById("mobileCurrencyText");
+  if (mobFlag) mobFlag.className = `flags flags-${curr.country}`;
+  if (mobText) mobText.textContent = `${curr.display}`;
+}
+
+function toggleCurrencyDropdown(event) {
+  if (event) event.stopPropagation();
+  const menu = document.getElementById("globalCurrencyDropdownMenu");
+  if (!menu) return;
+  const isClosed = menu.classList.contains("hidden");
+  if (isClosed) {
+    const topBtn = document.getElementById("topBarCurrencyBtn");
+    const mobBtn = document.getElementById("mobileCurrencyToggleBtn");
+    const isDesktop = window.innerWidth >= 640;
+    const anchor = isDesktop ? topBtn : mobBtn;
+
+    if (anchor) {
+      const rect = anchor.getBoundingClientRect();
+      menu.style.position = "fixed";
+      menu.style.top = `${Math.round(rect.bottom + 6)}px`;
+      if (isDesktop) {
+        menu.style.right = `${Math.max(16, Math.round(window.innerWidth - rect.right))}px`;
+        menu.style.left = "auto";
+        menu.style.width = "360px";
+      } else {
+        menu.style.left = "10px";
+        menu.style.right = "10px";
+        menu.style.width = "calc(100vw - 20px)";
+      }
+    }
+
+    menu.classList.remove("hidden");
+    const input = document.getElementById("currencySearchInput");
+    if (input) {
+      input.value = "";
+      filterCurrencies();
+      setTimeout(() => input.focus(), 60);
+    }
+  } else {
+    menu.classList.add("hidden");
+  }
+}
+
+function filterCurrencies(event) {
+  const input = document.getElementById("currencySearchInput");
+  const query = (input ? input.value : "").toLowerCase().trim();
+  const options = document.querySelectorAll("#doublyCurrencyList .option");
+  let visibleCount = 0;
+
+  options.forEach(opt => {
+    const text = (opt.getAttribute("data-text") || opt.textContent || "").toLowerCase();
+    const val = (opt.getAttribute("data-value") || "").toLowerCase();
+    const country = (opt.getAttribute("data-country") || "").toLowerCase().replace(/-/g, " ");
+    const matches = !query || text.includes(query) || val.includes(query) || country.includes(query);
+
+    if (matches) {
+      opt.classList.remove("is-hidden");
+      opt.style.setProperty("display", "flex", "important");
+      visibleCount++;
     } else {
-      btnUae.className = "px-2 py-0.5 rounded text-[11px] font-bold bg-blue-600 text-white cursor-pointer";
-      btnIn.className = "px-2 py-0.5 rounded text-[11px] font-semibold text-slate-400 hover:text-white cursor-pointer";
+      opt.classList.add("is-hidden");
+      opt.style.setProperty("display", "none", "important");
+    }
+  });
+
+  const emptyEl = document.getElementById("currencySearchEmpty");
+  if (emptyEl) {
+    if (visibleCount === 0) {
+      emptyEl.classList.remove("hidden");
+      emptyEl.style.setProperty("display", "block", "important");
+    } else {
+      emptyEl.classList.add("hidden");
+      emptyEl.style.setProperty("display", "none", "important");
     }
   }
+}
 
-  // Mobile Header Switcher
-  const btnInMobile = document.getElementById("regionBtnINMobile");
-  const btnUaeMobile = document.getElementById("regionBtnUAEMobile");
-  if (btnInMobile && btnUaeMobile) {
-    if (reg === "IN") {
-      btnInMobile.className = "px-1.5 py-0.5 rounded font-bold bg-blue-600 text-white cursor-pointer";
-      btnUaeMobile.className = "px-1.5 py-0.5 rounded font-semibold text-slate-400 hover:text-white cursor-pointer";
-    } else {
-      btnUaeMobile.className = "px-1.5 py-0.5 rounded font-bold bg-blue-600 text-white cursor-pointer";
-      btnInMobile.className = "px-1.5 py-0.5 rounded font-semibold text-slate-400 hover:text-white cursor-pointer";
-    }
+function selectGlobalCurrency(code, event, fromRegionSync) {
+  if (event) event.stopPropagation();
+  const currencies = window.FZ_ALL_CURRENCIES || [];
+  const found = currencies.find(c => c.val === code);
+  if (!found) return;
+
+  state.activeCurrency = found;
+  localStorage.setItem("fz_currency", code);
+
+  // Sync activeRegion if INR or AED
+  if (code === "INR") {
+    state.activeRegion = "IN";
+  } else if (code === "AED") {
+    state.activeRegion = "UAE";
   }
 
-  // Mobile Drawer Switcher
-  const drawerIn = document.getElementById("drawerRegionIN");
-  const drawerUae = document.getElementById("drawerRegionUAE");
-  if (drawerIn && drawerUae) {
-    if (reg === "IN") {
-      drawerIn.className = "px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-600 text-white cursor-pointer transition-all";
-      drawerUae.className = "px-2.5 py-1 text-xs font-semibold text-slate-400 hover:text-white cursor-pointer transition-all";
-    } else {
-      drawerUae.className = "px-2.5 py-1 text-xs font-bold rounded-lg bg-blue-600 text-white cursor-pointer transition-all";
-      drawerIn.className = "px-2.5 py-1 text-xs font-semibold text-slate-400 hover:text-white cursor-pointer transition-all";
-    }
-  }
+  // Update header badges
+  updateHeaderCurrencyBadge();
 
+  // Close dropdown menu
+  const menu = document.getElementById("globalCurrencyDropdownMenu");
+  if (menu) menu.classList.add("hidden");
+
+  // Update selected class in dropdown list
+  const options = document.querySelectorAll("#doublyCurrencyList .option");
+  options.forEach(opt => {
+    if (opt.getAttribute("data-value") === code) {
+      opt.classList.add("selected", "bg-blue-50", "dark:bg-blue-950/40", "text-blue-600", "dark:text-blue-400", "font-bold");
+    } else {
+      opt.classList.remove("selected", "bg-blue-50", "dark:bg-blue-950/40", "text-blue-600", "dark:text-blue-400", "font-bold");
+    }
+  });
+
+  // Re-render UI components across 100% of the page
   updateRegionUI();
   renderCatalog();
   updateCartDrawerUI();
@@ -5088,11 +5235,48 @@ function setRegion(reg) {
   }
   if (typeof calculateSellPrice === "function") calculateSellPrice();
   if (typeof calculateWholesalePrice === "function") calculateWholesalePrice();
-  showToast(reg === "UAE" ? "🇦🇪 Currency switched to AED (UAE Dirhams) • Dubai Hub & GCC Delivery Active" : "🇮🇳 Currency switched to INR (₹) • Pan-India Free Express Air Active");
+
+  if (!fromRegionSync) {
+    showToast(`🌐 Currency updated to ${found.text} (${found.display} ${found.symbol || ''})`);
+  }
 }
+
+// Global click-outside listener to close currency dropdown
+document.addEventListener("click", (e) => {
+  const menu = document.getElementById("globalCurrencyDropdownMenu");
+  const topBtn = document.getElementById("topBarCurrencyBtn");
+  const mobBtn = document.getElementById("mobileCurrencyToggleBtn");
+
+  if (menu && !menu.classList.contains("hidden")) {
+    if (
+      (!menu.contains(e.target)) &&
+      (!topBtn || !topBtn.contains(e.target)) &&
+      (!mobBtn || !mobBtn.contains(e.target))
+    ) {
+      menu.classList.add("hidden");
+    }
+  }
+});
+
+function setRegion(reg) {
+  state.activeRegion = reg;
+  if (reg === "IN") {
+    selectGlobalCurrency("INR", null, true);
+  } else {
+    selectGlobalCurrency("AED", null, true);
+  }
+}
+
+window.initCurrencySwitcher = initCurrencySwitcher;
+window.updateHeaderCurrencyBadge = updateHeaderCurrencyBadge;
+window.toggleCurrencyDropdown = toggleCurrencyDropdown;
+window.filterCurrencies = filterCurrencies;
+window.selectGlobalCurrency = selectGlobalCurrency;
+window.setRegion = setRegion;
 
 function updateRegionUI() {
   const isUae = state.activeRegion === "UAE";
+  const curr = state.activeCurrency || { val: "INR", symbol: "₹" };
 
   // 1. Announcement Bar Care & Shipping
   const careLink = document.getElementById("careContactLink");
@@ -5110,7 +5294,7 @@ function updateRegionUI() {
     }
   }
 
-  // 2. Hero Carousel Slides
+  // 2. Hero Carousel Slides (1 to 5)
   const h1Price = document.getElementById("heroSlide1Price");
   const h1Badge = document.getElementById("heroSlide1SaveBadge");
   if (h1Price) {
@@ -5128,7 +5312,21 @@ function updateRegionUI() {
   const h3Badge = document.getElementById("heroSlide3TradeinBadge");
   if (h3Badge) h3Badge.textContent = `GET UP TO ${formatMoney(15000)} EXTRA`;
 
-  // 3. Promo Offer Cards
+  const h4Price = document.getElementById("heroSlide4Price");
+  const h4Save = document.getElementById("heroSlide4SaveBadge");
+  const h4SaveFloat = document.getElementById("heroSlide4SaveBadgeFloating");
+  if (h4Price) {
+    h4Price.innerHTML = `Starting from <strong class="text-white text-xs sm:text-base">${formatMoney(94999)}</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">${formatMoney(179900)}</span>). 100% Genuine Apple Battery, 0 Cycle Degradation.</span>`;
+  }
+  if (h4Save) h4Save.textContent = `SAVE ${formatMoney(84901)}`;
+  if (h4SaveFloat) h4SaveFloat.textContent = `Save ${formatMoney(84901)}`;
+
+  const h5Price = document.getElementById("heroSlide5Price");
+  if (h5Price) {
+    h5Price.innerHTML = `Starting from <strong class="text-white text-xs sm:text-base">${formatMoney(46999)}</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">${formatMoney(106999)}</span>). 7 Years of Android OS Updates.</span>`;
+  }
+
+  // 3. Promo Offer Cards (Converted for ANY of the 164 Currencies)
   const o1Deal = document.getElementById("offer1DealPrice");
   const o1Msrp = document.getElementById("offer1MsrpPrice");
   if (o1Deal) o1Deal.textContent = formatMoney(30999);
@@ -5137,14 +5335,14 @@ function updateRegionUI() {
   const o2Head = document.getElementById("offer2Heading");
   const o2Sub = document.getElementById("offer2Subtext");
   const o2Emi = document.getElementById("offer2EmiText");
-  if (o2Head) o2Head.textContent = isUae ? "Flat AED 90 Instant Off" : "Flat ₹2,000 Instant Off";
-  if (o2Sub) o2Sub.textContent = isUae ? "Emirates NBD, ADCB & Mashreq Cards on orders above AED 1,300." : "HDFC, ICICI, SBI & Axis Bank Credit/Debit Cards on orders above ₹30k.";
-  if (o2Emi) o2Emi.textContent = isUae ? "+ Tabby / Tamara 4-Split from AED 75/mo" : "+ No Cost EMI from ₹1,666/mo";
+  if (o2Head) o2Head.textContent = `Flat ${formatMoney(2000)} Instant Off`;
+  if (o2Sub) o2Sub.textContent = `Major Bank Credit/Debit Cards on orders above ${formatMoney(30000)}.`;
+  if (o2Emi) o2Emi.textContent = `+ Split & No Cost EMI from ${formatMoney(1666)}/mo`;
 
   const o3Coupon = document.getElementById("offer3CouponCode");
   const o3Sub = document.getElementById("offer3Subtext");
-  if (o3Coupon) o3Coupon.textContent = isUae ? "FONEZONE90" : "FONEZONE2K";
-  if (o3Sub) o3Sub.textContent = isUae ? "Get additional AED 90 off at cart checkout on any flagship purchase." : "Get additional ₹2,000 off at cart checkout on any flagship purchase.";
+  if (o3Coupon) o3Coupon.textContent = curr.val === "AED" ? "FONEZONE90" : curr.val === "INR" ? "FONEZONE2K" : `FZ${curr.val}`;
+  if (o3Sub) o3Sub.textContent = `Get additional ${formatMoney(2000)} off at cart checkout on any flagship purchase.`;
 
   // 4. Quick Select Rail
   const rpApple = document.getElementById("railPriceApple");
@@ -5153,18 +5351,22 @@ function updateRegionUI() {
   const rpMacBook = document.getElementById("railPriceMacBook");
   const rpIpad = document.getElementById("railPriceIpad");
   const rpWatch = document.getElementById("railPriceWatch");
+  const rpAcc = document.getElementById("railPriceAccessories");
+  const rpPixel = document.getElementById("railPricePixel");
   if (rpApple) rpApple.textContent = `From ${formatMoney(10999)}`;
   if (rpSamsung) rpSamsung.textContent = `From ${formatMoney(22499)}`;
   if (rpOnePlus) rpOnePlus.textContent = `From ${formatMoney(13999)}`;
   if (rpMacBook) rpMacBook.textContent = `From ${formatMoney(56999)}`;
   if (rpIpad) rpIpad.textContent = `From ${formatMoney(15999)}`;
   if (rpWatch) rpWatch.textContent = `From ${formatMoney(10499)}`;
+  if (rpAcc) rpAcc.textContent = `From ${formatMoney(24999)}`;
+  if (rpPixel) rpPixel.textContent = `From ${formatMoney(24999)}`;
 
   // 5. Budget Finder
   const minLabel = document.getElementById("budgetSliderMinLabel");
   const maxLabel = document.getElementById("budgetSliderMaxLabel");
   if (minLabel) minLabel.textContent = formatMoney(15000);
-  if (maxLabel) maxLabel.textContent = isUae ? "AED 4,500+" : "₹1,00,000+";
+  if (maxLabel) maxLabel.textContent = `${formatMoney(100000)}+`;
 
   const savingsCallout = document.getElementById("budgetSavingsCalloutText");
   if (savingsCallout) savingsCallout.textContent = `🔥 Save up to ${formatMoney(55000)} vs Brand New MRP`;
@@ -5173,14 +5375,15 @@ function updateRegionUI() {
   const pills = document.querySelectorAll(".quick-budget-btn");
   pills.forEach(p => {
     const val = Number(p.getAttribute("data-budget"));
-    if (val === 20000) p.textContent = isUae ? "Under AED 900" : "Under ₹20k";
-    else if (val === 35000) p.textContent = isUae ? "AED 900 - 1.5k" : "₹20k - ₹35k";
-    else if (val === 50000) p.textContent = isUae ? "AED 1.5k - 2.2k" : "₹35k - ₹50k";
-    else if (val === 75000) p.textContent = isUae ? "AED 2.2k - 3.3k" : "₹50k - ₹75k";
+    if (val === 20000) p.textContent = `Under ${formatMoney(20000)}`;
+    else if (val === 35000) p.textContent = `${formatMoney(20000)} - ${formatMoney(35000)}`;
+    else if (val === 50000) p.textContent = `${formatMoney(35000)} - ${formatMoney(50000)}`;
+    else if (val === 75000) p.textContent = `${formatMoney(50000)} - ${formatMoney(75000)}`;
     else if (val >= 100000) p.textContent = "All Budgets";
   });
 
   updateBudgetDisplayUI();
+  updateHeaderCurrencyBadge();
 }
 
 /* ======================================================== */
@@ -5279,7 +5482,7 @@ function updateBudgetDisplayUI() {
   const isUae = state.activeRegion === "UAE";
   if (displayVal) {
     if (state.budgetMax >= 100000) {
-      displayVal.textContent = isUae ? "All Budgets (AED 4,500+)" : "All Budgets (₹1,00,000+)";
+      displayVal.textContent = `All Budgets (${formatMoney(100000)}+)`;
     } else {
       displayVal.textContent = `Up to ${formatMoney(state.budgetMax)}`;
     }
@@ -5604,11 +5807,11 @@ function updateInspectWishlistButton() {
   if (topBtn) {
     if (isWishlisted) {
       topBtn.classList.add("is-wishlisted");
-      topBtn.innerHTML = `<span>❤️</span> <span class="hidden sm:inline">Saved</span>`;
+      topBtn.innerHTML = `<i data-lucide="heart" class="w-3.5 h-3.5 fill-red-500 text-red-500"></i> <span class="hidden sm:inline text-red-400">Saved</span>`;
       topBtn.title = "Remove from Wishlist";
     } else {
       topBtn.classList.remove("is-wishlisted");
-      topBtn.innerHTML = `<span>🤍</span> <span class="hidden sm:inline">Wishlist</span>`;
+      topBtn.innerHTML = `<i data-lucide="heart" class="w-3.5 h-3.5 text-slate-400"></i> <span class="hidden sm:inline">Wishlist</span>`;
       topBtn.title = "Save to Wishlist";
     }
   }
@@ -5617,14 +5820,15 @@ function updateInspectWishlistButton() {
   if (footerBtn) {
     if (isWishlisted) {
       footerBtn.classList.add("is-wishlisted");
-      footerBtn.innerHTML = `<span>❤️</span> <span>Saved</span>`;
+      footerBtn.innerHTML = `<i data-lucide="heart" class="w-4 h-4 fill-red-500 text-red-500"></i> <span class="text-red-400">Saved</span>`;
       footerBtn.title = "Remove from Wishlist";
     } else {
       footerBtn.classList.remove("is-wishlisted");
-      footerBtn.innerHTML = `<span>🤍</span> <span>Wishlist</span>`;
+      footerBtn.innerHTML = `<i data-lucide="heart" class="w-4 h-4 text-slate-400"></i> <span>Wishlist</span>`;
       footerBtn.title = "Save to Wishlist";
     }
   }
+  if (window.lucide) window.lucide.createIcons();
 }
 
 function updateWishlistUI() {
@@ -5655,12 +5859,14 @@ function updateWishlistUI() {
     if (pid) {
       const isSaved = state.wishlist.includes(pid);
       if (isSaved) {
-        btn.classList.add("is-wishlisted");
-        btn.innerHTML = "❤️";
+        btn.classList.add("is-wishlisted", "text-red-500", "bg-red-500/15", "border-red-500/30");
+        btn.classList.remove("text-slate-400", "border-transparent");
+        btn.innerHTML = `<i data-lucide="heart" class="w-4 h-4 fill-red-500 text-red-500"></i>`;
         btn.title = "Remove from Wishlist";
       } else {
-        btn.classList.remove("is-wishlisted");
-        btn.innerHTML = "🤍";
+        btn.classList.remove("is-wishlisted", "text-red-500", "bg-red-500/15", "border-red-500/30");
+        btn.classList.add("text-slate-400", "border-transparent");
+        btn.innerHTML = `<i data-lucide="heart" class="w-4 h-4"></i>`;
         btn.title = "Add to Wishlist";
       }
     }
@@ -5676,11 +5882,12 @@ function updateWishlistUI() {
   if (count === 0) {
     listEl.innerHTML = `
       <div class="py-12 text-center text-slate-400">
-        <div class="text-3xl mb-2">🤍</div>
+        <div class="flex justify-center mb-2"><i data-lucide="heart" class="w-10 h-10 text-slate-600"></i></div>
         <p class="font-bold text-white text-xs mt-3">No saved devices yet</p>
         <p class="text-[11px] text-slate-500 mt-1">Tap the heart icon on any device to save it for later.</p>
       </div>
     `;
+    if (window.lucide) window.lucide.createIcons();
     return;
   }
 
@@ -5696,18 +5903,21 @@ function updateWishlistUI() {
         <div class="text-slate-300 font-mono mt-0.5">${formatMoney(itemPrice)}</div>
       </div>
       <div class="flex items-center gap-1.5 shrink-0">
-        <button onclick="openInspector('${p.id}'); closeWishlistDrawer();" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-[11px] cursor-pointer tap-scale" title="Inspect 360°">
-          🔍 360°
+        <button onclick="openInspector('${p.id}'); closeWishlistDrawer();" class="px-2.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-[11px] flex items-center gap-1 cursor-pointer tap-scale" title="Inspect 360°">
+          <i data-lucide="rotate-3d" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span>360°</span>
         </button>
-        <button onclick="addWishlistItemToCart('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] cursor-pointer tap-scale" title="Add to Cart">
-          + Cart
+        <button onclick="addWishlistItemToCart('${p.id}')" class="px-2.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center gap-1 cursor-pointer tap-scale" title="Add to Cart">
+          <i data-lucide="shopping-bag" class="w-3.5 h-3.5"></i>
+          <span>+ Cart</span>
         </button>
         <button onclick="toggleWishlist('${p.id}')" class="p-1.5 rounded-lg text-slate-500 hover:text-red-400 cursor-pointer" title="Remove">
-          ✕
+          <i data-lucide="x" class="w-4 h-4"></i>
         </button>
       </div>
     </div>
   `}).join('');
+  if (window.lucide) window.lucide.createIcons();
 }
 
 function addWishlistItemToCart(productId) {
@@ -5774,8 +5984,77 @@ function openInspector(productId) {
 
   const displayName = p.baseModelName ? `${p.baseModelName} ${state.currentInspectStorage} ${p.color}` : p.name;
   document.getElementById("inspectModalProductName").textContent = displayName;
+
+  // Assign authentic 3D model to flagship iPhones if not set
+  if (!p.model3d && (p.brand === "apple" || p.id.startsWith("fz-ip"))) {
+    p.model3d = "assets/iphone14_model.glb";
+  }
+
+  // Dynamic Apple PBR Finish calibration function
+  function applyInspectModelMaterials(modelViewer, product) {
+    if (!modelViewer || !modelViewer.model) return;
+    const pName = (product && (product.title || product.name || "")).toLowerCase();
+    const pColor = (product && (product.color || "")).toLowerCase();
+
+    // Default: Apple Champagne Gold (matches iPhone 14 Pro Max Gold)
+    let railColor = [0.92, 0.80, 0.55, 1.0];
+    let glassColor = [0.96, 0.92, 0.84, 1.0];
+    let logoColor = [0.88, 0.75, 0.45, 1.0];
+    let metallic = 0.9;
+    let roughness = 0.18;
+
+    if (pName.includes("purple") || pColor.includes("purple")) {
+      railColor = [0.46, 0.40, 0.55, 1.0];
+      glassColor = [0.48, 0.44, 0.58, 1.0];
+      logoColor = [0.62, 0.56, 0.72, 1.0];
+    } else if (pName.includes("silver") || pColor.includes("silver") || pName.includes("white") || pColor.includes("white")) {
+      railColor = [0.86, 0.87, 0.89, 1.0];
+      glassColor = [0.95, 0.95, 0.96, 1.0];
+      logoColor = [0.82, 0.82, 0.84, 1.0];
+    } else if (pName.includes("black") || pColor.includes("black") || pName.includes("space") || pColor.includes("graphite")) {
+      railColor = [0.22, 0.22, 0.24, 1.0];
+      glassColor = [0.28, 0.28, 0.30, 1.0];
+      logoColor = [0.38, 0.38, 0.40, 1.0];
+    } else if (pName.includes("blue") || pColor.includes("blue")) {
+      railColor = [0.35, 0.45, 0.58, 1.0];
+      glassColor = [0.40, 0.50, 0.62, 1.0];
+      logoColor = [0.50, 0.60, 0.75, 1.0];
+    }
+
+    try {
+      modelViewer.model.materials.forEach(mat => {
+        const name = mat.name.toLowerCase();
+        if (name.includes("material_10") || name.includes("back") || name.includes("glass") || name.includes("body")) {
+          mat.pbrMetallicRoughness.setBaseColorFactor(glassColor);
+          mat.pbrMetallicRoughness.setRoughnessFactor(0.22);
+        } else if (name.includes("material_1") || name.includes("frame") || name.includes("chassis") || name.includes("rail")) {
+          mat.pbrMetallicRoughness.setBaseColorFactor(railColor);
+          mat.pbrMetallicRoughness.setMetallicFactor(metallic);
+          mat.pbrMetallicRoughness.setRoughnessFactor(roughness);
+        } else if (name.includes("logo") || name.includes("apple")) {
+          mat.pbrMetallicRoughness.setBaseColorFactor(logoColor);
+          mat.pbrMetallicRoughness.setMetallicFactor(1.0);
+          mat.pbrMetallicRoughness.setRoughnessFactor(0.1);
+        }
+      });
+    } catch (err) {
+      console.warn("Material styling error:", err);
+    }
+  }
+
   const mv = document.getElementById("mainModelViewer");
-  if (mv && p.model3d) mv.src = p.model3d;
+  if (mv) {
+    mv.setAttribute("loading", "eager");
+    if (p.model3d) mv.src = p.model3d;
+    mv.cameraOrbit = "0deg 90deg 105%";
+    try { mv.dismissPoster(); } catch(e) {}
+    if (mv.model) {
+      applyInspectModelMaterials(mv, p);
+    }
+    mv.addEventListener("load", () => {
+      applyInspectModelMaterials(mv, p);
+    }, { once: true });
+  }
 
   // Listen to camera-change on model-viewer to display dynamic multi-axis angles
   if (mv && !mv._hasCameraListener) {
@@ -5790,11 +6069,11 @@ function openInspector(productId) {
           const angleTag = document.getElementById("currentAngleTag");
           if (angleTag) {
             let side = "Front Display OLED";
-            if (phiDeg <= 25) side = "Top Bezel (Looking Down)";
-            else if (phiDeg >= 155) side = "Bottom Port & Speakers (Looking Up)";
-            else if (thetaDeg >= 45 && thetaDeg < 135) side = "Front Display OLED";
-            else if (thetaDeg >= 135 && thetaDeg < 225) side = "Right Titanium Rail";
-            else if (thetaDeg >= 225 && thetaDeg < 315) side = "Rear Glass & Cameras";
+            if (phiDeg <= 30) side = "Top Bezel (Looking Down)";
+            else if (phiDeg >= 150) side = "Bottom Port & Speakers (Looking Up)";
+            else if (thetaDeg >= 315 || thetaDeg < 45) side = "Front Display OLED";
+            else if (thetaDeg >= 45 && thetaDeg < 135) side = "Right Titanium Rail";
+            else if (thetaDeg >= 135 && thetaDeg < 225) side = "Rear Glass & Cameras";
             else side = "Left Volume Rail & Buttons";
 
             angleTag.textContent = `🌐 ${thetaDeg}° Orbit (${side}) • Pitch: ${phiDeg}°`;
@@ -5813,16 +6092,16 @@ function openInspector(productId) {
   const scrubber = document.getElementById("turntableDegreeScrubber");
   if (scrubber) scrubber.value = 0;
 
-  // Smart Viewer Mode: 3D Orbit if interactive .glb mesh exists, otherwise Studio Photo Frames
+  // Default Viewer Mode: Prioritize interactive 3D Orbit if available, else Studio Frames
   const btn3d = document.getElementById("modeViewer3dBtn");
   if (p.model3d) {
     if (btn3d) { btn3d.style.display = "inline-flex"; }
     setViewerMode("3d");
-    setInspectPerspective("front");
   } else {
     if (btn3d) { btn3d.style.display = "none"; }
     setViewerMode("photo");
   }
+  setInspectPerspective("front");
 
   // Render Storage Variant Selector & Tech Specs
   renderInspectStorageUI(p);
@@ -5833,6 +6112,14 @@ function openInspector(productId) {
   if (caseBtn) {
     caseBtn.textContent = `+ Add Case (${formatMoney(399)})`;
     caseBtn.className = "shrink-0 px-2 py-1 rounded bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-[11px] shadow cursor-pointer transition-all";
+  }
+  const caseWidget = document.getElementById("caseSimulatorWidget");
+  if (caseWidget) {
+    if (p.category && p.category !== "phone") {
+      caseWidget.classList.add("hidden");
+    } else {
+      caseWidget.classList.remove("hidden");
+    }
   }
 
   updateInspectGradeUI();
@@ -5916,14 +6203,24 @@ function setViewerMode(mode) {
   state.viewerMode = mode;
   const btn3d = document.getElementById("modeViewer3dBtn");
   const btnPhoto = document.getElementById("modeViewerPhotoBtn");
+  const btnExploded = document.getElementById("modeViewerExplodedBtn");
   const stage3d = document.getElementById("stage3DWrapper");
   const stagePhoto = document.getElementById("stagePhotoWrapper");
+  const stageExploded = document.getElementById("stageExplodedWrapper");
+
+  // Reset button states
+  [btn3d, btnPhoto, btnExploded].forEach(b => {
+    if (b) b.className = "px-2 py-1 rounded-md font-medium text-slate-400 hover:text-white cursor-pointer transition-all";
+  });
+
+  // Hide all stages
+  if (stage3d) { stage3d.classList.add("hidden"); stage3d.classList.remove("flex"); }
+  if (stagePhoto) { stagePhoto.classList.add("hidden"); stagePhoto.classList.remove("flex"); }
+  if (stageExploded) { stageExploded.classList.add("hidden"); stageExploded.classList.remove("flex"); }
 
   if (mode === "3d") {
-    if (btn3d) btn3d.className = "px-2.5 py-1 rounded-lg font-bold bg-blue-600 text-white cursor-pointer transition-all";
-    if (btnPhoto) btnPhoto.className = "px-2.5 py-1 rounded-lg font-medium text-slate-400 hover:text-white cursor-pointer transition-all";
+    if (btn3d) btn3d.className = "px-2 py-1 rounded-md font-bold bg-blue-600 text-white cursor-pointer transition-all";
     if (stage3d) { stage3d.classList.remove("hidden"); stage3d.classList.add("flex"); }
-    if (stagePhoto) { stagePhoto.classList.add("hidden"); stagePhoto.classList.remove("flex"); }
 
     const mv = document.getElementById("mainModelViewer");
     if (mv) {
@@ -5934,11 +6231,14 @@ function setViewerMode(mode) {
         mv.removeAttribute("auto-rotate");
       }
     }
+  } else if (mode === "exploded") {
+    if (btnExploded) btnExploded.className = "px-2 py-1 rounded-md font-bold bg-blue-600 text-white cursor-pointer transition-all";
+    if (stageExploded) { stageExploded.classList.remove("hidden"); stageExploded.classList.add("flex"); }
+    const angleTag = document.getElementById("currentAngleTag");
+    if (angleTag) angleTag.textContent = "🧩 NexG Exploded 32-Pt Diagnostic Layers";
   } else {
-    if (btnPhoto) btnPhoto.className = "px-2.5 py-1 rounded-lg font-bold bg-blue-600 text-white cursor-pointer transition-all";
-    if (btn3d) btn3d.className = "px-2.5 py-1 rounded-lg font-medium text-slate-400 hover:text-white cursor-pointer transition-all";
+    if (btnPhoto) btnPhoto.className = "px-2 py-1 rounded-md font-bold bg-blue-600 text-white cursor-pointer transition-all";
     if (stagePhoto) { stagePhoto.classList.remove("hidden"); stagePhoto.classList.add("flex"); }
-    if (stage3d) { stage3d.classList.add("hidden"); stage3d.classList.remove("flex"); }
     updateInspectAngleUI();
   }
 }
@@ -5976,17 +6276,18 @@ function setInspectPerspective(perspective) {
 
   // Spherical camera orbits: theta (horizontal yaw) phi (vertical pitch) radius
   const orbits = {
-    front: { orbit: "90deg 90deg 105%", label: "90° Front Display Glass (OLED)", angle: 0, photoKey: "front", tip: "📱 Front: Super Retina OLED • 100% Scratch-Free" },
-    back: { orbit: "270deg 90deg 105%", label: "270° Rear Matte Glass & Camera Pod", angle: 180, photoKey: "back", tip: "🔄 Back: Ceramic Matte Glass • Zero Cracks" },
-    right: { orbit: "180deg 90deg 105%", label: "180° Right Titanium Rail & Power Button", angle: 90, photoKey: "right", tip: "➡️ Right: Precision Titanium Rails • Zero Dents" },
-    left: { orbit: "0deg 90deg 105%", label: "0° Left Titanium Rail & Volume Buttons", angle: 270, photoKey: "left", tip: "⬅️ Left: Action Button & Volume Rockers 100% Intact" },
-    top: { orbit: "90deg 12deg 95%", label: "Top Bezel & Microphones (Top-Down View)", angle: 0, photoKey: "top", tip: "⬆️ Top Edge: Inspected Bezel & Top Microphones" },
-    bottom: { orbit: "90deg 168deg 95%", label: "Bottom Port, Speakers & Mic (Bottom-Up View)", angle: 90, photoKey: "bottom", tip: "⬇️ Bottom Edge: Tested USB-C Charging Port & Speakers" }
+    front: { orbit: "0deg 90deg 105%", label: "0° Front Display Glass (OLED)", angle: 0, photoKey: "front", tip: "📱 Front: Super Retina OLED • 100% Scratch-Free" },
+    back: { orbit: "180deg 90deg 105%", label: "180° Rear Matte Glass & Camera Pod", angle: 180, photoKey: "back", tip: "🔄 Back: Ceramic Matte Glass • Zero Cracks" },
+    right: { orbit: "90deg 90deg 105%", label: "90° Right Titanium Rail & Power Button", angle: 90, photoKey: "right", tip: "➡️ Right: Precision Titanium Rails • Zero Dents" },
+    left: { orbit: "270deg 90deg 105%", label: "270° Left Titanium Rail & Volume Buttons", angle: 270, photoKey: "left", tip: "⬅️ Left: Action Button & Volume Rockers 100% Intact" },
+    top: { orbit: "0deg 18deg 105%", label: "Top Bezel & Microphones (Top-Down View)", angle: 0, photoKey: "top", tip: "⬆️ Top Edge: Inspected Bezel & Top Microphones" },
+    bottom: { orbit: "0deg 162deg 105%", label: "Bottom Port, Speakers & Mic (Bottom-Up View)", angle: 0, photoKey: "bottom", tip: "⬇️ Bottom Edge: Tested USB-C Charging Port & Speakers" }
   };
 
   const target = orbits[perspective] || orbits.front;
 
-  if (state.viewerMode === "3d" && mv) {
+  // Update 3D model viewer if in 3D mode
+  if (mv) {
     mv.cameraOrbit = target.orbit;
     const dentHotspot = document.getElementById("modelHotspotDent");
     if (dentHotspot) {
@@ -5996,22 +6297,24 @@ function setInspectPerspective(perspective) {
         dentHotspot.classList.add("hidden");
       }
     }
-  } else {
-    // Studio Photo Mode
-    const imgEl = document.getElementById("inspectMainImg");
-    const p = state.currentInspectProduct;
-    if (imgEl && p && p.angles && p.angles[target.photoKey]) {
-      imgEl.src = p.angles[target.photoKey];
-      imgEl.style.transform = "none";
-      state.currentInspectAngle = target.angle;
-      const scrubber = document.getElementById("turntableDegreeScrubber");
-      if (scrubber) scrubber.value = target.angle;
-    } else {
-      state.currentInspectAngle = target.angle;
-      const scrubber = document.getElementById("turntableDegreeScrubber");
-      if (scrubber) scrubber.value = target.angle;
-      updateInspectAngleUI();
-    }
+  }
+
+  // Update Studio Photo Frame & Scrubber
+  state.currentInspectAngle = target.angle;
+  const scrubber = document.getElementById("turntableDegreeScrubber");
+  if (scrubber) scrubber.value = target.angle;
+
+  const imgEl = document.getElementById("inspectMainImg");
+  const p = state.currentInspectProduct;
+  const customPerspective = p && p.angles && p.angles[target.photoKey] && !p.angles[target.photoKey].includes(p.image);
+  const frameSrc = customPerspective 
+    ? p.angles[target.photoKey] 
+    : (typeof FZ_TURNTABLE_FRAMES !== "undefined" && FZ_TURNTABLE_FRAMES[target.photoKey] 
+        ? FZ_TURNTABLE_FRAMES[target.photoKey] 
+        : (p ? p.image : "assets/turntable_frame_0.png"));
+  if (imgEl) {
+    imgEl.src = frameSrc;
+    imgEl.style.transform = "none";
   }
 
   const angleTag = document.getElementById("currentAngleTag");
@@ -6019,11 +6322,51 @@ function setInspectPerspective(perspective) {
     angleTag.textContent = target.label;
   }
 
+  renderDentInspectorUI();
   showToast(target.tip);
+}
+
+
+function renderDentInspectorUI() {
+  const container = document.getElementById("dentMapContainer") || document.getElementById("dentInspectorCard");
+  const p = state.currentInspectProduct;
+  const grade = state.currentInspectGrade || "A";
+  
+  if (!p) return;
+  
+  const dentDescEl = document.getElementById("dentFlawDescription");
+  if (dentDescEl) {
+    if (grade === "Superb" || grade === "A") {
+      dentDescEl.innerHTML = `<span class="text-emerald-400 font-semibold flex items-center gap-1"><i class="ph-bold ph-shield-check"></i> 100% Flawless: Zero dents, scuffs or micro-abrasions detected by optical laser scan.</span>`;
+    } else if (grade === "Good" || grade === "B") {
+      dentDescEl.innerHTML = `<span class="text-amber-400 font-semibold flex items-center gap-1"><i class="ph-bold ph-info"></i> Minor Cosmetic Notice: Sub-millimeter micro hairline near lower right bezel edge. Screen 100% pristine.</span>`;
+    } else {
+      dentDescEl.innerHTML = `<span class="text-orange-400 font-semibold flex items-center gap-1"><i class="ph-bold ph-warning-circle"></i> Light Wear: Visible superficial anodization rub along aerospace aluminum edge. Fully functional & tested.</span>`;
+    }
+  }
 }
 
 function handleAutoSpinSwitch(isChecked) {
   state.isAutoSpinning = isChecked;
+
+  // Sync bottom mobile button UI
+  const playBtn = document.getElementById("btnMobilePlay360");
+  const playIcon = document.getElementById("iconMobilePlay360");
+  const playText = document.getElementById("textMobilePlay360");
+  if (playText && playIcon) {
+    if (isChecked) {
+      playText.textContent = "Pause 360°";
+      playIcon.setAttribute("data-lucide", "pause");
+      if (playBtn) playBtn.className = "px-2.5 py-0.5 rounded-lg bg-amber-600 hover:bg-amber-500 text-white font-bold text-[11px] flex items-center gap-1 cursor-pointer transition-all shadow";
+    } else {
+      playText.textContent = "Play 360°";
+      playIcon.setAttribute("data-lucide", "play");
+      if (playBtn) playBtn.className = "px-2.5 py-0.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center gap-1 cursor-pointer transition-all shadow";
+    }
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
+      window.lucide.createIcons();
+    }
+  }
 
   const mv = document.getElementById("mainModelViewer");
   if (mv) {
@@ -6047,10 +6390,8 @@ function handleAutoSpinSwitch(isChecked) {
       if (!state.isAutoSpinning) return;
       const dt = (now - lastTime) / 1000;
       lastTime = now;
-      // 360 degrees in 20 seconds = 18 deg/sec, smooth & graceful
-      state.currentInspectAngle = (state.currentInspectAngle + 18 * dt) % 360;
-      const scrubber = document.getElementById("turntableDegreeScrubber");
-      if (scrubber) scrubber.value = Math.round(state.currentInspectAngle);
+      // 360 degrees in 18 seconds = 20 deg/sec, smooth & graceful
+      state.currentInspectAngle = (state.currentInspectAngle + 20 * dt) % 360;
       updateInspectAngleUI();
       state.autoSpinAnimFrame = requestAnimationFrame(spinLoop);
     };
@@ -6072,7 +6413,7 @@ function handleDegreeScrubber(val) {
   if (state.viewerMode === "3d") {
     const mv = document.getElementById("mainModelViewer");
     if (mv) {
-      const yaw = Math.round((90 + deg) % 360);
+      const yaw = Math.round(deg % 360);
       mv.cameraOrbit = `${yaw}deg 90deg 105%`;
     }
   }
@@ -6169,7 +6510,7 @@ function setInspectAngle(angle) {
   if (state.viewerMode === "3d") {
     const mv = document.getElementById("mainModelViewer");
     if (mv) {
-      const yaw = Math.round((90 + angle) % 360);
+      const yaw = Math.round(angle % 360);
       mv.cameraOrbit = `${yaw}deg 90deg 105%`;
     }
   }
@@ -6177,17 +6518,33 @@ function setInspectAngle(angle) {
   updateInspectAngleUI();
 }
 
+// Global Authentic 8-Angle Studio Turntable Assets
+const FZ_TURNTABLE_FRAMES = {
+  0: "assets/turntable_frame_0.png",
+  45: "assets/turntable_frame_45.png",
+  90: "assets/turntable_frame_90.png",
+  135: "assets/turntable_frame_135.png",
+  180: "assets/turntable_frame_180.png",
+  225: "assets/turntable_frame_225.png",
+  270: "assets/turntable_frame_270.png",
+  315: "assets/turntable_frame_315.png",
+  front: "assets/turntable_frame_0.png",
+  back: "assets/turntable_frame_180.png",
+  right: "assets/turntable_frame_right.png",
+  left: "assets/turntable_frame_left.png",
+  top: "assets/turntable_frame_top.png",
+  bottom: "assets/turntable_frame_bottom.png"
+};
+
+// ==========================================
+// BULLETPROOF MOBILE 360° TOUCH ROTATION ENGINE
+// ==========================================
 function updateInspectAngleUI() {
   const p = state.currentInspectProduct;
   if (!p) return;
   const deg = (state.currentInspectAngle % 360 + 360) % 360;
   const imgEl = document.getElementById("inspectMainImg");
   const angleTag = document.getElementById("currentAngleTag");
-
-  let src = p.angles && p.angles[0] ? p.angles[0] : p.image;
-  let label = `${Math.round(deg)}° Front Display Glass`;
-  let flipX = false;
-  let subtleTilt = 0;
 
   // Authentic 8-Frame Multi-Angle Turntable Mapping
   const frames = [0, 45, 90, 135, 180, 225, 270, 315];
@@ -6201,11 +6558,9 @@ function updateInspectAngleUI() {
     }
   });
 
-  if (p.angles && p.angles[closestAng]) {
-    src = p.angles[closestAng];
-  } else {
-    src = p.image;
-  }
+  // Prioritize distinct angle frames, fallback to genuine FZ_TURNTABLE_FRAMES
+  const customFrame = p.angles && p.angles[closestAng] && !p.angles[closestAng].includes(p.image);
+  const src = customFrame ? p.angles[closestAng] : (FZ_TURNTABLE_FRAMES[closestAng] || p.image);
 
   const angleLabels = {
     0: "0° Front Display Glass (OLED)",
@@ -6217,322 +6572,28 @@ function updateInspectAngleUI() {
     270: "270° Volume Rails & Speaker Grille",
     315: "315° Front Bezel & Notch"
   };
-  label = `${Math.round(deg)}° - ${angleLabels[closestAng] || "Inspected Angle"}`;
+  const label = `${Math.round(deg)}° - ${angleLabels[closestAng] || "Inspected Angle"}`;
 
+  // Smooth tactile perspective tilt across 360 rotation
   if (imgEl) {
     imgEl.src = src;
-    const transformStr = `perspective(700px) rotateY(${subtleTilt}deg) scaleX(${flipX ? -1 : 1})`;
-    imgEl.style.transform = transformStr;
+    const frameOffset = deg - closestAng;
+    const normalizedOffset = frameOffset > 180 ? frameOffset - 360 : (frameOffset < -180 ? frameOffset + 360 : frameOffset);
+    const tilt = Math.max(-10, Math.min(10, normalizedOffset * 0.35));
+    imgEl.style.transform = `perspective(1000px) rotateY(${tilt}deg)`;
+    imgEl.style.filter = "none";
+    imgEl.style.transition = "transform 0.05s ease-out";
   }
 
   if (angleTag) {
     angleTag.textContent = label;
   }
 
-  // Update turntable degree ring
-  const ring = document.querySelector(".turntable-degree-ring");
-  if (ring) {
-    ring.style.transform = `rotate(${deg}deg)`;
+  // Synchronize scrubber range slider
+  const scrubber = document.getElementById("turntableDegreeScrubber");
+  if (scrubber && document.activeElement !== scrubber) {
+    scrubber.value = Math.round(deg);
   }
-
-  // Update preset button active states
-  const presetAngles = [0, 45, 90, 180];
-  document.querySelectorAll(".angle-btn").forEach((btn, idx) => {
-    const pAng = presetAngles[idx];
-    const diff = Math.abs(deg - pAng);
-    if (diff <= 20) {
-      btn.className = "angle-btn px-2 py-1.5 rounded-lg bg-blue-600 text-white font-bold text-[11px] text-center shadow cursor-pointer";
-    } else {
-      btn.className = "angle-btn px-2 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 font-medium text-[11px] text-center border border-slate-800 cursor-pointer";
-    }
-  });
-
-  // Dynamic flaw pin update as angle turns
-  renderDentInspectorUI();
-}
-
-/* ======================================================== */
-/* "WHERE IS THE DENT?" RADICAL COSMETIC TRANSPARENCY ENGINE*/
-/* ======================================================== */
-function getDefaultFlawsForGrade(product, g) {
-  if (g === "A") {
-    return {
-      dents: 0,
-      scratches: 0,
-      badgeText: "0 Dents · 100% Mint",
-      summary: "Showroom Pristine condition. Zero scratches, zero dents, zero cosmetic defects.",
-      screen: "100% Scratch-Free Guaranteed (Original OEM OLED Display)",
-      frame: "Factory Flawless Rails, 0 Scuffs",
-      backGlass: "Pristine, 0 Scratches or Marks",
-      cameraLens: "Sapphire Crystal Rings, 0 Scratches",
-      pins: []
-    };
-  } else if (g === "B") {
-    return {
-      dents: 1,
-      scratches: 0,
-      badgeText: "1 Micro Dent (0.8mm)",
-      summary: "1 Minor 0.8mm cosmetic scuff on lower speaker bezel rail. Screen is 100% spotless.",
-      screen: "100% Scratch-Free Guaranteed (Original OEM OLED Display)",
-      frame: "0.8mm hairline cosmetic scuff on lower bezel rail (100% concealed by case)",
-      backGlass: "Pristine Rear Glass, Zero Cracks",
-      cameraLens: "100% Scratch-Free Sapphire Rings",
-      pins: [
-        {
-          id: "flaw-b-bezel",
-          angle: 90,
-          label: "0.8mm Bezel Scuff",
-          location: "Lower Right Speaker Bezel",
-          type: "dent",
-          severity: "0.8mm Hairline (Minor)",
-          x: "54%",
-          y: "84%",
-          desc: "0.8mm hairline cosmetic surface mark on lower frame rail. Passes 100% structural rigidity test. Completely hidden inside any protective phone case."
-        }
-      ]
-    };
-  } else {
-    return {
-      dents: 2,
-      scratches: 1,
-      badgeText: "2 Minor Marks",
-      summary: "2 minor cosmetic marks (Corner rail scuff + faint rear glass mark). Screen 100% intact.",
-      screen: "100% Touch & TrueTone Functional (No cracks)",
-      frame: "1.2mm Corner Rail Scuff on top-left edge (Angle: 45°)",
-      backGlass: "Superficial surface hairline on rear glass (Angle: 180°)",
-      cameraLens: "Tested 100% 4K clear lenses",
-      pins: [
-        {
-          id: "flaw-c-corner",
-          angle: 45,
-          label: "1.2mm Corner Scuff",
-          location: "Top-Left Corner Rail",
-          type: "dent",
-          severity: "1.2mm Surface Scuff",
-          x: "36%",
-          y: "22%",
-          desc: "1.2mm minor corner scuff from daily use. Structurally 100% sealed and rigid."
-        },
-        {
-          id: "flaw-c-back",
-          angle: 180,
-          label: "Back Glass Hairline",
-          location: "Rear Matte Glass",
-          type: "scratch",
-          severity: "Superficial Hairline",
-          x: "58%",
-          y: "56%",
-          desc: "Superficial surface hairline on rear glass. Invisible when phone is placed in a case."
-        }
-      ]
-    };
-  }
-}
-
-function renderDentInspectorUI() {
-  const p = state.currentInspectProduct;
-  const g = state.currentInspectGrade || "A";
-  if (!p) return;
-
-  const flaws = (p.flaws && p.flaws[g]) ? p.flaws[g] : getDefaultFlawsForGrade(p, g);
-  const currentAngle = (state.currentInspectAngle % 360 + 360) % 360;
-
-  // 1. Total Dent Count Badge
-  const countBadge = document.getElementById("dentTotalCountBadge");
-  if (countBadge) {
-    if (flaws.dents === 0) {
-      countBadge.textContent = "Total Dents: 0 (Flawless)";
-      countBadge.className = "px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[11px] font-black font-mono";
-    } else if (flaws.dents === 1) {
-      countBadge.textContent = `Total Dents: ${flaws.dents} (${flaws.pins[0]?.severity || '0.8mm Scuff'})`;
-      countBadge.className = "px-2.5 py-1 rounded-full bg-amber-500/20 text-amber-400 border border-amber-500/30 text-[11px] font-black font-mono";
-    } else {
-      countBadge.textContent = `Total Dents: ${flaws.dents} Marks (Grade C)`;
-      countBadge.className = "px-2.5 py-1 rounded-full bg-orange-500/20 text-orange-400 border border-orange-500/30 text-[11px] font-black font-mono";
-    }
-  }
-
-  // 2. Status Pill in Turntable (Top-left)
-  const statusDot = document.getElementById("dentInspectorStatusDot");
-  const statusText = document.getElementById("dentInspectorStatusText");
-  if (statusDot && statusText) {
-    if (flaws.dents === 0) {
-      statusDot.className = "w-2 h-2 rounded-full bg-emerald-400 animate-pulse";
-      statusText.textContent = `Grade ${g}: 0 Dents · 100% Mint Ceramic & Titanium`;
-    } else {
-      statusDot.className = "w-2 h-2 rounded-full bg-amber-400 animate-pulse";
-      statusText.textContent = `Grade ${g}: ${flaws.badgeText} • Radical Transparency`;
-    }
-  }
-
-  // 3. Breakdown Table
-  const auditContent = document.getElementById("dentAuditContent");
-  if (auditContent) {
-    if (flaws.dents === 0) {
-      auditContent.innerHTML = `
-        <div class="p-2.5 rounded-xl bg-emerald-950/30 border border-emerald-500/30 text-emerald-300 flex items-start gap-2">
-          <span class="text-base">🛡️</span>
-          <div>
-            <div class="font-bold text-white text-xs">Zero Cosmetic Imperfections Guaranteed</div>
-            <div class="text-[11px] text-emerald-400/90 mt-0.5">Every Grade A device is hand-selected with 0 scratches on display and 0 dents on metal rails.</div>
-          </div>
-        </div>
-        <div class="grid grid-cols-2 gap-2 text-[11px]">
-          <div class="p-2 rounded-lg bg-slate-900/70 border border-slate-800">
-            <span class="text-slate-400 block text-[11px]">DISPLAY SCREEN:</span>
-            <span class="font-bold text-white flex items-center gap-1"><span class="text-emerald-400">✓</span> 100% Scratch-Free OLED</span>
-          </div>
-          <div class="p-2 rounded-lg bg-slate-900/70 border border-slate-800">
-            <span class="text-slate-400 block text-[11px]">CHASSIS & RAILS:</span>
-            <span class="font-bold text-white flex items-center gap-1"><span class="text-emerald-400">✓</span> 0 Dents · Like New</span>
-          </div>
-        </div>
-      `;
-    } else {
-      let flawRows = "";
-      flaws.pins.forEach((pin, idx) => {
-        flawRows += `
-          <div class="p-2.5 rounded-xl bg-slate-900/80 border border-amber-500/30 flex items-start justify-between gap-2">
-            <div class="flex items-start gap-2">
-              <span class="text-amber-400 text-sm font-bold">📍 #${idx + 1}</span>
-              <div>
-                <div class="font-bold text-white text-xs">${pin.location} (${pin.severity})</div>
-                <div class="text-[11px] text-slate-300 mt-0.5">${pin.desc}</div>
-              </div>
-            </div>
-            <button onclick="jumpToFlaw(${pin.angle}, '${pin.location}')" class="shrink-0 px-2 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center gap-1 shadow cursor-pointer transition-colors">
-              <span>🔍 ${pin.angle}° View</span>
-            </button>
-          </div>
-        `;
-      });
-      auditContent.innerHTML = `
-        <div class="text-[11px] text-slate-300 mb-1 leading-snug">
-          <b>FoneZone Transparency Promise:</b> We disclose the exact millimeter location of every cosmetic flaw so there are zero surprises at doorstep.
-        </div>
-        ${flawRows}
-        <div class="p-2 rounded-lg bg-slate-900/60 border border-slate-800 text-[11px] flex items-center justify-between">
-          <span class="text-slate-400">DISPLAY SCREEN STATUS:</span>
-          <span class="font-bold text-emerald-400 flex items-center gap-1"><span>✓</span> 100% Scratch-Free OLED</span>
-        </div>
-      `;
-    }
-  }
-
-  // 4. Dent Action Buttons (Jump to Angle)
-  const angleButtonsContainer = document.getElementById("dentAngleButtons");
-  if (angleButtonsContainer) {
-    if (flaws.pins && flaws.pins.length > 0) {
-      let btns = "";
-      flaws.pins.forEach((pin, i) => {
-        btns += `
-          <button onclick="jumpToFlaw(${pin.angle}, '${pin.location}')" class="px-2.5 py-1 rounded-lg bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 font-bold border border-amber-500/40 text-[11px] transition-all flex items-center gap-1 cursor-pointer">
-            <span>🎯 View #${i+1} at ${pin.angle}°</span>
-          </button>
-        `;
-      });
-      angleButtonsContainer.innerHTML = btns;
-    } else {
-      angleButtonsContainer.innerHTML = `
-        <span class="text-emerald-400 font-bold text-[11px] flex items-center gap-1">
-          <span>✓</span> 0 Dents on Any Angle
-        </span>
-      `;
-    }
-  }
-
-  // 5. Dynamic Hotspot Pins on Phone Image
-  renderDynamicFlawPins(flaws, currentAngle);
-}
-
-function renderDynamicFlawPins(flaws, currentAngle) {
-  const container = document.getElementById("dentPinsOverlay");
-  if (!container) return;
-
-  // Unobstructed view: If user toggled flaw markers OFF, or device has 0 flaws (Grade A), leave phone 100% clean!
-  if (!state.showFlawMarkers || !flaws || !flaws.pins || flaws.pins.length === 0) {
-    container.innerHTML = "";
-    return;
-  }
-
-  let html = "";
-  flaws.pins.forEach((pin, idx) => {
-    const angleDiff = Math.min(
-      Math.abs(currentAngle - pin.angle),
-      Math.abs(currentAngle - (pin.angle + 360)),
-      Math.abs(currentAngle - (pin.angle - 360))
-    );
-    const isNearby = angleDiff <= 45;
-
-    if (isNearby) {
-      html += `
-        <div class="flaw-hotspot-pin" style="top: ${pin.y}; left: ${pin.x};" onclick="showHotspotTip('📍 Flaw #${idx+1} [${pin.location}]: ${pin.desc}')" title="${pin.label}">
-          <div class="flaw-pulse-amber flaw-pulse-ring bg-amber-500/60"></div>
-          <div class="relative w-7 h-7 rounded-full bg-amber-500 text-slate-950 flex items-center justify-center text-xs font-black shadow-2xl border-2 border-white cursor-pointer hover:scale-110 transition-transform">
-            📍
-          </div>
-          <div class="absolute left-8 top-0 whitespace-nowrap bg-slate-900/95 text-white border border-amber-500/60 px-2 py-0.5 rounded text-[11px] font-mono shadow-lg pointer-events-none">
-            ${pin.severity}
-          </div>
-        </div>
-      `;
-    }
-  });
-
-  container.innerHTML = html;
-}
-
-function toggleFlawPins() {
-  state.showFlawMarkers = !state.showFlawMarkers;
-  const label = document.getElementById("flawToggleLabel");
-  if (label) {
-    label.textContent = state.showFlawMarkers ? "Flaw Markers: ON" : "Flaw Markers: OFF";
-  }
-  const dentHotspot = document.getElementById("modelHotspotDent");
-  if (dentHotspot) {
-    if (state.showFlawMarkers && (state.currentInspectGrade === "B" || state.currentInspectGrade === "C")) {
-      dentHotspot.classList.remove("hidden");
-    } else {
-      dentHotspot.classList.add("hidden");
-    }
-  }
-  updateInspectGradeUI();
-  showToast(state.showFlawMarkers ? "👁️ Flaw markers visible" : "✨ Flaw markers hidden — Unobstructed device view");
-}
-
-function jumpToFlaw(angle, location) {
-  if (state.isAutoSpinning) {
-    const sw = document.getElementById("autoSpinToggle");
-    if (sw) sw.checked = false;
-    handleAutoSpinSwitch(false);
-  }
-
-  if (state.viewerMode === "3d") {
-    const mv = document.getElementById("mainModelViewer");
-    if (mv) {
-      if (angle === 90) setInspectPerspective("right");
-      else if (angle === 180) setInspectPerspective("back");
-      else if (angle === 45) {
-        mv.cameraOrbit = "45deg 80deg 105%";
-        const angleTag = document.getElementById("currentAngleTag");
-        if (angleTag) angleTag.textContent = "45° Top-Right Corner Rail";
-      } else {
-        mv.cameraOrbit = `${angle}deg 90deg 105%`;
-      }
-    }
-  } else {
-    setInspectAngle(angle);
-  }
-
-  showToast(`🎯 Rotated to ${angle}°: Inspecting ${location}. Cosmetic only, zero structural impact.`);
-
-  setTimeout(() => {
-    const pins = document.querySelectorAll(".flaw-hotspot-pin, .hotspot-3d-pin");
-    pins.forEach(pin => {
-      pin.classList.add("scale-125");
-      setTimeout(() => pin.classList.remove("scale-125"), 600);
-    });
-  }, 100);
 }
 
 function initTurntableDragging() {
@@ -6541,56 +6602,74 @@ function initTurntableDragging() {
 
   let isDragging = false;
   let startX = 0;
+  let activePointerId = null;
 
-  stage.onmousedown = (e) => {
+  // Modern Universal Pointer Events with setPointerCapture for mobile & desktop
+  stage.addEventListener("pointerdown", (e) => {
     isDragging = true;
     startX = e.clientX;
+    activePointerId = e.pointerId;
+    try {
+      stage.setPointerCapture(e.pointerId);
+    } catch (err) {}
+
+    // Pause auto-spin if user interacts
     if (state.isAutoSpinning) {
       const sw = document.getElementById("autoSpinToggle");
       if (sw) sw.checked = false;
       handleAutoSpinSwitch(false);
     }
-  };
+    e.preventDefault();
+  }, { passive: false });
 
-  window.addEventListener("mousemove", (e) => {
+  stage.addEventListener("pointermove", (e) => {
     if (!isDragging) return;
     const delta = e.clientX - startX;
     startX = e.clientX;
-    state.currentInspectAngle = (state.currentInspectAngle - delta * 0.8 + 360) % 360;
-    const scrubber = document.getElementById("turntableDegreeScrubber");
-    if (scrubber) scrubber.value = Math.round(state.currentInspectAngle);
+    // 0.85 multiplier gives natural finger-to-turntable 1:1 tactile responsiveness
+    state.currentInspectAngle = (state.currentInspectAngle - delta * 0.85 + 360) % 360;
     updateInspectAngleUI();
-  });
+    e.preventDefault();
+  }, { passive: false });
 
-  window.addEventListener("mouseup", () => {
-    isDragging = false;
-  });
-
-  // Touch support
-  stage.ontouchstart = (e) => {
-    isDragging = true;
-    startX = e.touches[0].clientX;
-    if (state.isAutoSpinning) {
-      const sw = document.getElementById("autoSpinToggle");
-      if (sw) sw.checked = false;
-      handleAutoSpinSwitch(false);
+  const endDrag = (e) => {
+    if (isDragging && activePointerId !== null) {
+      try {
+        stage.releasePointerCapture(activePointerId);
+      } catch (err) {}
     }
-  };
-
-  stage.ontouchmove = (e) => {
-    if (!isDragging) return;
-    if (e.cancelable) e.preventDefault();
-    const delta = e.touches[0].clientX - startX;
-    startX = e.touches[0].clientX;
-    state.currentInspectAngle = (state.currentInspectAngle - delta * 0.8 + 360) % 360;
-    const scrubber = document.getElementById("turntableDegreeScrubber");
-    if (scrubber) scrubber.value = Math.round(state.currentInspectAngle);
-    updateInspectAngleUI();
-  };
-
-  stage.ontouchend = () => {
     isDragging = false;
+    activePointerId = null;
   };
+
+  stage.addEventListener("pointerup", endDrag);
+  stage.addEventListener("pointercancel", endDrag);
+
+  // Fallback touch listeners for older mobile browsers
+  stage.addEventListener("touchstart", (e) => {
+    if (e.touches.length === 1) {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      if (state.isAutoSpinning) {
+        const sw = document.getElementById("autoSpinToggle");
+        if (sw) sw.checked = false;
+        handleAutoSpinSwitch(false);
+      }
+    }
+  }, { passive: true });
+
+  window.addEventListener("touchmove", (e) => {
+    if (!isDragging || !e.touches || e.touches.length === 0) return;
+    const clientX = e.touches[0].clientX;
+    const delta = clientX - startX;
+    startX = clientX;
+    state.currentInspectAngle = (state.currentInspectAngle - delta * 0.85 + 360) % 360;
+    updateInspectAngleUI();
+  }, { passive: true });
+
+  window.addEventListener("touchend", () => {
+    isDragging = false;
+  });
 }
 
 // Flipkart / Amazon Style Zoom Magnifier Loupe
@@ -6693,7 +6772,10 @@ function buyProductCOD(productId) {
     product: `${fullName} (Grade ${currentGrade})`,
     amount: priceInfo.price,
     status: "unverified",
+    stage: "pending",
     risk: "Medium Risk (Pre-Dispatch Verification)",
+    khataScore: "2 Orders • Verified",
+    khataBadgeClass: "bg-blue-500/20 text-blue-300 border border-blue-500/40",
     timestamp: "Just now"
   };
 
@@ -6718,48 +6800,163 @@ function renderOrdersTable() {
     return true;
   });
 
-  document.getElementById("queueCount").textContent = `${filtered.length} orders`;
+  const qCount = document.getElementById("queueCount");
+  if (qCount) qCount.textContent = `${filtered.length} orders`;
 
   tbody.innerHTML = filtered.map(order => {
     const isSelected = order.id === state.selectedOrderId;
     let statusBadge = '';
     if (order.status === 'unverified') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">🟡 Pending OTP</span>';
+      statusBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold whitespace-nowrap bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30">🟡 Pending OTP</span>';
     } else if (order.status === 'whatsapp_sent') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">🔵 WhatsApp Sent</span>';
+      statusBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold whitespace-nowrap bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30">🔵 WhatsApp Sent</span>';
     } else if (order.status === 'verified') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">🟢 Verified COD</span>';
+      statusBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold whitespace-nowrap bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">🟢 Verified COD</span>';
     } else if (order.status === 'prepaid') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">💎 Prepaid (₹300 Off)</span>';
+      statusBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold whitespace-nowrap bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 border border-indigo-500/30">💎 Prepaid (₹300 Off)</span>';
     }
 
+    const khataScore = order.khataScore || "Verified Buyer";
+    const khataBadge = order.khataBadgeClass || "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
+
     return `
-      <tr class="hover:bg-slate-800/40 cursor-pointer transition-colors ${isSelected ? 'bg-blue-950/40 border-l-2 border-blue-500' : ''}" onclick="selectOrder('${order.id}')">
-        <td class="py-3 px-3">
-          <div class="font-bold text-white flex items-center gap-1.5">
+      <tr class="order-row hover:bg-slate-100 dark:hover:bg-slate-800/40 cursor-pointer transition-colors border-b border-slate-200 dark:border-slate-800/60 ${isSelected ? 'selected-order-row bg-blue-50 dark:bg-blue-950/40 border-l-4 border-l-blue-600 dark:border-l-blue-500' : ''}" onclick="selectOrder('${order.id}')">
+        <td class="py-2.5 px-2.5 align-middle">
+          <div class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 whitespace-nowrap">
             <span>${order.name}</span>
-            <span class="text-[11px] text-slate-500 font-mono">#${order.id}</span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 font-mono font-semibold">#${order.id}</span>
           </div>
-          <div class="text-[11px] text-slate-400 font-mono">${order.phone} • ${order.city}</div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-400 font-mono mt-0.5 whitespace-nowrap">${order.phone} • ${order.city}</div>
         </td>
-        <td class="py-3 px-3">
-          <div class="text-white font-medium">${order.product}</div>
-          <div class="text-emerald-400 font-bold font-mono">₹${order.amount.toLocaleString()} COD</div>
+        <td class="py-2.5 px-2.5 align-middle">
+          <div class="text-slate-800 dark:text-white font-medium text-xs leading-snug">${order.product}</div>
+          <div class="text-emerald-600 dark:text-emerald-400 font-bold font-mono text-xs mt-0.5">₹${order.amount.toLocaleString()} COD</div>
         </td>
-        <td class="py-3 px-3 text-[11px] text-slate-300">
-          ${order.risk}
+        <td class="py-2.5 px-2.5 align-middle text-[11px]">
+          <span class="khata-score-badge ${khataBadge}">${khataScore}</span>
+          <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">${order.risk}</div>
         </td>
-        <td class="py-3 px-3">
+        <td class="py-2.5 px-2.5 align-middle">
           ${statusBadge}
         </td>
-        <td class="py-3 px-3 text-right">
-          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="px-2.5 py-1 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[11px] cursor-pointer">
-            📲 Dispatch
+        <td class="py-2.5 px-2.5 align-middle text-right">
+          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-sm hover:shadow transition-all whitespace-nowrap cursor-pointer">
+            <span>📲 Dispatch</span>
           </button>
         </td>
       </tr>
     `;
   }).join('');
+
+  renderOrdersKanban();
+}
+
+function setOpsViewMode(mode) {
+  state.opsViewMode = mode;
+  const tableBtn = document.getElementById("viewToggleTableBtn");
+  const kanbanBtn = document.getElementById("viewToggleKanbanBtn");
+  const tableContainer = document.getElementById("opsTableViewContainer");
+  const kanbanContainer = document.getElementById("opsKanbanViewContainer");
+  const filterTabs = document.getElementById("tableFilterTabsGroup");
+
+  if (mode === "kanban") {
+    if (kanbanBtn) kanbanBtn.className = "px-2 py-1 rounded bg-blue-600 text-white font-bold cursor-pointer";
+    if (tableBtn) tableBtn.className = "px-2 py-1 rounded text-slate-400 hover:text-white cursor-pointer font-medium";
+    if (kanbanContainer) kanbanContainer.classList.remove("hidden");
+    if (tableContainer) tableContainer.classList.add("hidden");
+    if (filterTabs) filterTabs.classList.add("hidden");
+    renderOrdersKanban();
+  } else {
+    if (tableBtn) tableBtn.className = "px-2 py-1 rounded bg-blue-600 text-white font-bold cursor-pointer";
+    if (kanbanBtn) kanbanBtn.className = "px-2 py-1 rounded text-slate-400 hover:text-white cursor-pointer font-medium";
+    if (tableContainer) tableContainer.classList.remove("hidden");
+    if (kanbanContainer) kanbanContainer.classList.add("hidden");
+    if (filterTabs) filterTabs.classList.remove("hidden");
+    renderOrdersTable();
+  }
+}
+
+function moveOrderStage(orderId, nextStage) {
+  const order = state.orders.find(o => o.id === orderId);
+  if (!order) return;
+  order.stage = nextStage;
+  if (nextStage === "confirmed") {
+    order.status = "whatsapp_sent";
+  } else if (nextStage === "packed") {
+    order.status = "verified";
+  } else if (nextStage === "transit") {
+    order.status = "prepaid";
+  }
+  renderOrdersTable();
+  renderOrdersKanban();
+  showToast(`🚚 Order #${orderId} moved to stage: ${nextStage.toUpperCase()}`);
+}
+
+function renderOrdersKanban() {
+  const stages = {
+    pending: document.getElementById("kanbanColPending"),
+    confirmed: document.getElementById("kanbanColConfirmed"),
+    packed: document.getElementById("kanbanColPacked"),
+    transit: document.getElementById("kanbanColTransit")
+  };
+  if (!stages.pending) return;
+
+  const counts = { pending: 0, confirmed: 0, packed: 0, transit: 0 };
+
+  // Clear columns
+  Object.values(stages).forEach(col => { if (col) col.innerHTML = ""; });
+
+  state.orders.forEach(order => {
+    const s = order.stage || (order.status === "prepaid" ? "transit" : order.status === "verified" ? "packed" : order.status === "whatsapp_sent" ? "confirmed" : "pending");
+    if (counts[s] !== undefined) counts[s]++;
+
+    const isSelected = order.id === state.selectedOrderId;
+    const khataScore = order.khataScore || "Verified Buyer";
+    const khataBadge = order.khataBadgeClass || "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
+
+    let advanceBtn = '';
+    if (s === 'pending') {
+      advanceBtn = `<button onclick="event.stopPropagation(); moveOrderStage('${order.id}', 'confirmed');" class="px-2 py-1 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold text-[10px] cursor-pointer">OTP ➔</button>`;
+    } else if (s === 'confirmed') {
+      advanceBtn = `<button onclick="event.stopPropagation(); moveOrderStage('${order.id}', 'packed');" class="px-2 py-1 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-[10px] cursor-pointer">Lab Scan ➔</button>`;
+    } else if (s === 'packed') {
+      advanceBtn = `<button onclick="event.stopPropagation(); moveOrderStage('${order.id}', 'transit');" class="px-2 py-1 rounded bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[10px] cursor-pointer">BlueDart ➔</button>`;
+    } else {
+      advanceBtn = `<span class="text-emerald-400 font-bold text-[10px]">✓ Dispatched</span>`;
+    }
+
+    const card = `
+      <div class="fz-kanban-card ${isSelected ? 'active-card' : ''}" onclick="selectOrder('${order.id}')">
+        <div class="flex items-center justify-between gap-1 mb-1">
+          <span class="font-bold text-slate-900 dark:text-white text-xs truncate">${order.name}</span>
+          <span class="text-[10px] font-mono text-slate-400 font-semibold">#${order.id}</span>
+        </div>
+        <div class="text-[11px] text-slate-600 dark:text-slate-300 font-medium truncate mb-1">${order.product}</div>
+        <div class="flex items-center justify-between mb-2">
+          <span class="font-mono font-bold text-emerald-600 dark:text-emerald-400 text-xs">₹${order.amount.toLocaleString()}</span>
+          <span class="khata-score-badge ${khataBadge}">${khataScore}</span>
+        </div>
+        <div class="flex items-center justify-between pt-2 border-t border-slate-200 dark:border-slate-800 text-[10px]">
+          <span class="text-slate-500 dark:text-slate-400 truncate">${order.city}</span>
+          ${advanceBtn}
+        </div>
+      </div>
+    `;
+
+    if (stages[s]) {
+      stages[s].innerHTML += card;
+    }
+  });
+
+  // Update counter badges
+  const cPending = document.getElementById("kanbanCountPending");
+  const cConfirmed = document.getElementById("kanbanCountConfirmed");
+  const cPacked = document.getElementById("kanbanCountPacked");
+  const cTransit = document.getElementById("kanbanCountTransit");
+  if (cPending) cPending.textContent = counts.pending;
+  if (cConfirmed) cConfirmed.textContent = counts.confirmed;
+  if (cPacked) cPacked.textContent = counts.packed;
+  if (cTransit) cTransit.textContent = counts.transit;
 }
 
 function filterQueue(q) {
@@ -6876,7 +7073,10 @@ function simulateCustomerConfirmAddress() {
   if (!order) return;
 
   order.status = "verified";
+  order.stage = "packed";
   order.risk = "Low Risk (Address OTP Confirmed)";
+  order.khataScore = "Doorstep Confirmed";
+  order.khataBadgeClass = "bg-emerald-500/20 text-emerald-300 border border-emerald-500/40";
 
   if (!state.chatHistory[order.id]) state.chatHistory[order.id] = [];
   state.chatHistory[order.id].push({
@@ -6904,7 +7104,10 @@ function simulateCustomerPrepayUPI() {
   const discounted = order.amount - 300;
   order.amount = discounted;
   order.status = "prepaid";
+  order.stage = "transit";
   order.risk = "Zero Risk (Prepaid UPI via ₹300 Off)";
+  order.khataScore = "Prepaid VIP • 0% RTO";
+  order.khataBadgeClass = "bg-purple-500/20 text-purple-300 border border-purple-500/40";
 
   if (!state.chatHistory[order.id]) state.chatHistory[order.id] = [];
   state.chatHistory[order.id].push({
@@ -6948,7 +7151,10 @@ function simulateIncomingOrder() {
     product: `${pickProd.name} (Grade A)`,
     amount: pickProd.grades["A"].price,
     status: "unverified",
+    stage: "pending",
     risk: "High RTO Risk (Unconfirmed Doorstep)",
+    khataScore: "New COD • Low Trust",
+    khataBadgeClass: "bg-red-500/20 text-red-300 border border-red-500/40",
     timestamp: "Just now"
   };
 
@@ -7170,7 +7376,7 @@ function updateHeroCarouselUI() {
 }
 
 function nextHeroSlide(isAuto = false) {
-  heroCurrentSlide = (heroCurrentSlide + 1) % 3;
+  heroCurrentSlide = (heroCurrentSlide + 1) % 5;
   updateHeroCarouselUI();
   if (heroIsAutoPlaying) {
     startHeroAutoSlide();
@@ -7178,7 +7384,7 @@ function nextHeroSlide(isAuto = false) {
 }
 
 function prevHeroSlide() {
-  heroCurrentSlide = (heroCurrentSlide - 1 + 3) % 3;
+  heroCurrentSlide = (heroCurrentSlide - 1 + 5) % 5;
   updateHeroCarouselUI();
   if (heroIsAutoPlaying) {
     startHeroAutoSlide();
@@ -7233,6 +7439,7 @@ window.pauseHeroAutoSlide = pauseHeroAutoSlide;
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initBudgetSlider();
+  initCurrencySwitcher();
   updateRegionUI();
   initHeroCarousel();
   renderCatalog();
@@ -7857,7 +8064,7 @@ function searchTrackOrderView() {
 }
 
 /* ======================================================== */
-/* 17. CASHIFY-INSPIRED BRAND QUICK-SELECT & CATEGORY RAIL  */
+/* 17. PROPRIETARY BRAND QUICK-SELECT & CATEGORY RAIL  */
 /* ======================================================== */
 function handleBrandQuickSelect(brand) {
   state.activeCategory = "all";
@@ -7935,68 +8142,69 @@ function handleVideoVerifiedFilter() {
 }
 
 /* ======================================================== */
-/* 18. 32-POINT QA VERIFICATION VIDEO PLAYER (CASHIFY-STYLE)*/
+/* 18. 32-POINT QA VERIFICATION VIDEO PLAYER (LAB PROOF)*/
 /* ======================================================== */
+// Amazon-Grade 32-Point Diagnostic Test Bench Definitions
 const QA_PHASES = [
   {
-    phase: 1,
-    title: "Phase 1: Physical Housing & 0-Dent Inspection",
-    telemetry: "Laser Surface Micrometry: 0 Dents Detected (Grade A)",
-    zoom: "scale-100",
+    title: "Phase 1/6: Optical Laser Housing & Bezel Micrometry",
+    telemetry: "Laser Spec: 450nm Blue Diode • Surface Deviation: 0.002mm [PASSED] • Aerospace Alloy Integrity: 100%",
+    narration: "Phase 1: Laser surface micrometry scan complete. Housing is verified 100 percent scratch-free Grade A aerospace alloy.",
+    sound: "laser",
+    overlay: "qaOverlayMicrometry",
+    zoom: "scale-105 rotate-0",
     laser: true,
-    audio: false,
-    passBadge: "PASS (0 Dents)",
-    time: 5
+    audio: false
   },
   {
-    phase: 2,
-    title: "Phase 2: OLED & Multi-Touch Digitizer Scan",
-    telemetry: "TrueTone & 120Hz ProMotion Calibrated • Zero Dead Pixels",
-    zoom: "scale-110",
-    laser: true,
-    audio: false,
-    passBadge: "PASS (120Hz)",
-    time: 11
-  },
-  {
-    phase: 3,
-    title: "Phase 3: 48MP/200MP Triple Camera & OIS Telemetry",
-    telemetry: "Autofocus Latency 14ms • Sensor Dust Microscopy: 100% Clean",
-    zoom: "scale-125 translate-y-3",
+    title: "Phase 2/6: Dynamic OLED Multi-Touch Digitizer Matrix",
+    telemetry: "Touch Grid: 120Hz Sampling • Dead-pixel Analysis: 0 Subpixel Flaws • Nit Lumens: 1850 Nits Peak",
+    narration: "Phase 2: Multi-touch matrix scan verified. 120 hertz digitizer responsive with zero dead subpixels.",
+    sound: "matrix",
+    overlay: "qaOverlayDigitizer",
+    zoom: "scale-110 -rotate-1",
     laser: false,
-    audio: false,
-    passBadge: "PASS (48MP)",
-    time: 17
+    audio: false
   },
   {
-    phase: 4,
-    title: "Phase 4: Stereo Speakers & Dual Acoustic Mic",
-    telemetry: "Peak Output 88dB • Stereo Frequency Sweep (20Hz - 20kHz) PASS",
-    zoom: "scale-105",
+    title: "Phase 3/6: Dual OIS Laser Camera & Lens Collimation",
+    telemetry: "Focal Plane: 24mm f/1.78 • Sensor Shift OIS: Active • Spectral Aberration: 0.01% [LAB CALIBRATED]",
+    narration: "Phase 3: Camera sensor and optical image stabilization calibrated. High precision telephoto and macro pass.",
+    sound: "shutter",
+    overlay: "qaOverlayCamera",
+    zoom: "scale-115 rotate-1",
     laser: false,
-    audio: true,
-    passBadge: "PASS (88dB)",
-    time: 23
+    audio: false
   },
   {
-    phase: 5,
-    title: "Phase 5: Battery Health & USB-C Power Draw",
-    telemetry: "Verified 96% Capacity • 84 Cycles • PD 27W Fast Charge PASS",
-    zoom: "scale-100",
-    laser: true,
-    audio: false,
-    passBadge: "PASS (96%)",
-    time: 28
-  },
-  {
-    phase: 6,
-    title: "Phase 6: Motherboard, 5G Radio & Clean IMEI",
-    telemetry: "IMEI: 354891082918231 • Carrier Blacklist: Clean • OEM Logic Board",
-    zoom: "scale-100",
+    title: "Phase 4/6: Dual Stereo Acoustic & Mic Frequency Sweep",
+    telemetry: "Acoustic Sweep: 20Hz - 20,000Hz • THD Distortion: <0.04% • Stereo Separation: 34dB [PASSED]",
+    narration: "Phase 4: Acoustic dual stereo frequency sweep executing from 20 hertz to 20 kilohertz. Zero harmonic distortion.",
+    sound: "sweep",
+    overlay: "qaOverlayAcoustic",
+    zoom: "scale-100 rotate-0",
     laser: false,
-    audio: false,
-    passBadge: "PASS (Clean)",
-    time: 32
+    audio: true
+  },
+  {
+    title: "Phase 5/6: Smart Battery Cell Health & PD Fast Charge",
+    telemetry: "Voltage: 4.38V • Thermal Gradient: 29.4°C • PD Charging: 27W Active • Battery Health: 99% Original",
+    narration: "Phase 5: Battery health diagnostic complete. Lithium cell health 99 percent with fast charging thermal stability.",
+    sound: "charge",
+    overlay: "qaOverlayBattery",
+    zoom: "scale-105 -rotate-1",
+    laser: false,
+    audio: false
+  },
+  {
+    title: "Phase 6/6: Global IMEI & Carrier Cryptographic Whitelist",
+    telemetry: "GSMA Blacklist: Clean • Knox/iCloud Lock: Unlocked • 5G Sub-6/mmWave Bands: Verified Ready",
+    narration: "Phase 6: Global GSMA database verification clear. Hardware iCloud unlocked, ready for instant dispatch.",
+    sound: "pass",
+    overlay: "qaOverlayIMEI",
+    zoom: "scale-100 rotate-0",
+    laser: false,
+    audio: false
   }
 ];
 
@@ -8033,10 +8241,8 @@ function openVerificationVideo(productId) {
   const serialEl = document.getElementById("qaVideoSerialTag");
   if (serialEl) serialEl.textContent = `FZ-QC-2026-${Math.floor(1000 + Math.random() * 9000)}`;
 
-  // Start video playback
-  updateQAPhaseUI(0);
-  startQATimer();
-  showToast(`📹 Loading 32-Point QA Video Log for ${p.name}`);
+  // Option B: Display Official Digital Lab Certification Report
+  showToast(`🛡️ 32-Point Lab Inspection Certificate Loaded for ${p.name}`);
 }
 
 function closeVerificationVideo() {
@@ -8115,11 +8321,14 @@ function updateQAControlsUI() {
   const text = document.getElementById("qaPlayText");
   if (icon && text) {
     if (qaVideoState.isPlaying) {
-      icon.textContent = "⏸️";
+      icon.innerHTML = `<i data-lucide="pause" class="w-3.5 h-3.5"></i>`;
       text.textContent = "Pause";
     } else {
-      icon.textContent = "▶️";
+      icon.innerHTML = `<i data-lucide="play" class="w-3.5 h-3.5"></i>`;
       text.textContent = "Play";
+    }
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
+      window.lucide.createIcons();
     }
   }
 }
@@ -8140,9 +8349,181 @@ function jumpToQAPhase(phaseIndex) {
   }
 }
 
+
+// ==========================================
+// AMAZON-GRADE WEB AUDIO SYNTHESIZER ENGINE
+// ==========================================
+let qaAudioCtx = null;
+let qaIsMuted = false;
+
+function getQAAudioContext() {
+  if (!qaAudioCtx) {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    if (AudioContext) {
+      qaAudioCtx = new AudioContext();
+    }
+  }
+  if (qaAudioCtx && qaAudioCtx.state === "suspended") {
+    qaAudioCtx.resume();
+  }
+  return qaAudioCtx;
+}
+
+function playQASound(type) {
+  if (qaIsMuted) return;
+  try {
+    const ctx = getQAAudioContext();
+    if (!ctx) return;
+    const now = ctx.currentTime;
+
+    if (type === "laser") {
+      // Futuristic laser telemetry chirp
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sawtooth";
+      osc.frequency.setValueAtTime(880, now);
+      osc.frequency.exponentialRampToValueAtTime(220, now + 0.25);
+      gain.gain.setValueAtTime(0.08, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.25);
+    } else if (type === "matrix") {
+      // Rapid digitizer test blips
+      [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now + i * 0.06);
+        gain.gain.setValueAtTime(0.06, now + i * 0.06);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.06 + 0.08);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + i * 0.06);
+        osc.stop(now + i * 0.06 + 0.08);
+      });
+    } else if (type === "shutter") {
+      // Camera shutter & mechanical click
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "triangle";
+      osc.frequency.setValueAtTime(1400, now);
+      osc.frequency.exponentialRampToValueAtTime(120, now + 0.12);
+      gain.gain.setValueAtTime(0.12, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.12);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.12);
+    } else if (type === "sweep") {
+      // Acoustic sine frequency sweep (200Hz to 1200Hz)
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(220, now);
+      osc.frequency.linearRampToValueAtTime(1200, now + 0.4);
+      gain.gain.setValueAtTime(0.06, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.45);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.45);
+    } else if (type === "charge") {
+      // Power surge tone
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(350, now);
+      osc.frequency.exponentialRampToValueAtTime(700, now + 0.3);
+      gain.gain.setValueAtTime(0.08, now);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(now);
+      osc.stop(now + 0.35);
+    } else if (type === "pass") {
+      // Lab certification approval chord (Major triad)
+      [523.25, 659.25, 783.99, 1046.50].forEach((freq) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "sine";
+        osc.frequency.setValueAtTime(freq, now);
+        gain.gain.setValueAtTime(0.07, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now);
+        osc.stop(now + 0.6);
+      });
+    }
+  } catch (err) {
+    console.warn("QA Audio playback error:", err);
+  }
+}
+
+// Spoken Voice Narration Engine
+function speakQANarration(text) {
+  const capEl = document.getElementById("qaVoiceCaption");
+  if (capEl) {
+    capEl.textContent = text;
+  }
+  if (qaIsMuted) return;
+
+  if ("speechSynthesis" in window) {
+    try {
+      window.speechSynthesis.cancel(); // cancel previous phrase
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.rate = 1.05;
+      utterance.pitch = 1.0;
+      utterance.volume = 0.9;
+      // Prefer English voice
+      const voices = window.speechSynthesis.getVoices();
+      const enVoice = voices.find(v => v.lang.includes("en-US") || v.lang.includes("en-GB"));
+      if (enVoice) utterance.voice = enVoice;
+      window.speechSynthesis.speak(utterance);
+    } catch (e) {
+      console.warn("SpeechSynthesis error:", e);
+    }
+  }
+}
+
+function toggleQAVoiceNarration() {
+  qaIsMuted = !qaIsMuted;
+  const icon = document.getElementById("qaVoiceIcon");
+  const text = document.getElementById("qaVoiceText");
+  const btn = document.getElementById("qaVoiceMuteBtn");
+
+  if (qaIsMuted) {
+    if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+    if (icon) icon.className = "ph-bold ph-speaker-slash text-rose-400 text-sm";
+    if (text) text.textContent = "Voice Muted";
+    if (btn) btn.className = "px-2.5 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/40 flex items-center gap-1.5 transition-all shadow-sm";
+    showToast("🔇 QA Audio & Voice Narration Muted");
+  } else {
+    getQAAudioContext();
+    if (icon) icon.className = "ph-bold ph-speaker-high text-blue-400 text-sm";
+    if (text) text.textContent = "Sound & Voice ON";
+    if (btn) btn.className = "px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/40 flex items-center gap-1.5 transition-all shadow-sm";
+    showToast("🔊 QA Sound & Voice Narration Enabled");
+    if (QA_PHASES[qaVideoState.currentPhase]) {
+      speakQANarration(QA_PHASES[qaVideoState.currentPhase].narration);
+      playQASound(QA_PHASES[qaVideoState.currentPhase].sound);
+    }
+  }
+}
+
+function orderFromVideoModal() {
+  if (qaVideoState.activeProductId) {
+    closeVerificationVideo();
+    buyProductCOD(qaVideoState.activeProductId);
+  }
+}
+
+
 function updateQAPhaseUI(phaseIndex) {
   qaVideoState.currentPhase = phaseIndex;
-  const data = QA_PHASES[phaseIndex];
+  const data = QA_PHASES[phaseIndex] || QA_PHASES[0];
 
   // Update Title & Telemetry
   const titleEl = document.getElementById("qaActivePhaseTitle");
@@ -8175,7 +8556,29 @@ function updateQAPhaseUI(phaseIndex) {
     }
   }
 
-  // Step Pills update
+  // Diagnostic Phase Overlays Controller
+  const allOverlays = [
+    "qaOverlayMicrometry",
+    "qaOverlayDigitizer",
+    "qaOverlayCamera",
+    "qaOverlayAcoustic",
+    "qaOverlayBattery",
+    "qaOverlayIMEI"
+  ];
+  allOverlays.forEach(ovId => {
+    const el = document.getElementById(ovId);
+    if (el) {
+      if (ovId === data.overlay) {
+        el.classList.remove("hidden");
+        el.classList.add("flex");
+      } else {
+        el.classList.add("hidden");
+        el.classList.remove("flex");
+      }
+    }
+  });
+
+  // Step Pills & Cards highlight
   for (let i = 0; i < 6; i++) {
     const pill = document.getElementById(`qaPhasePill${i}`);
     if (pill) {
@@ -8197,6 +8600,10 @@ function updateQAPhaseUI(phaseIndex) {
       }
     }
   }
+
+  // Trigger Sound & Spoken Narration
+  playQASound(data.sound);
+  speakQANarration(data.narration);
 }
 
 function seekQATimeline(event) {
@@ -8268,9 +8675,10 @@ function setPhoneCase(caseStyle) {
     const btn = document.getElementById(`btnCase${type.charAt(0).toUpperCase() + type.slice(1)}`);
     if (btn) {
       if (type === caseStyle) {
-        btn.className = "case-sim-option-btn active p-1.5 rounded-lg border border-blue-500 bg-blue-600 text-white font-bold text-center text-[11px] cursor-pointer shadow-sm";
+        btn.classList.add("active");
+        btn.classList.remove("text-slate-400");
       } else {
-        btn.className = "case-sim-option-btn p-1.5 rounded-lg border border-slate-700 bg-slate-900 text-slate-300 hover:text-white font-medium text-center text-[11px] cursor-pointer";
+        btn.classList.remove("active");
       }
     }
   });
@@ -8438,7 +8846,7 @@ const AI_COPILOT_KNOWLEDGE = {
   battery: "🔋 <b>NexG Battery Diagnostic Log:</b> Tested at 96% OEM capacity with 84 verified charge cycles. Peak performance capability is 100% intact with zero CPU throttling. Expect 8h 15m screen-on time on active 5G. Covered by FoneZone 6-Month Replacement Guarantee if health drops below 80%.",
   grade_b: "🔍 <b>Cosmetic Flaw Analysis:</b> On this Grade B unit, there is a single 0.8mm hairline cosmetic scuff on the lower speaker rail (angle 180°). The front ceramic display and camera sapphire lenses are 100% scratch-free. When held at normal 30cm reading distance, the mark is virtually invisible in outdoor sunlight, and 100% covered when using a case.",
   genuine: "🛡️ <b>Component Authenticity Report:</b> Motherboard GSMA IMEI verified clean. TrueTone, Face ID biometric laser, and Apple Ceramic Shield are 100% factory original OEM parts. Passed 32 hardware diagnostic tests with zero \"Unknown Part\" warning banners in iOS Settings.",
-  vs_cashify: "⚖️ <b>FoneZone vs Cashify Comparison:</b> Cashify charges up to ₹4,000 more for similar models and provides generic stock photos. FoneZone gives you: (1) True 360° flaw transparency with millimeter coordinates, (2) Serialized 32-Pt QA video of your exact device, (3) 7-Day test return policy with zero restocking fees."
+  vs_market: "⚖️ <b>FoneZone Market Advantage:</b> Competitor platforms charge up to ₹4,000 more for similar models and rely on standard stock photos. FoneZone gives you: (1) True 360° flaw transparency with millimeter coordinates, (2) Serialized 32-Pt QA video of your exact device, (3) 7-Day test return policy with zero restocking fees."
 };
 
 function typewriterAIAnswer(htmlText) {
@@ -8471,8 +8879,8 @@ function handleCustomAIQuestion() {
     reply = `🔍 <b>Display & Cosmetic Assurance:</b> The OLED display on this ${p.name} is guaranteed 100% scratch-free. Touch sensitivity, 120Hz ProMotion, and TrueTone are fully verified. All cosmetic flaw coordinates are mapped to the millimeter in our 360 viewer.`;
   } else if (q.includes("warranty") || q.includes("guarantee") || q.includes("return") || q.includes("replace")) {
     reply = `🛡️ <b>FoneZone Protection Plan:</b> Comes with our comprehensive 6-Month Pan-India Warranty covering screen, motherboard, and battery. You also receive a 7-Day Doorstep Replacement Window if anything does not meet your expectations.`;
-  } else if (q.includes("cashify") || q.includes("compare") || q.includes("price") || q.includes("why")) {
-    reply = `⚖️ <b>Why Choose FoneZone:</b> You save ₹3,000–₹5,000 compared to Cashify while getting radical transparency: inspect the real 360 flaw coordinates and watch the 32-point inspection video before dispatch!`;
+  } else if (q.includes("competitor") || q.includes("compare") || q.includes("market") || q.includes("price") || q.includes("why")) {
+    reply = `⚖️ <b>Why Choose FoneZone:</b> You save ₹3,000–₹5,000 compared to aggregator portals while getting radical transparency: inspect the real 360 flaw coordinates and watch the 32-point inspection video before dispatch!`;
   } else if (q.includes("original") || q.includes("genuine") || q.includes("part") || q.includes("icloud") || q.includes("lock")) {
     reply = `✅ <b>100% Genuine & Clean GSMA:</b> Every unit is checked against global GSMA blacklists, completely iCloud/MDM unlocked, and runs on 100% genuine OEM components with no warnings in Settings.`;
   } else {

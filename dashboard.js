@@ -4,7 +4,7 @@
  */
 
 const dashboardState = {
-  theme: localStorage.getItem('fz_theme') || 'dark',
+  theme: localStorage.getItem('fz_theme') || 'light',
   selectedOrderId: 'FZ-1049',
   queueFilter: 'all',
   orders: [
@@ -443,15 +443,20 @@ function applyTheme(theme) {
   dashboardState.theme = theme;
   localStorage.setItem('fz_theme', theme);
   const html = document.documentElement;
+  const body = document.body;
   const icon = document.getElementById('themeIcon');
 
   if (theme === 'dark') {
     html.classList.add('dark');
     html.classList.remove('light');
+    body.classList.remove('theme-light', 'bg-[#F8FAFC]', 'text-slate-900');
+    body.classList.add('bg-[#070A10]', 'text-slate-100');
     if (icon) icon.setAttribute('data-lucide', 'sun');
   } else {
     html.classList.remove('dark');
     html.classList.add('light');
+    body.classList.remove('bg-[#070A10]', 'text-slate-100');
+    body.classList.add('theme-light', 'bg-[#F8FAFC]', 'text-slate-900');
     if (icon) icon.setAttribute('data-lucide', 'moon');
   }
 
