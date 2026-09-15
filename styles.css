@@ -3310,182 +3310,156 @@ body.theme-light .fz-kanban-card {
 
 
 /* ======================================================== */
-/* 11. DASHBOARD & MERCHANT COMMAND CENTER (LIGHT MODE)     */
+/* 11. DASHBOARD & MERCHANT COMMAND CENTER (EXPLICIT THEME) */
 /* ======================================================== */
-html:not(.dark) body,
-body.theme-light,
-html.light body {
+/* Page Body */
+body.theme-light, html.light body {
   background-color: #F8FAFC !important;
   color: #0F172A !important;
 }
-
-html:not(.dark) header.sticky,
-html.light header.sticky {
-  background-color: #FFFFFF !important;
-  border-color: #E2E8F0 !important;
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06) !important;
+html.dark body, body.theme-dark, body:not(.theme-light) {
+  background-color: #070A10 !important;
+  color: #F8FAFC !important;
 }
 
-html:not(.dark) header.sticky .text-white,
-html.light header.sticky .text-white {
-  color: #0F172A !important;
+/* OPS Top Header */
+.ops-top-header {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+html.light .ops-top-header, body.theme-light .ops-top-header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+html.dark .ops-top-header, body.theme-dark .ops-top-header, body:not(.theme-light) .ops-top-header {
+  background-color: rgba(11, 17, 32, 0.95) !important;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3) !important;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5) !important;
 }
 
-html:not(.dark) #merchantOpsHeaderCard,
-html.light #merchantOpsHeaderCard {
+/* OPS Header Banner */
+.ops-header-banner {
+  transition: all 0.25s ease;
+}
+html.light .ops-header-banner, body.theme-light .ops-header-banner {
   background: linear-gradient(135deg, #EFF6FF 0%, #FFFFFF 100%) !important;
-  border-color: #BFDBFE !important;
+  border: 1px solid #BFDBFE !important;
   box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08) !important;
 }
-
-html:not(.dark) #merchantOpsHeaderCard h1,
-html.light #merchantOpsHeaderCard h1 {
+html.light .ops-header-banner h1, body.theme-light .ops-header-banner h1 {
   color: #0F172A !important;
 }
-
-html:not(.dark) #merchantOpsHeaderCard p,
-html.light #merchantOpsHeaderCard p {
+html.light .ops-header-banner p, body.theme-light .ops-header-banner p {
   color: #475569 !important;
 }
+html.dark .ops-header-banner, body.theme-dark .ops-header-banner, body:not(.theme-light) .ops-header-banner {
+  background: linear-gradient(135deg, #0C1A38 0%, #0A162F 50%, #070E1E 100%) !important;
+  border: 1px solid rgba(59, 130, 246, 0.35) !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6) !important;
+}
+html.dark .ops-header-banner h1, body.theme-dark .ops-header-banner h1, body:not(.theme-light) .ops-header-banner h1 {
+  color: #FFFFFF !important;
+}
+html.dark .ops-header-banner p, body.theme-dark .ops-header-banner p, body:not(.theme-light) .ops-header-banner p {
+  color: #CBD5E1 !important;
+}
 
-/* Dashboard KPI Cards in Light Mode */
-html:not(.dark) .grid-cols-2.lg\:grid-cols-4 > div,
-html.light .grid-cols-2.lg\:grid-cols-4 > div {
+/* OPS Cards (KPI Cards, Queue Container, Phone Container, Calc Container) */
+.ops-card {
+  transition: all 0.25s ease;
+}
+html.light .ops-card, body.theme-light .ops-card {
   background-color: #FFFFFF !important;
-  border-color: #E2E8F0 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid #E2E8F0 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+}
+html.dark .ops-card, body.theme-dark .ops-card, body:not(.theme-light) .ops-card {
+  background-color: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid #1E293B !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
 }
 
-html:not(.dark) .grid-cols-2.lg\:grid-cols-4 > div .text-white,
-html.light .grid-cols-2.lg\:grid-cols-4 > div .text-white {
-  color: #0F172A !important;
+/* Sub-Cards & Inset Containers */
+.ops-subcard {
+  transition: all 0.25s ease;
 }
-
-html:not(.dark) .grid-cols-2.lg\:grid-cols-4 > div .text-slate-400,
-html.light .grid-cols-2.lg\:grid-cols-4 > div .text-slate-400 {
-  color: #64748B !important;
-}
-
-/* Order Table Left Column in Light Mode */
-html:not(.dark) .lg\:col-span-7,
-html.light .lg\:col-span-7 {
-  background-color: #FFFFFF !important;
-  border-color: #E2E8F0 !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
-}
-
-html:not(.dark) .lg\:col-span-7 h2,
-html.light .lg\:col-span-7 h2 {
-  color: #0F172A !important;
-}
-
-html:not(.dark) .lg\:col-span-7 thead,
-html.light .lg\:col-span-7 thead {
+html.light .ops-subcard, body.theme-light .ops-subcard {
   background-color: #F8FAFC !important;
-  border-color: #E2E8F0 !important;
-  color: #475569 !important;
-}
-
-html:not(.dark) .dash-table tbody tr:hover,
-html.light .dash-table tbody tr:hover {
-  background-color: #F1F5F9 !important;
-}
-
-html:not(.dark) .dash-table tbody td .text-white,
-html.light .dash-table tbody td .text-white {
-  color: #0F172A !important;
-}
-
-html:not(.dark) .dash-table tbody td .text-slate-200,
-html.light .dash-table tbody td .text-slate-200 {
+  border: 1px solid #E2E8F0 !important;
   color: #1E293B !important;
 }
+html.dark .ops-subcard, body.theme-dark .ops-subcard, body:not(.theme-light) .ops-subcard {
+  background-color: rgba(2, 6, 23, 0.75) !important;
+  border: 1px solid #1E293B !important;
+  color: #F1F5F9 !important;
+}
 
-html:not(.dark) .dash-table tbody td .text-slate-400,
-html.light .dash-table tbody td .text-slate-400 {
+/* Typography Helpers */
+html.light .ops-title, body.theme-light .ops-title {
+  color: #0F172A !important;
+}
+html.dark .ops-title, body.theme-dark .ops-title, body:not(.theme-light) .ops-title {
+  color: #FFFFFF !important;
+}
+html.light .ops-subtitle, body.theme-light .ops-subtitle {
   color: #64748B !important;
 }
-
-html:not(.dark) .dash-table tbody {
-  border-color: #E2E8F0 !important;
+html.dark .ops-subtitle, body.theme-dark .ops-subtitle, body:not(.theme-light) .ops-subtitle {
+  color: #94A3B8 !important;
 }
 
-html:not(.dark) .dash-table tbody tr {
-  border-color: #F1F5F9 !important;
+/* Table Elements */
+html.light .dash-table thead, body.theme-light .dash-table thead {
+  background-color: #F8FAFC !important;
+  color: #475569 !important;
+  border-bottom: 2px solid #E2E8F0 !important;
+}
+html.dark .dash-table thead, body.theme-dark .dash-table thead, body:not(.theme-light) .dash-table thead {
+  background-color: rgba(2, 6, 23, 0.8) !important;
+  color: #94A3B8 !important;
+  border-bottom: 2px solid #1E293B !important;
+}
+html.light .dash-table tbody tr, body.theme-light .dash-table tbody tr {
+  border-bottom: 1px solid #F1F5F9 !important;
+}
+html.dark .dash-table tbody tr, body.theme-dark .dash-table tbody tr, body:not(.theme-light) .dash-table tbody tr {
+  border-bottom: 1px solid rgba(30, 41, 59, 0.6) !important;
+}
+html.light .dash-table tbody tr:hover, body.theme-light .dash-table tbody tr:hover {
+  background-color: #F8FAFC !important;
+}
+html.dark .dash-table tbody tr:hover, body.theme-dark .dash-table tbody tr:hover, body:not(.theme-light) .dash-table tbody tr:hover {
+  background-color: rgba(30, 41, 59, 0.4) !important;
+}
+html.light .dash-table tbody tr.selected-order-row, body.theme-light .dash-table tbody tr.selected-order-row {
+  background-color: #EFF6FF !important;
+  border-left: 4px solid #2563EB !important;
+}
+html.dark .dash-table tbody tr.selected-order-row, body.theme-dark .dash-table tbody tr.selected-order-row, body:not(.theme-light) .dash-table tbody tr.selected-order-row {
+  background-color: rgba(30, 58, 138, 0.35) !important;
+  border-left: 4px solid #3B82F6 !important;
 }
 
-html:not(.dark) .lg\:col-span-7 .bg-slate-950,
-html.light .lg\:col-span-7 .bg-slate-950 {
+/* Filter buttons container */
+html.light .ops-filter-container, body.theme-light .ops-filter-container {
   background-color: #F1F5F9 !important;
-  border-color: #E2E8F0 !important;
-  color: #334155 !important;
+  border: 1px solid #E2E8F0 !important;
+}
+html.dark .ops-filter-container, body.theme-dark .ops-filter-container, body:not(.theme-light) .ops-filter-container {
+  background-color: #020617 !important;
+  border: 1px solid #1E293B !important;
 }
 
-/* Right Column (WhatsApp Simulator) in Light Mode */
-html:not(.dark) .lg\:col-span-5,
-html.light .lg\:col-span-5 {
+/* Footer */
+html.light .ops-footer, body.theme-light .ops-footer {
   background-color: #FFFFFF !important;
-  border-color: #E2E8F0 !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
-}
-
-html:not(.dark) .lg\:col-span-5 h2,
-html.light .lg\:col-span-5 h2 {
-  color: #0F172A !important;
-}
-
-html:not(.dark) #selectedCustomerCard,
-html.light #selectedCustomerCard {
-  background-color: #F8FAFC !important;
-  border-color: #E2E8F0 !important;
-}
-
-html:not(.dark) #selectedCustomerCard .text-slate-200,
-html:not(.dark) #selectedCustomerCard .text-white,
-html.light #selectedCustomerCard .text-slate-200,
-html.light #selectedCustomerCard .text-white {
-  color: #0F172A !important;
-}
-
-html:not(.dark) #selectedCustomerCard .text-slate-400,
-html.light #selectedCustomerCard .text-slate-400 {
+  border-top: 1px solid #E2E8F0 !important;
   color: #64748B !important;
 }
-
-/* Logistics ROI Calculator Container in Light Mode */
-html:not(.dark) main > div:last-child,
-html.light main > div:last-child {
-  background-color: #FFFFFF !important;
-  border-color: #E2E8F0 !important;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05) !important;
-}
-
-html:not(.dark) main > div:last-child h2,
-html.light main > div:last-child h2 {
-  color: #0F172A !important;
-}
-
-html:not(.dark) main > div:last-child .bg-slate-950,
-html.light main > div:last-child .bg-slate-950 {
-  background-color: #F8FAFC !important;
-  border-color: #E2E8F0 !important;
-}
-
-html:not(.dark) main > div:last-child .bg-slate-950 .text-slate-400,
-html.light main > div:last-child .bg-slate-950 .text-slate-400 {
-  color: #64748B !important;
-}
-
-html:not(.dark) footer,
-html.light footer {
-  background-color: #FFFFFF !important;
-  border-color: #E2E8F0 !important;
-  color: #64748B !important;
-}
-
-html:not(.dark) footer .text-white,
-html.light footer .text-white {
-  color: #0F172A !important;
+html.dark .ops-footer, body.theme-dark .ops-footer, body:not(.theme-light) .ops-footer {
+  background-color: #0B1120 !important;
+  border-top: 1px solid #1E293B !important;
+  color: #94A3B8 !important;
 }
 
 
@@ -3496,7 +3470,7 @@ html.light footer .text-white {
 /* Soften harsh black/muddy blues in Dark Mode */
 html.dark body,
 body:not(.theme-light) {
-  background-color: #0A0F1D !important; /* Elegant deep graphite slate instead of pitch black */
+  background-color: #070A10 !important;
   color: #F8FAFC !important;
 }
 

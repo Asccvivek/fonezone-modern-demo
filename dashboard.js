@@ -139,31 +139,31 @@ function renderOrdersTable() {
     const isSelected = order.id === dashboardState.selectedOrderId;
     let statusBadge = '';
     if (order.status === 'unverified') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-400 border border-amber-500/30">🟡 Pending OTP</span>';
+      statusBadge = '<span class="status-badge-pending inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-500/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span><span>Pending OTP</span></span>';
     } else if (order.status === 'whatsapp_sent') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">🔵 WhatsApp Sent</span>';
+      statusBadge = '<span class="status-badge-sent inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-900 dark:text-blue-300 border border-blue-300 dark:border-blue-500/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span><span>WhatsApp Sent</span></span>';
     } else if (order.status === 'verified') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">🟢 Verified COD</span>';
+      statusBadge = '<span class="status-badge-verified inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-900 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span><span>Verified COD</span></span>';
     } else if (order.status === 'prepaid') {
-      statusBadge = '<span class="px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">💎 Prepaid (₹300 Off)</span>';
+      statusBadge = '<span class="status-badge-prepaid inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-900 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span><span>Prepaid (₹300 Off)</span></span>';
     }
 
-    let riskClass = 'text-amber-300';
-    if (order.risk.includes('Low')) riskClass = 'text-emerald-400';
-    if (order.risk.includes('Zero')) riskClass = 'text-indigo-300';
+    let riskClass = 'text-amber-700 dark:text-amber-300 font-semibold';
+    if (order.risk.includes('Low')) riskClass = 'text-emerald-700 dark:text-emerald-400 font-semibold';
+    if (order.risk.includes('Zero')) riskClass = 'text-indigo-700 dark:text-indigo-300 font-semibold';
 
     return `
-      <tr class="hover:bg-slate-800/40 cursor-pointer transition-colors ${isSelected ? 'bg-blue-950/40 border-l-2 border-blue-500' : ''}" onclick="selectOrder('${order.id}')">
+      <tr class="order-table-row hover:bg-slate-100/80 dark:hover:bg-slate-800/40 cursor-pointer transition-colors border-b border-slate-100 dark:border-slate-800/60 ${isSelected ? 'selected-order-row bg-blue-50/90 dark:bg-blue-950/50 border-l-4 border-blue-600 dark:border-blue-500' : ''}" onclick="selectOrder('${order.id}')">
         <td class="py-3 px-3">
-          <div class="font-bold text-white flex items-center gap-1.5">
+          <div class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5">
             <span>${order.name}</span>
             <span class="text-[11px] text-slate-500 font-mono">#${order.id}</span>
           </div>
-          <div class="text-[11px] text-slate-400 font-mono">${order.phone} • ${order.city}</div>
+          <div class="text-[11px] text-slate-600 dark:text-slate-400 font-mono">${order.phone} • ${order.city}</div>
         </td>
         <td class="py-3 px-3">
-          <div class="text-white font-medium">${order.product}</div>
-          <div class="text-emerald-400 font-bold font-mono">₹${order.amount.toLocaleString('en-IN')} COD</div>
+          <div class="text-slate-800 dark:text-white font-semibold">${order.product}</div>
+          <div class="text-emerald-700 dark:text-emerald-400 font-extrabold font-mono">₹${order.amount.toLocaleString('en-IN')} COD</div>
         </td>
         <td class="py-3 px-3 text-[11px] ${riskClass}">
           ${order.risk}
@@ -172,8 +172,8 @@ function renderOrdersTable() {
           ${statusBadge}
         </td>
         <td class="py-3 px-3 text-right">
-          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="px-2.5 py-1 rounded-lg bg-emerald-600/90 hover:bg-emerald-500 text-white font-bold text-[11px] shadow active:scale-95 cursor-pointer">
-            📲 Dispatch
+          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="inline-flex items-center justify-center gap-1 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-sm active:scale-95 cursor-pointer whitespace-nowrap">
+            <span>📲 Dispatch</span>
           </button>
         </td>
       </tr>
@@ -186,9 +186,9 @@ function filterQueue(q) {
   dashboardState.queueFilter = q;
   document.querySelectorAll('.q-filter-btn').forEach(btn => {
     if (btn.dataset.q === q) {
-      btn.className = 'q-filter-btn px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold cursor-pointer';
+      btn.className = 'q-filter-btn px-2.5 py-1 rounded-lg bg-blue-600 text-white font-bold shadow-sm cursor-pointer';
     } else {
-      btn.className = 'q-filter-btn px-2.5 py-1 rounded-lg text-slate-400 hover:text-white cursor-pointer';
+      btn.className = 'q-filter-btn px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white cursor-pointer font-medium';
     }
   });
   renderOrdersTable();
@@ -223,11 +223,11 @@ function updateSelectedCustomerCard() {
   if (riskBadge) {
     riskBadge.textContent = order.risk;
     if (order.risk.includes('High')) {
-      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40';
+      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-500/40';
     } else if (order.risk.includes('Low')) {
-      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40';
+      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-900 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/40';
     } else {
-      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/40';
+      riskBadge.className = 'px-2 py-0.5 rounded text-[11px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-900 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/40';
     }
   }
 }
@@ -445,19 +445,22 @@ function applyTheme(theme) {
   const html = document.documentElement;
   const body = document.body;
   const icon = document.getElementById('themeIcon');
+  const opsLogo = document.getElementById('opsNavbarLogo');
 
   if (theme === 'dark') {
     html.classList.add('dark');
     html.classList.remove('light');
-    body.classList.remove('theme-light', 'bg-[#F8FAFC]', 'text-slate-900');
-    body.classList.add('bg-[#070A10]', 'text-slate-100');
+    body.classList.remove('theme-light', 'bg-slate-50', 'text-slate-900');
+    body.classList.add('theme-dark', 'bg-[#070A10]', 'text-slate-100');
     if (icon) icon.setAttribute('data-lucide', 'sun');
+    if (opsLogo) opsLogo.src = 'assets/fonezone_logo_white.png';
   } else {
     html.classList.remove('dark');
     html.classList.add('light');
-    body.classList.remove('bg-[#070A10]', 'text-slate-100');
-    body.classList.add('theme-light', 'bg-[#F8FAFC]', 'text-slate-900');
+    body.classList.remove('theme-dark', 'bg-[#070A10]', 'text-slate-100');
+    body.classList.add('theme-light', 'bg-slate-50', 'text-slate-900');
     if (icon) icon.setAttribute('data-lucide', 'moon');
+    if (opsLogo) opsLogo.src = 'assets/fonezone_logo.png';
   }
 
   if (window.lucide) {
