@@ -139,13 +139,13 @@ function renderOrdersTable() {
     const isSelected = order.id === dashboardState.selectedOrderId;
     let statusBadge = '';
     if (order.status === 'unverified') {
-      statusBadge = '<span class="status-badge-pending inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 border border-amber-300 dark:border-amber-500/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 shrink-0"></span><span>Pending OTP</span></span>';
+      statusBadge = '<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shrink-0"></span><span>Pending OTP</span></span>';
     } else if (order.status === 'whatsapp_sent') {
-      statusBadge = '<span class="status-badge-sent inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-900 dark:text-blue-300 border border-blue-300 dark:border-blue-500/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span><span>WhatsApp Sent</span></span>';
+      statusBadge = '<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span><span>WhatsApp Sent</span></span>';
     } else if (order.status === 'verified') {
-      statusBadge = '<span class="status-badge-verified inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-900 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-500/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span><span>Verified COD</span></span>';
+      statusBadge = '<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span><span>Verified COD</span></span>';
     } else if (order.status === 'prepaid') {
-      statusBadge = '<span class="status-badge-prepaid inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-indigo-100 dark:bg-indigo-500/20 text-indigo-900 dark:text-indigo-300 border border-indigo-300 dark:border-indigo-500/40 whitespace-nowrap"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500 shrink-0"></span><span>Prepaid (₹300 Off)</span></span>';
+      statusBadge = '<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20"><span class="w-1.5 h-1.5 rounded-full bg-violet-500 shrink-0"></span><span>Prepaid (₹300 Off)</span></span>';
     }
 
     let riskClass = 'text-amber-700 dark:text-amber-300 font-semibold';
@@ -168,12 +168,13 @@ function renderOrdersTable() {
         <td class="py-3 px-3 text-[11px] ${riskClass}">
           ${order.risk}
         </td>
-        <td class="py-3 px-3">
+        <td class="py-3 px-3 whitespace-nowrap min-w-[140px]">
           ${statusBadge}
         </td>
-        <td class="py-3 px-3 text-right">
-          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="inline-flex items-center justify-center gap-1 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-sm active:scale-95 cursor-pointer whitespace-nowrap">
-            <span>📲 Dispatch</span>
+        <td class="py-3 px-3 text-right whitespace-nowrap min-w-[150px]">
+          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="btn-dispatch-action inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-lg font-semibold text-xs shadow-xs hover:shadow transition-all whitespace-nowrap cursor-pointer">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            <span>Dispatch</span>
           </button>
         </td>
       </tr>

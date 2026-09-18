@@ -6807,13 +6807,13 @@ function renderOrdersTable() {
     const isSelected = order.id === state.selectedOrderId;
     let statusBadge = '';
     if (order.status === 'unverified') {
-      statusBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold whitespace-nowrap bg-amber-500/15 text-amber-600 dark:text-amber-400 border border-amber-500/30">🟡 Pending OTP</span>';
+      statusBadge = '<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20"><span class="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse shrink-0"></span><span>Pending OTP</span></span>';
     } else if (order.status === 'whatsapp_sent') {
-      statusBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold whitespace-nowrap bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30">🔵 WhatsApp Sent</span>';
+      statusBadge = '<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20"><span class="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span><span>WhatsApp Sent</span></span>';
     } else if (order.status === 'verified') {
-      statusBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold whitespace-nowrap bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30">🟢 Verified COD</span>';
+      statusBadge = '<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span><span>Verified COD</span></span>';
     } else if (order.status === 'prepaid') {
-      statusBadge = '<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[11px] font-bold whitespace-nowrap bg-indigo-500/15 text-indigo-600 dark:text-indigo-300 border border-indigo-500/30">💎 Prepaid (₹300 Off)</span>';
+      statusBadge = '<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20"><span class="w-1.5 h-1.5 rounded-full bg-violet-500 shrink-0"></span><span>Prepaid (₹300 Off)</span></span>';
     }
 
     const khataScore = order.khataScore || "Verified Buyer";
@@ -6821,27 +6821,28 @@ function renderOrdersTable() {
 
     return `
       <tr class="order-row hover:bg-slate-100 dark:hover:bg-slate-800/40 cursor-pointer transition-colors border-b border-slate-200 dark:border-slate-800/60 ${isSelected ? 'selected-order-row bg-blue-50 dark:bg-blue-950/40 border-l-4 border-l-blue-600 dark:border-l-blue-500' : ''}" onclick="selectOrder('${order.id}')">
-        <td class="py-2.5 px-2.5 align-middle">
+        <td class="py-2.5 px-3 align-middle">
           <div class="font-bold text-slate-900 dark:text-white flex items-center gap-1.5 whitespace-nowrap">
             <span>${order.name}</span>
             <span class="text-[11px] text-slate-500 dark:text-slate-400 font-mono font-semibold">#${order.id}</span>
           </div>
           <div class="text-[11px] text-slate-600 dark:text-slate-400 font-mono mt-0.5 whitespace-nowrap">${order.phone} • ${order.city}</div>
         </td>
-        <td class="py-2.5 px-2.5 align-middle">
+        <td class="py-2.5 px-3 align-middle">
           <div class="text-slate-800 dark:text-white font-medium text-xs leading-snug">${order.product}</div>
           <div class="text-emerald-600 dark:text-emerald-400 font-bold font-mono text-xs mt-0.5">₹${order.amount.toLocaleString()} COD</div>
         </td>
-        <td class="py-2.5 px-2.5 align-middle text-[11px]">
+        <td class="py-2.5 px-3 align-middle text-[11px]">
           <span class="khata-score-badge ${khataBadge}">${khataScore}</span>
           <div class="text-[10px] text-slate-500 dark:text-slate-400 mt-1">${order.risk}</div>
         </td>
-        <td class="py-2.5 px-2.5 align-middle">
+        <td class="py-2.5 px-3 align-middle whitespace-nowrap min-w-[140px]">
           ${statusBadge}
         </td>
-        <td class="py-2.5 px-2.5 align-middle text-right">
-          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="inline-flex items-center justify-center gap-1 px-2.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-[11px] shadow-sm hover:shadow transition-all whitespace-nowrap cursor-pointer">
-            <span>📲 Dispatch</span>
+        <td class="py-2.5 px-3 align-middle text-right whitespace-nowrap min-w-[150px]">
+          <button onclick="event.stopPropagation(); selectOrder('${order.id}'); dispatchWhatsAppVerification();" class="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 dark:bg-blue-600 dark:hover:bg-blue-500 text-white font-semibold text-xs shadow-xs hover:shadow transition-all whitespace-nowrap cursor-pointer">
+            <svg class="w-3.5 h-3.5 text-blue-400 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+            <span>Dispatch</span>
           </button>
         </td>
       </tr>

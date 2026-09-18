@@ -1242,42 +1242,72 @@ body.theme-light .phone-mockup-frame {
   animation: chatIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+/* Authentic WhatsApp Web Chat Canvas & Bubbles */
 #waChatHistory {
-  color: #F1F5F9 !important;
+  background-color: #0B141A !important;
+  color: #E9EDEF !important;
 }
 
-#waChatHistory .chat-bubble-in {
-  color: #F8FAFC !important;
+#waChatHistory .chat-bubble-in,
+body.theme-light #waChatHistory .chat-bubble-in,
+body.theme-dark #waChatHistory .chat-bubble-in {
+  background-color: #202C33 !important;
+  color: #E9EDEF !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4) !important;
 }
 
-#waChatHistory .chat-bubble-in * {
-  color: inherit;
+#waChatHistory .chat-bubble-in *,
+body.theme-light #waChatHistory .chat-bubble-in *,
+body.theme-dark #waChatHistory .chat-bubble-in * {
+  color: #E9EDEF !important;
 }
 
 #waChatHistory .chat-bubble-in b,
-#waChatHistory .chat-bubble-in strong {
+#waChatHistory .chat-bubble-in strong,
+body.theme-light #waChatHistory .chat-bubble-in b,
+body.theme-light #waChatHistory .chat-bubble-in strong {
   color: #FFFFFF !important;
   font-weight: 700 !important;
 }
 
-#waChatHistory .chat-bubble-in .text-emerald-400 {
-  color: #34D399 !important;
+#waChatHistory .chat-bubble-in .text-emerald-400,
+body.theme-light #waChatHistory .chat-bubble-in .text-emerald-400 {
+  color: #00A884 !important;
+  font-weight: 600 !important;
 }
 
-#waChatHistory .chat-bubble-in .text-slate-500 {
-  color: #94A3B8 !important;
+#waChatHistory .chat-bubble-in .text-slate-500,
+body.theme-light #waChatHistory .chat-bubble-in .text-slate-500 {
+  color: #8696A0 !important;
 }
 
-#waChatHistory .chat-bubble-in .text-emerald-200 {
-  color: #A7F3D0 !important;
+#waChatHistory .chat-bubble-in.ml-auto,
+body.theme-light #waChatHistory .chat-bubble-in.ml-auto {
+  background-color: #005C4B !important;
+  color: #FFFFFF !important;
 }
 
-body.theme-light #waChatHistory .chat-bubble-in {
-  color: #F8FAFC !important;
+#waChatHistory .chat-bubble-in.ml-auto * {
+  color: #FFFFFF !important;
+}
+
+/* COD Triage Table Status Badges: Zero-Wrap Guarantee */
+.status-badge-pending,
+.status-badge-sent,
+.status-badge-verified,
+.status-badge-prepaid,
+td span[class*="status-badge"],
+td span[class*="rounded-full"] {
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  flex-shrink: 0 !important;
+  line-height: 1.25 !important;
 }
 
 @keyframes chatIn {
-  from { opacity: 0; transform: translateY(10px) scale(0.96); }
+  from { opacity: 0; transform: translateY(8px) scale(0.97); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
@@ -3845,5 +3875,51 @@ body:not(.theme-light) .card-360-badge:hover .badge-360-lbl {
   color: #FFFFFF !important;
 }
 
+/* ==========================================================================
+   4. COD Triage Table Dispatch Action Button (Enterprise B2B Precision)
+   ========================================================================== */
+.btn-dispatch-action {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+  border: 1px solid #1E293B !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  transition: all 0.15s ease-in-out !important;
+}
+.btn-dispatch-action:hover {
+  background-color: #1E293B !important;
+  border-color: #334155 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18) !important;
+  transform: translateY(-1px);
+}
+.btn-dispatch-action:active {
+  transform: translateY(0);
+}
+.btn-dispatch-action svg {
+  color: #60A5FA !important;
+  transition: transform 0.15s ease-in-out;
+}
+.btn-dispatch-action:hover svg {
+  transform: translateX(1.5px) translateY(-1px);
+}
 
-
+/* Dark Mode Dispatch Button */
+.dark .btn-dispatch-action,
+html.dark .btn-dispatch-action,
+body.theme-dark .btn-dispatch-action {
+  background-color: #2563EB !important;
+  color: #FFFFFF !important;
+  border: 1px solid #3B82F6 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.dark .btn-dispatch-action:hover,
+html.dark .btn-dispatch-action:hover,
+body.theme-dark .btn-dispatch-action:hover {
+  background-color: #1D4ED8 !important;
+  border-color: #60A5FA !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.45) !important;
+}
+.dark .btn-dispatch-action svg,
+html.dark .btn-dispatch-action svg,
+body.theme-dark .btn-dispatch-action svg {
+  color: #FFFFFF !important;
+}

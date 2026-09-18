@@ -4,26 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoneZone Merchant Command Center | Logistics & Anti-RTO Intelligence</title>
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=17">
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind = {
-      config: {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              fzBlue: '#1E56D8',
-              fzDark: '#070A10',
-              fzCard: '#0F172A',
-              fzYellow: '#F3BA2F',
-              fzEmerald: '#00F59B'
-            }
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            fzBlue: '#1E56D8',
+            fzDark: '#070A10',
+            fzCard: '#0F172A',
+            fzYellow: '#F3BA2F',
+            fzEmerald: '#00F59B'
           }
         }
       }
     };
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script src="assets/lucide.min.js"></script>
   <style>
     @media (max-width: 639px) {
@@ -324,21 +322,23 @@
           </div>
 
           <!-- WhatsApp Chat Log -->
-          <div id="waChatHistory" class="p-3 space-y-3 min-h-[300px] max-h-[340px] overflow-y-auto bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px]">
+          <div id="waChatHistory" class="p-3 space-y-3 min-h-[300px] max-h-[340px] overflow-y-auto bg-[#0B141A]">
             <!-- Injected dynamically via dashboard.js -->
           </div>
 
           <!-- Customer Simulated Action Buttons -->
-          <div class="bg-[#202C33] p-2.5 border-t border-slate-700">
-            <div class="text-[11px] text-slate-400 font-semibold text-center mb-1.5">
-              Simulate Customer Action (Two-Way Bot Response):
+          <div class="bg-[#202C33] p-3 border-t border-slate-700/80">
+            <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold text-center mb-2">
+              Simulate Two-Way Bot Customer Action
             </div>
-            <div class="grid grid-cols-2 gap-1.5">
-              <button onclick="simulateCustomerConfirmAddress()" class="px-2 py-1.5 rounded-lg bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-[11px] flex items-center justify-center gap-1 active:scale-95 cursor-pointer">
-                <span>✅ Confirm Address</span>
+            <div class="grid grid-cols-2 gap-2">
+              <button onclick="simulateCustomerConfirmAddress()" class="px-3 py-2 rounded-xl bg-[#00A884] hover:bg-[#009070] text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all cursor-pointer">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                <span>Confirm Address</span>
               </button>
-              <button onclick="simulateCustomerPrepayUPI()" class="px-2 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] flex items-center justify-center gap-1 active:scale-95 cursor-pointer">
-                <span>⚡ Pay UPI (Save ₹300)</span>
+              <button onclick="simulateCustomerPrepayUPI()" class="px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all cursor-pointer">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <span>Pay UPI (Save ₹300)</span>
               </button>
             </div>
           </div>

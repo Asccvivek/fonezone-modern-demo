@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FoneZone | Certified Refurbished Tech (360° Inspection & Pan-India COD)</title>
-  <link rel="stylesheet" href="styles.css?v=14">
+  <link rel="stylesheet" href="styles.css?v=17">
   <link rel="stylesheet" href="assets/currency-switcher.css?v=2">
   <script src="https://cdn.tailwindcss.com"></script>
   <script type="module" src="assets/model-viewer.min.js"></script>
@@ -2943,40 +2943,42 @@
           </div>
 
           <!-- Interactive Smartphone Frame -->
-          <div class="phone-mockup-frame bg-[#111B21] border border-slate-700 w-full max-w-[340px] text-xs">
+          <div class="phone-mockup-frame bg-[#0B141A] border border-slate-700/80 rounded-3xl w-full max-w-[340px] text-xs shadow-2xl overflow-hidden">
             <!-- WhatsApp Phone Top Bar -->
-            <div class="bg-[#202C33] px-3.5 py-2.5 flex items-center justify-between border-b border-slate-700">
+            <div class="bg-[#202C33] px-3.5 py-2.5 flex items-center justify-between border-b border-slate-700/80">
               <div class="flex items-center gap-2.5">
-                <div class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-white text-xs">
-                  FZ
+                <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center p-1 shadow-xs border border-slate-600/60 shrink-0">
+                  <img src="assets/fonezone_logo.png" alt="FoneZone" class="w-full h-full object-contain">
                 </div>
                 <div>
                   <div class="font-bold text-white flex items-center gap-1 text-[11px]">
                     <span>FoneZone Official</span>
-                    <svg class="w-3.5 h-3.5 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <svg class="w-3.5 h-3.5 text-[#00A884]" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
                   </div>
-                  <div class="text-[11px] text-emerald-400">Verified Business Account • +91 8044630881</div>
+                  <div class="text-[10px] text-[#00A884] font-medium">Verified Business • +91 8044630881</div>
                 </div>
               </div>
-              <div class="text-slate-400 text-xs">⋮</div>
+              <div class="text-slate-400 text-xs font-mono">⋮</div>
             </div>
 
-            <!-- Chat Scroll Area -->
-            <div id="waChatHistory" class="p-3 space-y-3 min-h-[300px] max-h-[360px] overflow-y-auto bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:16px_16px]">
+            <!-- Chat Scroll Area (Clean Dark WhatsApp Canvas) -->
+            <div id="waChatHistory" class="p-3 space-y-3 min-h-[300px] max-h-[360px] overflow-y-auto bg-[#0B141A]">
               <!-- Dynamically populated via app.js -->
             </div>
 
-            <!-- Customer Response Simulation Buttons (Simulate Two-Way Reply) -->
-            <div class="bg-[#202C33] p-2.5 border-t border-slate-700">
-              <div class="text-[11px] text-slate-400 font-semibold text-center mb-1.5">
-                Simulate Customer Reply (Two-Way Action):
+            <!-- Customer Response Simulation Buttons (Authentic Action Bar) -->
+            <div class="bg-[#202C33] p-3 border-t border-slate-700/80">
+              <div class="text-[10px] uppercase tracking-wider text-slate-400 font-bold text-center mb-2">
+                Simulate Two-Way Bot Customer Action
               </div>
-              <div class="grid grid-cols-2 gap-1.5">
-                <button onclick="simulateCustomerConfirmAddress()" class="px-2 py-1.5 rounded bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-[11px] cursor-pointer">
-                  ✅ "Yes, Confirm Address"
+              <div class="grid grid-cols-2 gap-2">
+                <button onclick="simulateCustomerConfirmAddress()" class="px-3 py-2 rounded-xl bg-[#00A884] hover:bg-[#009070] text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all cursor-pointer">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+                  <span>Confirm Address</span>
                 </button>
-                <button onclick="simulateCustomerPrepayUPI()" class="px-2 py-1.5 rounded bg-blue-600 hover:bg-blue-500 text-white font-bold text-[11px] cursor-pointer">
-                  ⚡ "Pay via UPI (Save ₹300)"
+                <button onclick="simulateCustomerPrepayUPI()" class="px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all cursor-pointer">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  <span>Pay UPI (Save ₹300)</span>
                 </button>
               </div>
             </div>
