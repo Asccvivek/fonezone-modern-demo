@@ -3923,3 +3923,86 @@ html.dark .btn-dispatch-action svg,
 body.theme-dark .btn-dispatch-action svg {
   color: #FFFFFF !important;
 }
+
+/* ==========================================================================
+   5. Authentic WhatsApp Phone Simulator Universal High-Contrast Protection
+   ========================================================================== */
+.phone-mockup-frame,
+body.theme-light .phone-mockup-frame,
+body.theme-dark .phone-mockup-frame {
+  background-color: #0B141A !important;
+  border: 1px solid #2A3942 !important;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.45) !important;
+}
+
+/* WhatsApp Phone Top Bar */
+.phone-mockup-frame .wa-phone-topbar,
+body.theme-light .phone-mockup-frame .wa-phone-topbar,
+body.theme-dark .phone-mockup-frame .wa-phone-topbar {
+  background-color: #202C33 !important;
+  border-bottom: 1px solid #2A3942 !important;
+}
+
+/* Title & Subtitle in Phone Top Bar */
+.phone-mockup-frame .wa-top-title,
+.phone-mockup-frame .wa-top-title *,
+body.theme-light .phone-mockup-frame .wa-top-title,
+body.theme-light .phone-mockup-frame .wa-top-title * {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.phone-mockup-frame .wa-top-subtitle,
+body.theme-light .phone-mockup-frame .wa-top-subtitle,
+body.theme-dark .phone-mockup-frame .wa-top-subtitle {
+  color: #25D366 !important;
+  font-weight: 600 !important;
+}
+
+.phone-mockup-frame .wa-top-menu,
+body.theme-light .phone-mockup-frame .wa-top-menu {
+  color: #AEBAC1 !important;
+}
+
+/* Chat History Canvas */
+#waChatHistory,
+body.theme-light #waChatHistory,
+body.theme-dark #waChatHistory {
+  background-color: #0B141A !important;
+}
+
+/* Chat Bubble Body & Text */
+#waChatHistory .chat-bubble-in,
+body.theme-light #waChatHistory .chat-bubble-in {
+  background-color: #202C33 !important;
+  color: #FFFFFF !important;
+  border: 1px solid #2A3942 !important;
+}
+
+#waChatHistory .chat-bubble-in *,
+body.theme-light #waChatHistory .chat-bubble-in * {
+  color: #FFFFFF !important;
+}
+
+#waChatHistory .chat-bubble-in b,
+#waChatHistory .chat-bubble-in strong,
+body.theme-light #waChatHistory .chat-bubble-in b,
+body.theme-light #waChatHistory .chat-bubble-in strong {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+}
+
+/* Customer Simulator Footer Bar */
+.phone-mockup-frame .wa-phone-footer,
+body.theme-light .phone-mockup-frame .wa-phone-footer,
+body.theme-dark .phone-mockup-frame .wa-phone-footer {
+  background-color: #111B21 !important;
+  border-top: 1px solid #2A3942 !important;
+}
+
+.phone-mockup-frame .wa-action-label,
+body.theme-light .phone-mockup-frame .wa-action-label,
+body.theme-dark .phone-mockup-frame .wa-action-label {
+  color: #94A3B8 !important;
+  font-weight: 700 !important;
+}

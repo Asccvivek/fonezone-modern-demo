@@ -254,20 +254,23 @@ function renderWhatsAppChat() {
   container.innerHTML = history.map(msg => {
     if (msg.sender === 'system') {
       return `
-        <div class="chat-bubble-in bg-[#202C33] text-slate-200 p-3 rounded-2xl rounded-tl-none shadow-md max-w-[92%] text-[11px] leading-relaxed border border-slate-700/60">
-          <div class="text-[11px] text-emerald-400 font-bold mb-1 flex items-center gap-1">
-            <span>FoneZone Automated Dispatch</span>
-            <span class="text-emerald-400 font-mono">✓✓</span>
+        <div class="chat-bubble-in bg-[#202C33] p-3.5 rounded-2xl rounded-tl-none shadow-md max-w-[92%] text-[11px] leading-relaxed border border-[#2A3942]" style="background-color: #202C33 !important; color: #FFFFFF !important;">
+          <div class="text-[11px] font-bold mb-1.5 flex items-center justify-between" style="color: #25D366 !important;">
+            <span style="color: #25D366 !important; font-weight: 700;">FoneZone Automated Dispatch</span>
+            <span style="color: #53BDEB !important; font-weight: 800; font-family: monospace; font-size: 12px;">✓✓</span>
           </div>
-          <div>${msg.text.replace(/\n/g, '<br>')}</div>
-          <div class="text-[11px] text-slate-500 text-right mt-1">${msg.time}</div>
+          <div style="color: #FFFFFF !important; line-height: 1.55; font-size: 11.5px;">${msg.text.replace(/\n/g, '<br>')}</div>
+          <div class="text-[10px] text-right mt-1.5 font-medium" style="color: #8696A0 !important;">${msg.time}</div>
         </div>
       `;
     } else {
       return `
-        <div class="chat-bubble-in ml-auto bg-[#005C4B] text-white p-3 rounded-2xl rounded-tr-none shadow-md max-w-[85%] text-[11px] leading-relaxed">
-          <div>${msg.text.replace(/\n/g, '<br>')}</div>
-          <div class="text-[11px] text-emerald-200 text-right mt-1">${msg.time} ✓✓</div>
+        <div class="chat-bubble-in ml-auto bg-[#005C4B] p-3.5 rounded-2xl rounded-tr-none shadow-md max-w-[85%] text-[11px] leading-relaxed border border-[#02735E]" style="background-color: #005C4B !important; color: #FFFFFF !important;">
+          <div style="color: #FFFFFF !important; line-height: 1.55; font-size: 11.5px;">${msg.text.replace(/\n/g, '<br>')}</div>
+          <div class="text-[10px] text-right mt-1.5 font-medium flex items-center justify-end gap-1" style="color: #A6E3D4 !important;">
+            <span>${msg.time}</span>
+            <span style="color: #53BDEB !important; font-weight: 800; font-family: monospace; font-size: 12px;">✓✓</span>
+          </div>
         </div>
       `;
     }
