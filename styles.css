@@ -591,14 +591,21 @@ body:not(.theme-light) .fz-card:hover {
   color: #FFFFFF !important;
 }
 
-body:not(.theme-light) .fz-card__btn {
-  background: #FFFFFF;
-  color: #111111;
+body:not(.theme-light) .fz-card__btn,
+body.theme-dark .fz-card__btn {
+  background: #2563EB !important;
+  color: #FFFFFF !important;
 }
 
-body:not(.theme-light) .fz-card__btn:hover {
-  background: #3B82F6;
-  color: #FFFFFF;
+body:not(.theme-light) .fz-card__btn *,
+body.theme-dark .fz-card__btn * {
+  color: #FFFFFF !important;
+}
+
+body:not(.theme-light) .fz-card__btn:hover,
+body.theme-dark .fz-card__btn:hover {
+  background: #1D4ED8 !important;
+  color: #FFFFFF !important;
 }
 
 /* Glass Cards & Surfaces */

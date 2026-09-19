@@ -11,7 +11,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "FLAGSHIP",
-    "image": "assets/real_fz/iphone15pro_real.jpg",
+    "image": "assets/real_fz/iphone15pro_real_nobg.png",
     "msrp": 134900,
     "storageOptions": [
       {
@@ -269,7 +269,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "TITANIUM PRO",
-    "image": "assets/real_fz/iphone15promax_real.jpg",
+    "image": "assets/real_fz/iphone15promax_real_nobg.png",
     "msrp": 159900,
     "storageOptions": [
       {
@@ -468,11 +468,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/iphone15_promax.jpg",
-      "45": "assets/iphone15_promax.jpg",
-      "90": "assets/iphone15_promax.jpg",
-      "180": "assets/iphone15_promax.jpg",
-      "270": "assets/iphone15_promax.jpg"
+      "0": "assets/iphone15_promax_nobg.png",
+      "45": "assets/iphone15_promax_nobg.png",
+      "90": "assets/iphone15_promax_nobg.png",
+      "180": "assets/iphone15_promax_nobg.png",
+      "270": "assets/iphone15_promax_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "6 units available in Delhi Hub"
@@ -485,7 +485,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "DYNAMIC ISLAND",
-    "image": "assets/real_fz/iphone15_real.jpg",
+    "image": "assets/real_fz/iphone15_real_nobg.png",
     "msrp": 79900,
     "storageOptions": [
       {
@@ -656,11 +656,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/iphone15_pink.jpg",
-      "45": "assets/iphone15_pink.jpg",
-      "90": "assets/iphone15_pink.jpg",
-      "180": "assets/iphone15_pink.jpg",
-      "270": "assets/iphone15_pink.jpg"
+      "0": "assets/iphone15_pink_nobg.png",
+      "45": "assets/iphone15_pink_nobg.png",
+      "90": "assets/iphone15_pink_nobg.png",
+      "180": "assets/iphone15_pink_nobg.png",
+      "270": "assets/iphone15_pink_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "9 units available in Mumbai Hub"
@@ -673,7 +673,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "GOLD FLAGSHIP",
-    "image": "assets/real_fz/iphone16promax_real.jpg",
+    "image": "assets/real_fz/iphone16promax_real_nobg.png",
     "msrp": 139900,
     "storageOptions": [
       {
@@ -845,11 +845,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/iphone14_pro_gold.jpg",
-      "45": "assets/iphone14_pro_gold.jpg",
-      "90": "assets/iphone14_pro_gold.jpg",
-      "180": "assets/iphone14_pro_gold.jpg",
-      "270": "assets/iphone14_pro_gold.jpg"
+      "0": "assets/iphone14_pro_gold_nobg.png",
+      "45": "assets/iphone14_pro_gold_nobg.png",
+      "90": "assets/iphone14_pro_gold_nobg.png",
+      "180": "assets/iphone14_pro_gold_nobg.png",
+      "270": "assets/iphone14_pro_gold_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "5 units available in Delhi Hub"
@@ -862,7 +862,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "PRO DEAL",
-    "image": "assets/real_fz/iphone16pro_real.jpg",
+    "image": "assets/real_fz/iphone16pro_real_nobg.png",
     "msrp": 129900,
     "storageOptions": [
       {
@@ -1018,11 +1018,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/iphone14_pro_black.jpg",
-      "45": "assets/iphone14_pro_black.jpg",
-      "90": "assets/iphone14_pro_black.jpg",
-      "180": "assets/iphone14_pro_black.jpg",
-      "270": "assets/iphone14_pro_black.jpg"
+      "0": "assets/iphone14_pro_black_nobg.png",
+      "45": "assets/iphone14_pro_black_nobg.png",
+      "90": "assets/iphone14_pro_black_nobg.png",
+      "180": "assets/iphone14_pro_black_nobg.png",
+      "270": "assets/iphone14_pro_black_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "7 units available in Bangalore Hub"
@@ -1036,7 +1036,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "BESTSELLER",
-    "image": "assets/real_fz/iphone16plus_real.jpg",
+    "image": "assets/real_fz/iphone16plus_real_nobg.png",
     "msrp": 69900,
     "storageOptions": [
       {
@@ -1220,7 +1220,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "120HZ PRO",
-    "image": "assets/real_fz/iphone17promax_real.jpg",
+    "image": "assets/real_fz/iphone17promax_real_nobg.png",
     "msrp": 129900,
     "storageOptions": [
       {
@@ -1368,11 +1368,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/iphone13_promax.jpg",
-      "45": "assets/iphone13_promax.jpg",
-      "90": "assets/iphone13_promax.jpg",
-      "180": "assets/iphone13_promax.jpg",
-      "270": "assets/iphone13_promax.jpg"
+      "0": "assets/iphone13_promax_nobg.png",
+      "45": "assets/iphone13_promax_nobg.png",
+      "90": "assets/iphone13_promax_nobg.png",
+      "180": "assets/iphone13_promax_nobg.png",
+      "270": "assets/iphone13_promax_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "8 units available in Mumbai Hub"
@@ -1385,7 +1385,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "VALUE KING",
-    "image": "assets/real_fz/iphone_air_real.jpg",
+    "image": "assets/real_fz/iphone_air_real_nobg.png",
     "msrp": 59900,
     "storageOptions": [
       {
@@ -1537,7 +1537,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "VALUE PRO",
-    "image": "assets/iphone12_promax.jpg",
+    "image": "assets/iphone12_promax_nobg.png",
     "msrp": 119900,
     "storageOptions": [
       {
@@ -1672,11 +1672,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/iphone12_promax.jpg",
-      "45": "assets/iphone12_promax.jpg",
-      "90": "assets/iphone12_promax.jpg",
-      "180": "assets/iphone12_promax.jpg",
-      "270": "assets/iphone12_promax.jpg"
+      "0": "assets/iphone12_promax_nobg.png",
+      "45": "assets/iphone12_promax_nobg.png",
+      "90": "assets/iphone12_promax_nobg.png",
+      "180": "assets/iphone12_promax_nobg.png",
+      "270": "assets/iphone12_promax_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "6 units available in Delhi Hub"
@@ -1689,7 +1689,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "SUPER VALUE",
-    "image": "assets/iphone11_promax.jpg",
+    "image": "assets/iphone11_promax_nobg.png",
     "msrp": 109900,
     "storageOptions": [
       {
@@ -1820,11 +1820,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/iphone11_promax.jpg",
-      "45": "assets/iphone11_promax.jpg",
-      "90": "assets/iphone11_promax.jpg",
-      "180": "assets/iphone11_promax.jpg",
-      "270": "assets/iphone11_promax.jpg"
+      "0": "assets/iphone11_promax_nobg.png",
+      "45": "assets/iphone11_promax_nobg.png",
+      "90": "assets/iphone11_promax_nobg.png",
+      "180": "assets/iphone11_promax_nobg.png",
+      "270": "assets/iphone11_promax_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "9 units available in Delhi Hub"
@@ -1976,7 +1976,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "apple",
     "badge": "BUDGET KING",
-    "image": "assets/iphone_xr_white.jpg",
+    "image": "assets/iphone_xr_white_nobg.png",
     "msrp": 47900,
     "storageOptions": [
       {
@@ -2098,11 +2098,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/iphone_xr_white.jpg",
-      "45": "assets/iphone_xr_white.jpg",
-      "90": "assets/iphone_xr_white.jpg",
-      "180": "assets/iphone_xr_white.jpg",
-      "270": "assets/iphone_xr_white.jpg"
+      "0": "assets/iphone_xr_white_nobg.png",
+      "45": "assets/iphone_xr_white_nobg.png",
+      "90": "assets/iphone_xr_white_nobg.png",
+      "180": "assets/iphone_xr_white_nobg.png",
+      "270": "assets/iphone_xr_white_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "16 units available in Delhi Hub"
@@ -2115,7 +2115,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "samsung",
     "badge": "200MP CAM",
-    "image": "assets/real_fz/samsung_s23ultra_real.jpg",
+    "image": "assets/real_fz/samsung_s23ultra_real_nobg.png",
     "msrp": 124999,
     "storageOptions": [
       {
@@ -2287,7 +2287,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "samsung",
     "badge": "S-PEN FLAGSHIP",
-    "image": "assets/samsung_s22_ultra.jpg",
+    "image": "assets/samsung_s22_ultra_nobg.png",
     "msrp": 109999,
     "storageOptions": [
       {
@@ -2426,11 +2426,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/samsung_s22_ultra.jpg",
-      "45": "assets/samsung_s22_ultra.jpg",
-      "90": "assets/samsung_s22_ultra.jpg",
-      "180": "assets/samsung_s22_ultra.jpg",
-      "270": "assets/samsung_s22_ultra.jpg"
+      "0": "assets/samsung_s22_ultra_nobg.png",
+      "45": "assets/samsung_s22_ultra_nobg.png",
+      "90": "assets/samsung_s22_ultra_nobg.png",
+      "180": "assets/samsung_s22_ultra_nobg.png",
+      "270": "assets/samsung_s22_ultra_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "7 units available in Bangalore Hub"
@@ -2443,7 +2443,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "samsung",
     "badge": "100X ZOOM",
-    "image": "assets/samsung_s21_ultra.jpg",
+    "image": "assets/samsung_s21_ultra_nobg.png",
     "msrp": 105999,
     "storageOptions": [
       {
@@ -2578,11 +2578,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/samsung_s21_ultra.jpg",
-      "45": "assets/samsung_s21_ultra.jpg",
-      "90": "assets/samsung_s21_ultra.jpg",
-      "180": "assets/samsung_s21_ultra.jpg",
-      "270": "assets/samsung_s21_ultra.jpg"
+      "0": "assets/samsung_s21_ultra_nobg.png",
+      "45": "assets/samsung_s21_ultra_nobg.png",
+      "90": "assets/samsung_s21_ultra_nobg.png",
+      "180": "assets/samsung_s21_ultra_nobg.png",
+      "270": "assets/samsung_s21_ultra_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "9 units available in Delhi Hub"
@@ -2747,7 +2747,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "samsung",
     "badge": "FOLDABLE",
-    "image": "assets/samsung_zfold3.jpg",
+    "image": "assets/samsung_zfold3_nobg.png",
     "msrp": 149999,
     "storageOptions": [
       {
@@ -2881,11 +2881,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/samsung_zfold3.jpg",
-      "45": "assets/samsung_zfold3.jpg",
-      "90": "assets/samsung_zfold3.jpg",
-      "180": "assets/samsung_zfold3.jpg",
-      "270": "assets/samsung_zfold3.jpg"
+      "0": "assets/samsung_zfold3_nobg.png",
+      "45": "assets/samsung_zfold3_nobg.png",
+      "90": "assets/samsung_zfold3_nobg.png",
+      "180": "assets/samsung_zfold3_nobg.png",
+      "270": "assets/samsung_zfold3_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "4 units available in Mumbai Hub"
@@ -2898,7 +2898,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "oneplus",
     "badge": "POP-UP CAM",
-    "image": "assets/oneplus_7pro.jpg",
+    "image": "assets/oneplus_7pro_nobg.png",
     "msrp": 52999,
     "storageOptions": [
       {
@@ -3032,11 +3032,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/oneplus_7pro.jpg",
-      "45": "assets/oneplus_7pro.jpg",
-      "90": "assets/oneplus_7pro.jpg",
-      "180": "assets/oneplus_7pro.jpg",
-      "270": "assets/oneplus_7pro.jpg"
+      "0": "assets/oneplus_7pro_nobg.png",
+      "45": "assets/oneplus_7pro_nobg.png",
+      "90": "assets/oneplus_7pro_nobg.png",
+      "180": "assets/oneplus_7pro_nobg.png",
+      "270": "assets/oneplus_7pro_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "10 units available in Delhi Hub"
@@ -3049,7 +3049,7 @@ const CATALOG = [
     "category": "phone",
     "brand": "google",
     "badge": "AI CAMERA",
-    "image": "assets/real_fz/pixel6_real.jpg",
+    "image": "assets/real_fz/pixel6_real_nobg.png",
     "msrp": 79999,
     "storageOptions": [
       {
@@ -3671,7 +3671,7 @@ const CATALOG = [
     "category": "ipad",
     "brand": "apple",
     "badge": "MINI-LED PRO",
-    "image": "assets/ipad_pro_129.jpg",
+    "image": "assets/ipad_pro_129_nobg.png",
     "msrp": 112900,
     "storageOptions": [
       {
@@ -3815,11 +3815,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/ipad_pro_129.jpg",
-      "45": "assets/ipad_pro_129.jpg",
-      "90": "assets/ipad_pro_129.jpg",
-      "180": "assets/ipad_pro_129.jpg",
-      "270": "assets/ipad_pro_129.jpg"
+      "0": "assets/ipad_pro_129_nobg.png",
+      "45": "assets/ipad_pro_129_nobg.png",
+      "90": "assets/ipad_pro_129_nobg.png",
+      "180": "assets/ipad_pro_129_nobg.png",
+      "270": "assets/ipad_pro_129_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "5 units available in Delhi Hub"
@@ -3832,7 +3832,7 @@ const CATALOG = [
     "category": "ipad",
     "brand": "apple",
     "badge": "RETINA DEAL",
-    "image": "assets/ipad_air_105.jpg",
+    "image": "assets/ipad_air_105_nobg.png",
     "msrp": 44900,
     "storageOptions": [
       {
@@ -3958,11 +3958,11 @@ const CATALOG = [
       }
     },
     "angles": {
-      "0": "assets/ipad_air_105.jpg",
-      "45": "assets/ipad_air_105.jpg",
-      "90": "assets/ipad_air_105.jpg",
-      "180": "assets/ipad_air_105.jpg",
-      "270": "assets/ipad_air_105.jpg"
+      "0": "assets/ipad_air_105_nobg.png",
+      "45": "assets/ipad_air_105_nobg.png",
+      "90": "assets/ipad_air_105_nobg.png",
+      "180": "assets/ipad_air_105_nobg.png",
+      "270": "assets/ipad_air_105_nobg.png"
     },
     "warranty": "6 Months Comprehensive FoneZone Warranty",
     "stock": "7 units available in Bangalore Hub"
