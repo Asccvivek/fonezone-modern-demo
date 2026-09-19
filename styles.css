@@ -837,8 +837,6 @@ body.theme-light button.bg-teal-600,
 body.theme-light button.bg-teal-600 *,
 body.theme-light button.bg-slate-900,
 body.theme-light button.bg-slate-900 *,
-body.theme-light button.bg-slate-800,
-body.theme-light button.bg-slate-800 *,
 body.theme-light .btn-hero-solid,
 body.theme-light .btn-hero-solid *,
 body.theme-light .bg-fz-blue,
@@ -858,6 +856,108 @@ body.theme-light .hero-slide button.bg-slate-900:hover,
 body.theme-light button.btn-hero-solid.bg-slate-900:hover {
   background-color: #1E293B !important;
   color: #FFFFFF !important;
+}
+
+/* ── Executive Floating Dock (Bottom-Right) Ultra-Crisp Styling ── */
+body.theme-light #executiveFloatingDock {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.06) !important;
+}
+
+body.theme-light #executiveFloatingDock .font-mono.text-blue-400 {
+  color: #1D4ED8 !important;
+}
+
+body.theme-light #executiveFloatingDock .bg-slate-900 {
+  background-color: #F1F5F9 !important;
+  border-color: #E2E8F0 !important;
+}
+
+body.theme-light #executiveFloatingDock .portal-tab-active {
+  background-color: #1D4ED8 !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 6px rgba(29, 78, 216, 0.3) !important;
+}
+
+body.theme-light #executiveFloatingDock .portal-tab-active * {
+  color: #FFFFFF !important;
+}
+
+body.theme-light #executiveFloatingDock .portal-tab-inactive {
+  color: #334155 !important;
+  background-color: transparent !important;
+}
+
+body.theme-light #executiveFloatingDock .portal-tab-inactive:hover {
+  color: #0F172A !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+body.theme-light #executiveFloatingDock a[href="dashboard.html"] {
+  background-color: #EFF6FF !important;
+  border-color: #BFDBFE !important;
+  color: #1D4ED8 !important;
+}
+
+body.theme-light #executiveFloatingDock a[href="dashboard.html"]:hover {
+  background-color: #DBEAFE !important;
+  color: #1E40AF !important;
+}
+
+body.theme-light #executiveFloatingDock .h-4.w-\[1px\] {
+  background-color: #CBD5E1 !important;
+}
+
+body.theme-light #executiveFloatingDock button[onclick="tourSpeedTest()"],
+body.theme-light #executiveFloatingDock button[onclick="tourOpen360()"] {
+  background-color: #F8FAFC !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+  font-weight: 700 !important;
+}
+
+body.theme-light #executiveFloatingDock button[onclick="tourSpeedTest()"]:hover,
+body.theme-light #executiveFloatingDock button[onclick="tourOpen360()"]:hover {
+  background-color: #E2E8F0 !important;
+  border-color: #94A3B8 !important;
+  color: #0F172A !important;
+}
+
+body.theme-light #executiveFloatingDock button[onclick="tourSpeedTest()"] *,
+body.theme-light #executiveFloatingDock button[onclick="tourOpen360()"] * {
+  color: #0F172A !important;
+}
+
+/* Dark Mode Executive Floating Dock */
+body.theme-dark #executiveFloatingDock,
+body:not(.theme-light) #executiveFloatingDock {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.theme-dark #executiveFloatingDock button[onclick="tourSpeedTest()"],
+body.theme-dark #executiveFloatingDock button[onclick="tourOpen360()"],
+body:not(.theme-light) #executiveFloatingDock button[onclick="tourSpeedTest()"],
+body:not(.theme-light) #executiveFloatingDock button[onclick="tourOpen360()"] {
+  background-color: #1E293B !important;
+  border: 1px solid #334155 !important;
+  color: #F1F5F9 !important;
+}
+
+body.theme-dark #executiveFloatingDock button[onclick="tourSpeedTest()"]:hover,
+body.theme-dark #executiveFloatingDock button[onclick="tourOpen360()"]:hover,
+body:not(.theme-light) #executiveFloatingDock button[onclick="tourSpeedTest()"]:hover,
+body:not(.theme-light) #executiveFloatingDock button[onclick="tourOpen360()"]:hover {
+  background-color: #334155 !important;
+}
+
+body.theme-dark #executiveFloatingDock button[onclick="tourSpeedTest()"] *,
+body.theme-dark #executiveFloatingDock button[onclick="tourOpen360()"] *,
+body:not(.theme-light) #executiveFloatingDock button[onclick="tourSpeedTest()"] *,
+body:not(.theme-light) #executiveFloatingDock button[onclick="tourOpen360()"] * {
+  color: #F1F5F9 !important;
 }
 
 /* Category Navigation Bar in Light Mode — Seamless Crisp Modern Glass Aesthetic */
