@@ -367,34 +367,73 @@ body.theme-light #heroCarouselContainer .bg-slate-700 {
   background-color: #CBD5E1 !important;
 }
 
-/* In Light mode, keep hero banner text crisp white & high-contrast since background is deep dark slate */
+/* Hero Carousel Themes: Luminous & Fresh (Cashify & Apple Inspired) */
+/* Light Mode Studio Backgrounds */
+body.theme-light .hero-slide-apple {
+  background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 50%, #EFF6FF 100%) !important;
+}
+body.theme-light .hero-slide-samsung {
+  background: linear-gradient(135deg, #FAF5FF 0%, #FFFFFF 50%, #F0F9FF 100%) !important;
+}
+body.theme-light .hero-slide-cashify {
+  background: linear-gradient(135deg, #ECFDF5 0%, #FFFFFF 50%, #F0FDF4 100%) !important;
+}
+body.theme-light .hero-slide-macbook {
+  background: linear-gradient(135deg, #F8FAFC 0%, #FFFFFF 50%, #F1F5F9 100%) !important;
+}
+body.theme-light .hero-slide-pixel {
+  background: linear-gradient(135deg, #F0FDF4 0%, #FFFFFF 50%, #EFF6FF 100%) !important;
+}
+
+/* Dark Mode Studio Backgrounds */
+body.theme-dark .hero-slide-apple,
+body:not(.theme-light) .hero-slide-apple {
+  background: linear-gradient(135deg, #070D1D 0%, #0F1B36 50%, #0A1224 100%) !important;
+}
+body.theme-dark .hero-slide-samsung,
+body:not(.theme-light) .hero-slide-samsung {
+  background: linear-gradient(135deg, #0C081A 0%, #171033 50%, #0F0A24 100%) !important;
+}
+body.theme-dark .hero-slide-cashify,
+body:not(.theme-light) .hero-slide-cashify {
+  background: linear-gradient(135deg, #061A14 0%, #0A261D 50%, #071D17 100%) !important;
+}
+body.theme-dark .hero-slide-macbook,
+body:not(.theme-light) .hero-slide-macbook {
+  background: linear-gradient(135deg, #091326 0%, #0F2042 50%, #0A1630 100%) !important;
+}
+body.theme-dark .hero-slide-pixel,
+body:not(.theme-light) .hero-slide-pixel {
+  background: linear-gradient(135deg, #071D1A 0%, #0E2E2A 50%, #08211E 100%) !important;
+}
+
+/* In Light mode, crisp dark slate typography */
 body.theme-light .hero-slide h1,
 body.theme-light .hero-slide h2 {
-  color: #FFFFFF !important;
+  color: #0F172A !important;
+  text-shadow: none !important;
 }
 body.theme-light .hero-slide p,
-body.theme-light .hero-slide .text-slate-300 {
-  color: #E2E8F0 !important;
+body.theme-light .hero-slide .text-slate-300,
+body.theme-light .hero-slide .text-slate-600 {
+  color: #334155 !important;
 }
-body.theme-light .hero-slide strong.text-white {
-  color: #FFFFFF !important;
+body.theme-light .hero-slide strong.text-white,
+body.theme-light .hero-slide strong {
+  color: #0F172A !important;
 }
-body.theme-light .hero-slide .bg-slate-900\/80 {
-  background-color: rgba(15, 23, 42, 0.8) !important;
-  border-color: rgba(51, 65, 85, 0.8) !important;
-  color: #F8FAFC !important;
+body.theme-light .hero-slide .bg-slate-900\/80,
+body.theme-light .hero-slide button.bg-white {
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
+  color: #0F172A !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
 }
-body.theme-light .hero-slide .bg-slate-900\/80:hover {
-  background-color: rgba(30, 41, 59, 0.9) !important;
-  color: #FFFFFF !important;
-}
-body.theme-light .hero-slide .bg-slate-950\/90 {
-  background-color: rgba(15, 23, 42, 0.9) !important;
-  border-color: rgba(51, 65, 85, 0.8) !important;
-  color: #FFFFFF !important;
-}
-body.theme-light .hero-slide .bg-slate-950\/90 * {
-  color: #FFFFFF !important;
+body.theme-light .hero-slide .bg-slate-900\/80:hover,
+body.theme-light .hero-slide button.bg-white:hover {
+  background-color: #F8FAFC !important;
+  border-color: #94A3B8 !important;
+  color: #0F172A !important;
 }
 
 /* Offer Rail Light Mode */
@@ -776,6 +815,10 @@ body.theme-light #themeToggleBtnTop * {
 }
 
 /* Crucial: Buttons & Badges with Solid Backgrounds Keep White Text */
+.btn-hero-solid,
+.btn-hero-solid * {
+  color: #FFFFFF !important;
+}
 body.theme-light button.bg-blue-600,
 body.theme-light button.bg-blue-600 *,
 body.theme-light button.bg-blue-500,
@@ -788,12 +831,32 @@ body.theme-light button.bg-emerald-500,
 body.theme-light button.bg-emerald-500 *,
 body.theme-light button.bg-indigo-600,
 body.theme-light button.bg-indigo-600 *,
+body.theme-light button.bg-purple-700,
+body.theme-light button.bg-purple-700 *,
+body.theme-light button.bg-teal-600,
+body.theme-light button.bg-teal-600 *,
+body.theme-light button.bg-slate-900,
+body.theme-light button.bg-slate-900 *,
+body.theme-light button.bg-slate-800,
+body.theme-light button.bg-slate-800 *,
+body.theme-light .btn-hero-solid,
+body.theme-light .btn-hero-solid *,
 body.theme-light .bg-fz-blue,
 body.theme-light .bg-fz-blue *,
 body.theme-light .portal-tab-active,
 body.theme-light .portal-tab-active *,
 body.theme-light #wishlistCountBadge,
 body.theme-light #cartCountBadge {
+  color: #FFFFFF !important;
+}
+body.theme-light .hero-slide button.bg-slate-900,
+body.theme-light button.btn-hero-solid.bg-slate-900 {
+  background-color: #0F172A !important;
+  color: #FFFFFF !important;
+}
+body.theme-light .hero-slide button.bg-slate-900:hover,
+body.theme-light button.btn-hero-solid.bg-slate-900:hover {
+  background-color: #1E293B !important;
   color: #FFFFFF !important;
 }
 
@@ -3687,18 +3750,27 @@ body.theme-light #regionBtnUAEMobile {
   #heroPrevBtn,
   #heroNextBtn {
     display: flex !important;
-    width: 40px !important;
-    height: 40px !important;
+    width: 42px !important;
+    height: 42px !important;
     border-radius: 9999px !important;
-    background: rgba(15, 23, 42, 0.75) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.88) !important;
+    border: 1px solid rgba(226, 232, 240, 0.95) !important;
+    color: #0F172A !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
     backdrop-filter: blur(12px) !important;
     align-items: center !important;
     justify-content: center !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
     opacity: 0 !important;
+  }
+  body.theme-dark .hero-nav-arrow,
+  body.theme-dark #heroPrevBtn,
+  body.theme-dark #heroNextBtn,
+  body:not(.theme-light) .hero-nav-arrow {
+    background: rgba(15, 23, 42, 0.85) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    color: #FFFFFF !important;
   }
   #heroCarouselContainer:hover .hero-nav-arrow,
   #heroCarouselContainer:hover #heroPrevBtn,
@@ -3708,10 +3780,29 @@ body.theme-light #regionBtnUAEMobile {
   .hero-nav-arrow:hover,
   #heroPrevBtn:hover,
   #heroNextBtn:hover {
+    background: #FFFFFF !important;
+    border-color: #94A3B8 !important;
+    transform: translateY(-50%) scale(1.08) !important;
+  }
+  body.theme-dark .hero-nav-arrow:hover,
+  body:not(.theme-light) .hero-nav-arrow:hover {
     background: #2563EB !important;
     border-color: #60A5FA !important;
-    transform: translateY(-50%) scale(1.1) !important;
+    color: #FFFFFF !important;
   }
+}
+
+/* Dots container styling */
+.hero-dots-container {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border: 1px solid rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: blur(10px) !important;
+}
+body.theme-dark .hero-dots-container,
+body:not(.theme-light) .hero-dots-container {
+  background: rgba(0, 0, 0, 0.65) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
 }
 
 /* ── FIX: storeCategoryBar trust badges in Light Mode — crisp legible slate text ── */
@@ -3724,7 +3815,7 @@ body.theme-light #storeCategoryBar .hidden.xl\:flex a {
 body.theme-light #storeCategoryBar .text-amber-300 { color: #d97706 !important; }
 body.theme-light #storeCategoryBar .text-emerald-300 { color: #059669 !important; }
 
-/* ── ULTIMATE FIX: Hero Section Typography (Dark Background across all themes) ── */
+/* ── FIX: Hero Section Typography (Theme-Aware, High Contrast) ── */
 body.theme-light .page-view #heroCarouselContainer .hero-slide h1,
 body.theme-light .page-view #heroCarouselContainer .hero-slide h2,
 body.theme-light .page-view #heroCarouselContainer .hero-slide h3,
@@ -3733,13 +3824,21 @@ body.theme-light #heroCarouselContainer .hero-slide h2,
 body.theme-light #heroCarouselContainer .hero-slide h3,
 body.theme-light .hero-slide h1,
 body.theme-light .hero-slide h2 {
-  color: #FFFFFF !important;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+  color: #0F172A !important;
+  text-shadow: none !important;
 }
 body.theme-light #heroCarouselContainer .hero-slide p,
 body.theme-light #heroCarouselContainer .hero-slide .text-slate-300,
-body.theme-light #heroCarouselContainer .hero-slide .text-slate-400 {
-  color: #E2E8F0 !important;
+body.theme-light #heroCarouselContainer .hero-slide .text-slate-400,
+body.theme-light #heroCarouselContainer .hero-slide .text-slate-600 {
+  color: #334155 !important;
+}
+body.theme-dark .page-view #heroCarouselContainer .hero-slide h1,
+body.theme-dark .page-view #heroCarouselContainer .hero-slide h2,
+body.theme-dark .page-view #heroCarouselContainer .hero-slide h3,
+body:not(.theme-light) #heroCarouselContainer .hero-slide h1,
+body:not(.theme-light) #heroCarouselContainer .hero-slide h2 {
+  color: #FFFFFF !important;
 }
 /* ── TASK 402: Framer-Motion Grade Spring Physics & Micro-Interactions ── */
 .spring-interactive,

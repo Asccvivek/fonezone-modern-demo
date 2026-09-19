@@ -406,245 +406,210 @@
         <!-- Carousel Track -->
         <div id="heroCarouselTrack" class="flex flex-nowrap transition-transform duration-700 ease-out" style="transform: translateX(0%);">
           
-          <!-- Slide 1: iPhone 14 & 15 Pro Festival Drop -->
-          <div class="hero-slide min-w-full relative overflow-hidden p-3.5 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6"
-               style="background: radial-gradient(circle at 80% 50%, rgba(30, 86, 216, 0.35) 0%, transparent 50%), linear-gradient(135deg, #070D1D 0%, #0F1B36 50%, #0A1224 100%);">
+          <!-- Slide 1: iPhone 14 & 15 Pro Festival Drop (Apple Studio Style) -->
+          <div id="heroSlide1" class="hero-slide hero-slide-apple min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6">
             <div class="relative z-10 flex-1 max-w-xl">
-              <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
-                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-blue-500/25 text-blue-300 border border-blue-500/40 text-[11px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
-                  <span>🔥</span> <span>MEGA FESTIVAL</span>
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-blue-100 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-500/30 text-[10px] sm:text-[11px] font-extrabold tracking-wider uppercase flex items-center gap-1">
+                  <span>⚡</span> <span>CERTIFIED PRE-OWNED</span>
                 </span>
-                <span class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] sm:text-[11px] font-bold">
-                  FLAT 60% OFF
+                <span id="heroSlide1SaveBadge" class="px-2 sm:px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30 text-[10px] sm:text-[11px] font-extrabold">
+                  Save ₹30,901
                 </span>
               </div>
-              <h1 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+              <h1 class="text-base sm:text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
                 Certified Pre-Owned Flagships.<br class="hidden sm:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-300 to-emerald-300">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-teal-600 dark:from-blue-400 dark:via-cyan-300 dark:to-emerald-300">
                   iPhone 14 & 15 Pro
                 </span>
               </h1>
-              <p class="text-[11px] sm:text-sm text-slate-300 mt-1 sm:mt-3 leading-snug sm:leading-relaxed" id="heroSlide1Price">
-                Starting from <strong class="text-white text-xs sm:text-base">₹38,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹69,900</span>). Every device passes our 32-point inspection.</span>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-snug sm:leading-relaxed" id="heroSlide1Price">
+                Starting from <strong class="text-slate-900 dark:text-white font-extrabold">₹38,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹69,900</span>). Every device passes our 32-point engineering inspection.</span>
               </p>
-              <div class="flex items-center gap-2 sm:gap-3 mt-2 sm:mt-5">
-                <button onclick="setCategory('phone')" class="px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-blue-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+              <div class="flex items-center gap-2.5 sm:gap-3 mt-3 sm:mt-5">
+                <button onclick="setCategory('phone')" class="btn-hero-solid px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black shadow-md flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 active:scale-95">
                   <span>⚡ Shop iPhones</span>
                 </button>
-                <button onclick="tourOpen360()" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 sm:gap-2 cursor-pointer">
-                  <span>🔍 360° Inspector</span>
+                <button onclick="tourOpen360()" class="hidden sm:flex px-4 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer shadow-xs">
+                  <span>🔍 360° Hardware Inspector</span>
                 </button>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[11px] sm:text-[11px] text-slate-300">
-                <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 6M Warranty</span>
-                <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 85%+ Battery</span>
-                <span class="hidden sm:flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 0-Dent Checked</span>
+              <div class="flex items-center gap-3 sm:gap-5 mt-3 sm:mt-6 text-[11px] text-slate-600 dark:text-slate-300 font-semibold">
+                <span class="flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> 6M FoneZone Warranty</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> 85%+ Battery Health</span>
+                <span class="hidden sm:flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> 0-Dent Checked</span>
               </div>
             </div>
-            <!-- Right Visual with Device Composite & Floating Badges -->
+            <!-- Right Visual with Clean Studio Drop Shadow -->
             <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
-              <div class="relative">
-                <img src="assets/iphone14_blue.png" alt="iPhone 14 Refurbished" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
-                <!-- Floating Offer Badge -->
-                <div id="heroSlide1SaveBadge" class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-[11px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl border border-emerald-400/40">
-                  Save ₹30k
-                </div>
-              </div>
+              <img src="assets/iphone14_blue.png" alt="iPhone 14 Refurbished" class="w-20 sm:w-56 md:w-64 filter drop-shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
             </div>
           </div>
 
           <!-- Slide 2: Samsung Galaxy S23 Ultra Epic Drop -->
-          <div class="hero-slide min-w-full relative overflow-hidden p-3.5 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6"
-               style="background: radial-gradient(circle at 80% 50%, rgba(147, 51, 234, 0.35) 0%, transparent 50%), linear-gradient(135deg, #0C081A 0%, #171033 50%, #0F0A24 100%);">
+          <div id="heroSlide2" class="hero-slide hero-slide-samsung min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6">
             <div class="relative z-10 flex-1 max-w-xl">
-              <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
-                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-purple-500/25 text-purple-300 border border-purple-500/40 text-[11px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
-                  <span>⚡</span> <span>200MP MONSTER</span>
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30 text-[10px] sm:text-[11px] font-extrabold tracking-wider uppercase flex items-center gap-1">
+                  <span>⚡</span> <span>200MP FLAGSHIP MONSTER</span>
                 </span>
-                <span id="heroSlide2SaveBadge" class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] sm:text-[11px] font-bold">
+                <span id="heroSlide2SaveBadge" class="px-2 sm:px-2.5 py-0.5 rounded-full bg-purple-100 dark:bg-purple-500/20 text-purple-800 dark:text-purple-300 border border-purple-200 dark:border-purple-500/30 text-[10px] sm:text-[11px] font-extrabold">
                   SAVE ₹70,000
                 </span>
               </div>
-              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
                 Galaxy S23 Ultra 5G.<br class="hidden sm:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-amber-300">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 dark:from-purple-400 dark:via-pink-300 dark:to-amber-300">
                   Phantom Black
                 </span>
               </h2>
-              <p class="text-[11px] sm:text-sm text-slate-300 mt-1 sm:mt-3 leading-snug sm:leading-relaxed" id="heroSlide2Price">
-                Starting from <strong class="text-white text-xs sm:text-base">₹54,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,24,999</span>). Original S-Pen stylus included.</span>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-snug sm:leading-relaxed" id="heroSlide2Price">
+                Starting from <strong class="text-slate-900 dark:text-white font-extrabold">₹54,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,24,999</span>). Original S-Pen stylus included.</span>
               </p>
-              <div class="flex items-center gap-2 sm:gap-3 mt-2 sm:mt-5">
-                <button onclick="setSubFilter('samsung')" class="px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-purple-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+              <div class="flex items-center gap-2.5 sm:gap-3 mt-3 sm:mt-5">
+                <button onclick="setSubFilter('samsung')" class="btn-hero-solid px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-purple-700 hover:bg-purple-800 text-white text-xs font-black shadow-md flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 active:scale-95">
                   <span>⚡ Shop Galaxy</span>
                 </button>
-                <button onclick="openInspectModal('fz-s23ultra')" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 sm:gap-2 cursor-pointer">
+                <button onclick="openInspectModal('fz-s23ultra')" class="hidden sm:flex px-4 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer shadow-xs">
                   <span>🔍 Inspect 360°</span>
                 </button>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[11px] sm:text-[11px] text-slate-300">
-                <span class="flex items-center gap-0.5"><span class="text-purple-400">✓</span> S-Pen Included</span>
-                <span class="flex items-center gap-0.5"><span class="text-purple-400">✓</span> 5000mAh</span>
-                <span class="hidden sm:flex items-center gap-0.5"><span class="text-purple-400">✓</span> Free Insured Air</span>
+              <div class="flex items-center gap-3 sm:gap-5 mt-3 sm:mt-6 text-[11px] text-slate-600 dark:text-slate-300 font-semibold">
+                <span class="flex items-center gap-1"><span class="text-purple-600 dark:text-purple-400 font-bold">✓</span> S-Pen Included</span>
+                <span class="flex items-center gap-1"><span class="text-purple-600 dark:text-purple-400 font-bold">✓</span> 5000mAh Battery QA</span>
+                <span class="hidden sm:flex items-center gap-1"><span class="text-purple-600 dark:text-purple-400 font-bold">✓</span> Free Insured Transit</span>
               </div>
             </div>
             <!-- Right Visual -->
             <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
-              <div class="relative">
-                <img src="assets/samsung_s23_ultra.png" alt="Samsung Galaxy S23 Ultra Refurbished" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
-                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[11px] sm:text-[11px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl border border-purple-400/40">
-                  56% OFF
-                </div>
-              </div>
+              <img src="assets/samsung_s23_ultra.png" alt="Samsung Galaxy S23 Ultra Refurbished" class="w-20 sm:w-56 md:w-64 filter drop-shadow-xl transform rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
             </div>
           </div>
 
-          <!-- Slide 3: Instant Exchange & Doorstep Buyback -->
-          <div class="hero-slide min-w-full relative overflow-hidden p-3.5 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6"
-               style="background: radial-gradient(circle at 80% 50%, rgba(16, 185, 129, 0.35) 0%, transparent 50%), linear-gradient(135deg, #051A12 0%, #0B291D 50%, #061912 100%);">
+          <!-- Slide 3: Instant Exchange & Doorstep Buyback (Cashify Style) -->
+          <div id="heroSlide3" class="hero-slide hero-slide-cashify min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6">
             <div class="relative z-10 flex-1 max-w-xl">
-              <div class="flex flex-wrap items-center gap-1 sm:gap-2 mb-1 sm:mb-3">
-                <span class="px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-emerald-500/25 text-emerald-300 border border-emerald-500/40 text-[11px] sm:text-[11px] font-black tracking-wider uppercase flex items-center gap-1">
-                  <span>🔄</span> <span>INSTANT EXCHANGE</span>
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30 text-[10px] sm:text-[11px] font-extrabold tracking-wider uppercase flex items-center gap-1">
+                  <span>⚡</span> <span>DOORSTEP BUYBACK</span>
                 </span>
-                <span id="heroSlide3TradeinBadge" class="px-1.5 sm:px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] sm:text-[11px] font-bold">
-                  GET ₹15,000 EXTRA
+                <span id="heroSlide3TradeinBadge" class="px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-500/30 text-[10px] sm:text-[11px] font-extrabold">
+                  GET UP TO ₹15,000 EXTRA
                 </span>
               </div>
-              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
                 Sell Your Old Phone.<br class="hidden sm:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300">
-                  Instant UPI Cash.
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 dark:from-emerald-400 dark:via-teal-300 dark:to-cyan-300">
+                  Instant Cash & UPI Transfer.
                 </span>
               </h2>
-              <p class="text-[11px] sm:text-sm text-slate-300 mt-1 sm:mt-3 leading-snug sm:leading-relaxed">
-                Free doorstep pickup, instant valuation, and same-day UPI transfer.
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-snug sm:leading-relaxed">
+                Free doorstep pickup in 2 hours. Instant valuation, zero haggling, and same-day direct bank payment.
               </p>
-              <div class="flex items-center gap-2 sm:gap-3 mt-2 sm:mt-5">
-                <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="px-3 sm:px-5 py-1.5 sm:py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-emerald-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
-                  <span>💰 Instant Quote</span>
+              <div class="flex items-center gap-2.5 sm:gap-3 mt-3 sm:mt-5">
+                <a href="#/pages/sell-your-device" onclick="navigateTo('#/pages/sell-your-device'); return false;" class="btn-hero-solid px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-black shadow-md flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 active:scale-95">
+                  <span>💰 Calculate Phone Value</span>
                 </a>
-                <a href="#/pages/wholesale-price" onclick="navigateTo('#/pages/wholesale-price'); return false;" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 sm:gap-2 cursor-pointer">
-                  <span>📦 Wholesale</span>
+                <a href="#/pages/wholesale-price" onclick="navigateTo('#/pages/wholesale-price'); return false;" class="hidden sm:flex px-4 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer shadow-xs">
+                  <span>📦 Bulk Wholesale</span>
                 </a>
               </div>
               <!-- Trust micro-tags -->
-              <div class="flex items-center gap-2.5 sm:gap-4 mt-2 sm:mt-6 text-[11px] sm:text-[11px] text-slate-300">
-                <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> 60s Quote</span>
-                <span class="flex items-center gap-0.5"><span class="text-emerald-400">✓</span> Free Pickup</span>
-                <span class="hidden sm:flex items-center gap-0.5"><span class="text-emerald-400">✓</span> Instant UPI</span>
+              <div class="flex items-center gap-3 sm:gap-5 mt-3 sm:mt-6 text-[11px] text-slate-600 dark:text-slate-300 font-semibold">
+                <span class="flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> 60s Online Valuation</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> Free Doorstep Pickup</span>
+                <span class="hidden sm:flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> Immediate UPI Transfer</span>
               </div>
             </div>
-            <!-- Right Visual (Phone Trade-in — matches "Sell Your Old Phone" copy) -->
+            <!-- Right Visual (Pristine Hardware with Drop Shadow, No Stickers) -->
             <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
-              <div class="relative">
-                <img src="assets/iphone14_front.png" alt="Sell Your Old Phone — Instant UPI Cash" class="w-20 sm:w-52 md:w-60 drop-shadow-2xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
-                <div class="absolute -top-1.5 -right-1 sm:-top-3 sm:-right-3 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 text-[11px] sm:text-[12px] font-black px-1.5 sm:px-3 py-0.5 sm:py-1.5 rounded-xl sm:rounded-2xl shadow-xl shadow-amber-500/40">
-                  ⚡ UPI Cash
-                </div>
-                <div class="absolute -bottom-1 -left-1 sm:-bottom-2 sm:-left-2 bg-emerald-500 text-white text-[10px] sm:text-[11px] font-black px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-xl shadow-lg shadow-emerald-500/40">
-                  60s Quote
-                </div>
-              </div>
+              <img src="assets/iphone14_front.png" alt="Sell Your Old Phone — Instant UPI Cash" class="w-20 sm:w-52 md:w-60 filter drop-shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-500 object-contain">
             </div>
           </div>
 
-        
           <!-- Slide 4: Apple Silicon MacBook Pro M2 & M3 -->
-          <div class="hero-slide min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-4 sm:gap-6"
-               style="background: linear-gradient(135deg, #091326 0%, #0F2042 50%, #0A1630 100%);">
+          <div id="heroSlide4" class="hero-slide hero-slide-macbook min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6">
             <div class="relative z-10 flex-1 max-w-xl">
-              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded-full bg-blue-500/25 text-blue-300 border border-blue-500/40 text-[11px] font-black uppercase tracking-wider flex items-center gap-1">
-                  <span>💻</span> <span>PRO CREATOR SERIES</span>
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-slate-200 dark:bg-blue-500/20 text-slate-800 dark:text-blue-300 border border-slate-300 dark:border-blue-500/30 text-[10px] sm:text-[11px] font-extrabold tracking-wider uppercase flex items-center gap-1">
+                  <span>💻</span> <span>PRO CREATOR WORKSTATION</span>
                 </span>
-                <span id="heroSlide4SaveBadge" class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-bold">
+                <span id="heroSlide4SaveBadge" class="px-2 sm:px-2.5 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-500/20 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-500/30 text-[10px] sm:text-[11px] font-extrabold">
                   SAVE ₹65,000
                 </span>
               </div>
-              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
                 MacBook Pro M2 Max.<br class="hidden sm:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-300">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-800 via-blue-700 to-indigo-800 dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-300">
                   Space Gray 16-Inch
                 </span>
               </h2>
-              <p class="text-[11px] sm:text-sm text-slate-300 mt-2 sm:mt-3 leading-snug" id="heroSlide4Price">
-                Starting from <strong class="text-white text-xs sm:text-base">₹94,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,79,900</span>). 100% Genuine Apple Battery, 0 Cycle Degradation.</span>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-snug" id="heroSlide4Price">
+                Starting from <strong class="text-slate-900 dark:text-white font-extrabold">₹94,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,79,900</span>). 100% Genuine Apple Battery, 0 Cycle Degradation.</span>
               </p>
-              <div class="flex items-center gap-2 sm:gap-3 mt-3 sm:mt-5">
-                <button onclick="setCategory('macbook')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-blue-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+              <div class="flex items-center gap-2.5 sm:gap-3 mt-3 sm:mt-5">
+                <button onclick="setCategory('macbook')" class="btn-hero-solid px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-black shadow-md flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 active:scale-95">
                   <span>⚡ Shop MacBooks</span>
                 </button>
-                <button onclick="openInspectModal('fz-mbp14-m2')" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer">
+                <button onclick="openInspectModal('fz-mbp14-m2')" class="hidden sm:flex px-4 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer shadow-xs">
                   <span>🔍 Inspect 360°</span>
                 </button>
               </div>
-              <div class="flex items-center gap-3 sm:gap-4 mt-3 sm:mt-6 text-[11px] text-slate-300 font-medium">
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> MagSafe 3</span>
-                <span class="flex items-center gap-1"><span class="text-emerald-400">✓</span> 100% Battery</span>
-                <span class="hidden sm:flex items-center gap-1"><span class="text-emerald-400">✓</span> Liquid Retina XDR</span>
+              <div class="flex items-center gap-3 sm:gap-5 mt-3 sm:mt-6 text-[11px] text-slate-600 dark:text-slate-300 font-semibold">
+                <span class="flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> MagSafe 3 Included</span>
+                <span class="flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> 100% Genuine Battery</span>
+                <span class="hidden sm:flex items-center gap-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold">✓</span> Liquid Retina XDR</span>
               </div>
             </div>
             <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
-              <div class="relative">
-                <img src="assets/macbookair_midnight.png" alt="MacBook Pro" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500 object-contain">
-                <div id="heroSlide4SaveBadgeFloating" class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-blue-600 text-white text-[11px] font-black px-2 py-0.5 rounded-xl shadow-lg border border-blue-400/40">
-                  Save ₹65k
-                </div>
-              </div>
+              <img src="assets/macbookair_midnight.png" alt="MacBook Pro" class="w-20 sm:w-56 md:w-64 filter drop-shadow-xl transform -rotate-2 hover:rotate-0 transition-transform duration-500 object-contain">
             </div>
           </div>
 
           <!-- Slide 5: Google Pixel 8 Pro Pure AI -->
-          <div class="hero-slide min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-4 sm:gap-6"
-               style="background: linear-gradient(135deg, #071D1A 0%, #0E2E2A 50%, #08211E 100%);">
+          <div id="heroSlide5" class="hero-slide hero-slide-pixel min-w-full relative overflow-hidden p-4 sm:p-8 md:p-10 flex flex-row items-center justify-between gap-3 sm:gap-6">
             <div class="relative z-10 flex-1 max-w-xl">
-              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2">
-                <span class="px-2.5 py-0.5 rounded-full bg-teal-500/25 text-teal-300 border border-teal-500/40 text-[11px] font-black uppercase tracking-wider flex items-center gap-1">
+              <div class="flex flex-wrap items-center gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                <span class="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-teal-100 dark:bg-teal-500/20 text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-500/30 text-[10px] sm:text-[11px] font-extrabold tracking-wider uppercase flex items-center gap-1">
                   <span>✨</span> <span>GOOGLE TENSOR G3</span>
                 </span>
-                <span id="heroSlide5Badge" class="px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-[11px] font-bold">
+                <span id="heroSlide5Badge" class="px-2 sm:px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-500/20 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-500/30 text-[10px] sm:text-[11px] font-extrabold">
                   BEST AI CAMERA
                 </span>
               </div>
-              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+              <h2 class="text-base sm:text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
                 Google Pixel 8 Pro.<br class="hidden sm:block">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-300">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 via-cyan-600 to-blue-600 dark:from-teal-400 dark:via-emerald-300 dark:to-cyan-300">
                   Bay Blue 128GB
                 </span>
               </h2>
-              <p class="text-[11px] sm:text-sm text-slate-300 mt-2 sm:mt-3 leading-snug" id="heroSlide5Price">
-                Starting from <strong class="text-white text-xs sm:text-base">₹46,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,06,999</span>). 7 Years of Android OS Updates.</span>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 sm:mt-3 leading-snug" id="heroSlide5Price">
+                Starting from <strong class="text-slate-900 dark:text-white font-extrabold">₹46,999</strong> <span class="hidden sm:inline">(MSRP <span class="line-through text-slate-400">₹1,06,999</span>). 7 Years of Android OS Updates.</span>
               </p>
-              <div class="flex items-center gap-2 sm:gap-3 mt-3 sm:mt-5">
-                <button onclick="setSubFilter('pixel')" class="px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-teal-600 hover:bg-teal-500 text-white text-[11px] sm:text-xs font-black shadow-lg shadow-teal-600/30 flex items-center gap-1 sm:gap-2 cursor-pointer transition-transform hover:scale-105">
+              <div class="flex items-center gap-2.5 sm:gap-3 mt-3 sm:mt-5">
+                <button onclick="setSubFilter('pixel')" class="btn-hero-solid px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-black shadow-md flex items-center gap-1.5 cursor-pointer transition-all hover:scale-105 active:scale-95">
                   <span>⚡ Shop Pixel</span>
                 </button>
-                <button onclick="openInspectModal('fz-pixel8pro')" class="hidden sm:flex px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer">
+                <button onclick="openInspectModal('fz-pixel8pro')" class="hidden sm:flex px-4 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-white dark:bg-slate-900/80 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 text-xs font-bold items-center gap-1.5 cursor-pointer shadow-xs">
                   <span>🔍 Inspect 360°</span>
                 </button>
               </div>
-              <div class="flex items-center gap-3 sm:gap-4 mt-3 sm:mt-6 text-[11px] text-slate-300 font-medium">
-                <span class="flex items-center gap-1"><span class="text-teal-400">✓</span> 50MP Pro Camera</span>
-                <span class="flex items-center gap-1"><span class="text-teal-400">✓</span> Best Take AI</span>
-                <span class="hidden sm:flex items-center gap-1"><span class="text-teal-400">✓</span> 7-Year Updates</span>
+              <div class="flex items-center gap-3 sm:gap-5 mt-3 sm:mt-6 text-[11px] text-slate-600 dark:text-slate-300 font-semibold">
+                <span class="flex items-center gap-1"><span class="text-teal-600 dark:text-teal-400 font-bold">✓</span> 50MP Pro Camera</span>
+                <span class="flex items-center gap-1"><span class="text-teal-600 dark:text-teal-400 font-bold">✓</span> Best Take AI</span>
+                <span class="hidden sm:flex items-center gap-1"><span class="text-teal-600 dark:text-teal-400 font-bold">✓</span> 7-Year Google Updates</span>
               </div>
             </div>
             <div class="relative z-10 shrink-0 w-24 sm:w-64 md:w-80 flex items-center justify-center">
-              <div class="relative">
-                <img src="assets/google_pixel_nobg.png" alt="Google Pixel 8 Pro" class="w-20 sm:w-56 md:w-64 drop-shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500 object-contain">
-                <div class="absolute -top-1.5 -right-1 sm:-top-2 sm:-right-2 bg-teal-600 text-white text-[11px] font-black px-2 py-0.5 rounded-xl shadow-lg border border-teal-400/40">
-                  56% OFF
-                </div>
-              </div>
+              <img src="assets/google_pixel_nobg.png" alt="Google Pixel 8 Pro" class="w-20 sm:w-56 md:w-64 filter drop-shadow-xl transform rotate-2 hover:rotate-0 transition-transform duration-500 object-contain">
             </div>
           </div>
 
         </div>
 
-        <!-- Sleek Floating Hero Navigation Arrows (Desktop/Tablet Only — Mobile uses native touch swipe) -->
+        <!-- Sleek Floating Hero Navigation Arrows (Frosted Glass) -->
         <button onclick="prevHeroSlide()" aria-label="Previous Slide" id="heroPrevBtn" class="hero-nav-arrow hidden sm:flex absolute left-3 top-1/2 -translate-y-1/2 z-30" title="Previous Slide">
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
         </button>
@@ -652,14 +617,14 @@
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
         </button>
 
-        <!-- Clean 5-Dot Indicator (No 6s Text Pill) -->
+        <!-- Clean 5-Dot Indicator -->
         <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 z-20">
-          <div class="flex items-center gap-2 bg-black/60 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-white/10 shadow-lg">
-            <button onclick="goToHeroSlide(0)" class="hero-dot w-6 h-1.5 rounded-full bg-blue-500 transition-all cursor-pointer" aria-label="Slide 1"></button>
-            <button onclick="goToHeroSlide(1)" class="hero-dot w-2 h-1.5 rounded-full bg-white/40 hover:bg-white/80 transition-all cursor-pointer" aria-label="Slide 2"></button>
-            <button onclick="goToHeroSlide(2)" class="hero-dot w-2 h-1.5 rounded-full bg-white/40 hover:bg-white/80 transition-all cursor-pointer" aria-label="Slide 3"></button>
-            <button onclick="goToHeroSlide(3)" class="hero-dot w-2 h-1.5 rounded-full bg-white/40 hover:bg-white/80 transition-all cursor-pointer" aria-label="Slide 4"></button>
-            <button onclick="goToHeroSlide(4)" class="hero-dot w-2 h-1.5 rounded-full bg-white/40 hover:bg-white/80 transition-all cursor-pointer" aria-label="Slide 5"></button>
+          <div class="hero-dots-container flex items-center gap-2 px-3 py-1.5 rounded-full">
+            <button onclick="goToHeroSlide(0)" class="hero-dot w-6 h-1.5 rounded-full bg-blue-600 transition-all cursor-pointer" aria-label="Slide 1"></button>
+            <button onclick="goToHeroSlide(1)" class="hero-dot w-2 h-1.5 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-slate-400 transition-all cursor-pointer" aria-label="Slide 2"></button>
+            <button onclick="goToHeroSlide(2)" class="hero-dot w-2 h-1.5 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-slate-400 transition-all cursor-pointer" aria-label="Slide 3"></button>
+            <button onclick="goToHeroSlide(3)" class="hero-dot w-2 h-1.5 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-slate-400 transition-all cursor-pointer" aria-label="Slide 4"></button>
+            <button onclick="goToHeroSlide(4)" class="hero-dot w-2 h-1.5 rounded-full bg-slate-300 dark:bg-white/30 hover:bg-slate-400 transition-all cursor-pointer" aria-label="Slide 5"></button>
           </div>
         </div></div>
 
