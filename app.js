@@ -4629,7 +4629,7 @@ function applyTheme(theme) {
   if (theme === "light") {
     body.classList.add("theme-light");
     body.classList.remove("bg-[#070A10]", "text-slate-100");
-    body.classList.add("bg-[#F8FAFC]", "text-slate-900");
+    body.classList.add("bg-white", "text-slate-900");
     html.classList.remove("dark");
     html.classList.add("light");
     if (iconTop) {
@@ -4644,10 +4644,9 @@ function applyTheme(theme) {
     if (mainLogo) mainLogo.src = "assets/fonezone_logo.png";
     if (footerLogo) footerLogo.src = "assets/fonezone_logo.png";
     localStorage.setItem("fz_theme", "light");
-    showToast("Switched to Light Mode (Apple & BackMarket Clean E-Commerce)");
   } else {
     body.classList.remove("theme-light");
-    body.classList.remove("bg-[#F8FAFC]", "text-slate-900");
+    body.classList.remove("bg-[#F8FAFC]", "bg-white", "text-slate-900");
     body.classList.add("bg-[#070A10]", "text-slate-100");
     html.classList.remove("light");
     html.classList.add("dark");
@@ -4663,7 +4662,6 @@ function applyTheme(theme) {
     if (mainLogo) mainLogo.src = "assets/fonezone_logo_white.png";
     if (footerLogo) footerLogo.src = "assets/fonezone_logo_white.png";
     localStorage.setItem("fz_theme", "dark");
-    showToast("Switched to Dark Mode (High-Tech Midnight Aesthetic)");
   }
   if (window.lucide) {
     window.lucide.createIcons();
@@ -4897,19 +4895,19 @@ function renderCatalog() {
 
     return `
       <article class="fz-card group cursor-pointer" onclick="openInspector('${p.id}')">
-        <!-- Top Image Area with Badges & Wishlist -->
-        <div class="fz-card__image-wrap relative w-full pt-[100%] bg-[#FBFBFC] dark:bg-slate-900/60 overflow-hidden flex items-center justify-center">
-          <!-- Discount / Savings Badge (Top-Left) -->
-          <span class="fz-card__badge absolute top-3 left-3 text-[11px] font-bold px-2 py-0.5 rounded bg-black/80 dark:bg-black/90 text-white z-10">
-            -${priceInfo.savingsPct}% vs new
+        <!-- Top Image Area -->
+        <div class="fz-card__image-wrap relative w-full pt-[100%] bg-white overflow-hidden flex items-center justify-center">
+          <!-- Discount Badge -->
+          <span class="fz-card__badge absolute top-3 left-3 text-[11px] font-semibold px-2 py-0.5 rounded bg-blue-600 text-white z-10">
+            -${priceInfo.savingsPct}%
           </span>
 
-          <!-- Wishlist Heart (Top-Right) -->
+          <!-- Wishlist Heart -->
           <button 
             type="button"
             onclick="event.stopPropagation(); toggleWishlist('${p.id}');" 
             data-product-id="${p.id}"
-            class="card-wishlist-btn absolute top-2.5 right-2.5 z-10 w-8 h-8 rounded-full bg-white/90 dark:bg-slate-800/90 shadow-sm flex items-center justify-center transition-all cursor-pointer ${isWishlisted ? 'text-red-500' : 'text-slate-400 hover:text-red-500'}" 
+            class="card-wishlist-btn absolute top-2.5 right-2.5 z-10 w-8 h-8 rounded-full bg-white shadow-sm border border-slate-200 flex items-center justify-center transition-all cursor-pointer ${isWishlisted ? 'text-red-500' : 'text-slate-400 hover:text-red-500'}" 
             title="${isWishlisted ? 'Remove from Wishlist' : 'Save to Wishlist'}"
             aria-label="Wishlist"
           >
@@ -4920,64 +4918,48 @@ function renderCatalog() {
 
           <!-- Main Device Image -->
           <img src="${p.image}" alt="${displayName}" class="absolute inset-0 w-full h-full object-contain p-5 group-hover:scale-105 transition-transform duration-300 select-none">
-
-          <!-- 360° Inspector Quick Trigger Overlay (Luxury High-Contrast Badge) -->
-          <button onclick="openInspector('${p.id}'); event.stopPropagation();" class="card-360-badge absolute bottom-2.5 right-2.5 z-10 px-2.5 py-1 rounded-full text-[11px] flex items-center gap-1.5 cursor-pointer select-none" title="Inspect 360° Condition & Diagnostics">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span class="badge-360-num font-mono">360°</span>
-            <span class="badge-360-lbl hidden sm:inline">Inspect</span>
-          </button>
         </div>
 
         <!-- Body Area -->
-        <div class="fz-card__body p-3.5 flex flex-col flex-1 justify-between gap-2.5">
+        <div class="fz-card__body p-3.5 flex flex-col flex-1 justify-between gap-2">
           <div>
+            <!-- Vendor -->
+            <div class="text-[11px] font-semibold text-slate-500 uppercase tracking-wide">${p.brand}</div>
+            
             <!-- Title -->
-            <h3 class="fz-card__title text-[14px] font-extrabold text-[#111111] dark:text-white leading-snug line-clamp-1 group-hover:text-blue-600 transition-colors" title="${displayName}">
+            <h3 class="fz-card__title text-[14px] font-bold text-slate-900 leading-snug line-clamp-1 group-hover:text-blue-600 transition-colors mt-0.5" title="${displayName}">
               ${displayName}
             </h3>
 
-            <!-- Color Swatches & Grade -->
-            <div class="flex items-center justify-between mt-1.5">
-              <div class="fz-card__swatches flex items-center gap-1">
-                <span class="w-2.5 h-2.5 rounded-full bg-slate-800 border border-slate-300 inline-block"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-slate-300 border border-slate-400 inline-block"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-amber-100 border border-amber-300 inline-block"></span>
-              </div>
-              <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-                ${gradeInfo.label}
-              </span>
-            </div>
-
             <!-- Price -->
             <div class="fz-card__price flex items-baseline gap-2 mt-2">
-              <span class="text-[15px] font-black text-[#111111] dark:text-white">${formatMoney(priceInfo.price)}</span>
+              <span class="text-[15px] font-bold text-slate-900">${formatMoney(priceInfo.price)}</span>
               <span class="text-[12px] text-slate-400 line-through">${formatMoney(priceInfo.msrp)}</span>
             </div>
 
-            <!-- Authentic FoneZone Yellow Warranty Pill -->
-            <div class="fz-card__warranty mt-2 w-full py-1.5 px-2 rounded-md bg-[#FFD60A] text-black font-black text-[11px] text-center tracking-wide shadow-sm flex items-center justify-center gap-1">
+            <!-- Warranty Pill -->
+            <div class="fz-card__warranty mt-2 w-full py-1.5 px-2 rounded-md bg-[#FFD60A] text-black font-bold text-[11px] text-center tracking-wide flex items-center justify-center gap-1">
               <span>🛡️</span>
-              <span>12 Months Warranty</span>
+              <span>6 Months Warranty</span>
             </div>
 
-            <!-- Quick Trust Metadata -->
-            <div class="mt-2 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 px-0.5">
-              <span class="flex items-center gap-1 font-medium text-emerald-600 dark:text-emerald-400">
+            <!-- Quick Trust Tags -->
+            <div class="mt-2 flex items-center gap-3 text-[11px] text-slate-500 px-0.5">
+              <span class="flex items-center gap-1 font-medium text-emerald-600">
                 <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> 32-Pt QA
               </span>
-              <span class="font-mono font-bold text-slate-700 dark:text-slate-300">
+              <span class="font-mono font-semibold text-slate-700">
                 ${gradeInfo.battery}% Battery
               </span>
             </div>
           </div>
 
-          <!-- Bottom CTA Action Buttons (Full-Width Pill CTA Matching Real FoneZone) -->
-          <div class="flex items-center gap-2 mt-1 pt-2 border-t border-slate-100 dark:border-slate-800/80" onclick="event.stopPropagation();">
-            <button onclick="addToCart('${p.id}')" class="p-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all cursor-pointer" title="Add to Cart">
+          <!-- Bottom CTA -->
+          <div class="flex items-center gap-2 mt-1 pt-2 border-t border-slate-100" onclick="event.stopPropagation();">
+            <button onclick="addToCart('${p.id}')" class="p-2.5 rounded-full border border-slate-200 bg-white text-slate-700 hover:bg-slate-50 transition-all cursor-pointer" title="Add to Cart">
               <i data-lucide="shopping-bag" class="w-4 h-4"></i>
             </button>
-            <button onclick="buyProductCOD('${p.id}')" class="fz-card__btn flex-1 h-[38px] rounded-full bg-[#111111] dark:bg-white text-white dark:text-[#111111] font-extrabold text-[13px] flex items-center justify-center gap-1.5 hover:bg-slate-800 dark:hover:bg-slate-100 transition-all shadow cursor-pointer active:scale-95">
+            <button onclick="buyProductCOD('${p.id}')" class="fz-card__btn flex-1 h-[38px] rounded-full bg-blue-600 text-white font-semibold text-[13px] flex items-center justify-center gap-1.5 hover:bg-blue-700 transition-all shadow cursor-pointer active:scale-95">
               <span>Shop Now</span>
               <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </button>
@@ -7226,56 +7208,33 @@ function showToast(msg) {
 /* ======================================================== */
 let heroCurrentSlide = 0;
 let heroCarouselTimer = null;
-let heroHoverResumeTimer = null;
 let heroIsAutoPlaying = true;
-const HERO_SLIDE_DURATION_MS = 6000; // 6 seconds (delay of 5 to 7 seconds between slides)
+const HERO_SLIDE_DURATION_MS = 5000;
 
 function initHeroCarousel() {
   const track = document.getElementById("heroCarouselTrack");
   const container = document.getElementById("heroCarouselContainer");
   if (!track || !container) return;
 
-  // Initialize UI layout
   updateHeroCarouselUI();
 
-  // Start 6-second auto-slide cycle with animated progress bar
   if (heroIsAutoPlaying) {
     startHeroAutoSlide();
   }
 
-  // Resilient Hover Management: pause momentarily, but auto-resume after 8s failsafe so it never gets stuck
   container.onmouseenter = () => {
     if (heroIsAutoPlaying) {
-      pauseHeroAutoSlide(false);
-      clearTimeout(heroHoverResumeTimer);
-      heroHoverResumeTimer = setTimeout(() => {
-        if (heroIsAutoPlaying) startHeroAutoSlide();
-      }, 8000);
+      clearInterval(heroCarouselTimer);
     }
   };
 
   container.onmouseleave = () => {
-    clearTimeout(heroHoverResumeTimer);
     if (heroIsAutoPlaying) {
       startHeroAutoSlide();
     }
   };
 
-  // Tab visibility change: ensure timers do not drift or pause indefinitely
-  document.addEventListener("visibilitychange", () => {
-    if (document.hidden) {
-      pauseHeroAutoSlide(false);
-    } else {
-      if (heroIsAutoPlaying) {
-        startHeroAutoSlide();
-      }
-    }
-  });
-
-  // Live Countdown Timer for Deal of the Day
-  initHeroDealTimer();
-
-  // Touch swipe support for mobile & tablet screens
+  // Touch swipe support
   let touchStartX = 0;
   let touchStartY = 0;
   container.addEventListener("touchstart", (e) => {
@@ -7291,12 +7250,11 @@ function initHeroCarousel() {
       const touchEndY = e.changedTouches[0].clientY;
       const diffX = touchEndX - touchStartX;
       const diffY = touchEndY - touchStartY;
-      // Ensure horizontal swipe intent (not vertical scrolling)
       if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY)) {
         if (diffX < 0) {
-          nextHeroSlide(); // Swiped left -> next
+          nextHeroSlide();
         } else {
-          prevHeroSlide(); // Swiped right -> prev
+          prevHeroSlide();
         }
       }
     }
@@ -7308,44 +7266,23 @@ function initHeroCarousel() {
 }
 
 function resetAndAnimateProgressBar() {
-  const pBar = document.getElementById("heroProgressBar");
-  if (!pBar) return;
-  // Instantly reset to 0% width without transition
-  pBar.style.transition = "none";
-  pBar.style.width = "0%";
-  // Force DOM reflow
-  void pBar.offsetWidth;
-  // Animate to 100% width smoothly over 6000ms
-  pBar.style.transition = `width ${HERO_SLIDE_DURATION_MS}ms linear`;
-  pBar.style.width = "100%";
+  // Removed — no progress bar in simplified hero
 }
 
 function startHeroAutoSlide() {
   clearInterval(heroCarouselTimer);
-  clearTimeout(heroHoverResumeTimer);
-  resetAndAnimateProgressBar();
 
   heroCarouselTimer = setInterval(() => {
     nextHeroSlide(true);
   }, HERO_SLIDE_DURATION_MS);
-
-  updatePlayPauseBtnUI(true);
 }
 
 function pauseHeroAutoSlide(isManual = false) {
   clearInterval(heroCarouselTimer);
   heroCarouselTimer = null;
 
-  const pBar = document.getElementById("heroProgressBar");
-  if (pBar) {
-    const computedWidth = window.getComputedStyle(pBar).width;
-    pBar.style.transition = "none";
-    pBar.style.width = computedWidth;
-  }
-
   if (isManual) {
     heroIsAutoPlaying = false;
-    updatePlayPauseBtnUI(false);
   }
 }
 
@@ -7353,10 +7290,8 @@ function toggleHeroAutoPlay() {
   heroIsAutoPlaying = !heroIsAutoPlaying;
   if (heroIsAutoPlaying) {
     startHeroAutoSlide();
-    showToast("▶️ Hero banner auto-play running (6s delay)");
   } else {
     pauseHeroAutoSlide(true);
-    showToast("⏸️ Hero banner auto-play paused");
   }
 }
 
@@ -7370,20 +7305,22 @@ function updatePlayPauseBtnUI(isPlaying) {
 function updateHeroCarouselUI() {
   const track = document.getElementById("heroCarouselTrack");
   const container = document.getElementById("heroCarouselContainer");
-  track.style.transform = `translateX(-${heroCurrentSlide * 100}%)`;
+  if (!track || !container) return;
+  const slideW = container.offsetWidth;
+  track.style.transform = `translateX(-${heroCurrentSlide * slideW}px)`;
 
   const dots = document.querySelectorAll(".hero-dot");
   dots.forEach((dot, idx) => {
     if (idx === heroCurrentSlide) {
-      dot.className = "hero-dot w-7 h-2 rounded-full bg-blue-500 transition-all cursor-pointer shadow-sm";
+      dot.className = "hero-dot w-6 h-1.5 rounded-full bg-blue-600 transition-all cursor-pointer";
     } else {
-      dot.className = "hero-dot w-2 h-2 rounded-full bg-slate-600 hover:bg-slate-400 transition-all cursor-pointer";
+      dot.className = "hero-dot w-2 h-1.5 rounded-full bg-slate-300 hover:bg-slate-400 transition-all cursor-pointer";
     }
   });
 }
 
 function nextHeroSlide(isAuto = false) {
-  heroCurrentSlide = (heroCurrentSlide + 1) % 5;
+  heroCurrentSlide = (heroCurrentSlide + 1) % 3;
   updateHeroCarouselUI();
   if (heroIsAutoPlaying) {
     startHeroAutoSlide();
@@ -7391,7 +7328,7 @@ function nextHeroSlide(isAuto = false) {
 }
 
 function prevHeroSlide() {
-  heroCurrentSlide = (heroCurrentSlide - 1 + 5) % 5;
+  heroCurrentSlide = (heroCurrentSlide - 1 + 3) % 3;
   updateHeroCarouselUI();
   if (heroIsAutoPlaying) {
     startHeroAutoSlide();
@@ -7407,40 +7344,36 @@ function goToHeroSlide(idx) {
 }
 
 function initHeroDealTimer() {
-  const timerEl = document.getElementById("heroDealTimer");
-  if (!timerEl) return;
-
-  let totalSeconds = 4 * 3600 + 18 * 60 + 32; // 4h 18m 32s
-  setInterval(() => {
-    if (totalSeconds > 0) totalSeconds--;
-    const h = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
-    const m = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
-    const s = String(totalSeconds % 60).padStart(2, '0');
-    timerEl.textContent = `${h}:${m}:${s}`;
-  }, 1000);
+  // Removed — no deal timer in simplified hero
 }
 
 function copyHeroCoupon(code) {
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(code).catch(() => {});
-  }
-  const btnText = document.getElementById("copyCouponBtnText");
-  if (btnText) {
-    const orig = btnText.textContent;
-    btnText.textContent = "✓ Copied!";
-    setTimeout(() => { btnText.textContent = orig; }, 2500);
-  }
-  showToast(`🎉 Coupon ${code} copied! Extra ₹2,000 discount unlocked at checkout.`);
+  // Removed — no coupon in simplified hero
 }
 
 window.nextHeroSlide = nextHeroSlide;
 window.prevHeroSlide = prevHeroSlide;
 window.goToHeroSlide = goToHeroSlide;
-window.copyHeroCoupon = copyHeroCoupon;
 window.initHeroCarousel = initHeroCarousel;
 window.toggleHeroAutoPlay = toggleHeroAutoPlay;
-window.startHeroAutoSlide = startHeroAutoSlide;
 window.pauseHeroAutoSlide = pauseHeroAutoSlide;
+window.startHeroAutoSlide = startHeroAutoSlide;
+
+/* ======================================================== */
+/* 7C. SCROLL REVEAL ANIMATIONS & MICRO-INTERACTIONS        */
+/* ======================================================== */
+function initScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+}
 
 // Initial render
 document.addEventListener("DOMContentLoaded", () => {
@@ -7458,6 +7391,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (window.lucide) {
     window.lucide.createIcons();
   }
+  initScrollReveal();
 });
 
 /* ======================================================== */

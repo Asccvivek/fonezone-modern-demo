@@ -4,7 +4,7 @@ import os
 import sys
 
 PORT = int(sys.argv[1]) if len(sys.argv) > 1 else 8089
-DIRECTORY = '/Users/asccvivek/Projects/fonezone'
+DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 
 class NoCacheHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):

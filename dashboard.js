@@ -350,7 +350,9 @@ function simulateCustomerPrepayUPI() {
   if (!order) return;
 
   const discounted = order.amount - 300;
-  order.amount = discounted;
+  if (order.status !== 'prepaid') {
+    order.amount = discounted;
+  }
   order.status = 'prepaid';
   order.risk = 'Zero Risk (Prepaid UPI via ₹300 Off)';
 
@@ -413,8 +415,9 @@ function simulateIncomingOrder() {
 
   const kpiEl = document.getElementById('kpiTotalOrders');
   if (kpiEl) {
-    const current = parseInt(kpiEl.textContent) || 148;
-    kpiEl.textContent = `${current + 1} Orders`;
+    const match = kpiEl.textContent.match(/(\d[\d,]*)/);
+    const current = match ? parseInt(match[1].replace(/,/g, '')) : 148;
+    kpiEl.textContent = `${(current + 1).toLocaleString('en-IN')} Orders`;
   }
 
   renderOrdersTable();

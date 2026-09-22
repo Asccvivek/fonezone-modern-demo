@@ -23,41 +23,6 @@
     };
   </script>
   <script src="assets/lucide.min.js"></script>
-  <style>
-    @media (max-width: 639px) {
-      /* Responsive table wrapper */
-      .table-responsive-wrapper {
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        border-radius: 0.5rem;
-      }
-      
-      /* Hide RTO Risk column on mobile - too wide */
-      .dash-table th:nth-child(3),
-      .dash-table td:nth-child(3) {
-        display: none !important;
-      }
-      
-      /* Compact table cells */
-      .dash-table td, .dash-table th {
-        padding: 0.5rem 0.375rem !important;
-        font-size: 0.75rem !important;
-      }
-      
-      /* Minimum font sizes for dashboard mobile */
-      body {
-        font-size: 14px !important;
-      }
-      
-      .text-xs {
-        font-size: 0.75rem !important;
-      }
-      
-      .text-\[10px\], .text-\[11px\] {
-        font-size: 0.6875rem !important;
-      }
-    }
-  </style>
 </head>
 <body class="bg-slate-50 dark:bg-[#070A10] text-slate-900 dark:text-slate-100 antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col transition-colors duration-200">
 
@@ -430,8 +395,9 @@
       .table-responsive-wrapper { overflow-x: auto !important; -webkit-overflow-scrolling: touch !important; }
       .dash-table th:nth-child(3), .dash-table td:nth-child(3) { display: none !important; }
       .dash-table td, .dash-table th { padding: 0.5rem 0.375rem !important; font-size: 0.75rem !important; }
+      body { font-size: 14px !important; }
       .text-xs { font-size: 12px !important; line-height: 1.125rem !important; }
-      .text-\[11px\] { font-size: 11px !important; line-height: 1.25 !important; }
+      .text-\[10px\], .text-\[11px\] { font-size: 11px !important; line-height: 1.25 !important; }
     }
   </style>
 
